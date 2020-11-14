@@ -43,18 +43,37 @@ add_namespace = griffonstone_decision
 	    title = griffonstone.001.t
 	    desc = griffonstone.001.d
 	    picture = GFX_event_medieval_city_2
-		
-	    is_triggered_only = yes
-	    fire_only_once = yes
-		
-	    option = {
-	         name = griffonstone.001.a
-			 hidden_effect = {
+		immediate = {
+		    hidden_effect = {
 			     country_event = {
 				     id = griffonstone.002
 					 days = 20
 			     }
 			 }
+		}
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	         name = griffonstone.001.a 
+			 country_event = {
+			     id = griffonstone.016
+			 }
+		}
+	}
+	
+	country_event = { #The Appointment
+	    id = griffonstone.016
+	    title = griffonstone.016.t
+	    desc = griffonstone.016.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	         name = griffonstone.016.a 
 		}
 	}
 	
@@ -297,6 +316,7 @@ add_namespace = griffonstone_decision
 				     id = griffonstone_news.1
  					 hours = 10
 				}
+				set_country_flag = BOI_deadlock_broken
 			}
 		}
 	}
@@ -326,6 +346,7 @@ add_namespace = griffonstone_decision
 				     id = griffonstone_news.2
  					 hours = 10 
 				}
+				set_country_flag = BOI_deadlock_broken
 			}
 		}
 	}
@@ -344,10 +365,27 @@ add_namespace = griffonstone_decision
 			 add_popularity = { ideology = fascism popularity = -0.1 }
 			 hidden_effect = {
 			     country_event = {
-				     id = griffonstone.013
+				     id = griffonstone.017
 					 days = 1
 			     }
 			 }
+		}
+	}
+	
+	country_event = { #The Revelation
+	    id = griffonstone.017
+	    title = griffonstone.017.t
+	    desc = griffonstone.017.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.017.a
+			country_event = {
+			    id = griffonstone.013
+			}
 		}
 	}
 	
@@ -365,6 +403,7 @@ add_namespace = griffonstone_decision
 			custom_effect_tooltip = BOI_CETT_gallus_focus_tree
 			hidden_effect = {
 			     load_focus_tree = Griffonstone_gallus_1
+				 set_country_flag = BOI_deadlock_broken
 			}
 		}
 		option = {
@@ -426,6 +465,7 @@ add_namespace = griffonstone_decision
 			custom_effect_tooltip = BOI_CETT_gilda_focus_tree
 			hidden_effect = {
 			     load_focus_tree = Griffonstone_gilda
+				 set_country_flag = BOI_deadlock_broken
 			}
 		}
 	}
@@ -1129,6 +1169,22 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.211.a
+			country_event = {
+			    id = griffonstone.283
+			}
+		}
+	}
+	country_event = { #The Puppetmaster
+	    id = griffonstone.283
+	    title = griffonstone.283.t
+	    desc = griffonstone.283.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.283.a
 			add_ideas = BOI_grover_I
 		}
 	}
