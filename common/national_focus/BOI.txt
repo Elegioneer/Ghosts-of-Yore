@@ -169,11 +169,11 @@
 				limit = { has_idea = poor_science_base }
 				add_ideas = better_science_base
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = better_science_base }
 				add_ideas = big_science_base
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = big_science_base }
 				add_tech_bonus = {
 			        name = guto_institute_bonus_1_1
@@ -188,7 +188,7 @@
 			        category = electronics
 		        }
 			}
-			if = {
+			else_if = {
 				limit = { has_idea = proper_science_base }
 				add_tech_bonus = {
 			        name = guto_institute_bonus_2_1
@@ -433,6 +433,7 @@
 		}
 		completion_reward = {
 		    384 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -460,6 +461,7 @@
 		}
 		completion_reward = {
 		    488 = {
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -482,6 +484,7 @@
 		}
 		completion_reward = {
 			471 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -543,6 +546,7 @@
 		}
 		completion_reward = {
 			384 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -550,6 +554,7 @@
 				}
 			}
 			679 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -557,6 +562,7 @@
 				}
 			}
 			389 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -564,6 +570,7 @@
 				}
 			}
 			471 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -603,7 +610,7 @@
 			factor = 1
 		}
 		completion_reward = {
-			408 = {
+			389 = {
 			    add_manpower = 500000
 				set_state_category = large_city
 				add_building_construction = {
@@ -646,29 +653,33 @@
 		}
 		completion_reward = {
 			384 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
 			679 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
 			389 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
 			471 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -797,6 +808,7 @@
 		    #could be moved to event
 			decrease_poverty = yes
 			389 = {
+			    add_extra_state_shared_building_slots = 3
 			    add_building_construction = {
 					type = industrial_complex
 					level = 3
@@ -804,6 +816,7 @@
 				}
 			}
 			389 = {
+			    add_extra_state_shared_building_slots = 3
 			    add_building_construction = {
 					type = arms_factory
 					level = 3
@@ -1086,6 +1099,12 @@
 		relative_position_id = BOI_royal_defence_force
 		prerequisite = { focus = BOI_reichsarmee_veterans }
 		mutually_exclusive = { focus = BOI_noble_levies }
+		available = {
+		    OR = {
+		        has_completed_focus = BOI_legacy_of_guto
+				has_completed_focus = BOI_age_of_commongriff
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -1163,6 +1182,12 @@
 		relative_position_id = BOI_royal_defence_force
 		prerequisite = { focus = BOI_modern_firearms }
 		mutually_exclusive = { focus = BOI_griffons_army }
+		available = {
+		    OR = {
+		        has_completed_focus = BOI_loyalty_reward
+			    has_completed_focus = BOI_golden_dawn
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2468,7 +2493,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-			389 = { 
+			389 = {
+               add_extra_state_shared_building_slots = 1			
 			   add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -2685,6 +2711,7 @@ focus_tree = {
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
+				add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					 type = industrial_complex
 					 level = 2
@@ -4099,6 +4126,7 @@ focus_tree = {
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
+				add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -4609,6 +4637,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			389 = {
+			    add_extra_state_shared_building_slots = 1
 			    add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -4891,6 +4920,7 @@ focus_tree = {
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
+				add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -7063,6 +7093,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			389 = {
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
 					level = 2

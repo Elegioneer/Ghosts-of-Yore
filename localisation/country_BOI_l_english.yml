@@ -245,6 +245,8 @@ BOI_demob_efforts:0 "Demobilisation Efforts"
 BOI_demob_efforts_desc:0 ""
 BOI_reformed_archonates:0 "Reformed Archonates"
 BOI_reformed_archonates_desc:0 ""
+BOI_goldmines:0 "Scrapping Gold Mines"
+BOI_goldmines_desc:0 ""
 
 ## Advisors ##
 BOI_wohnsitz_panzerinstitut:0 "Wohnsitz Panzerinstitut"

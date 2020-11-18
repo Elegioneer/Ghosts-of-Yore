@@ -483,6 +483,7 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.200.a
+			add_stability = -0.1
 			add_resource = {
 				type = steel
 				amount = 10
@@ -1994,6 +1995,10 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.268.a
+			add_timed_idea = {
+			    idea = BOI_goldmines
+				days = 200
+			}
 		}
 	}
 	country_event = { #Plea for Help
@@ -2009,16 +2014,20 @@ add_namespace = griffonstone_decision
 	        name = griffonstone.269.a
 			add_political_power = -25
 			add_manpower = -1000
-			country_event = {
-			    id = griffonstone.271
-				days = 1
+			BOI = {
+			    country_event = {
+			        id = griffonstone.271
+				    days = 1
+			    }
 			}
 		}
 		option = {
 	        name = griffonstone.269.b
-			country_event = {
-			    id = griffonstone.272
-				days = 1
+			BOI = {
+			    country_event = {
+			        id = griffonstone.272
+				    days = 1
+				}
 			}
 		}
 	}
