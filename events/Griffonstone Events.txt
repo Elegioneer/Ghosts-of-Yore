@@ -665,6 +665,22 @@ add_namespace = griffonstone_decision
 			}
 		}
 	}
+	country_event = { #A strange invitation
+	    id = griffonstone.284
+	    title = griffonstone.284.t
+	    desc = griffonstone.284.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.284.a
+			country_event = {
+			    id = griffonstone.204
+			}
+		}
+	}
 	country_event = { #Into the Abyss
 	    id = griffonstone.222
 	    title = griffonstone.222.t
@@ -820,7 +836,7 @@ add_namespace = griffonstone_decision
             }
 			hidden_effect = {
 			    country_event = {
-				    id = griffonstone.228
+				    id = griffonstone.285
 					days = 60
 				}
 			}
@@ -857,6 +873,20 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.206.a
+			country_event = griffonstone.286
+		}
+	}
+	country_event = { #The New Way
+	    id = griffonstone.286
+	    title = griffonstone.286.t
+	    desc = griffonstone.286.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.286.a
 		}
 	}
 	country_event = { #Something Ends...
@@ -1159,7 +1189,7 @@ add_namespace = griffonstone_decision
 			remove_ideas = kingdom_with_no_king
 		}
 	}
-	country_event = { #The Lord and The Emperor
+	country_event = { #The puppetmaster
 	    id = griffonstone.211
 	    title = griffonstone.211.t
 	    desc = griffonstone.211.d
@@ -1170,12 +1200,10 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.211.a
-			country_event = {
-			    id = griffonstone.283
-			}
+			add_ideas = BOI_grover_I
 		}
 	}
-	country_event = { #The Puppetmaster
+	country_event = { #The Lord and the emperor
 	    id = griffonstone.283
 	    title = griffonstone.283.t
 	    desc = griffonstone.283.d
@@ -1186,7 +1214,9 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.283.a
-			add_ideas = BOI_grover_I
+			country_event = {
+			    id = griffonstone.211
+			}
 		}
 	}
 	country_event = { #The Offer
@@ -1587,6 +1617,20 @@ add_namespace = griffonstone_decision
 			remove_ideas = kingdom_with_no_king
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			add_country_leader_trait = republican_revolutionary
+		}
+	}
+	country_event = { #Another Visit
+	    id = griffonstone.285
+	    title = griffonstone.285.t
+	    desc = griffonstone.285.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.285.a
+			country_event = griffonstone.228
 		}
 	}
 	country_event = { #Farewell
@@ -2590,6 +2634,20 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.280.a
+			country_event = griffonstone.287
+		}
+	}
+	country_event = { #Burdens of Rulership
+	    id = griffonstone.287
+	    title = griffonstone.287.t
+	    desc = griffonstone.287.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.287.a
 		}
 	}
 	country_event = { #Idol transfer
@@ -2620,6 +2678,63 @@ add_namespace = griffonstone_decision
 	        name = griffonstone.282.a
 			remove_ideas = BOI_idol_of_boreas
 			add_political_power = -100
+		}
+	}
+	country_event = { #UPE Request
+	    id = griffonstone.288
+	    title = griffonstone.288.t
+	    desc = griffonstone.288.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.288.a
+			BOI = {
+			    country_event = {
+				    id = griffonstone.289
+					days = 1
+				}
+			}
+			THIS = {
+			    add_to_faction = FROM
+			}
+		}
+		option = {
+	        name = griffonstone.288.b
+			BOI = {
+			    country_event = {
+				    id = griffonstone.290
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #UPE - yes
+	    id = griffonstone.289
+	    title = griffonstone.289.t
+	    desc = griffonstone.289.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.289.a
+		}
+	}
+	country_event = { #UPE - no
+	    id = griffonstone.290
+	    title = griffonstone.290.t
+	    desc = griffonstone.290.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.290.a
 		}
 	}
 	

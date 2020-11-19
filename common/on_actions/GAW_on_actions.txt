@@ -1,5 +1,13 @@
 on_actions = {
     on_startup = {
+	    effect = {
+	        BOI = {
+		        country_event = {
+				    id = griffonstone.001
+					days = 9
+				}
+		    }
+		}
 	}
     on_state_control_changed = { 
 	    effect = {

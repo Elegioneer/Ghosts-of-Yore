@@ -310,7 +310,7 @@
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_gold_silver }
 		available = {
-		    #owns_state =
+		    owns_state = 383
 		}
 
 		ai_will_do = {
@@ -903,6 +903,11 @@
 		relative_position_id = BOI_mining_tech
 		prerequisite = { focus = BOI_lakeshore_oil focus = BOI_solarspike_mines }
 
+		available = {
+		    owns_state = 489
+			owns_state = 606
+			owns_state = 446
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -963,6 +968,9 @@
 		relative_position_id = BOI_mining_tech
 		prerequisite = { focus = BOI_lakeshore_oil focus = BOI_solarspike_mines }
 
+		available = {
+		    owns_state = 383
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -1098,6 +1106,8 @@
 		cost = 5.00
 		relative_position_id = BOI_royal_defence_force
 		prerequisite = { focus = BOI_reichsarmee_veterans }
+		prerequisite = { focus = BOI_modern_firearms }
+		prerequisite = { focus = BOI_recruitment_drive }
 		mutually_exclusive = { focus = BOI_noble_levies }
 		available = {
 		    OR = {
@@ -1181,6 +1191,8 @@
 		cost = 5.00
 		relative_position_id = BOI_royal_defence_force
 		prerequisite = { focus = BOI_modern_firearms }
+		prerequisite = { focus = BOI_reichsarmee_veterans }
+		prerequisite = { focus = BOI_recruitment_drive }
 		mutually_exclusive = { focus = BOI_griffons_army }
 		available = {
 		    OR = {
@@ -1264,6 +1276,8 @@
 		cost = 5.00
 		relative_position_id = BOI_royal_defence_force
 		prerequisite = { focus = BOI_recruitment_drive }
+		prerequisite = { focus = BOI_reichsarmee_veterans }
+		prerequisite = { focus = BOI_modern_firearms }
 
 		ai_will_do = {
 			factor = 1
@@ -1521,9 +1535,12 @@
 			factor = 1
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BOI_griffonsteel_1
-				add_idea = BOI_griffonsteel_2
+		    custom_effect_tooltip = BOI_CETT_griffonsteel_2
+			hidden_effect = {
+			    swap_ideas = {
+			        remove_idea = BOI_griffonsteel_1
+				    add_idea = BOI_griffonsteel_2
+			    }
 			}
 		}
 	}
@@ -1579,9 +1596,12 @@
 			factor = 1
 		}
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = BOI_griffonsteel_2
-				add_idea = BOI_griffonsteel_3
+			custom_effect_tooltip = BOI_CETT_griffonsteel_3
+			hidden_effect = {
+			    swap_ideas = {
+			        remove_idea = BOI_griffonsteel_2
+				    add_idea = BOI_griffonsteel_3
+			    }
 			}
 		}
 	}
@@ -2803,7 +2823,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			country_event = griffonstone.204
+			country_event = griffonstone.284
 		}
 	}
 }
@@ -4285,6 +4305,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BOI_great_trial
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 1.00
+		relative_position_id = BOI_new_republic_rises
+		prerequisite = { focus = BOI_rebuild_murkbeak_gilda }
+		prerequisite = { focus = BOI_evi_line }
+		available = {
+		    OR = {
+			    has_war_with = GRI
+		        has_war_with = FAT
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = BOI_last_stand
+		}
+	}
+	focus = {
 		id = BOI_new_griffonstonian_identity
 		icon = GFX_goal_boi 
 		x = 0
@@ -4302,6 +4345,164 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = BOI_idol_loss_healed
 			add_ideas = BOI_hope_for_the_future
+		}
+	}
+	focus = {
+		id = BOI_dream_defied
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		relative_position_id = BOI_new_republic_rises
+		prerequisite = { focus = BOI_minorities_protection_act_gilda }
+		prerequisite = { focus = BOI_integrate_rumare_gilda }
+		available = {
+		    owns_state = 555
+			owns_state = 437
+			owns_state = 397
+			owns_state = 405
+			owns_state = 382
+			owns_state = 547
+			owns_state = 422
+			owns_state = 411
+			owns_state = 506
+			owns_state = 554
+			owns_state = 423
+			owns_state = 665
+			owns_state = 402
+			owns_state = 439
+			owns_state = 398
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		    custom_effect_tooltip = BOI_CETT_gilda_herzland
+			hidden_effect = {
+		    set_cosmetic_tag = BOI_CONF
+		    add_state_core = 555
+			add_state_core = 437
+			add_state_core = 397
+			add_state_core = 405
+			add_state_core = 382
+			add_state_core = 547
+			add_state_core = 422
+			add_state_core = 411
+			add_state_core = 506
+			add_state_core = 554
+			add_state_core = 423
+			add_state_core = 665
+			add_state_core = 402
+			add_state_core = 439
+			add_state_core = 398
+			}
+			if = {
+			    limit = {
+				    owns_state = 399
+					owns_state = 447
+					owns_state = 378
+				}
+				hidden_effect = {
+				add_state_core = 399
+				add_state_core = 447
+				add_state_core = 378
+				}
+				else = {
+				    hidden_effect = {
+				    PYT = { add_to_ROOT_potential_cores = yes }
+					add_state_claim = 399
+					add_state_claim = 447
+					add_state_claim = 378
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    owns_state = 666
+					owns_state = 440
+					owns_state = 441
+					owns_state = 520
+					owns_state = 434
+					owns_state = 498
+					owns_state = 538
+					owns_state = 433
+					owns_state = 497
+				}
+				hidden_effect = {
+				add_state_core = 666
+				add_state_core = 440
+				add_state_core = 441
+				add_state_core = 520
+				add_state_core = 434
+				add_state_core = 498
+				add_state_core = 538
+				add_state_core = 433
+				add_state_core = 497
+				}
+				else = {
+				    hidden_effect = {
+				    FEA = { add_to_ROOT_potential_cores = yes }
+					add_state_claim = 666
+					add_state_claim = 440
+					add_state_claim = 441
+					add_state_claim = 520
+					add_state_claim = 434
+					add_state_claim = 498
+					add_state_claim = 538
+					add_state_claim = 433
+					add_state_claim = 497
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    owns_state = 443
+					owns_state = 545
+					owns_state = 546
+					owns_state = 486
+					owns_state = 458
+				}
+				hidden_effect = {
+				add_state_core = 443
+				add_state_core = 545
+				add_state_core = 546
+				add_state_core = 486
+				add_state_core = 458
+				}
+				else = {
+				    hidden_effect = {
+				    STW = { add_to_ROOT_potential_cores = yes }
+					add_state_claim = 443
+					add_state_claim = 545
+					add_state_claim = 546
+					add_state_claim = 486
+					add_state_claim = 458
+					}
+				}
+			}
+			if = {
+			    limit = {
+				    owns_state = 424
+					owns_state = 479
+					owns_state = 492
+					owns_state = 568
+					owns_state = 539
+				}
+				custom_effect_tooltip = BOI_CETT_gilda_herzland_BRZ
+				hidden_effect = {
+				BRZ = {
+				    transfer_state = 424
+					transfer_state = 479
+					transfer_state = 492
+					transfer_state = 568
+					transfer_state = 539
+				}
+				BOI = {
+				    puppet = BRZ
+					set_autonomy = { target = BRZ autonomy_state = autonomy_puppet }
+				}
+				}
+			}
 		}
 	}
 	focus = {
@@ -4349,6 +4550,48 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BOI_join_upe
+		icon = GFX_goal_ideology_social_democrat 
+		x = -2
+		y = 1
+		cost = 1.00
+		relative_position_id = BOI_new_direction
+		prerequisite = { focus = BOI_new_direction }
+		available = {
+		    has_completed_focus = BOI_dream_defied
+			NOT = {
+			    has_completed_focus = BOI_herzlandism
+			}
+		    OR = {
+		        has_country_leader = {
+			        ruling_only = yes
+				    name = Greta
+			    }
+			    has_country_leader = {
+			        ruling_only = yes
+				    name = Gabby
+			    }
+			}
+			EQS = {
+			    exists = yes
+				is_subject = no
+				has_government = democratic
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			EQS = {
+			    country_event = {
+				    id = griffonstone.288
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
 		id = BOI_president_gabby
 		icon = GFX_goal_ideology_social_liberal 
 		x = 0
@@ -4368,6 +4611,180 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
+		}
+	}
+	focus = {
+		id = BOI_herzlandism
+		icon = GFX_goal_ideology_social_democrat 
+		x = 2
+		y = 1
+		cost = 1.00
+		relative_position_id = BOI_new_direction
+		prerequisite = { focus = BOI_new_direction }
+		available = {
+		    has_completed_focus = BOI_dream_defied
+			NOT = {
+			    has_completed_focus = BOI_join_upe
+			}
+		    OR = {
+		        has_country_leader = {
+			        ruling_only = yes
+				    name = Garner
+			    }
+			    has_country_leader = {
+			        ruling_only = yes
+				    name = Gabby
+			    }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = BOI_CETT_herzlandism
+			hidden_effect = {
+			    HLQ = { add_to_ROOT_potential_cores = yes }
+				EYR = { add_to_ROOT_potential_cores = yes }
+				ERI = { add_to_ROOT_potential_cores = yes }
+				AVI = { add_to_ROOT_potential_cores = yes }
+				HEL = { add_to_ROOT_potential_cores = yes }
+				AET = { add_to_ROOT_potential_cores = yes }
+				TRD = { add_to_ROOT_potential_cores = yes }
+			}
+			IF = {
+			    limit = { HLQ = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HLQ
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 633
+					add_state_claim = 634	
+					add_state_claim = 553
+					add_state_claim = 537
+				}
+			}
+			IF = {
+			    limit = { LSM = { exists = yes } }
+				hidden_effect = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = LSM
+			        }
+				}
+				ELSE_IF = {
+				    limit = { LNS = { exists = yes } }
+					hidden_effect = {
+					    LNS = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LNS
+					    }
+					}
+				}
+				ELSE_IF = {
+				    limit = { LSC = { exists = yes } }
+					hidden_effect = {
+					    LSC = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LSC
+					    }
+					}
+				}
+				ELSE = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+				    add_state_claim = 540
+					add_state_claim = 552
+					add_state_claim = 505
+				}
+			}
+			IF = {
+			    limit = { EYR = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = EYR
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 400
+					add_state_claim = 391
+				}
+			}
+			IF = {
+			    limit = { ERI = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = ERI
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 401
+					add_state_claim = 500
+					add_state_claim = 673
+				}
+			}
+			IF = {
+			    limit = { AVI = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = AVI
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 470
+				}
+			}
+			IF = {
+			    limit = { HEL = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HEL
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 493
+					add_state_claim = 494
+				}
+			}
+			IF = {
+			    limit = { AET = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = AET
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 496
+					add_state_claim = 495
+					add_state_claim = 457
+					add_state_claim = 436
+				}
+			}
+			IF = {
+			    limit = { TRD = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = TRD
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 380
+					add_state_claim = 396
+					add_state_claim = 379
+					add_state_claim = 381
+				}
+			}
 		}
 	}
 	focus = {
@@ -7624,7 +8041,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			country_event = griffonstone.211
+			country_event = griffonstone.283
 		}
 	}
 	focus = {

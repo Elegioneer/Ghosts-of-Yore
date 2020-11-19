@@ -1827,6 +1827,24 @@ ideas = {
 				consumer_goods_factor = -0.02
 			}
 		}
+		BOI_last_stand = {
+			allowed = {
+			    OR = {
+				    has_war_with = FAT
+					has_war_with = GRI
+				}
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = generic_artillery_regiments
+			removal_cost = -1
+			modifier = {
+			    army_org_factor = 0.1
+			    army_infantry_defence_factor = 0.1
+			    conscription_factor = 0.2
+			}
+		}
 	}
 	
 	########################
