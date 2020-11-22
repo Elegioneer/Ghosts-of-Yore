@@ -4306,7 +4306,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_great_trial
-		icon = GFX_goal_unknown
+		icon = GFX_goal_LEC_monkey
 		x = -2
 		y = 4
 		cost = 1.00
@@ -4349,7 +4349,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_dream_defied
-		icon = GFX_goal_unknown
+		icon = GFX_goal_BOI_dream_defied
 		x = 2
 		y = 4
 		cost = 5.00
@@ -4551,7 +4551,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_join_upe
-		icon = GFX_goal_ideology_social_democrat 
+		icon = GFX_goal_BOI_join_upe 
 		x = -2
 		y = 1
 		cost = 1.00
@@ -4615,7 +4615,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_herzlandism
-		icon = GFX_goal_ideology_social_democrat 
+		icon = GFX_goal_BOI_herzlandism 
 		x = 2
 		y = 1
 		cost = 1.00

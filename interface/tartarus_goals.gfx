@@ -128,4 +128,16 @@ spriteTypes = {
 		name = "GFX_goal_gaw_griff_cmcs"
 		texturefile = "gfx/interface/goals/goal_gaw_griff_cmcs.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_BOI_dream_defied"
+		texturefile = "gfx/interface/goals/goal_BOI_dream_defied.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_BOI_herzlandism"
+		texturefile = "gfx/interface/goals/goal_BOI_herzlandism.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_BOI_join_upe"
+		texturefile = "gfx/interface/goals/goal_BOI_join_upe.tga"
+	}
 }
