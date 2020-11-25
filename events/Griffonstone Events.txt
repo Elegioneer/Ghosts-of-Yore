@@ -221,6 +221,7 @@ add_namespace = griffonstone_decision
 			kill_country_leader = yes
 			create_country_leader = {
 			    name = "Lord Gestal"
+				desc = BOI_gestal_desc
 			    picture = "Gestal.tga"
 			    expire = "1965.1.1"
 			    ideology = despotism
@@ -301,6 +302,7 @@ add_namespace = griffonstone_decision
 			add_ideas = BOI_goldstone_cronies
 			create_corps_commander = {
 	            name = "Klaus Steelfeather"
+				id = 4356501 #435650 for Griffonstone (BOI in decimal code)
 	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
 	            traits = { griffon_race_trait career_officer infantry_officer }
 	            skill = 2
@@ -347,6 +349,7 @@ add_namespace = griffonstone_decision
  					 hours = 10 
 				}
 				set_country_flag = BOI_deadlock_broken
+				set_country_flag = BOI_goldstone_coup_success
 			}
 		}
 	}
@@ -856,6 +859,7 @@ add_namespace = griffonstone_decision
 			kill_ideology_leader = neutrality
 			create_country_leader = {
 			    name = "Lord Gestal"
+				desc = BOI_gestal_desc
 			    picture = "Gestal.tga"
 			    expire = "1965.1.1"
 			    ideology = despotism
@@ -1178,7 +1182,7 @@ add_namespace = griffonstone_decision
 			create_country_leader = {
 	            name = "Empress Gabriela Eagleclaw"
 	            desc = "POLITICS_EAGLECLAW_DESC" #TODO Should be changed
-	            portrait_path = "gfx\leaders\GRI\Gabriela.tga"
+	            portrait_path = "gfx/leaders/GRI/Gabriela.tga"
 	            expire = "1965.1.1"
 	            female = yes
 	            ideology = despotism

@@ -1910,7 +1910,7 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { GAW_cutie_griffon_crusader }
+			traits = { GOY_cutie_griffon_crusader }
 			picture = BOI_gabby
 			ai_will_do = {
 				factor = 1
@@ -1946,7 +1946,7 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { GAW_republican_icon } #TODO
+			traits = { GOY_republican_icon } #TODO
 			picture = BOI_gilda
 			ai_will_do = {
 				factor = 1
@@ -2073,6 +2073,9 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+			research_bonus = {
+				nuclear = 0.10
+			}
 			available = {
 				
 			}
@@ -2095,7 +2098,7 @@ ideas = {
 				
 			}
 			visible = {
-			    
+			    has_country_flag = BOI_goldstone_coup_success
 			}
 		}
 		BOI_klaus_steelfeather_advisor = {
@@ -2111,7 +2114,7 @@ ideas = {
 				
 			}
 			visible = {
-			    
+			    has_unit_leader = 4356501
 			}
 		}
 		BOI_gerdr = {
@@ -2168,16 +2171,22 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { army_chief_defensive_3 }
-			picture = BOI_
+			traits = { GOY_RGDF_leader }
+			picture = BOI_karl
 			ai_will_do = {
 				factor = 1
+			}
+			modifier = {
+			    special_forces_defence_factor = 0.1
+			    army_defence_factor = 0.1
 			}
 			available = {
 				
 			}
 			visible = {
-			    
+			    NOT = {
+				    has_country_flag = BOI_goldstone_coup_success
+				}
 			}
 		}
 		BOI_mikhaylo_advisor = {
@@ -2193,7 +2202,7 @@ ideas = {
 				
 			}
 			visible = {
-			    
+			    has_country_flag = BOI_goldstone_coup_success
 			}
 		}
 		BOI_greta = {
@@ -2318,7 +2327,7 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { industrial_concern }
+			traits = { GOY_high_tech_industry }
 			picture = BOI_
 			ai_will_do = {
 				factor = 1
@@ -2333,7 +2342,7 @@ ideas = {
 				industry = 0.10
 			}
 			modifier = {
-			    industrial_capacity_factory = 0.1
+			    industrial_capacity_factory = 0.05
 			}
 		}
 		BOI_greiffensteinisches_elektroinstitut = {
@@ -2346,7 +2355,7 @@ ideas = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_educate_engineers
 			}
 			visible = {
 			    
@@ -2365,7 +2374,7 @@ ideas = {
 				factor = 1
 			}
 			available = {
-				
+				owns_state = 383
 			}
 			visible = {
 			    
@@ -2388,7 +2397,7 @@ ideas = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_lakeshore_oil
 			}
 			visible = {
 			    
@@ -2405,12 +2414,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { infantry_equipment_manufacturer }
-			picture = BOI_
+			picture = generic_infantry_equipment_manufacturer_2
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_modernise_eq
 			}
 			visible = {
 			    
@@ -2430,12 +2439,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { artillery_manufacturer }
-			picture = BOI_
+			picture = generic_artillery_manufacturer_2
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_guns_wohnsitz
 			}
 			visible = {
 			    
@@ -2454,12 +2463,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { motorized_equipment_manufacturer }
-			picture = BOI_
+			picture = generic_motorized_equipment_manufacturer_3
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_tax_breaks
 			}
 			visible = {
 			    
@@ -2489,12 +2498,14 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { battlefleet_designer }
-			picture = BOI_
+			picture = generic_naval_manufacturer_3
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				any_owned_state = { 
+			        is_coastal = yes
+			    }
 			}
 			visible = {
 			    
@@ -2505,12 +2516,14 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { convoy_escort_naval_manufacturer }
-			picture = BOI_
+			picture = generic_naval_manufacturer_2
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				any_owned_state = { 
+			        is_coastal = yes
+			    }
 			}
 			visible = {
 			    
@@ -2521,12 +2534,14 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { raiding_fleet_naval_manufacturer }
-			picture = BOI_
+			picture = generic_naval_manufacturer_1
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				any_owned_state = { 
+			        is_coastal = yes
+			    }
 			}
 			visible = {
 			    
@@ -2539,12 +2554,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { light_aircraft_manufacturer }
-			picture = BOI_
+			picture = generic_air_manufacturer_3
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_import_fighters
 			}
 			visible = {
 			    
@@ -2555,12 +2570,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { heavy_aircraft_manufacturer }
-			picture = BOI_
+			picture = generic_air_bonus
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_new_strategic_bombers
 			}
 			visible = {
 			    
@@ -2571,12 +2586,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { CAS_manufacturer }
-			picture = BOI_
+			picture = air_support_focus
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_CAS
 			}
 			visible = {
 			    
@@ -2587,12 +2602,12 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { medium_aircraft_manufacturer }
-			picture = BOI_
+			picture = generic_air_manufacturer_2
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_bomber_designs
 			}
 			visible = {
 			    
@@ -2603,14 +2618,15 @@ ideas = {
 	    BOI_kupferberg_panzerfabrik = {
 			allowed = {
 				original_tag = "BOI"
-			}		
-			traits = { GAW_fast_tank_manufacturer }
-			picture = BOI_
+			}	
+            picture = generic_tank_manufacturer_2			
+			traits = { GOY_fast_tank_manufacturer }
+			
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_flame_industry
 			}
 			visible = {
 			    
@@ -2636,9 +2652,10 @@ ideas = {
 		BOI_stahladler_werke = {
 			allowed = {
 				original_tag = "BOI"
-			}		
-			traits = { GAW_medium_tank_manufacturer }
-			picture = BOI_
+			}	
+            picture = generic_tank_manufacturer_1			
+			traits = { GOY_medium_tank_manufacturer }
+			
 			ai_will_do = {
 				factor = 1
 			}
@@ -2662,14 +2679,15 @@ ideas = {
 		BOI_greifesten_metallwerke = {
 			allowed = {
 				original_tag = "BOI"
-			}		
-			traits = { GAW_mass_tank_manufacturer }
-			picture = BOI_
+			}	
+            picture = generic_tank_manufacturer_3			
+			traits = { GOY_mass_tank_manufacturer }
+			
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_steel_beasts
 			}
 			visible = {
 			    
@@ -2688,13 +2706,14 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { GAW_tankbuilding_academy }
-			picture = BOI_
+			picture = BOI_panzerinstitut
+			traits = { GOY_tankbuilding_academy }
+			
 			ai_will_do = {
 				factor = 1
 			}
 			available = {
-				
+				has_completed_focus = BOI_steel_beasts
 			}
 			visible = {
 			    

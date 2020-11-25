@@ -65,24 +65,33 @@ leader_traits = {
 		army_morale_factor = 0.1
 		communism_acceptance = 20
 	}
-	GAW_tankbuilding_academy = { #loc is inside BOI's files
+	GOY_tankbuilding_academy = { #loc is inside BOI's files
 	    random = no
 	}
-	GAW_mass_tank_manufacturer = {
+	GOY_mass_tank_manufacturer = {
 	    random = no
 	}
-	GAW_fast_tank_manufacturer = {
+	GOY_fast_tank_manufacturer = {
 	    random = no
 	}
-	GAW_cutie_griffon_crusader = {
+	GOY_medium_tank_manufacturer = {
+	    random = no
+	}
+	GOY_cutie_griffon_crusader = {
 	    random = no
 		stability_factor = 0.05
 		conscription_factor = 0.05
 	}
-	GAW_republican_icon = {
+	GOY_republican_icon = {
 	    random = no
 		drift_defence_factor = 0.2
 		stability_factor = 0.05
 		war_support_factor = 0.05
+	}
+	GOY_high_tech_industry = {
+	    random = no
+	}
+	GOY_RGDF_leader = {
+	    random = no
 	}
 }

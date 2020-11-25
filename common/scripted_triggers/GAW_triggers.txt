@@ -136,6 +136,7 @@ country_with_custom_advisors = {
 		original_tag = BAK
 		##################
 		original_tag = ARA
+		original_tag = BOI
 	}
 }
 
@@ -200,6 +201,7 @@ country_with_custom_designers = {
 		original_tag = BAK
 		##################
 		original_tag = ARA
+		original_tag = BOI
 	}
 }
 
@@ -211,5 +213,6 @@ country_with_custom_spymaster = {
 		original_tag = GRI
 		##################
 		original_tag = ARA
+		original_tag = BOI
 	}
 }

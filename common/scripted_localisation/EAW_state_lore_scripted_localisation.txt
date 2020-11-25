@@ -304,12 +304,6 @@ defined_text = {
 		trigger = { THIS = { state = 670 } }
 		localization_key = state_lore_text_container_state_name_short_670
 	}
-
-	text = {
-		trigger = { THIS = { state = 408 } }
-		localization_key = state_lore_text_container_state_name_short_408
-	}
-
 	text = {
 		trigger = { THIS = { state = 412 } }
 		localization_key = state_lore_text_container_state_name_short_412
@@ -321,6 +315,11 @@ defined_text = {
 	text = {
 		trigger = { THIS = { state = 649 } }
 		localization_key = state_lore_text_container_state_name_short_649
+	}
+	########################
+	text = {
+		trigger = { THIS = { state = 408 } }
+		localization_key = state_lore_text_container_state_name_short_408
 	}
 }
 
@@ -630,12 +629,6 @@ defined_text = {
 		trigger = { check_variable = { state_lore_text_state_id = 670 } }
 		localization_key = state_lore_text_container_state_name_670
 	}
-
-	text = {
-		trigger = { check_variable = { state_lore_text_state_id = 408 } }
-		localization_key = state_lore_text_container_state_name_408
-	}
-
 	text = {
 		trigger = { check_variable = { state_lore_text_state_id = 412 } }
 		localization_key = state_lore_text_container_state_name_412
@@ -647,6 +640,11 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { state_lore_text_state_id = 649 } }
 		localization_key = state_lore_text_container_state_name_649
+	}
+	####################
+	text = {
+		trigger = { check_variable = { state_lore_text_state_id = 408 } }
+		localization_key = state_lore_text_container_state_name_408
 	}
 }
 
@@ -956,12 +954,6 @@ defined_text = {
 		trigger = { check_variable = { state_lore_text_state_id = 670 } }
 		localization_key = state_lore_text_container_state_description_670
 	}
-
-	text = {
-		trigger = { check_variable = { state_lore_text_state_id = 408 } }
-		localization_key = state_lore_text_container_state_description_408
-	}
-
 	text = {
 		trigger = { check_variable = { state_lore_text_state_id = 412 } }
 		localization_key = state_lore_text_container_state_description_412
@@ -973,6 +965,11 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { state_lore_text_state_id = 649 } }
 		localization_key = state_lore_text_container_state_description_649
+	}
+	############################
+	text = {
+		trigger = { check_variable = { state_lore_text_state_id = 408 } }
+		localization_key = state_lore_text_container_state_description_408
 	}
 }
 
