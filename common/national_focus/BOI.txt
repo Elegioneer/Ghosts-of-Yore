@@ -4979,6 +4979,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+		    add_stability = 0.05
+			add_popularity = { ideology = neutrality popularity = 0.05 }
 			show_ideas_tooltip = BOI_gunther_silverfeather
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_gunther_advisor_unlocked

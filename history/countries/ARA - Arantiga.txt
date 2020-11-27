@@ -176,31 +176,7 @@ create_corps_commander = {
 	logistics_skill = 2
 	id = 1336
 }
-
-create_corps_commander = {
-	name = "Worek Artork"
-	picture = "Workofart.tga"
-	traits = { griffon_race_trait imbecile  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 1337
-}
-
-create_corps_commander = {
-	name = "Tungsten"
-	picture = "tungsten.tga"
-	traits = { bearer_of_artillery }
-	desc = "tungsten_desc"
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 57652536
-}
+## Artwork and Tungsten were removed for allegations of dark sorcery and cursing the mod with bad code
 
 set_rule = {
 	can_generate_female_aces = yes

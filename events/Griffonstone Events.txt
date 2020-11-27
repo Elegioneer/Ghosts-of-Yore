@@ -831,6 +831,8 @@ add_namespace = griffonstone_decision
 	    option = {
 	        name = griffonstone.205.a
 			remove_ideas = kingdom_with_no_king
+			set_party_name = { ideology = democratic name = BOI_kingsBOIs long_name = BOI_kingsBOIs_long }
+			set_party_name = { ideology = neutrality name = BOI_kingsBOIs long_name = BOI_kingsBOIs_long }
 			create_field_marshal = {
 	            name = "Gallus"
 	            picture = "Gallus.tga"
@@ -1163,6 +1165,23 @@ add_namespace = griffonstone_decision
 			set_capital = 382
 			add_ideas = GRI_grover_vi
 			remove_ideas = kingdom_with_no_king
+			hidden_effect = {
+			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
+			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
+				set_party_name = { ideology = democratic name = BOI_dem_upgrade long_name = BOI_dem_upgrade_long }
+			    set_party_name = { ideology = communism name = GRI_communism_party long_name = GRI_communism_party_long }
+				retire_ideology_leader = fascism
+				create_country_leader = {
+	                name = "Archon Eros VII"
+	                desc = "eros_vii_desc"
+	                picture = "gfx/leaders/GRI/Fash_pope.tga"
+	                expire = "1965.1.1"
+	                ideology = falangism
+	                traits = {
+    
+	                }
+                }
+			}
 		}
 	}
 	country_event = { #The Duchess of Strawberry
@@ -1195,6 +1214,23 @@ add_namespace = griffonstone_decision
 	            }
             }
 			remove_ideas = kingdom_with_no_king
+			hidden_effect = {
+			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
+			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
+				set_party_name = { ideology = democratic name = BOI_dem_upgrade long_name = BOI_dem_upgrade_long }
+			    set_party_name = { ideology = communism name = GRI_communism_party long_name = GRI_communism_party_long }
+				retire_ideology_leader = fascism
+				create_country_leader = {
+	                name = "Archon Eros VII"
+	                desc = "eros_vii_desc"
+	                picture = "gfx/leaders/GRI/Fash_pope.tga"
+	                expire = "1965.1.1"
+	                ideology = falangism
+	                traits = {
+    
+	                }
+                }
+			}
 		}
 	}
 	country_event = { #The puppetmaster
@@ -2032,7 +2068,6 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.266.a
-			#TODO add resources
 			add_ideas = BOI_legitimate_businessgriffs
 		}
 	}

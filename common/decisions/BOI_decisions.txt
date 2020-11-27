@@ -1,4 +1,4 @@
-BOI_support_liberation_front_category = { #TODO add industry and advisors
+BOI_support_liberation_front_category = {
     BOI_join_the_fray = {
 		icon = rifles
 		cost = 100
@@ -370,7 +370,20 @@ BOI_blackmarket_category = {
 		}
 		remove_effect = {
 			add_ideas = BOI_opium_trade
-			#add opinion -10 to all druglord TODO
+			custom_effect_tooltip = BOI_CETT_druglord
+			hidden_effect = {
+			    any_other_country = {
+				    limit = {
+					    not = {
+						    has_idea = detached_country
+						}
+					}
+			        add_opinion_modifier = {
+                        target = BOI
+                        modifier = BOI_druglord
+					}
+                }
+			}
 		}
 	}
 	BOI_approach_five_families = {

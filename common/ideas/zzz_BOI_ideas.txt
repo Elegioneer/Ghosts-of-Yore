@@ -418,7 +418,7 @@ ideas = {
 			picture = generic_war_preparation
 			removal_cost = -1
 			equipment_bonus = {
-			    artillery_equipment = { #TODO Make Look Good
+			    artillery_equipment = {
 				    soft_attack = 0.1
 					build_cost_ic = -0.05
 				}
@@ -1946,7 +1946,7 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { GOY_republican_icon } #TODO
+			traits = { GOY_republican_icon }
 			picture = BOI_gilda
 			ai_will_do = {
 				factor = 1
@@ -2044,6 +2044,24 @@ ideas = {
 			}
 			visible = {
 			    
+			}
+		}
+	}
+	political_advisor = {
+		BOI_gunther_silverfeather = {
+			allowed = {
+				original_tag = "BOI"
+			}		
+			traits = { friendly_priest }
+			picture = BRF_prelate
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			visible = {
+			    has_country_flag = BOI_FLAG_gunther_advisor_unlocked
 			}
 		}
 	}
