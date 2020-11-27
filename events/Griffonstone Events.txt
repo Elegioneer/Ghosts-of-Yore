@@ -108,6 +108,10 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	         name = griffonstone.003.a
+			 add_stability = -0.03
+			 384 = {
+			     add_manpower = -300
+			 }
 			 hidden_effect = {
 			     country_event = {
 				     id = griffonstone.004
@@ -1182,7 +1186,7 @@ add_namespace = griffonstone_decision
 			create_country_leader = {
 	            name = "Empress Gabriela Eagleclaw"
 	            desc = "POLITICS_EAGLECLAW_DESC" #TODO Should be changed
-	            portrait_path = "gfx/leaders/GRI/Gabriela.tga"
+	            picture = "gfx/leaders/GRI/Gabriela.tga"
 	            expire = "1965.1.1"
 	            female = yes
 	            ideology = despotism

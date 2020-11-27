@@ -139,6 +139,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_BOI_karl.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_BOI_gestal"
+		texturefile = "gfx/interface/ideas/idea_BOI_gestal.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_cyrille"
+		texturefile = "gfx/interface/ideas/idea_BOI_cyrille.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_BOI_panzerinstitut"
 		texturefile = "gfx/interface/ideas/idea_BOI_panzerinstitut.dds"
 	}

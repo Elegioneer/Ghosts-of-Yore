@@ -190,7 +190,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = lau_plantation_idea
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -204,7 +204,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = ast_all_in
 			removal_cost = -1
 			modifier = {
 			    local_resources_factor = 0.10
@@ -316,7 +316,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_army
 			removal_cost = -1
 			modifier = {
 			    army_infantry_attack_factor = 0.05
@@ -330,7 +330,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_army
 			removal_cost = -1
 			modifier = {
 			    army_infantry_attack_factor = 0.05
@@ -360,7 +360,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = MEX_politicised_army
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
@@ -375,7 +375,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_army
 			removal_cost = -1
 			modifier = {
 			    army_infantry_attack_factor = 0.05
@@ -496,7 +496,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_coastal_defense_ships2
 			removal_cost = -1
 			modifier = {
 			    industrial_capacity_dockyard = 0.25
@@ -509,7 +509,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = eng_steady_as_she_goes
 			removal_cost = -1
 			equipment_bonus = {
 			    convoy = {
@@ -524,7 +524,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_coastal_defense_ships
 			removal_cost = -1
 			research_bonus = {
     			naval_doctrine = 0.10
@@ -541,7 +541,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = air_support_focus
 			removal_cost = -1
 			research_bonus = {
     			air_doctrine = 0.10
@@ -558,7 +558,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_air_research
 			removal_cost = -1
 			equipment_bonus = {
 			    fighter_equipment  = {
@@ -585,7 +585,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = combined_bomber_offensive
 			removal_cost = -1
 			modifier = {
 			    air_strategic_bomber_attack_factor = 0.2
@@ -599,7 +599,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_fascism_drift_bonus
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
@@ -613,7 +613,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = equestrian_influence
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -640,7 +640,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = GRW_national_divides
+			picture = FAR_NCH_trade
 			removal_cost = -1
 			modifier = {
 			    non_core_manpower = 0.15
@@ -655,7 +655,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = PAP_Legionary_Spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.05
@@ -684,7 +684,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = hospital
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.1
@@ -698,7 +698,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = FRA_la_deluge
 			removal_cost = -1
 			modifier = {
 			    conscription_factor = 0.05
@@ -711,7 +711,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_pp_unity_bonus
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -726,7 +726,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = amethyst_university
 			removal_cost = -1
 			modifier = {
 			    opinion_gain_monthly_factor = 0.1
@@ -743,7 +743,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = GRW_post_war_stress
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -758,7 +758,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = HUN_hungarian_monarchy_habsburg
 			removal_cost = -1
 			modifier = {
 			    political_power_gain = 0.1
@@ -774,7 +774,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = pony_race
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.1
@@ -792,7 +792,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_flexible_foreign_policy2
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.03
@@ -806,7 +806,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = ELF_invincible
 			removal_cost = -1
 			modifier = {
 			    required_garrison_factor = 0.1
@@ -821,7 +821,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = griffon_passport
+			picture = pony_enslaved
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.2
@@ -839,7 +839,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
 			    army_core_attack_factor = 0.05
@@ -854,7 +854,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = HUN_hungarian_monarchy_democratic
 			removal_cost = -1
 			modifier = {
 				compliance_gain = 0.1
@@ -868,7 +868,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_religion
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -883,7 +883,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = griffon_army2
 			removal_cost = -1
 			modifier = {
 			    conscription = 0.01
@@ -897,7 +897,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_central_management
 			removal_cost = -1
 			modifier = {
 			    production_speed_buildings_factor = 0.1
@@ -910,7 +910,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = SPR_torchbearers_of_tomorrow
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.2
@@ -924,7 +924,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = NCH_end_deals_idea
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -939,7 +939,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = idol_of_boreas_lost
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.2
@@ -1083,7 +1083,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = pony_passport
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.1
@@ -1138,7 +1138,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = home_of_the_griffons
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.15
@@ -1195,7 +1195,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = slavery
+			picture = LIT_crown_4
 			removal_cost = -1
 			modifier = {
 			    war_support_factor = -0.3
@@ -1253,7 +1253,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = civilian_economy_red
+			picture = trade
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
@@ -1268,7 +1268,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = war_of_liberation
 			removal_cost = -1
 			modifier = {
 			    conscription_factor = -0.05
@@ -1281,7 +1281,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = NOR_statspolitiet
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.1
@@ -1294,7 +1294,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = idol_of_boreas_lost
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -1307,7 +1307,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = ANG_The_Free_State_Army
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
@@ -1349,7 +1349,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = equestrian_advisors
 			removal_cost = -1
 			modifier = {
 			    research_speed_factor = 0.03
@@ -1366,7 +1366,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = grover_vi
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -1379,7 +1379,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = BOI_cyrille
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.01
@@ -1392,7 +1392,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = ANG_The_Free_State_Army
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.15
@@ -1408,7 +1408,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = LEC_high_reserves
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.05
@@ -1422,7 +1422,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_naval_manufacturer_3
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.10
@@ -1437,7 +1437,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = partial_economic_mobilisation_red
 			removal_cost = -1
 			modifier = {
 			    max_planning = 0.05
@@ -1451,7 +1451,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = chi_hyper_inflation3
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.05
@@ -1464,7 +1464,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_democratic_drift_bonus
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -1478,7 +1478,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = eqs_order_idea
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
@@ -1492,7 +1492,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = BOI_gestal
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.05
@@ -1505,7 +1505,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = idol_of_boreas_lost
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.2
@@ -1520,7 +1520,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = harmonic_stagnation
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.03
@@ -1535,7 +1535,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = ELF_might
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
@@ -1548,7 +1548,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = GRF_militias
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.1
@@ -1590,7 +1590,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
@@ -1603,7 +1603,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = magical_trainingidea
 			removal_cost = -1
 			modifier = {
 			    send_volunteer_size = 6
@@ -1616,7 +1616,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = weter
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
@@ -1632,7 +1632,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = unicorn_academy
 			removal_cost = -1
 			modifier = {
 			    max_planning = 0.25
@@ -1648,7 +1648,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = trade
 			removal_cost = -1
 			modifier = {
 			    local_resources_factor = 0.1
@@ -1665,7 +1665,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = tur_balkan_central_bank_wealthy_greece
 			removal_cost = -1
 			modifier = {
 			    trade_opinion_factor = 0.1
@@ -1680,7 +1680,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = great_depression
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -1695,7 +1695,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = prc_permit_opium_trade
 			removal_cost = -1
 			modifier = {
 			    monthly_population = -0.1
@@ -1710,7 +1710,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = outlaw_economy
 			removal_cost = -1
 			modifier = {
 			    industrial_capacity_factory = 0.1
@@ -1724,7 +1724,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = BAL_hell
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -1737,7 +1737,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_economic_increase
 			removal_cost = -1
 			modifier = {
 			    trade_opinion_factor = 0.1
@@ -1752,7 +1752,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = BOI_gestal
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.1 #TODO change to some advisor trait
@@ -1765,7 +1765,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = partial_economic_mobilisation_red
 			removal_cost = -1
 			modifier = {
 			    max_planning = 0.1
@@ -1779,7 +1779,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_democratic_drift_bonus
 			removal_cost = -1
 			modifier = {
 				compliance_gain = 0.5
@@ -1793,7 +1793,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = company_pile_of_guns
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.2
@@ -1807,7 +1807,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = generic_archonism_idea
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -1821,7 +1821,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_artillery_regiments
+			picture = chi_hyper_inflation
 			removal_cost = -1
 			modifier = {
 				consumer_goods_factor = -0.02
@@ -1837,7 +1837,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = generic_artillery_regiments
+			picture = air_war_plans_division_focus
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = 0.1
@@ -1851,7 +1851,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = generic_artillery_regiments
+			picture = general_staff
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = 0.1

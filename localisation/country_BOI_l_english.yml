@@ -245,6 +245,8 @@ BOI_zebrica_smuggling:0 "Smuggling In Zebrica"
 BOI_zebrica_smuggling_desc:0 "With corsairs’ support, our smugglers can freely roam the southern seas and operate in Zebrica’s ports."
 BOI_griffonstonian_assistance:0 "Griffonstonian Assistance"
 BOI_griffonstonian_assistance_desc:0 "An elite group of mercenaries and advisors is providing valuable assistance to our armed forces."
+BOI_griffonstonian_military_assistance:0 "Griffonstonian Assistance"
+BOI_griffonstonian_military_assistance_desc:0 "An elite group of mercenaries and advisors is providing valuable assistance to our armed forces."
 BOI_payment:0 "Deal Payment"
 BOI_payment_desc:0 "War is good for business."
 BOI_republicans_in_council:0 "Republicans In the Council"
@@ -925,6 +927,7 @@ BOI_FLAG_gunther_advisor_unlocked:0 "§YGunther§! is willing to cooperate with 
 BOI_FLAG_new_blackmarket_decisions_unlocked:0 "We seeked out new §Yopportunities§! on the Black Market"
 BOI_FLAG_second_elections:0 "§YGilda§!'s presidency ended"
 BOI_goldstone_coup_success:0 "§YGoldstone§!'s coup was successful"
+BOI_deadlock_broken:0 "The political deadlock has been broken."
 
 ## Tooltips ##
 BOI_CETT_new_blackmarket_decisions_unlocked:0 "Unlocks §Cnew§! §YBlack Market Decisions§!"
