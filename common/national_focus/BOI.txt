@@ -563,6 +563,10 @@
 					instant_build = yes
 				}
 			}
+			add_timed_idea = {
+			    idea = BOI_griffonstone_expansion
+				days = 180
+			}
 		}
 	}
 	shared_focus = {
