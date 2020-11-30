@@ -133,7 +133,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = Generic_bank_idea_icon
+			picture = can_wartime_prices_and_trade_board
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.1
@@ -165,7 +165,7 @@ ideas = {
 			picture = jap_supremacy_of_technology
 			removal_cost = -1
 			modifier = {
-			    research_speed_factor = 0.05
+			    research_speed_factor = 0.1
 			}
 		}
 		BOI_miraculous_recovery = {
@@ -180,7 +180,7 @@ ideas = {
 			modifier = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
-				production_speed_buildings_factor = 0.25
+				production_speed_buildings_factor = 0.2
 			}
 		}
 		BOI_terrace_farms = {
@@ -252,6 +252,20 @@ ideas = {
 				experience_loss_factor = -0.1
 			}
 		}
+		BOI_griffonstone_army_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = griffon_army3
+			removal_cost = -1
+			modifier = {
+			    conscription = 0.01
+				experience_loss_factor = -0.1
+			}
+		}
 		BOI_lords_army_1 = {
 			allowed = {
 				always = no
@@ -291,6 +305,21 @@ ideas = {
 			modifier = {
 			    max_planning = 0.1
 				max_command_power = 10
+				max_dig_in = 1
+				dig_in_speed_factor = 0.05
+			}
+		}
+		BOI_lords_army_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = triumphant_will
+			removal_cost = -1
+			modifier = {
+			    max_planning = 0.1
 				max_dig_in = 1
 				dig_in_speed_factor = 0.05
 			}
@@ -1565,9 +1594,22 @@ ideas = {
 			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.03
+			    consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.1
-				min_export = 0.05
+				min_export = 0.1
+			}
+		}
+		BOI_tax_breaks_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = Generic_bank_idea_icon
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.1
 			}
 		}
 		BOI_griffonstone_reconstruction = {
@@ -1581,6 +1623,19 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
+			}
+		}
+		BOI_griffonstone_expansion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = IRE_heavy_industry
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.15
 			}
 		}
 		BOI_land_compensation = {
@@ -1635,6 +1690,7 @@ ideas = {
 			picture = unicorn_academy
 			removal_cost = -1
 			modifier = {
+			    weekly_manpower = -300
 			    max_planning = 0.25
 				planning_speed = 0.25
 			}

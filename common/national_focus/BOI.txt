@@ -84,7 +84,7 @@
 	shared_focus = {
 		id = BOI_literacy_campaign
 		icon = GFX_goal_bookstack 
-		x = -1
+		x = -2
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_restore_roads
@@ -100,7 +100,7 @@
 	shared_focus = {
 		id = BOI_educate_engineers
 		icon = GFX_goal_industrial_pony 
-		x = -2
+		x = -1
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
@@ -121,7 +121,7 @@
 	shared_focus = {
 		id = BOI_temple_schools
 		icon = GFX_focus_spa_save_the_alcazar
-		x = 0
+		x = 1
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
@@ -137,7 +137,7 @@
 	shared_focus = {
 		id = BOI_griffonstone_uni
 		icon = GFX_goal_technological_supremacy 
-		x = -1
+		x = 1
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
@@ -155,7 +155,7 @@
 	shared_focus = {
 		id = BOI_guto_institute
 		icon = GFX_goal_double_research 
-		x = -1
+		x = 1
 		y = 3
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
@@ -385,18 +385,25 @@
 		icon = GFX_goal_cash_and_cap 
 		x = 0
 		y = 1
-		cost = 8.00
+		cost = 5.00
 		relative_position_id = BOI_gather_scraps
 		prerequisite = { focus = BOI_gather_scraps }
 		prerequisite = { focus = BOI_restore_roads }
 		prerequisite = { focus = BOI_ask_for_loans }
+		
+		available = {
+		    has_political_power > 75
+		}
 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
 			add_political_power = -75
-			increase_society_development_with_tt = yes
+			add_timed_idea = {
+			    idea = BOI_tax_breaks_idea
+				days = 240
+			}
 		}
 	}
 	shared_focus = {
@@ -413,16 +420,16 @@
 		}
 		completion_reward = {
 		    384 = {
-			    add_extra_state_shared_building_slots = 1
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}	
 			}
 			add_resource = {
 				type = steel
-				amount = 3
+				amount = 5
 				state = 384
 			}
 		}
@@ -440,14 +447,7 @@
 			factor = 1
 		}
 		completion_reward = {
-		    488 = {
-			    add_extra_state_shared_building_slots = 2
-			    add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+		    increase_society_development_with_tt = yes
 		}
 	}
 	shared_focus = {
@@ -464,10 +464,10 @@
 		}
 		completion_reward = {
 			471 = {
-			    add_extra_state_shared_building_slots = 1
+			    add_extra_state_shared_building_slots = 3
 			    add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -486,7 +486,10 @@
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = BOI_industrial_expansion
+			add_timed_idea = {
+			    idea = BOI_industrial_expansion
+				days = 360
+			}
 		}
 	}
 	shared_focus = {
@@ -494,7 +497,7 @@
 		icon = GFX_goal_chn_economic_plan 
 		x = 0
 		y = 3
-		cost = 5.00
+		cost = 8.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_gale_park }
 		prerequisite = { focus = BOI_flame_industry }
@@ -507,65 +510,13 @@
 		}
 	}
 	shared_focus = {
-		id = BOI_bright_flame
-		icon = GFX_goal_munitions_factories 
-		x = -3
-		y = 4
-		cost = 5.00
-		relative_position_id = BOI_tax_breaks
-		prerequisite = { focus = BOI_modern_age }
-		available = {
-		    owns_state = 384
-			owns_state = 679
-			owns_state = 389
-			owns_state = 471
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			384 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			679 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			389 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			471 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	shared_focus = {
 		id = BOI_great_archive
 		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama 
 		x = -1
 		y = 4
 		cost = 8.00
 		relative_position_id = BOI_tax_breaks
+		prerequisite = { focus = BOI_guto_institute }
 		prerequisite = { focus = BOI_modern_age }
 		mutually_exclusive = { focus = BOI_griffon_home }
 
@@ -583,6 +534,7 @@
 		y = 4
 		cost = 8.00
 		relative_position_id = BOI_tax_breaks
+		prerequisite = { focus = BOI_rebuild_griffonstone }
 		prerequisite = { focus = BOI_modern_age }
 		mutually_exclusive = { focus = BOI_great_archive }
 
@@ -591,8 +543,8 @@
 		}
 		completion_reward = {
 			389 = {
-			    add_manpower = 500000
-				set_state_category = large_city
+			    add_manpower = 300000
+				set_state_category = metropolis
 				add_building_construction = {
 				    type = industrial_complex
 					level = 3
@@ -608,59 +560,6 @@
 				add_building_construction = {
 				    type = infrastructure
 					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	shared_focus = {
-		id = BOI_fire_forged
-		icon = GFX_IRE_heavy_industry 
-		x = 3
-		y = 4
-		cost = 5.00
-		relative_position_id = BOI_tax_breaks
-		prerequisite = { focus = BOI_modern_age }
-		available = {
-		    owns_state = 384
-			owns_state = 679
-			owns_state = 389
-			owns_state = 471
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			384 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			679 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			389 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			471 = {
-			    add_extra_state_shared_building_slots = 1
-			    add_building_construction = {
-					type = arms_factory
-					level = 1
 					instant_build = yes
 				}
 			}
@@ -685,7 +584,7 @@
 	shared_focus = {
 		id = BOI_demolish_slums
 		icon = GFX_goal_generic_build_housing 
-		x = 1
+		x = 2
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_ask_for_loans
@@ -702,7 +601,7 @@
 	shared_focus = {
 		id = BOI_expand_terrace
 		icon = GFX_goal_agriculture 
-		x = 0
+		x = -1
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
@@ -719,7 +618,7 @@
 	shared_focus = {
 		id = BOI_promote_urban
 		icon = GFX_goal_rct_expand_the_city 
-		x = 2
+		x = 1
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
@@ -731,23 +630,23 @@
 		completion_reward = {
 			decrease_poverty = yes
 			384 = { 
-			    add_manpower = 100000
+			    add_manpower = 50000
 			}
 			679 = { 
-			    add_manpower = 100000
+			    add_manpower = 50000
 			}
 			389 = { 
-			    add_manpower = 100000
+			    add_manpower = 50000
 			}
 			471 = { 
-			    add_manpower = 100000
+			    add_manpower = 50000
 			}
 		}
 	}
 	shared_focus = {
 		id = BOI_farm_mecha
 		icon = GFX_goal_agricultural_aid_2 
-		x = 1
+		x = -1
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
@@ -775,7 +674,7 @@
 	shared_focus = {
 		id = BOI_rebuild_griffonstone
 		icon = GFX_r56_goal_FRA_alliance_with_industrialists 
-		x = 1
+		x = -1
 		y = 3
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
@@ -785,21 +684,21 @@
 			factor = 1
 		}
 		completion_reward = {
-		    #could be moved to event
+		    #could be moved to event	
 			decrease_poverty = yes
 			389 = {
 			    add_manpower = 100000
-			    set_state_category = large_city
-			    add_extra_state_shared_building_slots = 3
+			    set_state_category = megalopolis
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
-			    add_extra_state_shared_building_slots = 3
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1125,7 +1024,7 @@
 			}
 			else = {
 			    swap_ideas = {
-				    remove_idea = BOI_griffonstone_army_2
+				    remove_idea = BOI_griffonstone_army_4
 			        add_idea = BOI_griffonstone_army_3
 				}
 			}
@@ -1150,7 +1049,7 @@
 				}
 			    swap_ideas = {
 			        remove_idea = BOI_griffonstone_army_1
-			        add_idea = BOI_griffonstone_army_2
+			        add_idea = BOI_griffonstone_army_4
 			    }
 			}
 			else = {
@@ -1210,7 +1109,7 @@
 			}
 			else = {
 			    swap_ideas = {
-				    remove_idea = BOI_lords_army_2
+				    remove_idea = BOI_lords_army_4
 			        add_idea = BOI_lords_army_3
 				}
 			}
@@ -1235,7 +1134,7 @@
 				}
 			    swap_ideas = {
 			        remove_idea = BOI_lords_army_1
-			        add_idea = BOI_lords_army_2
+			        add_idea = BOI_lords_army_4
 			    }
 			}
 			else = {
