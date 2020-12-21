@@ -3181,7 +3181,7 @@ focus_tree = {
 		}
 		completion_reward = {
 		    set_cosmetic_tag = BOI_GRIF_HERZ
-			news_event = griffonstone_news.002
+			news_event = griffonstone_news.05
 			add_ideas = BOI_griffonian_diarchy
 			custom_effect_tooltip = BOI_CETT_coring_herzland
 			hidden_effect = {
@@ -3326,7 +3326,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = BOI_GRIF_HERZ
-			news_event = griffonstone_news.001
+			news_event = griffonstone_news.04
 			GRI = { add_to_ROOT_potential_cores = yes }
 		    ANG = { add_to_ROOT_potential_cores = yes }
 		    STW = { add_to_ROOT_potential_cores = yes }
@@ -3430,6 +3430,9 @@ focus_tree = {
 			add_opinion_modifier = {
 			    target = CHN
 				modifier = BOI_supporting_EQS
+			}
+			country_event = {
+			    id = griffonstone.280
 			}
 		}
 	}
@@ -8061,10 +8064,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_bechard
+			show_ideas_tooltip = BOI_bechard
 			swap_ideas = {
 			    remove_idea = BOI_no_industrial_regulations_1
 				add_idea = BOI_no_industrial_regulations_2
-				show_ideas_tooltip = BOI_bechard
 			}
 		}
 	}
@@ -8082,10 +8085,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_drach
+			show_ideas_tooltip = BOI_erwin_von_drach
 			swap_ideas = {
 			    remove_idea = BOI_indentured_servitude_idea_1
 				add_idea = BOI_indentured_servitude_idea_2
-				show_ideas_tooltip = BOI_erwin_von_drach
 			}
 		}
 	}
@@ -8224,8 +8227,8 @@ focus_tree = {
 		    country_event = griffonstone.299
 		    hidden_effect = {
 			    news_event = { 
-				    id = griffonstone_news.002
-					days = 1
+				    id = griffonstone_news.06
+					hours = 10
 				}
 			}
 		}

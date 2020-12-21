@@ -1,3 +1,31 @@
+BOI_war_for_liberation_category = {
+    BOI_start_war_for_liberation = {
+	    icon = rifles
+		cost = 200
+		fire_only_once = yes
+		available = {
+		    has_country_flag = FLAG_BOI_supports_ELF
+		    has_completed_focus = BOI_support_war_of_liberation
+	        has_completed_focus = BOI_harbour_equestrian_elites
+		    has_completed_focus = BOI_refugee_haven
+		    has_manpower > 10000
+			has_equipment = {
+			    infantry_equipment > 10000
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+		    MAN = {
+		        country_event = {
+				    id = MAN_ELF.131
+					hours = 12
+				}
+			}
+		}
+	}
+}
 BOI_support_liberation_front_category = {
     BOI_join_the_fray = {
 		icon = rifles

@@ -141,6 +141,144 @@ add_namespace = griffonstone_decision
 			}
 	    }
 	}
+	news_event = { #New Kingdom
+	    id = griffonstone_news.04
+	    title = griffonstone_news.04.t
+	    desc = griffonstone_news.04.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.04.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.04.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.04.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #Dual Kingdom
+	    id = griffonstone_news.05
+	    title = griffonstone_news.05.t
+	    desc = griffonstone_news.05.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.05.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.05.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.05.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #New Empire Rises
+	    id = griffonstone_news.06
+	    title = griffonstone_news.06.t
+	    desc = griffonstone_news.06.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.06.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.06.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.06.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
 
     ####DEBUG EVENT####
 	
@@ -2946,6 +3084,10 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.287.a
+			custom_effect_tooltip = CETT_BOI_ELF_support
+			hidden_effect = {
+			    set_country_flag = FLAG_BOI_supports_ELF
+			}
 		}
 	}
 	country_event = { #Idol transfer

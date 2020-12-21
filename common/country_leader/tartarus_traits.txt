@@ -22,7 +22,7 @@ leader_traits = {
 	sturmgriefen_commander = {
 		random = no
 		experience_gain_army = 0.05
-		enemy_partisan_effect = -0.25
+		required_garrison_factor = -0.25
 	}
 	protector_cyan = {
 		random = no

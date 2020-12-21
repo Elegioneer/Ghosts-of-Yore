@@ -1,3 +1,22 @@
+BOI_war_for_liberation_category = {
+	icon = generic_political_actions
+
+	visible = {
+		original_tag = BOI
+		has_country_flag = FLAG_BOI_supports_ELF
+		ELF = {
+		    exists = no
+		}
+		MAN = {
+		    exists = yes
+		}
+		NOT = {
+		    MAN = {
+			    has_country_flag = MAN_the_ELF_uprising_has_begun
+			}
+		}
+	}
+}
 BOI_support_liberation_front_category = {
 	icon = generic_political_actions
 

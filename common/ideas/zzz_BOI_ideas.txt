@@ -1959,11 +1959,9 @@ ideas = {
 			    has_completed_focus = BOI_harbour_equestrian_elites
 				NOT = {
 				    any_other_country = {
-					    limit = {
-						    OR = {
-						        original_tag = EQC
-								original_tag = ELF
-							}
+						OR = {
+						    original_tag = EQC
+							original_tag = ELF
 						}
 						exists = yes
 					}
@@ -2245,11 +2243,9 @@ ideas = {
 			    has_completed_focus = BOI_harbour_equestrian_elites
 				NOT = {
 				    any_other_country = {
-					    limit = {
-						    OR = {
-						        original_tag = EQC
-								original_tag = ELF
-							}
+						OR = {
+						    original_tag = EQC
+							original_tag = ELF
 						}
 						exists = yes
 					}
@@ -2270,7 +2266,7 @@ ideas = {
 				
 			}
 			visible = {
-			    has_unit_leader = 4356501
+			    has_unit_leader = 667901
 			}
 		}
 		BOI_gerdr = {
@@ -2450,11 +2446,9 @@ ideas = {
 			    has_completed_focus = BOI_harbour_equestrian_elites
 				NOT = {
 				    any_other_country = {
-					    limit = {
-						    OR = {
-						        original_tag = EQC
-								original_tag = ELF
-							}
+						OR = {
+						    original_tag = EQC
+							original_tag = ELF
 						}
 						exists = yes
 					}
@@ -2914,7 +2908,7 @@ ideas = {
 					build_cost_ic = 0.05 instant = yes
 					reliability = 0.05 instant = yes
 					soft_attack = 0.05 instant = yes
-					armor = 0.05 instant = yes
+					armor_value = 0.05 instant = yes
 				}
 			}
 		}
