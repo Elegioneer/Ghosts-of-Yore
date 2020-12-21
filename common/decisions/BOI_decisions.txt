@@ -329,8 +329,13 @@ BOI_griffonian_union_category = {
 					}
 				}
 				NOT = {
-				    original_tag = FAT
-					has_government = democratic
+				    AND = {
+				        original_tag = FAT
+					    has_government = democratic
+					}
+				}
+				NOT = {
+				    has_idea = detached_country
 				}
 				NOT = {
 				    has_country_flag = BOI_FLAG_refused_griffonian_union
@@ -372,7 +377,7 @@ BOI_blackmarket_category = {
 			add_ideas = BOI_opium_trade
 			custom_effect_tooltip = BOI_CETT_druglord
 			hidden_effect = {
-			    any_other_country = {
+			    every_other_country = {
 				    limit = {
 					    not = {
 						    has_idea = detached_country

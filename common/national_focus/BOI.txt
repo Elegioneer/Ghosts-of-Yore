@@ -131,6 +131,12 @@
 			factor = 1
 		}
 		completion_reward = {
+		    add_tech_bonus = {
+			    name = temple_school_race
+			    bonus = 0.5
+			    uses = 2
+			    category = race_tech
+		    }
 			decrease_illiteracy = yes
 		}
 	}
@@ -168,17 +174,23 @@
 			if = {
 				limit = { has_idea = big_science_base }
 				add_ideas = proper_science_base
+				add_tech_bonus = {
+			        name = guto_institute_bonus_1_3
+			        bonus = 1
+			        uses = 1
+			        category = electronics
+		        }
 			}
 			else = {
 				add_tech_bonus = {
 			        name = guto_institute_bonus_1_1
-			        bonus = 0.5
+			        bonus = 1
 			        uses = 1
 			        category = industry
 		        }
 				add_tech_bonus = {
 			        name = guto_institute_bonus_1_2
-			        bonus = 0.5
+			        bonus = 2
 			        uses = 1
 			        category = electronics
 		        }
@@ -692,7 +704,6 @@
 			decrease_poverty = yes
 			389 = {
 			    add_manpower = 100000
-			    set_state_category = megalopolis
 			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
@@ -2418,6 +2429,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+		    add_stability = 0.05
 			decrease_illiteracy = yes
 		}
 	}
@@ -2465,6 +2477,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
+		will_lead_to_war_with = LAK
 
 		ai_will_do = {
 			factor = 1
@@ -2484,6 +2497,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
+		will_lead_to_war_with = BAN
 
 		ai_will_do = {
 			factor = 1
@@ -2526,6 +2540,18 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		
+		bypass = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2553,6 +2579,18 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
+		will_lead_to_war_with = ARA
+		
+		bypass = {
+		    OR = {
+		        ARA = {
+				    exists = no
+			    }
+				ARA = {
+				    is_subject = yes
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2572,6 +2610,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_cradle_of_griffonkind }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2588,6 +2629,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_cradle_of_griffonkind }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2605,6 +2649,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_avenge_922 }
+		available = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2634,6 +2681,14 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_secure_verenia }
+		available = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2656,6 +2711,15 @@ focus_tree = {
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemy_at_the_gates }
 		mutually_exclusive = { focus = BOI_look_towards_karthin }
+		bypass = {
+		    NOT = {
+		        owns_state = 408
+				any_other_country = {
+					is_subject_of = BOI
+					owns_state = 408
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2675,6 +2739,24 @@ focus_tree = {
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemy_at_the_gates }
 		mutually_exclusive = { focus = BOI_pacify_arantiga }
+		available = {
+		    OR = {
+		        owns_state = 408
+				any_other_country = {
+					is_subject_of = BOI
+					owns_state = 408
+				}
+			}
+		}
+		bypass = {
+		    NOT = {
+		        owns_state = 408
+				any_other_country = {
+					is_subject_of = BOI
+					owns_state = 408
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2866,7 +2948,11 @@ focus_tree = {
 		relative_position_id = BOI_coronation
 		prerequisite = { focus = BOI_rally_the_griffons }
 		prerequisite = { focus = BOI_constitutional_monarchy }
+		will_lead_to_war_with = GRI
 		
+		bypass = {
+		    owns_state = 382
+		}
 		available = {
 		    OR = {
 		        any_other_country = {
@@ -2926,6 +3012,11 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_new_diarchy focus = BOI_proclaim_new_kingdom }
+		will_lead_to_war_with = TRD
+		
+		bypass = {
+		    owns_state = 381
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2947,16 +3038,22 @@ focus_tree = {
 		prerequisite = { focus = BOI_war_of_unification }
 		mutually_exclusive = { focus = BOI_commemoration }
 		available = {
-		    GRI = {
-			    OR = {
-			        has_idea = GRI_grover_vi 
-					has_country_leader = { 
-		                ruling_only = yes 
-			            name = "Emperor Grover VI" 
-		            }
-				}
+		    owns_state = 382
+			NOT = {
+			    has_global_flag =  GRI_grover_vi_dead
 			}
 		}
+		#available = {
+		#    GRI = {
+		#	    OR = {
+		#	        has_idea = GRI_grover_vi 
+		#			has_country_leader = { 
+		#                ruling_only = yes 
+		#	            name = "Emperor Grover VI" 
+		#            }
+		#		}
+		#	}
+		#}
 
 		ai_will_do = {
 			factor = 1
@@ -2975,17 +3072,8 @@ focus_tree = {
 		prerequisite = { focus = BOI_war_of_unification }
 		mutually_exclusive = { focus = BOI_the_last_emperor }
 		available = {
-		    GRI = {
-			    NOT = {
-			        OR = {
-			            has_idea = GRI_grover_vi 
-					    has_country_leader = { 
-		                    ruling_only = yes 
-			                name = "Emperor Grover VI" 
-		                }
-				    }
-				}
-			}
+		    owns_state = 382
+			has_global_flag =  GRI_grover_vi_dead
 		}
 
 		ai_will_do = {
@@ -3092,6 +3180,8 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+		    set_cosmetic_tag = BOI_GRIF_HERZ
+			news_event = griffonstone_news.002
 			add_ideas = BOI_griffonian_diarchy
 			custom_effect_tooltip = BOI_CETT_coring_herzland
 			hidden_effect = {
@@ -3326,6 +3416,11 @@ focus_tree = {
 		cost = 1.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_new_diarchy focus = BOI_proclaim_new_kingdom }
+		available = {
+		    EQS = {
+			    exists = no
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -3487,7 +3582,11 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			#Get military advisor “Prince Blueblood” ( Army logistics Expert), Get political advisor Dotted Line (Armaments Organiser), Get chief of navy Cynosura (Decisive Battle Expert) Note: All advisors are available if Equestria of ELF does not exist
+			#TODO Get military advisor “Prince Blueblood” ( Army logistics Expert), Get political advisor Dotted Line (Armaments Organiser), Get chief of navy Cynosura (Decisive Battle Expert) Note: All advisors are available if Equestria of ELF does not exist
+			custom_effect_tooltip = BOI_CETT_equestrian_elites
+			show_ideas_tooltip = BOI_blueblood
+			show_ideas_tooltip = BOI_dotted_line
+			show_ideas_tooltip = BOI_cynosura
 		}
 	}
 	focus = {
@@ -3822,6 +3921,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_new_republic_rises }
+		prerequisite = { focus = BOI_republican_propaganda }
 
 		ai_will_do = {
 			factor = 1
@@ -3838,6 +3938,8 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_new_republic_rises }
+		prerequisite = { focus = BOI_republican_propaganda }
+		prerequisite = { focus = BOI_restore_our_pride }
 
 		ai_will_do = {
 			factor = 1
@@ -3854,6 +3956,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_new_republic_rises }
+		prerequisite = { focus = BOI_restore_our_pride }
 
 		ai_will_do = {
 			factor = 1
@@ -3911,6 +4014,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_natural_borders }
+		will_lead_to_war_with = BAN
 
 		ai_will_do = {
 			factor = 1
@@ -3969,6 +4073,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_natural_borders }
+		will_lead_to_war_with = LAK
 
 		ai_will_do = {
 			factor = 1
@@ -4020,6 +4125,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_eastern_expedition }
+		available = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4049,6 +4157,11 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_eastern_expedition }
+		available = {
+		    owns_state = 446
+			owns_state = 606
+			owns_state = 489
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4160,6 +4273,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_cradle_of_griffonkind_gilda }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4177,6 +4293,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_cradle_of_griffonkind_gilda }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4502,6 +4621,16 @@ focus_tree = {
 		cost = 1.00
 		relative_position_id = BOI_new_direction
 		prerequisite = { focus = BOI_new_direction }
+		will_lead_to_war_with = HLQ
+		will_lead_to_war_with = LSM
+		will_lead_to_war_with = LSC
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = HEL
+		will_lead_to_war_with = AET
+		will_lead_to_war_with = TRD
 		available = {
 		    has_completed_focus = BOI_dream_defied
 			NOT = {
@@ -4730,6 +4859,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_new_direction
 		prerequisite = { focus = BOI_president_gabby }
+		available = {
+		    has_completed_focus = BOI_griffonstone_cmc_gilda
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -5120,6 +5252,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_look_outside }
+		will_lead_to_war_with = BAN
 
 		ai_will_do = {
 			factor = 1
@@ -5162,6 +5295,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_look_outside }
+		will_lead_to_war_with = LAK
 
 		ai_will_do = {
 			factor = 1
@@ -5213,6 +5347,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_avenge_922_gestal }
+		available = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -5242,6 +5379,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_cradle_of_griffonkind_gestal }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -5433,6 +5573,7 @@ focus_tree = {
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_our_duty }
 		mutually_exclusive = { focus = BOI_loyalty_to_the_crown }
+		will_lead_to_war_with = GRI
 		ai_will_do = {
 			factor = 1
 		}
@@ -5714,6 +5855,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_integrate_herzland }
+		will_lead_to_war_with = TRD
 
 		ai_will_do = {
 			factor = 1
@@ -7413,6 +7555,7 @@ focus_tree = {
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_divide_and_conquer }
 		prerequisite = { focus = BOI_special_economic_zones }
+		will_lead_to_war_with = LAK
 
 		ai_will_do = {
 			factor = 1
@@ -7448,6 +7591,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_prey_on_the_weak }
+		will_lead_to_war_with = BAN
 
 		ai_will_do = {
 			factor = 1
@@ -7490,6 +7634,17 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_prey_on_the_weak }
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		bypass = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7517,6 +7672,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_cradle_of_griffonkind_goldstone }
+		available = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7550,6 +7708,9 @@ focus_tree = {
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_reclaim_blackhollow }
 		mutually_exclusive = { focus = BOI_conscript_bandits }
+		available = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7596,6 +7757,9 @@ focus_tree = {
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_reclaim_blackhollow }
 		mutually_exclusive = { focus = BOI_send_them_to_the_mines }
+		available = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7612,6 +7776,14 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_verenian_mess }
+		available = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7635,6 +7807,10 @@ focus_tree = {
 		prerequisite = { focus = BOI_deal_with_rumareans }
 		prerequisite = { focus = BOI_send_them_to_the_mines focus = BOI_conscript_bandits }
 		prerequisite = { focus = BOI_integrate_verenia_goldstone }
+		will_lead_to_war_with = GRI
+		bypass = {
+		    owns_state = 822
+		}
 		
 		available = {
 		    OR = {
@@ -7856,6 +8032,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_breaking_the_heart }
+		will_lead_to_war_with = TRD
 
 		ai_will_do = {
 			factor = 1
@@ -7887,6 +8064,7 @@ focus_tree = {
 			swap_ideas = {
 			    remove_idea = BOI_no_industrial_regulations_1
 				add_idea = BOI_no_industrial_regulations_2
+				show_ideas_tooltip = BOI_bechard
 			}
 		}
 	}
@@ -7907,6 +8085,7 @@ focus_tree = {
 			swap_ideas = {
 			    remove_idea = BOI_indentured_servitude_idea_1
 				add_idea = BOI_indentured_servitude_idea_2
+				show_ideas_tooltip = BOI_erwin_von_drach
 			}
 		}
 	}
@@ -7919,6 +8098,12 @@ focus_tree = {
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_pacify_herzland }
 		mutually_exclusive = { focus = BOI_unlikely_candidate }
+		available = {
+		    owns_state = 382
+			NOT = {
+			    has_global_flag =  GRI_grover_vi_dead
+			}
+		}
  
 		ai_will_do = {
 			factor = 1
@@ -7936,6 +8121,10 @@ focus_tree = {
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_pacify_herzland }
 		mutually_exclusive = { focus = BOI_puppet_emperor }
+		available = {
+		    owns_state = 382
+			has_global_flag =  GRI_grover_vi_dead
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7952,6 +8141,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_skyfall_prize }
+		will_lead_to_war_with = HAU
 
 		ai_will_do = {
 			factor = 1
@@ -7971,6 +8161,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_skyfall_prize }
+		available = {
+		    owns_state = 381
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7979,19 +8172,19 @@ focus_tree = {
 			custom_effect_tooltip = BOI_CETT_coring_skyfall
 			hidden_effect = {
 			380 = {
-			    add_core_of = ARA
+			    add_core_of = BOI
 			}
 			396 = {
-			    add_core_of = ARA
+			    add_core_of = BOI
 			}
 			397 = {
-			    add_core_of = ARA
+			    add_core_of = BOI
 			}
 			381 = {
-			    add_core_of = ARA
+			    add_core_of = BOI
 			}
 			379 = {
-			    add_core_of = ARA
+			    add_core_of = BOI
 			}
 			}
 		}
@@ -8028,7 +8221,13 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			news_event = griffonstone_news.002
+		    country_event = griffonstone.299
+		    hidden_effect = {
+			    news_event = { 
+				    id = griffonstone_news.002
+					days = 1
+				}
+			}
 		}
 	}
 	focus = {

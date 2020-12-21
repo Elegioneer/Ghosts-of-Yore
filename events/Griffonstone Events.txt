@@ -2,6 +2,145 @@ add_namespace = griffonstone
 add_namespace = griffonstone_news
 add_namespace = griffonstone_decision
 #####EVENTS COMING AT YA AT SUPERSONIC SPEED#####
+    ####NEWS EVENTS####
+	news_event = { #COUP – Goldstone
+	    id = griffonstone_news.01
+	    title = griffonstone_news.01.t
+	    desc = griffonstone_news.01.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.01.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.01.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.01.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #COUP – Gestal
+	    id = griffonstone_news.02
+	    title = griffonstone_news.02.t
+	    desc = griffonstone_news.02.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.02.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.02.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.02.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #Return of the King
+	    id = griffonstone_news.03
+	    title = griffonstone_news.03.t
+	    desc = griffonstone_news.03.d
+		picture = GFX_event_medieval_city_2
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = griffonstone_news.03.a
+			trigger = {
+			    OR = {
+				    original_tag = BOI
+					is_in_faction_with = BOI
+				}
+			}
+		}
+		option = {
+	        name = griffonstone_news.03.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = BOI
+						original_tag = BOI
+					}
+				}
+			}
+	    }
+		option = {
+	        name = griffonstone_news.03.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = BOI
+				    }
+				}
+			}
+	    }
+	}
 
     ####DEBUG EVENT####
 	
@@ -225,11 +364,12 @@ add_namespace = griffonstone_decision
 			kill_country_leader = yes
 			create_country_leader = {
 			    name = "Lord Gestal"
-				desc = BOI_gestal_desc
-			    picture = "Gestal.tga"
+				desc = BOI_gestal_leader_desc
+			    picture = "GOY_Gestal.tga"
 			    expire = "1965.1.1"
 			    ideology = despotism
 		    }
+			remove_unit_leader = 667902
 			set_politics = {
 			    ruling_party = fascism
 			    elections_allowed = no
@@ -306,7 +446,7 @@ add_namespace = griffonstone_decision
 			add_ideas = BOI_goldstone_cronies
 			create_corps_commander = {
 	            name = "Klaus Steelfeather"
-				id = 4356501 #435650 for Griffonstone (BOI in decimal code)
+				id = 667901 #6679 for Griffonstone (BO in decimal code)
 	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
 	            traits = { griffon_race_trait career_officer infantry_officer }
 	            skill = 2
@@ -319,7 +459,7 @@ add_namespace = griffonstone_decision
 			hidden_effect = {
 			    load_focus_tree = Griffonstone_gestal
 				news_event = {
-				     id = griffonstone_news.1
+				     id = griffonstone_news.02
  					 hours = 10
 				}
 				set_country_flag = BOI_deadlock_broken
@@ -346,10 +486,33 @@ add_namespace = griffonstone_decision
 				damage_building = { type = industrial_complex damage = 1 }
 			}
 			load_oob = BOI_goldstones_mercs_OOB
+			create_corps_commander = {
+	            name = "Mykhailo Dolgokrylenko"
+				id = 667904 #6679 for Griffonstone (BO in decimal code)
+	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+	            traits = { griffon_race_trait trait_reckless infantry_officer }
+	            skill = 3
+	            attack_skill = 2
+	            defense_skill = 3
+	            planning_skill = 3
+	            logistics_skill = 2
+            }
+			create_corps_commander = {
+	            name = "Silver Storm"
+				id = 667905 #6679 for Griffonstone (BO in decimal code)
+	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+	            traits = { pony_race_trait war_hero harsh_leader }
+	            skill = 2
+	            attack_skill = 2
+	            defense_skill = 2
+	            planning_skill = 2
+	            logistics_skill = 1
+            }
+			remove_unit_leader = 667905
 			hidden_effect = {
 			    load_focus_tree = Griffonstone_goldstone
 				news_event = {
-				     id = griffonstone_news.2
+				     id = griffonstone_news.01
  					 hours = 10 
 				}
 				set_country_flag = BOI_deadlock_broken
@@ -457,7 +620,8 @@ add_namespace = griffonstone_decision
 			retire_country_leader = yes
 			create_country_leader = {
 			    name = "Lord Gestal"
-			    picture = "Gestal.tga"
+				desc = BOI_gestal_leader_desc
+			    picture = "GOY_Gestal.tga"
 			    expire = "1965.1.1"
 			    ideology = despotism
 		    }
@@ -811,8 +975,8 @@ add_namespace = griffonstone_decision
 		    hidden_effect = {
 		        load_focus_tree = Griffonstone_gallus_2
 				news_event = {
-				    id = griffonstone_news.003
-					days = 1
+				    id = griffonstone_news.03
+					hours = 10
 				}
 				set_global_flag = BOI_idol_recovered
 				set_country_flag = BOI_has_true_idol
@@ -832,7 +996,7 @@ add_namespace = griffonstone_decision
 	        name = griffonstone.205.a
 			remove_ideas = kingdom_with_no_king
 			set_party_name = { ideology = democratic name = BOI_kingsBOIs long_name = BOI_kingsBOIs_long }
-			set_party_name = { ideology = neutrality name = BOI_kingsBOIs long_name = BOI_kingsBOIs_long }
+			set_party_name = { ideology = neutrality name = BOI_nobles_party long_name = BOI_nobles_party_long }
 			create_field_marshal = {
 	            name = "Gallus"
 	            picture = "Gallus.tga"
@@ -865,11 +1029,12 @@ add_namespace = griffonstone_decision
 			kill_ideology_leader = neutrality
 			create_country_leader = {
 			    name = "Lord Gestal"
-				desc = BOI_gestal_desc
-			    picture = "Gestal.tga"
+				desc = BOI_gestal_leader_desc
+			    picture = "GOY_Gestal.tga"
 			    expire = "1965.1.1"
 			    ideology = despotism
 		    }
+			remove_unit_leader = 667902
 		}
 	}
 	country_event = { #The King and The Emperor
@@ -1120,10 +1285,12 @@ add_namespace = griffonstone_decision
 	        name = griffonstone.236.a
 			add_manpower = -3000
 			add_stability = 0.03
+			remove_ideas = BOI_goldstone_cronies
 		}
 		option = {
 	        name = griffonstone.236.b
 			add_political_power = -100
+			remove_ideas = BOI_goldstone_cronies
 		}
 	}
 	country_event = { #Prodigal Son Returns
@@ -1320,9 +1487,11 @@ add_namespace = griffonstone_decision
 		timeout_days = 7
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.238
 				days = 15
+			}
 			}
 		}
 		
@@ -1370,9 +1539,11 @@ add_namespace = griffonstone_decision
 		timeout_days = 7
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.240
 				days = 10
+			}
 			}
 		}
 		
@@ -1394,9 +1565,11 @@ add_namespace = griffonstone_decision
 	    fire_only_once = yes
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.245
 				days = 20
+			}
 			}
 		}
 		
@@ -1443,9 +1616,11 @@ add_namespace = griffonstone_decision
 		timeout_days = 7
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.242
 				days = 10
+			}
 			}
 		}
 		
@@ -1473,9 +1648,11 @@ add_namespace = griffonstone_decision
 		timeout_days = 7
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.242
 				days = 10
+			}
 			}
 		}
 		
@@ -1502,9 +1679,11 @@ add_namespace = griffonstone_decision
 		timeout_days = 7
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.243
 				days = 20
+			}
 			}
 		}
 		
@@ -1534,9 +1713,11 @@ add_namespace = griffonstone_decision
 	    fire_only_once = yes
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.246
 				days = 20
+			}
 			}
 		}
 		
@@ -1645,6 +1826,7 @@ add_namespace = griffonstone_decision
 	    fire_only_once = yes
 		
 		immediate = {
+		    hidden_effect = {
 		    country_event = {
 			    id = griffonstone.249
 				days = 90
@@ -1652,6 +1834,7 @@ add_namespace = griffonstone_decision
 			country_event = {
 			    id = griffonstone.267
 				days = 1800
+			}
 			}
 		}
 		
@@ -1661,6 +1844,26 @@ add_namespace = griffonstone_decision
 			remove_ideas = kingdom_with_no_king
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			add_country_leader_trait = republican_revolutionary
+			if = {
+			    limit = {
+				    has_idea = BOI_rumarean_unrest_2
+				}
+				swap_ideas = {
+				    remove_idea = BOI_rumarean_unrest_2
+					add_idea = BOI_rumarean_unrest_1
+				}
+				else_if = {
+			        limit = {
+				        has_idea = BOI_rumarean_unrest_3
+				    }
+				    swap_ideas = {
+				        remove_idea = BOI_rumarean_unrest_3
+					    add_idea = BOI_rumarean_unrest_2
+				    }
+			    }
+				else = {
+				}
+			}
 		}
 	}
 	country_event = { #Another Visit
@@ -1688,6 +1891,7 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.267.a
+			remove_unit_leader = 667902
 		}
 	}
 	country_event = { #Elections
@@ -1891,8 +2095,21 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.257.a
-			BOI = {
-			    add_to_faction = FROM
+			IF = {
+			    LIMIT = {
+			        has_completed_focus = BOI_research_coop
+				}
+				BOI = {
+			        add_to_faction = FROM
+			    }
+				FROM = {
+				    add_to_tech_sharing_group = BOI_griffonstone_tech_sharing
+				}
+				ELSE = {
+				    BOI = {
+			            add_to_faction = FROM
+			        }
+				}
 			}
 		}
 	}
@@ -2170,8 +2387,10 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.272.a
-			add_political_power = -100
-			add_stability = -0.2
+			add_political_power = -50
+			add_stability = -0.05
+			add_popularity = { ideology = neutrality popularity = -0.03 }
+			add_popularity = { ideology = democratic popularity = 0.03 }
 		}
 	}
 	country_event = { #Hidden FRA initialisation event
@@ -2465,6 +2684,15 @@ add_namespace = griffonstone_decision
 						add_idea = BOI_rumarean_unrest_2
 					}
 				}
+				ELSE_IF = {
+				    limit = {
+					    has_idea = BOI_rumarean_unrest_2
+					}
+				    swap_ideas = {
+					    remove_idea = BOI_rumarean_unrest_2
+						add_idea = BOI_rumarean_unrest_3
+					}
+				}
 				ELSE = {
 				}
 			    set_country_flag = BOI_FLAG_FRA_assass
@@ -2512,6 +2740,15 @@ add_namespace = griffonstone_decision
 				    swap_ideas = {
 					    remove_idea = BOI_rumarean_unrest_1
 						add_idea = BOI_rumarean_unrest_2
+					}
+				}
+				ELSE_IF = {
+				    limit = {
+					    has_idea = BOI_rumarean_unrest_2
+					}
+				    swap_ideas = {
+					    remove_idea = BOI_rumarean_unrest_2
+						add_idea = BOI_rumarean_unrest_3
 					}
 				}
 				ELSE = {
@@ -2588,6 +2825,15 @@ add_namespace = griffonstone_decision
 						add_idea = BOI_rumarean_unrest_2
 					}
 				}
+				ELSE_IF = {
+				    limit = {
+					    has_idea = BOI_rumarean_unrest_2
+					}
+				    swap_ideas = {
+					    remove_idea = BOI_rumarean_unrest_2
+						add_idea = BOI_rumarean_unrest_3
+					}
+				}
 				ELSE = {
 				}
 			    set_country_flag = BOI_FLAG_FRA_rail
@@ -2644,6 +2890,15 @@ add_namespace = griffonstone_decision
 				    swap_ideas = {
 					    remove_idea = BOI_rumarean_unrest_1
 						add_idea = BOI_rumarean_unrest_2
+					}
+				}
+				ELSE_IF = {
+				    limit = {
+					    has_idea = BOI_rumarean_unrest_2
+					}
+				    swap_ideas = {
+					    remove_idea = BOI_rumarean_unrest_2
+						add_idea = BOI_rumarean_unrest_3
 					}
 				}
 				ELSE = {
@@ -2778,6 +3033,25 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.290.a
+		}
+	}
+	country_event = { #The Triumph
+	    id = griffonstone.299
+	    title = griffonstone.299.t
+	    desc = griffonstone.299.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.299.a
+			set_cosmetic_tag = BOI_BOIEMP
+			remove_ideas = kingdom_with_no_king
+			hidden_effect = {
+			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
+			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
+			}
 		}
 	}
 	

@@ -1,0 +1,15 @@
+technology_sharing_group = {
+
+	id = BOI_griffonstone_tech_sharing
+	name = BOI_griffonstone_tech_sharing_name
+	desc = BOI_griffonstone_tech_sharing_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.2
+
+	categories = { industry electronics }
+
+	available = {
+		is_in_faction_with = BOI
+	}
+}

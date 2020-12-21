@@ -39,6 +39,20 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+			    limit = {
+			        FROM.FROM = { state = 382 }
+				    ROOT = {
+					    original_tag = BOI
+				        NOT = {
+					        has_country_flag = BOI_dealt_with_nobles
+					    }
+					}
+				}
+				ROOT = {
+				    add_ideas = BOI_discontent_nobles
+				}
+			}
 		}
 	}
 }

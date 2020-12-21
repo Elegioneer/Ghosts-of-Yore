@@ -94,7 +94,6 @@ ideas = {
 			picture = unhappy_army
 			removal_cost = -1
 			modifier = {
-			    stability_factor = -0.05
 			    conscription_factor = -0.05
 			}
 		}
@@ -108,7 +107,8 @@ ideas = {
 			picture = unhappy_army_3
 			removal_cost = -1
 			modifier = {
-			    stability_factor = -0.1
+			    stability_factor = -0.02
+				war_support_factor = -0.02
 			    conscription_factor = -0.1
 			}
 		}
@@ -122,8 +122,24 @@ ideas = {
 			picture = unhappy_army_2
 			removal_cost = -1
 			modifier = {
-			    stability_factor = -0.15
-			    conscription_factor = -0.15
+			    stability_factor = -0.05
+			    war_support_factor = -0.05
+				conscription_factor = -0.1
+			}
+		}
+		BOI_rumarean_unrest_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = unhappy_army_2
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+			    war_support_factor = -0.1
+				conscription_factor = -0.1
 			}
 		}
 		BOI_trade_hub_idea = {
@@ -766,6 +782,9 @@ ideas = {
 			}
 		}
 		BOI_discontent_nobles = {
+		    available = {
+			    controls_state = 382
+			}
 			allowed = {
 				always = no
 			}
@@ -1884,7 +1903,7 @@ ideas = {
 			}
 		}
 		BOI_last_stand = {
-			allowed = {
+			available = {
 			    OR = {
 				    has_war_with = FAT
 					has_war_with = GRI
@@ -1922,14 +1941,45 @@ ideas = {
 	########################
 	
 	political_advisor = {
-		BOI_bechard = {
+		BOI_dotted_line = {
+			allowed = {
+				OR = {
+					original_tag = "BOI"
+				}
+			}		
+			traits = { armaments_organizer }
+			picture = BOI_
+			ai_will_do = {
+				factor = 10
+			}
+			available = {
+				
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+				NOT = {
+				    any_other_country = {
+					    limit = {
+						    OR = {
+						        original_tag = EQC
+								original_tag = ELF
+							}
+						}
+						exists = yes
+					}
+				}
+			}
+		}
+	}
+	political_advisor = {
+		BOI_erwin_von_drach = {
 			allowed = {
 				OR = {
 					original_tag = "BOI"
 				}
 			}		
 			traits = { prince_of_terror }
-			picture = BOI_bechard
+			picture = SRS_generico_1
 			ai_will_do = {
 				factor = 1
 			}
@@ -2123,6 +2173,7 @@ ideas = {
 	}
 	theorist = {
 	    BOI_julius_advisor = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
@@ -2139,6 +2190,7 @@ ideas = {
 			}
 		}
 		BOI_gudrun = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
@@ -2160,13 +2212,14 @@ ideas = {
 	}
 	high_command = {
 	    BOI_silver_storm_advisor = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { army_logistics_2 }
 			picture = BOI_
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 			available = {
 				
@@ -2175,14 +2228,43 @@ ideas = {
 			    has_country_flag = BOI_goldstone_coup_success
 			}
 		}
+		BOI_blueblood = {
+		    ledger = army
+			allowed = {
+				original_tag = "BOI"
+			}		
+			traits = { army_logistics_2 }
+			picture = ELF_blueblood
+			ai_will_do = {
+				factor = 10
+			}
+			available = {
+				
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+				NOT = {
+				    any_other_country = {
+					    limit = {
+						    OR = {
+						        original_tag = EQC
+								original_tag = ELF
+							}
+						}
+						exists = yes
+					}
+				}
+			}
+		}
 		BOI_klaus_steelfeather_advisor = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { army_chief_morale_1 }
 			picture = BOI_
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 			available = {
 				
@@ -2192,11 +2274,12 @@ ideas = {
 			}
 		}
 		BOI_gerdr = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { army_infantry_1 }
-			picture = BOI_
+			picture = SRS_army_chief_def
 			ai_will_do = {
 				factor = 1
 			}
@@ -2208,11 +2291,12 @@ ideas = {
 			}
 		}
 		BOI_gerlinde = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { army_commando_1 }
-			picture = BOI_
+			picture = generic_griffon_grey
 			ai_will_do = {
 				factor = 1
 			}
@@ -2224,11 +2308,12 @@ ideas = {
 			}
 		}
 		BOI_georg = {
+		    ledger = army
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { army_armored_1 }
-			picture = BOI_
+			picture = generic_griffon_with_cap
 			ai_will_do = {
 				factor = 1
 			}
@@ -2248,7 +2333,7 @@ ideas = {
 			traits = { GOY_RGDF_leader }
 			picture = BOI_karl
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 			modifier = {
 			    special_forces_defence_factor = 0.1
@@ -2270,7 +2355,7 @@ ideas = {
 			traits = { army_chief_offensive_2 }
 			picture = BOI_
 			ai_will_do = {
-				factor = 1
+				factor = 10
 			}
 			available = {
 				
@@ -2292,7 +2377,9 @@ ideas = {
 				
 			}
 			visible = {
-			    
+			    NOT = {
+				    has_country_flag = BOI_goldstone_coup_success
+				}
 			}
 		}
 	}
@@ -2301,8 +2388,8 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { air_chief_all_weather_3 }
-			picture = BOI_
+			traits = { air_chief_all_weather_2 }
+			picture = SRS_air_chief_all_weather
 			ai_will_do = {
 				factor = 1
 			}
@@ -2317,8 +2404,8 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { air_chief_ground_support_2 }
-			picture = BOI_
+			traits = { air_chief_ground_support_1 }
+			picture = MNC_advisor_16
 			ai_will_do = {
 				factor = 1
 			}
@@ -2334,7 +2421,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { air_air_superiority_2 }
-			picture = BOI_
+			picture = HAU_air_warfare_theorist
 			ai_will_do = {
 				factor = 1
 			}
@@ -2347,12 +2434,39 @@ ideas = {
 		}
 	}
 	navy_chief = {
-	    BOI_erwin_von_drach = {
+	    BOI_cynosura = {
+			allowed = {
+				original_tag = "BOI"
+			}		
+			traits = { navy_chief_decisive_battle_2 }
+			picture = BOI_
+			ai_will_do = {
+				factor = 10
+			}
+			available = {
+				
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+				NOT = {
+				    any_other_country = {
+					    limit = {
+						    OR = {
+						        original_tag = EQC
+								original_tag = ELF
+							}
+						}
+						exists = yes
+					}
+				}
+			}
+		}
+	    BOI_bechard = {
 			allowed = {
 				original_tag = "BOI"
 			}		
 			traits = { navy_chief_commerce_raiding_3 }
-			picture = SRS_generico_1
+			picture = BOI_bechard
 			ai_will_do = {
 				factor = 1
 			}
@@ -2368,7 +2482,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { navy_chief_naval_aviation_1 }
-			picture = BOI_
+			picture = MNC_advisor_15
 			ai_will_do = {
 				factor = 1
 			}
@@ -2383,8 +2497,8 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { navy_chief_decisive_battle_2 }
-			picture = BOI_
+			traits = { navy_chief_maneuver_2 }
+			picture = gunther
 			ai_will_do = {
 				factor = 1
 			}
@@ -2402,7 +2516,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { GOY_high_tech_industry }
-			picture = BOI_
+			picture = generic_industrial_concern_2
 			ai_will_do = {
 				factor = 1
 			}
@@ -2424,7 +2538,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { electronics_developer }
-			picture = BOI_
+			picture = general_electric
 			ai_will_do = {
 				factor = 1
 			}
@@ -2443,7 +2557,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { industrial_concern }
-			picture = BOI_
+			picture = generic_industrial_concern_1
 			ai_will_do = {
 				factor = 1
 			}
@@ -2466,7 +2580,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { refinery_concern }
-			picture = BOI_
+			picture = bul_petrol_ad
 			ai_will_do = {
 				factor = 1
 			}
