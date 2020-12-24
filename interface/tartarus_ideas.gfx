@@ -150,4 +150,16 @@ spriteTypes = {
 		name = "GFX_idea_BOI_panzerinstitut"
 		texturefile = "gfx/interface/ideas/idea_BOI_panzerinstitut.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_BOI_mykhailo"
+		texturefile = "gfx/interface/ideas/idea_BOI_mykhailo.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_silverstorm"
+		texturefile = "gfx/interface/ideas/idea_BOI_silverstorm.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_steelfeather"
+		texturefile = "gfx/interface/ideas/idea_BOI_steelfeather.dds"
+	}
 }

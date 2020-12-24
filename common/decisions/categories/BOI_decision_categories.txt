@@ -3,7 +3,7 @@ BOI_war_for_liberation_category = {
 
 	visible = {
 		original_tag = BOI
-		has_country_flag = FLAG_BOI_supports_ELF
+		has_country_flag = BOI_FLAG_supports_ELF
 		ELF = {
 		    exists = no
 		}

@@ -2638,6 +2638,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = BOI_rumarean_unrest
+			remove_ideas = BOI_rumarean_unrest_1
+			remove_ideas = BOI_rumarean_unrest_2
+			remove_ideas = BOI_rumarean_unrest_3
 			add_ideas = BOI_minorities_protected_1
 		}
 	}
@@ -2712,13 +2715,21 @@ focus_tree = {
 		prerequisite = { focus = BOI_enemy_at_the_gates }
 		mutually_exclusive = { focus = BOI_look_towards_karthin }
 		bypass = {
-		    NOT = {
-		        owns_state = 408
-				any_other_country = {
-					is_subject_of = BOI
-					owns_state = 408
+		    OR = {
+			any_other_country = {
+				NOT = {
+				    original_tag = ARA
 				}
+				NOT = {
+				    original_tag = BOI
+				}
+				owns_state = 408
 			}
+			any_other_country = {
+			    original_tag = ARA
+				is_puppet = yes
+			}
+		    }
 		}
 
 		ai_will_do = {
@@ -2749,13 +2760,21 @@ focus_tree = {
 			}
 		}
 		bypass = {
-		    NOT = {
-		        owns_state = 408
-				any_other_country = {
-					is_subject_of = BOI
-					owns_state = 408
+		    OR = {
+			any_other_country = {
+				NOT = {
+				    original_tag = ARA
 				}
+				NOT = {
+				    original_tag = BOI
+				}
+				owns_state = 408
 			}
+			any_other_country = {
+			    original_tag = ARA
+				is_puppet = yes
+			}
+		    }
 		}
 
 		ai_will_do = {
@@ -2978,7 +2997,7 @@ focus_tree = {
 			IF = {
 			    limit = {
 				    GRI = {
-					    owns_state = 822
+					    owns_state = 382
 					}
 				}
 				create_wargoal = {
@@ -2990,7 +3009,7 @@ focus_tree = {
                     hidden_effect = {
                         every_other_country = {
                             limit = {
-                                owns_state = 822
+                                owns_state = 382
                             }
                             BOI = {
                                 create_wargoal = { 
@@ -3142,6 +3161,13 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_look_west }
+		available = {
+		    owns_state = 380
+			owns_state = 396
+			owns_state = 397
+			owns_state = 381
+			owns_state = 379
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -3379,6 +3405,13 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_new_diarchy focus = BOI_proclaim_new_kingdom }
+		available = {
+		    any_other_country = {
+			    original_tag = EQS
+				exists = yes
+				has_government = democratic
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -3404,6 +3437,7 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+		    set_rule = { can_create_factions = yes }
 			create_faction = BOI_Griffonian_Union
 			unlock_decision_category_tooltip = BOI_griffonian_union_category
 		}
@@ -3636,6 +3670,7 @@ focus_tree = {
 				}
 				add_ideas = BOI_harmony_or_death
 			}
+			country_event = griffonstone.279
 		}
 	}
 	focus = {
@@ -4285,6 +4320,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = BOI_rumarean_unrest
+			remove_ideas = BOI_rumarean_unrest_1
+			remove_ideas = BOI_rumarean_unrest_2
+			remove_ideas = BOI_rumarean_unrest_3
 			add_ideas = BOI_minorities_protected_1
 		}
 	}
@@ -5392,6 +5430,9 @@ focus_tree = {
 		completion_reward = {
 			add_state_core = 383
 			remove_ideas = BOI_rumarean_unrest
+			remove_ideas = BOI_rumarean_unrest_1
+			remove_ideas = BOI_rumarean_unrest_2
+			remove_ideas = BOI_rumarean_unrest_3
 		}
 	}
 	shared_focus = {
@@ -7699,6 +7740,9 @@ focus_tree = {
 			    add_manpower = 25000
 			}
 			remove_ideas = BOI_rumarean_unrest
+			remove_ideas = BOI_rumarean_unrest_1
+			remove_ideas = BOI_rumarean_unrest_2
+			remove_ideas = BOI_rumarean_unrest_3
 			add_ideas = BOI_rumareans_quelled
 		}
 	}
@@ -7840,7 +7884,7 @@ focus_tree = {
 			IF = {
 			    limit = {
 				    GRI = {
-					    owns_state = 822
+					    owns_state = 382
 					}
 				}
 				create_wargoal = {
@@ -7852,7 +7896,7 @@ focus_tree = {
                     hidden_effect = {
                         every_other_country = {
                             limit = {
-                                owns_state = 822
+                                owns_state = 382
                             }
                             BOI = {
                                 create_wargoal = { 

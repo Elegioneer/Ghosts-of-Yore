@@ -47,6 +47,7 @@ on_actions = {
 				        NOT = {
 					        has_country_flag = BOI_dealt_with_nobles
 					    }
+						has_country_flag = BOI_gallus_is_king
 					}
 				}
 				ROOT = {

@@ -627,7 +627,7 @@ add_namespace = griffonstone_decision
 			create_corps_commander = {
 	            name = "Mykhailo Dolgokrylenko"
 				id = 667904 #6679 for Griffonstone (BO in decimal code)
-	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_15.dds"
 	            traits = { griffon_race_trait trait_reckless infantry_officer }
 	            skill = 3
 	            attack_skill = 2
@@ -637,8 +637,8 @@ add_namespace = griffonstone_decision
             }
 			create_corps_commander = {
 	            name = "Silver Storm"
-				id = 667905 #6679 for Griffonstone (BO in decimal code)
-	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+				id = 667906 #6679 for Griffonstone (BO in decimal code)
+	            portrait_path = "gfx/leaders/CES/Stemis.tga"
 	            traits = { pony_race_trait war_hero harsh_leader }
 	            skill = 2
 	            attack_skill = 2
@@ -1118,6 +1118,7 @@ add_namespace = griffonstone_decision
 				}
 				set_global_flag = BOI_idol_recovered
 				set_country_flag = BOI_has_true_idol
+				set_country_flag = BOI_gallus_is_king
 		    }
 		}
 	}
@@ -1137,7 +1138,7 @@ add_namespace = griffonstone_decision
 			set_party_name = { ideology = neutrality name = BOI_nobles_party long_name = BOI_nobles_party_long }
 			create_field_marshal = {
 	            name = "Gallus"
-	            picture = "Gallus.tga"
+	            portrait_path = "gfx/leaders/BOI/GAW_Gallus.tga"
 	            traits = { griffon_race_trait trait_reckless media_personality infantry_leader organizer inspirational_leader }
 	            skill = 4
 	            attack_skill = 5
@@ -1966,11 +1967,11 @@ add_namespace = griffonstone_decision
 		immediate = {
 		    hidden_effect = {
 		    country_event = {
-			    id = griffonstone.249
+			    id = griffonstone.267
 				days = 90
 			}
 			country_event = {
-			    id = griffonstone.267
+			    id = griffonstone.250
 				days = 1800
 			}
 			}
@@ -2423,6 +2424,26 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.266.a
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 79
+			}
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 79
+			}
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 24
+			}
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 25
+			}
 			add_ideas = BOI_legitimate_businessgriffs
 		}
 	}
@@ -3086,7 +3107,7 @@ add_namespace = griffonstone_decision
 	        name = griffonstone.287.a
 			custom_effect_tooltip = CETT_BOI_ELF_support
 			hidden_effect = {
-			    set_country_flag = FLAG_BOI_supports_ELF
+			    set_country_flag = BOI_FLAG_supports_ELF
 			}
 		}
 	}
@@ -3192,7 +3213,7 @@ add_namespace = griffonstone_decision
 			remove_ideas = kingdom_with_no_king
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
-			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
+			    set_party_name = { ideology = fascism name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			}
 		}
 	}

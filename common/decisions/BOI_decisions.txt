@@ -4,13 +4,13 @@ BOI_war_for_liberation_category = {
 		cost = 200
 		fire_only_once = yes
 		available = {
-		    has_country_flag = FLAG_BOI_supports_ELF
-		    has_completed_focus = BOI_support_war_of_liberation
+		    has_country_flag = BOI_FLAG_supports_ELF
+		    has_completed_focus = BOI_support_the_resistance
 	        has_completed_focus = BOI_harbour_equestrian_elites
 		    has_completed_focus = BOI_refugee_haven
 		    has_manpower > 10000
 			has_equipment = {
-			    infantry_equipment > 10000
+			    infantry_equipment > 9999
 			}
 		}
 		ai_will_do = {
@@ -32,15 +32,12 @@ BOI_support_liberation_front_category = {
 		cost = 100
 		fire_only_once = yes
 		days_remove = 7
-		visible = {
+		available = {
 		    is_faction_leader = yes
 		    any_other_country = {
                 original_tag = ELF
 				surrender_progress > 0.75
 			}
-		}
-		available = {
-
 		}
 		ai_will_do = {
 			factor = 1
@@ -68,20 +65,13 @@ BOI_support_liberation_front_category = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+		    has_manpower > 50000
+		}
 		complete_effect = {
-		    random_owned_state = {
-				add_manpower = -20000
-			}
-			random_owned_state = {
-				add_manpower = -10000
-			}
-			random_owned_state = {
-				add_manpower = -10000
-			}
-			add_manpower = 40000
+		    add_manpower = -50000
 		}
 		remove_effect = {
-			add_manpower = -50000
 			ELF = {
 			    add_manpower = 50000
 			}
@@ -204,7 +194,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-
+            has_equipment = {
+			    infantry_equipment > 4999
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -227,7 +219,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-
+            has_equipment = {
+			    support_equipment > 499
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -250,7 +244,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-
+            has_equipment = {
+			    artillery_equipment > 499
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -273,7 +269,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-		
+		    has_equipment = {
+			    medium_tank_equipment > 249
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -296,7 +294,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-
+            has_equipment = {
+			    fighter_equipment > 99
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -319,7 +319,9 @@ BOI_support_liberation_front_category = {
 		days_remove = 10
 		days_re_enable = 60
 		available = {
-
+            has_equipment = {
+			    CAS_equipment > 99
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -516,7 +518,10 @@ BOI_blackmarket_category = {
 		    has_country_flag = BOI_FLAG_new_blackmarket_decisions_unlocked
 		}
 		available = {
-            
+            any_other_country = {
+			    original_tag = BAL
+				exists = yes
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -525,7 +530,15 @@ BOI_blackmarket_category = {
 		    
 		}
 		remove_effect = {
-			#TODO
+			every_other_country = {
+			    limit = {
+				    original_tag = BAL
+				}
+				country_event = {
+				    id = griffonstone.266
+					hours = 10
+				}
+			}
 		}
 	}
 }

@@ -10,6 +10,9 @@ technology_sharing_group = {
 	categories = { industry electronics }
 
 	available = {
-		is_in_faction_with = BOI
+	    OR = {
+		    original_tag = BOI
+		    is_in_faction_with = BOI
+		}
 	}
 }
