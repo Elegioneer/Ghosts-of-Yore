@@ -2967,34 +2967,31 @@ focus_tree = {
 		relative_position_id = BOI_coronation
 		prerequisite = { focus = BOI_rally_the_griffons }
 		prerequisite = { focus = BOI_constitutional_monarchy }
+        will_lead_to_war_with = FEA
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = YAL
 		will_lead_to_war_with = GRI
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = ROU
 		
 		bypass = {
 		    owns_state = 382
 		}
+		
 		available = {
-		    OR = {
-		        any_other_country = {
-				    original_tag = GRI
-				    has_completed_focus = GRI_end_TRD #TODO
-			    }
-			    any_other_country = {
-				    original_tag = FAT
-				    has_completed_focus = FAT_tricolor_over_griffenheim
-			    }
-			    any_other_country = {
-				    has_cosmetic_tag = GRIF_EMPIRE
-				    exists = yes
-			    }
-			}
+		
 		}
 		
-        ai_will_do = {
+		ai_will_do = {
 			factor = 1
 		}
 		
 		completion_reward = {
-			IF = {
+		    custom_effect_tooltip = ARA_herzlander_solidarity
+		    IF = {
 			    limit = {
 				    GRI = {
 					    owns_state = 382
@@ -3019,6 +3016,78 @@ focus_tree = {
 							}
                         }
                     }
+				}
+			}
+			IF = {
+			    limit = { FEA = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = FEA
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { STW = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = STW
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { PYT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = PYT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { YAL = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = YAL
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { BRZ = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = BRZ
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { KAT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = KAT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ANG = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ANG
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ROU = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ROU
+			    }
+				ELSE = {
 				}
 			}
 		}
@@ -5617,53 +5686,57 @@ focus_tree = {
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_our_duty }
 		mutually_exclusive = { focus = BOI_loyalty_to_the_crown }
+        will_lead_to_war_with = FEA
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = YAL
 		will_lead_to_war_with = GRI
-		ai_will_do = {
-			factor = 1
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = ROU
+		
+		bypass = {
+		    owns_state = 382
 		}
+		
 		available = {
 		    AND = {
 			    NOT = {
 			    GRI = {
 				    exists = yes
 					is_subject = no
-					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
 				        has_country_leader = { name = "Archon Eros VII" ruling_only = yes }
 					    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
-					    has_country_leader = { name = "Grover VI" ruling_only = yes }
-				    }
+						has_country_leader = { name = "Grover VI" ruling_only = yes }
+					}
 				}
 				}
 				NOT = {
 				STW = {
 				    exists = yes
 					is_subject = no
-					is_neighbor_of = BOI
 					owns_state = 382
-				    OR = {
-				        has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
-				    }
+				    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
 				}
 				}
 				NOT = {
 				BRZ = {
 				    exists = yes
 					is_subject = no
-					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
-				        has_country_leader = { name = "Winston Copperhill" ruling_only = yes }
-						has_country_leader = { name = "Count Ignatius Bronzetail" ruling_only = yes }
-				    }
+					    has_country_leader = { name = "Winston Copperhill" ruling_only = yes }
+					    has_country_leader = { name = "Count Ignatius Bronzetail" ruling_only = yes }
+					}
 				}
 				}
 				NOT = {
 				YAL = {
 				    exists = yes
 					is_subject = no
-					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
 				        has_country_leader = { name = "Rector Magnificus Mikusian" ruling_only = yes }
@@ -5673,8 +5746,17 @@ focus_tree = {
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
 		completion_reward = {
-			IF = {
+		    custom_effect_tooltip = ARA_herzlander_solidarity
+			hidden_effect = {
+			    load_focus_tree = Griffonstone_gestal_2
+			}
+		    IF = {
 			    limit = {
 				    GRI = {
 					    owns_state = 382
@@ -5701,8 +5783,77 @@ focus_tree = {
                     }
 				}
 			}
-			hidden_effect = {
-			    load_focus_tree = Griffonstone_gestal_2
+			IF = {
+			    limit = { FEA = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = FEA
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { STW = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = STW
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { PYT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = PYT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { YAL = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = YAL
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { BRZ = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = BRZ
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { KAT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = KAT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ANG = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ANG
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ROU = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ROU
+			    }
+				ELSE = {
+				}
 			}
 		}
 	}
@@ -7854,26 +8005,22 @@ focus_tree = {
 		prerequisite = { focus = BOI_deal_with_rumareans }
 		prerequisite = { focus = BOI_send_them_to_the_mines focus = BOI_conscript_bandits }
 		prerequisite = { focus = BOI_integrate_verenia_goldstone }
+        will_lead_to_war_with = FEA
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = YAL
 		will_lead_to_war_with = GRI
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = ROU
+		
 		bypass = {
-		    owns_state = 822
+		    owns_state = 382
 		}
 		
 		available = {
-		    OR = {
-		        any_other_country = {
-				    original_tag = GRI
-				    has_completed_focus = GRI_end_TRD #TODO
-			    }
-			    any_other_country = {
-				    original_tag = FAT
-				    has_completed_focus = FAT_tricolor_over_griffenheim
-			    }
-			    any_other_country = {
-				    has_cosmetic_tag = GRIF_EMPIRE
-				    exists = yes
-			    }
-			}
+		
 		}
 		
 		ai_will_do = {
@@ -7881,7 +8028,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			IF = {
+		    custom_effect_tooltip = ARA_herzlander_solidarity
+		    IF = {
 			    limit = {
 				    GRI = {
 					    owns_state = 382
@@ -7906,6 +8054,78 @@ focus_tree = {
 							}
                         }
                     }
+				}
+			}
+			IF = {
+			    limit = { FEA = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = FEA
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { STW = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = STW
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { PYT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = PYT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { YAL = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = YAL
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { BRZ = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = BRZ
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { KAT = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = KAT
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ANG = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ANG
+			    }
+				ELSE = {
+				}
+			}
+			IF = {
+			    limit = { ROU = { exists = yes } }
+			    create_wargoal = {
+			        type = annex_everything
+				    target = ROU
+			    }
+				ELSE = {
 				}
 			}
 		}

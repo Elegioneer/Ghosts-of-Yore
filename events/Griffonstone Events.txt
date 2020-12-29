@@ -779,6 +779,348 @@ add_namespace = griffonstone_decision
 		}
 	}
 	
+	####HERZLANDER SOLIDARITY####
+country_event = { #Herzländers unite! (cap - trigger)
+	id = griffonstone.117
+	title = griffonstone.117.t
+	desc = griffonstone.117.d
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+	    AND = {
+	    OR = {
+	        any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_breaking_the_heart
+		    }
+			any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_to_save_the_empire
+		    }
+			any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_war_of_unification
+		    }
+		}
+	    OR = {
+		    original_tag = FEA
+			original_tag = STW
+			original_tag = PYT
+			original_tag = YAL
+			original_tag = GRI
+			original_tag = BRZ
+			original_tag = KAT
+			original_tag = ANG
+			original_tag = ROU
+		}
+		any_state = {
+		    OR = {
+			    is_core_of = FEA
+				is_core_of = STW
+				is_core_of = PYT
+				is_core_of = YAL
+				is_core_of = GRI
+				is_core_of = BRZ
+				is_core_of = KAT
+				is_core_of = ANG
+				is_core_of = ROU
+			}
+			is_controlled_by = BOI
+		}
+		}
+	}
+	immediate = {
+	   IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+	        FEA = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    STW = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    PYT = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    YAL = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    GRI = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    BRZ = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    KAT = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    ANG = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    ROU = { country_event = { id = griffonstone.121 hours = 1 random_hours = 25 } }
+		}
+		BOI = {
+		    set_country_flag = BOI_heartlands_capped
+		}
+	}
+	option = {
+		name = 	griffonstone.117.a
+	}
+}
+
+country_event = { #Herzländers unite! (60 days - trigger)
+	id = griffonstone.118
+	title = griffonstone.118.t
+	desc = griffonstone.118.d
+	is_triggered_only = no
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+	    AND = {
+		OR = {
+	        any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_breaking_the_heart
+		    }
+			any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_to_save_the_empire
+		    }
+			any_country_with_original_tag = {
+			    original_tag_to_check = BOI
+		        has_completed_focus = BOI_war_of_unification
+		    }
+		}
+		NOT = {
+		    has_country_flag = BOI_heartlands_capped
+		}
+	    OR = {
+		    original_tag = FEA
+			original_tag = STW
+			original_tag = PYT
+			original_tag = YAL
+			original_tag = GRI
+			original_tag = BRZ
+			original_tag = KAT
+			original_tag = ANG
+			original_tag = ROU
+		}
+		OR = {
+		    BOI = {
+			    has_war_with = FEA
+			}
+			BOI = {
+			    has_war_with = STW
+			}
+			BOI = {
+			    has_war_with = PYT
+			}
+			BOI = {
+			    has_war_with = YAL
+			}
+			BOI = {
+			    has_war_with = GRI
+			}
+			BOI = {
+			    has_war_with = BRZ
+			}
+			BOI = {
+			    has_war_with = KAT
+			}
+			BOI = {
+			    has_war_with = ANG
+			}
+			BOI = {
+			    has_war_with = ROU
+			}
+		}
+		}
+	}
+	immediate = {
+	    IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+	        FEA = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    STW = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    PYT = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    YAL = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    GRI = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    BRZ = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    KAT = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+		    ANG = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+		IF = {
+		    limit = {
+			    NOT = {
+				    has_war_with = BOI
+				}
+			}
+	        ROU = { country_event = { id = griffonstone.119 days = 60 random_hours = 18 } }
+		}
+	}
+	option = {
+	    name = griffonstone.118.a
+	}
+}
+
+country_event = { #Herzländers unite! (60 days)
+	id = griffonstone.119
+	title = griffonstone.119.t
+	desc = griffonstone.119.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = 	griffonstone.119.a
+		ai_chance = {
+		    factor = 50
+		}
+		declare_war_on = { type = puppet_wargoal_focus target = BOI }
+		hidden_effect = {
+		    BOI = {
+			    country_event = griffonstone.120
+			}
+		}
+	}
+	option = {
+		name = 	griffonstone.119.b
+		ai_chance = {
+		    factor = 0
+		}
+	}
+}
+country_event = { #Herzländers attack!
+	id = griffonstone.120
+	title = griffonstone.120.t
+	desc = griffonstone.120.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = 	griffonstone.120.a
+	}
+}
+country_event = { #Herzländers unite! (cap)
+	id = griffonstone.121
+	title = griffonstone.121.t
+	desc = griffonstone.121.d
+	is_triggered_only = yes
+	fire_only_once = no
+	option = {
+		name = 	griffonstone.121.a
+		ai_chance = {
+		    factor = 50
+		}
+		declare_war_on = { type = puppet_wargoal_focus target = BOI }
+		hidden_effect = {
+		    BOI = {
+			    country_event = griffonstone.120
+			}
+		}
+	}
+	option = {
+		name = 	griffonstone.121.b
+		ai_chance = {
+		    factor = 0
+		}
+	}
+}
+	
+	
 	####FOCUS EVENTS####
 	
 	country_event = { #Mines of Solarspike
