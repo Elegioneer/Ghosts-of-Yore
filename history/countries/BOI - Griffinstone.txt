@@ -5,11 +5,13 @@ set_research_slots = 3
 set_technology = {
 	griffon_race = 1
 	tech_griffon_army = 1
+	tech_knights = 1
 	melee_weapons = 1
+	pre_gw_artillery = 1
 	melee_weapons1 = 1
+	infantry_weapons = 1
 	tech_recon = 1
 	tech_support = 1
-	pre_gw_artillery = 1
 	tech_mountaineers = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
@@ -60,6 +62,7 @@ add_ideas = {
 }
 
 set_stability = 0.50
+add_manpower = 24239
 
 create_country_leader = {
 	name = "Grandpa Gruff"

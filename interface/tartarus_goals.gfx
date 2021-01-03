@@ -1,10 +1,6 @@
 spriteTypes = {	
 
 	SpriteType = { 
-		name = "GFX_dorotheos_focus"
-		texturefile = "gfx/interface/goals/dorotheos_focus.dds"
-	}
-	SpriteType = { 
 		name = "GFX_arantigan_heavy_industry"
 		texturefile = "gfx/interface/goals/IRE_heavy_industry_arantiga.dds"
 	}
@@ -139,5 +135,9 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_goal_BOI_join_upe"
 		texturefile = "gfx/interface/goals/goal_BOI_join_upe.tga"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_guto_research"
+		texturefile = "gfx/interface/goals/goal_GOY_guto_research.dds"
 	}
 }

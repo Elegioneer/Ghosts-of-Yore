@@ -2381,12 +2381,27 @@ country_event = { #Herzländers unite! (cap)
 	    desc = griffonstone.250.d
 	    picture = GFX_event_medieval_city_2
 		
+		allowed = {
+		    has_government = democratic
+		}
+		
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
 	    option = {
 	        name = griffonstone.250.a
 			set_party_name = { ideology = democratic name = BOI_RRP_democrats long_name = BOI_RRP_democrats_long }
+			retire_country_leader = yes
+			create_country_leader = {
+	            name = "Greta"
+	            #desc = BOI_gilda_desc
+	            picture = "Greta.tga"
+	            expire = "1965.1.1"
+	            ideology = liberalism
+	            traits = {
+
+	            }
+            }
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -2394,6 +2409,17 @@ country_event = { #Herzländers unite! (cap)
 		option = {
 	        name = griffonstone.250.b
 			set_party_name = { ideology = democratic name = BOI_GPL_democrats long_name = BOI_GPL_democrats_long }
+			retire_country_leader = yes
+			create_country_leader = {
+	            name = "Garner"
+	            #desc = BOI_gilda_desc
+	            picture = "GOY_Garner.dds"
+	            expire = "1965.1.1"
+	            ideology = liberalism
+	            traits = {
+
+	            }
+            }
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -2401,6 +2427,17 @@ country_event = { #Herzländers unite! (cap)
 		option = {
 	        name = griffonstone.250.c
 			set_party_name = { ideology = democratic name = BOI_GFP_democrats long_name = BOI_GFP_democrats_long }
+			retire_country_leader = yes
+			create_country_leader = {
+	            name = "Gabby"
+	            #desc = BOI_gilda_desc
+	            picture = "Gabby.dds"
+	            expire = "1965.1.1"
+	            ideology = liberalism
+	            traits = {
+
+	            }
+            }
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -3557,6 +3594,19 @@ country_event = { #Herzländers unite! (cap)
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			}
+		}
+	}
+	country_event = { #Maarnacht
+	    id = griffonstone.300
+	    title = griffonstone.300.t
+	    desc = griffonstone.300.d
+	    picture = GFX_event_medieval_city_2
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.300.a
 		}
 	}
 	

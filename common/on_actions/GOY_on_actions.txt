@@ -6,6 +6,10 @@ on_actions = {
 				    id = griffonstone.001
 					days = 9
 				}
+				country_event = {
+				    id = griffonstone.300
+					days = 357
+				}
 		    }
 		}
 	}

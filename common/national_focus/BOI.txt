@@ -160,7 +160,7 @@
 	}
 	shared_focus = {
 		id = BOI_guto_institute
-		icon = GFX_goal_double_research 
+		icon = GFX_goal_GOY_guto_research 
 		x = 1
 		y = 3
 		cost = 5.00
@@ -2714,6 +2714,9 @@ focus_tree = {
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemy_at_the_gates }
 		mutually_exclusive = { focus = BOI_look_towards_karthin }
+		available = {
+		    owns_state = 408
+		}
 		bypass = {
 		    OR = {
 			any_other_country = {
@@ -3759,9 +3762,8 @@ focus_tree = {
 			}
 			BOI = {
 			    has_equipment = {
-				    type = infantry_equipment
-					amount = 5000
-				}
+			        infantry_equipment > 4999
+			    }
 			}
 		}
 
@@ -4482,6 +4484,7 @@ focus_tree = {
 			owns_state = 402
 			owns_state = 439
 			owns_state = 398
+			owns_state = 674
 		}
 		ai_will_do = {
 			factor = 1
@@ -4505,6 +4508,7 @@ focus_tree = {
 			add_state_core = 402
 			add_state_core = 439
 			add_state_core = 398
+			add_state_core = 674
 			}
 			if = {
 			    limit = {
@@ -4606,6 +4610,7 @@ focus_tree = {
 					transfer_state = 492
 					transfer_state = 568
 					transfer_state = 539
+					set_cosmetic_tag = BRZ_boirep
 				}
 				BOI = {
 				    puppet = BRZ
@@ -8157,6 +8162,9 @@ focus_tree = {
 		cost = 15.00
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_breaking_the_heart }
+		available = {
+		    owns_state = 382
+		}
 
 		ai_will_do = {
 			factor = 1

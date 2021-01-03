@@ -1731,7 +1731,7 @@ ideas = {
 			}
 		    targeted_modifier  = {
 			    tag = BOI
-				trade_cost_for_target_factor = 0.25
+				trade_cost_for_target_factor = -0.5
 			}
 		}
 		BOI_smuggling_in_zebrica = {
@@ -2019,6 +2019,15 @@ ideas = {
 			}
 			available = {
 				has_government = democratic
+				custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_gabby
+				    NOT = {
+				        has_country_leader = {
+			                ruling_only = yes
+				            name = Gabby
+			            }
+				    }
+				}
 			}
 			visible = {
 			    
@@ -2036,7 +2045,15 @@ ideas = {
 				factor = 1
 			}
 			available = {
-				
+				custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_garner
+				    NOT = {
+				        has_country_leader = {
+			                ruling_only = yes
+				            name = Garner
+			            }
+				    }
+				}
 			}
 			visible = {
 			    
@@ -2366,7 +2383,15 @@ ideas = {
 				factor = 1
 			}
 			available = {
-				
+			    custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_greta
+				    NOT = {
+				        has_country_leader = {
+			                ruling_only = yes
+				            name = Greta
+			            }
+				    }
+				}
 			}
 			visible = {
 			    NOT = {
@@ -2605,7 +2630,7 @@ ideas = {
 			}
 			equipment_bonus = {
 			    infantry_equipment = {
-				    soft_attack = 0.5 instant = yes
+				    soft_attack = 0.05 instant = yes
 					build_cost_ic = -0.1 instant = yes
 				}
 			}
