@@ -256,7 +256,7 @@ BOI_imperial_clique_desc:0 "They may be turncoats, but they for sure are good at
 BOI_idol_loss_forgotten:0 "Idol of Boreas Lost"
 BOI_idol_loss_forgotten_desc:0 "Though only Grover I was able to use its power, the Idol remained the source of legitimacy of the Imperial Dynasty. Placed under the custody of the line of Guto, Idol was the centrepiece of Griffonstonian identity and a great source of national pride. After it was stolen by cyclops Arimaspi, Griffonstonians lost all hope for a better future."
 BOI_piracy_profits:0 "Piracy Profits"
-BOI_piracy_profits_desc:0 ""
+BOI_piracy_profits_desc:0 "Numerous privateers are ravaging Equestrian vessels for loot. By their contracts, they are required to share the stolen goods with us. Unfortunately, the economic boom we are experiencing from this is soured by the unprecedented increase in illegal activity in our port cities."
 BOI_resistance_to_reforms:0 "Resistance To Reforms"
 BOI_resistance_to_reforms_desc:0 "Nobles of Griffonstone are using all means they can to undermine the government and halt our efforts to reform the nation."
 BOI_exodus_of_wealth:0 "Exodus Of Wealth"
@@ -266,7 +266,7 @@ BOI_equestrian_advisors_desc:0 "We are being supported by a group of economic an
 BOI_grover_I:0 "Grover I"
 BOI_grover_I_desc:0 "Grover, first of his name, Emperor of Griffonstone, Protector of the Imperial Heartlands... A mere puppet in claws of Goldstone, nevertheless is still a powerful symbol legitimising our regime."
 BOI_cyrille_I:0 "Cyrille I"
-BOI_cyrille_I_desc:0 "Cyrille Bluecrest, first of her name, Empress of Griffonstone, Protectress of the Imperial Heartlands... An ex-criminal warlord with bogus claims to the throne, redeemed and elevated by Lord Goldstone."
+BOI_cyrille_I_desc:0 "Cyrille Bluecrest, first of her name, Empress of Griffonstone, Protectress of the Imperial Heartlands... A minor noblebird with bogus claims to the throne, elevated by Lord Goldstone."
 BOI_widespread_piracy:0 "Widespread Piracy"
 BOI_widespread_piracy_desc:0 "Pirates! They are everywhere! Aargh!"
 BOI_deal_with_goldstone:0 "Deal With Goldstone"
@@ -1003,6 +1003,7 @@ CETT_BOI_ELF_support:0 "§YDecisions§! to assist the §REquestrian Liberation F
 BOI_CTTT_not_president_greta:0 "§YGreta§! is not the country's §Ypresident§!."
 BOI_CTTT_not_president_gabby:0 "§YGabby§! is not the country's §Ypresident§!."
 BOI_CTTT_not_president_garner:0 "§YGarner§! is not the country's §Ypresident§!."
+BOI_CTTT_completed_legacy:0 "Has completed focus §YGuto's Legacy§!"
 
 ## Political Parties ##
 BOI_neu_init:0 "Regency Council"

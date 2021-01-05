@@ -1,5 +1,5 @@
 BOI_war_for_liberation_category = {
-	icon = generic_political_actions
+	icon = EQS_militias_cat
 
 	visible = {
 		original_tag = BOI
@@ -18,7 +18,7 @@ BOI_war_for_liberation_category = {
 	}
 }
 BOI_support_liberation_front_category = {
-	icon = generic_political_actions
+	icon = EQS_militias_cat
 
 	visible = {
 		original_tag = BOI
@@ -40,6 +40,7 @@ BOI_griffonian_union_category = {
 	}
 }
 BOI_blackmarket_category = {
+    icon = GFX_decision_cat_blackmarket_icon
 	picture = GFX_decision_cat_blackmarket
 
 	visible = {
@@ -72,7 +73,7 @@ BOI_wettertrupp_category = {
 	}
 }
 BOI_order_category = {
-    icon = generic_political_actions
+    icon = GFX_decision_cat_demobilisation_icon
 	
 	visible = {
 		original_tag = BOI

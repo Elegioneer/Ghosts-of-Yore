@@ -3,4 +3,16 @@ spriteTypes = {
 		name = "GFX_decision_cat_blackmarket"
 		texturefile = "gfx/interface/decisions/decision_cat_blackmarket.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_blackmarket_icon"
+		texturefile = "gfx/interface/decisions/decision_cat_blackmarket_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_demobilisation_icon"
+		texturefile = "gfx/interface/decisions/decision_cat_demobilisation_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_bloodmoney"
+		texturefile = "gfx/interface/decisions/decision_bloodmoney.dds"
+	}
 }

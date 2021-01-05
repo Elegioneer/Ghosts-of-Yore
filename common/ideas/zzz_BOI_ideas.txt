@@ -1954,16 +1954,15 @@ ideas = {
 				factor = 10
 			}
 			available = {
-				
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
 			}
 			visible = {
-			    any_other_country = {
-					OR = {
-						original_tag = EQS
-					    original_tag = ELF
-					}
-					exists = no
-				}
+			    has_completed_focus = BOI_harbour_equestrian_elites
 			}
 		}
 	}
@@ -2172,7 +2171,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { friendly_priest }
-			picture = BRF_prelate
+			picture = BRF_Prelate
 			ai_will_do = {
 				factor = 1
 			}
@@ -2252,17 +2251,15 @@ ideas = {
 				factor = 10
 			}
 			available = {
-				
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
 			}
 			visible = {
 			    has_completed_focus = BOI_harbour_equestrian_elites
-				any_other_country = {
-					OR = {
-						original_tag = EQS
-					    original_tag = ELF
-					}
-					exists = no
-				}
 			}
 		}
 		BOI_klaus_steelfeather_advisor = {
@@ -2461,17 +2458,15 @@ ideas = {
 				factor = 10
 			}
 			available = {
-				
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
 			}
 			visible = {
 			    has_completed_focus = BOI_harbour_equestrian_elites
-				any_other_country = {
-					OR = {
-						original_tag = EQS
-					    original_tag = ELF
-					}
-					exists = no
-				}
 			}
 		}
 	    BOI_bechard = {

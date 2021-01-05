@@ -51,6 +51,9 @@ on_actions = {
 				        NOT = {
 					        has_country_flag = BOI_dealt_with_nobles
 					    }
+						NOT = {
+						    has_global_flag = GRI_grover_vi_dead
+						}
 						has_country_flag = BOI_gallus_is_king
 					}
 				}

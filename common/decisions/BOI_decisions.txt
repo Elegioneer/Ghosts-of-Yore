@@ -1,6 +1,6 @@
 BOI_war_for_liberation_category = {
     BOI_start_war_for_liberation = {
-	    icon = rifles
+	    icon = crossed_swords
 		cost = 200
 		fire_only_once = yes
 		available = {
@@ -28,7 +28,7 @@ BOI_war_for_liberation_category = {
 }
 BOI_support_liberation_front_category = {
     BOI_join_the_fray = {
-		icon = rifles
+		icon = crossed_swords
 		cost = 100
 		fire_only_once = yes
 		days_remove = 7
@@ -52,7 +52,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
     BOI_send_volunteers = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 10
 		fire_only_once = no
 		days_remove = 10
@@ -97,7 +97,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_provide_advisors = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 20
 		fire_only_once = no
 		days_remove = 20
@@ -121,7 +121,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_industrial_assistance = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 100
 		fire_only_once = no
 		days_remove = 180
@@ -161,7 +161,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_provide_funds = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 100
 		fire_only_once = no
 		days_remove = 10
@@ -188,7 +188,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_guns = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -213,7 +213,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_equipment = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -238,7 +238,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_artillery = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -263,7 +263,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_tanks = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -288,7 +288,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_fighters = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -313,7 +313,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_cas = {
-		icon = rifles
+		icon = rifles_canterlot
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -349,15 +349,15 @@ BOI_griffonian_union_category = {
 				    AND = {
 					    has_idea = griffon_race 
 						has_government = democratic
-						is_major = no
-				        is_subject = no
-						is_in_faction = no
 					}
 					AND = {
 					    original_tag = FAW
 						has_completed_focus = FST_prime_minister_sivenhof
 					}
 				}
+				is_major = no
+				is_subject = no
+				is_in_faction = no
 				NOT = {
 				    AND = {
 				        original_tag = FAT
@@ -390,7 +390,7 @@ BOI_griffonian_union_category = {
 }
 BOI_blackmarket_category = {
     BOI_opium_plantations = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 150
 		fire_only_once = yes
 		days_remove = 30
@@ -413,7 +413,7 @@ BOI_blackmarket_category = {
 						    has_idea = detached_country
 						}
 					}
-			        add_opinion_modifier = {
+			        reverse_add_opinion_modifier = {
                         target = BOI
                         modifier = BOI_druglord
 					}
@@ -422,7 +422,7 @@ BOI_blackmarket_category = {
 		}
 	}
 	BOI_approach_five_families = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 100
 		fire_only_once = yes
 		days_remove = 30
@@ -449,7 +449,7 @@ BOI_blackmarket_category = {
 		}
 	}
 	BOI_align_with_corsairs = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 50
 		fire_only_once = yes
 		visible = {
@@ -478,7 +478,7 @@ BOI_blackmarket_category = {
 		}
 	}
 	BOI_manehattan_smuggling = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 200
 		fire_only_once = yes
 		days_remove = 30
@@ -510,7 +510,7 @@ BOI_blackmarket_category = {
 		}
 	}
 	BOI_invest_in_south_east = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 200
 		fire_only_once = yes
 		days_remove = 10
@@ -544,7 +544,7 @@ BOI_blackmarket_category = {
 }
 BOI_war_profiteering_category = {
     BOI_profit_from_war = {
-	    icon = rifles
+	    icon = bloodmoney
 		cost = 25
 		fire_only_once = no
 		target_trigger = {
@@ -695,10 +695,10 @@ BOI_wettertrupp_category = {
 }
 BOI_order_category = {
 	BOI_demobilise_the_core = {
-	    icon = rifles
+	    icon = eng_trade_unions_support
 		cost = 100
 		fire_only_once = yes
-		days_remove = 30
+		days_remove = 45
 		ai_will_do = {
 		    factor = 7
 		}
@@ -730,7 +730,7 @@ BOI_order_category = {
 		}
 	}
 	BOI_demobilise_the_south = {
-	    icon = rifles
+	    icon = eng_trade_unions_support
 		cost = 100
 		fire_only_once = yes
 		days_remove = 60
@@ -783,7 +783,7 @@ BOI_order_category = {
 		}
 	}
 	BOI_demobilise_the_east = {
-	    icon = rifles
+	    icon = eng_trade_unions_support
 		cost = 100
 		fire_only_once = yes
 		days_remove = 60
@@ -845,7 +845,7 @@ BOI_order_category = {
 		}
 	}
 	BOI_demobilise_the_north = {
-	    icon = rifles
+	    icon = eng_trade_unions_support
 		cost = 100
 		fire_only_once = yes
 		days_remove = 60

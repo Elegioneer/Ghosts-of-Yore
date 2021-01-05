@@ -26,7 +26,7 @@ HLR_arantiga = {
     color = rgb { 210 194 53 }
     color_ui = rgb { 221 202 29 }
 }
-BOI_REP = {
+BOI_CONF = {
     color = rgb { 255 230 230 }
     color_ui = rgb { 255 204 204 }
 }

@@ -1003,7 +1003,13 @@
 		mutually_exclusive = { focus = BOI_noble_levies }
 		available = {
 		    OR = {
-		        has_completed_focus = BOI_legacy_of_guto
+			    custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_completed_legacy
+					OR = {
+					    has_completed_focus = BOI_coronation
+		                has_completed_focus = BOI_legacy_of_guto
+					}
+				}
 				has_completed_focus = BOI_age_of_commongriff
 			}
 		}
@@ -3490,7 +3496,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_opinion_modifier = {
-			    target = CHN
+			    target = EQS
+				modifier = BOI_aligned_with_EQS
+			}
+			reverse_add_opinion_modifier = {
+			    target = EQS
 				modifier = BOI_aligned_with_EQS
 			}
 		}
@@ -3533,7 +3543,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
-			add_opinion_modifier = {
+			reverse_add_opinion_modifier = {
 			    target = CHN
 				modifier = BOI_supporting_EQS
 			}
@@ -3646,6 +3656,13 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_equestria_has_fallen }
+		available = {
+		    MAN = {
+			    exists = yes
+				has_government = fascism
+				is_subject_of = CHN
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -3686,12 +3703,20 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_equestria_has_fallen }
+		available = {
+		    any_other_country = {
+				OR = {
+					original_tag = EQS
+				    original_tag = ELF
+				}
+				exists = no
+			}
+		}
 
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
-			#TODO Get military advisor “Prince Blueblood” ( Army logistics Expert), Get political advisor Dotted Line (Armaments Organiser), Get chief of navy Cynosura (Decisive Battle Expert) Note: All advisors are available if Equestria of ELF does not exist
 			custom_effect_tooltip = BOI_CETT_equestrian_elites
 			show_ideas_tooltip = BOI_blueblood
 			show_ideas_tooltip = BOI_dotted_line
@@ -8555,7 +8580,10 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-			add_ideas = BOI_piracy_profits
+			add_timed_idea = {
+			    idea = BOI_piracy_profits
+				days = 360
+			}
 			EQS = {
 			    country_event = griffonstone.213
 			}

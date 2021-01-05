@@ -2413,7 +2413,7 @@ country_event = { #Herzländers unite! (cap)
 			create_country_leader = {
 	            name = "Garner"
 	            #desc = BOI_gilda_desc
-	            picture = "GOY_Garner.dds"
+	            picture = "GOY_Garner.tga"
 	            expire = "1965.1.1"
 	            ideology = liberalism
 	            traits = {
@@ -2591,14 +2591,15 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.256.b
+			
 			BOI = {
 			    country_event = {
 				    id = griffonstone.258
 					days = 1
 				}
-				hidden_effect = {
-				    set_country_flag = BOI_FLAG_refused_griffonian_union
-				}
+			}
+			hidden_effect = {
+				set_country_flag = BOI_FLAG_refused_griffonian_union
 			}
 		}
 	}
