@@ -349,32 +349,22 @@ BOI_griffonian_union_category = {
 				    AND = {
 					    has_idea = griffon_race 
 						has_government = democratic
+						is_in_faction = no
+						is_major = no
+				        is_subject = no
+						NOT = {
+						    has_idea = detached_country
+					        has_country_flag = refused_griffonian_union
+				            tag = FAT
+						}
 					}
 					AND = {
-					    original_tag = FAW
+					    tag = FAW
 						has_completed_focus = FST_prime_minister_sivenhof
 					}
 				}
-				is_major = no
-				is_subject = no
-				is_in_faction = no
-				NOT = {
-				    AND = {
-				        original_tag = FAT
-					    has_government = democratic
-					}
-				}
-				NOT = {
-				    has_idea = detached_country
-				}
-				NOT = {
-				    has_country_flag = BOI_FLAG_refused_griffonian_union
-				}
             }
         }
-		available = {
-            
-		}
 		ai_will_do = {
 			factor = 1
 		}

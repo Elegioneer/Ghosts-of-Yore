@@ -57,42 +57,42 @@ units = {
 		#name = "Griffon Infantry Division"
 		location = 1087
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 12299
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 8207
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 1580
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 753
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 1.0
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.5
 	}
 	division = {
 		name = "Boreal Order of Solarspike"
 		location = 4584
 		division_template = "Knight Division"
-		start_experience_factor = 0.85
+		start_experience_factor = 0.75
 		start_equipment_factor = 0.75
 	}
 }

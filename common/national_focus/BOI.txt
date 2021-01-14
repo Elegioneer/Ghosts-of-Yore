@@ -3137,7 +3137,7 @@ focus_tree = {
 		available = {
 		    owns_state = 382
 			NOT = {
-			    has_global_flag =  GRI_grover_vi_dead
+			    has_global_flag = GRI_grover_vi_dead
 			}
 		}
 		#available = {
@@ -3703,13 +3703,17 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_war_of_unification
 		prerequisite = { focus = BOI_equestria_has_fallen }
+		bypass = {
+		    ELF = {
+			    exists = yes
+			}
+		}
 		available = {
-		    any_other_country = {
-				OR = {
-					original_tag = EQS
-				    original_tag = ELF
-				}
-				exists = no
+		    EQS = {
+			    exists = no
+			}
+			ELF = {
+			    exists = no
 			}
 		}
 
@@ -8168,6 +8172,9 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_breaking_the_heart }
+		available = {
+		    owns_state = 382
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -8333,6 +8340,9 @@ focus_tree = {
 		relative_position_id = BOI_breaking_the_heart
 		prerequisite = { focus = BOI_breaking_the_heart }
 		will_lead_to_war_with = TRD
+		available = {
+		    owns_state = 382
+		}
 
 		ai_will_do = {
 			factor = 1
