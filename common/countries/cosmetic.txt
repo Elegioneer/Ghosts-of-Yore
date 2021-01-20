@@ -26,14 +26,6 @@ HLR_arantiga = {
     color = rgb { 210 194 53 }
     color_ui = rgb { 221 202 29 }
 }
-BOI_CONF = {
-    color = rgb { 255 230 230 }
-    color_ui = rgb { 255 204 204 }
-}
-BRZ_boirep = {
-    color = rgb { 255 230 230 }
-    color_ui = rgb { 255 204 204 }
-}
 ################################
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }

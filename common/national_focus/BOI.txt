@@ -4639,7 +4639,6 @@ focus_tree = {
 					transfer_state = 492
 					transfer_state = 568
 					transfer_state = 539
-					set_cosmetic_tag = BRZ_boirep
 				}
 				BOI = {
 				    puppet = BRZ

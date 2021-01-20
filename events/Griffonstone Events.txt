@@ -2592,9 +2592,9 @@ country_event = { #Herzländers unite! (cap)
 					days = 1
 				}
 			}
-			hidden_effect = {
-				set_country_flag = refused_griffonian_union
-			}
+			#hidden_effect = { #decision is broken
+			#    set_country_flag = refused_griffonian_union
+			#}
 		}
 	}
 	country_event = { #Union join positive
