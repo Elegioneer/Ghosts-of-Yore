@@ -330,7 +330,6 @@
 		    owns_state = 532
 			owns_state = 490
 			owns_state = 606
-			owns_state = 446
 			owns_state = 489
 		}
 
@@ -797,7 +796,6 @@
 		available = {
 		    owns_state = 489
 			owns_state = 606
-			owns_state = 446
 		}
 		ai_will_do = {
 			factor = 1
@@ -936,7 +934,7 @@
 			    category = land_doctrine
 		    }
 			create_corps_commander = {
-	            name = "Karl von Clawswewitz"
+	            name = "Karl von Clawsewitz"
 	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
 	            traits = { griffon_race_trait old_guard inflexible_strategist career_officer }
 	            skill = 2
@@ -2484,6 +2482,9 @@ focus_tree = {
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
 		will_lead_to_war_with = LAK
+		bypass = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -2504,6 +2505,9 @@ focus_tree = {
 		relative_position_id = BOI_enemies_on_all_sides
 		prerequisite = { focus = BOI_enemies_on_all_sides }
 		will_lead_to_war_with = BAN
+		bypass = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4153,6 +4157,9 @@ focus_tree = {
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_natural_borders }
 		will_lead_to_war_with = BAN
+		bypass = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -4212,6 +4219,9 @@ focus_tree = {
 		relative_position_id = BOI_new_republic_rises
 		prerequisite = { focus = BOI_natural_borders }
 		will_lead_to_war_with = LAK
+		bypass = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -5396,6 +5406,9 @@ focus_tree = {
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_look_outside }
 		will_lead_to_war_with = BAN
+		bypass = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -5439,6 +5452,9 @@ focus_tree = {
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_look_outside }
 		will_lead_to_war_with = LAK
+		bypass = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7783,7 +7799,6 @@ focus_tree = {
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_divide_and_conquer }
 		prerequisite = { focus = BOI_special_economic_zones }
-		will_lead_to_war_with = LAK
 
 		ai_will_do = {
 			factor = 1
@@ -7800,6 +7815,10 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_prey_on_the_weak }
+		will_lead_to_war_with = LAK
+		bypass = {
+		    owns_state = 383
+		}
 
 		ai_will_do = {
 			factor = 1
@@ -7820,6 +7839,9 @@ focus_tree = {
 		relative_position_id = BOI_golden_dawn
 		prerequisite = { focus = BOI_prey_on_the_weak }
 		will_lead_to_war_with = BAN
+		bypass = {
+		    owns_state = 532
+		}
 
 		ai_will_do = {
 			factor = 1
