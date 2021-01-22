@@ -8581,7 +8581,7 @@ focus_tree = {
 	focus = {
 		id = BOI_war_profiteering
 		icon = GFX_goal_endless_money 
-		x = -2
+		x = -3
 		y = 4
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
@@ -8595,9 +8595,163 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BOI_claim_the_borderlands
+		icon = GFX_goal_skull_treaty 
+		x = -1
+		y = 4
+		cost = 5.00
+		relative_position_id = BOI_breaking_the_heart
+		prerequisite = { focus = BOI_declare_griffonstone_empire }
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = BOI_CETT_herzlandism
+			hidden_effect = {
+			    HLQ = { add_to_ROOT_potential_cores = yes }
+				EYR = { add_to_ROOT_potential_cores = yes }
+				ERI = { add_to_ROOT_potential_cores = yes }
+				AVI = { add_to_ROOT_potential_cores = yes }
+				HEL = { add_to_ROOT_potential_cores = yes }
+				AET = { add_to_ROOT_potential_cores = yes }
+				TRD = { add_to_ROOT_potential_cores = yes }
+			}
+			IF = {
+			    limit = { HLQ = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HLQ
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 633
+					add_state_claim = 634	
+					add_state_claim = 553
+					add_state_claim = 537
+				}
+			}
+			IF = {
+			    limit = { LSM = { exists = yes } }
+				hidden_effect = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = LSM
+			        }
+				}
+				ELSE_IF = {
+				    limit = { LNS = { exists = yes } }
+					hidden_effect = {
+					    LNS = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LNS
+					    }
+					}
+				}
+				ELSE_IF = {
+				    limit = { LSC = { exists = yes } }
+					hidden_effect = {
+					    LSC = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LSC
+					    }
+					}
+				}
+				ELSE = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+				    add_state_claim = 540
+					add_state_claim = 552
+					add_state_claim = 505
+				}
+			}
+			IF = {
+			    limit = { HEL = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HEL
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 493
+					add_state_claim = 494
+				}
+			}
+			IF = {
+			    limit = { AET = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = AET
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 496
+					add_state_claim = 495
+					add_state_claim = 457
+					add_state_claim = 436
+				}
+			}
+			IF = {
+			    limit = { MNC = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = MNC
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 475
+					add_state_claim = 476
+					add_state_claim = 477
+					add_state_claim = 459
+					add_state_claim = 581
+				}
+			}
+			IF = {
+			    limit = { FAT = { exists = yes } }
+				hidden_effect = {
+				    FAT = { add_to_ROOT_potential_cores = yes }
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = FAT
+			        }
+				}
+				ELSE_IF = {
+				    limit = { FAW = { exists = yes } }
+					hidden_effect = {
+					    FAW = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = FAW
+					    }
+					}
+				}
+				ELSE = {
+				    FAT = { add_to_ROOT_potential_cores = yes }
+				    add_state_claim = 583
+					add_state_claim = 449
+					add_state_claim = 450
+					add_state_claim = 432
+					add_state_claim = 485
+					add_state_claim = 582
+					add_state_claim = 474
+					add_state_claim = 557
+					add_state_claim = 556
+					add_state_claim = 548
+					add_state_claim = 480
+				}
+			}
+		}
+	}
+	focus = {
 		id = BOI_raid_equestrian_commerce
 		icon = GFX_focus_indy_dread_fleet_3 
-		x = 0
+		x = 1
 		y = 4
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
@@ -8623,7 +8777,7 @@ focus_tree = {
 	focus = {
 		id = BOI_new_order_on_equus
 		icon = GFX_goal_cash_and_cap 
-		x = 2
+		x = 3
 		y = 4
 		cost = 5.00
 		relative_position_id = BOI_breaking_the_heart
