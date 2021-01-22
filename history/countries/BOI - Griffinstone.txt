@@ -62,8 +62,16 @@ add_ideas = {
 }
 
 set_stability = 0.50
+#
 add_manpower = 24239
-
+384 = {
+    add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}	
+}
+#
 create_country_leader = {
 	name = "Grandpa Gruff"
 	desc = BOI_grandpa_desc

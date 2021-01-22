@@ -2349,9 +2349,7 @@ ideas = {
 				
 			}
 			visible = {
-			    NOT = {
-				    has_country_flag = BOI_goldstone_coup_success
-				}
+			    
 			}
 		}
 		BOI_mikhaylo_advisor = {
