@@ -26,6 +26,10 @@ HLR_arantiga = {
     color = rgb { 210 194 53 }
     color_ui = rgb { 221 202 29 }
 }
+BRZ_griffonstone = {
+	color = rgb { 105 66 112 }
+	color_ui = rgb { 105 66 112 }
+}
 ################################
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }

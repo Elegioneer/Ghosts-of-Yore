@@ -1239,6 +1239,70 @@ country = {
 		}
 		}
 		}
+		country = {
+			ARA_encouraging_minorities = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = home_of_the_griffons
+			removal_cost = -1
+			    modifier = {
+			        stability_factor = 0.05
+			        research_speed_factor = 0.05
+		        }
+		    }
+		}
+		country = {
+			ARA_civ_primacy = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = IRE_medium_industry
+			removal_cost = -1
+			    modifier = {
+			        production_speed_industrial_complex_factor = 0.20
+			        production_speed_arms_factory_factor = -0.10
+	            }
+		    }
+		}
+		country = {
+			ARA_tourist_industry = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = LEC_high_reserves
+			removal_cost = -1
+			    modifier = {
+			        opinion_gain_monthly_factor = 0.25
+			        consumer_goods_factor = -0.02
+		        }
+		    }
+		}
+		country = {
+			ARA_golden_age_idea = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = pre_war_industry
+			removal_cost = -1
+			    modifier = {
+			        industrial_capacity_factory = 0.15
+			        production_speed_buildings_factor = 0.1
+		        }
+		    }
+		}
 	
 	################### Governing Empire Path Ideas ###################	
 
@@ -3769,6 +3833,7 @@ country = {
 		}
 	high_command = {
 		soter_advisor = {
+		    ledger = army
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3787,6 +3852,7 @@ country = {
 		}
 		
 		ARA_nicator = {
+		    ledger = army
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3805,6 +3871,7 @@ country = {
 		}
 
 		ARA_lysimachus = {
+		    ledger = army
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3823,6 +3890,7 @@ country = {
 		}
 		
 		ARA_craterus = {
+		    ledger = army
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3837,6 +3905,7 @@ country = {
 		}
 		
 		cassander_advisor = {
+		    ledger = army
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3850,6 +3919,7 @@ country = {
 			}
 		}
 		ARA_miga_ouranos_2 = {
+		    ledger = air
 			allowed = {
 				original_tag = "ARA"
 			}		
@@ -3869,6 +3939,7 @@ country = {
 			}
 		}
 		ARA_bellerophontes_2 = {
+		    ledger = air
 			allowed = {
 				original_tag = "ARA"
 			}		
