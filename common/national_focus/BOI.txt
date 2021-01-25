@@ -4649,6 +4649,7 @@ focus_tree = {
 					transfer_state = 492
 					transfer_state = 568
 					transfer_state = 539
+					set_cosmetic_tag = BRZ_griffonstone
 				}
 				BOI = {
 				    puppet = BRZ
@@ -8616,6 +8617,7 @@ focus_tree = {
 				HEL = { add_to_ROOT_potential_cores = yes }
 				AET = { add_to_ROOT_potential_cores = yes }
 				TRD = { add_to_ROOT_potential_cores = yes }
+				FEZ = { add_to_ROOT_potential_cores = yes }
 			}
 			IF = {
 			    limit = { HLQ = { exists = yes } }
@@ -8744,6 +8746,18 @@ focus_tree = {
 					add_state_claim = 556
 					add_state_claim = 548
 					add_state_claim = 480
+				}
+			}
+			IF = {
+			    limit = { FEZ = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = FEZ
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 390
 				}
 			}
 		}
