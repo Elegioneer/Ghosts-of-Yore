@@ -7951,6 +7951,7 @@ focus_tree = {
 			remove_ideas = BOI_rumarean_unrest_2
 			remove_ideas = BOI_rumarean_unrest_3
 			add_ideas = BOI_rumareans_quelled
+			add_state_core = 383
 		}
 	}
 	focus = {
@@ -8618,6 +8619,7 @@ focus_tree = {
 				AET = { add_to_ROOT_potential_cores = yes }
 				TRD = { add_to_ROOT_potential_cores = yes }
 				FEZ = { add_to_ROOT_potential_cores = yes }
+				MNC = { add_to_ROOT_potential_cores = yes }
 			}
 			IF = {
 			    limit = { HLQ = { exists = yes } }
