@@ -3234,11 +3234,11 @@ focus_tree = {
 	shared_focus = { #CHAOS
 		id = ARA_chaos
 		icon = GFX_goal_revolution
-		x = 29
+		x = 34
 		y = 0
 		cost = 0
 		bypass = {
-			has_country_flag = arantiga_flag_dorotheos_is_dead
+			always = yes
 			
 		}
 		}
@@ -3256,15 +3256,31 @@ focus_tree = {
 		
 		}
 		}
+		# Nicator's Republic/Kingdom tree #
+	shared_focus = { #The Traitor
+		id = ARA_traitor
+		icon = GFX_unknown
+		x = -4
+		y = 2
+		cost = 1.00
+		relative_position_id = ARA_chaos
+		prerequisite = { focus = ARA_power_struggle	}
+		bypass = {
+		    always = no
+		}
+		completion_reward = {
+		    
+		}
+	}
 	
 	shared_focus = { #Purge zealots
 		id = ARA_purge_zealots
 		icon = GFX_goal_purge_zealots
-		x = -1
+		x = -2
 		y = 1
 		cost = 5.00
-		relative_position_id = ARA_power_struggle
-		prerequisite = { focus = ARA_power_struggle }
+		relative_position_id = ARA_traitor
+		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
 		add_manpower = -1000
 		add_stability = -0.4
@@ -3292,11 +3308,11 @@ focus_tree = {
 	shared_focus = { #Support of the army
 		id = ARA_support_army
 		icon = GFX_goal_support_of_the_army
-		x = 1
+		x = 2
 		y = 1
 		cost = 5.00
-		relative_position_id = ARA_power_struggle
-		prerequisite = { focus = ARA_power_struggle }
+		relative_position_id = ARA_traitor
+		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
 		add_political_power = -200
 		if = {
@@ -3321,11 +3337,10 @@ focus_tree = {
 		id = ARA_secure_cities
 		icon = GFX_focus_generic_provoke_border_clashes
 		x = 0
-		y = 2
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_power_struggle
-		prerequisite = { focus = ARA_support_army }
-		prerequisite = { focus = ARA_purge_zealots }
+		relative_position_id = ARA_traitor
+		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
 		add_manpower = -30000
 		swap_ideas = {
@@ -3340,10 +3355,12 @@ focus_tree = {
 		id = ARA_the_legacy
 		icon = GFX_goal_dorocoup
 		x = 0
-		y = 1
+		y = 2
 		cost = 5.00
-		relative_position_id = ARA_secure_cities
+		relative_position_id = ARA_traitor
+		prerequisite = { focus = ARA_purge_zealots }
 		prerequisite = { focus = ARA_secure_cities }
+		prerequisite = { focus = ARA_support_army }
 		completion_reward = {
 		swap_ideas = {
 				remove_idea = ARA_absolute_chaos3
@@ -3653,6 +3670,7 @@ focus_tree = {
 		prerequisite = { focus = ARA_The_Crossroads }
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
+		mutually_exclusive = { focus = ARA_march_on_griffenheim }
 		completion_reward = {
 		    add_ideas = ARA_golden_age_idea
 		}
@@ -3668,6 +3686,7 @@ focus_tree = {
 		prerequisite = { focus = ARA_student_exchange }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
 		mutually_exclusive = { focus = ARA_golden_age }
+		mutually_exclusive = { focus = ARA_march_on_griffenheim }
 		completion_reward = {
 		custom_effect_tooltip = old_allies_tooltip
 		}
@@ -3685,11 +3704,29 @@ focus_tree = {
 		prerequisite = { focus = ARA_never_again }
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_golden_age }
+		mutually_exclusive = { focus = ARA_march_on_griffenheim }
 		available = { is_in_faction = no }
 		completion_reward = {
 		add_ideas = ARA_arantiga_forever
 		}
-		}	
+		}
+    shared_focus = {
+		id = ARA_march_on_griffenheim
+		icon = GFX_unknown
+		x = 4
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_The_Crossroads
+		prerequisite = { focus = ARA_never_again }
+		mutually_exclusive = { focus = ARA_old_allies }
+		mutually_exclusive = { focus = ARA_golden_age }
+		mutually_exclusive = { focus = ARA_arantiga_forever }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}		
 		
 	shared_focus = { #Aquileian Brothers
 		id = ARA_aquileian_brothers
@@ -3922,10 +3959,446 @@ focus_tree = {
 
     shared_focus = {
 		id = ARA_central_republic
-		icon = GFX_goal_DOM_The_Trial
+		icon = GFX_unknown
 		x = 1
 		y = 2
+		cost = 10.00
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_liberate_herzland
+		icon = GFX_unknown
+		x = -1
+		y = 1
 		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_central_republic }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_child_emperor
+		icon = GFX_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_central_republic }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_invest_in_herzland
+		icon = GFX_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_liberate_herzland }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_move_to_griffenheim
+		icon = GFX_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_liberate_herzland }
+		prerequisite = { focus = ARA_child_emperor }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_liberte
+		icon = GFX_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_child_emperor }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_expand_mines
+		icon = GFX_unknown
+		x = -3
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_invest_in_herzland }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_integrate_infrastructure_rep
+		icon = GFX_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_invest_in_herzland }
+		prerequisite = { focus = ARA_move_to_griffenheim }
+		prerequisite = { focus = ARA_liberte }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_land_reform
+		icon = GFX_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_invest_in_herzland }
+		prerequisite = { focus = ARA_move_to_griffenheim }
+		prerequisite = { focus = ARA_liberte }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_liberalise_economy
+		icon = GFX_unknown
+		x = 3
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_liberte }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_serene_state
+		icon = GFX_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_integrate_infrastructure_rep }
+		prerequisite = { focus = ARA_land_reform }
+		completion_reward = {
+		    
+		}
+	}
+	# Lysimachus' Holy Empire tree #
+	shared_focus = { #The Inheritor
+		id = ARA_inheritor
+		icon = GFX_unknown
+		x = 4
+		y = 2
+		cost = 1.00
+		relative_position_id = ARA_chaos
+		prerequisite = { focus = ARA_power_struggle	}
+		bypass = {
+		    always = no
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_ensure_loyalty
+		icon = GFX_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_inheritor	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_purge_military
+		icon = GFX_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_inheritor	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_pacify_countryside
+		icon = GFX_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_inheritor	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_eternal_regency
+		icon = GFX_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_ensure_loyalty	}
+		prerequisite = { focus = ARA_purge_military	}
+		prerequisite = { focus = ARA_pacify_countryside	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_die_for_emperor
+		icon = GFX_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_eternal_regency	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_army_is_the_state
+		icon = GFX_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_eternal_regency	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_citizens_are_soldiers
+		icon = GFX_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_eternal_regency	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_time_of_revenge
+		icon = GFX_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_die_for_emperor	}
+		prerequisite = { focus = ARA_army_is_the_state	}
+		prerequisite = { focus = ARA_citizens_are_soldiers	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_pure_minds_lysi
+		icon = GFX_unknown
+		x = -2
+		y = 5
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_time_of_revenge }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_enforce_language
+		icon = GFX_unknown
+		x = 0
+		y = 5
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_time_of_revenge }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_cult_of_eternal_emperor
+		icon = GFX_unknown
+		x = 2
+		y = 5
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_time_of_revenge }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_prison_economy
+		icon = GFX_unknown
+		x = -2
+		y = 6
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_pure_minds_lysi }
+		prerequisite = { focus = ARA_enforce_language	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_grand_temple
+		icon = GFX_unknown
+		x = 0
+		y = 6
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_pure_minds_lysi }
+		prerequisite = { focus = ARA_enforce_language }
+		prerequisite = { focus = ARA_cult_of_eternal_emperor }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_SRD
+		icon = GFX_unknown
+		x = 2
+		y = 6
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_enforce_language }
+		prerequisite = { focus = ARA_cult_of_eternal_emperor }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_banish_degenerates
+		icon = GFX_unknown
+		x = -2
+		y = 7
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_prison_economy	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_black_spot
+		icon = GFX_unknown
+		x = 0
+		y = 7
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_prison_economy	}
+		prerequisite = { focus = ARA_SRD }
+		prerequisite = { focus = ARA_grand_temple }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_nuclear_deterrence
+		icon = GFX_unknown
+		x = 2
+		y = 7
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_SRD }
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_total_surveillance
+		icon = GFX_unknown
+		x = -2
+		y = 8
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_banish_degenerates }
+		prerequisite = { focus = ARA_black_spot	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_declare_holy_empire
+		icon = GFX_unknown
+		x = 0
+		y = 8
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_banish_degenerates	}
+		prerequisite = { focus = ARA_black_spot	}
+		prerequisite = { focus = ARA_nuclear_deterrence	}
+		bypass = {
+		}
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
+		id = ARA_fortress_arantiga
+		icon = GFX_unknown
+		x = 2
+		y = 8
+		cost = 5.00
+		relative_position_id = ARA_inheritor
+		prerequisite = { focus = ARA_nuclear_deterrence }
+		prerequisite = { focus = ARA_black_spot	}
+		bypass = {
+		}
 		completion_reward = {
 		    
 		}
