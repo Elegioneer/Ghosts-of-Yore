@@ -4293,7 +4293,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_ideas = BOI_neutral_foreign_policy
+			country_event = griffonstone.301
 		}
 	}
 	focus = {

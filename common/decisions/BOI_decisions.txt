@@ -887,3 +887,107 @@ BOI_order_category = {
 		}
 	}
 }
+BOI_search_for_alliance_category = {
+    BOI_align_entente = {
+	    icon = eng_trade_unions_support
+		cost = 25
+		fire_only_once = yes
+		days_remove = 14
+		ai_will_do = {
+		    factor = 0
+		}
+		available = {
+		    NOT = {
+			    has_country_flag = BOI_FLAG_applying
+			}
+			JER = {
+			    has_government = democratic
+				is_faction_leader = yes
+			}
+		}
+		complete_effect = {
+		    JER = {
+			    country_event = {
+				    id = griffonstone.291
+					days = 7
+				}
+			}
+		    hidden_effect = {
+			    set_country_flag = BOI_FLAG_applying
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    clr_country_flag = BOI_FLAG_applying
+			}
+		}
+	}
+	BOI_join_karthin = {
+	    icon = eng_trade_unions_support
+		cost = 25
+		fire_only_once = yes
+		days_remove = 14
+		ai_will_do = {
+		    factor = 50
+		}
+		available = {
+		    NOT = {
+			    has_country_flag = BOI_FLAG_applying
+			}
+			WNG = {
+			    has_government = democratic
+				is_faction_leader = yes
+			}
+		}
+		complete_effect = {
+		    WNG = {
+			    country_event = {
+				    id = griffonstone.292
+					days = 7
+				}
+			}
+		    hidden_effect = {
+			    set_country_flag = BOI_FLAG_applying
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    clr_country_flag = BOI_FLAG_applying
+			}
+		}
+	}
+	BOI_apply_concordat = {
+	    icon = eng_trade_unions_support
+		cost = 25
+		fire_only_once = yes
+		days_remove = 14
+		ai_will_do = {
+		    factor = 50
+		}
+		available = {
+		    NOT = {
+			    has_country_flag = BOI_FLAG_applying
+			}
+			MIT = {
+			    has_government = democratic
+				is_faction_leader = yes
+			}
+		}
+		complete_effect = {
+		    SIC = {
+			    country_event = {
+				    id = griffonstone.293
+					days = 7
+				}
+			}
+		    hidden_effect = {
+			    set_country_flag = BOI_FLAG_applying
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    clr_country_flag = BOI_FLAG_applying
+			}
+		}
+	}
+}

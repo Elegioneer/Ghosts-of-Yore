@@ -15,6 +15,7 @@ BOI_war_for_liberation_category = {
 			    has_country_flag = MAN_the_ELF_uprising_has_begun
 			}
 		}
+		is_subject = no
 	}
 }
 BOI_support_liberation_front_category = {
@@ -29,6 +30,7 @@ BOI_support_liberation_front_category = {
 			    has_war_with = MAN
 		    }
 		}
+		is_subject = no
 	}
 }
 BOI_griffonian_union_category = {
@@ -37,6 +39,7 @@ BOI_griffonian_union_category = {
 	visible = {
 		original_tag = BOI
 		has_completed_focus = BOI_great_union
+		is_subject = no
 	}
 }
 BOI_blackmarket_category = {
@@ -78,5 +81,14 @@ BOI_order_category = {
 	visible = {
 		original_tag = BOI
 		has_completed_focus = BOI_bring_order_to_herzland
+	}
+}
+BOI_search_for_alliance_category = {
+    icon = generic_political_actions
+	
+	visible = {
+		original_tag = BOI
+		has_country_flag = BOI_FLAG_searching_for_alliance
+		is_subject = no
 	}
 }
