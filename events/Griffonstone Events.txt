@@ -3849,14 +3849,14 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.301.a
-			add_ideas = BOI_neutral_foreign_policy
-		}
-		option = {
-	        name = griffonstone.301.b
 			custom_effect_tooltip = BOI_CETT_seek_allies
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_searching_for_alliance
 			}
+		}
+		option = {
+	        name = griffonstone.301.b
+			add_ideas = BOI_neutral_foreign_policy
 		}
 	}
 	

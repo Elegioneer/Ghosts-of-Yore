@@ -974,7 +974,7 @@ BOI_search_for_alliance_category = {
 			}
 		}
 		complete_effect = {
-		    SIC = {
+		    MIT = {
 			    country_event = {
 				    id = griffonstone.293
 					days = 7

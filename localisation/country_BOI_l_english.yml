@@ -1009,6 +1009,7 @@ BOI_CTTT_not_president_greta:0 "§YGreta§! is not the country's §Ypresident§!
 BOI_CTTT_not_president_gabby:0 "§YGabby§! is not the country's §Ypresident§!."
 BOI_CTTT_not_president_garner:0 "§YGarner§! is not the country's §Ypresident§!."
 BOI_CTTT_completed_legacy:0 "Has completed focus §YGuto's Legacy§!"
+BOI_CETT_seek_allies:0 "§YDecisions§! to join various factions of Griffonia will become available."
 
 ## Political Parties ##
 BOI_neu_init:0 "Regency Council"
