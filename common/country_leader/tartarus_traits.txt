@@ -84,7 +84,7 @@ leader_traits = {
 	}
 	GOY_republican_icon = {
 	    random = no
-		drift_defence_factor = 0.2
+		democratic_drift = 0.03
 		stability_factor = 0.05
 		war_support_factor = 0.05
 	}
@@ -93,5 +93,11 @@ leader_traits = {
 	}
 	GOY_RGDF_leader = {
 	    random = no
+	}
+	GOY_thrifty_broker = {
+	    random = no
+		trade_opinion_factor = 0.20
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
 	}
 }

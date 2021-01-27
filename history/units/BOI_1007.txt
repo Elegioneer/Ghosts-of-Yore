@@ -57,36 +57,36 @@ units = {
 		#name = "Griffon Infantry Division"
 		location = 1087
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 12299
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 8207
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 1580
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
 	}
 	division = {
 		#name = "Griffon Infantry Division"
 		location = 753
 		division_template = "Griffon Infantry Division"
-		start_experience_factor = 0.5
-		start_equipment_factor = 0.5
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Boreal Order of Solarspike"
@@ -104,7 +104,7 @@ instant_effect = {
 			type = infantry_equipment_0
 			creator = "BOI"
 		}
-		requested_factories = 1
+		requested_factories = 2
 		progress = 0.75
 		efficiency = 15
 	}

@@ -2409,7 +2409,7 @@ focus_tree = {
 		cost = 1.00
 		relative_position_id = ARA_legacy_of_grover
 		prerequisite = { focus = ARA_legacy_of_grover }
-		mutually_exclusive = { focus = ARA_bungie_destiny }
+		#mutually_exclusive = { focus = ARA_bungie_destiny }
 		completion_reward = {
 	
 			country_event = { 
@@ -3780,9 +3780,36 @@ focus_tree = {
 		mutually_exclusive = { focus = ARA_golden_age }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
 		bypass = {
+		    owns_state = 382
 		}
 		completion_reward = {
-		    
+		    IF = {
+			    limit = {
+				    GRI = {
+					    owns_state = 382
+					}
+				}
+				create_wargoal = {
+				    type = annex_everything
+				    target = GRI
+				}
+			    else = {
+				    custom_effect_tooltip = BOI_CETT_take_griffenheim
+                    hidden_effect = {
+                        every_other_country = {
+                            limit = {
+                                owns_state = 382
+                            }
+                            ARA = {
+                                create_wargoal = { 
+                                    type = annex_everything 
+                                    target = PREV 
+                                }
+							}
+                        }
+                    }
+				}
+			}
 		}
 	}		
 		
