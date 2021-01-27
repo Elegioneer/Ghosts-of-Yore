@@ -54,7 +54,10 @@ on_actions = {
 						NOT = {
 			                has_global_flag = GRI_grover_vi_dead
 			            }
-						has_country_flag = BOI_gallus_is_king
+						OR = {
+						    has_country_flag = BOI_gallus_is_king
+							has_country_flag = BOI_goldstone_coup_success
+						}
 					}
 				}
 				ROOT = {

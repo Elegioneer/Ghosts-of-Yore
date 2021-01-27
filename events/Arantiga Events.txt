@@ -3396,7 +3396,6 @@ country_event = { #de Charbon 2
 	                   	griffon_race_trait trickster urban_assault_specialist
 	                    }
 	                    skill = 3
-	                    id = 5201
 	                    attack_skill = 2
 	                    defense_skill = 3
 	                    planning_skill = 4
