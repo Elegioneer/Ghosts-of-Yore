@@ -3608,6 +3608,223 @@ country_event = { #Herzländers unite! (cap)
 			}
 		}
 	}
+	country_event = { #Entente
+	    id = griffonstone.291
+	    title = griffonstone.291.t
+	    desc = griffonstone.291.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.291.a
+			ai_chance = {
+			    factor = 70
+				modifier = {
+				    BOI = {
+					    has_war = yes
+					}
+					factor = 3
+				}
+			}
+			
+			add_to_faction = FROM
+			BOI = {
+			    country_event = {
+				    id = griffonstone.294
+					days = 7
+				}
+			}
+			hidden_effect = {
+			    BOI = {
+				    clr_country_flag = BOI_FLAG_searching_for_alliance
+				}
+			}
+		}
+		option = {
+	        name = griffonstone.291.b
+			ai_chance = {
+			    factor = 30
+			}
+			BOI = {
+			    country_event = {
+				    id = griffonstone.295
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = { #Karthin
+	    id = griffonstone.292
+	    title = griffonstone.292.t
+	    desc = griffonstone.292.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.292.a
+			ai_chance = {
+			    factor = 80
+				modifier = {
+				    BOI = {
+					    has_war = yes
+					}
+					factor = 10
+				}
+			}
+			add_to_faction = FROM
+			BOI = {
+			    country_event = {
+				    id = griffonstone.296
+					days = 7
+				}
+			}
+			hidden_effect = {
+			    BOI = {
+				    clr_country_flag = BOI_FLAG_searching_for_alliance
+				}
+			}
+		}
+		option = {
+	        name = griffonstone.292.b
+			ai_chance = {
+			    factor = 20
+			}
+			BOI = {
+			    country_event = {
+				    id = griffonstone.297
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = { #Concordat
+	    id = griffonstone.293
+	    title = griffonstone.293.t
+	    desc = griffonstone.293.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.293.a
+			ai_chance = {
+			    factor = 90
+				modifier = {
+				    BOI = {
+					    has_war = yes
+					}
+					factor = 10
+				}
+			}
+			add_to_faction = FROM
+			BOI = {
+			    country_event = {
+				    id = griffonstone.298
+					days = 7
+				}
+			}
+			hidden_effect = {
+			    BOI = {
+				    clr_country_flag = BOI_FLAG_searching_for_alliance
+				}
+			}
+		}
+		option = {
+	        name = griffonstone.293.b
+			ai_chance = {
+			    factor = 10
+			}
+			BOI = {
+			    country_event = {
+				    id = griffonstone.302
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = { #Entente - yay
+	    id = griffonstone.294
+	    title = griffonstone.294.t
+	    desc = griffonstone.294.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.294.a
+		}
+	}
+	country_event = { #Entente - nay
+	    id = griffonstone.295
+	    title = griffonstone.295.t
+	    desc = griffonstone.295.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.295.a
+		}
+	}
+	country_event = { #Karthin - yay
+	    id = griffonstone.296
+	    title = griffonstone.296.t
+	    desc = griffonstone.296.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.296.a
+		}
+	}
+	country_event = { #Karthin - nay
+	    id = griffonstone.297
+	    title = griffonstone.297.t
+	    desc = griffonstone.297.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.297.a
+		}
+	}
+	country_event = { #Concordat - yay
+	    id = griffonstone.298
+	    title = griffonstone.298.t
+	    desc = griffonstone.298.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.298.a
+		}
+	}
+	country_event = { #Concordat - nay
+	    id = griffonstone.302
+	    title = griffonstone.302.t
+	    desc = griffonstone.302.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.302.a
+		}
+	}
 	country_event = { #Maarnacht
 	    id = griffonstone.300
 	    title = griffonstone.300.t
@@ -3619,6 +3836,27 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.300.a
+		}
+	}
+	country_event = { #Our Foreign Policy
+	    id = griffonstone.301
+	    title = griffonstone.301.t
+	    desc = griffonstone.301.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+	        name = griffonstone.301.a
+			add_ideas = BOI_neutral_foreign_policy
+		}
+		option = {
+	        name = griffonstone.301.b
+			custom_effect_tooltip = BOI_CETT_seek_allies
+			hidden_effect = {
+			    set_country_flag = BOI_FLAG_searching_for_alliance
+			}
 		}
 	}
 	
