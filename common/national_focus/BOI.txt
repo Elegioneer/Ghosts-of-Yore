@@ -12,6 +12,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = industrial_bonus
@@ -33,6 +34,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		    389 = {
 			    add_building_construction = {
@@ -55,6 +57,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_political_power = 25
 			389 = {
@@ -74,6 +77,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_timed_idea = { 
 			    idea = BOI_development_loans  
@@ -93,6 +97,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_illiteracy = yes
 		}
@@ -109,6 +114,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			name = industrial_bonus_2
@@ -130,6 +136,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_tech_bonus = {
 			    name = temple_school_race
@@ -153,6 +160,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_research_slot = 1
 			decrease_illiteracy = yes
@@ -170,6 +178,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
 				limit = { has_idea = big_science_base }
@@ -214,6 +223,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			471 = {
 			    add_building_construction = {
@@ -250,6 +260,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			389 = {
 			    add_building_construction = {
@@ -276,6 +287,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			531 = {
 			    add_building_construction = {
@@ -308,6 +320,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			383 = {
 			    add_building_construction = {
@@ -336,6 +349,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			532 = {
 			    add_building_construction = {
@@ -387,6 +401,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_trade_hub_idea
 		}
@@ -409,6 +424,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = -75
 			add_timed_idea = {
@@ -429,6 +445,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		    384 = {
 			    add_extra_state_shared_building_slots = 2
@@ -457,6 +474,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    increase_society_development_with_tt = yes
 		}
@@ -473,6 +491,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			471 = {
 			    add_extra_state_shared_building_slots = 3
@@ -496,6 +515,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_timed_idea = {
 			    idea = BOI_industrial_expansion
@@ -516,6 +536,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			increase_society_development_with_tt = yes
 		}
@@ -534,6 +555,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = BOI_archives_of_griffonstone
 		}
@@ -552,6 +574,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			389 = {
 			    add_manpower = 300000
@@ -592,6 +615,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_miraculous_recovery
 		}
@@ -608,6 +632,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_stability = 0.05
 			decrease_poverty = yes
@@ -625,6 +650,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_poverty = yes
 			add_ideas = BOI_terrace_farms
@@ -642,6 +668,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			decrease_poverty = yes
 			384 = { 
@@ -671,6 +698,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			384 = { 
 			    add_extra_state_shared_building_slots = 1
@@ -698,6 +726,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    #could be moved to event	
 			decrease_poverty = yes
@@ -734,6 +763,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = excavation_bonus
@@ -755,6 +785,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_resource = {
 				type = oil
@@ -780,6 +811,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			country_event = griffonstone.200
 		}
@@ -800,6 +832,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_resource = {
 				type = steel
@@ -863,6 +896,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_resource = {
 				type = oil
@@ -892,6 +926,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_chamber_of_mines
 		}
@@ -926,6 +961,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = veterans_bonus
@@ -957,6 +993,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_manpower = 30000
 		}
@@ -973,6 +1010,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_political_power = -50
 			add_equipment_to_stockpile = {
@@ -1015,6 +1053,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_army_1
 		}
@@ -1031,6 +1070,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 		    if = {
 			    limit = {
@@ -1061,6 +1101,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			if = {
 			    limit = {
@@ -1100,6 +1141,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_lords_army_1
 		}
@@ -1116,6 +1158,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			if = {
 			    limit = {
@@ -1146,6 +1189,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			if = {
 			    limit = {
@@ -1178,6 +1222,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = new_age_doctrine_bonus
@@ -1199,6 +1244,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = support_army_bonus
@@ -1220,6 +1266,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = eyes_ears_bonus
@@ -1241,6 +1288,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
 			add_ideas = BOI_milacad
@@ -1259,6 +1307,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_political_power = -300
 			add_stability = -0.1
@@ -1278,6 +1327,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_reformed_infantry_1
 		}
@@ -1294,6 +1344,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = BOI_reformed_infantry_1
@@ -1313,6 +1364,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = modernise_eq_bonus
@@ -1335,6 +1387,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = knights_bonus
@@ -1357,6 +1410,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_streamlined_infantry_production
 		}
@@ -1373,6 +1427,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 		    swap_ideas = {
 			    remove_idea = BOI_reformed_infantry_2
@@ -1393,6 +1448,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonsteel_1
 		}
@@ -1409,6 +1465,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = achtung_bonus
@@ -1430,6 +1487,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 		    custom_effect_tooltip = BOI_CETT_griffonsteel_2
 			hidden_effect = {
@@ -1453,6 +1511,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = New_artillery_bonus
@@ -1475,6 +1534,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_panzers
 		}
@@ -1491,6 +1551,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_griffonsteel_3
 			hidden_effect = {
@@ -1537,6 +1598,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = cruiser_bonus
@@ -1558,6 +1620,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_timed_idea = {
 			    idea = BOI_funds_for_navy
@@ -1577,6 +1640,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = destroyer_bonus
@@ -1598,6 +1662,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = naval_aviation_bonus
@@ -1620,6 +1685,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = our_naval_doctrine_bonus
@@ -1641,6 +1707,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = marines_bonus
@@ -1662,6 +1729,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_NAVY_BONUS}
 		completion_reward = {
 		    add_equipment_to_stockpile = {
 			    type = convoy_1
@@ -1684,6 +1752,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = battleship_bonus
@@ -1706,6 +1775,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = destroyer_bonus
@@ -1727,6 +1797,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = destroyer_bonus
@@ -1748,6 +1819,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_NAVY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_admiralty
 		}
@@ -1792,6 +1864,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		    add_political_power = -50
 			if = {
@@ -1960,6 +2033,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = air_doctrine_bonus
@@ -1981,6 +2055,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = tacbomb_bonus
@@ -2003,6 +2078,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			add_ideas = BOI_air_academy
 		}
@@ -2019,6 +2095,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = cas_bonus
@@ -2040,6 +2117,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = strategic_bombers_bonus
@@ -2062,6 +2140,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			add_ideas = BOI_streamlined_airprod
 		}
@@ -2079,6 +2158,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			add_ideas = BOI_bomber_command
 		}
@@ -2095,6 +2175,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = fighter_bonus
@@ -2116,6 +2197,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = rocket_bonus
@@ -2137,6 +2219,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			add_political_power = -200
 			unlock_decision_category_tooltip = BOI_wettertrupp_category
@@ -2154,6 +2237,7 @@
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 			    name = nuclear_bonus
@@ -2212,6 +2296,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_manpower = 10000
 		}
@@ -2228,6 +2313,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			country_event = griffonstone.268
 		}
@@ -2244,6 +2330,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 		    GRI = {
 			    country_event = griffonstone.269
@@ -2280,6 +2367,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -2297,6 +2385,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			country_event = griffonstone.270
 		}
@@ -2356,6 +2445,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_political_power = -75
 			add_stability = 0.05
@@ -2390,6 +2480,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 		    add_popularity = { ideology = neutrality popularity = 0.1 }
 			country_event = griffonstone.201
@@ -2407,6 +2498,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
 			389 = {
@@ -2432,6 +2524,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_stability = 0.05
 			decrease_illiteracy = yes
@@ -2450,6 +2543,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_stability = 0.05
 			decrease_poverty = yes
@@ -2468,6 +2562,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.05
 			country_event = griffonstone.202
@@ -2489,6 +2584,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -2512,6 +2608,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    if = {
 			    limit = {
@@ -2566,6 +2663,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -2605,6 +2703,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -2627,6 +2726,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_state_core = 383
 		}
@@ -2646,6 +2746,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			remove_ideas = BOI_rumarean_unrest
 			remove_ideas = BOI_rumarean_unrest_1
@@ -2669,6 +2770,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
@@ -2706,6 +2808,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_state_core = 401
 			add_state_core = 500
@@ -2748,6 +2851,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			408 = {
 			    add_compliance = 20
@@ -2793,6 +2897,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			WNG = {
 			    country_event = griffonstone.203
@@ -2817,6 +2922,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			country_event = griffonstone.284
 		}
@@ -2850,6 +2956,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			country_event = griffonstone.205
 		}
@@ -2866,6 +2973,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_royal_guard
 		}
@@ -2882,6 +2990,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_gilda_advisor
 			hidden_effect = {
@@ -2901,6 +3010,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_griff_cmc
 		}
@@ -2917,6 +3027,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_ideas = BOI_social_welfare_gallus_idea
 		}
@@ -2934,6 +3045,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_fight_for_griffonstone
 		}
@@ -2951,6 +3063,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_parliament
 		}
@@ -3001,7 +3114,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    custom_effect_tooltip = ARA_herzlander_solidarity
 		    IF = {
@@ -3122,6 +3235,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -3180,6 +3294,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.207
 		}
@@ -3196,6 +3311,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    unlock_decision_category_tooltip = BOI_order_category
 		}
@@ -3212,6 +3328,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 		    remove_ideas = BOI_discontent_nobles
 	    }
@@ -3228,6 +3345,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = BOI_minorities_protected_1
@@ -3254,6 +3372,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    custom_effect_tooltip = BOI_CETT_coring_skyfall
 			hidden_effect = {
@@ -3287,6 +3406,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    set_cosmetic_tag = BOI_GRIF_HERZ
 			news_event = griffonstone_news.05
@@ -3432,6 +3552,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			set_cosmetic_tag = BOI_GRIF_HERZ
 			news_event = griffonstone_news.04
@@ -3458,6 +3579,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_reformed_archonates
 		}
@@ -3474,6 +3596,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = ARA_dogs_of_war
 			set_technology = { tech_ironpaws = 1 }
@@ -3545,6 +3668,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
 			reverse_add_opinion_modifier = {
@@ -3568,6 +3692,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			EQS = {
 			    country_event = griffonstone.208
@@ -3586,6 +3711,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			EQS = {
 			    country_event = griffonstone.209
@@ -3604,6 +3730,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = BOI_pony_immigration
 		}
@@ -3620,6 +3747,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_open_borders_initiative
 			every_other_country = {
@@ -3642,6 +3770,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_to_tech_sharing_group = BOI_griffonstone_tech_sharing
 			every_other_country = {
@@ -3692,6 +3821,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY}
 		completion_reward = {
 		    433 = {
 			    add_manpower = 200000
@@ -3724,6 +3854,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_equestrian_elites
 			show_ideas_tooltip = BOI_blueblood
@@ -3767,6 +3898,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_harmony_or_death
 			every_other_country = {
@@ -3803,6 +3935,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -3871,6 +4004,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			country_event = griffonstone.216
 		}
@@ -3887,6 +4021,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			remove_ideas = BOI_political_deadlock
 		}
@@ -3903,6 +4038,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
 		completion_reward = {
 		    add_stability = 0.05
 			decrease_poverty = yes
@@ -3921,6 +4057,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_stability = 0.05
 			add_popularity = { ideology = democratic popularity = 0.05 }
@@ -3961,6 +4098,7 @@ focus_tree = {
 				days = 5
 			}
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_break_nobles
 		}
@@ -3978,6 +4116,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = idol_of_boreas_lost
@@ -3997,6 +4136,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_illiteracy = yes
 		}
@@ -4013,6 +4153,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_stability = 0.05
 			add_ideas = BOI_modern_communal_agriculture
@@ -4034,6 +4175,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.218
 		}
@@ -4051,6 +4193,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_ideas = BOI_pro_republican_media
 		}
@@ -4068,6 +4211,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_liberty_or_death
 		}
@@ -4086,6 +4230,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
 		}
@@ -4103,6 +4248,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_reformed_bureaucracy
 		}
@@ -4126,6 +4272,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			EQS = {
 			    country_event = griffonstone.219
@@ -4144,6 +4291,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BOI_neutral_foreign_policy
 		}
@@ -4164,6 +4312,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    if = {
 			    limit = {
@@ -4206,6 +4355,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_fortification_effort
 		}
@@ -4226,6 +4376,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -4245,6 +4396,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_griff_cmc
 		}
@@ -4261,6 +4413,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = BOI_scientist_haven
 		}
@@ -4280,6 +4433,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
@@ -4314,6 +4468,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			446 = {
 			    add_building_construction = {
@@ -4428,6 +4583,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			remove_ideas = BOI_rumarean_unrest
 			remove_ideas = BOI_rumarean_unrest_1
@@ -4451,6 +4607,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_state_core = 383
 		}
@@ -4474,6 +4631,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_last_stand
 		}
@@ -4493,6 +4651,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			remove_ideas = BOI_idol_loss_healed
 			add_ideas = BOI_hope_for_the_future
@@ -4528,6 +4687,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    custom_effect_tooltip = BOI_CETT_gilda_herzland
 			hidden_effect = {
@@ -4699,6 +4859,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -4736,6 +4897,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			EQS = {
 			    country_event = {
@@ -4763,6 +4925,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -4805,6 +4968,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_herzlandism
 			hidden_effect = {
@@ -4982,6 +5146,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
 		}
@@ -4998,6 +5163,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_social_welfare_idea
 		}
@@ -5014,6 +5180,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = BOI_refugee_haven
 		}
@@ -5033,6 +5200,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = BOI_griff_cmc
@@ -5052,6 +5220,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_expeditionary_corps
 		}
@@ -5068,6 +5237,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_liberal_economy
 		}
@@ -5084,6 +5254,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = home_of_the_griffons
@@ -5180,6 +5351,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    add_stability = 0.05
 			add_popularity = { ideology = neutrality popularity = 0.05 }
@@ -5201,6 +5373,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			country_event = griffonstone.235
 		}
@@ -5217,6 +5390,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			country_event = griffonstone.236
 		}
@@ -5233,6 +5407,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_political_power = 50
 			389 = {
@@ -5258,6 +5433,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BOI_noble_cause
 		}
@@ -5275,6 +5451,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_poverty = yes
 		}
@@ -5292,6 +5469,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			remove_ideas = BOI_political_deadlock
 		}
@@ -5308,6 +5486,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_clergy_support
 		}
@@ -5324,6 +5503,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = BOI_new_defence_force_recruits
 		}
@@ -5340,6 +5520,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
 		}
@@ -5356,6 +5537,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_industrial_support
 		}
@@ -5372,6 +5554,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_stability = 0.05
 			add_war_support = 0.05
@@ -5390,6 +5573,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_ideas = BOI_centralised_government
 		}
@@ -5407,6 +5591,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = BOI_local_democracies_idea
 		}
@@ -5427,6 +5612,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    if = {
 			    limit = {
@@ -5473,6 +5659,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -5492,6 +5679,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_illiteracy = yes
 		}
@@ -5508,6 +5696,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_poverty = yes
 		}
@@ -5527,6 +5716,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			532 = { 
 			    add_manpower = 100000
@@ -5559,6 +5749,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_state_core = 383
 			remove_ideas = BOI_rumarean_unrest
@@ -5580,6 +5771,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
 			add_political_power = 50
@@ -5640,7 +5832,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			IF = {
 			    limit = {
@@ -5813,7 +6005,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    custom_effect_tooltip = ARA_herzlander_solidarity
 			hidden_effect = {
@@ -5939,6 +6131,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.215
 		}
@@ -5959,6 +6152,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.237
 		}
@@ -5975,6 +6169,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_coring_herzland
 			hidden_effect = {
@@ -6118,6 +6313,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -6137,6 +6333,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			remove_ideas = idol_of_boreas_lost
 			custom_effect_tooltip = BOI_CETT_ready_for_reclamation
@@ -6159,6 +6356,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.1
 		}
@@ -7649,6 +7847,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			add_stability = -0.05
 			add_popularity = { ideology = democratic popularity = -0.15 }
@@ -7666,6 +7865,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			remove_ideas = BOI_political_deadlock
 		}
@@ -7682,6 +7882,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = -0.15 }
 		}
@@ -7700,6 +7901,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_manpower = 25000
 			add_ideas = BOI_foreign_legions
@@ -7719,6 +7921,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_knives_in_the_dark
 		}
@@ -7737,6 +7940,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			decrease_poverty = yes
 			add_ideas = BOI_indentured_servitude_idea_1
@@ -7756,6 +7960,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_illiteracy = yes
 			add_ideas = BOI_narrow_minds
@@ -7774,6 +7979,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_ideas = BOI_local_collaborators
 		}
@@ -7791,6 +7997,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			389 = {
 			    add_extra_state_shared_building_slots = 2
@@ -7817,6 +8024,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			add_war_support = 0.10
 		}
@@ -7837,6 +8045,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -7860,6 +8069,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    if = {
 			    limit = {
@@ -7913,6 +8123,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -7943,6 +8154,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    383 = { 
 			    add_manpower = -50000
@@ -7983,6 +8195,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_resource = {
 				type = steel
@@ -8032,6 +8245,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			add_manpower = 100000
 		}
@@ -8056,6 +8270,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_state_core = 401
 			add_state_core = 500
@@ -8096,7 +8311,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 		    custom_effect_tooltip = ARA_herzlander_solidarity
 		    IF = {
@@ -8215,6 +8430,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = BOI_discontent_nobles
@@ -8237,6 +8453,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_coring_herzland
 			hidden_effect = {
@@ -8383,6 +8600,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -8405,6 +8623,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_bechard
 			show_ideas_tooltip = BOI_bechard
@@ -8426,6 +8645,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_drach
 			show_ideas_tooltip = BOI_erwin_von_drach
@@ -8454,6 +8674,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.283
 		}
@@ -8475,6 +8696,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			country_event = griffonstone.212
 		}
@@ -8492,6 +8714,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -8514,6 +8737,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_coring_skyfall
 			hidden_effect = {
@@ -8547,6 +8771,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = idol_of_boreas_lost 
@@ -8566,6 +8791,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    country_event = griffonstone.299
 		    hidden_effect = {
@@ -8589,6 +8815,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			unlock_decision_category_tooltip = BOI_blackmarket_category
 		}
@@ -8605,6 +8832,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			unlock_decision_category_tooltip = BOI_war_profiteering_category
 		}
@@ -8621,6 +8849,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_herzlandism
 			hidden_effect = {
@@ -8793,6 +9022,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_timed_idea = {
 			    idea = BOI_piracy_profits
@@ -8824,6 +9054,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_new_blackmarket_decisions_unlocked
 			hidden_effect = {

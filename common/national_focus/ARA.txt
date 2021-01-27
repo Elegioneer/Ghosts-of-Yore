@@ -9,6 +9,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_the_new_airforce"
 			air_experience = 25
@@ -33,6 +34,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_fighters"
 			add_tech_bonus = {
@@ -59,6 +61,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_further_development"
 			add_tech_bonus = {
@@ -82,6 +85,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_heavy_fighters"
 			add_tech_bonus = {
@@ -155,6 +159,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_napalm"
 			add_ideas = ARA_napalm_idea
@@ -174,6 +179,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_AIRFORCE_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_finest_aces"
 			add_ideas = ARA_finest_aces_idea
@@ -192,6 +198,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_bombers"
 			add_tech_bonus = {
@@ -217,6 +224,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_closer_air"
 			add_tech_bonus = {
@@ -243,6 +251,7 @@
 		ai_will_do = {
 			factor = 50
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_heavy_bombers"
 			add_tech_bonus = {
@@ -287,7 +296,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_naval_doctrine_1
@@ -309,7 +318,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_destroyers
@@ -331,7 +340,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_submarines
@@ -380,7 +389,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_cruisers
@@ -402,7 +411,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_naval_doctrine_2
@@ -424,7 +433,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_marines
@@ -446,7 +455,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_NAVY_BONUS}
 		completion_reward = {
 			add_ideas = {
 			    ARA_trained_marines #-25 invasion prep
@@ -466,7 +475,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_battleships
@@ -490,7 +499,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
 				name = ARA_carriers
@@ -514,7 +523,7 @@
 		ai_will_do = {
 			
 		}
-		
+		search_filters = {FOCUS_FILTER_NAVY_BONUS}
 		completion_reward = {
 			add_ideas = ARA_masters_of_the_oceans_idea
 		}
@@ -531,6 +540,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_age_new_army"
 			army_experience = 15
@@ -550,6 +560,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_academy"
 			army_experience = 20
@@ -585,6 +596,7 @@
 				}
 			}
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_mobile_warfare_doctrine"
 			add_tech_bonus = {
@@ -614,6 +626,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_develop_doctrine"
 			army_experience = 15
@@ -635,6 +648,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_cult_of_speed"
 			add_ideas = ARA_cult_of_speed_idea
@@ -653,6 +667,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_actual_trucks"
 			add_tech_bonus = {
@@ -676,6 +691,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_tanks_for_the_army"
 		add_tech_bonus = {
@@ -706,6 +722,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_better_tanks"
 			add_ideas = ARA_steel_legions
@@ -732,6 +749,7 @@
 				}
 			}
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_superior_warfare_doctrine"
 			add_tech_bonus = {
@@ -761,6 +779,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_develop_superior_doctrine"
 			add_ideas = ARA_modern_knights
@@ -779,6 +798,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_mass_artillery"
 			add_ideas = ARA_massed_artillery
@@ -797,6 +817,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_better_artillery"
 			add_tech_bonus = {
@@ -821,6 +842,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_fancier_guns"
 			add_tech_bonus = {
@@ -846,6 +868,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_continous_planning"
 			add_ideas = ARA_continous_planning_idea
@@ -864,6 +887,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_school"
 			add_ideas = ARA_new_school_idea
@@ -882,6 +906,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_guns"
 			add_tech_bonus = {
@@ -905,6 +930,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_artillery"
 			add_tech_bonus = {
@@ -928,6 +954,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_new_equipment"
 			add_tech_bonus = {
@@ -952,6 +979,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_spec_ops_program"
 			add_tech_bonus = {
@@ -975,6 +1003,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_nation_under_arms"
 			add_political_power = 25
@@ -994,6 +1023,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_prepare_the_people"
 			add_manpower = 25000
@@ -1012,6 +1042,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_the_cadets"
 			add_research_slot = 1
@@ -1031,6 +1062,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_guerilla_warfare"
 			add_ideas = ARA_guerilla_warfare_idea
@@ -1054,6 +1086,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_mandatory_training"
 			add_ideas = ARA_mandatory_training_idea
@@ -1072,6 +1105,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_radio_stations"
 			add_tech_bonus = {
@@ -1103,6 +1137,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_extensive_coscription_laws"
 			swap_ideas = {
@@ -1149,6 +1184,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_builder_divisions"
 			add_ideas = ARA_builder_divisions_idea
@@ -1167,6 +1203,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_reservist_housing"
 			408 = {
@@ -1251,6 +1288,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_stocked_arsenals"
 			408 = {
@@ -1277,6 +1315,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_mobilized_economy"
 			add_ideas = ARA_mobilized_economy
@@ -1295,6 +1334,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_legendary"
 			swap_ideas = {
@@ -1317,6 +1357,7 @@
 		ai_will_do = {
 			factor = 100
 		}
+		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_unmatched_army"
 			add_ideas = ARA_unmatched_army_idea
@@ -1335,6 +1376,7 @@
 		available = {
 			has_country_flag = rise_of_arantiga
 		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		add_tech_bonus = {
 			name = industrial_bonus
@@ -1358,6 +1400,7 @@
 		relative_position_id = ARA_self_strength
 		cost = 8.00
 		prerequisite = { focus = ARA_self_strength }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		408 = {
 				add_extra_state_shared_building_slots = 3
@@ -1378,6 +1421,7 @@
 		relative_position_id = ARA_industrial_warmachine
 		cost = 10.00
 		prerequisite = { focus = ARA_industrial_warmachine }
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		add_ideas = ARA_military_research
 		}
@@ -1391,6 +1435,7 @@
 		relative_position_id = ARA_self_strength
 		cost = 8.00
 		prerequisite = { focus = ARA_self_strength }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {	
 		408 = {
 				add_extra_state_shared_building_slots = 3
@@ -1433,6 +1478,7 @@
 		relative_position_id = ARA_self_strength
 		cost = 8.00
 		prerequisite = { focus = ARA_self_strength }
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		increase_society_development_with_tt = yes
 		}
@@ -1451,6 +1497,7 @@
 			673 = { is_owned_and_controlled_by = ROOT }
 			391 = { is_owned_and_controlled_by = ROOT }
 			}
+			search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		add_stability = -0.05
 		add_tech_bonus = {
@@ -1546,6 +1593,7 @@
 			470 = { is_owned_and_controlled_by = ROOT }
 			673 = { is_owned_and_controlled_by = ROOT }
 			}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 		add_political_power = -50
 		673 = {
@@ -1592,6 +1640,7 @@
 		cost = 10.00
 		prerequisite = { focus = ARA_riches_of_griffonstone }
 		prerequisite = { focus = ARA_northern_industry }
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		increase_science_base = yes
 		}
@@ -1605,6 +1654,7 @@
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		add_stability = -0.05
 		add_war_support = -0.05
@@ -1624,6 +1674,7 @@
 		}
 		cost = 8.00
 		prerequisite = { focus = ARA_industrial_front }
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
 		completion_reward = {
 		add_ideas = { ARA_work_camp }
 		set_country_flag = work_camps_flag
@@ -1702,6 +1753,7 @@
 		cost = 10.00
 		prerequisite = { focus = ARA_work_camps }
 		prerequisite = { focus = ARA_modern_solutions }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		add_ideas = { ARA_well_regulated }
 		}
@@ -1715,6 +1767,7 @@
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_political_power = -100
 			408 = {
@@ -1738,6 +1791,7 @@
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		add_ideas = { ARA_afterkeia }
 		###### SHOULD ADD THE TECH INSTEAD BUT I FEEL THIS IS MORE BALANCED #####
@@ -1768,6 +1822,7 @@
 		cost = 8.00
 		prerequisite = { focus = ARA_afterkeia }
 		prerequisite = { focus = ARA_military_complex }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
 			completion_reward = {
 				remove_ideas = { ARA_transitional_economy2 }
 			}
@@ -1785,6 +1840,7 @@
 		}
 		prerequisite = { focus = ARA_afterkeia }
 		prerequisite = { focus = ARA_military_complex }
+		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		decrease_illiteracy = yes
 		}
@@ -1799,10 +1855,12 @@
 		cost = 10.00
 		prerequisite = { focus = ARA_war_against_dumb }
 		prerequisite = { focus = ARA_reforge_economy }
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			increase_society_development_with_tt = yes
 			}
 			}
+	
 	#####################
 	## Political Trees ##
 	#####################
