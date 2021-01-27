@@ -178,7 +178,7 @@
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {GFX_FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
 				limit = { has_idea = big_science_base }
@@ -555,7 +555,7 @@
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = {GFX_FOCUS_FILTER_RESEARCH}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = BOI_archives_of_griffonstone
 		}

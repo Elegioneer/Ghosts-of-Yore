@@ -842,7 +842,7 @@
 		ai_will_do = {
 			factor = 100
 		}
-		search_filters = {FOCUS_FILTER_RESEARCH
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_fancier_guns"
 			add_tech_bonus = {
