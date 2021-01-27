@@ -2054,7 +2054,7 @@ ideas = {
 			allowed = {
 				original_tag = "BOI"
 			}		
-			traits = { economic_reformer }
+			traits = { GOY_thrifty_broker }
 			picture = BOI_garner
 			ai_will_do = {
 				factor = 1
@@ -2209,6 +2209,9 @@ ideas = {
 			picture = BOI_julius_advisor
 			ai_will_do = {
 				factor = 1
+			}
+			research_bonus = {
+				land_doctrine = 0.10
 			}
 			available = {
 				
