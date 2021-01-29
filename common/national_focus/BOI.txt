@@ -3542,7 +3542,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_proclaim_new_kingdom
-		icon = GFX_goal_hoist_the_flag_BOI 
+		icon = GFX_goal_BOI_herzland_flag 
 		x = 1
 		y = 2
 		cost = 2.00

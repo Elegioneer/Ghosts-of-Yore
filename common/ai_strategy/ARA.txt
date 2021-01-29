@@ -10,16 +10,21 @@ ARA_griff_first_then_rum = {
 	ai_strategy = {
 		type = invade
 		id = "BOI"
-		value = 200
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "BOI"
+		value = 100
 	}
 	ai_strategy = {
 		type = invade
 		id = "LAK"
-		value = -10000
+		value = -100
 	}
 	ai_strategy = {
 		type = conquer
 		id = "LAK"
-		value = -10000
+		value = -100
 	}
 }

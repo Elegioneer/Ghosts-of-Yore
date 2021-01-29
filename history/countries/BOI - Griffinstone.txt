@@ -87,7 +87,7 @@ create_country_leader = {
     desc = BOI_goldstone_desc
 	picture = "GAW_Goldstone.tga"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = plutocracy
 	traits = {
 
 	}
