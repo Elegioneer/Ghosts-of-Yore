@@ -1798,6 +1798,11 @@ ARA_francistrian_volunteers_desc:0 "In the days of Arantigan twilight, many of o
 ARA_call_diaspora:0 "Recall the Diaspora"
 ARA_call_diaspora_desc:0 "Many native Arantigans live abroad in cities like Karthin, Griffenheim, and Manehattan. By organizing propaganda campaigns, perhaps we can encourage some of them to return and help us regain our former greatness..."
 
+ARA_blyat_cat:0 "Into the Rats' Nest"
+ARA_blyat_cat_desc:0 "Though we did not intend to invade Blackhollow just now due to its insignificance, its sudden incursion into Griffonstone messed up our plans for the territory. This leaves us with no choice but to get rid of the bandits."
+ARA_blyat:0 "Punish the Bandits"
+ARA_blyat_desc:0 ""
+
 ARA_renaming_cities:0 "Renaming Cities"
 ARA_renaming_cities_desc:0 "Our great empire is dotted with massive cities. Some cities have made us look the fool, and others are simply hard for our adminstrators to write down or speak out loud. A name change is in order."
 ARA_rename_karthin:0 "Down with Karthin!"

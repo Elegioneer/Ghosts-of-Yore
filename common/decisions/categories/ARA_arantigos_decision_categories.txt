@@ -40,6 +40,21 @@ ARA_definetely_not_fake_IRI = {
 	}
 }
 
+ARA_blyat_cat = {
+	icon = generic_political_actions
+
+	visible = {
+		tag = ARA
+		has_completed_focus = ARA_craddle
+		BAN = {
+		    is_neighbor_of = ARA
+		    any_owned_state = {
+			    is_core_of = BOI
+			}
+		}
+	}
+}
+
 ARA_return_land_cat = { #incomplete, ignore
     icon = generic_political_actions
 	visible = {

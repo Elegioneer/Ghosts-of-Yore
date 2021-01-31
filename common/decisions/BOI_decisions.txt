@@ -106,7 +106,7 @@ BOI_support_liberation_front_category = {
             command_power > 99
         }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 			add_command_power = -100
@@ -130,7 +130,7 @@ BOI_support_liberation_front_category = {
             num_of_civilian_factories > 20
         }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		modifier = {
 			civilian_factory_use = 20
@@ -170,7 +170,7 @@ BOI_support_liberation_front_category = {
 		     
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    add_timed_idea = {
@@ -199,7 +199,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -224,7 +224,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -249,7 +249,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -274,7 +274,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -299,7 +299,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -324,7 +324,7 @@ BOI_support_liberation_front_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    send_equipment = {
@@ -366,7 +366,7 @@ BOI_griffonian_union_category = {
             }
         }
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    FROM = {
@@ -388,7 +388,7 @@ BOI_blackmarket_category = {
             
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    
@@ -423,7 +423,7 @@ BOI_blackmarket_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    
@@ -453,7 +453,7 @@ BOI_blackmarket_category = {
             
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    every_other_country = {
@@ -484,7 +484,7 @@ BOI_blackmarket_category = {
             
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		complete_effect = {
 		    
@@ -582,7 +582,7 @@ BOI_war_profiteering_category = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		complete_effect = {
 		    FROM = {
@@ -613,6 +613,14 @@ BOI_divination_category = {
 		}
 		ai_will_do = {
 			factor = 0
+			modifier = {
+			    add = 50
+				has_war = yes
+			}
+			modifier = {
+			    add = -50
+				has_manpower > 5000
+			}
 		}
 		complete_effect = {
 		    add_ideas = BOI_supernatural_foresight
@@ -631,6 +639,14 @@ BOI_divination_category = {
 		}
 		ai_will_do = {
 			factor = 0
+			modifier = {
+			    add = 50
+				has_war = no
+			}
+			modifier = {
+			    add = 50
+				has_manpower < 5000
+			}
 		}
 		complete_effect = {
 		    remove_ideas = BOI_supernatural_foresight
@@ -656,6 +672,10 @@ BOI_wettertrupp_category = {
 		}
 		ai_will_do = {
 			factor = 0
+			modifier = {
+			    add = 50
+				has_war = yes
+			}
 		}
 		complete_effect = {
 		    add_ideas = BOI_weather_manipulation
@@ -674,6 +694,10 @@ BOI_wettertrupp_category = {
 		}
 		ai_will_do = {
 			factor = 0
+			modifier = {
+			    add = 50
+				has_war = no
+			}
 		}
 		complete_effect = {
 		    remove_ideas = BOI_weather_manipulation
@@ -690,7 +714,7 @@ BOI_order_category = {
 		fire_only_once = yes
 		days_remove = 45
 		ai_will_do = {
-		    factor = 7
+		    factor = 50
 		}
 		available = {
 		    NOT = {
@@ -725,7 +749,7 @@ BOI_order_category = {
 		fire_only_once = yes
 		days_remove = 60
 		ai_will_do = {
-		    factor = 7
+		    factor = 50
 		}
 		available = {
 		    NOT = {
@@ -778,7 +802,7 @@ BOI_order_category = {
 		fire_only_once = yes
 		days_remove = 60
 		ai_will_do = {
-		    factor = 7
+		    factor = 50
 		}
 		available = {
 		    NOT = {
@@ -840,7 +864,7 @@ BOI_order_category = {
 		fire_only_once = yes
 		days_remove = 60
 		ai_will_do = {
-		    factor = 7
+		    factor = 50
 		}
 		available = {
 		    NOT = {

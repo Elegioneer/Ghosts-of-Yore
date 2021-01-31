@@ -41,6 +41,8 @@ ARA_historical = {
 		ARA_arantiga_rises
 		ARA_right_to_rule
 		ARA_self_strength
+		ARA_heavy_industry
+		ARA_dig_deeper
 		ARA_industrial_warmachine
 		ARA_military_research_institute
 		ARA_craddle

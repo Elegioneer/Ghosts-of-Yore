@@ -70,6 +70,23 @@ ARA_arantigans_abroad = {
 	}
 }
 
+ARA_blyat_cat = {
+	ARA_blyat = {
+		icon = generic_nationalism
+		cost = 10
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+                target = BAN
+                type = annex_everything
+            }
+		}
+	}
+}
+
 ARA_renaming_cities = {
 	ARA_rename_karthin = {
 		icon = generic_nationalism
