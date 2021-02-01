@@ -327,6 +327,9 @@ country_event = { #into oblivion idol chain start GREAT RIFT
 	fire_only_once = yes
 	option = {
 	name = arantiga.013.a
+	ai_chance = {
+	    base = 1
+	}
 	hidden_effect = {
 				ARA = {
 		        country_event = { 
@@ -357,7 +360,7 @@ country_event = { #going lower
 				}
 				}
 		ai_chance = {
-			factor = 100
+			base = 1
 			modifier = {
 				factor = 0
 				has_game_rule = {
@@ -379,9 +382,9 @@ country_event = { #going lower
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 			modifier = {
-				factor = 100
+				add = 1
 				has_game_rule = {
 				    rule = ARA_ai_behavior
 				    option = ARANTIGA_REBORN
@@ -422,7 +425,7 @@ country_event = { #going lower
 			    }
 		    }
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
 		}
 		}
@@ -445,7 +448,7 @@ country_event = { #going lower
 				}
 				}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
 	}
 	option = {
@@ -460,7 +463,7 @@ country_event = { #going lower
 				}
 				}
 		ai_chance = {
-			factor = 100
+			base = 0
 		}
 	}
 	}
@@ -483,7 +486,7 @@ country_event = { #going lower
 				}
 				}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
 	}
 	}
@@ -506,7 +509,7 @@ country_event = { #going lower
 				}
 				}
 	ai_chance = {
-		factor = 100
+		base = 1
 	}
 	}
 	}
@@ -562,11 +565,14 @@ country_event = { #going lower
 				}
 				}
 	ai_chance = {
-			factor = 100
+			base = 1
 	}
 	}
 	option = {
 	name = arantiga.019.b
+	ai_chance = {
+	    base = 0
+	}
 	#custom_effect_tooltip = ara_tooltip_voices_clue_6
 	hidden_effect = {
 				ARA = {
@@ -621,6 +627,9 @@ country_event = { #going lower
 	fire_only_once = yes
 	option = {
 	name = arantiga.021.a
+	ai_chance = {
+	    base = 0
+	}
 	#custom_effect_tooltip = ara_tooltip_voices_clue_7
 	hidden_effect = {
 				ARA = {
@@ -643,7 +652,7 @@ country_event = { #going lower
 				}
 				}
 	ai_chance = {
-		factor = 100
+	    base = 1
 	}
 	}
 	}
@@ -700,11 +709,14 @@ country_event = { #going lower
 				}
 				}
 	ai_chance = {
-		factor = 100
+	    base = 1
 	}
 	}
 	option = {
 	name = arantiga.023.b
+	ai_chance = {
+	    base = 0
+	}
 	#custom_effect_tooltip = ara_tooltip_voices_clue_a
 	hidden_effect = {
 				ARA = {
@@ -961,7 +973,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.005.a #yes
 			ai_chance = {
-				factor = 160
+				factor = 16
 				modifier = {
 					factor = 0.5
 					has_government = communism
@@ -978,7 +990,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.005.b #no
 			ai_chance = {
-				factor = 100
+				factor = 10
 				modifier = {
 					factor = 0.5
 					has_government = democratic
@@ -1005,7 +1017,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.006.a #yes
 			ai_chance = {
-				factor = 200
+				factor = 2
 				modifier = {
 						factor = 0.5
 						has_government = fascism
@@ -1023,7 +1035,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.006.b #no
 			ai_chance = {
-				factor = 100
+				factor = 1
 				modifier = {
 					factor = 0.5
 					has_government = neutrality
@@ -1048,7 +1060,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.007.a #yes
 				ai_chance = {
-					factor = 200
+					factor = 2
 					modifier = {
 						factor = 0.5
 						has_government = fascism
@@ -1065,7 +1077,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.007.b #no
 				ai_chance = {
-					factor = 100
+					factor = 1
 					modifier = {
 						factor = 0.5
 						has_government = neutrality
@@ -1090,7 +1102,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.008.a #yes
 			ai_chance = {
-					factor = 200
+					factor = 2
 					modifier = {
 						factor = 0.5
 						has_government = fascism
@@ -1107,7 +1119,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.008.b #no
 				ai_chance = {
-					factor = 100
+					factor = 1
 					modifier = {
 						factor = 0.5
 						has_government = democratic
@@ -1324,7 +1336,7 @@ country_event = { #Griffonstone Archives
 	    option = {
 		    name = arantiga.053.a
 			ai_chance = {
-			    factor = 30
+			    base = 3
 			}
 		    ARA = {
 			    country_event = {
@@ -1336,7 +1348,7 @@ country_event = { #Griffonstone Archives
 		option = {
 		    name = arantiga.053.b
 			ai_chance = {
-			    factor = 70
+			    base = 7
 			}
 		    ARA = {
 			    country_event = {
@@ -1381,10 +1393,10 @@ country_event = { #Griffonstone Archives
 	    option = {
 		    name = arantiga.066.a
 			ai_chance = {
-			    factor = 50
+			    base = 1
 				modifier = {
 				    has_government = neutrality
-					factor = 100
+					factor = 1
 				}
 				modifier = {
 				    has_government = fascism
@@ -1401,14 +1413,14 @@ country_event = { #Griffonstone Archives
 		option = {
 		    name = arantiga.066.b
 			ai_chance = {
-			    factor = 50
+			    base = 1
 				modifier = {
 				    has_government = neutrality
 					factor = 0
 				}
 				modifier = {
 				    has_government = fascism
-					factor = 100
+					factor = 1
 				}
 			}
 		    ARA = {
@@ -1505,7 +1517,7 @@ country_event = { #Griffonstone Archives
 					}
 				}
 				ai_chance = {
-			        factor = 100
+			        base = 1
 		        }
 			}
 		option = {
@@ -1552,7 +1564,10 @@ country_event = { #Griffonstone Archives
 				574 = {
 				    add_compliance = 60
 				}
-			}	
+			}
+            ai_chance = {
+			    base = 0
+		    }			
 		}
 	}
 	country_event = { #Skyfall
@@ -1590,7 +1605,7 @@ country_event = { #Griffonstone Archives
 	    option = {
 		    name = arantiga.058.a
 			ai_chance = {
-			    factor = 80
+			    base = 8
 			}
 		    ARA = {
 			    country_event = {
@@ -1602,7 +1617,7 @@ country_event = { #Griffonstone Archives
 		option = {
 		    name = arantiga.058.b
 			ai_chance = {
-			    factor = 20
+			    base = 2
 			}
 		    ARA = {
 			    country_event = {
@@ -2190,10 +2205,10 @@ country_event = { # Detente
 	option = {
 		name = arantiga_govern.020.a
 		ai_chance = {
-			factor = 40
+			base = 4
 				modifier = {
 				    has_government = democratic
-					factor = 80
+					add = 4
 				}
 		}
 		hidden_effect = {
@@ -2208,10 +2223,10 @@ country_event = { # Detente
 	option = {
 	    name = arantiga_govern.020.b
 		ai_chance = {
-			factor = 60
+			base = 6
 				modifier = {
 				    has_government = democratic
-					factor = 20
+					add = -4
 				}
 		}
 	    hidden_effect = {
@@ -2439,7 +2454,7 @@ country_event = { # Detente
 			}	
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 	option = {
@@ -2572,14 +2587,14 @@ country_event = { # Detente
 				            create_country_leader = {
 					            name = "Protector Lysimachus"
 					            desc = ""
-					            picture = "gfx/leaders/Asia/portrait_griffon_generic_land_9.dds"
+					            picture = "gfx/leaders/ARA/lysimachus.tga"
 					            expire = "1965.1.1"
 					            ideology = nazism
 					            traits = {
 					            }
 				            }
 							remove_ideas = BAR_pentarchy
-							remove_ideas = BAR_insane_weather
+							remove_ideas = BAR_wittenland_witchhunters
 							set_cosmetic_tag = BRD_arantiga
 							add_ideas = disarmed_nation_ara
 							load_focus_tree = generic_focus
@@ -2769,7 +2784,7 @@ country_event = { # Detente
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 1
 		}
 	}
 }
@@ -2813,18 +2828,18 @@ country_event = { # Detente
 	option = {
 		name = 	arantiga_govern.024.a #we fight
 		ai_chance = {
-			factor = 80
+			base = 8
 			    modifier = {
 				    has_government = fascism
-					factor = 90
+					add = 1
 				}
 				modifier = {
 				    has_government = democratic
-					factor = 90
+					add = 1
 				}
 				modifier = {
 				    has_government = communism
-					factor = 100
+					add = 2
 				}
 		}
 		ARA = {
@@ -2837,18 +2852,18 @@ country_event = { # Detente
 	option = {
 		name = 	arantiga_govern.024.b #we surrender
 		ai_chance = {
-			factor = 20
+			base = 2
 			    modifier = {
 				    has_government = fascism
-					factor = 10
+					add = -1
 				}
 				modifier = {
 				    has_government = democratic
-					factor = 10
+					add = -1
 				}
 				modifier = {
 				    has_government = communism
-					factor = 0
+					add = -2
 				}
 		}
 		ARA = {
@@ -3080,7 +3095,7 @@ country_event = { #Arantigan Uprising
 	option = {
 		name = 	arantiga.075.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_stability = -0.2
         add_war_support = -0.2
@@ -3093,7 +3108,7 @@ country_event = { #Arantigan Uprising
 	option = {
 		name = 	arantiga.075.b
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_timed_idea = {
 		    idea = ARA_arantigan_uprising
@@ -3134,17 +3149,19 @@ country_event = { #Arantigan Alliance
 	option = {
 	  	name = 	arantiga.078.a
 	    ai_chance = {
-			factor = 60
+			base = 6
 			    modifier = {
 				    FAL = {
 				        has_government = fascism
 					}
-					factor = 80
+					add = 2
 				}
 				modifier = {
 				    FAL = {
 					    OR = {
 					        has_government = democratic
+							has_government = communism
+							is_subject = yes
 							is_in_faction = yes
 						}
 					}
@@ -3161,21 +3178,23 @@ country_event = { #Arantigan Alliance
 	option = {
 		name = 	arantiga.078.b
 		ai_chance = {
-			factor = 40
+			base = 4
 			    modifier = {
 				    FAL = {
 				        has_government = fascism
 					}
-					factor = 20
+					add = -2
 				}
 				modifier = {
 				    FAL = {
 					    OR = {
 					        has_government = democratic
+							has_government = communism
+							is_subject = yes
 							is_in_faction = yes
 						}
 					}
-					factor = 100
+					factor = 1
 				}
 		}
 		ARA = {
@@ -3241,22 +3260,26 @@ country_event = { #Arantigan Demands
 	option = {
 		name = 	arantiga.081.a
 		ai_chance = {
-			factor = 0
+			base = 1
+			    modifier = {
+				    strength_ratio = { tag = ARA ratio < 1.0 }
+					add = -1
+				}
 			    modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.8 }
-					factor = 30
+					add = 3
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.6 }
-					factor = 50
+					add = 2
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.5 }
-					factor = 70
+					add = 2
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.3 }
-					factor = 100
+					add = 3
 				}
 		}
 		ARA = {
@@ -3270,22 +3293,22 @@ country_event = { #Arantigan Demands
 	option = {
 		name = 	arantiga.081.b
 		ai_chance = {
-			factor = 100
+			base = 1
 			    modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.8 }
-					factor = 70
+					add = 6
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.6 }
-					factor = 50
+					add = -2
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.5 }
-					factor = 30
+					add = -2
 				}
 				modifier = {
 				    strength_ratio = { tag = ARA ratio < 0.3 }
-					factor = 0
+					add = -3
 				}
 		}
 		ARA = {
@@ -3333,7 +3356,7 @@ country_event = { #Old Foes
 	option = {
 		name = 	arantiga.084.a
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		add_political_power = 50
 		add_war_support = 0.05
@@ -3341,7 +3364,7 @@ country_event = { #Old Foes
 	option = {
 		name = 	arantiga.084.b
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 		add_political_power = -100
 		add_war_support = -0.1
@@ -3365,7 +3388,7 @@ country_event = { #de Charbon 2
 	option = {
 		name = 	arantiga.085.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_political_power = -100
 		add_war_support = -0.05
@@ -3409,7 +3432,7 @@ country_event = { #de Charbon 2
 	option = {
 		name = 	arantiga.085.b
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_war_support = 0.05
 	}
@@ -3425,7 +3448,7 @@ country_event = { #Death of an Idea
 	option = {
 		name = 	arantiga.086.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_stability = -0.10
 		377 = {
@@ -3447,7 +3470,7 @@ country_event = { #Death of an Idea
 	option = {
 		name = 	arantiga.086.b
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_political_power = -100
 		377 = {
@@ -3478,7 +3501,7 @@ country_event = { #Coronation
 	option = {
 		name = 	arantiga.087.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		hidden_effect = {
 		    news_event = { id = arantiga_news.3 hours = 16 }
@@ -3503,7 +3526,7 @@ country_event = { #Facing Reality
 	option = {
 		name = 	arantiga.088.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		add_ideas = ARA_fragile_rule_1
 		add_ideas = ARA_whispers_of_dissent
@@ -3522,7 +3545,7 @@ country_event = { #Marriage
 	fire_only_once = yes
 	option = {
 	    ai_chance = {
-			factor = 60
+			base = 6
 		}
 		name = 	arantiga.089.a
 		ARA = {
@@ -3531,7 +3554,7 @@ country_event = { #Marriage
 	}
 	option = {
 	    ai_chance = {
-			factor = 40
+			base = 4
 		}
 		name = 	arantiga.089.b
 		news_event = { id = arantiga_news.4 days = 1 }
@@ -3557,7 +3580,7 @@ country_event = { #Turned Down
 	option = {
 		name = 	arantiga.090.a
 		ai_chance = {
-			factor = 50
+			base = 1
 		}
 		create_wargoal = {
 		    type = annex_everything
@@ -3671,7 +3694,7 @@ country_event = { #Decline of Aquileia
 	option = {
 		name = 	arantiga.097.a
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		ARA = {
 		    annex_country = { target = JER transfer_troops = yes }
@@ -3680,7 +3703,7 @@ country_event = { #Decline of Aquileia
 	option = {
 		name = 	arantiga.097.b
 		ai_chance = {
-			factor = 50
+			base = 5
 		}
 		leave_faction = yes
 		set_politics = {
@@ -3720,7 +3743,7 @@ country_event = { #"King" of Aquileia
 	option = {
 		name = 	arantiga.105.a
 		ai_chance = {
-			factor = 30
+			base = 3
 		}
 		country_event = { id = arantiga.108 days = 1 }
 		ARA = { country_event = { id = arantiga.107 hours = 30 }}
@@ -3728,7 +3751,7 @@ country_event = { #"King" of Aquileia
 	option = {
 		name = 	arantiga.105.b
 		ai_chance = {
-			factor = 70
+			base = 7
 		}
 		ARA = {
 		    puppet = JER
@@ -3853,7 +3876,7 @@ country_event = { #Victory over the necromancers
 		    }
 		}
 		ai_chance = {
-			factor = 50
+			base = 1
 		}
 	}
 	option = {
@@ -3899,7 +3922,7 @@ country_event = { #Victory over the necromancers
 		    }
 		}
 		ai_chance = {
-			factor = 50
+			base = 1
 		}
 	}
 }
@@ -4044,7 +4067,7 @@ country_event = { #A demand to RivFed
 	option = {
 		name = 	arantiga.111.a
 		ai_chance = {
-			factor = 100
+			base = 5
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.8 }
@@ -4054,7 +4077,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 70
+				add = 35
 			}
 			modifier = {
 			    AND = {
@@ -4065,7 +4088,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 50
+				add = 10
 			}
 			modifier = {
 			    AND = {
@@ -4076,7 +4099,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 40
+				add = 10
 			}
 			modifier = {
 			    AND = {
@@ -4087,7 +4110,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 30
+				add = 10
 			}
 			modifier = {
 				OR = {
@@ -4095,7 +4118,7 @@ country_event = { #A demand to RivFed
 					has_completed_focus = RCT_phoenix_programme
 					has_completed_focus = RCT_ready_the_storm
 				}
-				factor = 100
+				add = -5
 		    }
 			modifier = {
 			    AND = {
@@ -4106,7 +4129,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 40
+				add = 40
 			}
 		}
 		ARA = {
@@ -4116,7 +4139,7 @@ country_event = { #A demand to RivFed
 	option = {
 	    name = arantiga.111.b
 		ai_chance = {
-			factor = 0
+			base = 95
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.8 }
@@ -4126,7 +4149,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 30
+				add = -35
 			}
 			modifier = {
 			    AND = {
@@ -4137,7 +4160,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 50
+				add = -10
 			}
 			modifier = {
 			    AND = {
@@ -4148,7 +4171,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 60
+				add = -10
 			}
 			modifier = {
 			    AND = {
@@ -4159,7 +4182,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 70
+				add = -10
 			}
 			modifier = {
 				OR = {
@@ -4167,7 +4190,7 @@ country_event = { #A demand to RivFed
 					has_completed_focus = RCT_phoenix_programme
 					has_completed_focus = RCT_ready_the_storm
 				}
-				factor = 0
+				add = 5
 		    }
 			modifier = {
 			    AND = {
@@ -4178,7 +4201,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 60
+				add = -40
 			}
 		}
 		trigger = {
@@ -4210,7 +4233,7 @@ country_event = { #A demand to RivFed
 	option = {
 	    name = arantiga.111.c
 		ai_chance = {
-			factor = 0
+			base = 95
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.8 }
@@ -4220,7 +4243,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 30
+				add = -35
 			}
 			modifier = {
 			    AND = {
@@ -4231,7 +4254,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 50
+				add = -10
 			}
 			modifier = {
 			    AND = {
@@ -4242,7 +4265,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 60
+				add = -10
 			}
 			modifier = {
 			    AND = {
@@ -4253,7 +4276,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 70
+				add = -10
 			}
 			modifier = {
 				OR = {
@@ -4261,7 +4284,7 @@ country_event = { #A demand to RivFed
 					has_completed_focus = RCT_phoenix_programme
 					has_completed_focus = RCT_ready_the_storm
 				}
-				factor = 0
+				add = 5
 		    }
 			modifier = {
 			    AND = {
@@ -4272,7 +4295,7 @@ country_event = { #A demand to RivFed
 						has_completed_focus = RCT_ready_the_storm
 					}
 				}
-				factor = 60
+				add = -40
 			}
 		}
 		trigger = {
@@ -4294,7 +4317,7 @@ country_event = { #RivFed nay
 	option = {
 		name = 	arantiga.112.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		create_wargoal = {
 		    target = RCT
@@ -4313,7 +4336,7 @@ country_event = { #RivFed yay
 	option = {
 		name = 	arantiga.113.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		every_state = {	 
             limit = {
@@ -4340,62 +4363,90 @@ country_event = { #RivFed Secession?
 	option = {
 		name = 	arantiga.114.a
 		ai_chance = {
-		    factor = 0
+		    base = 20
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = fascism
+				}
+				add = 80
+			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = fascism
 				}
-				factor = 60
+				add = 50
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = fascism
 				}
-				factor = 30
+				add = -20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = communism
+				}
+				add = 80
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = communism
 				}
-				factor = 60
+				add = 40
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = communism
 				}
-				factor = 30
+				add = -20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = democratic
+				}
+				add = 40
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = democratic
 				}
-				factor = 35
+				add = 20
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = democratic
 				}
-				factor = 15
+				add = -20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = neutrality
+				}
+				add = 60
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = neutrality
 				}
-				factor = 50
+				add = 30
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = neutrality
 				}
-				factor = 20
+				add = -20
 			}
 		}
 		leave_faction = yes
@@ -4409,62 +4460,90 @@ country_event = { #RivFed Secession?
 	option = {
 	    name = arantiga.114.b
 		ai_chance = {
-		    factor = 0
+		    base = 80
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = fascism
+				}
+				add = -80
+			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = fascism
 				}
-				factor = 40
+				add = -50
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = fascism
 				}
-				factor = 70
+				add = 20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = communism
+				}
+				add = -80
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = communism
 				}
-				factor = 40
+				add = -40
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = communism
 				}
-				factor = 70
+				add = 20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = democratic
+				}
+				add = -40
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = democratic
 				}
-				factor = 65
+				add = -20
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = democratic
 				}
-				factor = 85
+				add = 20
+			}
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio > 1.0 }
+					has_government = neutrality
+				}
+				add = -60
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.7 }
 					has_government = neutrality
 				}
-				factor = 50
+				add = -30
 			}
 			modifier = {
 			    AND = {
 			        strength_ratio = { tag = ARA ratio < 0.5 }
 					has_government = neutrality
 				}
-				factor = 80
+				add = 20
 			}
 		}
 		custom_effect_tooltip = ARA_RCT_loose_land_soon
@@ -4481,7 +4560,7 @@ country_event = { #War with a riverlands country
 	option = {
 		name = 	arantiga.115.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		create_wargoal = {
 		    target = FROM
@@ -4498,7 +4577,7 @@ country_event = { #A riverlands country secedes
 	option = {
 		name = 	arantiga.116.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 	}
 }
@@ -4769,7 +4848,7 @@ country_event = { #Herzländers unite! (60 days)
 	option = {
 		name = 	arantiga.119.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		declare_war_on = { type = puppet_wargoal_focus target = ARA }
 		hidden_effect = {
@@ -4781,7 +4860,7 @@ country_event = { #Herzländers unite! (60 days)
 	option = {
 		name = 	arantiga.119.b
 		ai_chance = {
-		    factor = 0
+		    base = 0
 		}
 	}
 }
@@ -4804,7 +4883,7 @@ country_event = { #Herzländers unite! (cap)
 	option = {
 		name = 	arantiga.121.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		declare_war_on = { type = puppet_wargoal_focus target = ARA }
 		hidden_effect = {
@@ -4816,7 +4895,7 @@ country_event = { #Herzländers unite! (cap)
 	option = {
 		name = 	arantiga.121.b
 		ai_chance = {
-		    factor = 0
+		    base = 0
 		}
 	}
 }
@@ -4829,7 +4908,7 @@ country_event = { #de Charbon 1
 	option = {
 		name = 	arantiga.122.a
 		ai_chance = {
-		    factor = 50
+		    base = 1
 		}
 		country_event = arantiga.085
 	}

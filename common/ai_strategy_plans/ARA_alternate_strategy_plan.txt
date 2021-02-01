@@ -16,6 +16,8 @@ ARA_republic = {
 	ai_national_focuses = {
 	    ARA_new_age_new_army
 		ARA_nation_under_arms
+		ARA_military_railroads
+		ARA_new_academy
 		ARA_prepare_the_people
 	    ARA_nationalization
 		ARA_state_of_war
@@ -26,13 +28,16 @@ ARA_republic = {
 		ARA_arantiga_rises
 		ARA_right_to_rule
 		ARA_self_strength
+		ARA_heavy_industry
+		ARA_dig_deeper
 		ARA_industrial_warmachine
+		ARA_military_research_institute
 		ARA_craddle
 		ARA_the_cadets
 		ARA_kickstart_my_heart
 		ARA_rebuild_stone
 		ARA_fight_north
-		ARA_new_academy
+		ARA_fortified_nation
 		ARA_integrate_north
 		ARA_fight_avian
 		ARA_mandatory_training
@@ -91,6 +96,8 @@ ARA_madgriff = {
 	ai_national_focuses = {
 	    ARA_new_age_new_army
 		ARA_nation_under_arms
+		ARA_military_railroads
+		ARA_new_academy
 		ARA_prepare_the_people
 	    ARA_nationalization
 		ARA_state_of_war
@@ -101,13 +108,16 @@ ARA_madgriff = {
 		ARA_arantiga_rises
 		ARA_right_to_rule
 		ARA_self_strength
+		ARA_heavy_industry
+		ARA_dig_deeper
 		ARA_industrial_warmachine
+		ARA_military_research_institute
 		ARA_craddle
 		ARA_the_cadets
 		ARA_kickstart_my_heart
 		ARA_rebuild_stone
 		ARA_fight_north
-		ARA_new_academy
+		ARA_fortified_nation
 		ARA_integrate_north
 		ARA_fight_avian
 		ARA_mandatory_training

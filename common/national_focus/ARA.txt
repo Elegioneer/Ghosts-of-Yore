@@ -2087,6 +2087,8 @@ focus_tree = {
 		relative_position_id = ARA_right_to_rule
 		cost = 5.00
 		prerequisite = { focus = ARA_right_to_rule }
+		will_lead_to_war_with = LAK
+		will_lead_to_war_with = BOI
 		
 		completion_reward = {
 		create_wargoal = {
@@ -2160,6 +2162,9 @@ focus_tree = {
 		relative_position_id = ARA_right_to_rule
 		cost = 5.00
 		prerequisite = { focus = ARA_right_to_rule }
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		will_lead_to_war_with = AVI
 		bypass = {
 		    AND = {
 		        401 = { is_owned_by = ROOT }
@@ -2233,6 +2238,7 @@ focus_tree = {
 		relative_position_id = ARA_right_to_rule
 		cost = 5.00
 		prerequisite = { focus = ARA_right_to_rule }
+		will_lead_to_war_with = AVI
 		bypass = {
 		    470 = { is_owned_by = ROOT }
 		}

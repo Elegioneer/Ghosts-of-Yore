@@ -463,16 +463,88 @@ add_namespace = griffonstone_decision
 	    fire_only_once = yes
 		
 	    option = {
-	         name = griffonstone.007.a
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.008
-					 days = 10
-			     }
-			 }
+	        name = griffonstone.007.a
+			ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 10
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GOL
+			            }
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GES
+			            }
+					}
+			    }
+				modifier = {
+				    factor = 0
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GAL
+			            }
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GIL
+			            }
+					    AND = {
+				            is_historical_focus_on = yes
+				            has_game_rule = {
+					            rule = BOI_ai_behavior
+					            option = DEFAULT
+				            }
+						}
+			        }
+			    }
+		    }
+			hidden_effect = {
+			    country_event = {
+				    id = griffonstone.008
+					days = 10
+			    }
+			}
 		}
 		option = {
 	         name = griffonstone.007.b
+			 ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 0
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GOL
+			            }
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GES
+			            }
+					}
+			    }
+				modifier = {
+				    factor = 10
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GAL
+			            }
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GIL
+			            }
+					    AND = {
+				            is_historical_focus_on = yes
+				            has_game_rule = {
+					            rule = BOI_ai_behavior
+					            option = DEFAULT
+				            }
+						}
+			        }
+			    }
+		    }
 			 hidden_effect = {
 			     country_event = {
 				     id = griffonstone.012
@@ -535,6 +607,23 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	         name = griffonstone.009.a
+			 ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 10
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GES
+			        }
+			    }
+				modifier = {
+				    factor = 0
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GOL
+			        }
+			    }
+		    }
 			 hidden_effect = {
 			     country_event = {
 				     id = griffonstone.010
@@ -543,6 +632,23 @@ add_namespace = griffonstone_decision
 		}
 		option = {
 	         name = griffonstone.009.b
+			 ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 10
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GOL
+			        }
+			    }
+				modifier = {
+				    factor = 0
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GES
+			        }
+			    }
+		    }
 			 hidden_effect = {
 			     country_event = {
 				     id = griffonstone.011
@@ -702,6 +808,32 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.013.a
+			ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 10
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GAL
+			        }
+			    }
+				modifier = {
+				    factor = 0
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GIL
+			            }
+					    AND = {
+				            is_historical_focus_on = yes
+				            has_game_rule = {
+					            rule = BOI_ai_behavior
+					            option = DEFAULT
+				            }
+						}
+			        }
+			    }
+		    }
 			custom_effect_tooltip = BOI_CETT_gallus_focus_tree
 			hidden_effect = {
 			     load_focus_tree = Griffonstone_gallus_1
@@ -710,6 +842,32 @@ add_namespace = griffonstone_decision
 		}
 		option = {
 	         name = griffonstone.013.b
+			 ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 0
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GAL
+			        }
+			    }
+				modifier = {
+				    factor = 10
+					OR = {
+				        has_game_rule = {
+				            rule = BOI_ai_behavior
+				            option = BOI_GIL
+			            }
+					    AND = {
+				            is_historical_focus_on = yes
+				            has_game_rule = {
+					            rule = BOI_ai_behavior
+					            option = DEFAULT
+				            }
+						}
+			        }
+			    }
+		    }
 			 hidden_effect = {
 			     country_event = {
 				     id = griffonstone.014
@@ -1128,6 +1286,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.200.a
+			ai_chance = {
+			    base = 1
+			}
 			add_stability = -0.1
 			add_resource = {
 				type = steel
@@ -1162,6 +1323,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.200.b
+			ai_chance = {
+			    base = 1
+			}
 			add_resource = {
 				type = steel
 				amount = 3
@@ -1233,6 +1397,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.203.a
+			ai_chance = {
+			    base = 1
+			}
 			FROM = {
 			    country_event = {
 				    id = griffonstone.220
@@ -1242,6 +1409,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.203.b
+			ai_chance = {
+			    base = 1
+			}
 			FROM = {
 			    country_event = {
 				    id = griffonstone.221
@@ -1431,7 +1601,7 @@ country_event = { #Herzländers unite! (cap)
 	            desc = BOI_gallus_desc
 	            picture = "GAW_Gallus.tga"
 	            expire = "1965.1.1"
-	            ideology = liberalism
+	            ideology = conservatism
 	            traits = {
 
 	            }
@@ -1476,11 +1646,11 @@ country_event = { #Herzländers unite! (cap)
 	            name = "Gallus"
 	            portrait_path = "gfx/leaders/BOI/GAW_Gallus.tga"
 	            traits = { griffon_race_trait trait_reckless media_personality infantry_leader organizer inspirational_leader }
-	            skill = 4
-	            attack_skill = 5
-	            defense_skill = 5
+	            skill = 3
+	            attack_skill = 4
+	            defense_skill = 3
 	            planning_skill = 3
-	            logistics_skill = 3
+	            logistics_skill = 2
             }
 			hidden_effect = {
 			    country_event = {
@@ -1567,6 +1737,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.208.a
+			ai_chance = {
+			    base = 1
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.229
@@ -1576,6 +1749,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.208.b
+			ai_chance = {
+			    base = 1
+			}
 			BOI = {
 			    add_to_tech_sharing_group = equestrian_research
 			    country_event = {
@@ -1622,6 +1798,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.209.a
+			ai_chance = {
+			    base = 1
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.231
@@ -1631,6 +1810,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.209.b
+			ai_chance = {
+			    base = 0
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.232
@@ -1680,6 +1862,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.210.a
+			ai_chance = {
+			    base = 2
+			}
 			give_guarantee = BOI
 			BOI = {
 			    country_event = {
@@ -1690,6 +1875,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.210.b
+			ai_chance = {
+			    base = 1
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.234
@@ -1736,12 +1924,18 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.235.a
+			ai_chance = {
+			    base = 1
+			}
 			add_popularity = { ideology = democratic popularity = -0.2 }
 			remove_ideas = BOI_republican_unrest
 			add_ideas = BOI_republicans_supressed
 		}
 		option = {
 	        name = griffonstone.235.b
+			ai_chance = {
+			    base = 0
+			}
 			add_popularity = { ideology = democratic popularity = -0.1 }
 			remove_ideas = BOI_republican_unrest
 			add_ideas = BOI_republicans_in_council
@@ -1758,12 +1952,18 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.236.a
+			ai_chance = {
+			    base = 0
+			}
 			add_manpower = -3000
 			add_stability = 0.03
 			remove_ideas = BOI_goldstone_cronies
 		}
 		option = {
 	        name = griffonstone.236.b
+			ai_chance = {
+			    base = 1
+			}
 			add_political_power = -100
 			remove_ideas = BOI_goldstone_cronies
 		}
@@ -1972,12 +2172,18 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.217.a
+			ai_chance = {
+			    base = 0
+			}
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_nobles_screw_themselves
 			}
 		}
 		option = {
 	        name = griffonstone.217.b
+			ai_chance = {
+			    base = 1
+			}
 		}
 	}
 	country_event = { #HIDDEN 1
@@ -2164,6 +2370,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.242.a
+			ai_chance = {
+			    base = 1
+			}
 			add_manpower = -5000
 			471 = {
 			    damage_building = { type = infrastructure damage = 2 }
@@ -2171,6 +2380,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.242.b
+			ai_chance = {
+			    base = 1
+			}
 			add_manpower = -2000
 			add_political_power = -60
 			471 = {
@@ -2198,12 +2410,18 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.245.a
+			ai_chance = {
+			    base = 0
+			}
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_assassination_ordered
 			}
 		}
 		option = {
 		    name = griffonstone.245.b
+			ai_chance = {
+			    base = 1
+			}
 		}
 	}
 	country_event = { #Landscape after the battle
@@ -2218,12 +2436,18 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.243.a
 			remove_ideas = BOI_resistance_to_reforms
+			ai_chance = {
+			    base = 1
+			}
 			add_stability = 0.05
 			add_political_power = -50
 			add_popularity = { ideology = neutrality popularity = -0.15 }
 		}
 		option = {
 	        name = griffonstone.243.b
+			ai_chance = {
+			    base = 0
+			}
 			remove_ideas = BOI_resistance_to_reforms
 			add_political_power = 50
 			add_popularity = { ideology = neutrality popularity = -0.1 }
@@ -2384,6 +2608,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.250.a
+			ai_chance = {
+			    base = 1
+			}
 			set_party_name = { ideology = democratic name = BOI_RRP_democrats long_name = BOI_RRP_democrats_long }
 			retire_country_leader = yes
 			create_country_leader = {
@@ -2402,6 +2629,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.250.b
+			ai_chance = {
+			    base = 1
+			}
 			set_party_name = { ideology = democratic name = BOI_GPL_democrats long_name = BOI_GPL_democrats_long }
 			retire_country_leader = yes
 			create_country_leader = {
@@ -2420,6 +2650,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.250.c
+			ai_chance = {
+			    base = 1
+			}
 			set_party_name = { ideology = democratic name = BOI_GFP_democrats long_name = BOI_GFP_democrats_long }
 			retire_country_leader = yes
 			create_country_leader = {
@@ -2448,6 +2681,9 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.219.a
+			ai_chance = {
+			    base = 3
+			}
 			add_political_power = -50
 			BOI = {
 			    country_event = {
@@ -2458,6 +2694,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.219.b
+			ai_chance = {
+			    base = 2
+			}
 			add_political_power = -50
 			BOI = {
 			    country_event = {
@@ -2468,6 +2707,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.219.c
+			ai_chance = {
+			    base = 1
+			}
 			add_political_power = -100
 			BOI = {
 			    country_event = {
@@ -2478,6 +2720,13 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.219.e
+			ai_chance = {
+			    base = 1
+				modifier = {
+				    factor = 5
+					has_war = yes
+				}
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.254
@@ -2576,6 +2825,29 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.256.a
+			ai_chance = {
+			base = 1
+			    modifier = {
+				    strength_ratio = { tag = ARA ratio < 1.0 }
+					add = -1
+				}
+			    modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.8 }
+					add = 3
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.6 }
+					add = 2
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.5 }
+					add = 2
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.3 }
+					add = 3
+				}
+		    }
 			BOI = {
 			    country_event = {
 				    id = griffonstone.257
@@ -2585,7 +2857,25 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.256.b
-			
+			ai_chance = {
+			base = 1
+			    modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.8 }
+					add = 6
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.6 }
+					add = -2
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.5 }
+					add = -2
+				}
+				modifier = {
+				    strength_ratio = { tag = ARA ratio < 0.3 }
+					add = -3
+				}
+		    }
 			BOI = {
 			    country_event = {
 				    id = griffonstone.258
@@ -2667,6 +2957,21 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.259.a
+			ai_chance = {
+			    base = 3
+				modifier = {
+				    surrender_progress > 0.1
+					add = 1
+				}
+				modifier = {
+				    surrender_progress > 0.3
+					add = 2
+				}
+				modifier = {
+				    surrender_progress > 0.5
+					add = 3
+				}
+			}
 			add_political_power = -100
 			BOI = {
 			    country_event = {
@@ -2677,6 +2982,17 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.259.b
+			ai_chance = {
+			    base = 2
+				modifier = {
+				    has_government = fascism
+					add = -1
+				}
+				modifier = {
+				    surrender_progress > 0
+					add = -1
+				}
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.261
@@ -2743,6 +3059,16 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.262.a
+			ai_chance = {
+			    base = 2
+			    modifier = {
+				    factor = 10
+				    OR = {
+					    has_completed_focus = SIC_fishy_business
+						has_completed_focus = SIC_pinstripe_suit
+					}
+			    }
+		    }
 			add_ideas = BOI_deal_with_goldstone
 			hidden_effect = {
 			    BOI = {
@@ -2755,6 +3081,16 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.262.b
+			ai_chance = {
+			    base = 1
+			    modifier = {
+				    factor = 0
+				    OR = {
+					    has_completed_focus = SIC_fishy_business
+						has_completed_focus = SIC_pinstripe_suit
+					}
+			    }
+		    }
 			BOI = {
 			    country_event = {
 				    id = griffonstone.265
@@ -2866,6 +3202,16 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.269.a
+			ai_chance = {
+			    base = 1
+				modifier = {
+				    factor = 10
+				    has_game_rule = {
+				        rule = BOI_ai_behavior
+				        option = BOI_GES
+			        }
+			    }
+		    }
 			add_political_power = -25
 			add_manpower = -1000
 			BOI = {
@@ -2877,6 +3223,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.269.b
+			ai_chance = {
+			    base = 1
+		    }
 			BOI = {
 			    country_event = {
 			        id = griffonstone.272
@@ -3543,6 +3892,17 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.288.a
+			ai_chance = {
+			    base = 1
+				modifier = {
+				    has_idea = BOI_equestrian_advisors
+					add = 1
+				}
+				modifier = {
+				    is_in_tech_sharing_group = equestrian_research
+					add = 2
+				}
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.289
@@ -3555,6 +3915,9 @@ country_event = { #Herzländers unite! (cap)
 		}
 		option = {
 	        name = griffonstone.288.b
+			ai_chance = {
+			    base = 2
+			}
 			BOI = {
 			    country_event = {
 				    id = griffonstone.290
@@ -3849,14 +4212,20 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.301.a
-			add_ideas = BOI_neutral_foreign_policy
-		}
-		option = {
-	        name = griffonstone.301.b
+			ai_chance = {
+			    base = 1
+			}
 			custom_effect_tooltip = BOI_CETT_seek_allies
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_searching_for_alliance
 			}
+		}
+		option = {
+	        name = griffonstone.301.b
+			ai_chance = {
+			    base = 1
+			}
+			add_ideas = BOI_neutral_foreign_policy
 		}
 	}
 	

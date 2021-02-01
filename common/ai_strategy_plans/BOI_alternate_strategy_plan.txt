@@ -1,0 +1,140 @@
+BOI_gestal = {
+	name = "Gestal defeats Goldstone"
+	desc = ""
+
+	enable = {
+		original_tag = BOI
+		OR = {
+			has_game_rule = {
+				rule = BOI_ai_behavior
+				option = BOI_GES
+			}
+			has_completed_focus = BOI_loyalty_reward
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BOI_gallus = {
+	name = "Gallus becomes the new king"
+	desc = ""
+
+	enable = {
+		original_tag = BOI
+		OR = {
+			has_game_rule = {
+				rule = BOI_ai_behavior
+				option = BOI_GAL
+			}
+			has_completed_focus = BOI_legacy_of_guto
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+BOI_goldstone = {
+	name = "Goldstone takes over the Regency Council"
+	desc = ""
+
+	enable = {
+		original_tag = BOI
+		OR = {
+			has_game_rule = {
+				rule = BOI_ai_behavior
+				option = BOI_GOL
+			}
+			has_completed_focus = BOI_golden_dawn
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
