@@ -1,12 +1,13 @@
-version="0.1.0"
+version="1.0"
 tags={
 	"Alternative History"
 	"Gameplay"
 	"Events"
 }
-name="Ghosts of Yore - EaW Submod"
+name="EaW – Ghosts of Yore"
 dependencies={
 	"Equestria at War"
 }
-supported_version="1.9.*"
-path="mod/Ghosts-of-Yore"
+picture="Thumbnail.png"
+supported_version="1.10.3"
+path="C:/elegi/Paradox Interactive/Hearts of Iron IV/mod/Ghosts-of-Yore"
