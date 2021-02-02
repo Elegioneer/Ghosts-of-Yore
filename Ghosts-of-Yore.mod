@@ -10,4 +10,4 @@ dependencies={
 }
 picture="Thumbnail.png"
 supported_version="1.10.3"
-path="C:/elegi/Paradox Interactive/Hearts of Iron IV/mod/Ghosts-of-Yore"
+path="mod/Ghosts-of-Yore"
