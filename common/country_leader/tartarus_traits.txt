@@ -100,4 +100,9 @@ leader_traits = {
 		trade_laws_cost_factor = -0.25
 		economy_cost_factor = -0.25
 	}
+	GOY_jailor_of_arantiga = {
+	    random = no
+		army_defence_factor = 0.1
+		ai_focus_defense_factor = 0.5
+	}
 }

@@ -1,10 +1,10 @@
-version="0.1.0"
+version="1.0"
 tags={
 	"Alternative History"
 	"Gameplay"
 	"Events"
 }
-name="Ghosts of Yore - EaW Submod"
+name="EaW – Ghosts of Yore"
 dependencies={
 	"Equestria at War"
 }

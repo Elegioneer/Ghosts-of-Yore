@@ -1,11 +1,11 @@
 ARA_arantigans_abroad = {
 	ARA_last_legion = {
 		icon = rifles
-		cost = 50
+		cost = 100
 		fire_only_once = yes
 		days_remove = 5
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		remove_effect = {
 			custom_effect_tooltip = ARA_last_legion_tt
@@ -17,11 +17,11 @@ ARA_arantigans_abroad = {
 
 	ARA_true_legion = {
 		icon = rifles
-		cost = 50
+		cost = 100
 		fire_only_once = yes
 		days_remove = 5
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		remove_effect = {
 			custom_effect_tooltip = ARA_true_legion_tt
@@ -37,7 +37,7 @@ ARA_arantigans_abroad = {
 		fire_only_once = yes
 		days_remove = 10
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		remove_effect = {
 			custom_effect_tooltip = ARA_francistrian_tt
@@ -52,19 +52,19 @@ ARA_arantigans_abroad = {
 
 	ARA_call_diaspora = {
 		icon = generic_nationalism
-		cost = 50
+		cost = 100
 		fire_only_once = yes
 		days_remove = 20
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 		highlight_states = {
 			state = 408
 		}
 		remove_effect = {
-			add_manpower = 25000
+			add_manpower = 10000
 			408 = {
-				add_manpower = 100000
+				add_manpower = 50000
 			}
 		}
 	}

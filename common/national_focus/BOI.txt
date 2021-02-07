@@ -3367,9 +3367,8 @@ focus_tree = {
 		available = {
 		    owns_state = 380
 			owns_state = 396
-			owns_state = 397
-			owns_state = 381
 			owns_state = 379
+			owns_state = 381
 		}
 
 		ai_will_do = {
@@ -3385,13 +3384,10 @@ focus_tree = {
 			396 = {
 			    add_core_of = BOI
 			}
-			397 = {
+			379 = {
 			    add_core_of = BOI
 			}
 			381 = {
-			    add_core_of = BOI
-			}
-			379 = {
 			    add_core_of = BOI
 			}
 			}

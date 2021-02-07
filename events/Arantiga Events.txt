@@ -82,7 +82,7 @@ add_namespace = arantiga_decision
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Nicator"
-			picture = "nicator_king.tga"
+			picture = "nicator.tga"
 			expire = "1965.1.1"
 			ideology = despotism
 		}
@@ -412,13 +412,17 @@ country_event = { #going lower
 		create_country_leader = {
 			name = "Lysimachus"
 			picture = "Lysimachus.tga"
+			desc = "crazed_fanboy_desc"
 			expire = "1965.1.1"
-			ideology = nazism
+			ideology = falangism
 		}
 	
 		hidden_effect = {
 			set_country_flag = arantiga_flag_dorotheos_is_dead
-			load_focus_tree = Arantiga_chaos
+			custom_effect_tooltip = ARA_load_imperial_tree
+			hidden_effect = {
+			    load_focus_tree = Arantiga_chaos
+			}
 			country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
@@ -531,13 +535,17 @@ country_event = { #going lower
 		create_country_leader = {
 			name = "Lysimachus"
 			picture = "Lysimachus.tga"
+			desc = "crazed_fanboy_desc"
 			expire = "1965.1.1"
-			ideology = nazism
+			ideology = falangism
 		}
 	
 		hidden_effect = {
 			set_country_flag = arantiga_flag_dorotheos_is_dead
-			load_focus_tree = Arantiga_chaos
+			custom_effect_tooltip = ARA_load_imperial_tree
+			hidden_effect = {
+			    load_focus_tree = Arantiga_chaos
+			}
 			country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
@@ -603,13 +611,17 @@ country_event = { #going lower
 		create_country_leader = {
 			name = "Lysimachus"
 			picture = "Lysimachus.tga"
+			desc = "crazed_fanboy_desc"
 			expire = "1965.1.1"
-			ideology = nazism
+			ideology = falangism
 		}
 	
 		hidden_effect = {
 			set_country_flag = arantiga_flag_dorotheos_is_dead
-			load_focus_tree = Arantiga_chaos
+			custom_effect_tooltip = ARA_load_imperial_tree
+			hidden_effect = {
+			    load_focus_tree = Arantiga_chaos
+			}
 			country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
@@ -675,13 +687,17 @@ country_event = { #going lower
 		create_country_leader = {
 			name = "Lysimachus"
 			picture = "Lysimachus.tga"
+			desc = "crazed_fanboy_desc"
 			expire = "1965.1.1"
-			ideology = nazism
+			ideology = falangism
 		}
 	
 		hidden_effect = {
 			set_country_flag = arantiga_flag_dorotheos_is_dead
-			load_focus_tree = Arantiga_chaos
+			custom_effect_tooltip = ARA_load_imperial_tree
+			hidden_effect = {
+			    load_focus_tree = Arantiga_chaos
+			}
 			country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
@@ -765,20 +781,31 @@ country_event = { #No remorse
 		name = arantiga.025.a
 		kill_country_leader = yes
 		remove_unit_leader = 1333
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
+		hidden_effect = {
+		    kill_ideology_leader = neutrality
+		}
+		create_country_leader = {
+		    name = "Nicator Whitebeak"
+		    desc = "justified_traitor_desc"
+		    picture = "nicator.tga"
+		    expire = "1965.1.1"
+		    ideology = despotism
 		}
 		create_country_leader = {
 			name = "Lysimachus"
 			picture = "Lysimachus.tga"
+			desc = "crazed_fanboy_desc"
 			expire = "1965.1.1"
-			ideology = nazism
+			ideology = falangism
 		}
-	
+	    set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		hidden_effect = {
 			set_country_flag = arantiga_flag_dorotheos_is_dead
-			load_focus_tree = Arantiga_chaos
+			custom_effect_tooltip = ARA_load_imperial_tree
+			hidden_effect = {
+			    load_focus_tree = Arantiga_chaos
+			}
 			country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
@@ -881,25 +908,149 @@ country_event = { #Griffonstone Archives
 	fire_only_once = yes
 	picture = GFX_event_griffon_soldier
 	option = {
-	name = arantiga_chaos.002.a
-	remove_unit_leader = 1335 
-	create_country_leader = {
-			name = "Nicator Whitebeak"
-			desc = "justified_traitor_desc"
-			picture = "nicator_king.tga"
-			expire = "1965.1.1"
-			ideology = nazism
+	    name = arantiga_chaos.002.a
+		country_event = {
+		    id = arantiga_chaos.021
+			hours = 18
 		}
-	add_manpower = -30000
-	add_popularity = { ideology = neutrality popularity = 0.1 }
-	add_popularity = { ideology = democratic popularity = 0.1 }
-	add_popularity = { ideology = communism popularity = 0.1 }
-	add_popularity = { ideology = fascism popularity = -0.1 }
-	swap_ideas = {
-				remove_idea = ARA_power_vacuum
-				add_idea = ARA_nicator_junta
-			}
 	}
+	option = {
+	    name = arantiga_chaos.002.b
+		country_event = {
+		    id = arantiga_chaos.022
+			hours = 18
+		}
+	}
+	}
+	country_event = { #lucky shot
+	    id = arantiga_chaos.021
+	    title = arantiga_chaos.021.t
+	    desc = arantiga_chaos.021.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.021.a
+	        remove_unit_leader = 1335 
+	        set_politics = {
+			    ruling_party = neutrality
+			    elections_allowed = no
+		    }
+	        add_manpower = -30000
+	        add_popularity = { ideology = neutrality popularity = 0.1 }
+	        add_popularity = { ideology = democratic popularity = 0.1 }
+	        add_popularity = { ideology = communism popularity = 0.1 }
+	        add_popularity = { ideology = fascism popularity = -0.1 }
+	        swap_ideas = {
+			    remove_idea = ARA_power_vacuum
+			    add_idea = ARA_nicator_junta
+		    }
+	    }
+	}
+	country_event = { #traitor's end
+	    id = arantiga_chaos.022
+	    title = arantiga_chaos.022.t
+	    desc = arantiga_chaos.022.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.022.a
+	        remove_unit_leader = 1336
+	        add_manpower = -30000
+			kill_ideology_leader = neutrality
+	        swap_ideas = {
+			    remove_idea = ARA_power_vacuum
+			    add_idea = ARA_lysi_regency
+		    }
+	    }
+	}
+	country_event = { #great burning
+	    id = arantiga_chaos.023
+	    title = arantiga_chaos.023.t
+	    desc = arantiga_chaos.023.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.023.a
+	        add_ideas = ARA_knowledge_dangers
+	    }
+	}
+	country_event = { #Prophet of Arantigos
+	    id = arantiga_chaos.024
+	    title = arantiga_chaos.024.t
+	    desc = arantiga_chaos.024.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.024.a
+	    }
+	}
+	country_event = { #temple construction
+	    id = arantiga_chaos.025
+	    title = arantiga_chaos.025.t
+	    desc = arantiga_chaos.025.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.025.a
+	        add_timed_idea = {
+			    idea = ARA_crippling_spending
+				days = 360
+			}
+			add_ideas = ARA_great_temple
+			371 = {
+			    add_manpower = 500000
+			    add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+				    type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+	    }
+	}
+	country_event = { #arantigan atrocities
+	    id = arantiga_chaos.026
+	    title = arantiga_chaos.026.t
+	    desc = arantiga_chaos.026.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.026.a
+	        add_stability = -0.1
+			358 = {
+			    add_manpower = 200000
+			}
+	    }
+	}
+	country_event = { #arantigan exiles
+	    id = arantiga_chaos.027
+	    title = arantiga_chaos.027.t
+	    desc = arantiga_chaos.027.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.027.a
+	        add_manpower = 1000
+	    }
+	}
+	country_event = { #grover's fate
+	    id = arantiga_chaos.028
+	    title = arantiga_chaos.028.t
+	    desc = arantiga_chaos.028.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+	    option = {
+	        name = arantiga_chaos.028.a
+			#TODO
+	    }
 	}
 	
 	country_event = { #New King
@@ -948,7 +1099,7 @@ country_event = { #Griffonstone Archives
 	}
 	create_country_leader = {
 			name = "Soter Litori"
-			picture = "soter_president.tga"
+			picture = "soter.tga"
 			expire = "1965.1.1"
 			ideology = socialism
 			desc = soter_president_desc
@@ -1826,7 +1977,6 @@ country_event = { #Griffonstone Archives
 		picture = GFX_news_manehattan_explosion
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_griffon_soldier
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -1866,7 +2016,7 @@ country_event = { #Griffonstone Archives
 	    desc = arantiga_news.3.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_griffon_soldier
+	    picture = GFX_news_bronclyn_bridge
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -1911,7 +2061,7 @@ country_event = { #Griffonstone Archives
 	    desc = arantiga_news.4.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_griffon_soldier
+	    picture = GFX_news_event_olenia_castle
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -1956,7 +2106,7 @@ country_event = { #Griffonstone Archives
 	    desc = arantiga_news.5.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_griffon_soldier
+	    picture = GFX_news_griffonstone
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -2002,7 +2152,6 @@ country_event = { #Griffonstone Archives
 		picture = GFX_news_talononte
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_griffon_soldier
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -2023,6 +2172,64 @@ country_event = { #Griffonstone Archives
 			}
 	    }
 	}
+	#1.1#
+	news_event = { #Ascension of Arantigos
+	    id = arantiga_news.7
+	    title = arantiga_news.7.t
+	    desc = arantiga_news.7.d
+		picture = GFX_news_griffon_soldier
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+			has_idea = griffon_race
+		}
+		option = {
+		    name = arantiga_news.7.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+	        name = arantiga_news.7.b
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+				}
+			}
+	    }
+	}
+	news_event = { #Holy Arantigan Empire
+	    id = arantiga_news.8
+	    title = arantiga_news.8.t
+	    desc = arantiga_news.8.d
+		picture = GFX_news_griffon_soldier
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+			has_idea = griffon_race
+		}
+		option = {
+		    name = arantiga_news.8.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+	        name = arantiga_news.8.b
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+				}
+			}
+	    }
+	}
+	#####
 	country_event = { #debug event to load the imperial tree
 	    id = arantiga.666
 		title = arantiga.666.t

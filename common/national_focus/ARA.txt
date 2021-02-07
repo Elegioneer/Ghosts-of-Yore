@@ -1925,7 +1925,7 @@ focus_tree = {
 			    set_country_flag = ARA_reorganise_high_command_flag
 			}
 
-			####Access to decisions “Arantigans Abroad”### TODO
+			##Gives access to decisions “Arantigans Abroad”##
 		}
 }
 
@@ -2386,13 +2386,24 @@ focus_tree = {
 		prerequisite = { focus = ARA_sparleto_university }
 		prerequisite = { focus = ARA_new_arantigos }
 		completion_reward = {
-	    swap_ideas = {
+	        swap_ideas = {
 				remove_idea = ARA_arantigos_boreas1
 				add_idea = ARA_arantigos_boreas2
 			}
-		######## TODO INCOMPLETE Relations with other griffon nations -20 (Heretical madgriff) ###########
+		    custom_effect_tooltip = ARA_CETT_heretic
+			hidden_effect = {
+			    every_other_country = {
+				    limit = {
+						has_idea = griffon_race
+					}
+			        reverse_add_opinion_modifier = {
+                        target = ARA
+                        modifier = ARA_heretical_madgriff
+					}
+                }
+			}
 		}
-		}
+	}
 	
 	focus = { 
 		id = ARA_legacy_of_grover
@@ -3323,13 +3334,13 @@ focus_tree = {
 		# Nicator's Republic/Kingdom tree #
 	shared_focus = { #The Traitor
 		id = ARA_traitor
-		icon = GFX_unknown
+		icon = GFX_goal_goy_traitor
 		x = -4
 		y = 2
 		cost = 1.00
 		relative_position_id = ARA_chaos
 		prerequisite = { focus = ARA_power_struggle	}
-		bypass = {
+		available = {
 		    always = no
 		}
 		completion_reward = {
@@ -3541,7 +3552,7 @@ focus_tree = {
 		completion_reward = {
 		create_country_leader = {
 			name = "Nicator I Whitebeak"
-			picture = "nicator_king.tga"
+			picture = "nicator.tga"
 			expire = "1965.1.1"
 			ideology = despotism
 			desc = king_nicator_desc
@@ -3785,10 +3796,17 @@ focus_tree = {
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_golden_age }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
+		available = {
+		    has_country_leader = { name = "Soter Litori" ruling_only = yes}
+		}
 		bypass = {
 		    owns_state = 382
 		}
 		completion_reward = {
+		    custom_effect_tooltip = ARA_load_imperial_tree
+		    hidden_effect = {
+			    mark_focus_tree_layout_dirty = yes
+			}
 		    IF = {
 			    limit = {
 				    GRI = {
@@ -4023,39 +4041,31 @@ focus_tree = {
 		}
 		
 		## CENTRAL GRIFFONIAN REPUBLIC TREE ##
-		
-focus_tree = {
-	id = Arantiga_republic
-	
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			original_tag = ARA
-		}
-	}
-	
-	default = no
-	continuous_focus_position = { x = 290 y = 2500 }
-	
-		shared_focus = ARA_the_new_airforce
-		shared_focus = ARA_self_strength
-		shared_focus = ARA_new_age_new_army
-		shared_focus = ARA_rumare_exercises
-		shared_focus = ARA_chaos
-		
-		shared_focus = ARA_central_republic
-		
-}
 
     shared_focus = {
 		id = ARA_central_republic
 		icon = GFX_unknown
 		x = 1
-		y = 2
+		y = 1
 		cost = 10.00
+		prerequisite = { focus = ARA_march_on_griffenheim }
+		relative_position_id = ARA_march_on_griffenheim
+		allow_branch = {
+		    has_completed_focus = ARA_march_on_griffenheim
+		}
+		available = {
+		    owns_state = 382
+		}
 		completion_reward = {
-		    
+		    GRI = { add_to_ROOT_potential_cores = yes }
+		    ANG = { add_to_ROOT_potential_cores = yes }
+		    STW = { add_to_ROOT_potential_cores = yes }
+		    BRZ = { add_to_ROOT_potential_cores = yes }
+		    FEA = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+		    PYT = { add_to_ROOT_potential_cores = yes }
+		    YAL = { add_to_ROOT_potential_cores = yes }
+		    KAT = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	shared_focus = {
@@ -4066,8 +4076,117 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_central_republic }
+		bypass = {
+		    owns_state = 378
+			owns_state = 674
+			owns_state = 398
+			owns_state = 411
+			owns_state = 423
+			owns_state = 520
+			owns_state = 486
+			owns_state = 492
+			owns_state = 382
+		}
 		completion_reward = {
-		    
+		    every_other_country = {
+			    limit = {
+				    owns_state = 378
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 674
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 398
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 411
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 423
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 382
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 520
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 486
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 492
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4079,7 +4198,7 @@ focus_tree = {
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_central_republic }
 		completion_reward = {
-		    
+		    country_event = arantiga_chaos.028
 		}
 	}
 	shared_focus = {
@@ -4090,8 +4209,45 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_liberate_herzland }
+		available = {
+		    owns_state = 437
+			owns_state = 411
+			owns_state = 443
+			owns_state = 492
+		}
 		completion_reward = {
-		    
+		    437 = { #Crona
+			    add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			411 = { #Griffing/angriver
+			    add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			443 = { #Osnabeak
+			    add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			492 = { #BRZkrz
+			    add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 	shared_focus = {
@@ -4104,7 +4260,8 @@ focus_tree = {
 		prerequisite = { focus = ARA_liberate_herzland }
 		prerequisite = { focus = ARA_child_emperor }
 		completion_reward = {
-		    
+		    add_stability = 0.05
+			set_capital = 382
 		}
 	}
 	shared_focus = {
@@ -4116,7 +4273,10 @@ focus_tree = {
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_child_emperor }
 		completion_reward = {
-		    
+		    swap_ideas = {
+			    remove_idea = ARA_liberty_death
+				add_idea = ARA_liberty_death_2
+			}
 		}
 	}
 	shared_focus = {
@@ -4127,8 +4287,27 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_invest_in_herzland }
+		available = {
+		    owns_state = 443
+			owns_state = 545
+			owns_state = 546
+		}
 		completion_reward = {
-		    
+		    add_resource = {
+				type = oil
+				amount = 12
+				state = 443
+			}
+			add_resource = {
+				type = chromium
+				amount = 18
+				state = 545
+			}
+			add_resource = {
+				type = steel
+				amount = 21
+				state = 546
+			}
 		}
 	}
 	shared_focus = {
@@ -4136,13 +4315,308 @@ focus_tree = {
 		icon = GFX_unknown
 		x = -1
 		y = 3
-		cost = 5.00
+		cost = 10.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_invest_in_herzland }
 		prerequisite = { focus = ARA_move_to_griffenheim }
 		prerequisite = { focus = ARA_liberte }
+		select_effect = {
+			add_timed_idea = {
+			    idea = ARA_sizeable_spending
+				days = 60
+			}
+		}
+		available = {
+		    has_war = no
+			GRI = { exists = no }
+		    ANG = { exists = no }
+		    STW = { exists = no }
+		    BRZ = { exists = no }
+		    FEA = { exists = no }
+			ROU = { exists = no }
+		    PYT = { exists = no }
+		    YAL = { exists = no }
+		    KAT = { exists = no }
+		}
 		completion_reward = {
-		    
+			custom_effect_tooltip = ARA_railroad_tooltip
+			hidden_effect = {
+			    #Angriver
+			547 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			422 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			411 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Katerin
+			506 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			554 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			423 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Yale
+			665 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			402 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			439 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			398 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Greifemarschen
+			399 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			447 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			378 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Romau
+			674 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Griffonian Empire starting land
+			555 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			437 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			397 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			405 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			382 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Feathisia
+			666 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			440 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			441 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			520 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			434 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			498 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			538 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			433 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			497 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Strawberry
+			443 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			545 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			546 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			486 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			458 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Bronzehill
+			424 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			479 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			492 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			568 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			539 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			}
 		}
 	}
 	shared_focus = {
@@ -4156,7 +4630,7 @@ focus_tree = {
 		prerequisite = { focus = ARA_move_to_griffenheim }
 		prerequisite = { focus = ARA_liberte }
 		completion_reward = {
-		    
+		    add_ideas = ARA_republican_land_reform
 		}
 	}
 	shared_focus = {
@@ -4164,11 +4638,14 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 3
 		y = 3
-		cost = 5.00
+		cost = 10.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_liberte }
 		completion_reward = {
-		    
+		    swap_ideas = {
+			    remove_idea = ARA_new_path
+				add_idea = ARA_peace_prosperity
+			}
 		}
 	}
 	shared_focus = {
@@ -4181,19 +4658,19 @@ focus_tree = {
 		prerequisite = { focus = ARA_integrate_infrastructure_rep }
 		prerequisite = { focus = ARA_land_reform }
 		completion_reward = {
-		    
+		    add_ideas = ARA_republicanism_beacon
 		}
 	}
 	# Lysimachus' Holy Empire tree #
 	shared_focus = { #The Inheritor
 		id = ARA_inheritor
-		icon = GFX_unknown
+		icon = GFX_goal_goy_inheritor
 		x = 4
 		y = 2
 		cost = 1.00
 		relative_position_id = ARA_chaos
 		prerequisite = { focus = ARA_power_struggle	}
-		bypass = {
+		available = {
 		    always = no
 		}
 		completion_reward = {
@@ -4205,13 +4682,17 @@ focus_tree = {
 		icon = GFX_unknown
 		x = -2
 		y = 1
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_inheritor	}
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_political_power = -200
+			swap_ideas = {
+			    remove_idea = ARA_absolute_chaos
+				add_idea = ARA_absolute_chaos_1
+			}
 		}
 	}
 	shared_focus = {
@@ -4219,13 +4700,22 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 0
 		y = 1
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_inheritor	}
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_timed_idea = {
+			    idea = ARA_great_purge
+				days = 360
+			}
+			add_manpower = -50000
+			remove_unit_leader = 1334
+			swap_ideas = {
+			    remove_idea = ARA_absolute_chaos_1
+				add_idea = ARA_absolute_chaos_2
+			}
 		}
 	}
 	shared_focus = {
@@ -4233,13 +4723,16 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 2
 		y = 1
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_inheritor	}
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    every_owned_state = {
+			    add_manpower = -10000
+			}
+			remove_ideas = ARA_absolute_chaos_2
 		}
 	}
 	shared_focus = {
@@ -4247,7 +4740,7 @@ focus_tree = {
 		icon = GFX_unknown
 		x = 0
 		y = 2
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_ensure_loyalty	}
 		prerequisite = { focus = ARA_purge_military	}
@@ -4255,7 +4748,8 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    remove_ideas = ARA_lysi_regency
+			news_event = arantiga_news.7
 		}
 	}
 	shared_focus = {
@@ -4269,7 +4763,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_ideas = ARA_fanatical_army
 		}
 	}
 	shared_focus = {
@@ -4283,7 +4777,10 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    swap_ideas = {
+			    remove_idea = ARA_militarized_economy
+				add_idea = ARA_militarized_economy_2
+			}
 		}
 	}
 	shared_focus = {
@@ -4297,7 +4794,10 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    swap_ideas = {
+			    remove_idea = ARA_every_griff
+				add_idea = ARA_every_griff_2
+			}
 		}
 	}
 	shared_focus = {
@@ -4313,7 +4813,29 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    IF = {
+			    limit = {
+				    FAL = {
+					    exists = yes
+					}
+				}
+		        create_wargoal = {
+			        type = annex_everything
+				    target = FAL
+			    }
+			}
+			create_wargoal = {
+			    type = annex_everything
+				target = WNG
+			}
+			create_wargoal = {
+			    type = annex_everything
+				target = TAL
+			}
+			create_wargoal = {
+			    type = annex_everything
+				target = FRN
+			}
 		}
 	}
 	shared_focus = {
@@ -4326,8 +4848,24 @@ focus_tree = {
 		prerequisite = { focus = ARA_time_of_revenge }
 		bypass = {
 		}
+		available = {
+		    owns_state = 371
+			owns_state = 529
+			FAL = {
+			    exists = no
+			}
+			WNG = {
+			    exists = no
+			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+		}
 		completion_reward = {
-		    
+		    country_event = arantiga_chaos.023
 		}
 	}
 	shared_focus = {
@@ -4338,10 +4876,26 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_time_of_revenge }
+		available = {
+		    owns_state = 371
+			owns_state = 529
+		    FAL = {
+			    exists = no
+			}
+			WNG = {
+			    exists = no
+			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+		}
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_ideas = ARA_one_language
 		}
 	}
 	shared_focus = {
@@ -4355,7 +4909,23 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    swap_ideas = {
+			   remove_idea = ARA_arantigos_boreas2
+			   add_idea = ARA_arantigos_eternal
+			}
+			country_event = arantiga_chaos.024
+			custom_effect_tooltip = ARA_CETT_heretic
+			hidden_effect = {
+			    every_other_country = {
+				    limit = {
+						has_idea = griffon_race
+					}
+			        reverse_add_opinion_modifier = {
+                        target = ARA
+                        modifier = ARA_heretic_lysi
+					}
+                }
+			}
 		}
 	}
 	shared_focus = {
@@ -4366,11 +4936,17 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_inheritor
 		prerequisite = { focus = ARA_pure_minds_lysi }
-		prerequisite = { focus = ARA_enforce_language	}
+		prerequisite = { focus = ARA_enforce_language }
+		available = {
+		    has_idea = ARA_work_camp
+		}
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    swap_ideas = {
+			    remove_idea = ARA_work_camp
+				add_idea = ARA_prison_economy_idea
+			}
 		}
 	}
 	shared_focus = {
@@ -4386,7 +4962,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    country_event = arantiga_chaos.025
 		}
 	}
 	shared_focus = {
@@ -4401,7 +4977,9 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_political_power = -50
+			add_manpower = -10000
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -4415,7 +4993,26 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    every_owned_state = {
+			    add_manpower = -10000
+			}
+			369 =  {
+			    add_manpower = -200000
+			}
+			add_stability = 0.05
+			hidden_effect = {
+			    EQC = {
+				    country_event = arantiga_chaos.026
+				}
+				every_neighbor_country = {
+				    limit = {
+					    NOT = {
+						    tag = EQC
+						}
+					}
+					country_event = arantiga_chaos.027
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4431,7 +5028,8 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_ideas = closed_economy_ara
+			add_ideas = ARA_closed_nation
 		}
 	}
 	shared_focus = {
@@ -4445,7 +5043,13 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_tech_bonus = {
+				name = nuclear_boom
+				bonus = 1.0
+				uses = 2
+				category = nuclear
+			}
+		    add_ideas = ARA_atomic_ascension
 		}
 	}
 	shared_focus = {
@@ -4460,7 +5064,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_ideas = ARA_invigilation
 		}
 	}
 	shared_focus = {
@@ -4476,7 +5080,15 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_stability = 0.1
+			add_war_support = 0.1
+			set_cosmetic_tag = ARA_HOLY
+			add_country_leader_trait = GOY_jailor_of_arantiga
+			FAL = { add_to_ROOT_potential_cores = yes }
+		    WNG = { add_to_ROOT_potential_cores = yes }
+		    TAL = { add_to_ROOT_potential_cores = yes }
+		    FRN = { add_to_ROOT_potential_cores = yes }
+			news_event = arantiga_news.8
 		}
 	}
 	shared_focus = {
@@ -4491,7 +5103,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-		    
+		    add_ideas = ARA_faithful_fortress
 		}
 	}
 

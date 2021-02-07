@@ -609,7 +609,7 @@ ideas = {
 			}
 			modifier = {
 			    air_ace_generation_chance_factor = 0.1
-			    experience_gain_navy = 0.05
+			    experience_gain_air = 0.05
 			}
 		}
 		BOI_streamlined_airprod = {
