@@ -945,6 +945,9 @@ country_event = { #Griffonstone Archives
 			    remove_idea = ARA_power_vacuum
 			    add_idea = ARA_nicator_junta
 		    }
+			hidden_effect = {
+			    complete_national_focus = ARA_traitor
+			}
 	    }
 	}
 	country_event = { #traitor's end
@@ -963,6 +966,9 @@ country_event = { #Griffonstone Archives
 			    remove_idea = ARA_power_vacuum
 			    add_idea = ARA_lysi_regency
 		    }
+			hidden_effect = {
+			    complete_national_focus = ARA_inheritor
+			}
 	    }
 	}
 	country_event = { #great burning
