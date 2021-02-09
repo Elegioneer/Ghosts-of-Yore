@@ -152,4 +152,8 @@ spriteTypes = {
 		name = "GFX_goal_goy_inheritor"
 		texturefile = "gfx/interface/goals/goal_goy_inheritor.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_arantigos_cult"
+		texturefile = "gfx/interface/goals/goal_goy_arantigos_cult.dds"
+	}
 }

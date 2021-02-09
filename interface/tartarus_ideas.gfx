@@ -162,4 +162,12 @@ spriteTypes = {
 		name = "GFX_idea_BOI_steelfeather"
 		texturefile = "gfx/interface/ideas/idea_BOI_steelfeather.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_goy_radiation"
+		texturefile = "gfx/interface/ideas/idea_goy_radiation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_goy_book_burn"
+		texturefile = "gfx/interface/ideas/idea_goy_book_burn.dds"
+	}
 }

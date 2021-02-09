@@ -3277,7 +3277,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = generic_intel_bonus
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = -0.3
@@ -3294,7 +3294,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = severe_famine4
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.10
@@ -3311,7 +3311,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = neutrality_idea
 			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
@@ -3331,7 +3331,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = friendly_harmony
 			removal_cost = -1
 			modifier = {
 				political_power_factor = 0.1
@@ -3350,7 +3350,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = hun_secret_rearmament
 			removal_cost = -1
 			modifier = {
 				army_attack_factor = 0.1
@@ -3368,7 +3368,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = goy_book_burn
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.1
@@ -3403,7 +3403,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = capital_outflow
+			picture = triumphant_will
 			removal_cost = -1
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -3421,7 +3421,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = hun_treaty_of_trianon
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -3440,7 +3440,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = PAP_Legionary_Spirit
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.1
@@ -3460,7 +3460,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = vittoria_mutilata
 			removal_cost = -1
 			modifier = {
 				opinion_gain_monthly_factor = -0.25
@@ -3479,7 +3479,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = generic_secret_police
 			removal_cost = -1
 			modifier = {
 				required_garrison_factor = -0.5
@@ -3497,7 +3497,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = goy_radiation
 			removal_cost = -1
 			modifier = {
 				production_speed_nuclear_reactor_factor = 0.25
@@ -3514,7 +3514,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = generic_purge
 			removal_cost = -1
 			modifier = {
 				army_org_factor = -0.2
@@ -3610,7 +3610,7 @@ country = {
 			}
 			available = {
 			}
-			picture = earl_browder
+			picture = FRA_fortification_focus
 			removal_cost = -1
 			modifier = {
 				production_speed_bunker_factor = 0.25
