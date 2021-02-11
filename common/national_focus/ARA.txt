@@ -2089,6 +2089,15 @@ focus_tree = {
 		prerequisite = { focus = ARA_right_to_rule }
 		will_lead_to_war_with = LAK
 		will_lead_to_war_with = BOI
+		bypass = {
+		    owns_state = 679
+			owns_state = 384
+			owns_state = 389
+			owns_state = 471
+			owns_state = 488
+			owns_state = 531
+			owns_state = 383
+		}
 		
 		completion_reward = {
 		create_wargoal = {
@@ -3357,29 +3366,59 @@ focus_tree = {
 		relative_position_id = ARA_traitor
 		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
-		add_manpower = -1000
-		add_stability = -0.4
-		add_popularity = { ideology = fascism popularity = -0.4 }
-		add_popularity = { ideology = neutrality popularity = 0.3 }
-		if = {
-		    limit = {
-			    has_idea = ARA_absolute_chaos
-			}
-		    swap_ideas = {
+		    add_manpower = -1000
+		    add_stability = -0.4
+		    add_popularity = { ideology = fascism popularity = -0.4 }
+		    add_popularity = { ideology = neutrality popularity = 0.3 }
+		    if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
 			    	remove_idea = ARA_absolute_chaos
 				    add_idea = ARA_absolute_chaos1
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos2
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos2
+				        add_idea = ARA_absolute_chaos4
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos3
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos3
+				        add_idea = ARA_absolute_chaos5
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos6
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos6
+				        add_idea = ARA_absolute_chaos7
+			        }
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos1
+			        }
+				}
 			}
-		}
-	    else = {
-		    swap_ideas = {
-			    	remove_idea = ARA_absolute_chaos1
-				    add_idea = ARA_absolute_chaos2
-			}
-		}
 		}
 	}
-		
-		
+	
 	shared_focus = { #Support of the army
 		id = ARA_support_army
 		icon = GFX_goal_support_of_the_army
@@ -3389,25 +3428,56 @@ focus_tree = {
 		relative_position_id = ARA_traitor
 		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
-		add_political_power = -200
-		if = {
-		    limit = {
-			    has_idea = ARA_absolute_chaos
-			}
-		    swap_ideas = {
+		    add_political_power = -200
+		    if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
 			    	remove_idea = ARA_absolute_chaos
-				    add_idea = ARA_absolute_chaos1
+				    add_idea = ARA_absolute_chaos3
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos1
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos1
+				        add_idea = ARA_absolute_chaos5
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos2
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos2
+				        add_idea = ARA_absolute_chaos6
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos4
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos4
+				        add_idea = ARA_absolute_chaos7
+			        }
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos3
+			        }
+				}
 			}
-		}
-	    else = {
-		    swap_ideas = {
-			    	remove_idea = ARA_absolute_chaos1
-				    add_idea = ARA_absolute_chaos2
-			}
-		}
 		}
 	}
-		
+	
 	shared_focus = { #Secure cities
 		id = ARA_secure_cities
 		icon = GFX_focus_generic_provoke_border_clashes
@@ -3417,15 +3487,56 @@ focus_tree = {
 		relative_position_id = ARA_traitor
 		prerequisite = { focus = ARA_traitor }
 		completion_reward = {
-		add_manpower = -30000
-		swap_ideas = {
-				remove_idea = ARA_absolute_chaos2
-				add_idea = ARA_absolute_chaos3
+		    add_manpower = -30000
+		    if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
+			    	remove_idea = ARA_absolute_chaos
+				    add_idea = ARA_absolute_chaos2
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos1
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos1
+				        add_idea = ARA_absolute_chaos4
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos3
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos3
+				        add_idea = ARA_absolute_chaos6
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos5
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos5
+				        add_idea = ARA_absolute_chaos7
+			        }
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos2
+			        }
+				}
 			}
-
 		}
-		}
-		
+	}
+	
 	shared_focus = { #Legacy of Arantigos
 		id = ARA_the_legacy
 		icon = GFX_goal_dorocoup
@@ -3438,8 +3549,8 @@ focus_tree = {
 		prerequisite = { focus = ARA_support_army }
 		completion_reward = {
 		swap_ideas = {
-				remove_idea = ARA_absolute_chaos3
-				add_idea = ARA_absolute_chaos4
+				remove_idea = ARA_absolute_chaos7
+				add_idea = ARA_slow_recovery
 			} 
 		}
 		}		
@@ -3535,7 +3646,7 @@ focus_tree = {
 		prerequisite = { focus = ARA_transition }
 		prerequisite = { focus = ARA_return_exiles }
 		completion_reward = {
-		remove_ideas = ARA_absolute_chaos4 
+		remove_ideas = ARA_slow_recovery 
 		remove_ideas = ARA_nicator_junta1
 		}
 		}			
@@ -4689,9 +4800,48 @@ focus_tree = {
 		}
 		completion_reward = {
 		    add_political_power = -200
-			swap_ideas = {
-			    remove_idea = ARA_absolute_chaos
-				add_idea = ARA_absolute_chaos_1
+			if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
+			    	remove_idea = ARA_absolute_chaos
+				    add_idea = ARA_absolute_chaos_1
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_2
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_2
+				        add_idea = ARA_absolute_chaos_4
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_3
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_3
+				        add_idea = ARA_absolute_chaos_5
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_6
+					}
+		            remove_ideas = ARA_absolute_chaos_6
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos_1
+			        }
+				}
 			}
 		}
 	}
@@ -4712,9 +4862,48 @@ focus_tree = {
 			}
 			add_manpower = -50000
 			remove_unit_leader = 1334
-			swap_ideas = {
-			    remove_idea = ARA_absolute_chaos_1
-				add_idea = ARA_absolute_chaos_2
+			if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
+			    	remove_idea = ARA_absolute_chaos
+				    add_idea = ARA_absolute_chaos_2
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_1
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_1
+				        add_idea = ARA_absolute_chaos_4
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_3
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_3
+				        add_idea = ARA_absolute_chaos_6
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_5
+					}
+		            remove_ideas = ARA_absolute_chaos_5
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos_2
+			        }
+				}
 			}
 		}
 	}
@@ -4732,7 +4921,49 @@ focus_tree = {
 		    every_owned_state = {
 			    add_manpower = -10000
 			}
-			remove_ideas = ARA_absolute_chaos_2
+			if = {
+		        limit = {
+			        has_idea = ARA_absolute_chaos
+			    }
+		        swap_ideas = {
+			    	remove_idea = ARA_absolute_chaos
+				    add_idea = ARA_absolute_chaos_3
+			    }
+		    
+	            else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_1
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_1
+				        add_idea = ARA_absolute_chaos_5
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_2
+					}
+		            swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos_2
+				        add_idea = ARA_absolute_chaos_6
+			        }
+		        }
+				
+				else_if = {
+				    limit = {
+					    has_idea = ARA_absolute_chaos_4
+					}
+		            remove_ideas = ARA_absolute_chaos_4
+		        }
+				
+				else = {
+				    swap_ideas = {
+			    	    remove_idea = ARA_absolute_chaos
+				        add_idea = ARA_absolute_chaos_3
+			        }
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4836,6 +5067,10 @@ focus_tree = {
 			    type = annex_everything
 				target = FRN
 			}
+			create_wargoal = {
+			    type = annex_everything
+				target = SIC
+			}
 		}
 	}
 	shared_focus = {
@@ -4861,6 +5096,9 @@ focus_tree = {
 			    exists = no
 			}
 			FRN = {
+			    exists = no
+			}
+			SIC = {
 			    exists = no
 			}
 		}
@@ -4889,6 +5127,9 @@ focus_tree = {
 			    exists = no
 			}
 			FRN = {
+			    exists = no
+			}
+			SIC = {
 			    exists = no
 			}
 		}
@@ -5069,7 +5310,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_declare_holy_empire
-		icon = GFX_goal_Black_State_Rising_2
+		icon = GFX_goal_goy_arasunrise
 		x = 0
 		y = 8
 		cost = 5.00
@@ -5084,11 +5325,12 @@ focus_tree = {
 			add_war_support = 0.1
 			set_cosmetic_tag = ARA_HOLY
 			add_country_leader_trait = GOY_jailor_of_arantiga
+			news_event = arantiga_news.8
 			FAL = { add_to_ROOT_potential_cores = yes }
 		    WNG = { add_to_ROOT_potential_cores = yes }
 		    TAL = { add_to_ROOT_potential_cores = yes }
 		    FRN = { add_to_ROOT_potential_cores = yes }
-			news_event = arantiga_news.8
+			SIC = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	shared_focus = {

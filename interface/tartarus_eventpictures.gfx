@@ -9,7 +9,8 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_arantiga2.dds"
 	}
 	
-	
+	spriteType = {
+		name = "GFX_news_arasunrise"
+		texturefile = "gfx/event_pictures/news_arasunrise.dds"
 	}
-	
 }

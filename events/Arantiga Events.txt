@@ -401,38 +401,43 @@ country_event = { #going lower
 	desc = arantiga.015.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = arantiga.015.a
-		kill_country_leader = yes
-		remove_unit_leader = 1333
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "Lysimachus"
-			picture = "Lysimachus.tga"
-			desc = "crazed_fanboy_desc"
-			expire = "1965.1.1"
-			ideology = falangism
-		}
-	
-		hidden_effect = {
-			set_country_flag = arantiga_flag_dorotheos_is_dead
-			custom_effect_tooltip = ARA_load_imperial_tree
-			hidden_effect = {
+	    option = {
+		    name = arantiga.025.a
+		    kill_country_leader = yes
+		    remove_unit_leader = 1333
+		    hidden_effect = {
+		        kill_ideology_leader = neutrality
+		    }
+		    create_country_leader = {
+		        name = "Nicator Whitebeak"
+		        desc = "justified_traitor_desc"
+		        picture = "nicator.tga"
+		        expire = "1965.1.1"
+		        ideology = despotism
+		    }
+		    create_country_leader = {
+			    name = "Lysimachus"
+			    picture = "Lysimachus.tga"
+			    desc = "crazed_fanboy_desc"
+			    expire = "1965.1.1"
+			    ideology = falangism
+		    }
+	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
+		    hidden_effect = {
+			    set_country_flag = arantiga_flag_dorotheos_is_dead
+			    custom_effect_tooltip = ARA_load_imperial_tree
 			    load_focus_tree = Arantiga_chaos
-			}
-			country_event = { 
+			    country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
 			    }
 		    }
-		ai_chance = {
-			base = 1
+			ai_chance = {
+			    base = 1
+			}
 		}
-		}
-		}
+	}
 		
 	country_event = { #Wind weakens
 	id = arantiga.016
@@ -524,35 +529,40 @@ country_event = { #going lower
 	desc = arantiga.018.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = arantiga.018.a
-		kill_country_leader = yes
-		remove_unit_leader = 1333
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "Lysimachus"
-			picture = "Lysimachus.tga"
-			desc = "crazed_fanboy_desc"
-			expire = "1965.1.1"
-			ideology = falangism
-		}
-	
-		hidden_effect = {
-			set_country_flag = arantiga_flag_dorotheos_is_dead
-			custom_effect_tooltip = ARA_load_imperial_tree
-			hidden_effect = {
+	    option = {
+		    name = arantiga.025.a
+		    kill_country_leader = yes
+		    remove_unit_leader = 1333
+		    hidden_effect = {
+		        kill_ideology_leader = neutrality
+		    }
+		    create_country_leader = {
+		        name = "Nicator Whitebeak"
+		        desc = "justified_traitor_desc"
+		        picture = "nicator.tga"
+		        expire = "1965.1.1"
+		        ideology = despotism
+		    }
+		    create_country_leader = {
+			    name = "Lysimachus"
+			    picture = "Lysimachus.tga"
+			    desc = "crazed_fanboy_desc"
+			    expire = "1965.1.1"
+			    ideology = falangism
+		    }
+	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
+		    hidden_effect = {
+			    set_country_flag = arantiga_flag_dorotheos_is_dead
+			    custom_effect_tooltip = ARA_load_imperial_tree
 			    load_focus_tree = Arantiga_chaos
-			}
-			country_event = { 
+			    country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
 			    }
 		    }
 		}
-		}
+	}
 
 	country_event = { #Doorkeeper
 	id = arantiga.019
@@ -600,35 +610,40 @@ country_event = { #going lower
 	picture = GFX_event_spook_1
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = arantiga.020.a
-		kill_country_leader = yes
-		remove_unit_leader = 1333
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "Lysimachus"
-			picture = "Lysimachus.tga"
-			desc = "crazed_fanboy_desc"
-			expire = "1965.1.1"
-			ideology = falangism
-		}
-	
-		hidden_effect = {
-			set_country_flag = arantiga_flag_dorotheos_is_dead
-			custom_effect_tooltip = ARA_load_imperial_tree
-			hidden_effect = {
+	    option = {
+		    name = arantiga.025.a
+		    kill_country_leader = yes
+		    remove_unit_leader = 1333
+		    hidden_effect = {
+		        kill_ideology_leader = neutrality
+		    }
+		    create_country_leader = {
+		        name = "Nicator Whitebeak"
+		        desc = "justified_traitor_desc"
+		        picture = "nicator.tga"
+		        expire = "1965.1.1"
+		        ideology = despotism
+		    }
+		    create_country_leader = {
+			    name = "Lysimachus"
+			    picture = "Lysimachus.tga"
+			    desc = "crazed_fanboy_desc"
+			    expire = "1965.1.1"
+			    ideology = falangism
+		    }
+	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
+		    hidden_effect = {
+			    set_country_flag = arantiga_flag_dorotheos_is_dead
+			    custom_effect_tooltip = ARA_load_imperial_tree
 			    load_focus_tree = Arantiga_chaos
-			}
-			country_event = { 
+			    country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
 			    }
 		    }
 		}
-		}
+	}
 
 	country_event = { #Kings of old
 	id = arantiga.021
@@ -676,35 +691,40 @@ country_event = { #going lower
 	picture = GFX_event_gothic_interior
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = arantiga.022.a
-		kill_country_leader = yes
-		remove_unit_leader = 1333
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-		create_country_leader = {
-			name = "Lysimachus"
-			picture = "Lysimachus.tga"
-			desc = "crazed_fanboy_desc"
-			expire = "1965.1.1"
-			ideology = falangism
-		}
-	
-		hidden_effect = {
-			set_country_flag = arantiga_flag_dorotheos_is_dead
-			custom_effect_tooltip = ARA_load_imperial_tree
-			hidden_effect = {
+	    option = {
+		    name = arantiga.025.a
+		    kill_country_leader = yes
+		    remove_unit_leader = 1333
+		    hidden_effect = {
+		        kill_ideology_leader = neutrality
+		    }
+		    create_country_leader = {
+		        name = "Nicator Whitebeak"
+		        desc = "justified_traitor_desc"
+		        picture = "nicator.tga"
+		        expire = "1965.1.1"
+		        ideology = despotism
+		    }
+		    create_country_leader = {
+			    name = "Lysimachus"
+			    picture = "Lysimachus.tga"
+			    desc = "crazed_fanboy_desc"
+			    expire = "1965.1.1"
+			    ideology = falangism
+		    }
+	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
+		    hidden_effect = {
+			    set_country_flag = arantiga_flag_dorotheos_is_dead
+			    custom_effect_tooltip = ARA_load_imperial_tree
 			    load_focus_tree = Arantiga_chaos
-			}
-			country_event = { 
+			    country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
 			    }
 		    }
 		}
-		}
+	}
 
 	country_event = { #Claiming Destiny
 	id = arantiga.023
@@ -777,42 +797,40 @@ country_event = { #No remorse
 	picture = GFX_event_autumn
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = arantiga.025.a
-		kill_country_leader = yes
-		remove_unit_leader = 1333
-		hidden_effect = {
-		    kill_ideology_leader = neutrality
-		}
-		create_country_leader = {
-		    name = "Nicator Whitebeak"
-		    desc = "justified_traitor_desc"
-		    picture = "nicator.tga"
-		    expire = "1965.1.1"
-		    ideology = despotism
-		}
-		create_country_leader = {
-			name = "Lysimachus"
-			picture = "Lysimachus.tga"
-			desc = "crazed_fanboy_desc"
-			expire = "1965.1.1"
-			ideology = falangism
-		}
-	    set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
-		set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
-		hidden_effect = {
-			set_country_flag = arantiga_flag_dorotheos_is_dead
-			custom_effect_tooltip = ARA_load_imperial_tree
-			hidden_effect = {
+	    option = {
+		    name = arantiga.025.a
+		    kill_country_leader = yes
+		    remove_unit_leader = 1333
+		    hidden_effect = {
+		        kill_ideology_leader = neutrality
+		    }
+		    create_country_leader = {
+		        name = "Nicator Whitebeak"
+		        desc = "justified_traitor_desc"
+		        picture = "nicator.tga"
+		        expire = "1965.1.1"
+		        ideology = despotism
+		    }
+		    create_country_leader = {
+			    name = "Lysimachus"
+			    picture = "Lysimachus.tga"
+			    desc = "crazed_fanboy_desc"
+			    expire = "1965.1.1"
+			    ideology = falangism
+		    }
+	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
+		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
+		    hidden_effect = {
+			    set_country_flag = arantiga_flag_dorotheos_is_dead
+			    custom_effect_tooltip = ARA_load_imperial_tree
 			    load_focus_tree = Arantiga_chaos
-			}
-			country_event = { 
+			    country_event = { 
 			        id = arantiga_chaos.001
 					days = 5
 			    }
 		    }
 		}
-		}
+	}
 
 	country_event = { #Nicator's coup
 	id = arantiga.026
@@ -931,12 +949,21 @@ country_event = { #Griffonstone Archives
 	    picture = GFX_event_griffon_soldier
 	    option = {
 	        name = arantiga_chaos.021.a
-	        remove_unit_leader = 1335 
+	        remove_unit_leader = 1335
+			add_manpower = -15000
+			kill_ideology_leader = fascism
 	        set_politics = {
 			    ruling_party = neutrality
 			    elections_allowed = no
 		    }
-	        add_manpower = -30000
+			hidden_effect = {
+			    create_country_leader = {
+			        name = "Craterus"
+			        picture = "Craterus.tga"
+			        expire = "1965.1.1"
+			        ideology = falangism
+				}
+		    }
 	        add_popularity = { ideology = neutrality popularity = 0.1 }
 	        add_popularity = { ideology = democratic popularity = 0.1 }
 	        add_popularity = { ideology = communism popularity = 0.1 }
@@ -2211,7 +2238,7 @@ country_event = { #Griffonstone Archives
 	    id = arantiga_news.8
 	    title = arantiga_news.8.t
 	    desc = arantiga_news.8.d
-		picture = GFX_news_griffon_soldier
+		picture = GFX_news_arasunrise
 	    is_triggered_only = yes
 	    fire_only_once = yes
 	    show_major = {

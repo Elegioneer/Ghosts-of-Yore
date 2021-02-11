@@ -48,9 +48,12 @@ ARA_blyat_cat = {
 		has_completed_focus = ARA_craddle
 		BAN = {
 		    is_neighbor_of = ARA
-		    any_owned_state = {
-			    is_core_of = BOI
-			}
+		    controls_state = 679
+			controls_state = 384
+			controls_state = 389
+			controls_state = 471
+			controls_state = 488
+			controls_state = 531
 		}
 	}
 }
