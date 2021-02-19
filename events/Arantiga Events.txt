@@ -1124,29 +1124,525 @@ country_event = { #Griffonstone Archives
 	}
 	option = {
 	name = arantiga_chaos.004.b
-	set_party_name = {ideology = democratic name = ARA_soter_coalition long_name = ARA_soter_coalition_long }
+	set_party_name = {ideology = neutrality name = ARA_soter_coalition long_name = ARA_soter_coalition_long }
 	set_party_name = { 
     	ideology = communism
     	long_name = ARA_soter_coalition_long1 
     	name = ARA_soter_coalition1
 	}
-	create_country_leader = {
+	retire_country_leader = yes
+	    create_country_leader = {
 			name = "Soter Litori"
 			picture = "soter.tga"
 			expire = "1965.1.1"
-			ideology = socialism
-			desc = soter_president_desc
-		}
-	set_politics = {
-			ruling_party = democratic
-			elections_allowed = no
+			ideology = populism
+		    desc = soter_president_desc
 		}
 	add_stability = 0.1
-	add_popularity = { ideology = democratic popularity = 0.30 }
-	add_popularity = { ideology = communism popularity = 0.05 }
+	add_popularity = { ideology = neutrality popularity = 0.10 }
+	add_popularity = { ideology = communism popularity = 0.2 }
+	    hidden_effect = {
+		    country_event = {
+			    id = arantiga_chaos.030
+				days = 7
+			}
+		}
+		custom_effect_tooltip = ARA_load_imperial_tree
+		hidden_effect = {
+		    set_country_flag = ARA_soter_march_flag
+		    mark_focus_tree_layout_dirty = yes
+		}
 	}
 	}
-
+	
+	country_event = { #All as Planned
+	    id = arantiga_chaos.030
+	    title = arantiga_chaos.030.t
+	    desc = arantiga_chaos.030.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.030.a
+		}
+	}
+	
+	country_event = { #Reprisal
+	    id = arantiga_chaos.031
+	    title = arantiga_chaos.031.t
+	    desc = arantiga_chaos.031.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.031.a
+			add_timed_idea = {
+			    idea = ARA_fallout_protests
+				days = 90
+			}
+			add_ideas = ARA_sicameon_rebellion
+			every_owned_state = {
+			    limit = {
+				    is_core_of = SIC
+				}
+				add_resistance = 30
+				add_compliance = -30
+			}
+			445 = {
+			    add_manpower = -75000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			509 = {
+			    add_manpower = -50000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			528 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			444 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			460 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+		}
+	}
+	
+	country_event = { #Land of the free
+	    id = arantiga_chaos.032
+	    title = arantiga_chaos.032.t
+	    desc = arantiga_chaos.032.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.032.a
+		}
+	}
+	country_event = { #Funeral pyre
+	    id = arantiga_chaos.033
+	    title = arantiga_chaos.033.t
+	    desc = arantiga_chaos.033.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.033.a
+			add_manpower = -100000
+			add_political_power = -100
+			add_stability = -0.1
+			445 = {
+			    add_manpower = -500000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			444 = {
+			    add_manpower = -200000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			394 = {
+			    add_manpower = -100000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			460 = {
+			    add_manpower = -100000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			509 = {
+			    add_manpower = -100000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			570 = {
+			    add_manpower = -75000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			528 = {
+			    add_manpower = -75000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			527 = {
+			    add_manpower = -50000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			535 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			395 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			518 = {
+			    add_manpower = -25000
+				damage_building = {
+                    type = infrastructure
+                    damage = 2
+                }
+				damage_building = {
+                    type = arms_factory
+                    damage = 2
+                }
+				damage_building = {
+                    type = industrial_complex
+                    damage = 2
+                }
+			}
+			hidden_effect = {
+			    news_event = arantiga_news.10
+			}
+		}
+	}
+	country_event = { #Exiles from Sicameon
+	    id = arantiga_chaos.034
+	    title = arantiga_chaos.034.t
+	    desc = arantiga_chaos.034.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.034.a
+			463 = {
+			    add_manpower = 125000
+			}
+		}
+	}
+	country_event = { #To Punish the wicked
+	    id = arantiga_chaos.035
+	    title = arantiga_chaos.035.t
+	    desc = arantiga_chaos.035.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.035.a
+			EQC = {
+			    country_event = {
+				    id = arantiga_chaos.036
+				    hours = 12
+				}
+			}
+		}
+	}
+    country_event = { #Arantigan Ultimatum
+	    id = arantiga_chaos.036
+	    title = arantiga_chaos.036.t
+	    desc = arantiga_chaos.036.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.036.a
+			ai_chance = {
+			    base = 1
+			}
+			ARA = {
+			    country_event = {
+				    id = arantiga_chaos.038
+					hours = 12
+				}
+			}
+			add_war_support = 0.25
+			add_manpower = 100000
+		}
+		option = {
+			name = arantiga_chaos.036.b
+			ai_chance = {
+			    base = 0
+			}
+			ARA = {
+			    country_event = arantiga_chaos.037
+			}
+			add_political_power = -250
+			add_stability = -0.75
+			add_war_support = -0.75
+			ARA = {
+			    transfer_state = 354
+				transfer_state = 355
+				transfer_state = 356
+				transfer_state = 357
+				transfer_state = 358
+				transfer_state = 359
+			}
+		}
+	}
+	country_event = { #Yes
+	    id = arantiga_chaos.037
+	    title = arantiga_chaos.037.t
+	    desc = arantiga_chaos.037.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.037.a
+			
+		}
+	}
+	country_event = { #No
+	    id = arantiga_chaos.038
+	    title = arantiga_chaos.038.t
+	    desc = arantiga_chaos.038.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.038.a
+			declare_war_on = { type = annex_everything target = EQC }
+		}
+	}
+	country_event = { #Bitter peace
+	    id = arantiga_chaos.039
+	    title = arantiga_chaos.039.t
+	    desc = arantiga_chaos.039.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.039.a
+			ai_chance = {
+			    base = 1
+			}
+			add_stability = -0.25
+			add_war_support = -0.25
+			ARA = {
+			    transfer_state = 354
+				transfer_state = 355
+				transfer_state = 356
+				transfer_state = 357
+				transfer_state = 358
+				transfer_state = 359
+			}
+			every_country = {
+			    limit = {
+				    OR = {
+					    is_in_faction_with = EQC
+						original_tag = EQC
+						is_subject_of = EQC
+					}
+					has_defensive_war_with = ARA
+				}
+				white_peace = ARA
+			}
+		}
+		option = {
+			name = arantiga_chaos.039.b
+			trigger = {
+			    is_ai = no
+				is_subject = yes
+			}
+		}
+	}
+	country_event = { #Wave of Refugees
+	    id = arantiga_chaos.040
+	    title = arantiga_chaos.040.t
+	    desc = arantiga_chaos.040.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.040.a
+			add_stability = -0.1
+			12 = {
+			    add_manpower = 100000
+			}
+			13 = {
+			    add_manpower = 100000
+			}
+			75 = {
+			    add_manpower = 100000
+			}
+		}
+	}
+	country_event = { #Refugee Crisis
+	    id = arantiga_chaos.041
+	    title = arantiga_chaos.041.t
+	    desc = arantiga_chaos.041.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.041.a
+			add_timed_idea = {
+			    idea = ARA_refugee_crisis
+				days = 360
+			}
+			362 = {
+			    add_manpower = 600000
+			}
+			363 = {
+			    add_manpower = 100000
+			}
+			364 = {
+			    add_manpower = 100000
+			}
+			365 = {
+			    add_manpower = 100000
+			}
+			360 = {
+			    add_manpower = 250000
+			}
+			361 = {
+			    add_manpower = 250000
+			}
+		}
+	}
+	country_event = { #Farewell to New Mareland
+	    id = arantiga_chaos.042
+	    title = arantiga_chaos.042.t
+	    desc = arantiga_chaos.042.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_event_griffon_soldier
+		option = {
+			name = arantiga_chaos.042.a
+		}
+	}
 	country_event = { #Aquileia considers arantiga
 	id = arantiga_chaos.005
 	title = arantiga_chaos.005.t
@@ -2255,6 +2751,68 @@ country_event = { #Griffonstone Archives
 		}
 		option = {
 	        name = arantiga_news.8.b
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+				}
+			}
+	    }
+	}
+	news_event = { #Ponies exiled from New Mareland
+	    id = arantiga_news.9
+	    title = arantiga_news.9.t
+	    desc = arantiga_news.9.d
+		picture = GFX_news_sunset_city
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = arantiga_news.9.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+		    name = arantiga_news.9.b
+			trigger = {
+				original_tag = EQC
+			}
+		}
+		option = {
+	        name = arantiga_news.9.c
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+					original_tag = EQC
+				}
+			}
+	    }
+	}
+	news_event = { #Sicameonese Bloodbath
+	    id = arantiga_news.10
+	    title = arantiga_news.10.t
+	    desc = arantiga_news.10.d
+		picture = GFX_news_sunset_city
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+			has_idea = griffon_race
+		}
+		option = {
+		    name = arantiga_news.10.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+	        name = arantiga_news.10.b
 			trigger = {
 			    NOT = {
 				    original_tag = ARA

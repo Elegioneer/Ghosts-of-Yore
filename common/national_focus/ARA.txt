@@ -1582,7 +1582,7 @@
 		
 	shared_focus = {
 		id = ARA_northern_industry
-		icon = GFX_goal_generic_takeover_industries
+		icon = GFX_goal_improve_industry
 		x = -2
 		y = 1
 		relative_position_id = ARA_exploit_conquered
@@ -3318,7 +3318,7 @@ focus_tree = {
 	shared_focus = { #CHAOS
 		id = ARA_chaos
 		icon = GFX_goal_revolution
-		x = 34
+		x = 35
 		y = 0
 		cost = 0
 		bypass = {
@@ -3344,7 +3344,7 @@ focus_tree = {
 	shared_focus = { #The Traitor
 		id = ARA_traitor
 		icon = GFX_goal_goy_traitor
-		x = -4
+		x = -6
 		y = 2
 		cost = 1.00
 		relative_position_id = ARA_chaos
@@ -3898,7 +3898,7 @@ focus_tree = {
 		}
     shared_focus = {
 		id = ARA_march_on_griffenheim
-		icon = GFX_unknown
+		icon = GFX_goal_red_eagle
 		x = 4
 		y = 2
 		cost = 5.00
@@ -3907,6 +3907,9 @@ focus_tree = {
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_golden_age }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
+		allow_branch = {
+		    has_country_flag = ARA_soter_march_flag
+		}
 		available = {
 		    has_country_leader = { name = "Soter Litori" ruling_only = yes}
 		}
@@ -3914,10 +3917,6 @@ focus_tree = {
 		    owns_state = 382
 		}
 		completion_reward = {
-		    custom_effect_tooltip = ARA_load_imperial_tree
-		    hidden_effect = {
-			    mark_focus_tree_layout_dirty = yes
-			}
 		    IF = {
 			    limit = {
 				    GRI = {
@@ -4155,19 +4154,18 @@ focus_tree = {
 
     shared_focus = {
 		id = ARA_central_republic
-		icon = GFX_unknown
+		icon = GFX_goal_red_menace_griffonia
 		x = 1
 		y = 1
 		cost = 10.00
 		prerequisite = { focus = ARA_march_on_griffenheim }
 		relative_position_id = ARA_march_on_griffenheim
-		allow_branch = {
-		    has_completed_focus = ARA_march_on_griffenheim
-		}
+		
 		available = {
 		    owns_state = 382
 		}
 		completion_reward = {
+		    set_cosmetic_tag = ARA_CREP
 		    GRI = { add_to_ROOT_potential_cores = yes }
 		    ANG = { add_to_ROOT_potential_cores = yes }
 		    STW = { add_to_ROOT_potential_cores = yes }
@@ -4181,7 +4179,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_liberate_herzland
-		icon = GFX_unknown
+		icon = GFX_goal_OTT_Land_Reform
 		x = -1
 		y = 1
 		cost = 5.00
@@ -4302,7 +4300,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_child_emperor
-		icon = GFX_unknown
+		icon = GFX_goal_grover_vi
 		x = 1
 		y = 1
 		cost = 5.00
@@ -4313,8 +4311,20 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
+		id = ARA_conquer_outskirts
+		icon = GFX_goal_unknown
+		x = -4
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_liberate_herzland }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
 		id = ARA_invest_in_herzland
-		icon = GFX_unknown
+		icon = GFX_goal_generic_takeover_industries
 		x = -2
 		y = 2
 		cost = 5.00
@@ -4363,10 +4373,13 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_move_to_griffenheim
-		icon = GFX_unknown
+		icon = GFX_goal_model_cities
 		x = 0
 		y = 2
 		cost = 5.00
+		available = {
+		    owns_state = 382
+		}
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_liberate_herzland }
 		prerequisite = { focus = ARA_child_emperor }
@@ -4377,7 +4390,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_liberte
-		icon = GFX_unknown
+		icon = GFX_goal_ideology_democratic_socialist
 		x = 2
 		y = 2
 		cost = 5.00
@@ -4386,13 +4399,25 @@ focus_tree = {
 		completion_reward = {
 		    swap_ideas = {
 			    remove_idea = ARA_liberty_death
-				add_idea = ARA_liberty_death_2
+				add_idea = ARA_for_president
 			}
 		}
 	}
 	shared_focus = {
+		id = ARA_new_regimes
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_central_republic
+		prerequisite = { focus = ARA_child_emperor }
+		completion_reward = {
+		    
+		}
+	}
+	shared_focus = {
 		id = ARA_expand_mines
-		icon = GFX_unknown
+		icon = GFX_goal_generic_lau_industry
 		x = -3
 		y = 3
 		cost = 5.00
@@ -4423,7 +4448,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_integrate_infrastructure_rep
-		icon = GFX_unknown
+		icon = GFX_goal_generic_railroad
 		x = -1
 		y = 3
 		cost = 10.00
@@ -4732,7 +4757,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_land_reform
-		icon = GFX_unknown
+		icon = GFX_goal_coop_farms
 		x = 1
 		y = 3
 		cost = 5.00
@@ -4746,7 +4771,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_liberalise_economy
-		icon = GFX_unknown
+		icon = GFX_goal_socialist_industry
 		x = 3
 		y = 3
 		cost = 10.00
@@ -4755,13 +4780,13 @@ focus_tree = {
 		completion_reward = {
 		    swap_ideas = {
 			    remove_idea = ARA_new_path
-				add_idea = ARA_peace_prosperity
+				add_idea = ARA_soteronomics
 			}
 		}
 	}
 	shared_focus = {
 		id = ARA_serene_state
-		icon = GFX_unknown
+		icon = GFX_TRM_kolchak_cap
 		x = 0
 		y = 4
 		cost = 5.00
@@ -4769,14 +4794,15 @@ focus_tree = {
 		prerequisite = { focus = ARA_integrate_infrastructure_rep }
 		prerequisite = { focus = ARA_land_reform }
 		completion_reward = {
-		    add_ideas = ARA_republicanism_beacon
+		    add_country_leader_trait = GOY_prez_for_life
+			country_event = arantiga_chaos.30
 		}
 	}
 	# Lysimachus' Holy Empire tree #
 	shared_focus = { #The Inheritor
 		id = ARA_inheritor
 		icon = GFX_goal_goy_inheritor
-		x = 4
+		x = 6
 		y = 2
 		cost = 1.00
 		relative_position_id = ARA_chaos
@@ -5076,10 +5102,10 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_pure_minds_lysi
 		icon = GFX_goal_supremacy_of_will
-		x = -2
-		y = 5
+		x = -4
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_inheritor
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_time_of_revenge }
 		bypass = {
 		}
@@ -5109,10 +5135,10 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_enforce_language
 		icon = GFX_focus_generic_treaty_red
-		x = 0
-		y = 5
+		x = -2
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_inheritor
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_time_of_revenge }
 		available = {
 		    owns_state = 371
@@ -5137,16 +5163,36 @@ focus_tree = {
 		}
 		completion_reward = {
 		    add_ideas = ARA_one_language
+			country_event = arantiga_chaos.031
 		}
 	}
 	shared_focus = {
 		id = ARA_cult_of_eternal_emperor
 		icon = GFX_goal_goy_arantigos_cult
 		x = 2
-		y = 5
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_inheritor
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_time_of_revenge }
+		available = {
+		    owns_state = 371
+			owns_state = 529
+		    FAL = {
+			    exists = no
+			}
+			WNG = {
+			    exists = no
+			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+			SIC = {
+			    exists = no
+			}
+		}
 		bypass = {
 		}
 		completion_reward = {
@@ -5172,14 +5218,30 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_prison_economy
 		icon = GFX_goal_slavery
-		x = -2
-		y = 6
+		x = 4
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_pure_minds_lysi }
-		prerequisite = { focus = ARA_enforce_language }
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_time_of_revenge }
 		available = {
-		    has_idea = ARA_work_camp
+		    owns_state = 371
+			owns_state = 529
+		    FAL = {
+			    exists = no
+			}
+			WNG = {
+			    exists = no
+			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+			SIC = {
+			    exists = no
+			}
+			has_idea = ARA_work_camp
 		}
 		bypass = {
 		}
@@ -5191,15 +5253,72 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
+		id = ARA_austerity_humility
+		icon = GFX_goal_unknown
+		x = 5
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_prison_economy }
+		available = {
+		    
+		}
+		bypass = {
+		}
+		completion_reward = {
+		    add_ideas = ARA_industria
+		}
+	}
+	shared_focus = {
+		id = ARA_rubber_camps
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_prison_economy }
+		available = {
+		    
+		}
+		bypass = {
+		}
+		completion_reward = {
+		    372 = {
+			    add_manpower = -100000
+			}
+		    add_resource = {
+				type = rubber
+				amount = 35
+				state = 372
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_concrete_marble
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_austerity_humility }
+		prerequisite = { focus = ARA_rubber_camps }
+		available = {
+		    
+		}
+		bypass = {
+		}
+		completion_reward = {
+		    add_ideas = ARA_architecture
+		}
+	}
+	shared_focus = {
 		id = ARA_grand_temple
 		icon = GFX_goal_new_temple
-		x = 0
-		y = 6
+		x = 2
+		y = 3
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_pure_minds_lysi }
-		prerequisite = { focus = ARA_enforce_language }
-		prerequisite = { focus = ARA_cult_of_eternal_emperor }
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_black_spot }
 		bypass = {
 		}
 		completion_reward = {
@@ -5209,12 +5328,11 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_SRD
 		icon = GFX_goal_double_research
-		x = 2
-		y = 6
+		x = -5
+		y = 2
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_enforce_language }
-		prerequisite = { focus = ARA_cult_of_eternal_emperor }
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_pure_minds_lysi }
 		bypass = {
 		}
 		completion_reward = {
@@ -5224,13 +5342,46 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
+		id = ARA_science_of_war
+		icon = GFX_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_pure_minds_lysi }
+		bypass = {
+		}
+		completion_reward = {
+		    add_ideas = ARA_mil_research
+		}
+	}
+	shared_focus = {
 		id = ARA_banish_degenerates
 		icon = GFX_goal_LEC_monkey
-		x = -2
-		y = 7
+		x = 0
+		y = 1
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_prison_economy	}
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_time_of_revenge }
+		available = {
+		    owns_state = 371
+			owns_state = 529
+		    FAL = {
+			    exists = no
+			}
+			WNG = {
+			    exists = no
+			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+			SIC = {
+			    exists = no
+			}
+		}
 		bypass = {
 		}
 		completion_reward = {
@@ -5240,7 +5391,7 @@ focus_tree = {
 			369 =  {
 			    add_manpower = -200000
 			}
-			add_stability = 0.05
+			add_stability = 0.02
 			hidden_effect = {
 			    EQC = {
 				    country_event = arantiga_chaos.026
@@ -5260,12 +5411,12 @@ focus_tree = {
 		id = ARA_black_spot
 		icon = GFX_goal_GEA_guerilla_warfare
 		x = 0
-		y = 7
+		y = 2
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_prison_economy	}
-		prerequisite = { focus = ARA_SRD }
-		prerequisite = { focus = ARA_grand_temple }
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_enforce_language	}
+		prerequisite = { focus = ARA_banish_degenerates }
+		prerequisite = { focus = ARA_cult_of_eternal_emperor }
 		bypass = {
 		}
 		completion_reward = {
@@ -5276,11 +5427,12 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_nuclear_deterrence
 		icon = GFX_goal_bombs_away
-		x = 2
-		y = 7
+		x = -4
+		y = 3
 		cost = 5.00
-		relative_position_id = ARA_inheritor
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_SRD }
+		prerequisite = { focus = ARA_science_of_war }
 		bypass = {
 		}
 		completion_reward = {
@@ -5297,10 +5449,9 @@ focus_tree = {
 		id = ARA_total_surveillance
 		icon = GFX_goal_secret_agents
 		x = -2
-		y = 8
+		y = 3
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_banish_degenerates }
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_black_spot	}
 		bypass = {
 		}
@@ -5312,12 +5463,12 @@ focus_tree = {
 		id = ARA_declare_holy_empire
 		icon = GFX_goal_goy_arasunrise
 		x = 0
-		y = 8
+		y = 4
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_banish_degenerates	}
-		prerequisite = { focus = ARA_black_spot	}
-		prerequisite = { focus = ARA_nuclear_deterrence	}
+		relative_position_id = ARA_time_of_revenge
+		prerequisite = { focus = ARA_total_surveillance }
+		prerequisite = { focus = ARA_fortress_arantiga }
+		prerequisite = { focus = ARA_grand_temple }
 		bypass = {
 		}
 		completion_reward = {
@@ -5326,26 +5477,429 @@ focus_tree = {
 			set_cosmetic_tag = ARA_HOLY
 			add_country_leader_trait = GOY_jailor_of_arantiga
 			news_event = arantiga_news.8
-			FAL = { add_to_ROOT_potential_cores = yes }
-		    WNG = { add_to_ROOT_potential_cores = yes }
-		    TAL = { add_to_ROOT_potential_cores = yes }
-		    FRN = { add_to_ROOT_potential_cores = yes }
-			SIC = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	shared_focus = {
 		id = ARA_fortress_arantiga
 		icon = GFX_goal_skull_fortification
-		x = 2
-		y = 8
+		x = 0
+		y = 3
 		cost = 5.00
-		relative_position_id = ARA_inheritor
-		prerequisite = { focus = ARA_nuclear_deterrence }
+		relative_position_id = ARA_time_of_revenge
 		prerequisite = { focus = ARA_black_spot	}
 		bypass = {
 		}
 		completion_reward = {
 		    add_ideas = ARA_faithful_fortress
+		}
+	}
+	shared_focus = {
+		id = ARA_tame_south
+		icon = GFX_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_declare_holy_empire }
+		bypass = {
+		}
+		available = {
+		    NOT = {
+			    has_idea = ARA_fallout_protests
+			}
+		}
+		completion_reward = {
+		    add_political_power = -100
+			custom_effect_tooltip = ARA_CETT_lysi_wng_integration
+			hidden_effect = {
+			#Franmistria
+			487 = {
+			    add_core_of = ARA
+			}
+			652 = {
+			    add_core_of = ARA
+			}
+			521 = {
+			    add_core_of = ARA
+			}
+			481 = {
+			    add_core_of = ARA
+			}
+			515 = {
+			    add_core_of = ARA
+			}
+			526 = {
+			    add_core_of = ARA
+			}
+			410 = {
+			    add_core_of = ARA
+			}
+			#Talouse
+			368 = {
+			    add_core_of = ARA
+			}
+			388 = {
+			    add_core_of = ARA
+			}
+			366 = {
+			    add_core_of = ARA
+			}
+			367 = {
+			    add_core_of = ARA
+			}
+			#Falcor
+			409 = {
+			    add_core_of = ARA
+			}
+			529 = {
+			    add_core_of = ARA
+			}
+			533 = {
+			    add_core_of = ARA
+			}
+			549 = {
+			    add_core_of = ARA
+			}
+			503 = {
+			    add_core_of = ARA
+			}
+			392 = {
+			    add_core_of = ARA
+			}
+			393 = {
+			    add_core_of = ARA
+			}
+			504 = {
+			    add_core_of = ARA
+			}
+			#Wingbardy
+			534 = {
+			    add_core_of = ARA
+			}
+			530 = {
+			    add_core_of = ARA
+			}
+			375 = {
+			    add_core_of = ARA
+			}
+			374 = {
+			    add_core_of = ARA
+			}
+			373 = {
+			    add_core_of = ARA
+			}
+			536 = {
+			    add_core_of = ARA
+			}
+			369 = {
+			    add_core_of = ARA
+			}
+			370 = {
+			    add_core_of = ARA
+			}
+			371 = {
+			    add_core_of = ARA
+			}
+			372 = {
+			    add_core_of = ARA
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_rebellious
+		icon = GFX_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_declare_holy_empire }
+		bypass = {
+		}
+		completion_reward = {
+		    country_event = arantiga_chaos.032
+		}
+	}
+	shared_focus = {
+		id = ARA_slash_and_burn
+		icon = GFX_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_rebellious }
+		bypass = {
+		}
+		completion_reward = {
+		    country_event = arantiga_chaos.033
+		}
+	}
+	shared_focus = {
+		id = ARA_exile_minotaurs
+		icon = GFX_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_rebellious }
+		bypass = {
+		}
+		completion_reward = {
+		    add_stability = 0.03
+			445 = {
+			    add_manpower = -100000
+			}
+			509 = {
+			    add_manpower = -50000
+			}
+			MIT = {
+			    country_event = arantiga_chaos.34
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_shackle_sicameon
+		icon = GFX_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_slash_and_burn }
+		prerequisite = { focus = ARA_exile_minotaurs }
+		bypass = {
+		}
+		completion_reward = {
+		    add_political_power = -100
+			custom_effect_tooltip = ARA_CETT_lysi_sic_integration
+			hidden_effect = {
+			#Sicameon
+			518 = {
+			    add_core_of = ARA
+			}
+			570 = {
+			    add_core_of = ARA
+			}
+			528 = {
+			    add_core_of = ARA
+			}
+			527 = {
+			    add_core_of = ARA
+			}
+			509 = {
+			    add_core_of = ARA
+			}
+			444 = {
+			    add_core_of = ARA
+			}
+			460 = {
+			    add_core_of = ARA
+			}
+			445 = {
+			    add_core_of = ARA
+			}
+			394 = {
+			    add_core_of = ARA
+			}
+			395 = {
+			    add_core_of = ARA
+			}
+			535 = {
+			    add_core_of = ARA
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_creatures_most_wicked
+		icon = GFX_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_declare_holy_empire }
+		bypass = {
+		}
+		completion_reward = {
+		    country_event = arantiga_chaos.035
+		}
+	}
+	shared_focus = {
+		id = ARA_cleanse_our_lands
+		icon = GFX_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_creatures_most_wicked }
+		available = {
+		    has_completed_focus = ARA_island_reservations
+		}
+		completion_reward = {
+		    356 = {
+			    add_manpower = -1250000
+			}
+		    354 = {
+			    add_manpower = -250000
+			}
+		    355 = {
+			    add_manpower = -200000
+			}
+			358 = {
+			    add_manpower = -200000
+			}
+			359 = {
+			    add_manpower = -100000
+			}
+			357 = {
+			    add_manpower = -50000
+			}
+			add_stability = -0.1
+			country_event = arantiga_chaos.42
+			hidden_effect = {
+			    news_event = { 
+				    id = arantiga_news.9
+					hours = 2
+				}
+			    EQS = {
+			        country_event = {
+					    id = arantiga_chaos.040
+						hours = 16
+					}
+				}
+				EQC = {
+				    country_event = {
+					    id = arantiga_chaos.041
+						hours = 6
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_island_reservations
+		icon = GFX_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_creatures_most_wicked }
+		bypass = {
+		    owns_state = 356
+			NOT = {
+			    has_war_with = EQC
+			}
+			EQC = {
+			    exists = yes
+			}
+		}
+		available = {
+		    owns_state = 354
+			owns_state = 355
+			owns_state = 356
+			owns_state = 357
+			owns_state = 358
+			owns_state = 359
+			owns_state = 360
+			owns_state = 361
+			owns_state = 362
+			owns_state = 363
+			owns_state = 364
+			owns_state = 365
+		    EQC = {
+			    exists = no
+			}
+		}
+		completion_reward = {
+		    EQC = {
+			    transfer_state = 354
+				transfer_state = 355
+				transfer_state = 356
+				transfer_state = 357
+				transfer_state = 358
+				transfer_state = 359
+				add_ideas = disarmed_nation_ara
+				add_ideas = ARA_military_restrictions
+				ARA = {
+				  	puppet = EQC
+				    set_autonomy = { target = EQC autonomy_state = autonomy_supervised_state }
+                }
+				EQC = {
+					set_politics = {
+				        ruling_party = democratic
+				        elections_allowed = no
+			        }
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_new_province
+		icon = GFX_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = ARA_declare_holy_empire
+		prerequisite = { focus = ARA_island_reservations }
+		prerequisite = { focus = ARA_cleanse_our_lands }
+		bypass = {
+		}
+		completion_reward = {
+		    add_state_core = 354
+			add_state_core = 355
+			add_state_core = 356
+			add_state_core = 357
+			add_state_core = 358
+			add_state_core = 359
+			set_province_name = {
+                id = 11071
+                name = "Borealia"
+            }
+			set_province_name = {
+                id = 10005
+                name = "Invicta"
+            }
+			set_province_name = {
+                id = 9957
+                name = "Lysimachia"
+            }
+			set_province_name = {
+                id = 84
+                name = "Nova Karthin"
+            }
+			set_province_name = {
+                id = 7091
+                name = "Victoria"
+            }
+			set_province_name = {
+                id = 10825
+                name = "Sollea"
+            }
+			set_province_name = {
+                id = 4143
+                name = "Gladius"
+            }
+			set_province_name = {
+                id = 1680
+                name = "Vere Nubes"
+            }
+			354 = {
+			    set_state_name = "Borealia"
+			}
+			355 = {
+			    set_state_name = "Gladius"
+			}
+			356 = {
+			    set_state_name = "Invicta"
+			}
+			357 = {
+			    set_state_name = "Lysimachia"
+			}
+			358 = {
+			    set_state_name = "Nova Karthin"
+			}
+			359 = {
+			    set_state_name = "Victoria"
+			}
 		}
 	}
 

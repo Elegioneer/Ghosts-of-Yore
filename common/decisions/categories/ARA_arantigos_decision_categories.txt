@@ -58,6 +58,18 @@ ARA_blyat_cat = {
 	}
 }
 
+ARA_peace_nm_cat = {
+	icon = generic_political_actions
+
+	visible = {
+		tag = ARA
+		has_completed_focus = ARA_creatures_most_wicked
+		EQC = {
+		    has_war_with = ARA
+		}
+	}
+}
+
 ARA_return_land_cat = { #incomplete, ignore
     icon = generic_political_actions
 	visible = {

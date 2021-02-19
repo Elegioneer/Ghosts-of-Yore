@@ -1379,6 +1379,43 @@ country = {
 		        }
 		    }
 		}
+		country = {
+			ARA_soteronomics = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = industry_funds
+			removal_cost = -1
+			    modifier = {
+				    political_power_factor = -0.1
+			        conscription_factor = 0.1
+					industrial_capacity_factory = 0.1
+			        consumer_goods_factor = -0.05
+			        democratic_drift = 0.01
+					communism_drift = 0.01
+		        }
+		    }
+		}
+		country = {
+			ARA_for_president = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = tur_kemalist_officers
+			removal_cost = -1
+			    modifier = {
+			        army_core_attack_factor = 0.1
+					army_core_defence_factor = 0.1
+					drift_defence_factor = 0.50
+		        }
+		    }
+		}
 	
 	################### Governing Empire Path Ideas ###################	
 
@@ -3370,7 +3407,7 @@ country = {
 			}
 			available = {
 			}
-			picture = severe_famine4
+			picture = collectivization_effort
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.10
@@ -3670,9 +3707,10 @@ country = {
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
-			    industrial_capacity_factory = 0.2
 				production_speed_buildings_factor = 0.2
-				production_factory_start_efficiency_factor = -0.2
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = -0.1
+				monthly_population = -0.2
 			}
 		}
 	}
@@ -3789,6 +3827,108 @@ country = {
 			modifier = {
 			    consumer_goods_factor = 0.5
 		    }
+		}
+	}
+	country = {
+		ARA_industria = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+			    consumer_goods_factor = -0.05
+		    }
+		}
+	}
+	country = {
+		ARA_fallout_protests = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    resistance_growth = 0.2
+			    compliance_growth = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_sicameon_rebellion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.25
+			    resistance_growth = 0.3
+				required_garrison_factor = 0.5
+			    resistance_damage_to_garrison = 1
+		    }
+		}
+	}
+	country = {
+		ARA_military_restrictions = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    conscription = -0.01
+				industrial_capacity_dockyard = -1
+		    }
+		}
+	}
+	country = {
+		ARA_architecture = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.05
+				monthly_population = -0.1
+				local_building_slots_factor = 0.2
+		    }
+		}
+	}
+	country = {
+		ARA_mil_research = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			research_bonus = {
+			    armor = 0.1
+				artillery = 0.1
+				air_equipment = 0.1
+				industry = -0.1
+				electronics = -0.1
+			}
 		}
 	}
 	trade_laws = {

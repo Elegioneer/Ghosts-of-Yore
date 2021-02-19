@@ -87,6 +87,32 @@ ARA_blyat_cat = {
 	}
 }
 
+ARA_peace_nm_cat = {
+	ARA_peace_nm = {
+		icon = generic_nationalism
+		cost = 10
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    has_full_control_of_state = 354
+			has_full_control_of_state = 355
+			has_full_control_of_state = 356
+			has_full_control_of_state = 357
+			has_full_control_of_state = 358
+			has_full_control_of_state = 359
+		}
+		complete_effect = {
+			EQC = {
+			    country_event = {
+				    id = arantiga_chaos.39
+				}
+			}
+		}
+	}
+}
+
 ARA_renaming_cities = {
 	ARA_rename_karthin = {
 		icon = generic_nationalism
