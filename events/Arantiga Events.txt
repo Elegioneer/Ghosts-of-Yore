@@ -1082,7 +1082,13 @@ country_event = { #Griffonstone Archives
 	    picture = GFX_event_griffon_soldier
 	    option = {
 	        name = arantiga_chaos.028.a
-			#TODO
+			add_stability = 0.05
+			add_political_power = -100
+	    }
+		option = {
+	        name = arantiga_chaos.028.b
+			add_stability = -0.1
+			add_political_power = 75
 	    }
 	}
 	

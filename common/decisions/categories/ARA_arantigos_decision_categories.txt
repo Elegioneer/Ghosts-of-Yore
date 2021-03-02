@@ -70,6 +70,15 @@ ARA_peace_nm_cat = {
 	}
 }
 
+ARA_puppet_show_cat = {
+	icon = generic_political_actions
+
+	visible = {
+		tag = ARA
+		has_completed_focus = ARA_new_regimes
+	}
+}
+
 ARA_return_land_cat = { #incomplete, ignore
     icon = generic_political_actions
 	visible = {

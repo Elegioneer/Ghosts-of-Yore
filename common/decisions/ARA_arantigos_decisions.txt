@@ -113,6 +113,289 @@ ARA_peace_nm_cat = {
 	}
 }
 
+ARA_puppet_show_cat = {
+	ARA_puppet_karth = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    OR = {
+		        any_owned_state = {
+			        is_core_of = WNG
+			    }
+				any_owned_state = {
+			        is_core_of = TAL
+			    }
+			    any_owned_state = {
+			        is_core_of = FRN
+			    }
+				any_owned_state = {
+			        is_core_of = SIC
+			    }
+			}
+			WNG = {
+			    exists = no
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_TT_pup_karth
+			hidden_effect = {
+			    ARA = {
+				   	every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = WNG
+								is_core_of = TAL
+								is_core_of = FRN
+								is_core_of = SIC
+							}
+						}
+						add_core_of = WNG
+					}
+					release_puppet = WNG
+				    set_autonomy = { target = WNG autonomy_state = autonomy_colony }
+				}
+				WNG = {
+				    set_politics = {
+			            ruling_party = communism
+			            elections_allowed = no
+		            }
+					set_political_party = { ideology = communism popularity = 50 }
+					set_cosmetic_tag = WNG_soter
+					load_focus_tree = generic_focus
+				}
+			}
+		}
+	}
+	ARA_puppet_aquil = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    OR = {
+		        any_owned_state = {
+			        is_core_of = JER
+			    }
+				any_owned_state = {
+			        is_core_of = POM
+			    }
+			    any_owned_state = {
+			        is_core_of = AET
+			    }
+				any_owned_state = {
+			        is_core_of = HEL
+			    }
+				any_owned_state = {
+			        is_core_of = FEZ
+			    }
+				any_owned_state = {
+			        is_core_of = FLO
+			    }
+			}
+			JER = {
+			    exists = no
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_TT_pup_aquil
+			hidden_effect = {
+			    ARA = {
+				    add_state_core = 496
+				   	every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = JER
+								is_core_of = POM
+								is_core_of = AET
+								is_core_of = HEL
+								is_core_of = FEZ
+								is_core_of = FLO
+							}
+						}
+						add_core_of = JER
+					}
+					release_puppet = JER
+				    set_autonomy = { target = JER autonomy_state = autonomy_colony }
+				}
+				JER = {
+				    set_politics = {
+			            ruling_party = communism
+			            elections_allowed = no
+		            }
+					set_political_party = { ideology = communism popularity = 50 }
+					set_cosmetic_tag = JER_soter
+					load_focus_tree = generic_focus
+				}
+			}
+		}
+	}
+	ARA_puppet_north = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    OR = {
+		        any_owned_state = {
+			        is_core_of = MNC
+			    }
+				any_owned_state = {
+			        is_core_of = FAT
+			    }
+			    any_owned_state = {
+			        is_core_of = VED
+			    }
+			}
+			FAT = {
+			    exists = no
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_TT_pup_north
+			hidden_effect = {
+			    ARA = {
+				   	every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = FAT
+								is_core_of = MNC
+								is_core_of = VED
+								is_core_of = SRS
+								is_core_of = NTR
+							}
+						}
+						add_core_of = FAT
+					}
+					release_puppet = FAT
+				    set_autonomy = { target = FAT autonomy_state = autonomy_colony }
+				}
+				FAT = {
+				    set_politics = {
+			            ruling_party = communism
+			            elections_allowed = no
+		            }
+					set_political_party = { ideology = communism popularity = 50 }
+					set_cosmetic_tag = FAT_soter
+					load_focus_tree = generic_focus
+				}
+			}
+		}
+	}
+	ARA_puppet_eviconf = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    OR = {
+		        any_owned_state = {
+			        is_core_of = LUS
+			    }
+				any_owned_state = {
+			        is_core_of = BRF
+			    }
+			    any_owned_state = {
+			        is_core_of = GRU
+			    }
+				any_owned_state = {
+			        is_core_of = GRY
+			    }
+			}
+			LUS = {
+			    exists = no
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_TT_pup_eviconf
+			hidden_effect = {
+			    ARA = {
+				    add_state_core = 632
+				   	every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = LUS
+								is_core_of = BRF
+								is_core_of = GRU
+								is_core_of = GRY
+							}
+						}
+						add_core_of = LUS
+					}
+					release_puppet = LUS
+				    set_autonomy = { target = LUS autonomy_state = autonomy_colony }
+				}
+				LUS = {
+				    set_politics = {
+			            ruling_party = communism
+			            elections_allowed = no
+		            }
+					set_political_party = { ideology = communism popularity = 50 }
+					set_cosmetic_tag = LUS_soter
+					load_focus_tree = generic_focus
+				}
+			}
+		}
+	}
+	ARA_puppet_aster = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		    OR = {
+		        any_owned_state = {
+			        is_core_of = CYA
+			    }
+				any_owned_state = {
+			        is_core_of = MIT
+			    }
+			}
+			MIT = {
+			    exists = no
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_TT_pup_aster
+			hidden_effect = {
+			    ARA = {
+				   	every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = MIT
+								is_core_of = CYA
+							}	
+						}
+						add_core_of = MIT
+					}
+					release_puppet = MIT
+				    set_autonomy = { target = MIT autonomy_state = autonomy_colony }
+				}
+				MIT = {
+				    set_politics = {
+			            ruling_party = communism
+			            elections_allowed = no
+		            }
+					set_political_party = { ideology = communism popularity = 50 }
+					set_cosmetic_tag = MIT_soter
+					load_focus_tree = generic_focus
+				}
+			}
+		}
+	}
+}
+
 ARA_renaming_cities = {
 	ARA_rename_karthin = {
 		icon = generic_nationalism

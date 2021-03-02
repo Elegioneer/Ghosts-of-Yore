@@ -1027,8 +1027,7 @@ country = {
 			picture = no_poverty
 			removal_cost = -1
 			modifier = {
-			conscription_factor = 0.05
-			consumer_goods_factor = -0.05
+			conscription_factor = 0.1
 			democratic_drift = 0.01
 		}
 		}
@@ -1394,6 +1393,7 @@ country = {
 			        conscription_factor = 0.1
 					industrial_capacity_factory = 0.1
 			        consumer_goods_factor = -0.05
+					neutrality_drift = 0.02
 			        democratic_drift = 0.01
 					communism_drift = 0.01
 		        }
@@ -3896,6 +3896,22 @@ country = {
 		}
 	}
 	country = {
+		ARA_refugee_crisis = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.5
+				monthly_population = -1.5
+		    }
+		}
+	}
+	country = {
 		ARA_architecture = {
 			allowed = {
 				always = no
@@ -3913,16 +3929,18 @@ country = {
 		}
 	}
 	country = {
-		ARA_mil_research = {
+		ARA_military_research_2 = {
 			allowed = {
 				always = no
 			}
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_army
 			removal_cost = -1
 			research_bonus = {
+			    infantry_weapons = 0.1
+				land_doctrine = 0.1
 			    armor = 0.1
 				artillery = 0.1
 				air_equipment = 0.1
