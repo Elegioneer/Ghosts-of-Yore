@@ -3678,7 +3678,7 @@ focus_tree = {
 			picture = "nicator.tga"
 			expire = "1965.1.1"
 			ideology = despotism
-			desc = king_nicator_desc
+			desc = justified_traitor_2_desc
 		}
 		#### trait: “Shield of Arantiga (+10% Attack on core territory, +10% Defense on core territory).####
 		add_popularity = { ideology = neutrality popularity = 0.1 }
@@ -3833,6 +3833,11 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_new_direction
 		prerequisite = { focus = ARA_The_Crossroads }
+		allow_branch = {
+		    NOT = {
+			    has_country_flag = ARA_soter_march_flag
+			}
+		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 		    add_research_slot = 1
@@ -3870,16 +3875,20 @@ focus_tree = {
 	shared_focus = { #New Golden age
 		id = ARA_golden_age
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 2
+		x = 6
 		y = 2
 		cost = 10.00
 		relative_position_id = ARA_local_democracy
-		prerequisite = { focus = ARA_local_democracy }
-		prerequisite = { focus = ARA_swords_into_ploughs }
 		prerequisite = { focus = ARA_The_Crossroads }
+		prerequisite = { focus = ARA_tourist_spot }
+		prerequisite = { focus = ARA_never_again }
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
-		mutually_exclusive = { focus = ARA_march_on_griffenheim }
+		allow_branch = {
+		    NOT = {
+			    has_country_flag = ARA_soter_march_flag
+			}
+		}
 		completion_reward = {
 		    add_ideas = ARA_golden_age_idea
 		}
@@ -3895,7 +3904,6 @@ focus_tree = {
 		prerequisite = { focus = ARA_student_exchange }
 		mutually_exclusive = { focus = ARA_arantiga_forever }
 		mutually_exclusive = { focus = ARA_golden_age }
-		mutually_exclusive = { focus = ARA_march_on_griffenheim }
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 		custom_effect_tooltip = old_allies_tooltip
@@ -3905,16 +3913,20 @@ focus_tree = {
 	shared_focus = { #Arantiga Forever
 		id = ARA_arantiga_forever
 		icon = GFX_goal_collaborate_local_elites
-		x = -2
+		x = -6
 		y = 2
 		cost = 3.00
 		relative_position_id = ARA_never_again
+		prerequisite = { focus = ARA_local_democracy }
+		prerequisite = { focus = ARA_swords_into_ploughs }
 		prerequisite = { focus = ARA_The_Crossroads }
-		prerequisite = { focus = ARA_tourist_spot }
-		prerequisite = { focus = ARA_never_again }
 		mutually_exclusive = { focus = ARA_old_allies }
 		mutually_exclusive = { focus = ARA_golden_age }
-		mutually_exclusive = { focus = ARA_march_on_griffenheim }
+		allow_branch = {
+		    NOT = {
+			    has_country_flag = ARA_soter_march_flag
+			}
+		}
 		available = { is_in_faction = no }
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
@@ -3924,14 +3936,13 @@ focus_tree = {
     shared_focus = {
 		id = ARA_march_on_griffenheim
 		icon = GFX_goal_red_eagle
-		x = 4
-		y = 2
+		x = 0
+		y = 1
 		cost = 5.00
 		relative_position_id = ARA_The_Crossroads
 		prerequisite = { focus = ARA_never_again }
-		mutually_exclusive = { focus = ARA_old_allies }
-		mutually_exclusive = { focus = ARA_golden_age }
-		mutually_exclusive = { focus = ARA_arantiga_forever }
+		prerequisite = { focus = ARA_The_Crossroads }
+		prerequisite = { focus = ARA_tourist_spot }
 		allow_branch = {
 		    has_country_flag = ARA_soter_march_flag
 		}
@@ -3967,6 +3978,105 @@ focus_tree = {
                                 }
 							}
                         }
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 378
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 674
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 398
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 411
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 423
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 382
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 520
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 486
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
+                    }
+				}
+			}
+			every_other_country = {
+			    limit = {
+				    owns_state = 492
+				}
+				ARA = {
+                    create_wargoal = { 
+                        type = annex_everything 
+                        target = PREV 
                     }
 				}
 			}
@@ -4181,7 +4291,7 @@ focus_tree = {
     shared_focus = {
 		id = ARA_central_republic
 		icon = GFX_goal_red_menace_griffonia
-		x = 1
+		x = 0
 		y = 1
 		cost = 10.00
 		prerequisite = { focus = ARA_march_on_griffenheim }
@@ -4205,125 +4315,20 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
-		id = ARA_liberate_herzland
-		icon = GFX_goal_OTT_Land_Reform
-		x = -1
-		y = 1
+		id = ARA_cyrusval_uni
+		icon = GFX_goal_the_faculty
+		x = 0
+		y = 2
 		cost = 5.00
 		relative_position_id = ARA_central_republic
-		prerequisite = { focus = ARA_central_republic }
-		bypass = {
-		    owns_state = 378
-			owns_state = 674
-			owns_state = 398
-			owns_state = 411
-			owns_state = 423
-			owns_state = 520
-			owns_state = 486
-			owns_state = 492
-			owns_state = 382
+		prerequisite = { focus = ARA_move_to_griffenheim }
+		prerequisite = { focus = ARA_child_emperor }
+		available = {
+		    owns_state = 398
 		}
-		search_filters = {FOCUS_FILTER_ANNEXATION}
+		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-		    every_other_country = {
-			    limit = {
-				    owns_state = 378
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 674
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 398
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 411
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 423
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 382
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 520
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 486
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
-			every_other_country = {
-			    limit = {
-				    owns_state = 492
-				}
-				ARA = {
-                    create_wargoal = { 
-                        type = annex_everything 
-                        target = PREV 
-                    }
-				}
-			}
+		    add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -4354,7 +4359,7 @@ focus_tree = {
 			TRD = { exists = no }
 			BAN = { exists = no }
 		}
-		prerequisite = { focus = ARA_liberate_herzland }
+		prerequisite = { focus = ARA_move_to_griffenheim }
 		search_filters = {FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		    IF = {
@@ -4414,7 +4419,7 @@ focus_tree = {
 		y = 2
 		cost = 5.00
 		relative_position_id = ARA_central_republic
-		prerequisite = { focus = ARA_liberate_herzland }
+		prerequisite = { focus = ARA_move_to_griffenheim }
 		available = {
 		    owns_state = 437
 			owns_state = 411
@@ -4460,15 +4465,14 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_move_to_griffenheim
 		icon = GFX_goal_model_cities
-		x = 0
-		y = 2
+		x = -1
+		y = 1
 		cost = 5.00
 		available = {
-		    owns_state = 382
+		    
 		}
 		relative_position_id = ARA_central_republic
-		prerequisite = { focus = ARA_liberate_herzland }
-		prerequisite = { focus = ARA_child_emperor }
+		prerequisite = { focus = ARA_central_republic }
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 		    add_stability = 0.05
@@ -4544,7 +4548,6 @@ focus_tree = {
 		cost = 10.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_invest_in_herzland }
-		prerequisite = { focus = ARA_move_to_griffenheim }
 		prerequisite = { focus = ARA_liberte }
 		select_effect = {
 			add_timed_idea = {
@@ -4853,8 +4856,19 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = ARA_central_republic
 		prerequisite = { focus = ARA_invest_in_herzland }
-		prerequisite = { focus = ARA_move_to_griffenheim }
 		prerequisite = { focus = ARA_liberte }
+		available = {
+		    has_war = no
+			GRI = { exists = no }
+		    ANG = { exists = no }
+		    STW = { exists = no }
+		    BRZ = { exists = no }
+		    FEA = { exists = no }
+			ROU = { exists = no }
+		    PYT = { exists = no }
+		    YAL = { exists = no }
+		    KAT = { exists = no }
+		}
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 		    add_ideas = ARA_republican_land_reform
@@ -5266,7 +5280,12 @@ focus_tree = {
 		}
 		completion_reward = {
 		    add_ideas = ARA_one_language
-			country_event = arantiga_chaos.031
+			hidden_effect = {
+			    country_event = {
+			        id = arantiga_chaos.031
+					days = 3
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -5300,10 +5319,6 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
-		    swap_ideas = {
-			   remove_idea = ARA_arantigos_boreas2
-			   add_idea = ARA_arantigos_eternal
-			}
 			country_event = arantiga_chaos.024
 			custom_effect_tooltip = ARA_CETT_heretic
 			hidden_effect = {
@@ -5621,7 +5636,7 @@ focus_tree = {
 		icon = GFX_focus_wng_flag
 		x = 0
 		y = 1
-		cost = 5.00
+		cost = 15.00
 		relative_position_id = ARA_declare_holy_empire
 		prerequisite = { focus = ARA_declare_holy_empire }
 		bypass = {
@@ -5750,7 +5765,7 @@ focus_tree = {
 		icon = GFX_goal_fire
 		x = -3
 		y = 2
-		cost = 5.00
+		cost = 12.00
 		relative_position_id = ARA_declare_holy_empire
 		prerequisite = { focus = ARA_rebellious }
 		bypass = {
@@ -5789,7 +5804,7 @@ focus_tree = {
 		icon = GFX_goal_generic_lau_camp
 		x = -2
 		y = 3
-		cost = 5.00
+		cost = 10.00
 		relative_position_id = ARA_declare_holy_empire
 		prerequisite = { focus = ARA_slash_and_burn }
 		prerequisite = { focus = ARA_exile_minotaurs }
@@ -5835,6 +5850,7 @@ focus_tree = {
 			    add_core_of = ARA
 			}
 			}
+			remove_ideas = ARA_sicameon_rebellion
 		}
 	}
 	shared_focus = {
@@ -5857,7 +5873,7 @@ focus_tree = {
 		icon = GFX_goal_strike_harmony
 		x = 3
 		y = 2
-		cost = 5.00
+		cost = 10.00
 		relative_position_id = ARA_declare_holy_empire
 		prerequisite = { focus = ARA_creatures_most_wicked }
 		available = {
@@ -5941,15 +5957,18 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+		    add_political_power = -100
 		    custom_effect_tooltip = ARA_CETT_ponies_is_kil
 		    hidden_effect = {
 		    EQC = {
-			    transfer_state = 354
-				transfer_state = 355
-				transfer_state = 356
-				transfer_state = 357
-				transfer_state = 358
-				transfer_state = 359
+				transfer_state = 360
+				transfer_state = 361
+				transfer_state = 362
+				transfer_state = 363
+				transfer_state = 364
+				transfer_state = 365
+				transfer_state = 676
+				transfer_state = 675
 				add_ideas = disarmed_nation_ara
 				add_ideas = ARA_military_restrictions
 				ARA = {
@@ -5971,7 +5990,7 @@ focus_tree = {
 		icon = GFX_goal_magic_of_friendship_end
 		x = 2
 		y = 3
-		cost = 5.00
+		cost = 10.00
 		relative_position_id = ARA_declare_holy_empire
 		prerequisite = { focus = ARA_island_reservations }
 		prerequisite = { focus = ARA_cleanse_our_lands }

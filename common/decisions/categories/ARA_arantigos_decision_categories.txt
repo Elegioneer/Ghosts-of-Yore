@@ -13,6 +13,7 @@ ARA_renaming_cities = {
 
 	visible = {
 		tag = ARA
+		has_government = fascism
 		OR = {
 			371 = {
 				is_owned_by = ARA
@@ -48,12 +49,14 @@ ARA_blyat_cat = {
 		has_completed_focus = ARA_craddle
 		BAN = {
 		    is_neighbor_of = ARA
+			OR = {
 		    controls_state = 679
 			controls_state = 384
 			controls_state = 389
 			controls_state = 471
 			controls_state = 488
 			controls_state = 531
+			}
 		}
 	}
 }
@@ -66,6 +69,20 @@ ARA_peace_nm_cat = {
 		has_completed_focus = ARA_creatures_most_wicked
 		EQC = {
 		    has_war_with = ARA
+		}
+	}
+}
+
+ARA_greneclyf_cat = {
+	icon = generic_political_actions
+
+	visible = {
+	    tag = ARA
+		has_government = fascism
+	    OR = {
+		    owns_state = 668
+		    owns_state = 669
+		    owns_state = 670
 		}
 	}
 }

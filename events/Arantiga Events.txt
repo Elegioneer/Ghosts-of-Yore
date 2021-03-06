@@ -81,10 +81,11 @@ add_namespace = arantiga_decision
 		add_manpower = -1
 		kill_country_leader = yes
 		create_country_leader = {
-			name = "Nicator"
-			picture = "nicator.tga"
-			expire = "1965.1.1"
-			ideology = despotism
+		    name = "Nicator Whitebeak"
+		    desc = "justified_traitor_desc"
+		    picture = "nicator.tga"
+		    expire = "1965.1.1"
+		    ideology = despotism
 		}
 		set_party_name = {ideology = neutrality name = ARA_moderates long_name = ARA_moderates_long }
 		
@@ -402,7 +403,7 @@ country_event = { #going lower
 	is_triggered_only = yes
 	fire_only_once = yes
 	    option = {
-		    name = arantiga.025.a
+		    name = arantiga.015.a
 		    kill_country_leader = yes
 		    remove_unit_leader = 1333
 		    hidden_effect = {
@@ -530,7 +531,7 @@ country_event = { #going lower
 	is_triggered_only = yes
 	fire_only_once = yes
 	    option = {
-		    name = arantiga.025.a
+		    name = arantiga.018.a
 		    kill_country_leader = yes
 		    remove_unit_leader = 1333
 		    hidden_effect = {
@@ -611,7 +612,7 @@ country_event = { #going lower
 	is_triggered_only = yes
 	fire_only_once = yes
 	    option = {
-		    name = arantiga.025.a
+		    name = arantiga.020.a
 		    kill_country_leader = yes
 		    remove_unit_leader = 1333
 		    hidden_effect = {
@@ -692,7 +693,7 @@ country_event = { #going lower
 	is_triggered_only = yes
 	fire_only_once = yes
 	    option = {
-		    name = arantiga.025.a
+		    name = arantiga.022.a
 		    kill_country_leader = yes
 		    remove_unit_leader = 1333
 		    hidden_effect = {
@@ -957,6 +958,14 @@ country_event = { #Griffonstone Archives
 			    elections_allowed = no
 		    }
 			hidden_effect = {
+			    retire_country_leader = yes
+			    create_country_leader = {
+		            name = "Nicator Whitebeak"
+		            desc = "justified_traitor_2_desc"
+		            picture = "nicator.tga"
+		            expire = "1965.1.1"
+		            ideology = despotism
+		        }
 			    create_country_leader = {
 			        name = "Craterus"
 			        picture = "Craterus.tga"
@@ -1019,6 +1028,10 @@ country_event = { #Griffonstone Archives
 	    picture = GFX_event_griffon_soldier
 	    option = {
 	        name = arantiga_chaos.024.a
+			swap_ideas = {
+			   remove_idea = ARA_arantigos_boreas2
+			   add_idea = ARA_arantigos_eternal
+			}
 	    }
 	}
 	country_event = { #temple construction
@@ -3777,7 +3790,7 @@ country_event = { # Detente
 					retire_country_leader = yes
 				    create_country_leader = {
 				    	name = "Soter"
-				    	desc = "soter_president_desc"
+				    	desc = ""
 				    	picture = "gfx/leaders/ARA/Soter.tga"
 				    	ideology = fascism_ideology
 				    	traits = {

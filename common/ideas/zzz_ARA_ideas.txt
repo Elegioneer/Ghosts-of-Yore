@@ -3534,7 +3534,7 @@ country = {
 			}
 			available = {
 			}
-			picture = HUN_treaty_of_trianon
+			picture = HUN_treaty_of_triannon
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.1
@@ -3837,7 +3837,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = severe_famine3
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -3853,7 +3853,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = NLR_celestial_resistance
 			removal_cost = -1
 			modifier = {
 			    resistance_growth = 0.2
@@ -3869,7 +3869,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = unhappy_army_3
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.25
@@ -3887,7 +3887,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CES_military_potential_idea
 			removal_cost = -1
 			modifier = {
 			    conscription = -0.01
@@ -3903,7 +3903,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pony_passport
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.5
@@ -3919,7 +3919,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = NIM_boule
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05

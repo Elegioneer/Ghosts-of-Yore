@@ -6,6 +6,10 @@ ARA_HOLY = {
     color = rgb { 124 7 25 }
     color_ui = rgb { 150 21 53 }
 }
+ARA_CREP = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
 RIV_arantiga = {
     color = rgb { 184 17 47 }
     color_ui = rgb { 193 40 63 }

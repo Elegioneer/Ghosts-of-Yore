@@ -113,6 +113,31 @@ ARA_peace_nm_cat = {
 	}
 }
 
+ARA_greneclyf_cat = {
+    ARA_greneclyf = {
+		icon = generic_nationalism
+		cost = 10
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			release_puppet = NCH
+			hidden_effect = {
+			set_autonomy = { target = NCH autonomy_state = autonomy_reichsprotectorate }
+			NCH = {
+			    set_politics = {
+			        ruling_party = fascism
+		            elections_allowed = no
+		        }
+				set_political_party = { ideology = fascism popularity = 50 }
+				set_cosmetic_tag = NCH_arantiga
+			}
+			}
+		}
+	}
+}
+
 ARA_puppet_show_cat = {
 	ARA_puppet_karth = {
 		icon = generic_nationalism
@@ -125,6 +150,9 @@ ARA_puppet_show_cat = {
 		    OR = {
 		        any_owned_state = {
 			        is_core_of = WNG
+			    }
+				any_owned_state = {
+			        is_core_of = FAL
 			    }
 				any_owned_state = {
 			        is_core_of = TAL
@@ -151,6 +179,7 @@ ARA_puppet_show_cat = {
 								is_core_of = TAL
 								is_core_of = FRN
 								is_core_of = SIC
+								is_core_of = FAL
 							}
 						}
 						add_core_of = WNG
@@ -183,6 +212,9 @@ ARA_puppet_show_cat = {
 			        is_core_of = JER
 			    }
 				any_owned_state = {
+			        is_core_of = JES
+			    }
+				any_owned_state = {
 			        is_core_of = POM
 			    }
 			    any_owned_state = {
@@ -211,6 +243,7 @@ ARA_puppet_show_cat = {
 					    limit = {
 						    OR = {
 					            is_claimed_by = JER
+								is_core_of = JES
 								is_core_of = POM
 								is_core_of = AET
 								is_core_of = HEL
