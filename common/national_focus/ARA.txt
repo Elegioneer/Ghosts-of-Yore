@@ -5889,7 +5889,7 @@ focus_tree = {
 		relative_position_id = ARA_cult_of_eternal_emperor
 		prerequisite = { focus = ARA_enforce_language	}
 		prerequisite = { focus = ARA_banish_degenerates }
-		prerequisite = { focus = ARA_cult_of_eternal_emperor }
+		prerequisite = { focus = ARA_die_for_emperor }
 		ai_will_do = {
 			base = 75
 		}
