@@ -62,9 +62,9 @@ ARA_arantigans_abroad = {
 			state = 408
 		}
 		remove_effect = {
-			add_manpower = 10000
+			add_manpower = 20000
 			408 = {
-				add_manpower = 50000
+				add_manpower = 75000
 			}
 		}
 	}
@@ -77,6 +77,10 @@ ARA_blyat_cat = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
+			modifier = {
+			    has_war = yes
+				add = -100
+			}
 		}
 		complete_effect = {
 			declare_war_on = {

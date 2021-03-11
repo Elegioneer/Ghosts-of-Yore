@@ -2583,6 +2583,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -2607,6 +2611,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -2662,6 +2670,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -2702,6 +2714,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -4310,6 +4326,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -4374,6 +4394,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -4968,7 +4992,11 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -5613,6 +5641,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -5660,6 +5692,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -8049,6 +8085,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -8073,6 +8113,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
@@ -8127,6 +8171,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {

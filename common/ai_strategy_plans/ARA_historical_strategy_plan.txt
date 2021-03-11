@@ -1,10 +1,12 @@
 ARA_historical = {
-	name = "Nicator crowns nimself king"
+	name = "Initial Arantigan plan"
 	desc = ""
-
+    allowed = {
+	    original_tag = ARA
+	}
 	enable = {
 		original_tag = ARA
-		OR = {
+		OR = { #BIG BRAIN CONDITIONS, I KNOW, DON'T WORRY ABOUT IT
 			AND = {
 				is_historical_focus_on = yes
 				has_game_rule = {
@@ -14,16 +16,36 @@ ARA_historical = {
 			}
 			has_game_rule = {
 				rule = ARA_ai_behavior
+				option = ARANTIGA_REBORN
+			}
+			has_game_rule = {
+				rule = ARA_ai_behavior
 				option = ARANTIGA_NICATOR
+			}
+			has_game_rule = {
+				rule = ARA_ai_behavior
+				option = ARANTIGA_REPUBLIC
+			}
+			has_game_rule = {
+				rule = ARA_ai_behavior
+				option = ARANTIGA_LYSI
+			}
+			has_game_rule = {
+				rule = ARA_ai_behavior
+				option = ARANTIGA_SOTER
 			}
 			has_game_rule = {
 				rule = ARA_ai_behavior
 				option = DEFAULT
 			}
+			has_game_rule = { #NOT SO RANDOM AFTER ALL, EH?
+				rule = ARA_ai_behavior
+				option = RANDOM
+			}
 		}
 	}
 	abort = {
-		
+		has_country_flag = arantiga_flag_dorotheos_is_dead
 	}
 
 	ai_national_focuses = {
@@ -45,16 +67,20 @@ ARA_historical = {
 		ARA_dig_deeper
 		ARA_industrial_warmachine
 		ARA_military_research_institute
+		#
 		ARA_craddle
 		ARA_the_cadets
 		ARA_kickstart_my_heart
 		ARA_rebuild_stone
+		#
 		ARA_fight_north
-		ARA_fortified_nation
+		ARA_superior_warfare_doctrine
 		ARA_integrate_north
+		#
 		ARA_fight_avian
 		ARA_mandatory_training
 		ARA_integrate_avian
+		#
 		ARA_ac_revelations
 		ARA_sparleos_legacy
 		ARA_sparleos_culture
@@ -68,10 +94,73 @@ ARA_historical = {
 	}
 
 	research = {
+	    infantry_weapons = 4.0
+		infantry_tech = 3.0
+		artillery = 3.0
+		support_tech = 2.0
+	    cat_superior_firepower = 2.0
+		electronics = 2.0
+		armor = 0.2
 	}
 
 	ideas = {
 		
+	}
+	
+	ai_strategy = {
+	    type = prepare_for_war
+		id = BOI
+		value = 100
+	}
+	ai_strategy = {
+	    type = consider_weak
+		id = BOI
+		value = 100
+	}
+	ai_strategy = {
+	    type = consider_weak
+		id = LAK
+		value = 30
+	}
+	ai_strategy = {
+	    type = consider_weak
+		id = AVI
+		value = 10
+	}
+	ai_strategy = {
+	    type = consider_weak
+		id = EYR
+		value = 10
+	}
+	ai_strategy = {
+	    type = consider_weak
+		id = ERI
+		value = 10
+	}
+	ai_strategy = {
+	    type = antagonize
+		id = BOI
+		value = 100
+	}
+	ai_strategy = {
+	    type = antagonize
+		id = LAK
+		value = 100
+	}
+	ai_strategy = {
+	    type = antagonize
+		id = AVI
+		value = 100
+	}
+	ai_strategy = {
+	    type = antagonize
+		id = EYR
+		value = 100
+	}
+	ai_strategy = {
+	    type = antagonize
+		id = ERI
+		value = 100
 	}
 
 	traits = {
