@@ -5581,6 +5581,7 @@ focus_tree = {
 		available = {
 		    owns_state = 371
 			owns_state = 529
+			owns_state = 445
 		    FAL = {
 			    exists = no
 			}
