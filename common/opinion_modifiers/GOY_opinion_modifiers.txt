@@ -1,6 +1,10 @@
 opinion_modifiers = {
     BOI_druglord = { value = -20 }
 	
+	ARA_heretical_madgriff = { value = -50 }
+	
+	ARA_heretic_lysi = { value = -50 }
+	
 	ARA_nationalized_industry = { value = -50 }
 	
 	BOI_aligned_with_EQS = {

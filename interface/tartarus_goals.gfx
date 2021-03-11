@@ -144,4 +144,20 @@ spriteTypes = {
 		name = "GFX_goal_BOI_herzland_flag"
 		texturefile = "gfx/interface/goals/goal_BOI_herzland_flag.tga"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_traitor"
+		texturefile = "gfx/interface/goals/goal_goy_traitor.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_inheritor"
+		texturefile = "gfx/interface/goals/goal_goy_inheritor.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_arantigos_cult"
+		texturefile = "gfx/interface/goals/goal_goy_arantigos_cult.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_arasunrise"
+		texturefile = "gfx/interface/goals/goal_goy_arasunrise.dds"
+	}
 }

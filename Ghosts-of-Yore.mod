@@ -1,13 +1,12 @@
-version="1.0"
+version="0.1.1"
 tags={
 	"Alternative History"
 	"Gameplay"
 	"Events"
 }
-name="EaW – Ghosts of Yore"
+name="Ghosts of Yore - EaW Submod"
 dependencies={
 	"Equestria at War"
 }
-picture="Thumbnail.png"
-supported_version="1.10.3"
+supported_version="1.10.*"
 path="mod/Ghosts-of-Yore"

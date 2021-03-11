@@ -1046,9 +1046,21 @@ ARA_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ARANTIGA_LYSI
+		text = "RULE_OPTION_ARA_LYSI"
+		desc = "RULE_OPTION_LYSI_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = ARANTIGA_REPUBLIC
 		text = "RULE_OPTION_ARA_REPUBLIC"
 		desc = "RULE_OPTION_REPUBLIC_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ARANTIGA_SOTER
+		text = "RULE_OPTION_ARA_SOTER"
+		desc = "RULE_OPTION_SOTER_ARA_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {

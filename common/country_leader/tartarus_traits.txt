@@ -65,7 +65,7 @@ leader_traits = {
 		army_morale_factor = 0.1
 		communism_acceptance = 20
 	}
-	GOY_tankbuilding_academy = { #loc is inside BOI's files
+	GOY_tankbuilding_academy = { #loc is inside respective countries' files
 	    random = no
 	}
 	GOY_mass_tank_manufacturer = {
@@ -99,5 +99,14 @@ leader_traits = {
 		trade_opinion_factor = 0.20
 		trade_laws_cost_factor = -0.25
 		economy_cost_factor = -0.25
+	}
+	GOY_jailor_of_arantiga = {
+	    random = no
+		army_defence_factor = 0.1
+		ai_focus_defense_factor = 0.5
+	}
+	GOY_prez_for_life = {
+	    random = no
+		political_power_factor = 0.1
 	}
 }

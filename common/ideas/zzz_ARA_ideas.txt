@@ -958,7 +958,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = ARA_nicator
+			picture = generic_intel_bonus
 			removal_cost = -1
 			modifier = {
 			political_power_factor = -0.3
@@ -975,7 +975,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = ARA_nicator
+			picture = generic_intel_bonus
 			removal_cost = -1
 			modifier = {
 			political_power_factor = -0.1
@@ -1002,7 +1002,7 @@ country = {
 		}
 
 		country = {
-			ARA_empower_minorities {
+			ARA_empower_minorities = {
 				allowed = {
 				always = no
 			}
@@ -1017,7 +1017,7 @@ country = {
 		}
 		}
 		country = {
-			ARA_new_path{
+			ARA_new_path = {
 				allowed = {
 				always = no
 			}
@@ -1027,8 +1027,7 @@ country = {
 			picture = no_poverty
 			removal_cost = -1
 			modifier = {
-			conscription_factor = 0.05
-			consumer_goods_factor = -0.1
+			conscription_factor = 0.1
 			democratic_drift = 0.01
 		}
 		}
@@ -1161,27 +1160,7 @@ country = {
 		}
 		
 		country = {
-			ARA_absolute_chaos1 = {
-				allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = ara_high_resistance
-			removal_cost = -1
-			modifier = {
-			consumer_goods_factor = 0.5
-			stability_factor = -0.4
-			war_support_factor = -0.4
-			army_org_Factor = -0.5
-			
-		}
-		}
-		}	
-		
-		country = {
-			ARA_absolute_chaos2 = {
+			ARA_absolute_chaos1 = { #PZ
 				allowed = {
 				always = no
 			}
@@ -1192,16 +1171,16 @@ country = {
 			removal_cost = -1
 			modifier = {
 			consumer_goods_factor = 0.5
-			stability_factor = -0.4
-			war_support_factor = -0.4
-			army_org_Factor = -0.1
+			stability_factor = -0.3
+			war_support_factor = -0.3
+			army_org_Factor = -0.5
 			
 		}
 		}
-		}
+		}	
 		
 		country = {
-			ARA_absolute_chaos3 = {
+			ARA_absolute_chaos2 = { #SS
 				allowed = {
 				always = no
 			}
@@ -1212,8 +1191,28 @@ country = {
 			removal_cost = -1
 			modifier = {
 			consumer_goods_factor = 0.2
-			stability_factor = -0.2
-			war_support_factor = -0.2
+			stability_factor = -0.4
+			war_support_factor = -0.4
+			army_org_Factor = -0.5
+			
+		}
+		}
+		}
+		
+		country = {
+			ARA_absolute_chaos3 = { #CA
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = 0.5
+			stability_factor = -0.5
+			war_support_factor = -0.5
 			army_org_Factor = -0.1
 			
 		}
@@ -1221,7 +1220,7 @@ country = {
 		}
 		
 		country = {
-			ARA_absolute_chaos4 = {
+			ARA_absolute_chaos4 = { #PZ+SS
 				allowed = {
 				always = no
 			}
@@ -1229,6 +1228,82 @@ country = {
 				always = yes
 			}
 			picture = ara_low_resistance
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			army_org_Factor = -0.5
+			
+		}
+		}
+		}
+		country = {
+			ARA_absolute_chaos5 = { #PZ+CA
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_low_resistance
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = 0.5
+			stability_factor = -0.3
+			war_support_factor = -0.3
+			army_org_Factor = -0.1
+			
+		}
+		}
+		}
+		country = {
+			ARA_absolute_chaos6 = { #SS+CA
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_low_resistance
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.4
+			war_support_factor = -0.4
+			army_org_Factor = -0.1
+			
+		}
+		}
+		}
+		country = {
+			ARA_absolute_chaos7 = { #SS+CA+PZ
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_low_resistance
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = 0.2
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			army_org_Factor = -0.1
+			
+		}
+		}
+		}
+		country = {
+			ARA_slow_recovery = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_goods_red_bonus
 			removal_cost = -1
 			modifier = {
 			consumer_goods_factor = 0.2
@@ -1303,10 +1378,48 @@ country = {
 		        }
 		    }
 		}
+		country = {
+			ARA_soteronomics = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = industry_funds
+			removal_cost = -1
+			    modifier = {
+				    political_power_factor = -0.1
+			        conscription_factor = 0.1
+					industrial_capacity_factory = 0.1
+			        consumer_goods_factor = -0.05
+					neutrality_drift = 0.02
+			        democratic_drift = 0.01
+					communism_drift = 0.01
+		        }
+		    }
+		}
+		country = {
+			ARA_for_president = {
+				allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = tur_kemalist_officers
+			removal_cost = -1
+			    modifier = {
+			        army_core_attack_factor = 0.1
+					army_core_defence_factor = 0.1
+					drift_defence_factor = 0.50
+		        }
+		    }
+		}
 	
 	################### Governing Empire Path Ideas ###################	
 
-		country = {
+	country = {
 		ARA_fragile_rule_1 = {
 			allowed = {
 				always = no
@@ -1440,30 +1553,6 @@ country = {
 			picture = unhappy_army_3
 			removal_cost = -1
 			modifier = {
-				stability_factor = -0.3
-				war_support_factor = -0.1
-				conscription_factor = -0.20
-				research_speed_factor = -0.1
-				political_power_factor = -0.35
-				production_speed_buildings_factor = -0.2
-			}
-		}
-	}
-	country = {
-		ARA_fragile_rule_1 = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-				has_government = fascism
-			}
-			picture = unhappy_army_3
-			removal_cost = -1
-			modifier = {
-                army_org_factor = -0.2
 				stability_factor = -0.3
 				war_support_factor = -0.1
 				conscription_factor = -0.20
@@ -3118,25 +3207,6 @@ country = {
 			}
 		}
 	}
-	
-	country = {
-		ARA_arantigos_boreas2 = {
-			allowed = {
-			always = no 
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = PAP_Legionary_Spirit
-			modifier = {	
-			drift_defence_factor = 0.5
-			fascism_drift = 0.2
-			army_morale_factor = 0.05
-			political_power_factor 0.1
-			}
-			}
-			}
 	country = {
 		ARA_arantigan_uprising = {
 			allowed = {
@@ -3266,10 +3336,606 @@ country = {
 			}
 		}
 	}
+	#### 1.1 Update ####
+	country = {
+		ARA_lysi_regency = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = generic_intel_bonus
+			removal_cost = -1
+			modifier = {
+			    political_power_factor = -0.3
+			}
+		}
+	}
+	country = {
+		ARA_republican_land_reform = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = collectivization_effort
+			removal_cost = -1
+			modifier = {
+			    monthly_population = 0.10
+			}
+		}
+	}
+	country = {
+		ARA_peace_prosperity = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = neutrality_idea
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+			    consumer_goods_factor = -0.10
+			    democratic_drift = 0.01
+				local_resources_factor = 0.1
+			}
+		}
+	}
+	country = {
+		ARA_republicanism_beacon = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = friendly_harmony
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+	}
+	country = {
+		ARA_fanatical_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = HUN_secret_rearmament
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = -0.05
+			}
+		}
+	}
+	country = {
+		ARA_knowledge_dangers = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = goy_book_burn
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+				stability_factor = 0.05
+				drift_defence_factor = 0.5
+			}
+		}
+	}
+	country = {
+		ARA_crippling_spending = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = capital_outflow
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_buildings_factor = -0.75
+				industrial_capacity_factory = -0.25
+				political_power_factor = -0.25
+			}
+		}
+	}
+	country = {
+		ARA_great_temple = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = triumphant_will
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+	country = {
+		ARA_one_language = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = HUN_treaty_of_triannon
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.1
+				consumer_goods_factor = 0.03
+			}
+		}
+	}
+	country = {
+		ARA_arantigos_eternal = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = PAP_Legionary_Spirit
+			removal_cost = -1
+			modifier = {
+			    political_power_factor = 0.1
+				army_morale_factor = 0.1
+				drift_defence_factor = 0.5
+			    fascism_drift = 0.3
+			}
+		}
+	}
+	country = {
+		ARA_closed_nation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = vittoria_mutilata
+			removal_cost = -1
+			modifier = {
+				opinion_gain_monthly_factor = -0.25
+				foreign_subversive_activites = -0.5
+				encryption_factor = 0.5
+			}
+		}
+	}
+	country = {
+		ARA_invigilation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = generic_secret_police
+			removal_cost = -1
+			modifier = {
+				required_garrison_factor = -0.5
+				resistance_damage_to_garrison = -0.5
+			}
+		}
+	}
+	country = {
+		ARA_atomic_ascension = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = goy_radiation
+			removal_cost = -1
+			modifier = {
+				production_speed_nuclear_reactor_factor = 0.25
+			}
+		}
+	}
+	country = {
+		ARA_great_purge = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = generic_purge
+			removal_cost = -1
+			modifier = {
+				army_org_factor = -0.2
+				max_planning = -0.2
+				planning_speed = -0.2
+			}
+		}
+	}
+	country = {
+		ARA_liberty_death_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = griffon_army3
+			removal_cost = -1
+			modifier = {
+			    army_attack_factor = 0.1
+				army_defence_factor = 0.2
+				drift_defence_factor = 0.50
+			}
+		}
+	}
+	country = {
+		ARA_militarized_economy_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			removal_cost = -1
+			picture = white_war_economy
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.2
+				industrial_capacity_factory = 0.2
+			}
+		}
+	}
+	country = {
+		ARA_every_griff_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = griffon_army3
+			removal_cost = -1
+			modifier = {
+			    conscription_factor = 0.1
+				monthly_population = -0.2
+			}
+		}
+	}
+	country = {
+		ARA_prison_economy_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = slavery
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = -0.1
+				monthly_population = -0.2
+			}
+		}
+	}
+	country = {
+		ARA_faithful_fortress = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = FRA_fortification_focus
+			removal_cost = -1
+			modifier = {
+				production_speed_bunker_factor = 0.25
+                production_speed_coastal_bunker_factor = 0.25
+				production_speed_anti_air_building_factor = 0.25
+			}
+		}
+	}
+	country = {
+		ARA_absolute_chaos_1 = { #EL
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.5
+			    war_support_factor = -0.5
+			    army_org_Factor = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_absolute_chaos_2 = { #PM
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_low_resistance
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.5
+			    stability_factor = -0.5
+			    war_support_factor = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_absolute_chaos_3 = { #PC
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.5
+			    army_org_Factor = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_absolute_chaos_4 = { #EL+PM
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.5
+			    war_support_factor = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_absolute_chaos_5 = { #EL+PC
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			    army_org_Factor = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_absolute_chaos_6 = { #PM+PC
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ara_medium_resistance
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.5
+		    }
+		}
+	}
+	country = {
+		ARA_industria = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = severe_famine3
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+			    consumer_goods_factor = -0.05
+		    }
+		}
+	}
+	country = {
+		ARA_fallout_protests = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NLR_celestial_resistance
+			removal_cost = -1
+			modifier = {
+			    resistance_growth = 0.2
+			    compliance_growth = -0.5
+		    }
+		}
+	}
+	country = {
+		ARA_sicameon_rebellion = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = unhappy_army_3
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.25
+			    resistance_growth = 0.3
+				required_garrison_factor = 0.5
+			    resistance_damage_to_garrison = 1
+		    }
+		}
+	}
+	country = {
+		ARA_military_restrictions = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CES_military_potential_idea
+			removal_cost = -1
+			modifier = {
+			    conscription = -0.01
+				industrial_capacity_dockyard = -1
+		    }
+		}
+	}
+	country = {
+		ARA_refugee_crisis = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = pony_passport
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.5
+				monthly_population = -1.5
+		    }
+		}
+	}
+	country = {
+		ARA_architecture = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NIM_boule
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.05
+				monthly_population = -0.1
+				local_building_slots_factor = 0.2
+		    }
+		}
+	}
+	country = {
+		ARA_military_research_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_army
+			removal_cost = -1
+			research_bonus = {
+			    infantry_weapons = 0.1
+				land_doctrine = 0.1
+			    armor = 0.1
+				artillery = 0.1
+				air_equipment = 0.1
+				industry = -0.1
+				electronics = -0.1
+			}
+		}
+	}
+	trade_laws = {
+	    law = yes
+		use_list_view = no
+        
+		closed_economy_ara = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = closed_economy
+			
+			modifier = {
+				min_export = 0
+				trade_opinion_factor = -0.75
+			}
+			
+			allowed_to_remove = {
+				NOT = {
+				    has_government = fascism
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	##########################
 	economy = {
 	    law = yes
 		use_list_view = no
-
+        
 	    civilian_economy_ara = {
 			allowed = {
 				always = no
