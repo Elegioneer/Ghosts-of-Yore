@@ -1,0 +1,570 @@
+focus_tree = {
+	id = HRR_crusade
+	country = {
+		base = 0
+	}
+	default = no
+	continuous_focus_position = { x = 290 y = 2500 }
+	focus = {
+		id = HRR_reconstruction
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_rebuild_romau
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_reconstruction }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_rebuild_griffenheim
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_reconstruction }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_finance_civres
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_rebuild_romau }
+		prerequisite = { focus = HRR_rebuild_griffenheim }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_integrate_infra
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_rebuild_romau }
+		prerequisite = { focus = HRR_rebuild_griffenheim }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_peace_and_prosperity
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_rebuild_romau }
+		prerequisite = { focus = HRR_rebuild_griffenheim }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_support_uni
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_finance_civres }
+		prerequisite = { focus = HRR_integrate_infra }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_welfare_pol
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_integrate_infra }
+		prerequisite = { focus = HRR_welfare_pol }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_new_age
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_support_uni }
+		prerequisite = { focus = HRR_welfare_pol }
+		completion_reward = {
+			
+		}
+	}
+	###
+	focus = {
+		id = HRR_melt_ice
+		icon = GFX_goal_unknown
+		x = 8
+		y = 0
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_mobilise_griffs
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_melt_ice }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_fortify_cities
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_melt_ice }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_uncover_caches
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_melt_ice }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_sacrifices
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_mobilise_griffs }
+		prerequisite = { focus = HRR_fortify_cities }
+		prerequisite = { focus = HRR_uncover_caches }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_guns_for_liberators
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_mobilise_griffs }
+		prerequisite = { focus = HRR_fortify_cities }
+		prerequisite = { focus = HRR_uncover_caches }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_integrate_vets
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_mobilise_griffs }
+		prerequisite = { focus = HRR_fortify_cities }
+		prerequisite = { focus = HRR_uncover_caches }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_heart_darkness
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_sacrifices }
+		prerequisite = { focus = HRR_guns_for_liberators }
+		prerequisite = { focus = HRR_integrate_vets }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_fate_of_defeated
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heart_darkness }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_liberate_slaves
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heart_darkness }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_provisional_gov
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heart_darkness }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_nobles_and_revs
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_fate_of_defeated }
+		prerequisite = { focus = HRR_liberate_slaves }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_pres_and_parl
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_liberate_slaves }
+		prerequisite = { focus = HRR_provisional_gov }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_organise_elect
+		icon = GFX_goal_unknown
+		x = -1
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_nobles_and_revs }
+		prerequisite = { focus = HRR_pres_and_parl }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_free_media
+		icon = GFX_goal_unknown
+		x = 1
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_nobles_and_revs }
+		prerequisite = { focus = HRR_pres_and_parl }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_rising_from_ashes
+		icon = GFX_goal_unknown
+		x = 0
+		y = 7
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_organise_elect }
+		prerequisite = { focus = HRR_free_media }
+		completion_reward = {
+			
+		}
+	}
+	###
+	focus = {
+		id = HRR_from_rebels
+		icon = GFX_goal_unknown
+		x = 14
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_study_herz
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_from_rebels }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_reorg_knight
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_from_rebels }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_mil_inst
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_study_herz }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_form_fed_command
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_study_herz }
+		prerequisite = { focus = HRR_reorg_knight }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_liberators
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_reorg_knight }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_federal_air
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_mil_inst }
+		prerequisite = { focus = HRR_form_fed_command }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_fed_navy
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_form_fed_command }
+		prerequisite = { focus = HRR_liberators }
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = HRR_griffonia_shield
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_federal_air }
+		prerequisite = { focus = HRR_fed_navy }
+		completion_reward = {
+			
+		}
+	}

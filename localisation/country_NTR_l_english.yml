@@ -1,0 +1,65 @@
+﻿l_english:
+
+NTR_bookmarks:0 "### Bookmarks ###"
+
+NTR_state_descs:0 "### State Description ###"
+
+NTR_parties:0 "### Parties ###"
+ NTR_snowflakes_party:0 "Snowflake Dynasty"
+ NTR_snowflakes_party_long:0 "Snowflake Dynasty"
+ NTR_stormshields_party:0 "Stormshield Clan"
+ NTR_stormshields_party_long:0 "Stormshield Clan"
+ NTR_traitor_party:0 "Skynavia Sympathisers"
+ NTR_traitor_party_long:0 "Skynavia Sympathisers"
+ NTR_warrior_lodges_party:0 "Warrior Lodges"
+ NTR_warrior_lodges_party_long:0 "Warrior Lodges"
+
+NTR_ideas:0 "### Ideas ###"
+ NTR_war_north:0 "War in the North"
+ NTR_war_north_desc:0 "Ever since the Skynavians invaded, we were locked in a bloody war. A whole generation of ponies has perished in endless skirmishes, and now, we are on the brink of collapse. Our militia is exhausted, our resources are depleted, and it is clear that our current tactics will not allow us to win. As Skynavians are gathering their forces, we must act quickly if we want to save the tribes’ independence!"
+ NTR_warriors_of_blizzard:0 "Warriors of Blizzard"
+ NTR_warriors_of_blizzard_desc:0 "Northern ponies are experts in winter warfare. The North is their home, and they know how to use its properties to their advantage."
+ NTR_tribal_militias:0 "Tribal Militias"
+ NTR_tribal_militias_desc:0 "Our “army” is composed of various tribal militias. Their understanding of modern tactics is extremely limited, and so is cooperation between various chiefs. Until we will address these issues, our army will largely be unable to perform adequately."
+ NTR_exiled_clans:0 "Exiled Clans"
+ NTR_exiled_clans_desc:0 "After griffons took our western lands, many local clans escaped east. This caused a massive crisis due to our primitive agriculture being unable to properly sustain so many ponies. To make matters worse, the exiles’ hunger for revenge makes them susceptible to various radical ideas."
+ NTR_divided_clans:0 "Divided Clans"
+ NTR_divided_clans_desc:0 "The griffon invasion caused a massive rift in our society. Our old ways proved to be obsolete, and now, many ponies are openly rejecting ancient traditions, calling for rapid modernisation and adoption of the southern ways. Even Princess Fiana’s reign is being questioned. Our last line of defence is the druids and traditionalist clan leaders. But as time goes on, our authority diminishes. If this crisis is not addressed soon, we risk losing our power."
+ 
+NTR_foci:0 "### Focus ###"
+
+NTR_events:0 "### Events ###"
+
+NTR_flags:0 "### Country/Global Flags ###"
+
+NTR_tooltips:0 "### Custom Tooltip ###"
+ NTR_TT_fate:0 "The fate of Tir Deighe will be decided."
+ 
+### Leader Descriptions ###
+
+NTR_cosmetic_tags:0 "### Cosmetic Tags ###"
+ NTR_GOY_democratic:0 "Tir Deighe"
+ NTR_GOY_democratic_DEF:0 "The Northern Queendom"
+ NTR_GOY_democratic_ADJ:0 "Northern"
+ NTR_GOY_fascism:0 "Tir Deighe"
+ NTR_GOY_fascism_DEF:0 "The Northern State"
+ NTR_GOY_fascism_ADJ:0 "Northern"
+ NTR_GOY_neutrality:0 "Tir Deighe"
+ NTR_GOY_neutrality_DEF:0 "The Northern Queendom"
+ NTR_GOY_neutrality_ADJ:0 "Northern"
+ NTR_GOY_communism:0 "Free Northern Communes"
+ NTR_GOY_communism_DEF:0 "Free Northern Communes"
+ NTR_GOY_communism_ADJ:0 "Northern"
+
+### Factions ###
+
+### Traits ###
+ GOY_popular_fiana:0 "Popular Leader"
+ 
+### Decisions ###
+
+### Advisors ###
+
+### Companies ###
+
+### Tooltips ###

@@ -1,0 +1,1762 @@
+
+#YOU GOT TROLLED. THERE ARE NO EVENTS HERE.
+
+#────░░░───────────────────────────░░░───
+#─░░░─────────░▒▒▒▓▓▓▓▓▓▓▓▓▓▒▒▓▓─────░───
+#░░──────▒█████████████▓▓▓▓▓▒▓▓██▓────░──
+#░────▒███▓▒▒░──░▒▒░──░░░░░░░────██────░─
+#░───██░───░░▒░░░░───░─░░▒▒▓▓▒░───██───░░
+#───▓█───▒░───▒░────▒───────▒▒▒░──░█────░
+#───█▒─────────░──────▓████▒───────██────
+#──██────██████─────██▓▓█████▓─░────██───
+#─██▒░───▓███████──░████▓█▓▒█▒─▓▓▓█▒─██▓─
+#▓█─░▓██▓──────█─────▒───▒█▓░▒███▓░██──█▒
+#██──▒░▒███▒──██───────────▒▒▒──▒█──██─░█
+#░█─░──█────██▓─────▓██▒─────▒██▒██▒▓█──█
+#─██░─██░───██▓───██▓░█──▒████───█░─█░─██
+#──█──████▓───▒██───░████▓░─██▒███────██─
+#──█▓─█▓█░███████████▒░█──▒███▒██────██──
+#──█▓─███░█▓──█▒─░█───▒███████▓█────██───
+#──██─███████████████████───░██────▓█────
+#-─██─██████████████▒───█──██▓────░█░───░
+#──█▓─░██▓█─█─▒█───█────████─────██▒───░░
+#──█▒──▒██████▒█▒▒███████▒──░▒▓███─────░─
+#──█░──────▒▒██████▒▒░░──░▒░▓███▒──────░─
+#──█──▒─▒▒──────────░▒▒░──▓██░────░░────░
+#──█──░▒▒▒▒▒░░─░─░─░───░███████▒───░────░
+#──██─────────────░▒▒▓███████████──░░───░
+#───██▓░──────▒▓████▓░──█████████▒──░────
+#──░──█████████████───▒▓██████████──░░───
+#──░──██████████████▒▓████████████░──░───
+#──░──▓███████████▓───░███████████▓──░───
+#──░───███████████─────████████████──░───
+#───░───██████████░▒███████████████──░───
+#───░░───▓███████████████████▒─▓██───░───
+#───░▒───█████████████████████──────░░───
+#──░░───██████████████████████───░░░─────
+#─░░───████████████████████████──░▒─────░
+#─░───█████████████████████████───▒─────░
+#░───██████████████████████████▓───░░────
+#░──▓███████████████████████████░───░░───
+#──░█████████████████████████████▓───░░──
+#░──▓██████████████████████████████────░─
+#░────▓█████████████████████████████░───░
+#▒────███████████████████████████████▒──░
+#───▒█████████████████████████████████───
+#──▒███████████████████████████████████──
+#─░████████████████████████████████████──
+#─█████████████░─────────░█████████████░─
+#─███████████░─────────────████████████──
+#─▓██████████───░░░░░░▒▒───▒███████████──
+#──██████████──░░────░░───░███████████▒──
+#──██████████──░─────░───█████████████───
+#───█████████──░░───░───█████████████───░
+#░──█████████───░───░───███████████▒───░░
+#░──▒████████░──░───░──██████████▒────░░─
+#░───████████▓──░───░──███▓████▒────░░───
+#░░──████████───░───░───██░─▓─────░░░────
+#─░──▒███▒─█▓──░░───░░───▒███───░░───────
+#─░░───░█░─▓█──░░────░░───███──░░──────░░
+#──░────█▓███──░──────░░───░───░────░░░──
+#──░░──█▒─██───░────────░─────░░───░░────
+#──░──░████───░░─────────░░░░░─────░─────
+#──░░──▒░────░░────▒░─────────────░──────
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Alright, alright. Here they are:
+
+add_namespace = ntribes
+add_namespace = ntribes_news
+    #### DEBUG ####
+	country_event = { #debug
+	    id = ntribes.322
+	    title = ntribes.322.t
+	    desc = ntribes.322.d
+	    picture = GFX_event_western_griffon_city
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.322.a
+			load_focus_tree = Northern_tribes_init
+		}
+		option = {
+		    name = ntribes.322.b
+			load_focus_tree = Northern_tribes_reform
+		}
+		option = {
+		    name = ntribes.322.c
+			load_focus_tree = Northern_tribes_tradition
+		}
+		option = {
+		    name = ntribes.322.e
+			load_focus_tree = Northern_tribes_ice
+		}
+		option = {
+		    name = ntribes.322.f
+			load_focus_tree = Northern_tribes_init
+		}
+	}
+	#### NEWS EVENTS ####
+	
+	#### COUNTRY FOCUS EVENTS ####
+	country_event = { #Last of her Blood
+	    id = ntribes.01
+	    title = ntribes.01.t
+	    desc = ntribes.01.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.01.a
+		}
+	}
+	country_event = { #Forbidden Knowledge
+	    id = ntribes.02
+	    title = ntribes.02.t
+	    desc = ntribes.02.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.02.a
+			hidden_effect = {
+			    set_country_flag = NTR_FLAG_blizzard
+			    country_event = {
+				    id = ntribes.51
+					days = 7
+				}
+			}
+		}
+		option = {
+		    name = ntribes.02.b
+			hidden_effect = {
+			    country_event = {
+				    id = ntribes.52
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = { #Dreams
+	    id = ntribes.51
+	    title = ntribes.51.t
+	    desc = ntribes.51.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.51.a
+		}
+	}
+	country_event = { #Wayward Druid
+	    id = ntribes.52
+	    title = ntribes.52.t
+	    desc = ntribes.52.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.52.a
+			country_event = ntribes.53
+		}
+	}
+	country_event = { #Vault of Broken Swords
+	    id = ntribes.53
+	    title = ntribes.53.t
+	    desc = ntribes.53.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.53.a
+			country_event = ntribes.54
+		}
+	}
+	country_event = { #The Aftermath
+	    id = ntribes.54
+	    title = ntribes.54.t
+	    desc = ntribes.54.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.54.a
+		}
+	}
+	country_event = { #The Clans
+	    id = ntribes.03
+	    title = ntribes.03.t
+	    desc = ntribes.03.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.03.a
+		}
+	}
+	country_event = { #Friend from the East
+	    id = ntribes.04
+	    title = ntribes.04.t
+	    desc = ntribes.04.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.04.a
+		}
+	}
+	country_event = { #Blizzard
+	    id = ntribes.55
+	    title = ntribes.55.t
+	    desc = ntribes.55.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.55.a
+			custom_effect_tooltip = NTR_TT_load_ice_tree
+			add_stability = -0.1
+			562 = {
+			    add_manpower = -100
+			}
+			set_politics = {
+			    ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = { ideology = fascism popularity = 0.5 }
+		    set_party_name = {ideology = fascism name = NTR_druids_party long_name = NTR_druids_party_long }
+			hidden_effect = {
+			    retire_party_leader = fascism
+				load_focus_tree = Northern_tribes_ice
+			}
+			create_country_leader = {
+			    name = "Archdruid Gavin"
+			    picture = "GOY_Gavin.tga"
+			    desc = "NTR_gavin_desc"
+			    expire = "1965.1.1"
+			    ideology = nazism
+		    }
+			#TODO OOB
+			swap_ideas = {
+			    remove_idea = NTR_divided_clans
+				add_idea = NTR_rebelling_clans
+			}
+			563 = {
+			    set_demilitarized_zone = yes
+			}
+		}
+	}
+	country_event = { #The Council Convenes
+	    id = ntribes.05
+	    title = ntribes.05.t
+	    desc = ntribes.05.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.05.a
+			custom_effect_tooltip = NTR_TT_load_reform_tree
+			hidden_effect = {
+				load_focus_tree = Northern_tribes_reform
+			}
+			set_politics = {
+			    ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = { ideology = neutrality popularity = 0.3 }
+			add_ideas = NTR_princess_fiana
+		}
+		option = {
+		    name = ntribes.05.b
+			custom_effect_tooltip = NTR_TT_load_trad_tree
+			hidden_effect = {
+				load_focus_tree = Northern_tribes_tradition
+			}
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			#TODO enable magic of spirits decisions
+		}
+	}
+	#6-9
+	country_event = { #Envoy from Tir Deighe
+	    id = ntribes.10
+	    title = ntribes.10.t
+	    desc = ntribes.10.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.10.a
+			country_event = {
+			    id = ntribes.56
+				hours = 12
+			}
+		}
+		option = {
+		    name = ntribes.10.b
+			country_event = {
+			    id = ntribes.57
+				hours = 12
+			}
+		}
+	}
+	country_event = { #Joining the Bloc
+	    id = ntribes.56
+	    title = ntribes.56.t
+	    desc = ntribes.56.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.56.a
+			add_to_faction = GRF
+		}
+	}
+	country_event = { #GRF Refuses
+	    id = ntribes.57
+	    title = ntribes.57.t
+	    desc = ntribes.57.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.57.a
+		}
+	}
+	country_event = { #North Rises
+	    id = ntribes.11
+	    title = ntribes.11.t
+	    desc = ntribes.11.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.11.a
+			set_cosmetic_tag = NTR_QUEEN
+			swap_ideas = {
+			    remove_idea = NTR_princess_fiana
+				add_idea = NTR_queen_fiana
+			}
+		}
+	}
+	country_event = { #Risky Investment
+	    id = ntribes.12
+	    title = ntribes.12.t
+	    desc = ntribes.12.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.12.a
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				producer = BAK
+			    amount = 2500
+			}
+			add_stability = -0.03
+			add_political_power = -25
+		}
+	}
+	country_event = { #Young Blood
+	    id = ntribes.13
+	    title = ntribes.13.t
+	    desc = ntribes.13.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.13.a
+			custom_effect_tooltip = NTR_TT_archer_unavailable
+			hidden_effect = {
+			    set_country_flag = NTR_FLAG_archer_unavailable
+			}
+			add_popularity = {
+			    ideology = neutrality
+				popularity = 0.05
+			}
+			add_stability = -0.03
+			add_political_power = -25
+		}
+	}
+	country_event = { #War Plan
+	    id = ntribes.14
+	    title = ntribes.14.t
+	    desc = ntribes.14.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.14.a
+			677 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 10329
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 9337
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 11321
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 6473
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 9192
+				}
+			}
+			562 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 11193
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 146
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 31
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 6288
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 6162
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 9283
+				}
+			}
+			567 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 7414
+				}
+				add_building_construction = {
+				    type = bunker
+					level = 1
+					instant_build = yes
+					province = 7753
+				}
+			}
+		}
+		option = {
+		    name = ntribes.14.b
+			add_timed_idea = {
+			    idea = NTR_prepared_assault
+				days = 270
+			}
+		}
+		option = {
+		    name = ntribes.14.c
+			#TODO OOB
+		}
+	}
+	country_event = { #Land Reclamation
+	    id = ntribes.15
+	    title = ntribes.15.t
+	    desc = ntribes.15.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.15.a
+            522 = {
+                add_manpower = -10000
+            }
+            add_stability = 0.05
+            add_political_power = -50
+		}
+        option = {
+		    name = ntribes.15.b
+            add_stability = -0.03
+            add_political_power = 50
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+		}
+	}
+	country_event = { #
+	    id = ntribes.16
+	    title = ntribes.16.t
+	    desc = ntribes.16.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.16.a
+            remove_ideas = NTR_exiled_clans
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.05
+            }
+		}
+        option = {
+		    name = ntribes.16.b
+            add_political_power = -100
+            remove_ideas = NTR_exiled_clans
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+            522 = {
+                add_extra_state_shared_building_slots = 1
+            }
+            561 = {
+                add_extra_state_shared_building_slots = 1
+            }
+            601 = {
+                add_extra_state_shared_building_slots = 1
+            }
+            542 = {
+                add_extra_state_shared_building_slots = 1
+            }
+            585 = {
+                add_extra_state_shared_building_slots = 1
+            }
+		}
+	}
+	country_event = { #Wind of Changes
+	    id = ntribes.17
+	    title = ntribes.17.t
+	    desc = ntribes.17.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.17.a
+            add_ideas = NTR_democratic_inst
+            set_party_name = {ideology = neutrality name = NTR_council_party long_name = NTR_council_party_long }
+		}
+        option = {
+		    name = ntribes.17.a
+            add_ideas = NTR_central_gov
+            set_party_name = {ideology = neutrality name = NTR_royal_party long_name = NTR_royal_party_long }
+		}
+	}
+	country_event = { #question of taxation
+	    id = ntribes.18
+	    title = ntribes.18.t
+	    desc = ntribes.18.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.18.a
+            add_political_power = 100
+		}
+        option = {
+		    name = ntribes.18.a
+            add_political_power = -100
+            add_ideas = NTR_modern_tax
+		}
+        option = {
+		    name = ntribes.18.a
+            add_political_power = -200
+            add_ideas = NTR_harsh_tax
+		}
+	}
+	country_event = { #old warrior
+	    id = ntribes.19
+	    title = ntribes.19.t
+	    desc = ntribes.19.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.19.a
+		}
+	}
+	country_event = { #Planning the War
+	    id = ntribes.20
+	    title = ntribes.20.t
+	    desc = ntribes.20.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.20.a
+		}
+	}
+	country_event = { #Better the Stormshield You Know
+	    id = ntribes.21
+	    title = ntribes.21.t
+	    desc = ntribes.21.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.21.a
+            add_tech_bonus = {
+				name = NTR_arty_5
+				bonus = 0.1
+				uses = 1
+				category = artillery
+			}
+            #TODO enable foreign traders
+		}
+	}
+	country_event = { #Ponies rise up
+	    id = ntribes.22
+	    title = ntribes.22.t
+	    desc = ntribes.22.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.22.a
+            add_timed_idea = {
+                idea = NTR_tribal_resistance
+                days = 180
+            }
+		}
+	}
+	country_event = { #Fate of Skynavia
+	    id = ntribes.23
+	    title = ntribes.23.t
+	    desc = ntribes.23.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.23.a
+            522 = {
+                add_manpower = -500000
+                remove_core_of = SRS
+            }
+            561 = {
+			    add_manpower = -20000
+                remove_core_of = SRS
+			}
+			585 = {
+			    add_manpower = -20000
+                remove_core_of = SRS
+			}
+			601 = {
+			    add_manpower = -20000
+                remove_core_of = SRS
+			}
+			542 = {
+			    add_manpower = -20000
+                remove_core_of = SRS
+			}
+            add_stability = 0.05
+            hidden_effect = {
+                set_country_flag = NTR_flag_ponies_land
+                every_other_country = {
+                    limit = {
+                        has_idea = griffon_race
+						NOT = {
+						    has_idea = detached_country
+						}
+                        any_owned_state = {
+                            is_on_continent = Asia
+                        }
+                    }
+                    country_event = ntribes.59
+                }
+            }
+		}
+        option = {
+		    name = ntribes.23.b
+            522 = {
+                add_manpower = -100000
+            }
+            add_stability = -0.05
+            add_popularity = {
+                ideology = communism
+                popularity = 0.05
+            }
+            hidden_effect = {
+                set_country_flag = NTR_flag_princess_of_all
+            }
+		}
+	}
+    country_event = { #Skynavian Exiles
+	    id = ntribes.59
+	    title = ntribes.59.t
+	    desc = ntribes.59.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.59.a
+			random_owned_state = {
+			    add_manpower = 10000
+			}
+			add_stability = -0.01
+			add_popularity = {
+			    ideology = communism
+				popularity = 0.01
+			}
+		}
+	}
+	country_event = { #Issue of Communes
+	    id = ntribes.24
+	    title = ntribes.24.t
+	    desc = ntribes.24.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.24.a
+			add_manpower = -25000
+			542 = {
+			    add_manpower = -20000
+			    add_extra_state_shared_building_slots = 1
+			}
+			561 = {
+			    add_manpower = -20000
+			    add_extra_state_shared_building_slots = 1
+			}
+			601 = {
+			    add_manpower = -20000
+			    add_extra_state_shared_building_slots = 1
+			}
+		}
+		option = {
+		    name = ntribes.24.b
+			add_stability = -0.02
+			add_popularity = {
+			    ideology = communism
+				popularity = 0.03
+			}
+		}
+	}
+	country_event = { #A Calm Day
+	    id = ntribes.25
+	    title = ntribes.25.t
+	    desc = ntribes.25.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.25.a
+		}
+	}
+	country_event = { #Broken Metal
+	    id = ntribes.26
+	    title = ntribes.26.t
+	    desc = ntribes.26.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.26.a
+			574 = {
+			    add_manpower = -10000
+				add_building_construction = {
+				    type = arms_factory
+			        level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+			    ideology = neutrality
+				popularity = -0.03
+			}
+		}
+		option = {
+		    name = ntribes.26.b
+			574 = {
+			    add_manpower = -50000
+			}
+			add_stability = 0.05
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 1000
+			}
+			add_popularity = {
+			    ideology = neutrality
+				popularity = -0.08
+			}
+		}
+	}
+	country_event = { #Dubious Loyalties
+	    id = ntribes.27
+	    title = ntribes.27.t
+	    desc = ntribes.27.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.27.a
+			add_political_power = -75
+			add_stability = 0.03
+		}
+		option = {
+		    name = ntribes.27.a
+			562 = {
+			    add_manpower = -1000
+			}
+			add_stability = -0.03
+			add_popularity = {
+			    ideology = democratic
+				popularity = -0.1
+			}
+		}
+	}
+	country_event = { #The Punishment
+	    id = ntribes.28
+	    title = ntribes.28.t
+	    desc = ntribes.28.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.28.a
+			563 = {
+			    add_manpower = -100000
+			}
+			567 = {
+			    add_manpower = -25000
+			}
+			602 = {
+			    add_manpower = -25000
+			}
+			add_stability = 0.03
+			add_popularity = {
+			    ideology = neutrality
+				popularity = -0.1
+			}
+			563 = {
+			    set_demilitarized_zone = no
+			}
+			add_manpower = 25000
+			hidden_effect = {
+			HLR = {
+			    country_event = ntribes.60
+			}
+			FBK = {
+			    country_event = ntribes.61
+			}
+			}
+		}
+	}
+	country_event = { #Influx of Refugees
+	    id = ntribes.60
+	    title = ntribes.60.t
+	    desc = ntribes.60.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.60.a
+			566 = {
+			    add_manpower = 50000
+			}
+			add_stability = -0.03
+		}
+	}
+	country_event = { #Refugees Arrive
+	    id = ntribes.61
+	    title = ntribes.61.t
+	    desc = ntribes.61.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.61.a
+			571 = {
+			    add_manpower = 25000
+			}
+		}
+	}
+	country_event = { #The Price
+	    id = ntribes.29
+	    title = ntribes.29.t
+	    desc = ntribes.29.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.29.a
+		}
+	}
+	country_event = { #Orphaned Nation
+	    id = ntribes.30
+	    title = ntribes.30.t
+	    desc = ntribes.30.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.30.a
+			add_stability = -0.03
+		}
+	}
+	country_event = { #The Ascension
+	    id = ntribes.31
+	    title = ntribes.31.t
+	    desc = ntribes.31.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.31.a
+			remove_ideas = NTR_broken_ties_1
+			add_country_leader_trait = GOY_god_of_north
+            485 = {
+                add_manpower = -500000
+            }
+            429 = {
+                add_manpower = -300000
+            }
+            581 = {
+                add_manpower = -250000
+            }
+            431 = {
+                add_manpower = -200000
+            }
+            432 = {
+                add_manpower = -100000
+            }
+            hidden_effect = {
+            #stw brz fea pyt gri yal ang kat
+                IF = {
+                    limit = {
+                        BRZ = {
+                            exists = yes
+                        }
+                    }
+                    BRZ = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        STW = {
+                            exists = yes
+                        }
+                    }
+                    STW = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        FEA = {
+                            exists = yes
+                        }
+                    }
+                    FEA = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        PYT = {
+                            exists = yes
+                        }
+                    }
+                    PYT = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        GRI = {
+                            exists = yes
+                        }
+                    }
+                    GRI = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        YAL = {
+                            exists = yes
+                        }
+                    }
+                    YAL = {
+                        country_event = ntribes.62
+                    }
+                }
+                IF = {
+                    limit = {
+                        ANG = {
+                            exists = yes
+                        }
+                    }
+                    ANG = {
+                        country_event = ntribes.62
+                    }
+                }IF = {
+                    limit = {
+                        KAT = {
+                            exists = yes
+                        }
+                    }
+                    KAT = {
+                        country_event = ntribes.62
+                    }
+                }
+            }
+			every_other_country = {
+			    reverse_add_opinion_modifier = {
+                    target = NTR
+                    modifier = NTR_dangerous_maniacs
+		    	}
+            }
+		}
+	}
+    country_event = { #Refugees from Tir Deighe
+	    id = ntribes.61
+	    title = ntribes.61.t
+	    desc = ntribes.61.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.61.a
+            add_stability = -0.03
+			random_owned_state = {
+			    add_manpower = 50000
+			}
+		}
+	}
+	country_event = { #Landscape after the battle #TODO
+	    id = ntribes.32
+	    title = ntribes.32.t
+	    desc = ntribes.32.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.32.a
+            custom_effect_tooltip = NTR_tt_kill_ten_k
+			hidden_effect = {
+			    #Angriver
+			547 = {
+                add_manpower = -10000
+			}
+			422 = {
+			    add_manpower = -10000
+			}
+			411 = {
+			    add_manpower = -10000
+			}
+			#Katerin
+			506 = {
+			    add_manpower = -10000
+			}
+			554 = {
+			    add_manpower = -10000
+			}
+			423 = {
+			    add_manpower = -10000
+			}
+			#Yale
+			665 = {
+			    add_manpower = -10000
+			}
+			402 = {
+			    add_manpower = -10000
+			}
+			439 = {
+			    add_manpower = -10000
+			}
+			398 = {
+			    add_manpower = -10000
+			}
+			#Greifemarschen
+			399 = {
+			    add_manpower = -10000
+			}
+			447 = {
+			    add_manpower = -10000
+			}
+			378 = {
+			    add_manpower = -10000
+			}
+			#Romau
+			674 = {
+			    add_manpower = -10000
+			}
+			#Griffonian Empire starting land
+			555 = {
+			    add_manpower = -10000
+			}
+			437 = {
+			    add_manpower = -10000
+			}
+			397 = {
+			    add_manpower = -10000
+			}
+			405 = {
+			    add_manpower = -10000
+			}
+			382 = {
+			    add_manpower = -10000
+			}
+			#Feathisia
+			666 = {
+			    add_manpower = -10000
+			}
+			440 = {
+			    add_manpower = -10000
+			}
+			441 = {
+			    add_manpower = -10000
+			}
+			520 = {
+			    add_manpower = -10000
+			}
+			434 = {
+			    add_manpower = -10000
+			}
+			498 = {
+			    add_manpower = -10000
+			}
+			538 = {
+			    add_manpower = -10000
+			}
+			433 = {
+			    add_manpower = -10000
+			}
+			497 = {
+			    add_manpower = -10000
+			}
+			#Strawberry
+			443 = {
+			    add_manpower = -10000
+			}
+			545 = {
+			    add_manpower = -10000
+			}
+			546 = {
+			    add_manpower = -10000
+			}
+			486 = {
+			    add_manpower = -10000
+			}
+			458 = {
+			    add_manpower = -10000
+			}
+			#Bronzehill
+			424 = {
+			    add_manpower = -10000
+			}
+			479 = {
+			    add_manpower = -10000
+			}
+			492 = {
+			    add_manpower = -10000
+			}
+			568 = {
+			    add_manpower = -10000
+			}
+			539 = {
+			    add_manpower = -10000
+			}
+			}
+		}
+	}
+	country_event = { #Long March North
+	    id = ntribes.33
+	    title = ntribes.33.t
+	    desc = ntribes.33.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.33.a
+            add_manpower = -100
+		}
+	}
+	country_event = { #The edict
+	    id = ntribes.35
+	    title = ntribes.35.t
+	    desc = ntribes.35.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.35.a
+            add_stability = -0.05
+            add_war_support = -0.05
+            custom_effect_tooltip = NTR_tt_kill_five_k
+			hidden_effect = {
+			    #Angriver
+			547 = {
+                add_manpower = -5000
+			}
+			422 = {
+			    add_manpower = -5000
+			}
+			411 = {
+			    add_manpower = -5000
+			}
+			#Katerin
+			506 = {
+			    add_manpower = -5000
+			}
+			554 = {
+			    add_manpower = -5000
+			}
+			423 = {
+			    add_manpower = -5000
+			}
+			#Yale
+			665 = {
+			    add_manpower = -5000
+			}
+			402 = {
+			    add_manpower = -5000
+			}
+			439 = {
+			    add_manpower = -5000
+			}
+			398 = {
+			    add_manpower = -5000
+			}
+			#Greifemarschen
+			399 = {
+			    add_manpower = -5000
+			}
+			447 = {
+			    add_manpower = -5000
+			}
+			378 = {
+			    add_manpower = -5000
+			}
+			#Romau
+			674 = {
+			    add_manpower = -5000
+			}
+			#Griffonian Empire starting land
+			555 = {
+			    add_manpower = -5000
+			}
+			437 = {
+			    add_manpower = -5000
+			}
+			397 = {
+			    add_manpower = -5000
+			}
+			405 = {
+			    add_manpower = -5000
+			}
+			382 = {
+			    add_manpower = -5000
+			}
+			#Feathisia
+			666 = {
+			    add_manpower = -5000
+			}
+			440 = {
+			    add_manpower = -5000
+			}
+			441 = {
+			    add_manpower = -5000
+			}
+			520 = {
+			    add_manpower = -5000
+			}
+			434 = {
+			    add_manpower = -5000
+			}
+			498 = {
+			    add_manpower = -5000
+			}
+			538 = {
+			    add_manpower = -5000
+			}
+			433 = {
+			    add_manpower = -5000
+			}
+			497 = {
+			    add_manpower = -5000
+			}
+			#Strawberry
+			443 = {
+			    add_manpower = -5000
+			}
+			545 = {
+			    add_manpower = -5000
+			}
+			546 = {
+			    add_manpower = -5000
+			}
+			486 = {
+			    add_manpower = -5000
+			}
+			458 = {
+			    add_manpower = -5000
+			}
+			#Bronzehill
+			424 = {
+			    add_manpower = -5000
+			}
+			479 = {
+			    add_manpower = -5000
+			}
+			492 = {
+			    add_manpower = -5000
+			}
+			568 = {
+			    add_manpower = -5000
+			}
+			539 = {
+			    add_manpower = -5000
+			}
+			}
+		}
+	}
+	country_event = { #The Mission
+	    id = ntribes.36
+	    title = ntribes.36.t
+	    desc = ntribes.36.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.36.a
+		}
+	}
+	country_event = { #The Imperial City
+	    id = ntribes.34
+	    title = ntribes.34.t
+	    desc = ntribes.34.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.34.a
+            add_stability = -0.05
+            add_manpower = -25000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -5000
+            }
+            382 = {
+                set_demilitarized_zone = yes
+                add_manpower = -100000
+                damage_building = { type = industrial_complex damage = 2.0 }
+                damage_building = { type = arms_factory damage = 2.0 }
+                damage_building = { type = infrastructure damage = 2.0 }
+            }
+		}
+	}
+	country_event = { #The Meeting
+	    id = ntribes.37
+	    title = ntribes.37.t
+	    desc = ntribes.37.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.37.a
+		}
+	}
+	country_event = { #The South Rises
+	    id = ntribes.38
+	    title = ntribes.38.t
+	    desc = ntribes.38.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.38.a
+            add_manpower = -30000
+            add_stability = -0.05
+            add_war_support = -0.05
+            #Angriver
+			547 = {
+                add_manpower = -5000
+			}
+			422 = {
+			    add_manpower = -5000
+			}
+			411 = {
+			    add_manpower = -5000
+			}
+			#Katerin
+			506 = {
+			    add_manpower = -5000
+			}
+			554 = {
+			    add_manpower = -5000
+			}
+			423 = {
+			    add_manpower = -5000
+			}
+            remove_ideas = NTR_pillage_herzland
+		}
+	}
+	country_event = { #The Cause
+	    id = ntribes.39
+	    title = ntribes.39.t
+	    desc = ntribes.39.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.39.a
+		}
+	}
+	country_event = { #The Rebellion Spreads
+	    id = ntribes.40
+	    title = ntribes.40.t
+	    desc = ntribes.40.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.40.a
+            add_stability = -0.05
+            add_war_support = 0.05
+            add_manpower = -50000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -5000
+            }
+            #Romau
+			674 = {
+			    add_manpower = -50000
+                set_demilitarized_zone = yes
+			}
+            #Yale
+			665 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			402 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			439 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			398 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			#Greifemarschen
+			399 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			447 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			378 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+		}
+	}
+	country_event = { #The Heart
+	    id = ntribes.41
+	    title = ntribes.41.t
+	    desc = ntribes.41.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.41.a
+		}
+	}
+	country_event = { #Retreat Continues
+	    id = ntribes.42
+	    title = ntribes.42.t
+	    desc = ntribes.42.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.42.a
+            add_stability = -0.03
+            add_war_support = -0.02
+            add_manpower = -25000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -2500
+            }
+            497 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+			498 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            434 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            441 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            520 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            440 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            666 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            458 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            443 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            545 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            539 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            492 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            424 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            479 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+            568 = {
+			    add_manpower = -5000
+                set_demilitarized_zone = yes
+			}
+		}
+	}
+    country_event = { #The Herzland Rebellion
+	    id = ntribes.43
+	    title = ntribes.43.t
+	    desc = ntribes.43.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		immediate = {
+		    hidden_effect = {
+			    news_event = {
+				    id = ntribes_news.5
+					hours = 6
+				}
+				NTR = {
+				    add_ideas = NTR_widespread_unrest
+				}
+				#TODO release HRR
+				#TODO OOB
+				HRR = {
+				    add_ideas = HRR_war_winter
+					add_ideas = HRR_devastation
+					add_ideas = HRR_disorg_army
+				}
+			}
+		}
+	    option = {
+		    name = ntribes.43.a
+			effect_tooltip = {
+			    NTR = {
+				    add_ideas = NTR_widespread_unrest
+				}
+			}
+			complete_national_focus = NTR_no_rest
+		}
+		option = {
+		    name = ntribes.43.b
+			effect_tooltip = {
+			    HRR = {
+				    add_ideas = HRR_war_winter
+					add_ideas = HRR_devastation
+					add_ideas = HRR_disorg_army
+				}
+			}
+			hidden_effect = {
+			    complete_national_focus = NTR_no_rest
+			}
+			change_tag_from = HRR
+		}
+	}

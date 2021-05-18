@@ -1,0 +1,15 @@
+NTR_spirits_blessings_cat = {
+    icon = generic_political_actions
+	
+	visible = {
+	    tag = NTR
+	}
+}
+
+NTR_dark_magic_cat = {
+    icon = generic_political_actions
+	
+	visible = {
+	    tag = NTR
+	}
+}

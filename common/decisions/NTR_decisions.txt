@@ -1,0 +1,475 @@
+NTR_spirits_blessings_cat = {
+    NTR_metal_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_clan_moltenrock
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    research_speed_factor = 0.1
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+	NTR_wood_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_clan_barkcoat
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    industrial_capacity_factory = 0.1
+			line_change_production_efficiency_factor = 0.1
+		    production_factory_max_efficiency_factor = 0.05
+			production_speed_buildings_factor = 0.05
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+	NTR_fire_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_clan_brightflame
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    montly_population = 0.2
+			conscription = 0.01
+			casualty_trickleback = 0.1
+			experience_loss_factor = -0.1
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+	NTR_earth_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_clan_greenhoof
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    consumer_goods_factor = -0.05
+			local_resources = 0.1
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+	NTR_water_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_clan_stormshield
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    army_attack_factor = 0.05
+			army_defence_factor = 0.1
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+	NTR_ice_bless = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_redeem_ice
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_blessing
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_blessing_active
+				}
+			}
+		}
+		modifier = {
+		    experience_gain_army = 0.1
+		    experience_gain_navy = 0.1
+			experience_gain_air = 0.1
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_blessing_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_blessing_active
+			}
+		}
+		days_remove = 180
+	}
+}
+
+NTR_dark_magic_cat = {
+    NTR_raise_dead_dc = {
+		icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+			NOT = {
+			    has_completed_focus = NTR_raise_more
+			}
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    add_manpower = 50000
+			hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+	NTR_raise_dead_dc_2 = {
+		icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_raise_more
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    add_manpower = 80000
+			hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+    NTR_cold_wave = {
+		icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+			has_war = yes
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    every_other_country = {
+			    limit = {
+				    has_war_with = NTR
+				}
+				add_timed_idea = {
+				    idea = NTR_unnatural_weather
+					days = 120
+				}
+			}
+			hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+	NTR_bloodlust = {
+	    icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = NTR_bloodrage
+				days = 120
+			}
+			hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+	NTR_battlefield_magic = {
+	    icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = NTR_sorcerer_generals
+				days = 120
+			}
+			hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+	NTR_shape_land = {
+	    icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = NTR_subdue_land
+				days = 120
+			}
+			hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+	NTR_unnatural_insight = {
+	    icon = generic_nationalism
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_completed_focus = NTR_dark_magic
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = NTR_iseeyou
+				days = 120
+			}
+			hidden_effect = {
+			    set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
+}

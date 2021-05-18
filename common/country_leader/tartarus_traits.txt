@@ -109,4 +109,14 @@ leader_traits = {
 	    random = no
 		political_power_factor = 0.1
 	}
+	GOY_shrewd_manipulator = {
+	    random = no
+		political_power_factor = 0.05
+		opinion_gain_monthly_factor = 0.2
+	}
+	GOY_popular_fiana = {
+	    random = no
+		stability_factor = 0.1
+		army_morale_factor = 0.05
+	}
 }
