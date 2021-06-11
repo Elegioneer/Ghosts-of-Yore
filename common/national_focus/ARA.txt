@@ -1973,7 +1973,6 @@ focus_tree = {
 				category = land_doctrine
 			}
 			country_event = arantiga.005
-			remove_unit_leader = 1337
 			
 			hidden_effect = {
 			    set_country_flag = ARA_reorganise_high_command_flag
@@ -3345,6 +3344,15 @@ focus_tree = {
 				target = TAL
 			}
 			}
+			IF = { 
+				limit = {
+						JES = { exists = yes }
+						}
+			create_wargoal = {
+				type = annex_everything 
+				target = JES
+			}
+			}
 		}
 	}
 
@@ -3360,18 +3368,13 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -5000
-				producer = ARA
-			}
 			FRN = { country_event = { id = arantiga.075 days = 3 } }
 		}
 	}
 
 	focus = {
 		id = ARA_greater_arantiga
-		icon = GFX_goal_jer_eagle
+		icon = GFX_goal_goy_vassal_talouse
 		x = 0
 		y = 1
 		relative_position_id = ARA_francistrian_compatriots
@@ -3380,16 +3383,39 @@ focus_tree = {
 		ai_will_do = {
 			base = 75
 		}
-		available = {
-				487 = { is_owned_and_controlled_by = ROOT }
-				410 = { is_owned_and_controlled_by = ROOT }
-				481 = { is_owned_and_controlled_by = ROOT }
+		bypass = {
+		    OR = {
+			    TAL = { exists = no }
+				AND = {
+				    has_country_flag = ARA_FLAG_feti_refused
+				    NOT = {
+				        TAL = {
+				            is_puppet_of = ARA
+					    }
+				    }
 				}
+			}
+		}
+		available = {
+			TAL = {
+			    is_puppet_of = ARA
+			}
+			371 = {
+				is_owned_by = ARA
+			}
+		}
 		completion_reward = {
-			add_state_core = 487
-			add_state_core = 410
-			add_state_core = 481
-			add_manpower = 75000
+			annex_country = { target = TAL transfer_troops = yes }
+			every_state = {
+			    limit = {
+				    is_core_of = TAL
+				}
+				add_core_of = ARA
+			}
+			custom_effect_tooltip = ARA_CETT_fetivola 
+		    hidden_effect = {
+		        set_country_flag = ARA_FLAG_fetivola
+		    }
 		}
 	}
 

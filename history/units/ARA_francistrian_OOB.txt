@@ -1,6 +1,6 @@
 
 division_template = {
-	name = "Francistrian Volunteers"
+	name = "Talousian Volunteers"
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -16,25 +16,25 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Francistrian Volunteers"
+		name = "Talousian Volunteers"
 		location = 7266
-		division_template = "Francistrian Volunteers"
+		division_template = "Talousian Volunteers"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
 	}
 
 	division = {
-		name = "Francistrian Volunteers"
+		name = "Talousian Volunteers"
 		location = 7266
-		division_template = "Francistrian Volunteers"
+		division_template = "Talousian Volunteers"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 
 	division = {
-		name = "Francistrian Volunteers"
+		name = "Talousian Volunteers"
 		location = 7266
-		division_template = "Francistrian Volunteers"
+		division_template = "Talousian Volunteers"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}

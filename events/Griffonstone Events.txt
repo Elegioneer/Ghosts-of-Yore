@@ -702,6 +702,7 @@ add_namespace = griffonstone_decision
 				}
 				set_country_flag = BOI_deadlock_broken
 			}
+			create_faction = GOY_kaiserliche_vorhut
 		}
 	}
 	
@@ -1657,6 +1658,9 @@ country_event = { #Herzländers unite! (cap)
 				    id = griffonstone.285
 					days = 60
 				}
+				BOI = {
+				    leave_faction = yes
+				}
 			}
 		}
 	}
@@ -2007,6 +2011,7 @@ country_event = { #Herzländers unite! (cap)
 			set_capital = 382
 			add_ideas = GRI_grover_vi
 			remove_ideas = kingdom_with_no_king
+			set_faction_name = GOY_reichspakt
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }

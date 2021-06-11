@@ -140,12 +140,13 @@ country_event = { #prodigal sons
 			create_corps_commander = {
 				name = "Craterus"
 				picture = Craterus.tga
-				traits = { griffon_race_trait career_officer armor_officer harsh_leader }
+				traits = { griffon_race_trait trait_reckless armor_officer }
 				skill = 3
 				attack_skill = 2
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 3
+				id = 1337 #ayyyy
 			}
 
 			load_oob = ARA_sons_of_arantigos_OOB
@@ -4076,33 +4077,96 @@ country_event = { #Detente
 ########## Die Is Cast Tree #############
 #########################################
 
-country_event = { #Arantigan Uprising
+country_event = { #Arantigos Reborn? (Talouse)
 	id = arantiga.075
 	title = arantiga.075.t
 	desc = arantiga.075.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_event_griffon_diplomacy
 	option = {
 		name = 	arantiga.075.a
 		ai_chance = {
-			base = 5
+			base = 10
 		}
-		add_stability = -0.2
-        add_war_support = -0.2
 		ARA = {
-		    transfer_state = 487
-			transfer_state = 410
-			transfer_state = 481
+		    puppet = TAL
+			set_autonomy = { target = TAL autonomy_state = autonomy_reichsprotectorate }
+	    }
+		hidden_effect = {
+		    ARA = {
+			    country_event = {
+				    id = arantiga.149
+					days = 1
+				}
+			}
+		    country_event = {
+			    id = arantiga.149
+				days = 1
+			}
 		}
 	}
 	option = {
 		name = 	arantiga.075.b
 		ai_chance = {
+			base = 0
+		}
+		ARA = {
+		    country_event = {
+			    id = arantiga.150
+				days = 2
+			}
+		}
+		hidden_effect = {
+		    ARA = {
+			    set_country_flag = ARA_FLAG_feti_refused
+			}
+		}
+	}
+}
+
+country_event = { #Talouse yes
+	id = arantiga.149
+	title = arantiga.149.t
+	desc = arantiga.149.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_medieval_castle_on_hill
+	option = {
+		name = arantiga.149.a
+		ai_chance = {
 			base = 5
 		}
-		add_timed_idea = {
-		    idea = ARA_arantigan_uprising
-			days = 180
+		country_event = arantiga.151
+	}
+}
+
+country_event = { #Talouse yes 2
+	id = arantiga.151
+	title = arantiga.151.t
+	desc = arantiga.151.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_medieval_castle_on_hill
+	option = {
+		name = arantiga.151.a
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+country_event = { #Talouse no
+	id = arantiga.150
+	title = arantiga.150.t
+	desc = arantiga.150.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_event_griffon_diplomacy
+	option = {
+		name = arantiga.150.a
+		ai_chance = {
+			base = 5
 		}
 	}
 }
@@ -4755,8 +4819,7 @@ country_event = { #"King" of Aquileia
 				}
 			}
 		}
-		remove_unit_leader = 75653
-		retire_ideology_leader = fascism
+		remove_unit_leader = 756578
 		ARA = { country_event = { id = arantiga.106 days = 1}}
 	}
 }
@@ -4799,9 +4862,20 @@ country_event = { #Rodier's coup
 		name = 	arantiga.108.a
 		leave_faction = yes
 		set_politics = {
-	        ruling_party = fascism
+	        ruling_party = neutrality
 		    elections_allowed = no
 		}
+		retire_country_leader = yes
+		create_country_leader = {
+	        name = "Charles de Greifenwald-Strawberry"
+	        desc = "JER_POLITICS_Charles_DESC"
+	        picture = "gfx/leaders/JER/Charles.tga"
+	        expire = "1965.1.1"
+	        ideology = despotism
+	        traits = {
+			    GOY_inexperienced_ruler
+	        }
+        }
 	}
 }
 
