@@ -3954,7 +3954,7 @@ focus_tree = {
 		set_party_name = {ideology = neutrality name = ARA_nicator_royal long_name = ARA_nicator_royal_long }
 		country_event = arantiga_chaos.003
 		}
-		}		
+	}		
 		
 	shared_focus = { #Create Arantigan Republic
 		id = ARA_i_love_democracy

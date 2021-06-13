@@ -1284,6 +1284,7 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_chaos.003.a
 			add_country_leader_trait = arantiga_shield
+			set_cosmetic_tag = ARA_sparleos
 		}
 	}
 
@@ -3021,6 +3022,80 @@ country_event = { #Griffonstone Archives
 			trigger = {
 			    NOT = {
 				    original_tag = ARA
+				}
+			}
+	    }
+	}
+	news_event = { #Form Sparleos
+	    id = arantiga_news.11
+	    title = arantiga_news.11.t
+	    desc = arantiga_news.11.d
+		picture = GFX_news_griffonia_landscape
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = arantiga_news.11.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+	        name = arantiga_news.11.b
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+				}
+				has_idea = griffon_race
+			}
+	    }
+		option = {
+	        name = arantiga_news.11.c
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+					has_idea = griffon_race
+				}
+			}
+	    }
+	}
+	news_event = { #Form Karthinia
+	    id = arantiga_news.12
+	    title = arantiga_news.12.t
+	    desc = arantiga_news.12.d
+		picture = GFX_news_griffonia_landscape
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = arantiga_news.12.a
+			trigger = {
+				original_tag = ARA
+			}
+		}
+		option = {
+	        name = arantiga_news.12.b
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+				}
+				has_idea = griffon_race
+			}
+	    }
+		option = {
+	        name = arantiga_news.12.c
+			trigger = {
+			    NOT = {
+				    original_tag = ARA
+					has_idea = griffon_race
 				}
 			}
 	    }

@@ -1,3 +1,158 @@
+ARA_arantigan_restorations = {
+    ARA_sparleos_decision = {
+	    icon = generic_form_nation
+		
+		visible = {
+		    has_completed_focus = ARA_return_of_the_king
+		}
+		available = {
+			is_subject = no
+			has_government = neutrality
+			# Wingbardy
+			OR = {
+				owns_state = 371
+				WNG = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 366
+				TAL = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 408
+				ARA = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 529
+				FAL = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 445
+				SIC = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 515
+				FRN = {
+					is_subject_of = ROOT
+				}
+			} 
+		}
+		
+		complete_effect = {
+		    log = "[GetDateText]: [Root.GetName]: Decision form_WNG_wingbardian_empire"
+			#set_cosmetic_tag = WNG_EMPIRE
+			set_country_flag = is_wng_empire
+			#if = {
+			#	limit = {
+			#		371 = {
+			#			is_capital = no
+			#		}
+			#	}
+			#	set_capital = 371
+			#}
+			WNG = { add_to_ROOT_potential_cores = yes }
+			FAL = { add_to_ROOT_potential_cores = yes }
+			SIC = { add_to_ROOT_potential_cores = yes }
+			TAL = { add_to_ROOT_potential_cores = yes }
+			FRN = { add_to_ROOT_potential_cores = yes }
+			hidden_effect = {
+				news_event = { id = arantiga_news.11 hours = 6 }
+				set_global_flag = form_wingbardian_empire_flag
+			}
+		}
+		
+		ai_will_do = {
+		    base = 100
+		}
+	}
+	ARA_karthinia_decision = {
+	    icon = generic_form_nation
+		
+		visible = {
+		    has_completed_focus = ARA_i_love_democracy
+			NOT = {
+			    has_government = neutrality
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = democratic
+			# Wingbardy
+			OR = {
+				owns_state = 371
+				WNG = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 366
+				TAL = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 408
+				ARA = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 529
+				FAL = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 445
+				SIC = {
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				owns_state = 515
+				FRN = {
+					is_subject_of = ROOT
+				}
+			} 
+		}
+		complete_effect = {
+		    log = "[GetDateText]: [Root.GetName]: Decision form_WNG_wingbardian_empire"
+			set_cosmetic_tag = WNG_EMPIRE
+			set_country_flag = is_wng_empire
+			if = {
+				limit = {
+					371 = {
+						is_capital = no
+					}
+				}
+				set_capital = 371
+			}
+			WNG = { add_to_ROOT_potential_cores = yes }
+			FAL = { add_to_ROOT_potential_cores = yes }
+			SIC = { add_to_ROOT_potential_cores = yes }
+			TAL = { add_to_ROOT_potential_cores = yes }
+			FRN = { add_to_ROOT_potential_cores = yes }
+			hidden_effect = {
+				news_event = { id = arantiga_news.12 hours = 6 }
+				set_global_flag = form_wingbardian_empire_flag
+			}
+		}
+		
+		ai_will_do = {
+		    base = 100
+		}
+	}
+}
+
 ARA_arantigans_abroad = {
 	ARA_last_legion = {
 		icon = rifles

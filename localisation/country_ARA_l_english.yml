@@ -1916,6 +1916,17 @@ arantiga_news.10.t:0 "Sicameonese Bloodbath"
 arantiga_news.10.d:0 "[This.GetNewspaperHeader]Ever since Regent-General Lysimachus rose to power, and conquered the South, few news have left arantigan lands. However, due to an influx of refugees who managed to flee the country, news about a wide-scale genocide in Sicameon have recently reached the rest of the world. To crush a larg Sicameonese revolt, Arantigans started to slaughter all they suspected of supporting the rebels, and set the vast southern jungles ablaze to deprive the rebels of shelter. Hundreds of thousands have perished, and much of Sicameon has been ruined. Those rebels who remained lost the will to oppose Lysimachus. While nearly all governments have denounced the actions of Lysimachus, it remains uncertain if anyone will try to stop him from committing further atrocities."
 arantiga_news.10.a:0 "The rebellion is crushed!"
 arantiga_news.10.b:0 "What horror!"
+#1.2#
+arantiga_news.11.t:0 "Restoration of Sparleos"
+arantiga_news.11.d:0 "In this age of chaotic warfare, realms fall and rise, and sometimes, even the unwilling have to fight wars just to survive in this grim world. While displaying no ambitions for conquest, the King of Sparleos, Nicator Whitebeak, has emerged as the clear hegemon of the South, coming to control all of the previously squabbling local nations. During a lavish ceremony in Sparleto, Nicator announced reintegration of the southern lands into the “Second Kingdom of Sparleos” and declared that he will strive to protect all Southrons from outside threats, no matter how intimidating they would be."
+arantiga_news.11.a:0 "Glory to Sparleos!"
+arantiga_news.11.b:0 "Another Arantigos?!"
+arantiga_news.11.c:0 "Interesting..."
+arantiga_news.12.t:0 "Restoration of the Karthinian Republic"
+arantiga_news.12.d:0 "After a period of chaotic wars in the South, a new dominant power has emerged. While many thought that after the fall of Arantigos, his warlord realm would soon follow, it managed to reform into a vibrant and prosperous republic, which now has defeated all the other southern powers. Antioco Moro, the incumbent president of the Arantigan Republic today proclaimed the formation of the Karthinian Republic, and pledged to dedicate himself to safeguarding liberties and rights of Southrons."
+arantiga_news.12.a:0 "The Future is Bright!"
+arantiga_news.12.b:0 "An Unexpected Contender..."
+arantiga_news.12.c:0 "Interesting..."
 
 ### Country Flags ###
 ARA_our_own_economy:0 "We have decided to marginalise Wingbardy's influence in our economy"
@@ -2183,6 +2194,12 @@ ARA_peace_nm:0 "Send our Demands"
 ARA_greneclyf_cat:0 "An Unexpected Acquisition"
 ARA_greneclyf_cat_desc:0 "Island of Green... Grenkl... Grenen... THE BUG ISLAND IN THE MIDDLE OF NOWHERE is such a remote part of Griffonia that many even forget it exists. Yet, now that we control it, we have to figure out a way to govern it. Its value for our empire is negligible, so we shall simply establish a protectorate there, appointing one of the local queens as a governor, and prompty forget that this place exists."
 ARA_greneclyf:0 "Form a Protectorate"
+
+ARA_arantigan_restorations:0 "Karthinia Reclamation"
+ARA_sparleos_decision:0 "Claim the Mantle"
+ARA_sparleos_decision_desc:0 "Once, a long time ago, the first Kingdom of Sparleos controlled lands from Romau to Midoria. Presently, we stand in control of the heartland of this ancient realm and so, now we're truly able name our state the Second Kingdom of Sparleos and integrate our southern griffon brothers into it."
+ARA_karthinia_decision:0 "Unify Karthinia"
+ARA_karthinia_decision_desc:0 "Now, when we control all the south, we need to become something more than just “Arantiga”. While we already have established a tolerant, multicultural nation, time has come fuse all the southern cultures into one – to reach back into the past and restore traditions of the old Karthinian Republic."
 
 ### Opinion Modifiers ###
 ARA_nationalized_industry:0 "Nationalised Industry"
