@@ -3158,6 +3158,24 @@ country_event = { #Griffonstone Archives
 		option = {
 			name = arantiga_govern.014.b #
 			add_ideas = ARA_Equality_under_Emperor
+			set_party_name = { ideology = neutrality name = ARA_EMP_traditionalists long_name = ARA_EMP_traditionalists_long }
+			IF = {
+			    limit = {
+			        has_country_flag = ARA_FLAG_fetivola
+				}
+				retire_ideology_leader = neutrality
+				create_country_leader = {
+	                name = "Amilcare Fetivola"
+	                desc = TAL_amilcare_fetivola_desc
+	                female = no
+	                picture = "gfx/leaders/TAL/Fetivola.tga"
+	                expire = "1965.1.1"
+	                ideology = rexism
+	                traits = {
+		                traditionalist_academic
+	                }
+                }
+			}
 		}
 		option = {
 			name = arantiga_govern.014.c #
@@ -4807,7 +4825,7 @@ country_event = { #-Marechal is kil -No
 	fire_only_once = yes
 	option = {
 		name = 	arantiga.096.a
-		remove_unit_leader = 75653
+		remove_unit_leader = 756578
 		add_timed_idea = {
 		    idea = ARA_army_in_chaos
 			days = 200
@@ -4951,6 +4969,7 @@ country_event = { #Rodier's coup
 			    GOY_inexperienced_ruler
 	        }
         }
+		remove_unit_leader = 75652
 	}
 }
 

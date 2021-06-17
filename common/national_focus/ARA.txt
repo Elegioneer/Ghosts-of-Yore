@@ -3368,7 +3368,7 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-			FRN = { country_event = { id = arantiga.075 days = 3 } }
+			TAL = { country_event = { id = arantiga.075 days = 3 } }
 		}
 	}
 
@@ -3984,6 +3984,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+		set_cosmetic_tag = ARA_REP
 		country_event = arantiga_chaos.004
 		}
 		}			
