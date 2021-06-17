@@ -2687,6 +2687,12 @@ focus_tree = {
 			}
 			}
 			custom_effect_tooltip = ARA_herzlander_solidarity
+			hidden_effect = {
+			    country_event = {
+				    id = arantiga.151
+					days = 1
+				}
+			}
 		}
 	}
 
@@ -2705,6 +2711,11 @@ focus_tree = {
 		available = {
     		has_global_flag =  GRI_grover_vi_dead
 			382 = { is_owned_and_controlled_by = ROOT }
+			hidden_trigger = {
+			    NOT = {
+				    has_global_flag = GOY_lord_protector_defeated
+				}
+			}
 		}
 		completion_reward = {
 			country_event = arantiga.098
@@ -2742,9 +2753,12 @@ focus_tree = {
 		mutually_exclusive = { focus = ARA_fate_of_lord_protector }
 		available = {
     		NOT = {
-    			has_global_flag =  GRI_grover_vi_dead
+    			has_global_flag = GRI_grover_vi_dead
  			}
 			382 = { is_owned_and_controlled_by = ROOT }
+		}
+		bypass = {
+		    has_global_flag = GOY_lord_protector_defeated
 		}
 		completion_reward = {
 		    country_event = arantiga.099
@@ -3004,12 +3018,7 @@ focus_tree = {
 					set_nationality = ARA
 				}
 				every_unit_leader = {
-					limit = {
-					    AND = {
-    					    has_trait = trait_focused
-							is_female = yes
-						}
-					}
+					limit = { has_id = 75657 }
 					set_nationality = ARA
 				}
 			}
