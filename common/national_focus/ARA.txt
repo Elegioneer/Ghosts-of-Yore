@@ -3381,11 +3381,6 @@ focus_tree = {
 			    TAL = { exists = no }
 				NOT = {
 				    TAL = {
-					    is_puppet_of = ARA
-					}
-				}
-				NOT = {
-				    TAL = {
 					    has_government = fascism
 					}
 				}
