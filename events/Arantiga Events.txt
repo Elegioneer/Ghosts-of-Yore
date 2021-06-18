@@ -4242,7 +4242,7 @@ country_event = { #Talouse yes 2
 }
 
 country_event = { #Half-monthly check for whether the Lord-Protector has been defeated (Why the hell do I have to implement this?)
-	id = arantiga.151
+	id = arantiga.152
 	is_triggered_only = yes
 	fire_only_once = no
 	hidden = yes
@@ -4261,7 +4261,7 @@ country_event = { #Half-monthly check for whether the Lord-Protector has been de
 				GRI = { exists = yes }
 			}
 			country_event = {
-			    id = arantiga.151
+			    id = arantiga.152
 				days = 15
 			}
 		}

@@ -2689,7 +2689,7 @@ focus_tree = {
 			custom_effect_tooltip = ARA_herzlander_solidarity
 			hidden_effect = {
 			    country_event = {
-				    id = arantiga.151
+				    id = arantiga.152
 					days = 1
 				}
 			}
@@ -3376,6 +3376,21 @@ focus_tree = {
 		ai_will_do = {
 			base = 75
 		}
+		bypass = {
+		    OR = {
+			    TAL = { exists = no }
+				NOT = {
+				    TAL = {
+					    is_puppet_of = ARA
+					}
+				}
+				NOT = {
+				    TAL = {
+					    has_government = fascism
+					}
+				}
+			}
+		}
 		completion_reward = {
 			TAL = { country_event = { id = arantiga.075 days = 3 } }
 		}
@@ -3402,6 +3417,11 @@ focus_tree = {
 				            is_puppet_of = ARA
 					    }
 				    }
+				}
+				NOT = {
+				    TAL = {
+					    has_government = fascism
+					}
 				}
 			}
 		}
