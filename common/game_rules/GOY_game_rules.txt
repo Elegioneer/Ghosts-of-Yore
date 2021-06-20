@@ -1,0 +1,87 @@
+### GOY ###
+
+ARA_ai_behavior = {
+	name = "ARA_AI_BEHAVIOR"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = ARANTIGA_REBORN
+		text = "RULE_OPTION_ARA_ARANTIGA_REBORN"
+		desc = "RULE_OPTION_ARANTIGA_REBORN_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ARANTIGA_NICATOR
+		text = "RULE_OPTION_ARA_NICATOR"
+		desc = "RULE_OPTION_NICATOR_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ARANTIGA_LYSI
+		text = "RULE_OPTION_ARA_LYSI"
+		desc = "RULE_OPTION_LYSI_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ARANTIGA_REPUBLIC
+		text = "RULE_OPTION_ARA_REPUBLIC"
+		desc = "RULE_OPTION_REPUBLIC_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ARANTIGA_SOTER
+		text = "RULE_OPTION_ARA_SOTER"
+		desc = "RULE_OPTION_SOTER_ARA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+BOI_ai_behavior = {
+	name = "BOI_AI_BEHAVIOR"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = BOI_GAL
+		text = "RULE_OPTION_BOI_GAL"
+		desc = "RULE_OPTION_BOI_GAL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOI_GIL
+		text = "RULE_OPTION_BOI_GIL"
+		desc = "RULE_OPTION_BOI_GIL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOI_GOL
+		text = "RULE_OPTION_BOI_GOL"
+		desc = "RULE_OPTION_BOI_GOL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOI_GES
+		text = "RULE_OPTION_BOI_GES"
+		desc = "RULE_OPTION_BOI_GES_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}

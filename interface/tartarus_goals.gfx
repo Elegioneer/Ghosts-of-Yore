@@ -160,4 +160,8 @@ spriteTypes = {
 		name = "GFX_goal_goy_arasunrise"
 		texturefile = "gfx/interface/goals/goal_goy_arasunrise.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_vassal_talouse"
+		texturefile = "gfx/interface/goals/goal_goy_vassal_talouse.dds"
+	}
 }

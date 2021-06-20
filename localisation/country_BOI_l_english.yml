@@ -1114,6 +1114,8 @@ BOI_apply_concordat_desc:0 ""
 
 ## Factions ##
 BOI_Griffonian_Union:0 "The Griffonian Union"
+GOY_kaiserliche_vorhut:0 "Kaiserliche Vorhut"
+GOY_reichspakt:0 "Reichspakt"
 
 ## News Events ##
 griffonstone_news.01.t:0 "Coup in Griffonstone"

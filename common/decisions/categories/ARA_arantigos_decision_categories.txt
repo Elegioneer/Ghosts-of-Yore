@@ -1,3 +1,15 @@
+ARA_arantigan_restorations = {
+    icon = GFX_decision_griffon
+	
+	visible = {
+	    tag = ARA
+		OR = {
+		    has_completed_focus = ARA_return_of_the_king
+			has_completed_focus = ARA_i_love_democracy
+		}
+	}
+}
+
 ARA_arantigans_abroad = {
 	icon = GFX_decision_griffon
 	picture = GFX_decision_cat_form_griffon_empire
@@ -18,16 +30,6 @@ ARA_renaming_cities = {
 			371 = {
 				is_owned_by = ARA
 			}
-# OTHER CITIES TBA
-#			111 = {
-#				is_owned_by = ARA
-#			}
-#			111 = {
-#				is_owned_by = ARA
-#			}
-#			111 = {
-#				is_owned_by = ARA
-#			}
 		}
 	}
 }
