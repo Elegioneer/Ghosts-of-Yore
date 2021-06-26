@@ -11,9 +11,9 @@
 	###
 	shared_focus = {
 		id = NTR_grim_reality
-		icon = GFX_goal_unknown
+		icon = GFX_goal_goy_ntr_fire
 		x = 10
-		y = 0
+		y = 1
 		cost = 1.00
 		ai_will_do = {
 			factor = 10
@@ -137,7 +137,7 @@
 	}
 	shared_focus = {
 		id = NTR_great_council
-		icon = GFX_goal_unknown
+		icon = GFX_goal_goy_ntr_cooperation
 		x = 0
 		y = 3
 		cost = 2.00

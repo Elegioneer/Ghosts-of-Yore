@@ -164,4 +164,16 @@ spriteTypes = {
 		name = "GFX_goal_goy_vassal_talouse"
 		texturefile = "gfx/interface/goals/goal_goy_vassal_talouse.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_ntr_cooperation"
+		texturefile = "gfx/interface/goals/goal_goy_ntr_cooperation.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_ntr_fire"
+		texturefile = "gfx/interface/goals/goal_goy_ntr_fire.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_ntr_regal"
+		texturefile = "gfx/interface/goals/goal_goy_ntr_regal.dds"
+	}
 }

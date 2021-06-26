@@ -1,8 +1,8 @@
- ##  ###     ###  ### #  #  ##  #   # ###  ##  ###  
-#  #  #      #  # #   #  # #  # #   #  #  #  # #  # 
-####  #      ###  ##  #### ####  # #   #  #  # ###  
-#  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
-#  # ###     ###  ### #  # #  #   #   ###  ##  #  # 
+ ##  ###     ###  ### #  #  ##  #   # ###  ##  #  # ###  
+#  #  #      #  # #   #  # #  # #   #  #  #  # #  # #  # 
+####  #      ###  ##  #### ####  # #   #  #  # #  # ###  
+#  #  #      #  # #   #  # #  #  # #   #  #  # #  # #  # 
+#  # ###     ###  ### #  # #  #   #   ###  ##   ##  #  # 
 
 EQS_ai_behavior = {
 	name = "EQS_AI_BEHAVIOR"
@@ -1005,7 +1005,6 @@ WNG_ai_behavior = {
 		allow_achievements = yes
 	}
 }
-#
 EQC_ai_behavior = {
 	name = "EQC_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
@@ -1969,6 +1968,34 @@ LAK_ai_behavior = {
 		name = LAK_NEUTRAL_ALTERNATE
 		text = "RULE_OPTION_LAK_NEUTRAL_ALTERNATE"
 		desc = "RULE_OPTION_LAK_NEUTRAL_ALTERNATE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+FAL_ai_behavior = {
+	name = "FAL_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = FAL_HARMONIST_HISTORICAL
+		text = "RULE_OPTION_FAL_HARMONIST_HISTORICAL"
+		desc = "RULE_OPTION_FAL_HARMONIST_HISTORICAL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FAL_FASCIST_ALTERNATE
+		text = "RULE_OPTION_FAL_FASCIST_ALTERNATE"
+		desc = "RULE_OPTION_FAL_FASCIST_ALTERNATE_AI_DESC"
 		allow_achievements = yes
 	}
 	option = {

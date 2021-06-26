@@ -134,9 +134,14 @@ country_with_custom_advisors = {
 		original_tag = AVI
 		original_tag = LAK
 		original_tag = BAK
+		original_tag = NCR
+		original_tag = FRN
+		original_tag = JES
+		original_tag = TAL
 		##################
 		original_tag = ARA
 		original_tag = BOI
+		original_tag = NTR
 	}
 }
 
@@ -199,9 +204,14 @@ country_with_custom_designers = {
 		original_tag = ZES
 	    original_tag = NCR
 		original_tag = BAK
+		original_tag = OLV
+		original_tag = FRN
+		original_tag = JES
+		original_tag = TAL
 		##################
 		original_tag = ARA
 		original_tag = BOI
+		original_tag = NTR
 	}
 }
 
@@ -211,8 +221,237 @@ country_with_custom_spymaster = {
 		original_tag = EQS
 		original_tag = RCT
 		original_tag = GRI
+		original_tag = STW
+		original_tag = BAR
+		original_tag = WNG
+		original_tag = JER
+		original_tag = ELF
 		##################
 		original_tag = ARA
 		original_tag = BOI
+		original_tag = NTR
 	}
+}
+
+check_has_focus_tree_to_switch_to_fascism = {
+	NOT = { has_idea = detached_country }
+	NOT = { original_tag = CHN }
+	NOT = { original_tag = CCN }
+	NOT = { original_tag = CRY }
+	NOT = { original_tag = JER }
+	NOT = { original_tag = WNG }
+	NOT = { original_tag = GRI }
+	NOT = { original_tag = FAT }
+	NOT = { original_tag = EQS }
+	NOT = { original_tag = SCS }
+	NOT = { original_tag = OLE }
+	NOT = { original_tag = EQC }
+	NOT = { original_tag = FEA }
+	NOT = { original_tag = RCT }
+	NOT = { original_tag = LCT }
+	NOT = { original_tag = NIM }
+	NOT = { original_tag = WIT }
+	NOT = { original_tag = FRE }
+	NOT = { original_tag = DMT }
+	NOT = { original_tag = FIR }
+	NOT = { original_tag = NCH }
+	NOT = { original_tag = FBK }
+	NOT = { original_tag = GRY }
+	NOT = { original_tag = LNS }
+	NOT = { original_tag = LSC }
+	NOT = { original_tag = LSM }
+	NOT = { original_tag = HLQ }
+	NOT = { original_tag = BAR }
+	NOT = { original_tag = LUS }
+	NOT = { original_tag = BRF }
+	NOT = { original_tag = BAN }
+	NOT = { original_tag = CES }
+	NOT = { original_tag = NMS }
+	NOT = { original_tag = BAL }
+	NOT = { original_tag = JUN }
+	NOT = { original_tag = TEM }
+	NOT = { original_tag = ZES }
+	NOT = { original_tag = VAN }
+	NOT = { original_tag = BAK }
+	NOT = { original_tag = YAK }
+	NOT = { original_tag = JAK }
+	NOT = { original_tag = VED }
+	NOT = { original_tag = SRS }
+	NOT = { original_tag = SIC }
+	NOT = { original_tag = CYA }
+	NOT = { original_tag = MIT }
+	NOT = { original_tag = GRU }
+	NOT = { original_tag = AET }
+	NOT = { original_tag = LSP }
+	NOT = { original_tag = YAL }
+	NOT = { original_tag = FEZ }
+	NOT = { original_tag = PYT }
+	NOT = { original_tag = ANG }
+	NOT = { original_tag = KAT }
+	NOT = { original_tag = STW }
+	NOT = { original_tag = BRZ }
+	NOT = { original_tag = ROU }
+	NOT = { original_tag = FLO }
+	NOT = { original_tag = AVI }
+	NOT = { original_tag = TRD }
+	NOT = { original_tag = LAK }
+	NOT = { original_tag = HAU }
+	NOT = { original_tag = FAL }
+	NOT = { original_tag = FAW }
+	NOT = { original_tag = BUF }
+	NOT = { original_tag = STG }
+	NOT = { original_tag = FRN }
+	NOT = { original_tag = JES }
+	NOT = { original_tag = TAL }
+	############################
+	NOT = { original_tag = ARA }
+	NOT = { original_tag = BOI }
+	NOT = { original_tag = NTR }
+}
+
+check_has_focus_tree_to_switch_to_democratic = {
+	NOT = { has_idea = detached_country }
+	NOT = { original_tag = CHN }
+	NOT = { original_tag = CCN }
+	NOT = { original_tag = CRY }
+	NOT = { original_tag = EQS }
+	NOT = { original_tag = JER }
+	NOT = { original_tag = WNG }
+	NOT = { original_tag = FAT }
+	NOT = { original_tag = SCS }
+	NOT = { original_tag = OLE }
+	NOT = { original_tag = EQC }
+	NOT = { original_tag = FEA }
+	NOT = { original_tag = RCT }
+	NOT = { original_tag = LCT }
+	NOT = { original_tag = NIM }
+	NOT = { original_tag = WIT }
+	NOT = { original_tag = FRE }
+	NOT = { original_tag = DMT }
+	NOT = { original_tag = FIR }
+	NOT = { original_tag = NCH }
+	NOT = { original_tag = FBK }
+	NOT = { original_tag = GRY }
+	NOT = { original_tag = LNS }
+	NOT = { original_tag = LSC }
+	NOT = { original_tag = LSM }
+	NOT = { original_tag = HLQ }
+	NOT = { original_tag = BAR }
+	NOT = { original_tag = LUS }
+	NOT = { original_tag = BRF }
+	NOT = { original_tag = BAN }
+	NOT = { original_tag = CES }
+	NOT = { original_tag = NMS }
+	NOT = { original_tag = BAL }
+	NOT = { original_tag = JUN }
+	NOT = { original_tag = TEM }
+	NOT = { original_tag = ZES }
+	NOT = { original_tag = VAN }
+	NOT = { original_tag = YAK }
+	NOT = { original_tag = JAK }
+	NOT = { original_tag = VED }
+	NOT = { original_tag = SRS }
+	NOT = { original_tag = SIC }
+	NOT = { original_tag = CYA }
+	NOT = { original_tag = MIT }
+	NOT = { original_tag = GRU }
+	NOT = { original_tag = AET }
+	NOT = { original_tag = LSP }
+	NOT = { original_tag = YAL }
+	NOT = { original_tag = FEZ }
+	NOT = { original_tag = PYT }
+	NOT = { original_tag = ANG }
+	NOT = { original_tag = KAT }
+	NOT = { original_tag = STW }
+	NOT = { original_tag = BRZ }
+	NOT = { original_tag = ROU }
+	NOT = { original_tag = FLO }
+	NOT = { original_tag = AVI }
+	NOT = { original_tag = TRD }
+	NOT = { original_tag = LAK }
+	NOT = { original_tag = HAU }
+	NOT = { original_tag = FAL }
+	NOT = { original_tag = FAW }
+	NOT = { original_tag = BUF }
+	NOT = { original_tag = STG }
+	NOT = { original_tag = FRN }
+	NOT = { original_tag = JES }
+	NOT = { original_tag = TAL }
+	############################
+	NOT = { original_tag = ARA }
+	NOT = { original_tag = BOI }
+	NOT = { original_tag = NTR }
+}
+
+check_has_focus_tree_to_switch_to_communism = {
+	NOT = { has_idea = detached_country }
+	NOT = { original_tag = CHN }
+	NOT = { original_tag = CRY }
+	NOT = { original_tag = CCN }
+	NOT = { original_tag = STG }
+	NOT = { original_tag = STL }
+	NOT = { original_tag = JER }
+	NOT = { original_tag = WNG }
+	NOT = { original_tag = EQS }
+	NOT = { original_tag = OLE }
+	NOT = { original_tag = FEA }
+	NOT = { original_tag = RCT }
+	NOT = { original_tag = LCT }
+	NOT = { original_tag = NIM }
+	NOT = { original_tag = WIT }
+	NOT = { original_tag = FRE }
+	NOT = { original_tag = DMT }
+	NOT = { original_tag = FIR }
+	NOT = { original_tag = NCH }
+	NOT = { original_tag = FBK }
+	NOT = { original_tag = GRY }
+	NOT = { original_tag = LNS }
+	NOT = { original_tag = LSC }
+	NOT = { original_tag = LSM }
+	NOT = { original_tag = HLQ }
+	NOT = { original_tag = BAR }
+	NOT = { original_tag = LUS }
+	NOT = { original_tag = BRF }
+	NOT = { original_tag = BAN }
+	NOT = { original_tag = CES }
+	NOT = { original_tag = NMS }
+	NOT = { original_tag = BAL }
+	NOT = { original_tag = JUN }
+	NOT = { original_tag = TEM }
+	NOT = { original_tag = ZES }
+	NOT = { original_tag = VAN }
+	NOT = { original_tag = BAK }
+	NOT = { original_tag = YAK }
+	NOT = { original_tag = JAK }
+	NOT = { original_tag = VED }
+	NOT = { original_tag = SRS }
+	NOT = { original_tag = SIC }
+	NOT = { original_tag = CYA }
+	NOT = { original_tag = MIT }
+	NOT = { original_tag = GRU }
+	NOT = { original_tag = AET }
+	NOT = { original_tag = LSP }
+	NOT = { original_tag = YAL }
+	NOT = { original_tag = FEZ }
+	NOT = { original_tag = PYT }
+	NOT = { original_tag = ANG }
+	NOT = { original_tag = KAT }
+	NOT = { original_tag = STW }
+	NOT = { original_tag = BRZ }
+	NOT = { original_tag = ROU }
+	NOT = { original_tag = FLO }
+	NOT = { original_tag = AVI }
+	NOT = { original_tag = TRD }
+	NOT = { original_tag = LAK }
+	NOT = { original_tag = HAU }
+	NOT = { original_tag = FAL }
+	NOT = { original_tag = FAW }
+	NOT = { original_tag = BUF }
+	NOT = { original_tag = FRN }
+	NOT = { original_tag = JES }
+	NOT = { original_tag = TAL }
+	############################
+	NOT = { original_tag = ARA }
+	NOT = { original_tag = BOI }
+	NOT = { original_tag = NTR }
 }
