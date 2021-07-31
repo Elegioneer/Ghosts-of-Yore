@@ -2698,7 +2698,7 @@ country_event = { #Griffonstone Archives
 			    add_manpower = -300000
 				set_state_category = rural
 			}
-			set_province_name = { id = 6502 name = "Ruins of Skynavia" }
+			set_province_name = { id = 6502 name = "Ruins of New Skynavia" }
 			hidden_effect = {
 			    news_event = { id = arantiga_news.2 days = 5 }
 			}

@@ -56,8 +56,8 @@ load_focus_tree = Northern_tribes_init
 
 create_country_leader = {
 	name = "Euan Stormshield"
-	desc = ""
-	picture = "Governor.tga"
+	desc = "GOY_stormshield_desc"
+	picture = "euan.tga"
 	expire = "1965.1.1"
 	ideology = technocracy
 	traits = {

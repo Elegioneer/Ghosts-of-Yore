@@ -10,8 +10,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_clan_moltenrock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+			custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -43,8 +43,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_clan_barkcoat
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -79,8 +79,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_clan_brightflame
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -115,8 +115,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_clan_greenhoof
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -149,8 +149,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_clan_stormshield
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -183,8 +183,8 @@ NTR_spirits_blessings_cat = {
 		    has_completed_focus = NTR_redeem_ice
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_blessing
-		    hidden_trigger = {
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_blessing
 			    NOT = {
 				    has_country_flag = NTR_flag_blessing_active
 				}
@@ -210,6 +210,49 @@ NTR_spirits_blessings_cat = {
 }
 
 NTR_dark_magic_cat = {
+    NTR_ritual_dc = {
+		icon = generic_nationalism
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+		    has_country_flag = NTR_flag_the_ritual_unlock
+		}
+		available = {
+		    custom_effect_tooltip = NTR_tt_one_magick
+		    hidden_trigger = {
+			    NOT = {
+				    has_country_flag = NTR_flag_magick_active
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    custom_effect_tooltip = NTR_tt_skynavia_mustdie
+		    hidden_effect = {
+		        SRS = {
+			        country_event = {
+					    id = ntribes.50
+						hours = 2
+					}
+			    }
+				set_country_flag = NTR_flag_magick_active
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+			    SRS = {
+			        country_event = id = ntribes.51
+			    }
+			    remove_country_flag = NTR_flag_magick_active
+			}
+		}
+		days_remove = 120
+	}
     NTR_raise_dead_dc = {
 		icon = generic_nationalism
 		cost = 0
@@ -218,9 +261,9 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
+		    has_country_flag = NTR_flag_dark_magic_unlock
 			NOT = {
-			    has_completed_focus = NTR_raise_more
+			    has_country_flag = NTR_flag_raise_dead_improved
 			}
 		}
 		available = {
@@ -255,7 +298,7 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_raise_more
+		    has_country_flag = NTR_flag_raise_dead_improved
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
@@ -289,11 +332,11 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
-			has_war = yes
+		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
+			has_war = yes
 		    hidden_trigger = {
 			    NOT = {
 				    has_country_flag = NTR_flag_magick_active
@@ -332,7 +375,7 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
+		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
@@ -369,10 +412,11 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
+		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
+			has_war = yes
 		    hidden_trigger = {
 			    NOT = {
 				    has_country_flag = NTR_flag_magick_active
@@ -406,7 +450,7 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
+		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
@@ -443,7 +487,7 @@ NTR_dark_magic_cat = {
 			factor = 10
 		}
 		visible = {
-		    has_completed_focus = NTR_dark_magic
+		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
 		    custom_effect_tooltip = NTR_tt_one_magick
@@ -471,5 +515,42 @@ NTR_dark_magic_cat = {
 			}
 		}
 		days_remove = 120
+	}
+}
+NTR_liberate_np_cat = {
+    NTR_attack_dimpeak = {
+	    icon = generic_nationalism
+		cost = 50
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+            has_political_power = 50
+			any_neighbor_state = {
+			    state = 
+			}
+		    custom_trigger_tooltip = {
+			    tooltip = NTR_tt_one_border_war
+			    NOT = {
+				    has_country_flag = NTR_tt_one_border_war
+				}
+			}
+		}
+		modifier = {
+		    
+		}
+		complete_effect = {
+		    
+			hidden_effect = {
+			    set_country_flag = NTR_flag_one_border_war
+			}
+		}
+		remove_effect = {
+		    hidden_effect = {
+			    remove_country_flag = NTR_flag_one_border_war
+			}
+		}
+		days_remove = 7
 	}
 }

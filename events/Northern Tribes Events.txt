@@ -108,7 +108,7 @@
 add_namespace = ntribes
 add_namespace = ntribes_news
     #### DEBUG ####
-	country_event = { #debug
+	country_event = { #debug/test
 	    id = ntribes.322
 	    title = ntribes.322.t
 	    desc = ntribes.322.d
@@ -127,7 +127,7 @@ add_namespace = ntribes_news
 		}
 		option = {
 		    name = ntribes.322.c
-			load_focus_tree = Northern_tribes_tradition
+			load_focus_tree = Northern_tribes_trad
 		}
 		option = {
 		    name = ntribes.322.e
@@ -332,7 +332,7 @@ add_namespace = ntribes_news
 		    name = ntribes.05.b
 			custom_effect_tooltip = NTR_TT_load_trad_tree
 			hidden_effect = {
-				load_focus_tree = Northern_tribes_tradition
+				load_focus_tree = Northern_tribes_trad
 			}
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			#TODO enable magic of spirits decisions
@@ -1150,16 +1150,16 @@ add_namespace = ntribes_news
 		}
 	}
     country_event = { #Refugees from Tir Deighe
-	    id = ntribes.61
-	    title = ntribes.61.t
-	    desc = ntribes.61.d
+	    id = ntribes.62
+	    title = ntribes.62.t
+	    desc = ntribes.62.d
 	    picture = GFX_event_stalliongrad #TODO
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
 	    option = {
-		    name = ntribes.61.a
+		    name = ntribes.62.a
             add_stability = -0.03
 			random_owned_state = {
 			    add_manpower = 50000
@@ -1758,5 +1758,99 @@ add_namespace = ntribes_news
 			    complete_national_focus = NTR_no_rest
 			}
 			change_tag_from = HRR
+		}
+	}
+	country_event = { #Deadly Threat
+	    id = ntribes.50
+	    title = ntribes.50.t
+	    desc = ntribes.50.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.50.a
+			ai_chance = {
+			    base = 1
+			}
+			add_war_support = 0.2
+			add_manpower = 50000
+			declare_war_on = { type = puppet_wargoal_focus target = NTR }
+		}
+	}
+	country_event = { #Destruction of SRS (SRS)
+	    id = ntribes.51
+	    title = ntribes.51.t
+	    desc = ntribes.51.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+		timeout_hours = 12
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.51.a
+			ai_chance = {
+			    base = 1
+			}
+			NTR = {
+			    country_event = ntribes.52
+			}
+		}
+	}
+	country_event = { #The Ritual
+	    id = ntribes.52
+	    title = ntribes.52.t
+	    desc = ntribes.52.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+		timeout_hours = 12
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.52.a
+			ai_chance = {
+			    base = 1
+			}
+			NTR = {
+			    country_event = ntribes.53
+			}
+		}
+	}
+	country_event = { #Destruction of SRS (NTR)
+	    id = ntribes.53
+	    title = ntribes.53.t
+	    desc = ntribes.53.d
+	    picture = GFX_event_stalliongrad #TODO
+		
+		timeout_hours = 12
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+		immediate = {
+		    hidden_effect = {
+			    news_event = {    
+				    id = ntribes_news.6
+					hours = 12
+				}
+			}
+		}
+		
+	    option = {
+		    name = ntribes.53.a
+			ai_chance = {
+			    base = 1
+			}
+			522 = {
+			    add_manpower = -500000
+				set_state_category = pastoral
+			}
+			set_province_name = { id = 6502 name = "Ruins of New Skynavia" }
+			annex_country = { target = SRS transfer_troops = no }
 		}
 	}

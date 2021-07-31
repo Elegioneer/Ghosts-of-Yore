@@ -176,4 +176,24 @@ spriteTypes = {
 		name = "GFX_goal_goy_ntr_regal"
 		texturefile = "gfx/interface/goals/goal_goy_ntr_regal.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_stormshield"
+		texturefile = "gfx/interface/goals/goal_GOY_stormshield.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_moltenrock"
+		texturefile = "gfx/interface/goals/goal_GOY_moltenrock.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_brightflame"
+		texturefile = "gfx/interface/goals/goal_GOY_brightflame.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_barkcoat"
+		texturefile = "gfx/interface/goals/goal_GOY_barkcoat.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_greenhoof"
+		texturefile = "gfx/interface/goals/goal_GOY_greenhoof.dds"
+	}
 }
