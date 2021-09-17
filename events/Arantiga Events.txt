@@ -1054,6 +1054,17 @@ country_event = { #Griffonstone Archives
 		    id = arantiga_chaos.021
 			hours = 18
 		}
+		hidden_effect = {
+		    every_other_country = {
+			    limit = {
+					has_idea = griffon_race
+				}
+			    remove_opinion_modifier = {
+                    target = ARA
+                    modifier = ARA_heretical_madgriff
+				}
+            }
+		}
 	}
 	option = {
 	    name = arantiga_chaos.002.b

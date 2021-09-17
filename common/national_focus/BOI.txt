@@ -3613,7 +3613,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
-			add_ideas = ARA_dogs_of_war
+			add_ideas = BOI_dogs_of_war
 			set_technology = { tech_ironpaws = 1 }
 		}
 	}

@@ -196,4 +196,76 @@ spriteTypes = {
 		name = "GFX_goal_GOY_greenhoof"
 		texturefile = "gfx/interface/goals/goal_GOY_greenhoof.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_ascension"
+		texturefile = "gfx/interface/goals/goal_GOY_ascension.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_back_into_ranks"
+		texturefile = "gfx/interface/goals/goal_GOY_back_into_ranks.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_coldhearted"
+		texturefile = "gfx/interface/goals/goal_GOY_coldhearted.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_convince_them"
+		texturefile = "gfx/interface/goals/goal_GOY_convince_them.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_deal_w_stormshields"
+		texturefile = "gfx/interface/goals/goal_GOY_deal_w_stormshields.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_kill_moltenrock"
+		texturefile = "gfx/interface/goals/goal_GOY_kill_moltenrock.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_magic_war"
+		texturefile = "gfx/interface/goals/goal_GOY_magic_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_more_autonomy"
+		texturefile = "gfx/interface/goals/goal_GOY_more_autonomy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_north_awakens" #unused
+		texturefile = "gfx/interface/goals/goal_GOY_north_awakens.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_north_rise"
+		texturefile = "gfx/interface/goals/goal_GOY_north_rise.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_overseers"
+		texturefile = "gfx/interface/goals/goal_GOY_overseers.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_raise_more"
+		texturefile = "gfx/interface/goals/goal_GOY_raise_more.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_ritual"
+		texturefile = "gfx/interface/goals/goal_GOY_ritual.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_ruins_skynavia"
+		texturefile = "gfx/interface/goals/goal_GOY_ruins_skynavia.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_solidify_control"
+		texturefile = "gfx/interface/goals/goal_GOY_solidify_control.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_the_champion"
+		texturefile = "gfx/interface/goals/goal_GOY_the_champion.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_the_heart_of_griff"
+		texturefile = "gfx/interface/goals/goal_GOY_the_heart_of_griff.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_the_undead"
+		texturefile = "gfx/interface/goals/goal_GOY_the_undead.dds"
+	}
 }

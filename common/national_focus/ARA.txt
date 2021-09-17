@@ -2486,7 +2486,7 @@ focus_tree = {
 				    limit = {
 						has_idea = griffon_race
 					}
-			        reverse_add_opinion_modifier = {
+			        add_opinion_modifier = {
                         target = ARA
                         modifier = ARA_heretical_madgriff
 					}
@@ -5661,7 +5661,11 @@ focus_tree = {
 				    limit = {
 						has_idea = griffon_race
 					}
-			        reverse_add_opinion_modifier = {
+					remove_opinion_modifier = {
+                        target = ARA
+                        modifier = ARA_heretical_madgriff
+				    }
+			        add_opinion_modifier = {
                         target = ARA
                         modifier = ARA_heretic_lysi
 					}

@@ -3,7 +3,7 @@ opinion_modifiers = {
 	
 	ARA_heretical_madgriff = { value = -50 }
 	
-	ARA_heretic_lysi = { value = -50 }
+	ARA_heretic_lysi = { value = -80 }
 	
 	ARA_nationalized_industry = { value = -50 }
 	
