@@ -1951,6 +1951,22 @@ ideas = {
 			    planning_speed = 0.1
 			}
 		}
+		BOI_dogs_of_war = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = diamond_mountain
+			removal_cost = -1
+			modifier = {
+				special_forces_attack_factor = 0.05
+				special_forces_cap = 0.05
+			}
+		}
 	}
 	
 	########################

@@ -1611,6 +1611,7 @@ country_event = { #Herzländers unite! (cap)
 			    ruling_party = democratic
 		        elections_allowed = no
 			}
+			add_popularity = { ideology = democratic popularity = 0.2 }
 			swap_ideas = {
 			    remove_idea = idol_of_boreas_lost 
 				add_idea = BOI_idol_of_boreas

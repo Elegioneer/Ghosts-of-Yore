@@ -340,6 +340,8 @@ BOI_last_stand:0 "The Last Stand Of Griffonstone"
 BOI_last_stand_desc:0 "We fight for Griffonstone! No more emperors, no more warlords!"
 BOI_grif_advisors:0 "Griffonstonian Advisors"
 BOI_grif_advisors_desc:0 ""
+BOI_dogs_of_war:0 "Dogs of War"
+BOI_dogs_of_war_desc:0 "The Diamond Dogs of Bronzehill have recognised Gallus as the rightful co-ruler of Herzland. Both diarch-kings now rule under personal protection of the famed, newly reinforced Barkingian Guard."
 
 ## Advisors ##
 BOI_wohnsitz_panzerinstitut:0 "Wohnsitz Panzerinstitut"

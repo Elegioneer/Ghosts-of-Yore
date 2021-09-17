@@ -1,8 +1,8 @@
- ##  ###     ###  ### #  #  ##  #   # ###  ##  #  # ###  
-#  #  #      #  # #   #  # #  # #   #  #  #  # #  # #  # 
-####  #      ###  ##  #### ####  # #   #  #  # #  # ###  
-#  #  #      #  # #   #  # #  #  # #   #  #  # #  # #  # 
-#  # ###     ###  ### #  # #  #   #   ###  ##   ##  #  # 
+ ##  ###     ###  ### #  #  ##  #   # ###  ##  ###  
+#  #  #      #  # #   #  # #  # #   #  #  #  # #  # 
+####  #      ###  ##  #### ####  # #   #  #  # ###  
+#  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
+#  # ###     ###  ### #  # #  #   #   ###  ##  #  # 
 
 EQS_ai_behavior = {
 	name = "EQS_AI_BEHAVIOR"
@@ -1005,6 +1005,7 @@ WNG_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+####
 EQC_ai_behavior = {
 	name = "EQC_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
@@ -2204,5 +2205,32 @@ great_war_ai_buffs = {
 		name = DEFAULT
 		text = "RULE_OPTION_BUFFS_ADDED"
 		desc = "RULE_OPTION_DEFAULT_BUFFS_DESC"
+	}
+}
+project_exodus_toggle = {
+	name = "RULE_PROJECT_EXODUS_TOGGLE"
+	group = "RULE_GROUP_GAMEPLAY"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_PROJECT_EXODUS_DEFAULT"
+		desc = "RULE_PROJECT_EXODUS_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DECIMATION_ONLY"
+		text = "RULE_PROJECT_EXODUS_DECIMATION_ONLY"
+		desc = "RULE_PROJECT_EXODUS_DECIMATION_ONLY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DISABLED"
+		text = "RULE_PROJECT_EXODUS_DISABLED"
+		desc = "RULE_PROJECT_EXODUS_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DEBUG"
+		text = "RULE_PROJECT_EXODUS_DEBUG"
+		desc = "RULE_PROJECT_EXODUS_DEBUG_DESC"
 	}
 }
