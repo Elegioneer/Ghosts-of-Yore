@@ -177,8 +177,10 @@ ideas = {
 			picture = earl_browder
 			removal_cost = -1
 			equipment_bonus = {
-			    reliability = 0.1
-				build_cost_ic = -0.1
+			    artillery_equipment = {
+			        reliability = 0.1
+				    build_cost_ic = -0.1
+				}
 			}
 		}
 		NTR_officer_corps = {
@@ -1181,10 +1183,23 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = capital_outflow
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
+			}
+		}
+		NTR_massive_expenses = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = capital_outflow
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = 0.2
 			}
 		}
 		NTR_like_wind = {
@@ -1283,6 +1298,162 @@ ideas = {
 			modifier = {
 			    consumer_goods_factor = -0.1
 			}
+		}
+		NTR_unnatural_weather = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    winter_attrition_factor = 0.5
+				acclimatization_cold_climate_gain_factor = -1.5
+				stability_factor = -0.2
+				air_weather_penalty = 0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+		NTR_bloodrage = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    army_attack_factor = 0.2
+				army_speed_factor = 0.1
+				experience_loss_factor -0.25
+				army_defence_factor = -0.1
+			}
+		}
+		NTR_sorcerer_generals = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    max_command_power = 50
+				command_power_gain_mult = 1
+			}
+		}
+		NTR_subdue_land = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    production_speed_buildings_factor = 0.2
+				local_resources_factor -0.2
+			}
+		}
+		NTR_iseeyou = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = earl_browder
+			removal_cost = -1
+			modifier = {
+			    decryption_factor = 0.5
+				recon_factor = 0.2
+			}
+		}
+	}
+
+	##################
+	###### LAWS ######
+	##################
+	society_development_idea = {
+	    law = yes
+		use_list_view = no
+        
+	    GOY_magical_society = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			
+			traits = { society_idea }
+			
+			available = {
+			    has_government = neutrality
+			}
+			
+			modifier = {
+			    stability_factor = 0.1
+				political_power_gain = 0.05
+			    army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_factory_max_efficiency_factor = -0.1
+		        global_building_slots_factor = -0.1
+				industry_air_damage_factor = -0.25
+				exodus_assimilation_proportion = -0.15
+			}
+			ai_focus_peaceful_factor = 0.25
+			
+			allowed_to_remove = {
+				NOT = {
+				    has_government = neutrality
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		GOY_slave_economy = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			
+			traits = { society_idea }
+			
+			available = {
+			    has_government = fascism
+			}
+			
+			modifier = {
+			    army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = -0.25
+				research_speed_factor = -0.25
+				monthly_population = -0.5
+				non_core_manpower = -0.75
+				required_garrison_factor = 0.1
+				compliance_growth = -0.2
+				resistance_growth = 0.2
+				exodus_national_appeal = -0.5
+			}
+			ai_focus_peaceful_factor = 0.25
+			
+			allowed_to_remove = {
+				NOT = {
+				    has_government = fascism
+				}
+			}
+			
+			cancel_if_invalid = no
 		}
 	}
 }

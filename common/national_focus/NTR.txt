@@ -162,7 +162,7 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 50 y = 3000 }
+	    continuous_focus_position = { x = 5 y = 3000 }
 		shared_focus = NTR_reform_milita
 		shared_focus = NTR_through_skies
 		shared_focus = NTR_world_awaits
@@ -173,7 +173,7 @@
 	###
 	shared_focus = {
 		id = NTR_reform_milita
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_drafted_army
 		x = 4
 		y = 0
 		cost = 5.00
@@ -187,7 +187,7 @@
 	}
 	shared_focus = {
 		id = NTR_foreign_instructors
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_ponykind
 		x = -2
 		y = 1
 		cost = 5.00
@@ -209,7 +209,7 @@
 	}
 	shared_focus = {
 		id = NTR_from_warbands
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 1
 		cost = 5.00
@@ -228,7 +228,7 @@
 	}
 	shared_focus = {
 		id = NTR_copy_griffon
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_bits_gun
 		x = 2
 		y = 1
 		cost = 5.00
@@ -249,7 +249,7 @@
 	}
 	shared_focus = {
 		id = NTR_big_guns
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_artillery2
 		x = -1
 		y = 2
 		cost = 5.00
@@ -272,7 +272,7 @@
 	}
 	shared_focus = {
 		id = NTR_perils_logistics
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_support_equipment
 		x = 1
 		y = 2
 		cost = 5.00
@@ -295,7 +295,7 @@
 	}
 	shared_focus = {
 		id = NTR_ponies_wheels
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_motorized
 		x = -2
 		y = 3
 		cost = 5.00
@@ -328,7 +328,7 @@
 	}
 	shared_focus = {
 		id = NTR_proper_army
-		icon = GFX_goal_unknown
+		icon = GFX_goal_unicorn_soldier
 		x = 0
 		y = 3
 		cost = 5.00
@@ -345,7 +345,7 @@
 	}
 	shared_focus = {
 		id = NTR_our_gunsmiths
-		icon = GFX_goal_unknown
+		icon = GFX_goal_industry_air
 		x = 2
 		y = 3
 		cost = 5.00
@@ -368,7 +368,7 @@
 	}
 	shared_focus = {
 		id = NTR_hide_in_metal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eqs_comet
 		x = -3
 		y = 4
 		cost = 5.00
@@ -389,7 +389,7 @@
 	}
 	shared_focus = {
 		id = NTR_digging_trenches
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construction2
 		x = -1
 		y = 4
 		cost = 8.00
@@ -406,7 +406,7 @@
 	}
 	shared_focus = {
 		id = NTR_we_gotta_go_fast
-		icon = GFX_goal_unknown
+		icon = GFX_focus_indy_swing_the_sword
 		x = 1
 		y = 4
 		cost = 8.00
@@ -423,7 +423,7 @@
 	}
 	shared_focus = {
 		id = NTR_mass_production
-		icon = GFX_goal_unknown
+		icon = GFX_goal_van_rifles
 		x = 3
 		y = 4
 		cost = 5.00
@@ -445,7 +445,7 @@
 	}
 	shared_focus = {
 		id = NTR_terrifying_tanks
-		icon = GFX_goal_unknown
+		icon = GFX_focus_indy_tanks_across_the_border
 		x = -4
 		y = 5
 		cost = 5.00
@@ -463,7 +463,7 @@
 	}
 	shared_focus = {
 		id = NTR_advanced_artillery
-		icon = GFX_goal_unknown
+		icon = GFX_goal_artillery_factories
 		x = -2
 		y = 5
 		cost = 5.00
@@ -481,7 +481,7 @@
 	}
 	shared_focus = {
 		id = NTR_everfrost_mil_college
-		icon = GFX_goal_unknown
+		icon = GFX_goal_officers
 		x = 0
 		y = 5
 		cost = 8.00
@@ -504,7 +504,7 @@
 	}
 	shared_focus = {
 		id = NTR_strength_in_numbers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_military_mission_pony
 		x = 2
 		y = 5
 		cost = 5.00
@@ -521,7 +521,7 @@
 	}
 	shared_focus = {
 		id = NTR_revive_traditions
-		icon = GFX_goal_unknown
+		icon = GFX_focus_military_derpy
 		x = 4
 		y = 5
 		cost = 5.00
@@ -545,7 +545,7 @@
 	###
 	shared_focus = {
 		id = NTR_through_skies
-		icon = GFX_goal_unknown
+		icon = GFX_goal_Land_and_Sea
 		x = 14
 		y = 0
 		cost = 5.00
@@ -560,7 +560,7 @@
 	}
 	shared_focus = {
 		id = NTR_educate_shipwrights
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_cruiser
 		x = -3
 		y = 1
 		cost = 5.00
@@ -581,7 +581,7 @@
 	}
 	shared_focus = {
 		id = NTR_expand_frostbell
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = -1
 		y = 1
 		cost = 5.00
@@ -612,7 +612,7 @@
 	}
 	shared_focus = {
 		id = NTR_airports_construction
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_wolf_pack
 		x = 1
 		y = 1
 		cost = 5.00
@@ -641,7 +641,7 @@
 	}
 	shared_focus = {
 		id = NTR_import_fighters
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_air_fighter
 		x = 3
 		y = 1
 		cost = 5.00
@@ -675,7 +675,7 @@
 	}
 	shared_focus = {
 		id = NTR_sailing_underwater
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_wolf_pack
 		x = -5
 		y = 2
 		cost = 5.00
@@ -697,7 +697,7 @@
 	}
 	shared_focus = {
 		id = NTR_our_new_fleet
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_navy_battleship3alt
 		x = -3
 		y = 2
 		cost = 5.00
@@ -725,7 +725,7 @@
 	}
 	shared_focus = {
 		id = NTR_make_ships_bigger
-		icon = GFX_goal_unknown
+		icon = GFX_goal_upgrade_reserves
 		x = -1
 		y = 2
 		cost = 5.00
@@ -753,7 +753,7 @@
 	}
 	shared_focus = {
 		id = NTR_bomber_development
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_air_tactical_bomber_new
 		x = 1
 		y = 2
 		cost = 5.00
@@ -776,7 +776,7 @@
 	}
 	shared_focus = {
 		id = NTR_improve_fighter_designs
-		icon = GFX_goal_unknown
+		icon = GFX_goal_HOL_D21
 		x = 3
 		y = 2
 		cost = 5.00
@@ -799,7 +799,7 @@
 	}
 	shared_focus = {
 		id = NTR_crystal_bombs
-		icon = GFX_goal_unknown
+		icon = GFX_goal_pacification_of_the_planes
 		x = 5
 		y = 2
 		cost = 5.00
@@ -816,7 +816,7 @@
 	}
 	shared_focus = {
 		id = NTR_refurbish_dinkau
-		icon = GFX_goal_unknown
+		icon = GFX_goal_naval_effort
 		x = -4
 		y = 3
 		cost = 5.00
@@ -853,7 +853,7 @@
 	}
 	shared_focus = {
 		id = NTR_roam_the_waves
-		icon = GFX_goal_unknown
+		icon = GFX_focus_indy_plan_z
 		x = -2
 		y = 3
 		cost = 5.00
@@ -876,7 +876,7 @@
 	}
 	shared_focus = {
 		id = NTR_new_raiders
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_amphibious_assault
 		x = 0
 		y = 3
 		cost = 5.00
@@ -904,7 +904,7 @@
 	}
 	shared_focus = {
 		id = NTR_rule_the_skies
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_flying_tigers
 		x = 2
 		y = 3
 		cost = 5.00
@@ -927,7 +927,7 @@
 	}
 	shared_focus = {
 		id = NTR_unleash_crystal
-		icon = GFX_goal_unknown
+		icon = GFX_goal_magical_nukes
 		x = 4
 		y = 3
 		cost = 5.00
@@ -951,7 +951,7 @@
 	###
 	shared_focus = {
 		id = NTR_world_awaits
-		icon = GFX_goal_unknown
+		icon = GFX_goal_POR_royal_edicts
 		x = 14
 		y = 4
 		cost = 5.00
@@ -972,7 +972,7 @@
 	}
 	shared_focus = {
 		id = NTR_send_out_diplomats
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rct_deal
 		x = -3
 		y = 1
 		cost = 5.00
@@ -988,7 +988,7 @@
 	}
 	shared_focus = {
 		id = NTR_claim_destiny
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 3
 		y = 1
 		cost = 5.00
@@ -1004,7 +1004,7 @@
 	}
 	shared_focus = {
 		id = NTR_reach_out_neighbours
-		icon = GFX_goal_unknown
+		icon = GFX_goal_improve_relations_pony_griffon
 		x = -5
 		y = 2
 		cost = 5.00
@@ -1031,7 +1031,7 @@
 	}
 	shared_focus = {
 		id = NTR_look_beyond_sea
-		icon = GFX_goal_unknown
+		icon = GFX_goal_USA_liberty_ships
 		x = -3
 		y = 2
 		cost = 5.00
@@ -1057,7 +1057,7 @@
 	}
 	shared_focus = {
 		id = NTR_bend_the_knee
-		icon = GFX_goal_unknown
+		icon = GFX_goal_Vest_Seat
 		x = -1
 		y = 2
 		cost = 5.00
@@ -1085,7 +1085,7 @@
 	}
 	shared_focus = {
 		id = NTR_friendship_between_ponies
-		icon = GFX_goal_unknown
+		icon = GFX_goal_collaborate_local_elites_pony
 		x = -3
 		y = 3
 		cost = 5.00
@@ -1104,7 +1104,7 @@
 	}
 	shared_focus = {
 		id = NTR_march_on_brantbeak
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_military_deal_pony
 		x = 1
 		y = 2
 		cost = 5.00
@@ -1128,7 +1128,7 @@
 	}
 	shared_focus = {
 		id = NTR_reclamation_of_cloudbury
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffonian_republic
 		x = 3
 		y = 2
 		cost = 5.00
@@ -1182,7 +1182,7 @@
 	}
 	shared_focus = {
 		id = NTR_end_of_chivalry
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffon_knights
 		x = 5
 		y = 2
 		cost = 5.00
@@ -1209,7 +1209,7 @@
 	}
 	shared_focus = {
 		id = NTR_new_kingdom
-		icon = GFX_goal_unknown
+		icon = GFX_goal_goy_ntr_regal
 		x = 3
 		y = 3
 		cost = 5.00
@@ -1254,7 +1254,7 @@
 	###
 	shared_focus = {
 		id = NTR_times_changing
-		icon = GFX_goal_molotov_ribbentrop_pact_pony
+		icon = GFX_goal_GOY_times_changing
 		x = 24
 		y = 0
 		cost = 1.00
@@ -1320,12 +1320,16 @@
 		relative_position_id = NTR_times_changing
 		prerequisite = { focus = NTR_times_changing }
 		completion_reward = {
-			#TODO exiles OOB
+			#TODO modify “Exiled Clans” with +10% recruitable population factor
+			add_manpower = 50000
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
 			    amount = -500
 			}
-			add_manpower = 50000
+			custom_effect_tooltip = NTR_refugee_tt
+			hidden_effect = {
+				load_oob = NTR_refugee_OOB
+			}
 		}
 	}
 	shared_focus = {
@@ -1367,7 +1371,7 @@
 	}
 	shared_focus = {
 		id = NTR_skynavia_fall
-		icon = GFX_goal_HOL_crackdown_totalist
+		icon = GFX_goal_GOY_crush_skynavia
 		x = 0
 		y = 3
 		cost = 5.00
@@ -1391,7 +1395,7 @@
 	###
 	shared_focus = {
 		id = NTR_end_of_beginning
-		icon = GFX_focus_indy_generic_political
+		icon = GFX_goal_GOY_end_of_beginning
 		x = 24
 		y = 4
 		cost = 5.00
@@ -1488,7 +1492,7 @@
 	}
 	shared_focus = {
 		id = NTR_mend_rift
-		icon = GFX_goal_Workers_of_Griffonia
+		icon = GFX_goal_GOY_mend_rift
 		x = -1
 		y = 3
 		cost = 5.00
@@ -1528,7 +1532,7 @@
 	###
 	shared_focus = {
 		id = NTR_aggressive_modernisation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffon_clock
 		x = 32
 		y = 0
 		cost = 5.00
@@ -1547,7 +1551,7 @@
 	}
 	shared_focus = {
 		id = NTR_progress_through_education
-		icon = GFX_goal_unknown
+		icon = GFX_goal_eqs_public_schools
 		x = -2
 		y = 1
 		cost = 5.00
@@ -1566,7 +1570,7 @@
 	}
 	shared_focus = {
 		id = NTR_fund_development
-		icon = GFX_goal_unknown
+		icon = GFX_goal_gold_up
 		x = 0
 		y = 1
 		cost = 5.00
@@ -1582,7 +1586,7 @@
 	}
 	shared_focus = {
 		id = NTR_open_northern
-		icon = GFX_goal_unknown
+		icon = GFX_goal_BEL_Battleship_Investements
 		x = 2
 		y = 1
 		cost = 5.00
@@ -1602,7 +1606,7 @@
 	}
 	shared_focus = {
 		id = NTR_import_modern_tech
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_lightbulb
 		x = -3
 		y = 2
 		cost = 5.00
@@ -1625,7 +1629,7 @@
 	}
 	shared_focus = {
 		id = NTR_northern_rail
-		icon = GFX_goal_unknown
+		icon = GFX_goal_rct_fancy_train
 		x = -1
 		y = 2
 		cost = 5.00
@@ -1644,7 +1648,7 @@
 	}
 	shared_focus = {
 		id = NTR_mining_operations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_coal_mining
 		x = 1
 		y = 2
 		cost = 5.00
@@ -1669,7 +1673,7 @@
 	}
 	shared_focus = {
 		id = NTR_invite_merchants
-		icon = GFX_goal_unknown
+		icon = GFX_goal_schemeing_bankers
 		x = 3
 		y = 2
 		cost = 5.00
@@ -1699,7 +1703,7 @@
 	}
 	shared_focus = {
 		id = NTR_electronics_production
-		icon = GFX_goal_unknown
+		icon = GFX_focus_Computer_2
 		x = -2
 		y = 3
 		cost = 5.00
@@ -1729,7 +1733,7 @@
 	}
 	shared_focus = {
 		id = NTR_coal_and_steam
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ITA_urban
 		x = 0
 		y = 3
 		cost = 5.00
@@ -1755,7 +1759,7 @@
 	}
 	shared_focus = {
 		id = NTR_foreign_arms_producers
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_ordnance
 		x = 2
 		y = 3
 		cost = 5.00
@@ -1779,24 +1783,37 @@
 	}
 	shared_focus = {
 		id = NTR_kickstart_urbanisation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_spa_the_spanish_miracle
 		x = -2
 		y = 4
 		cost = 8.00
 		ai_will_do = {
 			factor = 10
 		}
+		select_effect = {
+		    add_timed_idea = {
+			    idea = NTR_massive_expenses
+			    days = 240
+			}
+		}
 		search_filters = {}
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_electronics_production }
 		prerequisite = { focus = NTR_coal_and_steam }
 		completion_reward = {
-			#+300.000 population in Liftauf, Change Liftauf to Dense urban, +100.000 population in Vastmush, Change Vastmush to Spare Urban, add spirit “Huge Expenses” (+20% consumer goods for 240 days),
+			562 = {
+			    add_manpower = 300000
+				set_state_category = large_city
+			}
+			563 = {
+			    add_manpower = 100000
+				set_state_category = large_town
+			}
 		}
 	}
 	shared_focus = {
 		id = NTR_greenhouse_agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_goal_communist_potatoes
 		x = 0
 		y = 4
 		cost = 8.00
@@ -1815,7 +1832,7 @@
 	}
 	shared_focus = {
 		id = NTR_from_forge
-		icon = GFX_goal_unknown
+		icon = GFX_goal_improve_industry
 		x = 2
 		y = 4
 		cost = 8.00
@@ -1833,7 +1850,6 @@
 		prerequisite = { focus = NTR_foreign_arms_producers }
 		prerequisite = { focus = NTR_coal_and_steam }
 		completion_reward = {
-		    #TODO add expenses
 			574 = {
 			    set_state_category = large_town
 				add_manpower = 200000
@@ -1854,7 +1870,7 @@
 	}
 	shared_focus = {
 		id = NTR_dawn_of_modern_age
-		icon = GFX_goal_unknown
+		icon = GFX_goal_double_research
 		x = -1
 		y = 5
 		cost = 8.00
@@ -1872,7 +1888,7 @@
 	}
 	shared_focus = {
 		id = NTR_flames_of_north
-		icon = GFX_goal_unknown
+		icon = GFX_goal_industrial_pony
 		x = 1
 		y = 5
 		cost = 8.00
@@ -1913,7 +1929,7 @@
 	}
 	shared_focus = {
 		id = NTR_modern_nation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_chn_economic_plan
 		x = 0
 		y = 6
 		cost = 5.00
@@ -2461,7 +2477,10 @@
 		prerequisite = { focus = NTR_supplies_for_alchemists }
 		prerequisite = { focus = NTR_fortitude_elixir }
 		completion_reward = {
-			#TODO enable ursa companies
+			set_technology = {
+			    popup = no
+			    TEM_ursas = 1
+		    }
 		}
 	}
 	###
@@ -2512,12 +2531,15 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_follow_old }
 		completion_reward = {
-			#TODO oob lodges
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.03
 			}
 			add_war_support = 0.05
+			custom_effect_tooltip = NTR_lodges_tt
+			hidden_effect = {
+				load_oob = NTR_lodges_OOB
+			}
 		}
 	}
 	shared_focus = {
@@ -2794,7 +2816,7 @@
 			owns_state = 522
 		}
 		completion_reward = {
-			#TODO OOB
+			load_oob = NTR_warriors_OOB
 		}
 	}
 	shared_focus = {
@@ -4335,7 +4357,7 @@
 		relative_position_id = NTR_cold_hearted
 		prerequisite = { focus = NTR_unleash_blizzard }
 		completion_reward = {
-			#TODO load OOB
+			load_oob = NTR_raised_warriors_OOB
 		}
 	}
 	shared_focus = {
@@ -4477,7 +4499,21 @@
 		prerequisite = { focus = NTR_north_awakens }
 		completion_reward = {
 			remove_ideas = NTR_exiled_clans
-			#TODO return ppl
+			561 = {
+			    add_manpower = 100000
+			}
+			542 = {
+			    add_manpower = 50000
+			}
+			585 = {
+			    add_manpower = 50000
+			}
+			601 = {
+			    add_manpower = 50000
+			}
+			522 = {
+			    add_manpower = 25000
+			}
 		}
 	}
 	shared_focus = {
@@ -4796,7 +4832,7 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_whole_again }
 		completion_reward = {
-			add_ideas = GOY_slave_economy #TODO
+			add_ideas = GOY_slave_economy
 		}
 	}
 	shared_focus = {
@@ -4904,7 +4940,6 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_study_left }
 		completion_reward = {
-			#TODO 10 oil in ostfloy
 			add_resource = {
 				type = oil
 				amount = 10

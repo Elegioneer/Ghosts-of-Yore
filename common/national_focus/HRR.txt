@@ -163,6 +163,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		    always = yes
+		}
 		search_filters = {}
 		completion_reward = {
 			
@@ -181,7 +184,8 @@ focus_tree = {
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_melt_ice }
 		completion_reward = {
-			
+			add_manpower = 50000
+			add_ideas = HRR_lib_army
 		}
 	}
 	focus = {

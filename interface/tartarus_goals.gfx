@@ -268,4 +268,20 @@ spriteTypes = {
 		name = "GFX_goal_GOY_the_undead"
 		texturefile = "gfx/interface/goals/goal_GOY_the_undead.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_times_changing"
+		texturefile = "gfx/interface/goals/goal_GOY_times_changing.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_end_of_beginning"
+		texturefile = "gfx/interface/goals/goal_GOY_end_of_beginning.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_mend_rift"
+		texturefile = "gfx/interface/goals/goal_GOY_mend_rift.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_crush_skynavia"
+		texturefile = "gfx/interface/goals/goal_GOY_crush_skynavia.dds"
+	}
 }
