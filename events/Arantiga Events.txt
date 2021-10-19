@@ -1373,12 +1373,6 @@ country_event = { #Griffonstone Archives
 	add_stability = 0.1
 	add_popularity = { ideology = neutrality popularity = 0.10 }
 	add_popularity = { ideology = communism popularity = 0.2 }
-	    hidden_effect = {
-		    country_event = {
-			    id = arantiga_chaos.030
-				days = 7
-			}
-		}
 		custom_effect_tooltip = ARA_load_imperial_tree
 		hidden_effect = {
 		    set_country_flag = ARA_soter_march_flag
@@ -1396,6 +1390,7 @@ country_event = { #Griffonstone Archives
 	    picture = GFX_event_griffon_back
 		option = {
 			name = arantiga_chaos.030.a
+			add_country_leader_trait = GOY_prez_for_life
 		}
 	}
 	
