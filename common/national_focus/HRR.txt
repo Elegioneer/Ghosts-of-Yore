@@ -7,22 +7,29 @@ focus_tree = {
 	continuous_focus_position = { x = 290 y = 2500 }
 	focus = {
 		id = HRR_reconstruction
-		icon = GFX_goal_unknown
-		x = 2
+		icon = GFX_goal_generic_construct_public_housing
+		x = -6
 		y = 3
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
+		available = {
+			has_completed_focus	= HRR_heart_darkness
+		}		
 		completion_reward = {
-			
+		add_timed_idea = {
+			idea = HRR_reconstruction_effort
+			days = 360
+		}
+		remove_ideas = HRR_economic_devastation			
 		}
 	}
 	focus = {
 		id = HRR_rebuild_romau
-		icon = GFX_goal_unknown
-		x = -1
+		icon = GFX_goal_construction_engineering
+		x = -2
 		y = 1
 		cost = 5.00
 		ai_will_do = {
@@ -31,14 +38,92 @@ focus_tree = {
 		search_filters = {}
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_reconstruction }
+		bypass = {
+		    HRR = {
+			    NOT = {
+				has_country_flag = HRR_romau_destroyed
+				}
+			}
+		}		
 		completion_reward = {
-			
+			add_political_power = -100		
+			674 = {
+			    add_manpower = 200000
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+					instant_build = yes						
+                }
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+					instant_build = yes					
+                }
+				set_state_category = city
+			}
+			add_victory_points = {
+			    province = 1027
+				value = 5
+			}
+			set_province_name = { id = 1027 name = "Romau" }			
 		}
 	}
 	focus = {
 		id = HRR_rebuild_griffenheim
-		icon = GFX_goal_unknown
-		x = 1
+		icon = GFX_goal_ITA_urban
+		x = 0
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_reconstruction }
+		bypass = {
+		    HRR = {
+			    NOT = {
+				has_country_flag = HRR_griffenheim_destroyed
+				}
+			}
+		}		
+		completion_reward = {
+			add_political_power = -100
+			382 = {
+			    add_manpower = 300000
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+					instant_build = yes	
+                }
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+					instant_build = yes						
+                }
+				set_state_category = city
+			}
+			add_victory_points = {
+			    province = 10537
+				value = 5
+			}
+			set_province_name = { id = 10537 name = "Griffenheim" }			
+		}
+	}
+	focus = {
+		id = HRR_heal_north
+		icon = GFX_goal_generic_build_housing
+		x = 2
 		y = 1
 		cost = 5.00
 		ai_will_do = {
@@ -48,13 +133,69 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_reconstruction }
 		completion_reward = {
-			
+			485 = {
+			    add_manpower = 100000
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 3
+			}
+			429 = {
+			    add_manpower = 50000
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = infrastructure
+                    level = 1
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 2
+			}
+			432 = {
+			    add_manpower = 50000
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+					instant_build = yes					
+                }
+				add_building_construction = {
+                    type = infrastructure
+                    level = 1
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 2	
+			}	
 		}
 	}
 	focus = {
 		id = HRR_finance_civres
-		icon = GFX_goal_unknown
-		x = -2
+		icon = GFX_goal_double_research
+		x = -3
 		y = 2
 		cost = 5.00
 		ai_will_do = {
@@ -64,14 +205,27 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_rebuild_romau }
 		prerequisite = { focus = HRR_rebuild_griffenheim }
+		prerequisite = { focus = HRR_heal_north }
 		completion_reward = {
-			
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = HRR_industry_1
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				name = HRR_electronics_1
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
 		}
 	}
 	focus = {
 		id = HRR_integrate_infra
-		icon = GFX_goal_unknown
-		x = 0
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
 		y = 2
 		cost = 5.00
 		ai_will_do = {
@@ -81,14 +235,310 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_rebuild_romau }
 		prerequisite = { focus = HRR_rebuild_griffenheim }
+		prerequisite = { focus = HRR_heal_north }
 		completion_reward = {
-			
+			build_railway = {
+                level = 1
+				start_province = 10537
+                target_province = 9195
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 10537
+                target_province = 12691
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 10537
+                target_province = 4573
+                build_only_on_allied = yes
+            }
+			custom_effect_tooltip = HRR_railroad_tooltip
+			hidden_effect = {
+			    #Angriver
+			547 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			422 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			411 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Katerin
+			506 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			554 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			423 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Yale
+			665 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			402 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			439 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			398 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Greifemarschen
+			399 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			447 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			378 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Romau
+			674 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Griffonian Empire starting land
+			555 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			437 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			397 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			405 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			382 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Feathisia
+			666 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			440 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			441 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			520 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			434 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			498 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			538 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			433 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			497 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Strawberry
+			443 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			545 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			546 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			486 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			458 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			#Bronzehill
+			424 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			479 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			492 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			568 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			539 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
 		}
+	}
 	}
 	focus = {
 		id = HRR_peace_and_prosperity
-		icon = GFX_goal_unknown
-		x = 2
+		icon = GFX_goal_gold_reserve_2
+		x = 1
 		y = 2
 		cost = 5.00
 		ai_will_do = {
@@ -98,13 +548,55 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_rebuild_romau }
 		prerequisite = { focus = HRR_rebuild_griffenheim }
+		prerequisite = { focus = HRR_heal_north }
 		completion_reward = {
-			
+			add_stability = 0.03
+			add_ideas = HRR_peace_prosperity_idea
 		}
 	}
 	focus = {
+		id = HRR_resource_extraction
+		icon = GFX_focus_generic_steel
+		x = 3
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_rebuild_romau }
+		prerequisite = { focus = HRR_rebuild_griffenheim }
+		prerequisite = { focus = HRR_heal_north }
+		completion_reward = {
+			add_ideas = HRR_extra_resources
+			custom_effect_tooltip = HRR_resources_tooltip
+			hidden_effect = {
+				set_country_flag = HRR_flag_mineral_extraction_unlocked
+			}
+		}
+	}
+	focus = {
+		id = HRR_restructure_industrial_companies
+		icon = GFX_goal_cash_and_cap
+		x = -4
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_finance_civres }
+		prerequisite = { focus = HRR_integrate_infra }
+		prerequisite = { focus = HRR_peace_and_prosperity }
+		completion_reward = {
+			custom_effect_tooltip = HRR_companies_unlocked
+		}
+	}	
+	focus = {
 		id = HRR_support_uni
-		icon = GFX_goal_unknown
+		icon = GFX_goal_UESR_TNO_education
 		x = -2
 		y = 3
 		cost = 5.00
@@ -115,14 +607,16 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_finance_civres }
 		prerequisite = { focus = HRR_integrate_infra }
+		prerequisite = { focus = HRR_peace_and_prosperity }
 		completion_reward = {
-			
+		add_political_power = -100
+		add_ideas = HRR_yale_universities
 		}
 	}
 	focus = {
 		id = HRR_welfare_pol
-		icon = GFX_goal_unknown
-		x = 2
+		icon = GFX_focus_healthcare_program
+		x = 0
 		y = 3
 		cost = 5.00
 		ai_will_do = {
@@ -130,16 +624,17 @@ focus_tree = {
 		}
 		search_filters = {}
 		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_finance_civres }
 		prerequisite = { focus = HRR_integrate_infra }
-		prerequisite = { focus = HRR_welfare_pol }
+		prerequisite = { focus = HRR_peace_and_prosperity }
 		completion_reward = {
-			
+			add_ideas = HRR_welfare_politics
 		}
 	}
 	focus = {
-		id = HRR_new_age
-		icon = GFX_goal_unknown
-		x = 0
+		id = HRR_herzland_dev_scheme
+		icon = GFX_goal_GRI_industryzone
+		x = -1
 		y = 4
 		cost = 5.00
 		ai_will_do = {
@@ -149,15 +644,386 @@ focus_tree = {
 		relative_position_id = HRR_reconstruction
 		prerequisite = { focus = HRR_support_uni }
 		prerequisite = { focus = HRR_welfare_pol }
+		prerequisite = { focus = HRR_restructure_industrial_companies }
 		completion_reward = {
-			
+			custom_effect_tooltip = HRR_herzland_devscheme_tooltip
+			hidden_effect = {
+				set_country_flag = HRR_flag_devscheme_unlocked
+			}			
+		}
+	}
+	focus = {
+		id = HRR_agriculture_investment
+		icon = GFX_focus_AUS_agriculture
+		x = -3
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_support_uni }
+		prerequisite = { focus = HRR_welfare_pol }
+		prerequisite = { focus = HRR_restructure_industrial_companies }
+		completion_reward = {
+		add_ideas = HRR_agriculture_expanded	
+		}
+	}	
+	focus = {
+		id = HRR_new_age
+		icon = GFX_goal_chn_economic_plan
+		x = -2
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			NOT = {
+			has_idea = HRR_reconstruction_effort
+			}
+		}		
+		search_filters = {}
+		relative_position_id = HRR_reconstruction
+		prerequisite = { focus = HRR_herzland_dev_scheme }
+		prerequisite = { focus = HRR_agriculture_investment }
+		completion_reward = {
+		add_ideas = HRR_reinvigorated_economy	
+		}
+	}
+	###
+	focus = {
+		id = HRR_from_rebels
+		icon = GFX_goal_generic_drafted_army
+		x = 6
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		available = {
+			has_completed_focus	= HRR_heart_darkness
+		}		
+		completion_reward = {
+		remove_ideas = HRR_disorganized_army
+		army_experience = 25
+		navy_experience = 25
+		air_experience = 25
+		}
+	}
+	focus = {
+		id = HRR_study_herz
+		icon = GFX_goal_generic_army_tank_2
+		x = 0
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_from_rebels }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HRR_tank_1
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		    add_tech_bonus = {
+				name = HRR_infy_eq_1
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = HRR_arty_1
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}			
+		}
+	}
+	focus = {
+		id = HRR_reorg_knight
+		icon = GFX_goal_griffon_knights
+		x = 2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_from_rebels }
+		completion_reward = {
+			add_tech_bonus = {
+			    name = knights_bonus
+			    bonus = 1
+			    uses = 1
+			    category = knights_tech
+		    }
+			add_ideas = HRR_silberkralle_legacy	
+		}
+	}
+	focus = {
+		id = HRR_gendarmerie
+		icon = GFX_goal_OTT_gendarmerie
+		x = -2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_from_rebels }
+		completion_reward = {
+			add_ideas = HRR_military_gendarmerie
+		}
+	}
+	focus = {
+		id = HRR_new_officers
+		icon = GFX_goal_officers
+		x = -3
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_gendarmerie }
+		prerequisite = { focus = HRR_reorg_knight }
+		prerequisite = { focus = HRR_study_herz }
+		completion_reward = {
+			army_experience = 50
+			add_ideas = HRR_reformed_officer_corps
+		}
+	}
+	focus = {
+		id = HRR_reclaim_skies
+		icon = GFX_goal_air_armada
+		x = -1
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_gendarmerie }
+		prerequisite = { focus = HRR_reorg_knight }
+		prerequisite = { focus = HRR_study_herz }
+		completion_reward = {
+			add_ideas = HRR_reformed_airforce
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+				add_tech_bonus = {
+				    name = HRR_plane_1
+				    bonus = 0.5
+				    uses = 2
+					category = light_air
+			    }
+				add_tech_bonus = {
+					name = tacbomb_bonus
+					bonus = 0.5
+					uses = 1
+					category = medium_air
+				}
+				add_tech_bonus = {
+					name = strategic_bombers_bonus
+					bonus = 0.5
+					uses = 1
+					category = heavy_air
+				}				
+		}
+	}
+	focus = {
+		id = HRR_new_command
+		icon = GFX_focus_wng_redwings
+		x = 1
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_gendarmerie }
+		prerequisite = { focus = HRR_reorg_knight }
+		prerequisite = { focus = HRR_study_herz }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}		
+			add_ideas = HRR_high_command
+		}
+	}
+	focus = {
+		id = HRR_navy
+		icon = GFX_focus_generic_navy_battleship3alt
+		x = 3
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_gendarmerie }
+		prerequisite = { focus = HRR_reorg_knight }
+		prerequisite = { focus = HRR_study_herz }
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = HRR_ship_1
+				bonus = 0.5
+				uses = 5
+				category = naval_equipment
+			}
+			add_doctrine_cost_reduction = {
+				name = navy_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_ideas = HRR_fleet_reformed	
+		}
+	}
+	focus = {
+		id = HRR_military_research
+		icon = GFX_goal_GRI_science
+		x = 0
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_new_command }
+		prerequisite = { focus = HRR_navy }
+		prerequisite = { focus = HRR_reclaim_skies }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = HRR_liberators
+		icon = GFX_HON_peace_in_our_time
+		x = 2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_new_command }
+		prerequisite = { focus = HRR_navy }
+		prerequisite = { focus = HRR_reclaim_skies }
+		completion_reward = {
+			add_ideas = HRR_expedition_corps
+		}
+	}
+	focus = {
+		id = HRR_changeling_lessons
+		icon = GFX_GRI_changeling_attache_focus
+		x = 4
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_new_command }
+		prerequisite = { focus = HRR_navy }
+		prerequisite = { focus = HRR_reclaim_skies }
+		completion_reward = {
+			add_tech_bonus = {
+				name = HRR_tank_1
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+			add_ideas = HRR_new_panzerkorps		
+		}
+	}	
+	focus = {
+		id = HRR_reichsarmee_legacy
+		icon = GFX_goal_GRI_army_expansion
+		x = 3
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_liberators }
+		prerequisite = { focus = HRR_military_research }
+		prerequisite = { focus = HRR_changeling_lessons }		
+		completion_reward = {
+			add_ideas = HRR_reichsarmee_doctrines
+		}
+	}
+	focus = {
+		id = HRR_magic_of_war
+		icon = GFX_viira_crystal
+		x = 1
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_liberators }
+		prerequisite = { focus = HRR_military_research }
+		prerequisite = { focus = HRR_changeling_lessons }		
+		completion_reward = {
+			add_tech_bonus = {
+				name = NTR_magi_eq_1
+				bonus = 0.5
+				uses = 3
+				category = magical_tech
+			}			
+		}
+	}	
+	focus = {
+		id = HRR_griffonia_shield
+		icon = GFX_globe_arrow
+		x = 2
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_from_rebels
+		prerequisite = { focus = HRR_magic_of_war }
+		prerequisite = { focus = HRR_reichsarmee_legacy }
+		completion_reward = {
+			add_ideas = HRR_fierce_defenders
 		}
 	}
 	###
 	focus = {
 		id = HRR_melt_ice
-		icon = GFX_goal_unknown
-		x = 8
+		icon = GFX_goal_sunshine
+		x = 0
 		y = 0
 		cost = 5.00
 		ai_will_do = {
@@ -173,12 +1039,20 @@ focus_tree = {
 	}
 	focus = {
 		id = HRR_mobilise_griffs
-		icon = GFX_goal_unknown
+		icon = GFX_goal_griffon_special_force
 		x = -2
 		y = 1
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
+		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
 		}
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
@@ -190,93 +1064,327 @@ focus_tree = {
 	}
 	focus = {
 		id = HRR_fortify_cities
-		icon = GFX_goal_unknown
+		icon = GFX_goal_nested_fortifications
 		x = 0
 		y = 1
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_melt_ice }
 		completion_reward = {
-			
+			382 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 3
+					instant_build = yes
+					province = 4734
+				}
+			}
+			382 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 3
+					instant_build = yes
+					province = 7274
+				}
+			}
+			382 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 3
+					instant_build = yes
+					province = 10537
+				}
+			674 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 3
+					instant_build = yes
+					province = 4071
+				}
+			}
+			674 = {
+			    add_building_construction = {
+				    type = bunker
+					level = 3
+					instant_build = yes
+					province = 1027
+				}
+			}			
+			}			
 		}
 	}
 	focus = {
 		id = HRR_uncover_caches
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_military_equipment
 		x = 2
 		y = 1
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_melt_ice }
 		completion_reward = {
-			
+			add_equipment_to_stockpile = {
+						type = artillery_equipment
+						producer = GRI
+						amount = 250
+					}
+			add_equipment_to_stockpile = {
+						type = infantry_equipment
+						producer = GRI
+						amount = 5000
+					}
+			add_equipment_to_stockpile = {
+						type = support_equipment
+						producer = GRI
+						amount = 500
+					}					
 		}
 	}
 	focus = {
 		id = HRR_sacrifices
-		icon = GFX_goal_unknown
+		icon = GFX_goal_famine
+		x = 0
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_mobilise_griffs }
+		prerequisite = { focus = HRR_fortify_cities }
+		prerequisite = { focus = HRR_uncover_caches }
+		completion_reward = {
+			add_ideas = HRR_rationing
+		}
+	}
+	focus = {
+		id = HRR_guns_for_liberators
+		icon = GFX_goal_generic_small_arms
+		x = 2
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_mobilise_griffs }
+		prerequisite = { focus = HRR_fortify_cities }
+		prerequisite = { focus = HRR_uncover_caches }
+		completion_reward = {
+			add_political_power = -100
+			422 = {
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			547 = {
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 1
+			}
+			411 = {
+				add_building_construction = {
+                    type = arms_factory
+                    level = 1
+					instant_build = yes					
+                }
+				add_extra_state_shared_building_slots = 1
+			}			
+		}
+	}
+	focus = {
+		id = HRR_integrate_vets
+		icon = GFX_goal_griffon_soldier
 		x = -2
 		y = 2
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_mobilise_griffs }
 		prerequisite = { focus = HRR_fortify_cities }
 		prerequisite = { focus = HRR_uncover_caches }
 		completion_reward = {
-			
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}			
 		}
 	}
 	focus = {
-		id = HRR_guns_for_liberators
-		icon = GFX_goal_unknown
-		x = 0
+		id = HRR_volunteer_brigades
+		icon = GFX_goal_conscription
+		x = -4
 		y = 2
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_mobilise_griffs }
 		prerequisite = { focus = HRR_fortify_cities }
 		prerequisite = { focus = HRR_uncover_caches }
 		completion_reward = {
-			
+		load_oob = HRR_volunter_brigades_OOB
 		}
 	}
 	focus = {
-		id = HRR_integrate_vets
-		icon = GFX_goal_unknown
-		x = 2
+		id = HRR_purchase_guns
+		icon = GFX_goal_generic_bits_gun
+		x = 4
 		y = 2
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_mobilise_griffs }
 		prerequisite = { focus = HRR_fortify_cities }
 		prerequisite = { focus = HRR_uncover_caches }
 		completion_reward = {
-			
+			add_political_power = -100
+			add_equipment_to_stockpile = {
+						type = infantry_equipment
+						producer = GRI
+						amount = 10000
+					}			
 		}
 	}
+	focus = {
+		id = HRR_last_crusade
+		icon = GFX_focus_indy_swing_the_sword
+		x = -3
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_integrate_vets }
+		prerequisite = { focus = HRR_volunteer_brigades }
+		prerequisite = { focus = HRR_sacrifices }		
+		completion_reward = {
+			load_oob = HRR_crusaders_OOB
+		}
+	}
+	focus = {
+		id = HRR_retool_factories
+		icon = GFX_goal_factory_complex
+		x = 3
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+		OR = {
+			has_subject = NTR
+			NTR = {
+			exists = no
+			}
+		}
+		}		
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_sacrifices }
+		prerequisite = { focus = HRR_guns_for_liberators }
+		prerequisite = { focus = HRR_purchase_guns }		
+		completion_reward = {
+			add_ideas = HRR_retooled_for_war
+		}
+	}	
 	focus = {
 		id = HRR_heart_darkness
-		icon = GFX_goal_unknown
+		icon = GFX_goal_dark_heart
 		x = 0
 		y = 3
 		cost = 5.00
@@ -288,13 +1396,18 @@ focus_tree = {
 		prerequisite = { focus = HRR_sacrifices }
 		prerequisite = { focus = HRR_guns_for_liberators }
 		prerequisite = { focus = HRR_integrate_vets }
+		prerequisite = { focus = HRR_volunteer_brigades }
+		prerequisite = { focus = HRR_purchase_guns }
+		available = {
+		    owns_state = 562
+		}		
 		completion_reward = {
-			
+		country_event = herzland_liberation_goy.01	
 		}
 	}
 	focus = {
 		id = HRR_fate_of_defeated
-		icon = GFX_goal_unknown
+		icon = GFX_goal_improve_relations_pony_griffon
 		x = -2
 		y = 4
 		cost = 5.00
@@ -305,28 +1418,12 @@ focus_tree = {
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_heart_darkness }
 		completion_reward = {
-			
+		country_event = herzland_liberation_goy.03	
 		}
 	}
 	focus = {
 		id = HRR_liberate_slaves
-		icon = GFX_goal_unknown
-		x = 0
-		y = 4
-		cost = 5.00
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {}
-		relative_position_id = HRR_melt_ice
-		prerequisite = { focus = HRR_heart_darkness }
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = HRR_provisional_gov
-		icon = GFX_goal_unknown
+		icon = GFX_viira_griffon_slave
 		x = 2
 		y = 4
 		cost = 5.00
@@ -337,12 +1434,33 @@ focus_tree = {
 		relative_position_id = HRR_melt_ice
 		prerequisite = { focus = HRR_heart_darkness }
 		completion_reward = {
-			
+			add_stability = 0.05
+			MNC = { add_to_ROOT_potential_cores = yes }
+		    FAT = { add_to_ROOT_potential_cores = yes }
+			FAW = { add_to_ROOT_potential_cores = yes }
+		    VED = { add_to_ROOT_potential_cores = yes }		
 		}
 	}
 	focus = {
-		id = HRR_nobles_and_revs
-		icon = GFX_goal_unknown
+		id = HRR_restore_civ_government
+		icon = GFX_goal_generic_stable_government
+		x = 0
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heart_darkness }
+		completion_reward = {
+		add_political_power = 75
+		remove_ideas = HRR_military_governing
+		}
+	}
+	focus = {
+		id = HRR_groverite_restoration
+		icon = GFX_goal_grover_vi
 		x = -1
 		y = 5
 		cost = 5.00
@@ -351,15 +1469,60 @@ focus_tree = {
 		}
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
-		prerequisite = { focus = HRR_fate_of_defeated }
+		prerequisite = { focus = HRR_restore_civ_government }
 		prerequisite = { focus = HRR_liberate_slaves }
+		prerequisite = { focus = HRR_fate_of_defeated }
+		mutually_exclusive = { focus = HRR_heirs_of_republic }
+		available = {
+    		NOT = {
+    			has_global_flag = GRI_grover_vi_dead
+ 			}		
+		}
 		completion_reward = {
-			
+			custom_effect_tooltip = HRR_restoration_tooltip
+			add_stability = 0.1
+			set_politics = {
+			    ruling_party = neutrality
+				elections_allowed = no
+			}				
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+			hidden_effect = {
+			news_event = herzland_liberation_goy_news.2
+			set_cosmetic_tag = HRR_GOY_kingdom
+			add_ideas = HRR_GOY_groverfirst
+			set_party_name = {ideology = democratic name = HRR_GOY_king_dem long_name = HRR_GOY_king_dem_long }
+			set_party_name = {ideology = neutrality name = HRR_GOY_king_neu long_name = HRR_GOY_king_neu_long }
+			set_party_name = { ideology = fascism name = HRR_GOY_king_fas long_name = HRR_GOY_king_fas_long }
+			set_party_name = { ideology = communism name = HRR_GOY_king_com long_name = HRR_GOY_king_com_long }
+			add_country_leader_role = {
+				Character = HRR_GOY_gerben_kogchel
+				Promote_leader = yes
+				Country_leader = {
+				ideology = democratic_socialism
+				desc = ""
+				expire = “1965.01.01.01”
+				traits = { GOY_democratic_socialist }
+			}
+			}
+			add_country_leader_role = {
+				Character = HRR_GOY_gabriella_di_karthin
+				Promote_leader = yes
+				Country_leader = {
+				ideology = liberalism
+				desc = ""
+				expire = “1965.01.01.01”
+				traits = { GOY_commongriff_president }
+			}
+			}			
+			}	
 		}
 	}
 	focus = {
-		id = HRR_pres_and_parl
-		icon = GFX_goal_unknown
+		id = HRR_heirs_of_republic
+		icon = GFX_goal_griffonian_republic
 		x = 1
 		y = 5
 		cost = 5.00
@@ -368,33 +1531,60 @@ focus_tree = {
 		}
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_restore_civ_government }
 		prerequisite = { focus = HRR_liberate_slaves }
-		prerequisite = { focus = HRR_provisional_gov }
+		prerequisite = { focus = HRR_fate_of_defeated }
+		mutually_exclusive = { focus = HRR_groverite_restoration }
+		available = {
+    			has_global_flag = GRI_grover_vi_dead	
+		}		
 		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = HRR_organise_elect
-		icon = GFX_goal_unknown
-		x = -1
-		y = 6
-		cost = 5.00
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {}
-		relative_position_id = HRR_melt_ice
-		prerequisite = { focus = HRR_nobles_and_revs }
-		prerequisite = { focus = HRR_pres_and_parl }
-		completion_reward = {
-			
+			custom_effect_tooltip = HRR_republic_tooltip
+			add_stability = 0.1			
+			hidden_effect = {
+			news_event = herzland_liberation_goy_news.3
+			set_cosmetic_tag = HRR_GOY_republic	
+			set_party_name = {ideology = democratic name = HRR_GOY_rep_dem long_name = HRR_GOY_rep_dem_long }
+			set_party_name = {ideology = neutrality name = HRR_GOY_rep_neu long_name = HRR_GOY_rep_neu_long }
+			set_party_name = { ideology = fascism name = HRR_GOY_rep_fas long_name = HRR_GOY_rep_fas_long }
+			set_party_name = { ideology = communism name = HRR_GOY_rep_com long_name = HRR_GOY_rep_com_long }
+			add_country_leader_role = {
+				Character = HRR_GOY_gerben_kogchel
+				Promote_leader = yes
+				Country_leader = {
+				ideology = democratic_socialism
+				desc = ""
+				expire = “1965.01.01.01”
+				traits = { GOY_democratic_socialist }
+			}
+			}
+			add_country_leader_role = {
+				Character = HRR_GOY_heinrich_kingfeather
+				Promote_leader = yes
+				Country_leader = {
+				ideology = conservative_liberalism
+				desc = ""
+				expire = “1965.01.01.01”
+				traits = { GOY_republican_chancellor }
+			}
+			}
+			add_country_leader_role = {
+				Character = HRR_GOY_dietrich_mach
+				Promote_leader = yes
+				Country_leader = {
+				ideology = ultranationalism
+				desc = ""
+				expire = “1965.01.01.01”
+				traits = {  }
+			}
+			}			
+			}				
 		}
 	}
 	focus = {
 		id = HRR_free_media
-		icon = GFX_goal_unknown
-		x = 1
+		icon = GFX_goal_generic_propaganda
+		x = 0
 		y = 6
 		cost = 5.00
 		ai_will_do = {
@@ -402,16 +1592,18 @@ focus_tree = {
 		}
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
-		prerequisite = { focus = HRR_nobles_and_revs }
-		prerequisite = { focus = HRR_pres_and_parl }
+		prerequisite = { 
+		focus = HRR_heirs_of_republic
+		focus = HRR_groverite_restoration
+		}
 		completion_reward = {
-			
+			add_ideas = HRR_freemedia
 		}
 	}
 	focus = {
-		id = HRR_rising_from_ashes
-		icon = GFX_goal_unknown
-		x = 0
+		id = HRR_adopt_principles
+		icon = GFX_goal_kemerskai
+		x = -1
 		y = 7
 		cost = 5.00
 		ai_will_do = {
@@ -419,156 +1611,344 @@ focus_tree = {
 		}
 		search_filters = {}
 		relative_position_id = HRR_melt_ice
-		prerequisite = { focus = HRR_organise_elect }
 		prerequisite = { focus = HRR_free_media }
 		completion_reward = {
-			
-		}
-	}
-	###
-	focus = {
-		id = HRR_from_rebels
-		icon = GFX_goal_unknown
-		x = 14
-		y = 3
-		cost = 5.00
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {}
-		completion_reward = {
-			
+			add_ideas = HRR_principles
 		}
 	}
 	focus = {
-		id = HRR_study_herz
-		icon = GFX_goal_unknown
-		x = -1
-		y = 1
-		cost = 5.00
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_from_rebels }
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = HRR_reorg_knight
-		icon = GFX_goal_unknown
+		id = HRR_many_races_nations
+		icon = GFX_goal_generic_national_unity_claws
 		x = 1
-		y = 1
+		y = 7
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_from_rebels }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_free_media }
 		completion_reward = {
-			
+			add_ideas = HRR_tolerantsociety
 		}
 	}
 	focus = {
-		id = HRR_mil_inst
-		icon = GFX_goal_unknown
+		id = HRR_herzlandism
+		icon = GFX_goal_BOI_herzlandism
+		x = 0
+		y = 8
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_adopt_principles }
+		prerequisite = { focus = HRR_many_races_nations }
+		will_lead_to_war_with = HLQ
+		will_lead_to_war_with = LSM
+		will_lead_to_war_with = LSC
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = HEL
+		will_lead_to_war_with = AET
+		will_lead_to_war_with = TRD
+		will_lead_to_war_with = BOI
+		will_lead_to_war_with = BAN		
+		completion_reward = {
+			custom_effect_tooltip = HRR_herzlandism_tooltip
+			hidden_effect = {
+			    HLQ = { add_to_ROOT_potential_cores = yes }
+				EYR = { add_to_ROOT_potential_cores = yes }
+				ERI = { add_to_ROOT_potential_cores = yes }
+				AVI = { add_to_ROOT_potential_cores = yes }
+				HEL = { add_to_ROOT_potential_cores = yes }
+				AET = { add_to_ROOT_potential_cores = yes }
+				TRD = { add_to_ROOT_potential_cores = yes }
+				FEZ = { add_to_ROOT_potential_cores = yes }
+				BOI = { add_to_ROOT_potential_cores = yes }
+				BAN = { add_to_ROOT_potential_cores = yes }
+				LAK = { add_to_ROOT_potential_cores = yes }				
+			}
+			IF = {
+			    limit = { HLQ = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HLQ
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 633
+					add_state_claim = 634	
+					add_state_claim = 553
+					add_state_claim = 537
+				}
+			}
+			IF = {
+			    limit = { LSM = { exists = yes } }
+				hidden_effect = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = LSM
+			        }
+				}
+				ELSE_IF = {
+				    limit = { LNS = { exists = yes } }
+					hidden_effect = {
+					    LNS = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LNS
+					    }
+					}
+				}
+				ELSE_IF = {
+				    limit = { LSC = { exists = yes } }
+					hidden_effect = {
+					    LSC = { add_to_ROOT_potential_cores = yes }
+					    create_wargoal = {
+					        type = annex_everything
+						    target = LSC
+					    }
+					}
+				}
+				ELSE = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+				    add_state_claim = 540
+					add_state_claim = 552
+					add_state_claim = 505
+				}
+			}
+			IF = {
+			    limit = { EYR = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = EYR
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 400
+					add_state_claim = 391
+				}
+			}
+			IF = {
+			    limit = { ERI = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = ERI
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 401
+					add_state_claim = 500
+					add_state_claim = 673
+				}
+			}
+			IF = {
+			    limit = { AVI = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = AVI
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 470
+				}
+			}
+			IF = {
+			    limit = { HEL = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = HEL
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 493
+					add_state_claim = 494
+				}
+			}
+			IF = {
+			    limit = { AET = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = AET
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 496
+					add_state_claim = 495
+					add_state_claim = 457
+					add_state_claim = 436
+				}
+			}
+			IF = {
+			    limit = { TRD = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = TRD
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 380
+					add_state_claim = 396
+					add_state_claim = 379
+					add_state_claim = 381
+				}
+			}
+			IF = {
+			    limit = { FEZ = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = FEZ
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 390
+				}
+			}
+			IF = {
+			    limit = { BOI = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = BOI
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 679
+				    add_state_claim = 471
+				    add_state_claim = 488
+				    add_state_claim = 384
+				    add_state_claim = 389
+				    add_state_claim = 392
+				    add_state_claim = 531
+				    add_state_claim = 409					
+				}
+			}
+			IF = {
+			    limit = { BAN = { exists = yes } }
+				hidden_effect = {
+			        create_wargoal = {
+				        type = annex_everything 
+				        target = BAN
+			        }
+				}
+				ELSE = {
+				    add_state_claim = 532
+				    add_state_claim = 489
+				    add_state_claim = 606
+				    add_state_claim = 490					
+				}
+			}			
+			}			
+		}
+	focus = {
+		id = HRR_religion_in_gov
+		icon = GFX_goal_generic_archonism
 		x = -2
-		y = 2
+		y = 6
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_study_herz }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_groverite_restoration }
 		completion_reward = {
-			
+			country_event = herzland_liberation_goy.04		
 		}
 	}
 	focus = {
-		id = HRR_form_fed_command
-		icon = GFX_goal_unknown
-		x = 0
-		y = 2
+		id = HRR_new_chancellor
+		icon = GFX_goal_government_icon
+		x = -4
+		y = 6
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_study_herz }
-		prerequisite = { focus = HRR_reorg_knight }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_groverite_restoration }
 		completion_reward = {
-			
+			country_event = herzland_liberation_goy.05			
 		}
 	}
 	focus = {
-		id = HRR_liberators
-		icon = GFX_goal_unknown
+		id = HRR_king_constitution
+		icon = GFX_goal_constitutional_guarantees
+		x = -3
+		y = 7
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_new_chancellor }
+		prerequisite = { focus = HRR_religion_in_gov }
+		completion_reward = {
+			country_event = herzland_liberation_goy.06			
+		}
+	}
+	focus = {
+		id = HRR_elections
+		icon = GFX_goal_generic_elections
 		x = 2
-		y = 2
+		y = 6
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_reorg_knight }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heirs_of_republic }
 		completion_reward = {
-			
+			country_event = herzland_liberation_goy.07
 		}
 	}
 	focus = {
-		id = HRR_federal_air
-		icon = GFX_goal_unknown
-		x = -1
-		y = 3
+		id = HRR_nobles_revolutionaries
+		icon = GFX_goal_revolution_tools
+		x = 4
+		y = 6
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_mil_inst }
-		prerequisite = { focus = HRR_form_fed_command }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_heirs_of_republic }
 		completion_reward = {
-			
+			country_event = herzland_liberation_goy.08			
 		}
 	}
 	focus = {
-		id = HRR_fed_navy
-		icon = GFX_goal_unknown
-		x = 1
-		y = 3
+		id = HRR_president_parliament
+		icon = GFX_COS_Ferrer_Coup
+		x = 3
+		y = 7
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_form_fed_command }
-		prerequisite = { focus = HRR_liberators }
+		relative_position_id = HRR_melt_ice
+		prerequisite = { focus = HRR_nobles_revolutionaries }
+		prerequisite = { focus = HRR_elections }
 		completion_reward = {
-			
+			country_event = herzland_liberation_goy.09			
 		}
 	}
-	focus = {
-		id = HRR_griffonia_shield
-		icon = GFX_goal_unknown
-		x = 0
-		y = 4
-		cost = 5.00
-		ai_will_do = {
-			factor = 10
-		}
-		search_filters = {}
-		relative_position_id = HRR_from_rebels
-		prerequisite = { focus = HRR_federal_air }
-		prerequisite = { focus = HRR_fed_navy }
-		completion_reward = {
-			
-		}
-	}
+}

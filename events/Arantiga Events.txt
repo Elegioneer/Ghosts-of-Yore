@@ -80,13 +80,16 @@ add_namespace = arantiga_decision
 	option = {
 		name = arantiga.004.a
 		add_manpower = -1
-		kill_country_leader = yes
-		create_country_leader = {
-		    name = "Nicator Whitebeak"
-		    desc = "justified_traitor_desc"
-		    picture = "nicator.tga"
-		    expire = "1965.1.1"
-		    ideology = despotism
+		retire_character = GOY_ARA_margareth_featherin
+		add_country_leader_role = {
+		character = GOY_ARA_nicator
+		promote_leader = yes
+		country_leader = {
+		ideology = despotism
+		desc = "justified_traitor_desc"
+		expire = “1965.1.1.1”
+		traits = {  }
+		}
 		}
 		set_party_name = {ideology = neutrality name = ARA_moderates long_name = ARA_moderates_long }
 		
@@ -136,19 +139,44 @@ country_event = { #prodigal sons
 		custom_effect_tooltip = ARA_sons_of_arantigos_tt
 
 		hidden_effect = {
-
-			create_corps_commander = {
-				name = "Craterus"
-				picture = Craterus.tga
+		
+		add_corps_commander_role = {
+			character = GOY_ARA_craterus
 				traits = { griffon_race_trait trait_reckless armor_officer }
 				skill = 3
 				attack_skill = 2
 				defense_skill = 2
 				planning_skill = 2
 				logistics_skill = 3
-				id = 1337 #ayyyy
+				legacy_id = 1337 #ayyyy
+		}
+		add_advisor_role = {
+			character = GOY_ARA_craterus
+				advisor = {
+				slot = army_chief
+				cost = 100
+				idea_token = craterus_advisor
+				traits = { army_chief_maneuver_2 }
+				allowed = {
+				original_tag = "ARA"
+				}
 			}
-
+			activate = no
+			}
+		add_advisor_role = {
+			character = GOY_ARA_craterus
+				advisor = {
+				slot = high_command
+				ledger = army
+				cost = 100
+				idea_token = ARA_craterus
+				traits = { army_armored_2 }
+				allowed = {
+				original_tag = "ARA"
+				}
+			}
+			activate = no
+			}
 			load_oob = ARA_sons_of_arantigos_OOB
 		}
 	}
@@ -185,14 +213,20 @@ country_event = { #prodigal sons
 	set_cosmetic_tag = ARA_new_kingdom
 	hidden_effect = {
 	
-	kill_country_leader = yes
-	create_country_leader = {
-			name = "Arantigos II"
-			picture = "gfx/leaders/ARA/dorotheos.tga"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = { arantigos_reborn }
-			}
+	remove_country_leader_role = {
+	character = GOY_ARA_dorotheos_featherin
+	ideology = nazism
+	}
+	add_country_leader_role = {
+	Character = GOY_ARA_arantigos
+	Promote_leader = yes
+	Country_leader = {
+	ideology = rexism
+	desc = "alexander_but_woke_desc"
+    expire = “1965.1.1.1”
+    traits = { arantigos_reborn }
+	}
+	}
 	news_event = { id = arantiga_news.1 days = 4 }	
 		}
 	}
@@ -437,25 +471,20 @@ country_event = { #going lower
 	fire_only_once = yes
 	    option = {
 		    name = arantiga.015.a
-		    kill_country_leader = yes
-		    remove_unit_leader = 1333
+			retire_character = GOY_ARA_arantigos
 		    hidden_effect = {
-		        kill_ideology_leader = neutrality
+		        retire_character = GOY_ARA_dorotheos_featherin
 		    }
-		    create_country_leader = {
-		        name = "Nicator Whitebeak"
-		        desc = "justified_traitor_desc"
-		        picture = "nicator.tga"
-		        expire = "1965.1.1"
-		        ideology = despotism
-		    }
-		    create_country_leader = {
-			    name = "Lysimachus"
-			    picture = "Lysimachus.tga"
-			    desc = "crazed_fanboy_desc"
-			    expire = "1965.1.1"
-			    ideology = falangism
-		    }
+			add_country_leader_role = {
+				Character = GOY_ARA_lysimachus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = falangism
+				desc = "crazed_fanboy_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
 		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		    hidden_effect = {
@@ -578,26 +607,20 @@ country_event = { #going lower
 	is_triggered_only = yes
 	fire_only_once = yes
 	    option = {
-		    name = arantiga.018.a
-		    kill_country_leader = yes
-		    remove_unit_leader = 1333
+		    retire_character = GOY_ARA_arantigos
 		    hidden_effect = {
-		        kill_ideology_leader = neutrality
+		        retire_character = GOY_ARA_dorotheos_featherin
 		    }
-		    create_country_leader = {
-		        name = "Nicator Whitebeak"
-		        desc = "justified_traitor_desc"
-		        picture = "nicator.tga"
-		        expire = "1965.1.1"
-		        ideology = despotism
-		    }
-		    create_country_leader = {
-			    name = "Lysimachus"
-			    picture = "Lysimachus.tga"
-			    desc = "crazed_fanboy_desc"
-			    expire = "1965.1.1"
-			    ideology = falangism
-		    }
+			add_country_leader_role = {
+				Character = GOY_ARA_lysimachus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = falangism
+				desc = "crazed_fanboy_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
 		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		    hidden_effect = {
@@ -672,25 +695,21 @@ country_event = { #going lower
 	fire_only_once = yes
 	    option = {
 		    name = arantiga.020.a
-		    kill_country_leader = yes
-		    remove_unit_leader = 1333
+		    retire_character = GOY_ARA_arantigos
+			
 		    hidden_effect = {
-		        kill_ideology_leader = neutrality
+		        retire_character = GOY_ARA_dorotheos_featherin
 		    }
-		    create_country_leader = {
-		        name = "Nicator Whitebeak"
-		        desc = "justified_traitor_desc"
-		        picture = "nicator.tga"
-		        expire = "1965.1.1"
-		        ideology = despotism
-		    }
-		    create_country_leader = {
-			    name = "Lysimachus"
-			    picture = "Lysimachus.tga"
-			    desc = "crazed_fanboy_desc"
-			    expire = "1965.1.1"
-			    ideology = falangism
-		    }
+			add_country_leader_role = {
+				Character = GOY_ARA_lysimachus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = falangism
+				desc = "crazed_fanboy_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
 		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		    hidden_effect = {
@@ -779,25 +798,21 @@ country_event = { #going lower
 	fire_only_once = yes
 	    option = {
 		    name = arantiga.022.a
-		    kill_country_leader = yes
-		    remove_unit_leader = 1333
+		    retire_character = GOY_ARA_arantigos
+			
 		    hidden_effect = {
-		        kill_ideology_leader = neutrality
+		        retire_character = GOY_ARA_dorotheos_featherin
 		    }
-		    create_country_leader = {
-		        name = "Nicator Whitebeak"
-		        desc = "justified_traitor_desc"
-		        picture = "nicator.tga"
-		        expire = "1965.1.1"
-		        ideology = despotism
-		    }
-		    create_country_leader = {
-			    name = "Lysimachus"
-			    picture = "Lysimachus.tga"
-			    desc = "crazed_fanboy_desc"
-			    expire = "1965.1.1"
-			    ideology = falangism
-		    }
+			add_country_leader_role = {
+				Character = GOY_ARA_lysimachus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = falangism
+				desc = "crazed_fanboy_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
 		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		    hidden_effect = {
@@ -809,10 +824,10 @@ country_event = { #going lower
 					days = 5
 			    }
 				set_popularities = {
-	                democratic = 18
-	                fascism = 34
-	                communism = 12
-	                neutrality = 36
+	                democratic = 22
+	                fascism = 28
+	                communism = 16
+	                neutrality = 34
                 }
                 set_politics = {
 	                ruling_party = neutrality
@@ -900,25 +915,21 @@ country_event = { #No remorse
 	fire_only_once = yes
 	    option = {
 		    name = arantiga.025.a
-		    kill_country_leader = yes
-		    remove_unit_leader = 1333
+		    retire_character = GOY_ARA_arantigos
+			
 		    hidden_effect = {
-		        kill_ideology_leader = neutrality
+		        retire_character = GOY_ARA_dorotheos_featherin
 		    }
-		    create_country_leader = {
-		        name = "Nicator Whitebeak"
-		        desc = "justified_traitor_desc"
-		        picture = "nicator.tga"
-		        expire = "1965.1.1"
-		        ideology = despotism
-		    }
-		    create_country_leader = {
-			    name = "Lysimachus"
-			    picture = "Lysimachus.tga"
-			    desc = "crazed_fanboy_desc"
-			    expire = "1965.1.1"
-			    ideology = falangism
-		    }
+			add_country_leader_role = {
+				Character = GOY_ARA_lysimachus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = falangism
+				desc = "crazed_fanboy_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	        set_party_name = { ideology = neutrality name = ARA_junta_party long_name = ARA_junta_party_long }
 		    set_party_name = { ideology = fascism name = ARA_salvation_party long_name = ARA_salvation_party_long }
 		    hidden_effect = {
@@ -958,16 +969,18 @@ country_event = { #No remorse
 	add_manpower = -5000
 	add_stability = -0.05
 	add_war_support = -0.05
-	remove_unit_leader = 1336
-	kill_ideology_leader = neutrality
-	    create_country_leader = {
-			name = "Soter Litori"
-			picture = "soter.tga"
-			expire = "1965.1.1"
-			ideology = populism
-		    #desc = soter_president_desc
-		}
 	
+	retire_character = GOY_ARA_nicator
+	add_country_leader_role = {
+				Character = GOY_ARA_soter
+				Promote_leader = yes
+				Country_leader = {
+				ideology = populism
+				desc = "soter_president_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	}
 	}
 	
@@ -1100,27 +1113,23 @@ country_event = { #Griffonstone Archives
 	    option = {
 	        name = arantiga_chaos.021.a
 			add_manpower = -15000
-			kill_ideology_leader = fascism
-			remove_unit_leader = 1335
+			
+			retire_character = GOY_ARA_lysimachus
+			
 	        set_politics = {
 			    ruling_party = neutrality
 			    elections_allowed = no
 		    }
 			hidden_effect = {
-			    retire_country_leader = yes
-			    create_country_leader = {
-		            name = "Nicator Whitebeak"
-		            desc = "justified_traitor_2_desc"
-		            picture = "nicator.tga"
-		            expire = "1965.1.1"
-		            ideology = despotism
-		        }
-			    create_country_leader = {
-			        name = "Craterus"
-			        picture = "Craterus.tga"
-			        expire = "1965.1.1"
-			        ideology = falangism
-				}
+			    add_country_leader_role = {
+				Character = GOY_ARA_craterus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = nazism
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 		    }
 	        add_popularity = { ideology = neutrality popularity = 0.1 }
 	        add_popularity = { ideology = democratic popularity = 0.1 }
@@ -1145,8 +1154,9 @@ country_event = { #Griffonstone Archives
 	    option = {
 	        name = arantiga_chaos.022.a
 	        add_manpower = -30000
-			kill_ideology_leader = neutrality
-			remove_unit_leader = 1336
+			
+			retire_character = GOY_ARA_nicator
+			
 			set_politics = {
 			    ruling_party = fascism
 			    elections_allowed = no
@@ -1158,12 +1168,15 @@ country_event = { #Griffonstone Archives
 		    }
 			hidden_effect = {
 			    complete_national_focus = ARA_inheritor
-				create_country_leader = {
-			        name = "Craterus"
-			        picture = "Craterus.tga"
-			        expire = "1965.1.1"
-			        ideology = despotism
-				}
+			    add_country_leader_role = {
+				Character = GOY_ARA_craterus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = despotism
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 				set_party_name = {ideology = neutrality name = ARA_moderates long_name = ARA_moderates_long }
 			}
 	    }
@@ -1214,7 +1227,7 @@ country_event = { #Griffonstone Archives
 			    add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 				    type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1294,8 +1307,13 @@ country_event = { #Griffonstone Archives
 	picture = GFX_event_goy_nicator
 		option = {
 			name = arantiga_chaos.003.a
-			add_country_leader_trait = arantiga_shield
 			set_cosmetic_tag = ARA_sparleos
+			add_trait = {
+				character = GOY_ARA_nicatorking
+				slot = country_leader
+				trait = arantiga_shield
+				ideology = despotism
+			}
 		}
 	}
 
@@ -1324,13 +1342,6 @@ country_event = { #Griffonstone Archives
 		    add = 1
 		}
     }
-	create_country_leader = {
-			name = "Antioco Moro"
-			picture = "aradem.tga"
-			expire = "1965.1.1"
-			ideology = liberalism
-			desc = generic_harmony_birb_desc
-		}
 	set_politics = {
 			ruling_party = democratic
 			elections_allowed = no
@@ -1362,14 +1373,18 @@ country_event = { #Griffonstone Archives
     	long_name = ARA_soter_coalition_long1 
     	name = ARA_soter_coalition1
 	}
-	retire_country_leader = yes
-	    create_country_leader = {
-			name = "Soter Litori"
-			picture = "soter.tga"
-			expire = "1965.1.1"
-			ideology = populism
-		    desc = soter_president_desc
-		}
+	
+	remove_country_leader_role = GOY_ARA_nicator
+	add_country_leader_role = {
+				Character = GOY_ARA_soter
+				Promote_leader = yes
+				Country_leader = {
+				ideology = populism
+				desc = "soter_president_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 	add_stability = 0.1
 	add_popularity = { ideology = neutrality popularity = 0.10 }
 	add_popularity = { ideology = communism popularity = 0.2 }
@@ -1390,7 +1405,12 @@ country_event = { #Griffonstone Archives
 	    picture = GFX_event_griffon_back
 		option = {
 			name = arantiga_chaos.030.a
-			add_country_leader_trait = GOY_prez_for_life
+			add_trait = {
+				character = GOY_ARA_soter
+				slot = country_leader
+				trait = GOY_prez_for_life
+				ideology = populism
+			}
 		}
 	}
 	
@@ -2161,13 +2181,13 @@ country_event = { #Griffonstone Archives
 	    option = {
 		name = arantiga.051.a
 		    add_stability = 0.05
-			set_capital = 371
+			set_capital = { state = 371 }
 		}
 		option = {
 		name = arantiga.051.b
 		    add_stability = -0.05
 		    add_political_power = -50
-			set_capital = 382
+			set_capital = { state = 382 }
 		}
 		option = {
 		name = arantiga.051.c
@@ -2194,7 +2214,7 @@ country_event = { #Griffonstone Archives
 	    fire_only_once = yes
 	    option = {
 		name = arantiga.052.a
-		    set_capital = 408
+		    set_capital = { state = 408 }
 			408 = {
 			    add_manpower = 500000
 				set_state_category = large_city
@@ -2212,7 +2232,7 @@ country_event = { #Griffonstone Archives
 			    add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				    type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2388,17 +2408,16 @@ country_event = { #Griffonstone Archives
 					    522 = {
 					        add_core_of = NTR
 					    }
-						retire_country_leader = yes
-						create_country_leader = {
-					        name = "Hyperborean Governorate"
-					        desc = ""
-					        picture = "hypergovernorship.tga"
-					        expire = "1965.1.1"
-					        ideology = nazism
-					        traits = {
-					        }
-				        }
-
+						add_country_leader_role = {
+							Character = GOY_NTR_hyperborea
+							Promote_leader = yes
+							Country_leader = {
+							ideology = nazism
+							desc = ""
+							expire = “1965.1.1.1”
+							traits = {  }
+						}
+						}
 						set_cosmetic_tag = NTR_arantiga
 						add_ideas = limited_conscription_ara
 						load_focus_tree = generic_focus
@@ -3165,15 +3184,18 @@ country_event = { #Griffonstone Archives
 			name = arantiga_govern.014.b #
 			add_ideas = ARA_Equality_under_Emperor
 			set_party_name = { ideology = neutrality name = ARA_EMP_oligarchs long_name = ARA_EMP_oligarchs_long }
-			retire_ideology_leader = neutrality
-			create_country_leader = {
-		        name = "Ferdinand von Hochsklaue"
-		        desc = "fat_trade_bird_desc"
-		        picture = "gfx/leaders/TRD/TRD_Ferdinand_von_Hochsklaue.tga"
-		        expire = "1965.1.1"
-		        ideology = oligarchism
-		        traits = { }
-	        }
+			
+			remove_country_leader_role = GOY_ARA_soter
+			add_country_leader_role = {
+				Character = GOY_ARA_treasurer
+				Promote_leader = yes
+				Country_leader = {
+				ideology = oligarchism
+				desc = "fat_trade_bird_desc"
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
+			}
 		}
 		option = {
 			name = arantiga_govern.014.c #
@@ -3621,7 +3643,7 @@ country_event = { #Detente
 				            create_country_leader = {
 					            name = "King Hermane I"
 					            desc = ""
-					            picture = "HermaneGering.tga"
+					            picture = "gfx/leaders/FBK/HermaneGering.tga"
 					            expire = "1965.1.1"
 					            ideology = nazism
 					            traits = {
@@ -3847,7 +3869,7 @@ country_event = { #Detente
 				            create_country_leader = {
 					            name = "Pumpkin Swirl"
 					            desc = ""
-					            picture = "pumpkin_swirl.tga"
+					            picture = "gfx/leaders/RCT/pumpkin_swirl.tga"
 					            expire = "1965.1.1"
 					            ideology = nazism
 					            traits = {
@@ -4023,6 +4045,7 @@ country_event = { #Detente
 		custom_effect_tooltip = ARA_EQC_puppet_soter_tooltip
 		ARA = {
 	        hidden_effect = {
+			GOY_ARA_soterpuppet = { set_nationality = EQC }
 		        EQC ={
 				    transfer_state = 365
 				    transfer_state = 364
@@ -4043,24 +4066,24 @@ country_event = { #Detente
 				  	puppet = EQC
 				    set_autonomy = { target = EQC autonomy_state = autonomy_reichsprotectorate }
                 }
-				every_unit_leader = {
-				    limit = { has_id = 1334 }
-				    set_nationality = EQC
+				GOY_ARA_soter = {
+					remove_unit_leader_role = yes
 				}
 				EQC ={
 					set_politics = {
 				        ruling_party = fascism
 				        elections_allowed = no
 			        }
-					retire_country_leader = yes
-				    create_country_leader = {
-				    	name = "Soter"
-				    	desc = ""
-				    	picture = "gfx/leaders/ARA/Soter.tga"
-				    	ideology = fascism_ideology
-				    	traits = {
-				    	}
-				    }
+				add_country_leader_role = {
+					Character = GOY_ARA_soterpuppet
+					Promote_leader = yes
+					Country_leader = {
+					ideology = nazism
+					desc = ""
+					expire = “1965.1.1.1”
+					traits = {  }
+				}
+				}					
 					set_cosmetic_tag = EQC_arantiga
 					add_ideas = disarmed_nation_ara
 					load_focus_tree = generic_griffon_focus
@@ -4100,7 +4123,15 @@ country_event = { #Detente
 			        }
 					add_ideas = disarmed_nation
 					set_cosmetic_tag = EQC_arantiga
-					load_focus_tree = generic_focus
+					load_focus_tree = generic_focus					
+					retire_country_leader = yes
+					create_country_leader = {
+						name = "Jet Set"
+						desc = "snooty_noble_desc"
+						picture = "gfx/leaders/EQC/JetSet.tga"
+						expire = "1965.1.1"
+						ideology = liberalism
+					}
 				}
 		    }
 		}
@@ -4571,37 +4602,19 @@ country_event = { #de Charbon 2
 		custom_effect_tooltip = ARA_machiavelli_tp
 		hidden_effect = {
 			set_country_flag = ARA_machiavelli_flag
-			IF = {
-			    limit = {
-				    FLO = {
-					    has_unit_leader = 5201
-					}
-				}
-				FLO = {
-				    every_unit_leader = {
-			           limit = { has_id = 5201 }
-			           set_nationality = ARA
-		            }
-				}
-			}
-			ELSE = {
-			    ARA = {
-				    create_corps_commander = {
-	                    name = "Nicolas de Charbon"
-	                    portrait_path = "gfx/leaders/FLO/Richter.tga"
-	                    desc = FLO_general_machiavelli_desc
-	                    traits = {
+			add_corps_commander_role = {
+				character = GOY_ARA_literally_machiavelli
+					traits = {
 	                   	griffon_race_trait trickster urban_assault_specialist
 	                    }
-	                    skill = 3
-	                    attack_skill = 2
-	                    defense_skill = 3
-	                    planning_skill = 4
-	                    logistics_skill = 1
-	                    female = no
-                    }
-				}
-			}
+					desc = "FLO_general_machiavelli_desc"
+	                skill = 3
+	                attack_skill = 2
+	                defense_skill = 3
+	                planning_skill = 4
+	                logistics_skill = 1
+	                female = no
+			}	
 		}
 	}
 	option = {
@@ -4853,7 +4866,9 @@ country_event = { #-Marechal is kil -No
 	fire_only_once = yes
 	option = {
 		name = 	arantiga.096.a
-		remove_unit_leader = 756578
+		JER_charlesguillaumeferdinand_de_greifenwaldstrawberry = {
+			remove_unit_leader_role = yes
+		}
 		add_timed_idea = {
 		    idea = ARA_army_in_chaos
 			days = 200
@@ -4986,17 +5001,16 @@ country_event = { #Rodier's coup
 	        ruling_party = neutrality
 		    elections_allowed = no
 		}
-		retire_country_leader = yes
-		create_country_leader = {
-	        name = "Charles de Greifenwald-Strawberry"
-	        desc = "JER_POLITICS_Charles_DESC"
-	        picture = "gfx/leaders/JER/Charles.tga"
-	        expire = "1965.1.1"
-	        ideology = despotism
-	        traits = {
-			    GOY_inexperienced_ruler
-	        }
-        }
+	add_country_leader_role = {
+				Character = JER_charlesguillaumeferdinand_de_greifenwaldstrawberry
+				Promote_leader = yes
+				Country_leader = {
+				ideology = despotism
+				desc = "JER_POLITICS_Charles_DESC"
+				expire = “1965.1.1.1”
+				traits = { GOY_inexperienced_ruler }
+			}
+			}
 		remove_unit_leader = 75652
 	}
 }
@@ -5012,6 +5026,7 @@ country_event = { #Victory over the necromancers
 		name = 	arantiga.109.a
 		custom_effect_tooltip = ARA_HLR_puppet
 		hidden_effect = {
+			GOY_ARA_headmasterapesios = { set_nationality = HLR }
 		    HLR = {
 		    transfer_state = 456
 			transfer_state = 451
@@ -5043,15 +5058,15 @@ country_event = { #Victory over the necromancers
 			add_state_core = 417
 			add_state_core = 416
 			add_state_core = 415
-			retire_ideology_leader = fascism
-			create_country_leader = {
-                name = "Headmaster Apesios"
-	            desc = ""
-	            picture = ""
-	            expire = "1965.1.1"
-	            ideology = nazism
-	            traits = {
-	            }
+		add_country_leader_role = {
+				Character = GOY_ARA_headmasterapesios
+				Promote_leader = yes
+				Country_leader = {
+				ideology = holy_order_f
+				desc = ""
+				expire = “1965.1.1.1”
+				traits = {  }
+			}
 			}
 			ARA = {
 				puppet = HLR
@@ -6710,16 +6725,15 @@ country_event = { #Hedonism
 		fire_only_once = yes
 		option = {
 			name = 	arantiga_decision.48.a
-			create_corps_commander = {
-				name = "Reiner Greenfeather"
-				picture = "portrait_griffon_generic_navy_8.dds"
-				traits = { griffon_race_trait trait_reckless career_officer trait_visitor }
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 3
-			}				
+		add_corps_commander_role = {
+		  Character = GOY_ARA_reiner
+			traits = { griffon_race_trait trait_reckless career_officer trait_visitor }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}						
 		}
 	}
 

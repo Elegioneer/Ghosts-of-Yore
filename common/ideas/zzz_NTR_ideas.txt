@@ -45,9 +45,7 @@ ideas = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
 				army_morale_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.5
+				land_doctrine_cost_factor = 0.5
 			}
 		}
 		NTR_exiled_clans = {
@@ -88,16 +86,14 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_obedient
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = -0.05
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
 				army_morale_factor = 0.05
-			}
-			research_bonus = {
-    			army_doctrine = -0.25
+				land_doctrine_cost_factor = 0.25
 			}
 		}
 		NTR_defensive_doctrine = {
@@ -107,10 +103,10 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_fortify_the_borders
 			removal_cost = -1
 			modifier = {
-			    max_dig_in = 10
+			    max_dig_in_factor = 0.1
 			    dig_in_speed_factor = 0.25
 				army_defence_factor = 0.1
 			}
@@ -122,7 +118,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = NLR_thunder
 			removal_cost = -1
 			modifier = {
 			    army_attack_factor = 0.1
@@ -137,7 +133,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = HUN_secret_rearmament
 			removal_cost = -1
 			equipment_bonus = {
 			    magical_equipment = {
@@ -153,16 +149,16 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_acquire_tanks
 			removal_cost = -1
 			equipment_bonus = {
-			    heavy_tank_equipment = {
+			    heavy_tank_chassis = {
 					build_cost_ic = -0.1
 				}
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.1
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = -0.1
 				}
 			}
@@ -174,7 +170,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_artillery_regiments
 			removal_cost = -1
 			equipment_bonus = {
 			    artillery_equipment = {
@@ -190,7 +186,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = tur_kemalist_officers
 			removal_cost = -1
 			modifier = {
 			    army_leader_start_planning_level = 1
@@ -206,7 +202,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pony_soldier
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
@@ -220,7 +216,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CES_uphold_harmony
 			removal_cost = -1
 			modifier = {
 				special_forces_cap = 0.1
@@ -236,7 +232,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = strategic_bombing_focus
 			removal_cost = -1
 			modifier = {
 			    air_strategic_bomber_bombing_factor = 0.1
@@ -251,13 +247,13 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_coastal_defense_ships
 			removal_cost = -1
 			modifier = {
 			    experience_gain_navy = 0.01
-				naval_damage_factor = 0.1
-				naval_defense_factor = 0.1
+				navy_max_range_factor = 0.1
 				naval_coordination = 0.1
+				naval_doctrine_cost_factor = -0.1
 			}
 		}
 		NTR_riders_storm_idea = {
@@ -267,7 +263,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = air_war_plans_division_focus
 			removal_cost = -1
 			modifier = {
 			    air_range_factor = 0.1
@@ -282,7 +278,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ROM_king_carol_ii_hedonist
 			removal_cost = -1
 			modifier = {
 			    opinion_gain_monthly_factor = 0.1
@@ -309,7 +305,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = EQS_harmonic_stagnation2
 			removal_cost = -1
 			modifier = {
 			    required_garrison_factor = -0.2
@@ -324,7 +320,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = griffon_army1
 			removal_cost = -1
 			modifier = {
 			    conscription_factor = 0.1
@@ -337,7 +333,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_flexible_foreign_policy
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.05
@@ -352,7 +348,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = GRW_potato_farming
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.2
@@ -365,10 +361,10 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = LEC_staggering_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				industrial_capacity_factory = 0.1
@@ -382,7 +378,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = GRW_ricefield_training
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.05
@@ -395,10 +391,9 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = severe_famine5
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
 				local_resources_factor = 0.1
 			}
 		}
@@ -409,11 +404,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = nimbusia_blue
 			removal_cost = -1
 			modifier = {
-			    pegasi_attack_factor = 0.05
-				pegasi_defence_factor = 0.05
+			    modifier_army_sub_unit_pegasi_attack_factor = 0.05
+				modifier_army_sub_unit_pegasi_defence_factor = 0.05
 			    special_forces_cap = 0.05
 			}
 		}
@@ -424,7 +419,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_flexible_foreign_policy2
 			removal_cost = -1
 			modifier = {
 			    min_export = -0.1
@@ -438,7 +433,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_air_research
 			removal_cost = -1
 			modifier = {
 			    ground_attack_factor = 0.05
@@ -453,11 +448,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = air_support_focus
 			removal_cost = -1
 			modifier = {
 			    air_intercept_efficiency = 0.1
-			    air_agility_factor = 0.1
+			    army_bonus_air_superiority_factor = 0.1
 			}
 		}
 		NTR_alchemist_workshop = {
@@ -467,7 +462,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = SRS_magic_stars
 			removal_cost = -1
 			equipment_bonus = {
 			    support_equipment = {
@@ -482,7 +477,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = wittenland
 			removal_cost = -1
 			modifier = {
 			    no_supply_grace = 36
@@ -495,7 +490,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = MAN_framed_heart
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.1
@@ -508,14 +503,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pony_army
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = -0.1
 				army_morale_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.5
+				land_doctrine_cost_factor = 0.5
 			}
 		}
 		NTR_exiled_clans_3 = {
@@ -525,7 +518,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ELF_invincible
 			removal_cost = -1
 			modifier = {
 			    war_support_factor = 0.1
@@ -541,7 +534,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = german_advisors
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = 0.1
@@ -555,15 +548,13 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pony_militarization
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = -0.05
 				army_morale_factor = 0.1
 				conscription_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.25
+				land_doctrine_cost_factor = 0.25
 			}
 		}
 		NTR_integration_effort = {
@@ -573,7 +564,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_deal_with_the_devil2
 			removal_cost = -1
 			modifier = {
 			    political_power_gain = -0.2
@@ -589,14 +580,14 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = triumphant_will
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.1
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				conscription_factor = -0.05
-				local_non_core_manpower = -0.2
+				non_core_manpower = -0.01
 				required_garrison_factor = -0.2
 			}
 		}
@@ -607,14 +598,14 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = EQS_AI_buff
 			removal_cost = -1
 			modifier = {
 			    army_core_attack_factor = 0.1
 			    army_core_defence_factor = 0.1
-				max_dig_in = 10
-				local_non_core_manpower = -0.25
-				resistance_damage_to_garrison = 0.25
+				max_dig_in_factor = 0.1
+				non_core_manpower = -0.015
+				resistance_damage_to_garrison_on_our_occupied_states = 0.2
 				surrender_limit = 0.1
 			}
 		}
@@ -625,7 +616,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_wall_line
 			removal_cost = -1
 			modifier = {
                 production_speed_anti_air_building_factor = 0.1
@@ -640,7 +631,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ast_volunteer_defence_corps
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
@@ -660,7 +651,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = partial_economic_mobilisation_red
 			removal_cost = -1
 			equipment_bonus = {
 			    magical_equipment = {
@@ -675,17 +666,17 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_license_production
 			removal_cost = -1
 			equipment_bonus = {
-			    heavy_tank_equipment = {
+			    heavy_tank_chassis = {
 				    armor_value = 0.1 instant = yes
 				}
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					soft_attack = 0.05 instant = yes
 					armor_value = 0.05 instant = yes
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					soft_attack = 0.05 instant = yes
 					maximum_speed = 0.05 instant = yes
 				}
@@ -698,11 +689,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pre_war_industry
 			removal_cost = -1
 			modifier = {
 			    industry_air_damage_factor = -0.25
-				repair_speed_factor = 0.2
+				industry_repair_factor = 0.2
 			    industry_free_repair_factor = 0.3
 			}
 		}
@@ -713,7 +704,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = SOL_Protect_the_Weak_idea
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = -0.1
@@ -728,12 +719,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CRY_harmony_crystals
 			removal_cost = -1
 			modifier = {
 			    production_speed_buildings_factor = 0.1
 			    industry_air_damage_factor = -0.4
-				repair_speed_factor = 0.2
+				industry_repair_factor = 0.2
 			    industry_free_repair_factor = 0.5
 			}
 		}
@@ -744,7 +735,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_disloyal
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = -0.75
@@ -761,10 +752,27 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = NTR_idea_fiana
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.05
+			}
+		}
+		NTR_queen_fiana = {
+			allowed = {
+				always = no
+				NOT = {
+				    has_government = democratic
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = NTR_idea_fiana
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				army_morale_factor = 0.05
 			}
 		}
 		NTR_central_gov = {
@@ -777,7 +785,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = HUN_hungarian_monarchy
 			removal_cost = -1
 			modifier = {
 				political_power_gain = 0.2
@@ -793,7 +801,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_constitutional_guarantees
 			removal_cost = -1
 			modifier = {
 				stability_factor = 0.1
@@ -807,7 +815,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
 			    political_power_gain = 0.1
@@ -821,7 +829,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_economic_increase
 			removal_cost = -1
 			modifier = {
 			    political_power_gain = 0.2
@@ -838,7 +846,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_disloyal
 			removal_cost = -1
 			targeted_modifier = {
 			    tag = NTR
@@ -856,14 +864,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_obedient
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = -0.1
 				army_morale_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.5
+				land_doctrine_cost_factor = 0.5
 			}
 		}
 		NTR_tribal_militias_4 = {
@@ -873,14 +879,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_obedient
 			removal_cost = -1
 			modifier = {
 			    army_org_factor = -0.1
 				army_morale_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.3
+				land_doctrine_cost_factor = 0.3
 			}
 		}
 		NTR_frozen_curtain = {
@@ -890,7 +894,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = FRA_fortification_focus
 			removal_cost = -1
 			modifier = {
 			    encryption_factor = 0.5
@@ -906,14 +910,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_loyal
 			removal_cost = -1
 			modifier = {
 			    conscription = 0.04
 				army_morale_factor = 0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.2
+				land_doctrine_cost_factor = 0.2
 			}
 		}
 		NTR_circle_guidance = {
@@ -923,7 +925,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CRY_old_dignity
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.1
@@ -938,7 +940,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = PAP_Legionary_Spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.1
@@ -954,7 +956,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CRY_sombra_power_bonus
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.25
@@ -970,7 +972,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = CRY_sombra_power_bonus
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -985,7 +987,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = GRF_militias
 			removal_cost = -1
 			modifier = {
 			    army_attack_factor = 0.05
@@ -999,7 +1001,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = PAP_Legionary_Spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.2
@@ -1015,11 +1017,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = company_pile_of_guns
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
-				    reliability = 0.1
+				    reliability = -0.1
 					build_cost_ic = -0.2
 				}
 			}
@@ -1031,7 +1033,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = LIT_crown_4
 			removal_cost = -1
 			modifier = {
 			    local_building_slots_factor = -0.2
@@ -1046,7 +1048,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = saf_history_of_segregation_2
 			removal_cost = -1
 			modifier = {
 			    industrial_capacity_factory = 0.2
@@ -1063,13 +1065,13 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = LIT_crown_4
 			removal_cost = -1
 			modifier = {
 			    local_building_slots_factor = -0.2
 				local_resources_factor = 0.1
 				monthly_population = 0.1
-				local_non_core_manpower = 0.25
+				non_core_manpower = 0.01
 				required_garrison_factor = -0.2
 			}
 		}
@@ -1080,7 +1082,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = griffon_army3
 			removal_cost = -1
 			modifier = {
 			    max_command_power = 25
@@ -1094,15 +1096,13 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = OLV_warriors_loyal
 			removal_cost = -1
 			modifier = {
 			    conscription = 0.04
 				army_morale_factor = 0.1
 				experience_loss_factor = -0.1
-			}
-			research_bonus = {
-    			army_doctrine = -0.2
+				land_doctrine_cost_factor = 0.2
 			}
 		}
 		NTR_undead_overseers_idea = {
@@ -1112,7 +1112,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = viirasoldat6
 			removal_cost = -1
 			modifier = {
 			    production_speed_buildings_factor = 0.05
@@ -1127,7 +1127,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = BAL_hell
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.2
@@ -1140,7 +1140,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = BAL_hell
 			removal_cost = -1
 			modifier = {
 			    required_garrison_factor = 0.25
@@ -1155,7 +1155,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ELF_invincible
 			removal_cost = -1
 			modifier = {
 			    justify_war_goal_time = -0.5
@@ -1169,11 +1169,27 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = pony_enslaved
 			removal_cost = -1
 			modifier = {
 			    industrial_capacity_factory = 0.2
 				monthly_population = -0.5
+			}
+		}
+		NTR_all_front = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = unhappy_army_3
+			removal_cost = -1
+			modifier = {
+			    conscription_factor	 = 0.1
+				weekly_manpower	= 500
+				monthly_population = -0.1
+				stability_factor = -0.2
 			}
 		}
 		NTR_expenses = {
@@ -1209,7 +1225,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = RUS_planning_school
 			removal_cost = -1
 			modifier = {
 			    army_speed_factor = 0.2
@@ -1222,7 +1238,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ast_naval_auxiliary_patrol
 			removal_cost = -1
 			modifier = {
 			    max_dig_in_factor = 0.1
@@ -1235,7 +1251,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_research_increase
 			removal_cost = -1
 			modifier = {
 			    research_speed_factor = 0.1
@@ -1248,7 +1264,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = ast_volunteer_defence_corps
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
@@ -1266,7 +1282,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = broken_resistance
 			removal_cost = -1
 			modifier = {
 			    army_defence_factor = 0.1
@@ -1279,7 +1295,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = viirafull
 			removal_cost = -1
 			modifier = {
 			    weekly_manpower = 1000
@@ -1293,7 +1309,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = earl_browder
+			picture = generic_foreign_capital
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.1
@@ -1306,7 +1322,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = earl_browder
+			picture = GRF_weter
 			removal_cost = -1
 			modifier = {
 			    winter_attrition_factor = 0.5
@@ -1323,7 +1339,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = earl_browder
+			picture = CES_disorganized
 			removal_cost = -1
 			modifier = {
 			    army_attack_factor = 0.2
@@ -1339,7 +1355,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = earl_browder
+			picture = warrior_pony
 			removal_cost = -1
 			modifier = {
 			    max_command_power = 50
@@ -1353,7 +1369,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = earl_browder
+			picture = generic_exploit_mines
 			removal_cost = -1
 			modifier = {
 			    production_speed_buildings_factor = 0.2
@@ -1367,12 +1383,254 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = earl_browder
+			picture = CHN_decentralised_fear
 			removal_cost = -1
 			modifier = {
 			    decryption_factor = 0.5
 				recon_factor = 0.2
 			}
+		}
+		NTR_magical_disturbance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = viiramagic
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_factor = -0.1
+				monthly_population = -0.1
+		}
+		research_bonus = {
+				magical_tech = -0.5
+				}
+		equipment_bonus = {
+			    magical_equipment = {
+				    reliability = -0.2
+					}
+			}
+		}
+		NTR_gold_profits = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = spr_seize_the_gold_reserves
+			removal_cost = -1
+			modifier = {
+			    consumer_goods_factor = -0.05
+			}
+		}
+		NTR_modern_mining_equipment = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_exploit_mines
+			removal_cost = -1
+			modifier = {
+			    local_resources_factor = 0.1
+			}
+		}
+		NTR_modern_infrastructure = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_build_infrastructure
+			removal_cost = -1
+			modifier = {
+			    global_building_slots_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+			}
+		}
+		NTR_prepared_assault = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			targeted_modifier = {
+				tag = SRS
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		NTR_riverfed_trade = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = eng_a_change_in_course
+			removal_cost = -1
+			modifier = {
+			    min_export = -0.05
+				consumer_goods_factor = -0.01
+		}
+	}
+		NTR_coalition_ties = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = The_Treaty_of_Coltstream
+			removal_cost = -1
+			modifier = {
+			    min_export = 0.05
+				consumer_goods_factor = -0.02
+				research_speed_factor = 0.05
+				industrial_capacity_factory	= 0.1
+		}
+	}
+		NTR_ice_fleet = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_coastal_defense_ships2
+			removal_cost = -1
+			modifier = {
+				repair_speed_factor = 0.2
+				industrial_capacity_dockyard = 0.1				
+		}
+	}
+	NTR_integrated_society = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = EQS_order
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.01
+				research_speed_factor = 0.05
+		}
+	}
+	NTR_dark_acolytes = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = viirastructure
+			removal_cost = -1
+			modifier = {
+				max_command_power = 25
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+		}
+	}
+	NTR_skyfall_ship = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_navy_bonus
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+				production_speed_dockyard_factor = 0.1
+		}
+	}
+	NTR_skyfall_gun = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_third_five_year_plan_military
+			removal_cost = -1
+			modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+	}
+	NTR_skyfall_industry = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = viirascience
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = -0.03
+			research_speed_factor = 0.05
+		}
+	}
+	NTR_icetribute = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = LEC_staggering_reserves
+			removal_cost = -1
+			modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+	NTR_avenge_griffonstone = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = griffon_army_unhappy
+			removal_cost = -1
+			modifier = {
+				conscription = 0.05
+				war_support_factor = 0.25
+			}
+			targeted_modifier = { tag = NTR attack_bonus_against = 0.2 defense_bonus_against = 0.2 }
+	}
+	NTR_griffon_final_war_boost = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = unhappy_army_3
+			removal_cost = -1
+			modifier = {
+				conscription = 0.06
+				army_morale_factor = 0.1
+				army_org_factor = 0.1
+				training_time_factor = -0.25			
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.25
+			}
+			targeted_modifier = { tag = NTR attack_bonus_against = 0.2 defense_bonus_against = 0.2 }
 		}
 	}
 
@@ -1381,49 +1639,47 @@ ideas = {
 	##################
 	society_development_idea = {
 	    law = yes
-		use_list_view = no
+		use_list_view = yes
         
-	    GOY_magical_society = {
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			picture = civilian_economy
-			
+		GOY_magical_society = {
+
+			cost = -1
 			traits = { society_idea }
-			
-			available = {
-			    has_government = neutrality
+			picture = idea_GOY_magical_economy
+			allowed = {
+				always = yes
 			}
-			
+			visible = { 
+				tag = NTR
+			}
+			available = {
+				has_idea = GOY_magical_society
+			}			
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
-			    stability_factor = 0.1
+				stability_factor = 0.1
 				political_power_gain = 0.05
-			    army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+			    army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.20
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1
 				production_factory_max_efficiency_factor = -0.1
 		        global_building_slots_factor = -0.1
 				industry_air_damage_factor = -0.25
 				exodus_assimilation_proportion = -0.15
+				industry_repair_factor = -0.1				
 			}
-			ai_focus_peaceful_factor = 0.25
-			
-			allowed_to_remove = {
-				NOT = {
-				    has_government = neutrality
-				}
-			}
-			
-			cancel_if_invalid = no
 		}
+		
 		GOY_slave_economy = {
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
-			picture = civilian_economy
+			picture = idea_GOY_slave_economy
 			
 			traits = { society_idea }
 			
@@ -1432,6 +1688,7 @@ ideas = {
 			}
 			
 			modifier = {
+				ai_focus_peaceful_factor = 0.25
 			    army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				production_speed_buildings_factor = 0.1
@@ -1439,13 +1696,14 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.25
 				research_speed_factor = -0.25
 				monthly_population = -0.5
-				non_core_manpower = -0.75
+				non_core_manpower = -0.02
 				required_garrison_factor = 0.1
 				compliance_growth = -0.2
 				resistance_growth = 0.2
 				exodus_national_appeal = -0.5
+				industry_repair_factor = 0.05					
 			}
-			ai_focus_peaceful_factor = 0.25
+			
 			
 			allowed_to_remove = {
 				NOT = {
@@ -1456,4 +1714,1270 @@ ideas = {
 			cancel_if_invalid = no
 		}
 	}
+	trade_laws = { 
+	law = yes
+	use_list_view = no
+	ntr_closed_economy = {
+		
+			allowed = {
+				always = no
+			}	
+			removal_cost = -1
+			picture = closed_economy
+			
+			modifier = {
+				min_export = 0
+			}
+			allowed_to_remove = {
+				NOT = {
+				    has_government = fascism
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+	illiteracy_level_idea = {
+		law = yes
+		use_list_view = yes
+		
+		GOY_druid_wisdom = {
+			cost = -1
+			traits = { illiteracy_idea }
+			picture = SOL_sunrise_sparkle
+			allowed = {
+				original_tag = NTR
+			}
+			available = {
+				has_idea = GOY_druid_wisdom
+			}
+			visible = {
+				has_government = fascism
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.2
+				industry_repair_factor = -0.1
+			}
+				research_bonus = {
+					magical_tech = 0.2
+				}
+				research_bonus = {
+					race_tech = 0.2
+				}
+		}
+		}
+	
+
+    ##################
+	#### Advisors ####
+	##################
+	
+political_advisor = {
+		NTR_euan_stormshield = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_euan_advisor }
+			picture = unknown_advisor
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_government = democratic
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_morag_moltenrock = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { technocrat }
+			picture = CRY_lake_frost
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			NOT = {
+				has_government = fascism
+				}
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_seoras_glitterwing = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { head_of_intelligence }
+			picture = JUN_Caramel_Crunch
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_maolruibh_greenhoof = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_ntrfarmer }
+			picture = EQC_mil_theo
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_deonaidh_snowmane = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { prince_of_terror }
+			picture = JUN_Lily_Valley
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			has_government = fascism
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_eithrig_brightflame = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_ntralchemist }
+			picture = BAL_obsidia
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_henrik_icefeather = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_ntrgriffonchief }
+			picture = GRW_Phanes
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			NOT = {
+				has_government = fascism
+				}
+			}
+			visible = {
+			}
+		}
+	}
+political_advisor = {
+		NTR_maolmhuire_redspear = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_ntrbard }
+			picture = MAN_night_light
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+		}
+	}
+	
+theorist = {
+	    NTR_gordon_the_archer_theorist = {
+		    ledger = army
+			
+			allowed = {
+				original_tag = "NTR"
+			}		
+ 			traits = { military_theorist }
+			picture = unknown_advisor
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+			}
+			available = {
+			NOT = {
+			has_completed_focus = NTR_get_rid_of_obstacles
+			}
+			}
+		}
+	}
+theorist = {
+	    NTR_eoin_glowing_rock = {
+		    ledger = army
+			
+			allowed = {
+				original_tag = "NTR"
+			}		
+ 			traits = { nuclear_scientist }
+			picture = RCT_quick
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+			}
+			available = {
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+	}
+theorist = {
+	    NTR_huisdean_moltenrock = {
+		    ledger = army
+			
+			allowed = {
+				original_tag = "NTR"
+			}		
+ 			traits = { GOY_ntrmetalshaper }
+			picture = NMS_Colt_Ice
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+			}
+			available = {
+			}
+		}
+	}
+theorist = {
+	    NTR_laomann_the_sailor = {
+		    ledger = navy
+			
+			allowed = {
+				original_tag = "NTR"
+			}		
+ 			traits = { naval_theorist }
+			picture = LCT_silent_workhorse
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+			}
+			available = {
+			}
+		}
+	}
+
+army_chief = {
+	NTR_gordon_the_archer_army = {
+		allowed = {
+		original_tag = "NTR"
+		}		
+		traits = { army_chief_morale_3 }
+		picture = unknown_advisor
+		ai_will_do = {
+		factor = 1
+		}
+		visible = {
+			}
+		available = {
+				NOT = {
+			has_completed_focus = NTR_get_rid_of_obstacles
+			}
+			}
+		}
+		}
+army_chief = {
+	NTR_milana_greyheart = {
+		allowed = {
+		original_tag = "NTR"
+		}		
+		traits = { army_chief_offensive_2 }
+		picture = unknown_advisor
+		ai_will_do = {
+		factor = 1
+		}
+		visible = {
+			}
+		available = {
+			}
+		}
+		}
+army_chief = {
+	NTR_tearlach_stormshield = {
+		allowed = {
+		original_tag = "NTR"
+		}		
+		traits = { army_chief_drill_1 }
+		picture = unknown_advisor
+		ai_will_do = {
+		factor = 1
+		}
+		visible = {
+			}
+		available = {
+		custom_trigger_tooltip = {
+		tooltip = NTR_tearlach_army
+		has_unit_leader = 10103
+		}
+			}
+		}
+		}
+army_chief = {
+	NTR_federick_birch = {
+		allowed = {
+		original_tag = "NTR"
+		}		
+		traits = { army_chief_defensive_1 }
+		picture = unknown_advisor_griffon
+		ai_will_do = {
+		factor = 1
+		}
+		visible = {
+			}
+		available = {
+		custom_trigger_tooltip = {
+		tooltip = NTR_birch_army
+		has_unit_leader = 10105
+		}
+			}
+		}
+		}
+		
+air_chief = {
+	NTR_risteard_stormshield = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { air_chief_all_weather_2 }
+		picture = FBK_advisor1
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+air_chief = {
+	NTR_gormall_bluetail = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { air_chief_safety_2 }
+		picture = LCT_backroom
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+air_chief = {
+	NTR_eiric_greyrock = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { air_chief_ground_support_1 }
+		picture = WIT_Smooth_Talker
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+		
+navy_chief = {
+	NTR_stiubhard_barkcoat = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { navy_chief_reform_2 }
+		picture = RCT_taloniser
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}		
+navy_chief = {
+	NTR_tiobaid_reaver = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { navy_chief_commerce_raiding_3 }
+		picture = FBK_advisor13
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}		
+navy_chief = {
+	NTR_maoldonaich_stormshield = {
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { navy_chief_naval_aviation_1 }
+		picture = FBK_advisor5
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}	
+		
+high_command = {
+	NTR_faolan_moltenrock = {
+		ledger = army
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { army_entrenchment_2 }
+		picture = unknown_advisor
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		
+		available = {
+		custom_trigger_tooltip = {
+		tooltip = NTR_faolan_army
+		has_unit_leader = 10102
+		}
+		}
+		}
+		}	
+high_command = {
+	NTR_tearlach_stormshield_command = {
+		ledger = army
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { army_infantry_1 }
+		picture = unknown_advisor
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		custom_trigger_tooltip = {
+		tooltip = NTR_tearlach2_army
+		has_unit_leader = 10103
+		}
+		}
+		}
+		}		
+high_command = {
+	NTR_muireach_barkcoat = {
+		ledger = army
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { army_regrouping_2 }
+		picture = unknown_advisor
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_mungan_ironhoof = {
+		ledger = army
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { army_artillery_2 }
+		picture = WIT_Industry_Captain
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_sorcha_firemane = {
+		ledger = air
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { air_bomber_interception_2 }
+		picture = RCT_ermilia_chernozemishna
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_baltair_greenhoof = {
+		ledger = air
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { air_air_superiority_3 }
+		picture = FIR_advisor12
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_cormag_starseeker = {
+		ledger = navy
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { navy_screen_2 }
+		picture = FBK_advisor6
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_donaidh_shieldbreaker = {
+		ledger = navy
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { navy_fleet_logistics_2 }
+		picture = RCT_syndra
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+high_command = {
+	NTR_iron_bear = {
+		ledger = army
+		allowed = {
+		original_tag = "NTR"
+			}		
+ 		traits = { GOY_ntr_bear_warlord }
+		picture = unknown_advisor_bear
+		ai_will_do = {
+			factor = 1
+			}
+		visible = {
+		}
+		available = {
+		}
+		}
+		}
+	
+industrial_concern = {
+	NTR_ostfloy_refinery = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { refinery_concern }
+		picture = bul_petrol_ad
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = NTR_ostfloy_refinery_enabled
+		}
+		visible = {
+			has_country_flag = NTR_ostfloy_refinery_enabled
+		}
+		research_bonus = {
+			synth_resources = 0.15
+			industry = 0.05
+		}
+	}
+}
+industrial_concern = {
+	NTR_northern_artistans = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_artistans }
+		picture = WAT_Council_of_Keepers
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+	}
+}
+industrial_concern = {
+	NTR_carvers_of_crystals = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_crystal_carvers }
+		picture = feat_company_6
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+			electronics = 0.05
+		}
+	}
+}
+industrial_concern = {
+	NTR_everfrost_armories = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_everfrost_armories }
+		picture = MIT_national_armory
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+	}
+}
+industrial_concern = {
+	NTR_barkcoat_builders = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_barkcoat_builders }
+		picture = SCS_tank_1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_master_builders
+		}
+		visible = {
+		has_completed_focus = NTR_master_builders
+		}
+	}
+}
+industrial_concern = {
+	NTR_foreign_traders = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { industrial_concern }
+		picture = FBK_advisor29
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_open_frostbell
+		}
+		visible = {
+		has_completed_focus = NTR_open_frostbell
+		}
+		research_bonus = {
+		industry = 0.05
+		electronics = 0.05
+		}
+	}
+}
+industrial_concern = {
+	NTR_black_ice = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { industrial_concern }
+		picture = feat_company_3
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_electronics_production
+		}
+		visible = {
+		has_completed_focus = NTR_electronics_production
+		}
+		research_bonus = {
+		electronics = 0.1
+		}
+	}
+}
+industrial_concern = {
+	NTR_craft_guilds = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_craft_guilds }
+		picture = generic_industrial_concern_1
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_arts_and_crafts
+		}
+		visible = {
+		has_completed_focus = NTR_arts_and_crafts
+		}
+	}
+}
+industrial_concern = {
+	NTR_rockseekers = {
+		allowed = {
+			original_tag = "NTR"
+		}		
+		traits = { GOY_ntr_rockseekers }
+		picture = feat_company_2
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_use_rockseekers
+		}
+		visible = {
+		has_completed_focus = NTR_use_rockseekers
+		}
+	}
+}
+
+materiel_manufacturer = {
+	NTR_northern_weaponsmiths = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = JER_fer_de_lance
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+		infantry_weapons = 0.05
+		}
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.05 instant = yes
+				}
+			}
+		}
+	NTR_iron_bear_experstise = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { artillery_manufacturer }
+		picture = generic_infantry_equipment_manufacturer_2
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+		artillery = 0.05
+		}
+		equipment_bonus = {
+			artillery = {
+				soft_attack = 0.05 instant = yes
+				hard_attack = 0.05 instant = yes
+				}
+			}
+		}
+	NTR_moltenrock_enchantment = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = generic_industrial_concern_3
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_weaponised_magic
+		}
+		visible = {
+		has_completed_focus = NTR_weaponised_magic
+		}
+		research_bonus = {
+		artillery = 0.05
+		}
+		equipment_bonus = {
+			magical_equipment = {
+				soft_attack = 0.05 instant = yes
+				hard_attack = 0.05 instant = yes
+				}
+			}
+		}
+	NTR_iceshard_trucks = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { motorized_equipment_manufacturer }
+		picture = PYT_infantry_concern
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_ponies_wheels
+		}
+		visible = {
+		has_completed_focus = NTR_ponies_wheels
+		}
+		research_bonus = {
+		motorized_equipment = 0.1
+		}
+		equipment_bonus = {
+			motorized_equipment = {
+				build_cost_ic = -0.05 instant = yes
+				}
+			}
+		equipment_bonus = {
+			mechanized_equipment = {
+				build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+	NTR_holy_forge_artillery_armory = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { artillery_manufacturer }
+		picture = generic_artillery_manufacturer_3
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_advanced_artillery
+		}
+		visible = {
+		has_completed_focus = NTR_advanced_artillery
+		}
+		equipment_bonus = {
+			artillery = {
+				soft_attack = 0.1 instant = yes
+				hard_attack = 0.1 instant = yes
+				}
+			}
+
+		}
+	NTR_koper_armory = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { artillery_manufacturer }
+		picture = nevskoye_design_bureau
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_foreign_arms_producers
+		}
+		visible = {
+		has_completed_focus = NTR_foreign_arms_producers
+		}
+		equipment_bonus = {
+			artillery = {
+				soft_attack = 0.05 instant = yes
+				hard_attack = 0.05 instant = yes
+				}
+			}
+		research_bonus = {
+			artillery = 0.1
+		}
+		}
+	NTR_moltenrock_guns = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = generic_infantry_equipment_manufacturer_3
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_our_gunsmiths
+		}
+		visible = {
+		has_completed_focus = NTR_our_gunsmiths
+		}
+		research_bonus = {
+		infantry_weapons = 0.05
+		}
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.05 instant = yes
+				build_cost_ic = -0.1 instant = yes
+				reliability = 0.05 instant = yes
+				}
+			}
+		}
+	}
+
+tank_manufacturer = {
+	NTR_scavanged_designs = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { tank_manufacturer }
+		picture = feat_company_16
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+		armor = 0.05
+		}
+		}
+	NTR_metalshapers_improvisation = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { GOY_tankbuilding_academy }
+		picture = EQS_shoof
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+		armor = 0.1
+		}
+		}
+	NTR_holy_forge_tank_armory = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { tank_manufacturer }
+		picture = generic_tank_manufacturer_1
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_terrifying_tanks
+		}
+		visible = {
+		has_completed_focus = NTR_terrifying_tanks
+		}
+		equipment_bonus = {
+			heavy_tank_chassis = {
+				soft_attack = 0.05 instant = yes
+				armor_value = 0.05 instant = yes
+				}
+			}
+			medium_tank_chassis = {
+				soft_attack = 0.05 instant = yes
+				hard_attack = 0.05 instant = yes
+
+				}
+			light_tank_chassis = {
+				soft_attack = 0.05 instant = yes
+				maximum_speed = 0.05  instant = yes
+				}
+			
+		}
+		}
+
+aircraft_manufacturer = {
+	NTR_thunder_airwing = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { light_aircraft_manufacturer }
+		picture = FIR_advisor27
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		}
+	NTR_holy_forge_workshop = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { aircraft_manufacturer }
+		picture = generic_air_manufacturer_1
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		equipment_bonus = {
+			small_plane_airframe = {
+				reliability = 0.05 instant = yes
+				}
+			medium_plane_airframe = {
+				reliability = 0.05 instant = yes
+				}
+			large_plane_airframe = {
+				reliability = 0.05 instant = yes
+				}
+			}
+		research_bonus = {
+		air_equipment = 0.05
+		}
+		}
+	NTR_griffon_designs = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { aircraft_manufacturer }
+		picture = GRY_fuel_efficient_aircraft_manufacturer
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		research_bonus = {
+		air_equipment = 0.1
+		}
+}
+	NTR_stratus_manufactory = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { aircraft_manufacturer }
+		picture = EQS_stratus
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_strike_enemies
+		}
+		visible = {
+		has_completed_focus = NTR_strike_enemies
+		}
+		equipment_bonus = {
+			large_plane_airframe= {
+				build_cost_ic = -0.1 instant = yes
+				}
+			medium_plane_airframe = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+	NTR_stormshield_airwing = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { aircraft_manufacturer }
+		picture = FBK_advisor26
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_defend_skies
+		}
+		visible = {
+		has_completed_focus = NTR_defend_skies
+		}
+		equipment_bonus = {
+			small_plane_airframe = {
+				air_agility = 0.1 instant = yes
+				maximum_speed = 0.1 instant = yes
+				air_range = 0.1 instant = yes				
+				}
+			}
+		}
+	NTR_cumulus_airplanes = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { aircraft_manufacturer }
+		picture = dornier
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_improve_fighter_designs
+		}
+		visible = {
+		has_completed_focus = NTR_improve_fighter_designs
+		}
+		equipment_bonus = {
+			small_plane_airframe = {
+				reliability = 0.1 instant = yes
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+		research_bonus = {
+		air_equipment = 0.1
+		}
+		}
+		}
+		
+naval_manufacturer = {
+	NTR_northern_raiders = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { raiding_fleet_naval_manufacturer }
+		picture = GRY_air_man_1
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		}
+	NTR_ironsides = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { battlefleet_designer }
+		picture = generic_naval_manufacturer_3
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		}
+		visible = {
+		}
+		}
+	NTR_carvers_of_ice = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { naval_manufacturer }
+		picture = generic_naval_manufacturer_1
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_floating_icebergs
+		}
+		visible = {
+		has_completed_focus = NTR_floating_icebergs
+		}
+		equipment_bonus = {
+			ship_hull_carrier = {
+				build_cost_ic = -0.1
+				instant = yes
+				}
+				ship_hull_cruiser = {
+				build_cost_ic = -0.1
+				instant = yes
+				}
+				ship_hull_heavy = {
+				build_cost_ic = -0.1
+				instant = yes
+				}
+				ship_hull_light = {
+				build_cost_ic = -0.1
+				instant = yes
+				}
+			}
+		}
+	NTR_dinkau_shipyard = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { naval_manufacturer }
+		picture = generic_naval_manufacturer_2
+		ai_will_do = {
+		factor = 1
+		}
+		available = {
+		has_completed_focus = NTR_refurbish_dinkau
+		}
+		visible = {
+		has_completed_focus = NTR_refurbish_dinkau
+		}
+		equipment_bonus = {
+			ship_hull_carrier = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			ship_hull_cruiser = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			ship_hull_heavy = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			ship_hull_light = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+			ship_hull_submarine = {
+				build_cost_ic = -0.1
+				instant = yes
+			}
+		}
+	}
+}
 }

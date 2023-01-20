@@ -477,8 +477,8 @@ ARA_finest_aces:0 "The Finest Aces"
 ARA_finest_aces_desc:0 "A superior training program will ensure only the best fly in our planes; our pilots will be the cream of the crop! In every aspect of warfare, Arantiga shall be at the very top!"
 ARA_new_bombers:0 "Salt the Fields"
 ARA_new_bombers_desc:0 "Tactical bombers are good, but what we need are heavy duty warplanes; bombers that can take a beating and still survive to drop their bombs, with the range and payload to make it count. This is where the future of aerial warfare lies."
-ARA_new_closer_air:0 "Support our Troops"
-ARA_new_closer_air_desc:0 "Coordination between air and land has clear tactical and strategic benefits; creating aircraft designs specifically to aid the boots on the ground will make them grateful for the wings above."
+ARA_new_closer_air:0 "Refine Our Designs"
+ARA_new_closer_air_desc:0 "By improving specific components of our planes we can greatly improve performance of our airfoce."
 ARA_new_heavy_bombers:0 "Strategic Destruction"
 ARA_new_heavy_bombers_desc:0 "Bombing key enemy positions; supply depots, railways, you name it, will require specialised planes. Designing some should be a priority."
 
@@ -2254,7 +2254,23 @@ ARA_alhorsered:0 "Alhorsered"
 ARA_alhorsered_desc:0 "One of the newest "talents" employed by IRI. Alhorsered's past is shrouded in mystery. Although there are many dark rumors about the reasons he left Zebrica, and his research is less than ethical, he undoubtedly is a talented scientist."
 ARA_literally_machiavelli:0 "Nicolas de Charbon"
 ARA_treasurer:0 "Ferdinand von Hochklause"
-ARA_fetivola:0 "Amilcare Fetivola"
+ARA_fetivola_advisor:0 "Amilcare Fetivola"
+GOY_ARA_reiner:0 "Reiner Greenfeather"
+
+### Leaders ###
+GOY_ARA_dorotheos_featherin:0 "Dorotheos Featherin"
+GOY_ARA_margareth_featherin:0 "Margareth Featherin"
+GOY_ARA_ciriaco:0 "Ciriaco Mediate"
+GOY_ARA_antioco_moro:0 "Antioco Moro"
+GOY_NTR_hyperborea:0 "Hyperborean Governorate"
+GOY_ARA_hermanepuppet:0 "King Hermane I"
+GOY_ARA_lysimachuspuppet:0 "Protector Lysimachus"
+GOY_ARA_riverprotector:0 "Pumpkin Swirl"
+GOY_ARA_soterpuppet:0 "Protector Soter"
+GOY_ARA_jetset:0 "Jet Set"
+GOY_ARA_headmasterapesios:0 "Headmaster Apesios"
+GOY_ARA_arantigos:0 "Arantigos II"
+ARA_nicatorking:0 "Nicator I Whitebeak"
 
 ### COMPANIES ###
 ARA_h_and_t:0 "H+T Electrics"
@@ -2275,8 +2291,8 @@ ARA_aquila_shipyards:0 "Aquileian Shipyards"
 ARA_skyfall_shipyards:0 "Skyfall's Shipyards"
 
 ### Tooltips ###
-rise_of_arantiga_tooltip:0 "Arantiga will begin to rise! Now would be a great time to take a look at our economic situation.\n\n"
-ARA_The_coup_tooltip:0 "Dorotheos Featherin must lead our country to greatness!"
+ARA_CETT_rise_of_arantiga:0 "With restructuring of the government complete, comes the time to take a look at our economy.\n"
+ARA_The_coup_tooltip:0 "Baron Dorotheos Featherin shall lead our country to greatness!"
 ARA_last_legion_tt:0 "The §YKarthin Legion§W will serve us in our quest to reclaim the Arantigan Empire!"
 ARA_true_legion_tt:0 "The §YRomau Legion§W will serve us in our quest to reclaim the Arantigan Empire!"
 ARA_francistrian_tt:0 "Volunteers from §YTalouse§W will take up the fight for Arantigos!"
@@ -2317,7 +2333,7 @@ ARA_soter_army:0 "§YSoter§! serves the Arantigan army."
 ARA_craterus_army:0 "§YCraterus§! serves the Arantigan army."
 
 ### Flags ###
-rise_of_arantiga:0 "Arantiga rises!"
+ARA_FLAG_rise_of_arantiga:0 "Has completed focus §YArantiga Rises!§!"
 ARA_dorotheos_endorsed_erion:0 "Dorotheos endorsed §YErion XII§!."
 
 ### Traits ###

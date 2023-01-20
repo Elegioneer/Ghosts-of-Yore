@@ -1,0 +1,47 @@
+NTR_historical = {
+	name = "Traditionalits keep power"
+	desc = ""
+
+	enable = {
+		original_tag = NTR
+		OR = {
+			has_game_rule = {
+				rule = NTR_ai_behavior
+				option = NTR_FIA
+			}
+			has_completed_focus = NTR_follow_old
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

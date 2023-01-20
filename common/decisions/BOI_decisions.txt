@@ -270,7 +270,7 @@ BOI_support_liberation_front_category = {
 		days_re_enable = 60
 		available = {
 		    has_equipment = {
-			    medium_tank_equipment > 249
+			    medium_tank_chassis > 249
 			}
 		}
 		ai_will_do = {
@@ -279,7 +279,7 @@ BOI_support_liberation_front_category = {
 		complete_effect = {
 		    send_equipment = {
 			    target = ELF
-				type = medium_tank_equipment
+				type = medium_tank_chassis
 				amount = 250
 			}
 		}

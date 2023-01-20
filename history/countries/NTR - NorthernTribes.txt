@@ -54,81 +54,44 @@ set_party_name = { ideology = fascism name = NTR_warrior_lodges_party long_name 
 set_party_name = { ideology = communism name = NTR_traitor_party long_name = NTR_traitor_party_long }
 load_focus_tree = Northern_tribes_init
 
-create_country_leader = {
-	name = "Euan Stormshield"
-	desc = "GOY_stormshield_desc"
-	picture = "euan.tga"
-	expire = "1965.1.1"
-	ideology = technocracy
-	traits = {
-	    GOY_shrewd_manipulator
-	}
-}
-
-create_country_leader = {
-	name = "Gordon the Archer"
-
-	picture = "Blind_archer.tga"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Princess Fiana II"
-	desc = ""
-	picture = "Princess_Fiana.tga"
-	expire = "1965.1.1"
-	ideology = conservatism
-	female = yes
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Guy Fox"
-	desc = ""
-	picture = "Governor.tga"
-	expire = "1965.1.1"
-	ideology = democratic_socialism
-	traits = {
-
-	}
-}
-
-create_corps_commander = {
-	name = "Milana Greyheart"
-	picture = "Milana_Greyheart.tga"
-	traits = { pony_race_trait trait_reckless }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Gordon the Archer"
-	picture = "Blind_archer.tga"
-	traits = { pony_race_trait politically_connected war_hero adaptable blind }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 2
-}
-create_corps_commander = {
-	name = "Federic Birch"
-	picture = "Dumb_griffon.tga"
-	traits = { griffon_race_trait imbecile }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = GOY_NTR_Hyperborea
+recruit_character = FAT_provisional_council
+recruit_character = GOY_NTR_Euan
+recruit_character = GOY_NTR_Gordon
+recruit_character = GOY_NTR_fiana
+recruit_character = GOY_NTR_greyfox
+recruit_character = GOY_NTR_milana
+recruit_character = GOY_NTR_birch
+recruit_character = GOY_NTR_faolan
+recruit_character = GOY_NTR_muireach
+recruit_character = GOY_NTR_tearlach
+recruit_character = GOY_NTR_tiobaid
+recruit_character = GOY_NTR_morag
+recruit_character = GOY_NTR_seoras
+recruit_character = GOY_NTR_maolruibh
+recruit_character = GOY_NTR_deonaidh
+recruit_character = GOY_NTR_eithrig
+recruit_character = GOY_NTR_henrik
+recruit_character = GOY_NTR_maolmhuire
+recruit_character = GOY_NTR_eoin
+recruit_character = GOY_NTR_huisdean
+recruit_character = GOY_NTR_laomann
+recruit_character = GOY_NTR_risteard
+recruit_character = GOY_NTR_gormall
+recruit_character = GOY_NTR_eiric
+recruit_character = GOY_NTR_stiubhard
+recruit_character = GOY_NTR_maoldonaich
+recruit_character = GOY_NTR_aodhan
+recruit_character = GOY_NTR_mungan
+recruit_character = GOY_NTR_sorcha
+recruit_character = GOY_NTR_baltair
+recruit_character = GOY_NTR_cormag
+recruit_character = GOY_NTR_donaidh
+recruit_character = GOY_NTR_iron_bear
+recruit_character = GOY_NTR_lachlan
+recruit_character = GOY_NTR_gavin
+recruit_character = GOY_NTR_frostking
+recruit_character = GOY_NTR_erik_grimclaw
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -5,7 +5,7 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 1000 y = 1000 }
+	    continuous_focus_position = { x = 1000 y = 1200 }
 		shared_focus = NTR_grim_reality
 	}
 	###
@@ -77,7 +77,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = NTR_infy_eq_1
-				bonus = 0.5
+				bonus = 0.25
 				uses = 1
 				category = infantry_weapons
 			}
@@ -89,6 +89,7 @@
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			country_event = ntribes.9
 		}
 	}
 	shared_focus = {
@@ -151,7 +152,13 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_TT_fate
 			hidden_effect = {
-			    country_event = ntribes.5
+                if = { 
+				limit = { has_country_flag = NTR_FLAG_blizzard }
+			    country_event = ntribes.55 
+				}
+				else = {
+				country_event = ntribes.5
+				}
 			}
 		}
 	}
@@ -162,7 +169,7 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 5 y = 3000 }
+	    continuous_focus_position = { x = 5 y = 1000 }
 		shared_focus = NTR_reform_milita
 		shared_focus = NTR_through_skies
 		shared_focus = NTR_world_awaits
@@ -199,9 +206,9 @@
 		prerequisite = { focus = NTR_reform_milita }
 		completion_reward = {
 		    add_political_power = -50
-			add_tech_bonus = {
-				name = NTR_doctrine_1
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -307,6 +314,7 @@
 		prerequisite = { focus = NTR_big_guns }
 		prerequisite = { focus = NTR_perils_logistics }
 		completion_reward = {
+			custom_effect_tooltip = NTR_iceshard_enabled
 		    IF = {
 			    limit = {
 				    NOT = {
@@ -363,7 +371,14 @@
 				uses = 1
 				category = infantry_weapons
 			}
-			#1 milfac in elf lake enable Moltenrock Guns
+			574 = { #elflake
+			    add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	shared_focus = {
@@ -457,6 +472,7 @@
 		prerequisite = { focus = NTR_hide_in_metal }
 		mutually_exclusive = { focus = NTR_advanced_artillery }
 		completion_reward = {
+			custom_effect_tooltip = NTR_holyforgetank_enabled
 			add_ideas = NTR_streamlined_tank
 			#TODO enable Holy Forge Tank
 		}
@@ -475,6 +491,7 @@
 		prerequisite = { focus = NTR_hide_in_metal }
 		mutually_exclusive = { focus = NTR_terrifying_tanks }
 		completion_reward = {
+			custom_effect_tooltip = NTR_holyforgearty_enabled
 			add_ideas = NTR_forged_artillery
 			#TODO enable Holy Forge Arty
 		}
@@ -493,9 +510,9 @@
 		prerequisite = { focus = NTR_digging_trenches focus = NTR_we_gotta_go_fast }
 		completion_reward = {
 			add_research_slot = 1
-			add_tech_bonus = {
-				name = NTR_doctrine_2
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -655,22 +672,30 @@
 			add_political_power = -50
 			if = {
 			    limit = {
-				    has_tech = early_fighter
+				    has_tech = iw_small_airframe
+				}
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 1
+					category = light_air
 				}
 				add_equipment_to_stockpile = {
-			        type = fighter_equipment_1
+			        type = fighter_equipment_0 
 				    amount = 10
 			    }
-				else = {
-			        set_technology = {
-			            early_fighter = 1
+				else = {				
+					set_technology = {
+			            iw_small_airframe = 1
 			        }
-			        add_equipment_to_stockpile = {
-			            type = fighter_equipment_0 
-				        amount = 25
-			        }
+					generic_early_fighter = yes
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						variant_name = "Early Fighter"
+						amount = 25
+					}
 				}
-		    }
+			}
 		}
 	}
 	shared_focus = {
@@ -766,12 +791,11 @@
 		prerequisite = { focus = NTR_import_fighters }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_bomber_1
+				name = heavy_air
 				bonus = 0.5
 				uses = 2
-				category = tactical_bomber
-				category = cat_strategic_bomber
-			}
+				category = heavy_air
+				}			
 		}
 	}
 	shared_focus = {
@@ -788,12 +812,13 @@
 		prerequisite = { focus = NTR_airports_construction }
 		prerequisite = { focus = NTR_import_fighters }
 		completion_reward = {
+			custom_effect_tooltip = NTR_cumulus_enabled
 			add_tech_bonus = {
-				name = NTR_fighter_1
+				name = fighter_bonus
 				bonus = 0.5
 				uses = 2
-				category = light_fighter
-			}
+				category = light_air
+			}			
 			#TODO enable cumulous airplanes
 		}
 	}
@@ -832,6 +857,7 @@
 		    owns_state = 522
 		}
 		completion_reward = {
+			custom_effect_tooltip = NTR_dinkau_enabled
 			#TODO enable Dinkau Shipyard
 			522 = {
 			    add_building_construction = {
@@ -865,9 +891,9 @@
 		prerequisite = { focus = NTR_our_new_fleet }
 		prerequisite = { focus = NTR_make_ships_bigger }
 		completion_reward = {
-		    add_tech_bonus = {
-				name = NTR_nvdoctr_1
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -916,9 +942,9 @@
 		prerequisite = { focus = NTR_bomber_development }
 		prerequisite = { focus = NTR_improve_fighter_designs }
 		completion_reward = {
-			add_tech_bonus = {
-				name = NTR_airdctrn_1
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			}
@@ -1017,7 +1043,7 @@
 		mutually_exclusive = { focus = NTR_look_beyond_sea }
 		mutually_exclusive = { focus = NTR_bend_the_knee }
 		completion_reward = {
-			create_faction = northern_league
+			create_faction = NTR_northern_league
 			hidden_effect = {
 			    set_rule = {
 				    can_create_factions = yes
@@ -1036,7 +1062,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		search_filters = {}
 		relative_position_id = NTR_world_awaits
@@ -1080,7 +1106,9 @@
 		mutually_exclusive = { focus = NTR_look_beyond_sea }
 		mutually_exclusive = { focus = NTR_reach_out_neighbours }
 		completion_reward = {
-			
+		GRI = {
+			    country_event = ntribes.76
+			}
 		}
 	}
 	shared_focus = {
@@ -1152,13 +1180,18 @@
 			}
 		}
 		bypass = {
-		    FAW = {
-			    exists = yes
-				OR = {
-				    has_government = neutrality
-					has_government = democratic
-				}
+		OR = { AND = {
+		FAT = {
+			    exists = no
 			}
+		FAW = {
+			    exists = no
+			}
+		}
+		FAW = {
+			is_in_faction_with = NTR
+			}
+		}
 		}
 		completion_reward = {
 		    IF = {
@@ -1199,6 +1232,17 @@
 				   has_government = democratic
 				}
 			}
+		}
+		bypass = {
+		    OR =  { 
+			VED = {
+			    exists = no
+			}
+			VED = {
+			is_in_faction_with = NTR
+			}
+			
+		}
 		}
 		completion_reward = {
 			create_wargoal = {
@@ -1248,6 +1292,7 @@
 			}
 			MNC = { add_to_ROOT_potential_cores = yes }
 		    FAT = { add_to_ROOT_potential_cores = yes }
+			FAW = { add_to_ROOT_potential_cores = yes }
 		    VED = { add_to_ROOT_potential_cores = yes }
 		}
 	}
@@ -1261,8 +1306,10 @@
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		    always = no
+		bypass = {
+		    hidden_trigger = {
+			    always = yes
+			}
 		}
 		search_filters = {}
 		completion_reward = {
@@ -1282,9 +1329,12 @@
 		relative_position_id = NTR_times_changing
 		prerequisite = { focus = NTR_times_changing }
 		bypass = {
+		OR = {
 		    BAK = {
 			    exists = no
 			}
+		    owns_state = 522		
+		}
 		}
 		completion_reward = {
 			country_event = ntribes.12
@@ -1319,6 +1369,9 @@
 		search_filters = {}
 		relative_position_id = NTR_times_changing
 		prerequisite = { focus = NTR_times_changing }
+		bypass = {
+		    owns_state = 522
+		}
 		completion_reward = {
 			#TODO modify “Exiled Clans” with +10% recruitable population factor
 			add_manpower = 50000
@@ -1345,6 +1398,9 @@
 		relative_position_id = NTR_times_changing
 		prerequisite = { focus = NTR_mutual_deal }
 		prerequisite = { focus = NTR_get_rid_of_obstacles }
+		bypass = {
+		    owns_state = 522
+		}
 		completion_reward = {
 			country_event = ntribes.14
 		}
@@ -1362,6 +1418,9 @@
 		relative_position_id = NTR_times_changing
 		prerequisite = { focus = NTR_get_rid_of_obstacles }
 		prerequisite = { focus = NTR_arm_refugees }
+		bypass = {
+		    owns_state = 522
+		}
 		completion_reward = {
 			custom_effect_tooltip = NTR_TT_smuggling_unlock
 			hidden_effect = {
@@ -1401,6 +1460,9 @@
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
+		}
+		available = {
+			owns_state = 522
 		}
 		search_filters = {}
 		completion_reward = {
@@ -1547,6 +1609,7 @@
 				uses = 1
 				category = industry
 			}
+			increase_society_development_with_tt = yes
 		}
 	}
 	shared_focus = {
@@ -1644,6 +1707,14 @@
 			hidden_effect = {
 			    set_country_flag = NTR_flag_choo_choo_unlock
 			}
+			set_technology = {
+				basic_train = 1
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 20
+				producer = NTR
+			}
 		}
 	}
 	shared_focus = {
@@ -1714,6 +1785,7 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_import_modern_tech }
 		completion_reward = {
+			custom_effect_tooltip = NTR_blackice_enabled
 			add_tech_bonus = {
 				name = NTR_electronics_1
 				bonus = 0.5
@@ -1770,6 +1842,7 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_invite_merchants }
 		completion_reward = {
+			custom_effect_tooltip = NTR_koper_enabled
 			#TODO enable Koper armoury?
 			563 = {
 			    add_building_construction = {
@@ -1952,7 +2025,7 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 75 y = 3000 }
+	    continuous_focus_position = { x = 5 y = 1000 }
 		shared_focus = NTR_clan_greenhoof
 		shared_focus = NTR_clan_brightflame
 		shared_focus = NTR_clan_stormshield
@@ -1972,6 +2045,7 @@
 		}
 		search_filters = {}
 		completion_reward = {
+		    custom_effect_tooltip = NTR_blessing_earth
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
@@ -2027,6 +2101,7 @@
 		relative_position_id = NTR_clan_greenhoof
 		prerequisite = { focus = NTR_clan_greenhoof }
 		completion_reward = {
+			custom_effect_tooltip = NTR_rockseekers_enabled
 			#TODO get industry design company “Rockseekers” (+10% resource gathering efficiency)
 			add_resource = {
 				type = steel
@@ -2089,10 +2164,7 @@
 		relative_position_id = NTR_clan_greenhoof
 		prerequisite = { focus = NTR_create_new_farmlands }
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = NTR_modified_crops
-				add_idea = NTR_bountiful_land
-			}
+			add_ideas = NTR_bountiful_land
 		}
 	}
 	shared_focus = {
@@ -2137,6 +2209,7 @@
 		}
 		search_filters = {}
 		completion_reward = {
+		    custom_effect_tooltip = NTR_blessing_water
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
@@ -2157,7 +2230,8 @@
 		relative_position_id = NTR_clan_stormshield
 		prerequisite = { focus = NTR_clan_stormshield }
 		completion_reward = {
-			397 = {
+			custom_effect_tooltip = NTR_traders_enabled
+			563 = {
 			    add_building_construction = {
 				    type = industrial_complex
 					level = 1
@@ -2237,32 +2311,16 @@
 		relative_position_id = NTR_clan_stormshield
 		prerequisite = { focus = NTR_riders_storm }
 		completion_reward = {
-			if = {
-			    limit = {
-				    has_tech = early_fighter
-					NOT = {
-					    has_tech = fighter1
-					}
-				}
+			add_political_power = -50		
+			set_technology = {
+			     iw_small_airframe = 1
+			     }
 				add_tech_bonus = {
-				    name = NTR_plane_1
-				    bonus = 0.75
-				    uses = 1
-				    category = light_fighter
-			    }
-				else_if = {
-				    limit = {
-					    has_tech = fighter1
-					}
-					add_political_power = 100
-				}
-				else = {
-				    add_political_power = -50
-			        set_technology = {
-			            early_fighter = 1
-			        }
-				}
-		    }
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 1
+					category = light_air
+				}				 
 		}
 	}
 	shared_focus = {
@@ -2336,13 +2394,13 @@
 		prerequisite = { focus = NTR_import_planes }
 		mutually_exclusive = { focus = NTR_defend_skies }
 		completion_reward = {
-		    add_tech_bonus = {
-				name = NTR_bomber_2
-				bonus = 0.5
+			custom_effect_tooltip = NTR_stratus_enabled
+			add_tech_bonus = {
+				name = medium_air
+				bonus = 1.0
 				uses = 2
-				category = tactical_bomber
-				category = cat_strategic_bomber
-			}
+				category = medium_air
+				}
 			add_ideas = NTR_bomber_focus
 			#TODO enable stratus manufactury
 		}
@@ -2361,11 +2419,12 @@
 		prerequisite = { focus = NTR_import_planes }
 		mutually_exclusive = { focus = NTR_strike_enemies }
 		completion_reward = {
+			custom_effect_tooltip = NTR_stormshieldairwing_enabled
 			add_tech_bonus = {
-			    name = NTR_fighter_2
-			    bonus = 0.5
-			    uses = 2
-			    category = light_fighter
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_air
 			}
 			add_ideas = NTR_fighter_focus
 			#TODO enable stormshield airwing
@@ -2383,6 +2442,7 @@
 		}
 		search_filters = {}
 		completion_reward = {
+		    custom_effect_tooltip = NTR_blessing_fire
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
@@ -2493,8 +2553,10 @@
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		    always = no
+		bypass = {
+		    hidden_trigger = {
+			    always = yes
+			}
 		}
 		search_filters = {}
 		completion_reward = {
@@ -2514,7 +2576,7 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_follow_old }
 		completion_reward = {
-			#Enables blessing of ice
+		    custom_effect_tooltip = NTR_blessing_ice
 			add_stability = 0.03
 		}
 	}
@@ -2815,8 +2877,12 @@
 		bypass = {
 			owns_state = 522
 		}
+		mutually_exclusive = { focus = NTR_focus_on_sabotage }
 		completion_reward = {
+			custom_effect_tooltip = NTR_event14_divisions
+			hidden_effect = {
 			load_oob = NTR_warriors_OOB
+			}
 		}
 	}
 	shared_focus = {
@@ -2834,6 +2900,7 @@
 		bypass = {
 		    owns_state = 522
 		}
+		mutually_exclusive = { focus = NTR_call_warriors }
 		completion_reward = {
 		    SRS = {
 		    	country_event = ntribes.22
@@ -2854,13 +2921,14 @@
 		prerequisite = { focus = NTR_bring_down_skynavia }
 		available = {
 		    owns_state = 522
+			has_completed_focus	= NTR_unity_call
 		}
 		completion_reward = {
-			add_tech_bonus = {
-			    name = NTR_doctrine_3
-			    bonus = 0.5
-			    uses = 2
-			    category = land_doctrine
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
 		}
 	}
@@ -2949,6 +3017,7 @@
 		search_filters = {}
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_lessons_of_war }
+		mutually_exclusive = { focus = NTR_princess_army }
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = NTR_loyal_militias
@@ -2970,6 +3039,7 @@
 		search_filters = {}
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_lessons_of_war }
+		mutually_exclusive = { focus = NTR_discipline_them }
 		completion_reward = {
 			swap_ideas = {
 			    remove_idea = NTR_loyal_militias
@@ -3044,7 +3114,8 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_learn_from_defeated }
 		completion_reward = {
-			#TODO unlock Ostfloy Refinery company
+			custom_effect_tooltip = NTR_ostfloy_enabled
+			set_country_flag = NTR_ostfloy_refinery_enabled
 			add_resource = {
 				type = oil
 				amount = 16
@@ -3113,8 +3184,7 @@
 		prerequisite = { focus = NTR_princess_of_all }
 		mutually_exclusive = { focus = NTR_stratify_society }
 		completion_reward = {
-			add_ideas = NTR_integration_effort
-			add_stability = -0.05
+			add_stability = -0.1
 			add_popularity = {
 				ideology = communism
 				popularity = 0.05
@@ -3194,6 +3264,7 @@
 			add_state_core = 561
 			add_state_core = 542
 			add_state_core = 522
+			add_ideas = NTR_integrated_society
 		}
 	}
 	shared_focus = {
@@ -3349,7 +3420,6 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_we_are_different focus = NTR_we_can_be_equals focus = NTR_ice_curtain }
 		completion_reward = {
-			add_country_leader_trait = GOY_popular_fiana
 			set_cosmetic_tag = NTR_PRINCE
 			country_event = ntribes.25
 		}
@@ -3366,6 +3436,7 @@
 		}
 		search_filters = {}
 		completion_reward = {
+		    custom_effect_tooltip = NTR_blessing_metal
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
@@ -3414,6 +3485,7 @@
 			        level = 2
 					instant_build = yes
 				}
+			add_extra_state_shared_building_slots = 2
 			}
 			add_resource = {
 				type = steel
@@ -3497,6 +3569,7 @@
 		prerequisite = { focus = NTR_no_limits }
 		prerequisite = { focus = NTR_strive_to_perfection }
 		completion_reward = {
+			custom_effect_tooltip = NTR_moltenrockenchant_enabled
 		    add_tech_bonus = {
 				name = NTR_magi_eq_2
 				bonus = 0.5
@@ -3535,7 +3608,6 @@
 		search_filters = {}
 		relative_position_id = NTR_clan_moltenrock
 		prerequisite = { focus = NTR_weaponised_magic }
-		mutually_exclusive = { focus = NTR_spirit_machine }
 		completion_reward = {
 			add_ideas = NTR_endurance_blessing
 			add_tech_bonus = {
@@ -3559,7 +3631,6 @@
 		search_filters = {}
 		relative_position_id = NTR_clan_moltenrock
 		prerequisite = { focus = NTR_weaponised_magic }
-		mutually_exclusive = { focus = NTR_blessed_guns }
 		completion_reward = {
 			add_ideas = NTR_holy_tanks
 		}
@@ -3576,7 +3647,7 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    #Enables blessing of wood
+		    custom_effect_tooltip = NTR_blessing_wood
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
@@ -3602,6 +3673,7 @@
 			        level = 1
 					instant_build = yes
 				}
+			add_extra_state_shared_building_slots = 1
 			}
 			add_tech_bonus = {
 				name = NTR_industry_5
@@ -3651,6 +3723,7 @@
 		prerequisite = { focus = NTR_good_old_materials }
 		prerequisite = { focus = NTR_crystal_clear }
 		completion_reward = {
+			custom_effect_tooltip = NTR_barkbuilders_enabled
 		    #TODO unlock barkcoat builders
 			add_ideas = NTR_built_to_last
 			add_tech_bonus = {
@@ -3681,6 +3754,7 @@
 			        level = 1
 					instant_build = yes
 				}
+				add_extra_state_shared_building_slots = 1
 			}
 			navy_experience = 20
 			add_equipment_to_stockpile = {
@@ -3719,6 +3793,7 @@
 		prerequisite = { focus = NTR_master_builders }
 		prerequisite = { focus = NTR_new_shipyard }
 		completion_reward = {
+			custom_effect_tooltip = NTR_craftguild_enabled
 			add_ideas = NTR_craftsmen_way
 			#TODO unlock craftsponies guilds
 		}
@@ -3759,9 +3834,9 @@
 		prerequisite = { focus = NTR_master_builders }
 		prerequisite = { focus = NTR_new_shipyard }
 		completion_reward = {
-			add_tech_bonus = {
-				name = NTR_nvdoctr_2
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -3808,6 +3883,8 @@
 		prerequisite = { focus = NTR_many_shapes }
 		prerequisite = { focus = NTR_roam_the_waves_trad }
 		completion_reward = {
+		custom_effect_tooltip = NTR_icecarvers_enabled
+		add_ideas = NTR_ice_fleet
 			#TODO unlock carvers of ice company (merged with ice fleet idea)
 		}
 	}
@@ -3829,7 +3906,7 @@
 		prerequisite = { focus = NTR_arts_and_crafts }
 		completion_reward = {
 			Improve_Science_Base = yes
-			add_ideas = GOY_magical_society #TODO
+			add_ideas = GOY_magical_society
 		}
 	}
 	shared_focus = {
@@ -3945,7 +4022,7 @@
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 				    type = infrastructure
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -3975,8 +4052,10 @@
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		    always = no
+		bypass = {
+		    hidden_trigger = {
+			    always = yes
+			}
 		}
 		search_filters = {}
 		completion_reward = {
@@ -4285,7 +4364,6 @@
 			hidden_effect = {
 			    set_country_flag = NTR_flag_the_ritual_unlock
 			}
-			custom_effect_tooltip = NTR_TT_ritual
 		}
 	}
 	shared_focus = {
@@ -4306,9 +4384,9 @@
 				add_idea = NTR_tribal_militias_4
 			}
 			army_experience = 20
-			add_tech_bonus = {
-				name = NTR_doctrine_4
-				bonus = 0.25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.25
 				uses = 1
 				category = land_doctrine
 			}
@@ -4357,7 +4435,10 @@
 		relative_position_id = NTR_cold_hearted
 		prerequisite = { focus = NTR_unleash_blizzard }
 		completion_reward = {
+		custom_effect_tooltip = NTR_raisewarriors_divisions
+		hidden_effect = {
 			load_oob = NTR_raised_warriors_OOB
+			}
 		}
 	}
 	shared_focus = {
@@ -4415,6 +4496,7 @@
 		}
 		available = {
 		    owns_state = 522
+			has_country_flag = NTR_flag__ritual_finished
 		}
 		search_filters = {}
 		relative_position_id = NTR_cold_hearted
@@ -4426,6 +4508,8 @@
 			    set_country_flag = NTR_flag_ice2
 				mark_focus_tree_layout_dirty = yes
 			}
+		country_event = ntribes.58
+		remove_ideas = NTR_war_north
 		}
 	}
     ###
@@ -4438,15 +4522,18 @@
 		ai_will_do = {
 			factor = 10
 		}
+		bypass = {
+		    hidden_trigger = {
+			    has_completed_focus = NTR_ruins_of_sky
+			}
+		}
 		available = {
 		    always = no
 		}
 		search_filters = {}
 		prerequisite = { focus = NTR_ruins_of_sky }
 		allow_branch = {
-		    NOT = {
 		        has_country_flag = NTR_flag_ice2
-			}
 		}
 		completion_reward = {
 			
@@ -4529,7 +4616,7 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_north_awakens }
 		completion_reward = {
-			add_ideas = ara_closed_economy
+			add_ideas = ntr_closed_economy
 			add_stability = 0.05
 			add_ideas = NTR_frozen_curtain
 		}
@@ -4569,14 +4656,17 @@
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_north_awakens }
+		available = {
+	    has_idea = NTR_tribal_militias_4
+	}
 		completion_reward = {
 		    swap_ideas = {
 			    remove_idea = NTR_tribal_militias_4
 				add_idea = NTR_warrior_lodges_idea
 			}
-			add_tech_bonus = {
-				name = NTR_doctrine_5
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -4817,6 +4907,7 @@
 			    }
 			    add_extra_state_shared_building_slots = 3
 			}
+			add_war_support = 0.2
 		}
 	}
 	shared_focus = {
@@ -4983,9 +5074,22 @@
 		prerequisite = { focus = NTR_slave_economy }
 		prerequisite = { focus = NTR_take_magic }
 		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = FAT
+			IF = {
+			    limit = {
+				    FAW = {
+					    exists = yes
+					}
+				}
+			    create_wargoal = {
+				    type = annex_everything
+				    target = FAW
+			    }
+				else = {
+				    create_wargoal = {
+				        type = annex_everything
+				        target = FAT
+			        }
+				}
 			}
 		}
 	}
@@ -5065,7 +5169,7 @@
 		prerequisite = { focus = NTR_crush_dream }
 		prerequisite = { focus = NTR_revenge_sunstriker }
 		available = {
-			owns_state = 458
+			owns_state = 485
 			owns_state = 581
 			owns_state = 429
 			FAT = {
@@ -5082,7 +5186,6 @@
 		    custom_effect_tooltip = NTR_TT_all_tremble
 			hidden_effect = {
 			    country_event = ntribes.31
-				news_event = ntribes_news.1
 			    set_country_flag = NTR_flag_ice3
 				mark_focus_tree_layout_dirty = yes
 			}
@@ -5100,9 +5203,7 @@
 		}
 		search_filters = {}
 		allow_branch = {
-		    NOT = {
 			    has_country_flag = NTR_flag_ice3
-			}
 		}
 		completion_reward = {
 			458 = {
@@ -5251,9 +5352,7 @@
 		}
 		search_filters = {}
 		allow_branch = {
-		    NOT = {
 			    has_country_flag = NTR_flag_ice3
-			}
 		}
 		completion_reward = {
 			add_manpower = 50000
@@ -5305,6 +5404,9 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			has_completed_focus = NTR_warrior_lodges
+		}		
 		search_filters = {}
 		relative_position_id = NTR_the_undead
 		prerequisite = { focus = NTR_raise_more }
@@ -5328,16 +5430,15 @@
 		relative_position_id = NTR_the_undead
 		prerequisite = { focus = NTR_raise_more focus = NTR_increase_autonomy }
 		completion_reward = {
-			create_corps_commander = {
-	            name = "Lachlan the Griffonslayer"
-	            portrait_path = "gfx/leaders/Pony/portrait_pony_generic_5.dds"
-	            traits = { pony_race_trait old_guard trait_focused trait_reckless aggressive_assaulter }
+			add_corps_commander_role = {
+			  Character = GOY_NTR_lachlan
+	            traits = { undead_race_trait old_guard trait_focused trait_reckless aggressive_assaulter }
 	            skill = 4
 	            attack_skill = 5
 	            defense_skill = 3
 	            planning_skill = 2
 	            logistics_skill = 2
-            }
+			}
 		}
 	}
 	shared_focus = {
@@ -5491,73 +5592,6 @@
 			}
 		}
 	}
-	shared_focus = {
-		id = NTR_no_rest
-		icon = GFX_goal_GOY_magic_war
-		x = 0
-		y = 4
-		cost = 15.00
-		ai_will_do = {
-			factor = 10
-		}
-		select_effect = {
-		    add_ideas = NTR_pillage_herzland
-		    country_event = {
-			    id = ntribes.32
-				days = 7
-			}
-			country_event = {
-			    id = ntribes.33
-				days = 14
-			}
-			country_event = {
-			    id = ntribes.34
-				days = 21
-			}
-			country_event = {
-			    id = ntribes.35
-				days = 28
-			}
-			country_event = {
-			    id = ntribes.36
-				days = 35
-			}
-			country_event = {
-			    id = ntribes.37
-				days = 42
-			}
-			country_event = {
-			    id = ntribes.38
-				days = 49
-			}
-			country_event = {
-			    id = ntribes.39
-				days = 56
-			}
-			country_event = {
-			    id = ntribes.40
-				days = 63
-			}
-			country_event = {
-			    id = ntribes.41
-				days = 70
-			}
-			country_event = {
-			    id = ntribes.42
-				days = 77
-			}
-			country_event = {
-			    id = ntribes.43
-				days = 91
-			}
-		}
-		search_filters = {}
-		relative_position_id = NTR_the_undead
-		prerequisite = { focus = NTR_the_heart }
-		completion_reward = {
-			custom_effect_tooltip = NTR_TT_no_one_oppose
-		}
-	}
 	#
 	#
 	shared_focus = {
@@ -5571,9 +5605,7 @@
 		}
 		search_filters = {}
 		allow_branch = {
-		    NOT = {
 			    has_country_flag = NTR_flag_ice3
-			}
 		}
 		completion_reward = {
 			add_stability = 0.05
@@ -5745,44 +5777,117 @@
 		completion_reward = {
 			if = {
 			    limit = {
-				    has_tech = early_fighter
+				    has_tech = iw_small_airframe
 				}
 				add_equipment_to_stockpile = {
-			        type = fighter_equipment_1
-				    amount = 50
-			    }
+					type = small_plane_airframe_0
+					variant_name = "Early Fighter"
+					amount = 100
+				}
 				else = {
 			        set_technology = {
-			            early_fighter = 1
+			            iw_small_airframe = 1
 			        }
-			        add_equipment_to_stockpile = {
-			            type = fighter_equipment_0 
-				        amount = 100
-			        }
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					variant_name = "Early Fighter"
+					amount = 50
+				}
 				}
 		    }
 			if = {
 			    limit = {
-				    has_tech = early_bomber
+				    has_tech = iw_medium_airframe
 				}
 				add_equipment_to_stockpile = {
-			        type = tac_bomber_equipment_1
-				    amount = 25
-			    }
+					type = medium_plane_airframe_0
+					variant_name = "Early Bomber"
+					amount = 100
+				}
 				else = {
 			        set_technology = {
-			            early_bomber = 1
+			            iw_medium_airframe = 1
 			        }
-			        add_equipment_to_stockpile = {
-			            type = tac_bomber_equipment_0 
-				        amount = 50
-			        }
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_0
+					variant_name = "Early Bomber"
+					amount = 50
+				}
 				}
 		    }
 		}
 	}
-	#
-	#
+shared_focus = {
+		id = NTR_no_rest
+		icon = GFX_goal_GOY_magic_war
+		x = 0
+		y = 4
+		cost = 15.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		owns_state = 382	
+		owns_state = 674		
+		}		
+		select_effect = {
+		    add_ideas = NTR_pillage_herzland
+		    country_event = {
+			    id = ntribes.32
+				days = 7
+			}
+			country_event = {
+			    id = ntribes.33
+				days = 14
+			}
+			country_event = {
+			    id = ntribes.34
+				days = 21
+			}
+			country_event = {
+			    id = ntribes.35
+				days = 28
+			}
+			country_event = {
+			    id = ntribes.36
+				days = 35
+			}
+			country_event = {
+			    id = ntribes.37
+				days = 42
+			}
+			country_event = {
+			    id = ntribes.38
+				days = 49
+			}
+			country_event = {
+			    id = ntribes.39
+				days = 56
+			}
+			country_event = {
+			    id = ntribes.40
+				days = 63
+			}
+			country_event = {
+			    id = ntribes.41
+				days = 70
+			}
+			country_event = {
+			    id = ntribes.42
+				days = 77
+			}
+			country_event = {
+			    id = ntribes.43
+				days = 91
+			}
+		}
+		search_filters = {}
+		relative_position_id = NTR_the_undead
+		prerequisite = { focus = NTR_the_heart }
+		completion_reward = {
+			custom_effect_tooltip = NTR_TT_no_one_oppose
+		}
+	}
 	shared_focus = {
 		id = NTR_unleash_wrath
 		icon = GFX_goal_fire
@@ -5798,14 +5903,17 @@
 			}
 		}
 		allow_branch = {
-		    NOT = {
-			    has_country_flag = NTR_flag_ice3
+			    has_country_flag = NTR_flag_ice4 
+		}
+		bypass = {
+		    HRR = {
+			    exists = no
 			}
 		}
 		search_filters = {}
 		completion_reward = {
 			HRR = {
-			    add_ideas = HRR_terror_tactics #TODO
+			    add_ideas = HRR_terror_tactics
 			}
 		}
 	}
@@ -5821,11 +5929,14 @@
 		available = {
 		    has_full_control_of_state = 674
 		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
 		search_filters = {}
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_unleash_wrath }
 		completion_reward = {
-			382 = {
+			674 = {
 			    add_manpower = -2000000
 				remove_building = {
                     type = arms_factory
@@ -5850,6 +5961,7 @@
 			HRR = {
 			    add_stability = -0.2
 				add_war_support = -0.2
+				set_country_flag = HRR_romau_destroyed
 			}
 		}
 	}
@@ -5865,12 +5977,15 @@
 		available = {
 		    has_full_control_of_state = 382
 		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}		
 		search_filters = {}
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_unleash_wrath }
 		completion_reward = {
 			382 = {
-			    add_manpower = -3000000
+			    add_manpower = -2000000
 				remove_building = {
                     type = arms_factory
                     level = 5
@@ -5881,7 +5996,7 @@
                 }
 				remove_building = {
                     type = infrastructure
-                    level = 5
+                    level = 4
                 }
 				set_state_category = town
 			}
@@ -5894,6 +6009,7 @@
 			HRR = {
 			    add_stability = -0.25
 				add_war_support = -0.25
+				set_country_flag = HRR_griffenheim_destroyed			
 			}
 		}
 	}
@@ -5907,6 +6023,16 @@
 			factor = 10
 		}
 		search_filters = {}
+		available = {
+		NOT = {
+		    country_exists = HRR
+		}
+		has_full_control_of_state = 382	
+		has_full_control_of_state = 674		
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}		
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_destroy_city }
 		prerequisite = { focus = NTR_griffenheim_burn }
@@ -6039,6 +6165,7 @@
 			}
 			}
 			add_ideas = NTR_conquerors_of_griffonia
+			country_event = ntribes.63
 		}
 	}
 	#
@@ -6051,10 +6178,18 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
 		search_filters = {}
 		allow_branch = {
-		    NOT = {
-			    has_country_flag = NTR_flag_ice3
+			has_country_flag = NTR_flag_ice4 
+		}
+		bypass = {
+		    HRR = {
+			    exists = no
 			}
 		}
 		completion_reward = {
@@ -6071,9 +6206,19 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}		
 		search_filters = {}
 		relative_position_id = NTR_raise_slain
 		prerequisite = { focus = NTR_raise_slain }
+		bypass = {
+		    HRR = {
+			    exists = no
+			}
+		}
 		completion_reward = {
 			add_timed_idea = {
 			    idea = NTR_extra_shifts
@@ -6090,9 +6235,19 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}		
 		search_filters = {}
 		relative_position_id = NTR_raise_slain
 		prerequisite = { focus = NTR_raise_slain }
+		bypass = {
+		    HRR = {
+			    exists = no
+			}
+		}
 		completion_reward = {
 			add_political_power = -100
 			add_equipment_to_stockpile = {
@@ -6118,6 +6273,11 @@
 		    has_war_with = HRR
 			surrender_progress = 0.25
 		}
+		bypass = {
+		    HRR = {
+			    exists = no
+			}
+		}
 		completion_reward = {
 			add_timed_idea = {
 			    idea = NTR_all_front
@@ -6125,3 +6285,905 @@
 			}
 		}
 	}
+	shared_focus = {
+		id = NTR_symbol_of_power
+		icon = GFX_goal_crystal_palace
+		x = 0
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_no_rest }
+		available = {
+		NOT = {
+		    country_exists = HRR
+		}
+		has_completed_focus = NTR_purge_herz		
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		custom_effect_tooltip = NTR_dark_towers_construction
+		hidden_effect = {
+		set_country_flag = NTR_flag_dark_tower_unlock
+		}
+			}
+		}
+	shared_focus = {
+		id = NTR_stock_slave_mines
+		icon = GFX_goal_forced_res
+		x = 2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_no_rest }
+		available = {
+		NOT = {
+		    country_exists = HRR
+		}
+		has_completed_focus = NTR_purge_herz		
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		custom_effect_tooltip = NTR_slave_mines_text
+		hidden_effect = {
+		set_country_flag = NTR_slave_mines_unlock
+		}
+			}
+		}
+	shared_focus = {
+		id = NTR_dark_gift
+		icon = GFX_goal_sombra_magic
+		x = -2
+		y = 1
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_no_rest }
+		available = {
+		NOT = {
+		    country_exists = HRR
+		}
+		has_completed_focus = NTR_purge_herz		
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		add_ideas = NTR_dark_acolytes
+		add_corps_commander_role = {
+			Character = NTR_redsquall
+			traits = { pony_race_trait trait_reckless trait_focused }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+			}
+		}
+	shared_focus = {
+		id = NTR_bring_down_the_sky
+		icon = GFX_goal_Attack_Skyfall
+		x = -3
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_dark_gift }
+		prerequisite = { focus = NTR_stock_slave_mines }
+		prerequisite = { focus = NTR_symbol_of_power }
+		will_lead_to_war_with = TRD
+		will_lead_to_war_with = FEZ
+		will_lead_to_war_with = HAU
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    TRD = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = TRD
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    FEZ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FEZ
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    HAU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = HAU
+			    }
+				else = {
+				}
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_extinguish_the_light
+		icon = GFX_goal_aquileia
+		x = -1
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_dark_gift }
+		prerequisite = { focus = NTR_stock_slave_mines }
+		prerequisite = { focus = NTR_symbol_of_power }
+		will_lead_to_war_with = JER
+		will_lead_to_war_with = JEB
+		will_lead_to_war_with = JES		
+		will_lead_to_war_with = JFT
+		will_lead_to_war_with = JRR
+		will_lead_to_war_with = POM
+		will_lead_to_war_with = FLO
+		will_lead_to_war_with = AET
+		will_lead_to_war_with = HEL
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    HEL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = HEL
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    AET = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = AET
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    FLO = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FLO
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    POM = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = POM
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    JRR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JRR
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    JFT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JFT
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    JES = {
+					    exists = yes
+						is_puppet = no
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JES
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    JEB = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JEB
+			    }
+				else = {
+				}
+			}		
+			IF = {
+			    limit = {
+				    JER = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JER
+			    }
+				else = {
+				}
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_the_last_crusade
+		icon = GFX_goal_winter_knights
+		x = 1
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_dark_gift }
+		prerequisite = { focus = NTR_stock_slave_mines }
+		prerequisite = { focus = NTR_symbol_of_power }
+		will_lead_to_war_with = HLQ
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = LSM
+		will_lead_to_war_with = LSC
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    HLQ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = HLQ
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LNS = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LNS
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LSM = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LSM
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LSC = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LSC
+			    }
+				else = {
+				}
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_turn_rumare_red
+		icon = GFX_goal_generic_attack_griffonstone
+		x = 3
+		y = 2
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_dark_gift }
+		prerequisite = { focus = NTR_stock_slave_mines }
+		prerequisite = { focus = NTR_symbol_of_power }
+		will_lead_to_war_with = LAK
+		will_lead_to_war_with = BOI
+		will_lead_to_war_with = BAN
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    ERI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ERI
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    EYR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = EYR
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    AVI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = AVI
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BAN = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BAN
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BOI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BOI
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LAK = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LAK
+			    }
+				else = {
+				}
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_new_purpose
+		icon = GFX_goal_GRI_skyfallport
+		x = -4
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_bring_down_the_sky }
+		available = {
+		owns_state = 381
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			country_event = ntribes.64
+			}
+		}
+	shared_focus = {
+		id = NTR_griffon_stain
+		icon = GFX_goal_generic_dangerous_deal_pony_griffon
+		x = -2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_bring_down_the_sky }
+		prerequisite = { focus = NTR_turn_rumare_red }
+		prerequisite = { focus = NTR_the_last_crusade }
+		prerequisite = { focus = NTR_extinguish_the_light }
+		available = {
+		owns_state = 377
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			country_event = ntribes.65
+			}
+		}
+	shared_focus = {
+		id = NTR_tribute
+		icon = GFX_goal_gold_reserve_2
+		x = 0
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_bring_down_the_sky }
+		prerequisite = { focus = NTR_turn_rumare_red }
+		prerequisite = { focus = NTR_the_last_crusade }
+		prerequisite = { focus = NTR_extinguish_the_light }
+		available = {
+		owns_state = 377
+		owns_state = 381
+		owns_state = 553
+		owns_state = 389
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			add_ideas = NTR_icetribute
+			}
+		}	
+	shared_focus = {
+		id = NTR_fan_hatred
+		icon = GFX_viira_army
+		x = 2
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_bring_down_the_sky }
+		prerequisite = { focus = NTR_turn_rumare_red }
+		prerequisite = { focus = NTR_the_last_crusade }
+		prerequisite = { focus = NTR_extinguish_the_light }
+		available = {
+		owns_state = 553
+		owns_state = 540
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		custom_effect_tooltip = NTR_vartai_auxilia_tooltip
+			hidden_effect = {
+				633 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				634 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				553 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				537 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				540 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				552 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+				505 = {
+				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}				
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_the_pyre
+		icon = GFX_focus_strike_griffonstone
+		x = 4
+		y = 3
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_turn_rumare_red }
+		available = {
+		owns_state = 389
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		custom_effect_tooltip = NTR_griffonstone_destruction
+		hidden_effect = {
+		country_event = ntribes.67		
+		}
+			}
+		}		
+shared_focus = {
+		id = NTR_delenda_est
+		icon = GFX_goal_generic_attack_wingbardy
+		x = -1
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_fan_hatred }
+		prerequisite = { focus = NTR_griffon_stain }
+		prerequisite = { focus = NTR_tribute }
+		will_lead_to_war_with = WNG
+		will_lead_to_war_with = TAL
+		will_lead_to_war_with = FRN
+		will_lead_to_war_with = ARA
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = CYA
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    WNG = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = WNG
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    TAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = TAL
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    FRN = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FRN
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    ARA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ARA
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    SIC = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = SIC
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    CYA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = CYA
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    JES = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = JES
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    FAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FAL
+			    }
+				else = {
+				}
+			}			
+			}
+		}
+shared_focus = {
+		id = NTR_tame_valley
+		icon = GFX_goal_prywhen_civilwar_yellow
+		x = 1
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_fan_hatred }
+		prerequisite = { focus = NTR_griffon_stain }
+		prerequisite = { focus = NTR_tribute }
+		will_lead_to_war_with = LUS
+		will_lead_to_war_with = BRF
+		will_lead_to_war_with = GRW
+		will_lead_to_war_with = GRU
+		will_lead_to_war_with = GRY
+		available = {
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+			IF = {
+			    limit = {
+				    LUS = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LUS
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BRF = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BRF
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRW = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRW
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRU
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRY = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRY
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    CYA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = CYA
+			    }
+				else = {
+				}
+			}
+			}
+		}
+	shared_focus = {
+		id = NTR_the_solstice
+		icon = GFX_goal_cry_evil_genius
+		x = 0
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_no_rest
+		prerequisite = { focus = NTR_tame_valley }
+		prerequisite = { focus = NTR_delenda_est }
+		available = {
+		owns_state = 512
+		owns_state = 371
+		owns_state = 445
+		owns_state = 385		
+		}
+		allow_branch = {
+			    has_country_flag = NTR_flag_ice4 
+		}
+		completion_reward = {
+		custom_effect_tooltip = NTR_solstice_tooltip
+		hidden_effect = {
+		country_event = ntribes.68		
+		}
+			}
+		}	

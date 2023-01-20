@@ -15,6 +15,7 @@ set_technology = {
 	gw_artillery = 1
 	tech_support = 1
 	tech_mountaineers = 1
+	basic_train = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
 if = {
@@ -71,112 +72,44 @@ set_country_flag = better_science_base_unlocked
 
 set_stability = 0.45
 
-create_country_leader = {
-	name = "Margareth Featherin"
-	desc = "generic_neutral_leader_desc"
-	picture = "Margareth.tga"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Dorotheos Featherin"
-	desc = "literally_alexander_desc"
-	picture = "dorotheos.tga"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Antioco Moro"
-	desc = "generic_harmony_birb_desc"
-	picture = "aradem.tga"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Ciriaco Mediate"
-	desc = "another_nazbol_guy_desc"
-	picture = "aranazbol.tga"
-	expire = "1965.1.1"
-	ideology = rozenkampism
-	traits = {
-
-	}
-}
-
-create_field_marshal = {
-	name = "Dorotheos Featherin"
-	portrait_path = "gfx/leaders/ARA/dorotheos.tga"
-	traits = { griffon_race_trait politically_connected media_personality brilliant_strategist trait_reckless inspirational_leader aggressive_assaulter }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-	id = 1333
-}
-
-create_corps_commander = {
-	name = "Soter"
-	picture = "soter.tga"
-	traits = { griffon_race_trait career_officer ranger }
-	desc = "soter_desc"
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	id = 1334
-}
-
-create_corps_commander = {
-	name = "Cassander"
-	picture = "cassander.tga"
-	traits = { griffon_race_trait infantry_officer commando }
-	desc = "cassander_desc"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Lysimachus"
-	picture = "Lysimachus.tga"
-	traits = { griffon_race_trait harsh_leader organizer }
-	desc = "lysimachus_desc"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-	id = 1335
-}
-
-create_corps_commander = {
-	name = "Nicator"
-	portrait_path = "gfx/leaders/ARA/nicator.tga"
-	traits = { griffon_race_trait career_officer fortress_buster bearer_of_artillery }
-	desc = "nicator_desc"
-	skill = 2
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 1336
-}
-## Artwork and Tungsten were removed for allegations of dark sorcery and cursing the mod with bad code
+recruit_character = GOY_ARA_dorotheos_featherin
+recruit_character = GOY_ARA_margareth_featherin
+recruit_character = GOY_ARA_ciriaco
+recruit_character = GOY_ARA_antioco_moro
+recruit_character = ARA_baron_trubach
+recruit_character = GOY_ARA_soter
+recruit_character = GOY_ARA_cassander
+recruit_character = GOY_ARA_lysimachus
+recruit_character = GOY_ARA_nicator
+recruit_character = GOY_ARA_prelate_heraclius
+recruit_character = GOY_ARA_fetivola_advisor
+recruit_character = GOY_ARA_lord_goldstone
+recruit_character = GOY_ARA_glenda
+recruit_character = GOY_ARA_archon_demetrius
+recruit_character = GOY_ARA_literally_machiavelli
+recruit_character = GOY_ARA_treasurer
+recruit_character = GOY_ARA_mysterio
+recruit_character = GOY_ARA_fortifier
+recruit_character = GOY_ARA_warstrialist
+recruit_character = GOY_ARA_instrialist
+recruit_character = GOY_ARA_archon_erion
+recruit_character = GOY_ARA_alhorsered
+recruit_character = GOY_ARA_titus
+recruit_character = GOY_ARA_stolidus_stultus
+recruit_character = GOY_ARA_miga_ouranos
+recruit_character = GOY_ARA_miga_ouranos2
+recruit_character = GOY_ARA_bellerophontes
+recruit_character = GOY_ARA_erich
+recruit_character = GOY_ARA_federico
+recruit_character = GOY_ARA_craterus
+recruit_character = GOY_ARA_arantigos
+recruit_character = GOY_ARA_reiner
+recruit_character = GOY_ARA_nicatorking
+recruit_character = GOY_ARA_hermanepuppet
+recruit_character = GOY_ARA_lysimachuspuppet
+recruit_character = GOY_ARA_headmasterapesios
+recruit_character = GOY_ARA_soterpuppet
+recruit_character = GOY_ARA_riverprotector
 
 set_rule = {
 	can_generate_female_aces = yes

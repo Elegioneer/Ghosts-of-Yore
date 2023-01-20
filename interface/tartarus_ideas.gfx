@@ -175,4 +175,24 @@ spriteTypes = {
 		name = "GFX_idea_goy_book_burn"
 		texturefile = "gfx/interface/ideas/idea_goy_book_burn.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_NTR_idea_fiana"
+		texturefile = "gfx/interface/ideas/NTR_idea_fiana.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_idea_GOY_magical_economy"
+		texturefile = "gfx/interface/ideas/idea_GOY_magical_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_idea_GOY_slave_economy"
+		texturefile = "gfx/interface/ideas/idea_GOY_slave_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_idea_gate_goy"
+		texturefile = "gfx/interface/ideas/BOI_idea_gate_goy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_idea_idol_goy"
+		texturefile = "gfx/interface/ideas/BOI_idea_idol_goy.dds"
+	}	
 }

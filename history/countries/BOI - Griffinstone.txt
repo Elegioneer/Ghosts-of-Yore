@@ -13,6 +13,7 @@ set_technology = {
 	tech_recon = 1
 	tech_support = 1
 	tech_mountaineers = 1
+	basic_train = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
 
@@ -34,8 +35,8 @@ set_convoys = 70
 set_popularities = {
 	democratic = 30
 	fascism = 20
-	communism = 0
-	neutrality = 50
+	communism = 5
+	neutrality = 45
 }
 set_politics = {
 
@@ -51,10 +52,10 @@ set_party_name = { ideology = fascism name = BOI_fas_init long_name = BOI_fas_in
 set_party_name = { ideology = communism name = BOI_com_init long_name = BOI_com_init_long }
 
 add_ideas = {
-	home_of_the_griffons
+	BOI_GAW_home_of_griffons
+	BOI_GAW_idol_lost
 	pre_industrial_society
-	idol_of_boreas_lost
-	kingdom_with_no_king
+	BOI_GAW_kingdom_with_no_king
 	BOI_political_deadlock
 	BOI_rumarean_unrest
 	lack_of_scientists
@@ -71,101 +72,57 @@ add_manpower = 24239
 		instant_build = yes
 	}	
 }
+
+recruit_character = GOY_BOI_grandpagruff
+recruit_character = GOY_BOI_goldstone
+recruit_character = GOY_BOI_gilda
+recruit_character = GOY_BOI_gertrude
+recruit_character = BOI_king_trubach
+recruit_character = GOY_BOI_grauschnabel
+recruit_character = GOY_BOI_juliusrezdomb
+recruit_character = GOY_BOI_greta
+recruit_character = GOY_BOI_dottedline
+recruit_character = GOY_BOI_erwin_von_drach
+recruit_character = GOY_BOI_glenda
+recruit_character = GOY_BOI_gabby
+recruit_character = GOY_BOI_garner
+recruit_character = GOY_BOI_gimmemoore
+recruit_character = GOY_BOI_griselda
+recruit_character = GOY_BOI_gunther
+recruit_character = GOY_BOI_gerard
+recruit_character = GOY_BOI_gigi
+recruit_character = GOY_BOI_gunther_silverfeather
+recruit_character = GOY_BOI_gudrun
+recruit_character = GOY_BOI_silver_storm
+recruit_character = GOY_BOI_blueblood
+recruit_character = GOY_BOI_klaus_steelfeather
+recruit_character = GOY_BOI_gerdr
+recruit_character = GOY_BOI_gerlinde
+recruit_character = GOY_BOI_georg
+recruit_character = GOY_BOI_mikhaylo
+recruit_character = GOY_BOI_gretel
+recruit_character = GOY_BOI_guido
+recruit_character = GOY_BOI_guntram
+recruit_character = GOY_BOI_cynosura
+recruit_character = GOY_BOI_bechard
+recruit_character = GOY_BOI_gottlob
+recruit_character = GOY_BOI_gerulf
+recruit_character = GOY_BOI_gestal
+recruit_character = GOY_BOI_trueklawsewitz
+recruit_character = GOY_BOI_gallus
+recruit_character = GOY_BOI_eros
+recruit_character = GOY_BOI_duchess
+recruit_character = GOY_BOI_grover
+recruit_character = GOY_BOI_erich_ebonwing
+recruit_character = GOY_BOI_august_duskwing
+recruit_character = GOY_BOI_teodor_frohlich
+recruit_character = GOY_BOI_reinhold_thundertail
+recruit_character = GOY_BOI_oskar_silverfeather
+recruit_character = GOY_BOI_archon_proteus
+recruit_character = GOY_BOI_archon_hephaestus
+recruit_character = GOY_BOI_archon_lucinus
+
 #
-create_country_leader = {
-	name = "Grandpa Gruff"
-	desc = BOI_grandpa_desc
-	picture = "Gruff.tga"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Lord Goldstone"
-    desc = BOI_goldstone_desc
-	picture = "GAW_Goldstone.tga"
-	expire = "1965.1.1"
-	ideology = plutocracy
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Gilda"
-	desc = BOI_gilda_desc
-	picture = "Gilda.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-
-	}
-}
-
-create_country_leader = {
-	name = "Gertrude"
-	desc = ""
-	picture = "Governor.tga"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-
-	}
-}
-
-create_field_marshal = {
-	name = "Gerhard von Grauschnabel"
-	picture = "GAW_Gerhard.tga"
-	traits = { griffon_race_trait inflexible_strategist unyielding_defender trait_mountaineer  }
-	id = 667903
-	skill = 3
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-	female = no
-}
-
-create_corps_commander = {
-	name = "Grandpa Gruff"
-	picture = "Gruff.tga"
-	traits = { griffon_race_trait old_guard trait_cautious commando }
-	id = 667902
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	female = no
-}
-
-create_corps_commander = {
-	name = "Julius de Rezdomb"
-	picture = "GAW_Julius.dds"
-	traits = { griffon_race_trait organizer skilled_staffer }
-	skill = 2
-	id = 10100
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 2
-	female = no
-}
-
-create_corps_commander = {
-	name = "Greta"
-	picture = "Greta.tga"
-	traits = { griffon_race_trait hill_fighter }
-	id = 667905
-	skill = 1
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	female = yes
-}
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -19,13 +19,14 @@ guiTypes = {
 			quadTextureSprite ="GFX_frontend_bg"
 			alwaystransparent = yes
 		}
-	# Christmas TIMEEEE is over!!!
-		#iconType = {
-         #   name = "snow_anim"
-         #   position = { x = 0 y = 180 }
-         #   quadTextureSprite = "GFX_frontend_bg_snow_anim"
-        #  orientation = upper_left
-		#}
+		
+		# Christmas TIMEEEE is off :(
+		# iconType = {
+		# 	name = "snow_anim"
+		# 	position = { x = 0 y = 180 }
+		# 	quadTextureSprite = "GFX_frontend_bg_snow_anim"
+		# 	orientation = upper_left
+		# }
 
 		#containerWindowType = {
 		#	name = "luna_bg"
@@ -55,8 +56,9 @@ guiTypes = {
 		animation_type = decelerated
 		animation_time = 1000
 		size = { width = 256 height = 768}
-		
-		iconType = {
+
+		iconType =
+		{
 			name ="frontend_game_logo"
 			spriteType = "GFX_frontend_game_logo"
 			position = { x= 0 y = 20 }
@@ -121,15 +123,17 @@ guiTypes = {
 		animation_time = 1000
 		size = { width = 256 height = 768}
 		Orientation = lower_right
-		
-		ButtonType = {
-			name = "coop_logo"
-			position = { x= -105 y = 5 }
-			quadTextureSprite ="GFX_coop_logo"
-			clicksound = click_default
-			pdx_tooltip = "Click here to go to the Coop Steam Group"
-			web_link = "http://steamcommunity.com/groups/HOI4ModdingCoop"
-		}
+        
+		# Old Hoi4 Coop Logo (Replace or something)
+		#ButtonType = {
+		#	name = "coop_logo"
+		#	position = { x= -105 y = 5 }
+		#	quadTextureSprite ="GFX_coop_logo"
+		#	clicksound = click_default
+		#	pdx_tooltip = "Click here to go to the Coop Steam Group"
+		#	web_link = "http://steamcommunity.com/groups/HOI4ModdingCoop"
+		#}
+
 		ButtonType = {
 			name = "achievements_button"
 			position = { x = -50 y = 25 }
@@ -164,7 +168,7 @@ guiTypes = {
 		{
 			name ="frontend_game_version"
 			spriteType = "GFX_frontend_game_version"
-			position = { x = -17 y = -57 }
+			position = { x = -17 y = -142 }
 		}
 
 		containerWindowType = {
@@ -274,7 +278,7 @@ guiTypes = {
 		{
 			name ="frontend_game_version"
 			spriteType = "GFX_frontend_game_version"
-			position = { x = -17 y = -57 }
+			position = { x = -17 y = -142 }
 		}
 
 		containerWindowType = {
@@ -348,10 +352,20 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
+		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 16 y = 257 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
 
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 257 }
+			position = { x = 16 y = 297 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
@@ -409,7 +423,7 @@ guiTypes = {
 			position = { x = 180 y = 388 }
 			quadTextureSprite = "eaw_wiki"
 			pdx_tooltip = "EAW_WIKI_OPEN"
-			web_link = "https://equestria-at-war.wikia.com"
+			web_link = "https://equestriaatwar.miraheze.org/wiki/Equestria_at_War_Wiki"
 			clicksound = click_default
 		}
 

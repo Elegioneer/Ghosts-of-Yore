@@ -1,0 +1,946 @@
+characters = {
+	GOY_ARA_dorotheos_featherin = {
+		name = GOY_ARA_dorotheos_featherin
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARA/dorotheos.tga"
+			}
+			army = {
+				large="gfx/leaders/ARA/dorotheos.tga"
+				small="GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		country_leader = {
+			desc = "literally_alexander_desc"
+			ideology = nazism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+		traits = { griffon_race_trait politically_connected media_personality brilliant_strategist trait_reckless inspirational_leader aggressive_assaulter }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 3
+		legacy_id = 1333
+		}
+	}
+	GOY_ARA_margareth_featherin = {
+		name = GOY_ARA_margareth_featherin
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARA/Margareth.tga"
+			}
+		}
+		country_leader = {
+			desc = "generic_neutral_leader_desc"
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GOY_ARA_ciriaco = {
+		name = GOY_ARA_ciriaco
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARA/aranazbol.tga"
+			}
+		}
+		country_leader = {
+			desc = "another_nazbol_guy_desc"
+			ideology = rozenkampism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GOY_ARA_antioco_moro = {
+		name = GOY_ARA_antioco_moro
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARA/aradem.tga"
+			}
+		}
+		country_leader = {
+			desc = "generic_harmony_birb_desc"
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	ARA_baron_trubach={
+		name=LAK_baron_trubach
+		portraits={
+			civilian={
+				large="gfx/leaders/AVI/general_trubach.tga"
+			}
+		}
+	}
+	GOY_ARA_soter = {
+		name = soter_advisor
+		portraits = {
+			army = {
+				large="gfx/leaders/ARA/soter.tga"
+				small="gfx/interface/ideas/idea_ARA_soter.dds"
+			}
+			civilian = {
+				large="gfx/leaders/ARA/soter.tga"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait career_officer ranger }
+		desc = "soter_desc"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+		legacy_id = 1334
+		}
+		advisor = {
+		cost = 200
+		slot = high_command
+		ledger = army
+		idea_token = soter_advisor
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				custom_trigger_tooltip = {
+				    tooltip = ARA_soter_army
+				    has_unit_leader = 1334
+				}
+			}
+			visible = {
+
+			}
+			traits = { army_logistics_3 }
+		}
+	}
+	GOY_ARA_cassander = {
+		name = cassander_advisor
+		portraits = {
+			army = {
+				large="gfx/leaders/ARA/cassander.tga"
+				small="gfx/interface/ideas/idea_ARA_cassander.dds"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait infantry_officer commando }
+		desc = "cassander_desc"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 3
+		logistics_skill = 3
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = cassander_advisor
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+			}
+			visible = {
+
+			}
+			traits = { army_commando_2 }
+		}
+	}
+	GOY_ARA_lysimachus = {
+		name = ARA_lysimachus
+		portraits = {
+			army = {
+				large="gfx/leaders/ARA/Lysimachus.tga"
+				small="gfx/interface/ideas/idea_ARA_lysimachus.dds"
+			}
+			civilian = {
+				large="gfx/leaders/ARA/Lysimachus.tga"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait harsh_leader organizer }
+		desc = "lysimachus_desc"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 1335
+		}
+		advisor = {
+		cost = 50
+		slot = army_chief
+		idea_token = lysimachus_advisor
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				custom_trigger_tooltip = {
+				    tooltip = ARA_lysimachus_army
+				    has_unit_leader = 1335
+				}
+			}
+			visible = {
+
+			}
+			traits = { army_chief_morale_1 }
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = ARA_lysimachus
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				custom_trigger_tooltip = {
+				    tooltip = ARA_lysimachus_army
+				    has_unit_leader = 1335
+				}
+			}
+			visible = {
+
+			}
+			traits = { army_chief_drill_2 }
+		}
+	}
+	GOY_ARA_nicator = {
+		name = ARA_nicator
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARA/nicator.tga"
+			}
+			army = {
+				large="gfx/leaders/ARA/nicator.tga"
+				small="gfx/interface/ideas/idea_ARA_nicator.dds"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait career_officer fortress_buster bearer_of_artillery }
+		desc = "nicator_desc"
+		skill = 2
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		legacy_id = 1336
+		}
+		advisor = {
+		cost = 200
+		slot = army_chief
+		idea_token = nicator_advisor
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				custom_trigger_tooltip = {
+				    tooltip = ARA_nicator_army
+				    has_unit_leader = 1336
+				}
+			}
+			visible = {
+
+			}
+			traits = { army_chief_planning_3 }
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = ARA_nicator
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				custom_trigger_tooltip = {
+				    tooltip = ARA_nicator_army
+				    has_unit_leader = 1336
+				}
+			}
+			visible = {
+
+			}
+			traits = { army_artillery_2 }
+		}
+	}
+	GOY_ARA_prelate_heraclius = {
+		name = prelate_heraclius
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BRF_Prelate"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = prelate_heraclius
+		allowed = {
+				original_tag = "ARA"
+				NOT = {
+					has_country_flag = ARA_reform_the_archonates_flag
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_arantigos_boreas_flag
+			}
+			visible = {
+			    NOT = {
+				    has_country_flag = ARA_reform_the_archonates_flag
+				}
+			}
+			traits = { friendly_priest }
+		}
+	}
+	GOY_ARA_fetivola_advisor = {
+		name = ARA_fetivola_advisor
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ARA_fetivola"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_fetivola_advisor
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {   
+			}
+			visible = {
+				has_country_flag = ARA_FLAG_fetivola
+			}
+			traits = { GOY_traditionalist_philosopher }
+		}
+	}
+	GOY_ARA_lord_goldstone = {
+		name = ARA_lord_goldstone
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_ARA_lord_goldstone.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_lord_goldstone
+		allowed = {
+				OR = {
+					original_tag = "ARA"
+					original_tag = "BOI"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				controls_state = 389
+			}
+			visible = {
+			    controls_state = 389
+				has_country_flag = ARA_glenda_and_goldstein
+			}
+			traits = { smooth_talking_charmer }
+		}
+	}
+	GOY_ARA_glenda = {
+		name = ARA_glenda
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_ARA_glenda.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_glenda
+		allowed = {
+				OR = {
+					original_tag = "ARA"
+					original_tag = "BOI"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				controls_state = 389
+			}
+			visible = {
+			    controls_state = 389
+				has_country_flag = ARA_glenda_and_goldstein
+			}
+			traits = { silent_workgriffon }
+		}
+	}
+	GOY_ARA_archon_demetrius = {
+		name = ARA_archon_demetrius
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BRF_Prelate"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_archon_demetrius
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_reform_the_archonates_flag
+			}
+			visible = {
+				has_country_flag = ARA_reform_the_archonates_flag
+			}
+			traits = { archon_boreas }
+		}
+	}
+	GOY_ARA_literally_machiavelli = {
+		name = ARA_literally_machiavelli
+		portraits = {
+			army = {
+				large="gfx/leaders/FLO/Richter.tga"
+			}
+			civilian = {
+				small = "GFX_idea_FLO_Nicolas"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_literally_machiavelli
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_machiavelli_flag
+			}
+			visible = {
+				has_country_flag = ARA_machiavelli_flag
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	GOY_ARA_treasurer = {
+		name = ARA_treasurer
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_ARA_hochsklause.dds"
+				large = "gfx/leaders/TRD/TRD_Ferdinand_von_Hochsklaue.tga"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_treasurer
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				controls_state = 381
+			}
+			visible = {
+				owns_state = 381
+				has_country_flag = ARA_treasurer_flag
+			}
+			traits = { imperial_treasurer }
+		}
+	}
+	GOY_ARA_mysterio = {
+		name = ARA_mysterio
+		portraits = {
+			civilian = {
+				small = "GFX_idea_JER_generic_advisor"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_mysterio
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { head_of_intelligence }
+		}
+	}
+	GOY_ARA_fortifier = {
+		name = ARA_fortifier
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_griffon_with_glasses"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_fortifier
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { fortification_engineer }
+		}
+	}
+	GOY_ARA_warstrialist = {
+		name = ARA_warstrialist
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_griffon_with_monocle"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_warstrialist
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { war_industrialist }
+		}
+	}
+	GOY_ARA_instrialist = {
+		name = ARA_instrialist
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_griffon_politician"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_instrialist
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { captain_of_industry }
+		}
+	}
+	GOY_ARA_archon_erion = {
+		name = ARA_archon_erion
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRI_archon_erion"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = ARA_archon_erion
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_dorotheos_endorsed_erion
+				controls_state = 674
+			}
+			visible = {
+				has_country_flag = ARA_dorotheos_endorsed_erion
+			}
+ 			traits = { archon_eyr }
+		}
+	}
+	GOY_ARA_alhorsered = {
+		name = ARA_alhorsered
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_ARA_alhorsered.dds"
+			}
+		}
+		advisor = {
+		slot = theorist
+		ledger = army
+		idea_token = ARA_alhorsered
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_completed_focus = ARA_imperial_research_initiative
+			}
+			visible = {
+				has_completed_focus = ARA_imperial_research_initiative
+			}
+ 			traits = { unhinged_scientist }
+		}
+	}
+	GOY_ARA_titus = {
+		name = ARA_titus
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_nuclear_scientist"
+			}
+		}
+		advisor = {
+		slot = theorist
+		ledger = air
+		idea_token = ARA_titus
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { rocket_scientist }
+			research_bonus = {
+				rocketry = 0.15
+			}
+		}
+	}
+	GOY_ARA_stolidus_stultus = {
+		name = ARA_stolidus_stultus
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_nuclear_scientist"
+			}
+		}
+		advisor = {
+		slot = theorist
+		ledger = army
+		idea_token = ARA_stolidus_stultus
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { nuclear_scientist }
+			research_bonus = {
+				nuclear = 0.15
+		}
+	}
+	}
+	GOY_ARA_miga_ouranos = {
+		name = ARA_miga_ouranos
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_grey"
+			}
+		}
+		advisor = {
+		cost = 200
+		slot = air_chief
+		idea_token = ARA_miga_ouranos
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    custom_trigger_tooltip = {
+				    has_country_flag = ARA_reorganise_high_command_flag
+				    tooltip = ARA_miga_busy
+				    NOT = {
+					    has_idea = ARA_miga_ouranos_2
+					}
+				}
+			}
+			visible = {
+			}
+			traits = { air_chief_ground_support_3 }
+		}
+		}
+	GOY_ARA_miga_ouranos2 = {
+		name = ARA_miga_ouranos
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_grey"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = air
+		idea_token = ARA_miga_ouranos_2
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    has_country_flag = ARA_reorganise_high_command_flag
+			    custom_trigger_tooltip = {
+				    tooltip = ARA_miga_busy
+				    NOT = {
+					    has_idea = ARA_miga_ouranos
+					}
+				}
+				}
+			visible = {
+
+			}
+ 			traits = { air_strategic_bombing_2 }
+		}
+	}
+	GOY_ARA_bellerophontes = {
+		name = ARA_bellerophontes
+		portraits = {
+			army = {
+				small = "GFX_idea_TRD_Gerwin_Palaemon"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = air_chief
+		idea_token = ARA_bellerophontes
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    custom_trigger_tooltip = {
+				    has_country_flag = ARA_reorganise_high_command_flag
+				    tooltip = ARA_bellerophontes_busy
+				    NOT = {
+					    has_idea = ARA_bellerophontes_2
+					}
+				}
+			}
+			visible = {
+
+			}
+			traits = { air_chief_all_weather_2 }
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = air
+		idea_token = ARA_bellerophontes
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    has_country_flag = ARA_reorganise_high_command_flag
+			    custom_trigger_tooltip = {
+				    tooltip = ARA_bellerophontes_busy
+				    NOT = {
+					    has_idea = ARA_bellerophontes
+					}
+				}	
+			}
+			visible = {
+
+			}
+ 			traits = { dive_bomber }
+		}
+	}
+	GOY_ARA_erich = {
+		name = ARA_erich
+		portraits = {
+			army = {
+				large = "gfx/leaders/NLR/Erich.tga"
+				small = "GFX_idea_CRY_eric"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = navy_chief
+		idea_token = ARA_erich
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    has_completed_focus = ARA_establish_imperial_navy
+			}
+			visible = {
+			    has_completed_focus = ARA_establish_imperial_navy
+			}
+ 			traits = { navy_chief_decisive_battle_2 }
+		}
+	}
+	GOY_ARA_federico = {
+		name = ARA_federico
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_albert"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = navy_chief
+		idea_token = ARA_federico
+		allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    owns_state = 371
+			}
+			visible = {
+			    owns_state = 371
+			}
+ 			traits = { navy_chief_commerce_raiding_2 }
+		}
+	}
+	GOY_ARA_craterus = {
+		name = craterus_advisor
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARA/Craterus.tga"
+			}
+			army = {
+				large="gfx/leaders/ARA/Craterus.tga"
+				small="gfx/interface/ideas/idea_ARA_Craterus.dds"
+			}
+		}
+	}
+	GOY_ARA_arantigos = {
+		name = GOY_ARA_arantigos
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARA/dorotheos.tga"
+			}
+		}
+	}
+	GOY_ARA_reiner = {
+		name = GOY_ARA_reiner
+	}
+	GOY_ARA_nicatorking = {
+		name = ARA_nicatorking
+		portraits = {
+			civilian = {
+				large="gfx/leaders/ARA/nicator.tga"
+			}
+			army = {
+				large="gfx/leaders/ARA/nicator.tga"
+				small="gfx/interface/ideas/idea_ARA_nicator.dds"
+			}
+		}
+	}
+	GOY_ARA_hermanepuppet = {
+		name = GOY_ARA_hermanepuppet
+		portraits = {
+			civilian = {
+				large="gfx/leaders/FBK/HermaneGering.tga"
+			}
+		}
+	}
+	GOY_ARA_lysimachuspuppet = {
+		name = GOY_ARA_lysimachuspuppet
+		portraits = {
+			civilian = {
+				large= "gfx/leaders/ARA/lysimachus.tga"
+			}
+		}
+	}
+	GOY_ARA_riverprotector = {
+		name = GOY_ARA_riverprotector
+		portraits = {
+			civilian = {
+				large= "gfx/leaders/RCT/pumpkin_swirl.tga"
+			}
+		}
+	}
+	GOY_ARA_headmasterapesios = {
+		name = GOY_ARA_headmasterapesios
+		portraits = {
+			civilian = {
+				large= "gfx/leaders/Asia/portrait_griffon_generic_1.dds"
+			}
+		}
+	}
+	GOY_ARA_soterpuppet = {
+		name = GOY_ARA_soterpuppet
+		portraits = {
+			civilian = {
+				large= "gfx/leaders/ARA/soter.tga"
+			}
+		}
+	}
+}

@@ -1,25 +1,32 @@
 NTR_spirits_blessings_cat = {
-    icon = generic_political_actions
-	
+    icon = book
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
-		OR = {
-		}
+		has_country_flag = NTR_flag_spirit_magic_unlock
 	}
 }
 
 NTR_dark_magic_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_dark_magic_unlock
+		has_government = fascism
+		is_subject = no
 	}
 }
 
 NTR_liberate_np_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_liberate_np_unlock
@@ -28,7 +35,9 @@ NTR_liberate_np_cat = {
 
 NTR_smuggling_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_smuggling_unlock
@@ -37,7 +46,9 @@ NTR_smuggling_cat = {
 
 NTR_expand_nl_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_expand_league_unlock
@@ -46,7 +57,9 @@ NTR_expand_nl_cat = {
 
 NTR_pony_relations_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_pony_relations_unlock
@@ -55,27 +68,66 @@ NTR_pony_relations_cat = {
 
 NTR_thomas_the_steam_engine_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_choo_choo_unlock
 	}
 }
 
-NTR_expand_mining_ops = {
+NTR_expand_mining_ops_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_mining_unlock
 	}
 }
 
-NTR_knowledge_quest = {
+NTR_knowledge_quest_cat = {
     icon = generic_political_actions
-	
+	allowed = {
+        tag = NTR
+    }
 	visible = {
 	    tag = NTR
 		has_country_flag = NTR_flag_POGress_unlock
+	}
+}
+NTR_dark_tower_cat = {
+    icon = GFX_decision_category_palace_of_the_soviets_cat
+	allowed = {
+        tag = NTR
+    }
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+}
+NTR_slave_mines_cat = {
+    icon = GFX_decision_bird_skull
+	allowed = {
+        tag = NTR
+    }
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+}
+NTR_last_griffon_alliance_cat = {
+    icon = GFX_decision_griffon
+	allowed = {
+        tag = NTR
+    }
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_ice4
+		hidden_trigger = {
+		has_completed_focus = NTR_purge_herz
+		}
 	}
 }

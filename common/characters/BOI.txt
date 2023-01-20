@@ -1,0 +1,1088 @@
+characters = {
+	GOY_BOI_grandpagruff = {
+		name = GOY_BOI_grandpagruff
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOI/Gruff.tga"
+			}
+			army = {
+				large="gfx/leaders/BOI/Gruff.tga"
+				small="GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		country_leader = {
+			desc = "BOI_grandpa_desc"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+			traits = {
+				GOY_caretaker
+			}
+		}
+		corps_commander = {
+			traits = { griffon_race_trait old_guard trait_cautious commando }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 667902
+		}
+	}
+	GOY_BOI_goldstone = {
+		name = GOY_BOI_goldstone
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOI/GAW_Goldstone.tga"
+			}
+		}
+		country_leader = {
+			desc = "BOI_goldstone_desc"
+			ideology = plutocracy
+			expire = "1965.1.1.1"
+			id = -1
+			traits = {
+				GOY_schemer
+			}
+		}
+	}
+	GOY_BOI_gilda = {
+		name = GOY_BOI_gilda
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOI/Gilda.dds"
+				small = "gfx/interface/ideas/BOI_idea_gilda.dds"
+			}
+		}
+		country_leader = {
+			desc = "BOI_gilda_desc"
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+			traits = {
+				GOY_screamingrepublican
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gilda 
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = BOI_FLAG_gilda_advisor_available
+			}
+			visible = {
+			    has_government = democratic
+			}
+			traits = { GOY_republican_icon }
+		}
+	}
+	GOY_BOI_gertrude = {
+		name = GOY_BOI_gertrude
+		portraits = {
+		}
+		country_leader = {
+			desc = ""
+			ideology = democratic_socialism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	BOI_king_trubach={
+		name=BOI_king_trubach
+		portraits={
+			civilian={
+				large="gfx/leaders/AVI/general_trubach.tga"
+			}
+		}
+	}
+	GOY_BOI_grauschnabel = {
+		name = BOI_klawsewitz_advisor
+		portraits = {
+			army = {
+				large="gfx/leaders/BOI/GAW_Gerhard.tga"
+				small="gfx/interface/ideas/idea_BOI_karl.dds"
+			}
+		}
+		field_marshal = {
+		traits = { griffon_race_trait inflexible_strategist unyielding_defender trait_mountaineer  }
+		skill = 3
+		attack_skill = 2
+		defense_skill = 4
+		planning_skill = 3
+		logistics_skill = 3
+		legacy_id = 667903
+		}
+		advisor = {
+		cost = 100
+		slot = army_chief
+		idea_token = BOI_klawsewitz_advisor
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+
+			}
+			traits = { GOY_RGDF_leader }
+		}
+	}
+	GOY_BOI_juliusrezdomb = {
+		name = BOI_julius_advisor
+		portraits = {
+			army = {
+				large="gfx/leaders/BOI/GAW_Julius.dds"
+				small="gfx/interface/ideas/BOI_idea_julius.dds"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait organizer skilled_staffer }
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 10100
+		}
+		advisor = {
+		slot = theorist
+		ledger = army
+		idea_token = BOI_julius_advisor
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { military_theorist }
+	}
+	}
+	GOY_BOI_greta = {
+		name = BOI_greta
+		portraits = {
+			civilian = {
+			large= "gfx/leaders/BOI/Greta.tga"
+			}
+			army = {
+				large= "gfx/leaders/BOI/Greta.tga"
+				small= "gfx/interface/ideas/BOI_idea_greta.dds"
+			}
+		}
+		corps_commander = {
+		traits = { griffon_race_trait hill_fighter }
+		skill = 1
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+		legacy_id = 667905
+		}
+		advisor = {
+		cost = 100
+		slot = army_chief
+		idea_token = BOI_greta
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			    custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_greta
+				    NOT = {
+				        has_country_flag = goy_boi_presidentgreta
+				    }
+				}
+			}
+			visible = {
+			    NOT = {
+				    has_country_flag = BOI_goldstone_coup_success
+				}
+			}
+			traits = { army_chief_maneuver_2 }
+		}
+	}
+	GOY_BOI_dottedline = {
+		name = BOI_dotted_line
+		portraits = {
+			civilian = {
+				small = "GFX_idea_EQS_SOL_dotted_line"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_dotted_line
+		allowed = {
+				OR = {
+					original_tag = "BOI"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+			}
+			traits = { armaments_organizer }
+		}
+	}
+	GOY_BOI_erwin_von_drach = {
+		name = BOI_erwin_von_drach
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SRS_generico_1"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_erwin_von_drach
+		allowed = {
+				OR = {
+					original_tag = "BOI"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_completed_focus = BOI_noblegriffs
+			}
+			visible = {
+			    has_government = fascism
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	GOY_BOI_glenda = {
+		name = BOI_glenda
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_ARA_glenda.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_glenda
+		allowed = {
+				OR = {
+					original_tag = "BOI"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { silent_workgriffon }
+		}
+	}
+	GOY_BOI_gabby = {
+		name = BOI_gabby
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOI/Gabby.dds"
+				small = "gfx/interface/ideas/BOI_idea_gabby.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gabby
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_government = democratic
+				custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_gabby
+				    NOT = {
+				        has_country_flag = goy_boi_presidentgabby
+			            }
+				    }
+				}
+			visible = {
+
+			}
+			traits = { GOY_cutie_griffon_crusader }
+		}
+	}
+	GOY_BOI_garner = {
+		name = BOI_garner
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOI/GOY_Garner.tga"
+				small = "gfx/interface/ideas/BOI_idea_garner.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_garner
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				custom_trigger_tooltip = {
+				    tooltip = BOI_CTTT_not_president_garner
+				    NOT = {
+				        has_country_flag = goy_boi_presidentgarner
+			            }
+				}
+			}
+			visible = {
+
+			}
+			traits = { GOY_thrifty_broker }
+		}
+	}
+	GOY_BOI_gimmemoore = {
+		name = BOI_gimme_moore
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/BOI_idea_gimme_moore.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gimme_moore
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { captain_of_industry }
+		}
+	}
+	GOY_BOI_griselda = {
+		name = BOI_griselda
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/BOI_idea_griselda.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_griselda
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { backroom_backstabber }
+		}
+	}
+	GOY_BOI_gunther = {
+		name = BOI_gunther
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/BOI_idea_gunther.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gunther
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { head_of_intelligence }
+		}
+	}
+	GOY_BOI_gerard = {
+		name = BOI_gerard
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/BOI_idea_gerard.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gerard
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { ruthless_capitalist }
+		}
+	}
+	GOY_BOI_gigi = {
+		name = BOI_gigi
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/BOI_idea_gigi.dds"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gigi
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { compassionate_gentleman }
+		}
+	}
+	GOY_BOI_gunther_silverfeather = {
+		name = BOI_gunther_silverfeather
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BRF_Prelate"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = BOI_gunther_silverfeather
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				NOT = {
+			    has_country_flag = BOI_FLAG_archons_unlocked			
+				}
+			}
+			visible = {
+			    has_country_flag = BOI_FLAG_gunther_advisor_unlocked
+			}
+			traits = { friendly_priest }
+		}
+	}
+	GOY_BOI_gudrun = {
+		name = BOI_gudrun
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_nuclear_scientist"
+			}
+		}
+		advisor = {
+		slot = theorist
+		ledger = army
+		idea_token = BOI_gudrun
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+ 			traits = { nuclear_scientist }
+			research_bonus = {
+				nuclear = 0.15
+		}
+	}
+	}
+	GOY_BOI_silver_storm = {
+		name = BOI_silver_storm_advisor
+		portraits = {
+			army = {
+				large = "gfx/leaders/CES/Stemis.tga"
+				small = "gfx/interface/ideas//idea_BOI_silverstorm.dds"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = BOI_silver_storm_advisor
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+				has_country_flag = BOI_goldstone_coup_success
+			}
+			traits = { army_logistics_2 }
+		}
+	}
+	GOY_BOI_blueblood = {
+		name = BOI_blueblood
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_blueblood"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = BOI_blueblood
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+			}
+			traits = { army_logistics_2 }
+		}
+	}
+	GOY_BOI_klaus_steelfeather = {
+		name = BOI_klaus_steelfeather_advisor
+		portraits = {
+			army = {
+				large = "gfx/leaders/BOI/GOY_Klaussteel.tga"
+				small = "gfx/interface/ideas/idea_BOI_steelfeather.dds"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = high_command
+		ledger = army
+		idea_token = BOI_klaus_steelfeather_advisor
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+				has_completed_focus = BOI_loyalty_reward
+			}
+			traits = { army_chief_morale_2 }
+		}
+	}
+	GOY_BOI_gerdr = {
+		name = BOI_gerdr
+		portraits = {
+			army = {
+				small = "GFX_idea_SRS_army_chief_def"
+			}
+		}
+		advisor = {
+		cost = 50
+		slot = high_command
+		ledger = army
+		idea_token = BOI_gerdr
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { army_infantry_1 }
+		}
+	}
+	GOY_BOI_gerlinde = {
+		name = BOI_gerlinde
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_grey"
+			}
+		}
+		advisor = {
+		cost = 50
+		slot = high_command
+		ledger = army
+		idea_token = BOI_gerlinde
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { army_commando_1 }
+		}
+	}
+	GOY_BOI_georg = {
+		name = BOI_georg
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_with_cap"
+			}
+		}
+		advisor = {
+		cost = 50
+		slot = high_command
+		ledger = army
+		idea_token = BOI_georg
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { army_armored_1 }
+		}
+	}
+	GOY_BOI_mikhaylo = {
+		name = BOI_mikhaylo_advisor
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_15.dds"
+				small = "gfx/interface/ideas/idea_BOI_mykhailo.dds"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = army_chief
+		idea_token = BOI_mikhaylo_advisor
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			has_country_flag = BOI_goldstone_coup_success
+			}
+			traits = { army_chief_offensive_2 }
+		}
+	}
+	GOY_BOI_gretel = {
+		name = BOI_gretel
+		portraits = {
+			army = {
+				small = "GFX_idea_SRS_air_chief_all_weather"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = air_chief
+		idea_token = BOI_gretel
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { air_chief_all_weather_2 }
+		}
+	}
+	GOY_BOI_guido = {
+		name = BOI_guido
+		portraits = {
+			army = {
+				small = "GFX_idea_MNC_advisor_16"
+			}
+		}
+		advisor = {
+		cost = 50
+		slot = air_chief
+		idea_token = BOI_guido
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { air_chief_ground_support_1 }
+		}
+	}
+	GOY_BOI_guntram = {
+		name = BOI_guntram
+		portraits = {
+			army = {
+				small = "GFX_idea_HAU_air_warfare_theorist"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = air_chief
+		idea_token = BOI_guntram
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { air_air_superiority_2 }
+		}
+	}
+	GOY_BOI_cynosura = {
+		name = BOI_cynosura
+		portraits = {
+			army = {
+				small = "GFX_idea_EQS_cynosura"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = navy_chief
+		idea_token = BOI_cynosura
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				EQS = {
+				    exists = no
+				}
+				ELF = {
+				    exists = no
+				}
+			}
+			visible = {
+			    has_completed_focus = BOI_harbour_equestrian_elites
+			}
+			traits = { navy_chief_decisive_battle_2 }
+		}
+	}
+	GOY_BOI_bechard = {
+		name = BOI_bechard
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/BOI_idea_bechard.dds"
+			}
+		}
+		advisor = {
+		cost = 200
+		slot = navy_chief
+		idea_token = BOI_bechard
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_completed_focus = BOI_oligarchs
+			}
+			visible = {
+			    has_government = fascism
+			}
+			traits = { navy_chief_commerce_raiding_3 }
+		}
+	}
+	GOY_BOI_gottlob = {
+		name = BOI_gottlob
+		portraits = {
+			army = {
+				small = "GFX_idea_MNC_advisor_15"
+			}
+		}
+		advisor = {
+		cost = 50
+		slot = navy_chief
+		idea_token = BOI_gottlob
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { navy_chief_naval_aviation_1 }
+		}
+	}
+	GOY_BOI_gerulf = {
+		name = BOI_gerulf
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_gunther"
+			}
+		}
+		advisor = {
+		cost = 100
+		slot = navy_chief
+		idea_token = BOI_gerulf
+		allowed = {
+				original_tag = "BOI"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { navy_chief_maneuver_2 }
+		}
+	}
+	GOY_BOI_gestal = {
+		name = GOY_BOI_gestal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BOI/GOY_Gestal.tga"
+			}
+		}
+	}
+	GOY_BOI_trueklawsewitz = {
+		name = GOY_BOI_trueklawsewitz
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+			}
+		}
+	}
+	GOY_BOI_gallus = {
+		name = GOY_BOI_gallus
+		portraits = {
+			civilian = {
+				large="gfx/leaders/BOI/GAW_Gallus.tga"
+			}
+			army = {
+				large="gfx/leaders/BOI/GAW_Gallus.tga"
+				small="GFX_idea_gallus"
+			}
+		}
+	}
+	GOY_BOI_eros = {
+		name = GOY_BOI_eros
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GRI/Fash_pope.tga"
+			}
+		}
+	}
+	GOY_BOI_grover = {
+		name = GOY_BOI_grover
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRI/Grover_VI_good.tga"
+			}
+		}			
+	}	
+	GOY_BOI_duchess = {
+		name = GOY_BOI_duchess
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GRI/Gabriela.tga"
+			}
+		}
+	}	
+	GOY_BOI_erich_ebonwing = {
+		name = GOY_BOI_ebonwing
+		portraits = {
+			army = {
+				large="gfx/leaders/GRI/Helltalon.tga"
+				small="gfx/interface/ideas/Advisors/GRI/GRI_helltalon.tga"
+			}
+		}
+	}
+	GOY_BOI_august_duskwing = {
+		name = GOY_BOI_duskwing
+		portraits = {
+			army = {
+				large="gfx/leaders/GRI/August_Duskwing.tga"			
+				small="gfx/interface/ideas/Advisors/GRI/GRI_august_duskwing.tga"
+			}
+		}
+	}
+	GOY_BOI_teodor_frohlich = {
+		name = GOY_BOI_teodor
+		portraits = {
+			army = {
+				large="gfx/leaders/GRI/Teodor.tga"			
+				small="gfx/interface/ideas/Advisors/GRI/GRI_teodor.tga"
+			}
+		}
+	}
+	GOY_BOI_reinhold_thundertail = {
+		name = GOY_BOI_reinhold
+		portraits = {
+			army = {
+				large="gfx/leaders/GRI/Reinhold_Thundertail.tga"			
+				small="gfx/interface/ideas/Advisors/GRI/GRI_reinhold_thundertail.tga"
+			}
+		}
+	}
+	GOY_BOI_oskar_silverfeather = {
+		name = GOY_BOI_silverfeather
+		portraits = {
+			army = {
+				large="gfx/leaders/GRI/Oskar.tga"			
+				small="gfx/interface/ideas/Advisors/GRI/GRI_oskar.tga"
+			}
+		}
+	}
+	GOY_BOI_archon_proteus = {
+		name = GOY_BOI_proteus
+		portraits = {
+			civilian = {
+				large="gfx/leaders/GRI/Proteus.tga"			
+				small="GFX_idea_GRI_archon_proteus"
+			}
+			}
+		advisor = {
+			slot = political_advisor
+			idea_token = BOI_archon_arcturius
+			allowed = {
+					original_tag = BOI
+			}
+			available = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			visible = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { archon_arcturius }
+		}			
+		}
+	GOY_BOI_archon_hephaestus = {
+		name = GOY_BOI_hephaestus
+		portraits = {
+			civilian = {
+				small="GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BOI_archon_eyr
+			allowed = {
+					original_tag = BOI
+			}
+			available = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			visible = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { archon_eyr }
+		}			
+	}
+	GOY_BOI_archon_lucinus = {
+		name = GOY_BOI_lucinus
+		portraits = {
+			civilian = {
+				small="GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = BOI_archon_boreas
+			allowed = {
+					original_tag = BOI
+			}
+			available = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			visible = {
+				has_country_flag = BOI_FLAG_archons_unlocked
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { archon_boreas }
+		}			
+	}	
+}

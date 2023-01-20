@@ -228,7 +228,7 @@
 			471 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}	
@@ -245,7 +245,19 @@
 					level = 1
 					instant_build = yes
 				}
-			}	
+			}
+			build_railway = {
+                level = 1
+				start_province = 12921
+                target_province = 8207
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 7192
+                target_province = 753
+                build_only_on_allied = yes
+            }			
 		}
 	}
 	shared_focus = {
@@ -262,13 +274,18 @@
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			389 = {
-			    add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}	
+			build_railway = {
+                level = 1
+				start_province = 12921
+                target_province = 7192
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 7210
+                target_province = 7192
+                build_only_on_allied = yes
+            }
 		}
 	}
 	shared_focus = {
@@ -292,17 +309,35 @@
 			531 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}	
 			488 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
-			}	
+			}
+			build_railway = {
+                level = 1
+				start_province = 7192
+                target_province = 4584
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 12921
+                target_province = 10525
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 10525
+                target_province = 4584
+                build_only_on_allied = yes
+            }			
 		}
 	}
 	shared_focus = {
@@ -325,7 +360,7 @@
 			383 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}	
@@ -354,14 +389,14 @@
 			532 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}	
 			490 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}	
@@ -375,17 +410,35 @@
 			446 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}	
 			489 = {
 			    add_building_construction = {
 					type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-			}	
+			}
+			build_railway = {
+                level = 1
+				start_province = 4584
+                target_province = 12433
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 10525
+                target_province = 10025
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 10025
+                target_province = 4528
+                build_only_on_allied = yes
+            }			
 		}
 	}
 	shared_focus = {
@@ -593,7 +646,7 @@
 			    add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 				    type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -963,22 +1016,21 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-			    name = veterans_bonus
-			    bonus = 1
-			    uses = 1
-			    category = land_doctrine
-		    }
-			create_corps_commander = {
-	            name = "Karl von Clawsewitz"
-	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
-	            traits = { griffon_race_trait old_guard inflexible_strategist career_officer }
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+		add_corps_commander_role = {
+			character = GOY_BOI_trueklawsewitz
+				traits = { griffon_race_trait old_guard inflexible_strategist career_officer }
 	            skill = 2
 	            attack_skill = 2
 	            defense_skill = 2
 	            planning_skill = 3
 	            logistics_skill = 3
-            }
+		}
 		}
 	}
 	shared_focus = {
@@ -1224,12 +1276,12 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-			    name = new_age_doctrine_bonus
-			    bonus = 1
-			    uses = 2
-			    category = land_doctrine
-		    }
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
 		}
 	}
 	shared_focus = {
@@ -1687,12 +1739,12 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-			    name = our_naval_doctrine_bonus
-			    bonus = 1
-			    uses = 2
-			    category = naval_doctrine
-		    }
+		add_doctrine_cost_reduction = {
+			name = naval_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
 		}
 	}
 	shared_focus = {
@@ -1857,9 +1909,6 @@
 		cost = 5.00
 		relative_position_id = BOI_create_airforce
 		prerequisite = { focus = BOI_create_airforce }
-		bypass = {
-		    has_tech = fighter3
-		}
 
 		ai_will_do = {
 			factor = 1
@@ -1869,156 +1918,30 @@
 		    add_political_power = -50
 			if = {
 			    limit = {
-				    has_tech = early_fighter
+				    has_tech = iw_small_airframe
 				}
-				else = {
-			        set_technology = {
-			            early_fighter = 1
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 1
+					category = light_air
+				}
+				add_equipment_to_stockpile = {
+			        type = fighter_equipment_0 
+				    amount = 50
+			    }
+				else = {				
+					set_technology = {
+			            iw_small_airframe = 1
 			        }
-			        add_equipment_to_stockpile = {
-			            type = fighter_equipment_0 
-				        amount = 50
-			        }
+					generic_early_fighter = yes
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						variant_name = "Early Fighter"
+						amount = 100
+					}
 				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter1
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = early_fighter
-							date < 1007.1.1
-						}
-			            add_tech_bonus = {
-			                name = basic_fighter_bonus_1
-			                bonus = 0.5
-			                uses = 1
-			                technology = fighter1
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_1
-				            amount = 50
-			            }
-				    }
-				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter1
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = early_fighter
-							date > 1007.1.1
-						}
-			            add_tech_bonus = {
-			                name = basic_fighter_bonus
-			                bonus = 1
-			                uses = 1
-			                technology = fighter1
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_1
-				            amount = 50
-			            }
-				    }
-				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter2
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = fighter1
-							date < 1011.1.1
-						}
-			            add_tech_bonus = {
-			                name = improved_fighter_bonus_1
-			                bonus = 0.45
-			                uses = 1
-			                technology = fighter2
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_2
-				            amount = 50
-			            }
-				    }
-				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter2
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = fighter1
-							date > 1011.1.1
-						}
-			            add_tech_bonus = {
-			                name = improved_fighter_bonus
-			                bonus = 0.9
-			                uses = 1
-			                technology = fighter2
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_2
-				            amount = 50
-			            }
-				    }
-				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter3
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = fighter2
-							date < 1015.1.1
-						}
-			            add_tech_bonus = {
-			                name = advanced_fighter_bonus_1
-			                bonus = 0.25
-			                uses = 1
-			                technology = fighter3
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_3
-				            amount = 50
-			            }
-				    }
-				}
-		    }
-			if = {
-			    limit = {
-				    has_tech = fighter3
-				}
-				else = {
-				    if = {
-					    limit = {
-						    has_tech = fighter2
-							date > 1015.1.1
-						}
-			            add_tech_bonus = {
-			                name = advanced_fighter_bonus
-			                bonus = 0.75
-			                uses = 1
-			                technology = fighter3
-		                }
-			            add_equipment_to_stockpile = {
-			                type = fighter_equipment_3
-				            amount = 50
-			            }
-				    }
-				}
-		    }
+			}				
 		}
 	}
 	shared_focus = {
@@ -2035,12 +1958,12 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-			    name = air_doctrine_bonus
-			    bonus = 1
-			    uses = 2
-			    category = air_doctrine
-		    }
+		add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = air_doctrine
+		}
 		}
 	}
 	shared_focus = {
@@ -2058,11 +1981,11 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			    name = tacbomb_bonus
-			    bonus = 1
-			    uses = 2
-			    category = tactical_bomber
-		    }
+				name = medium_air
+				bonus = 1.0
+				uses = 2
+				category = medium_air
+				}
 		}
 	}
 	shared_focus = {
@@ -2098,11 +2021,11 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			    name = cas_bonus
-			    bonus = 1
-			    uses = 2
-			    category = cas_bomber
-		    }
+				name = plane_modules_tech
+				bonus = 1.0
+				uses = 2
+				category = plane_modules_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -2120,11 +2043,11 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			    name = strategic_bombers_bonus
-			    bonus = 1
-			    uses = 2
-			    category = cat_strategic_bomber
-		    }
+				name = heavy_air
+				bonus = 1.0
+				uses = 2
+				category = heavy_air
+				}
 		}
 	}
 	shared_focus = {
@@ -2178,11 +2101,11 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			    name = fighter_bonus
-			    bonus = 1
-			    uses = 2
-			    category = light_fighter
-		    }
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_air
+			}
 		}
 	}
 	shared_focus = {
@@ -2209,7 +2132,7 @@
 	}
 	shared_focus = {
 		id = BOI_wetterkommando
-		icon = GFX_goal_COS_Peace 
+		icon = GFX_viira_climate 
 		x = 0
 		y = 4
 		cost = 10.00
@@ -2801,7 +2724,7 @@ focus_tree = {
 				 }
 			    add_building_construction = {
 					 type = infrastructure
-					 level = 2
+					 level = 1
 					 instant_build = yes
 				 }
 			}
@@ -3678,6 +3601,7 @@ focus_tree = {
 		    EQS = {
 			    exists = no
 			}
+			3 = { is_owned_and_controlled_by = CHN }
 		}
 
 		ai_will_do = {
@@ -4134,7 +4058,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			swap_ideas = {
-			    remove_idea = idol_of_boreas_lost
+			    remove_idea = BOI_GAW_idol_lost
 				add_idea = BOI_idol_loss_healed
 			}
 		}
@@ -4468,7 +4392,7 @@ focus_tree = {
 				}
 			    add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4497,57 +4421,19 @@ focus_tree = {
 			    add_building_construction = {
 			        type = bunker
 			        province = 1645
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 1588
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 12255
-			        level = 1
-			        instant_build = yes
-			    }
-            }
-			606 = {
-			    add_building_construction = {
-			        type = bunker
-			        province = 12548
-			        level = 1
-			        instant_build = yes
-			    }
-				add_building_construction = {
-			        type = bunker
-			        province = 10282
-			        level = 1
-			        instant_build = yes
-			    }
-				add_building_construction = {
-			        type = bunker
-			        province = 2043
-			        level = 1
-			        instant_build = yes
-			    }
-				add_building_construction = {
-			        type = bunker
-			        province = 10798
-			        level = 1
-			        instant_build = yes
-			    }
-				add_building_construction = {
-			        type = bunker
-			        province = 1683
-			        level = 1
-			        instant_build = yes
-			    }
-				add_building_construction = {
-			        type = bunker
-			        province = 10569
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
             }
@@ -4555,37 +4441,37 @@ focus_tree = {
 			    add_building_construction = {
 			        type = bunker
 			        province = 12516
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 11948
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 12085
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 4126
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 10400
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
 				add_building_construction = {
 			        type = bunker
 			        province = 8245
-			        level = 1
+			        level = 2
 			        instant_build = yes
 			    }
             }
@@ -4651,6 +4537,7 @@ focus_tree = {
 		    OR = {
 			    has_war_with = GRI
 		        has_war_with = FAT
+		        has_war_with = JER				
 			}
 		}
 
@@ -5287,7 +5174,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			swap_ideas = {
-			    remove_idea = home_of_the_griffons
+			    remove_idea = BOI_GAW_home_of_griffons
 				add_idea = BOI_home_of_the_griffons_2
 			}
 		}
@@ -5507,7 +5394,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_faithful_ruler
 		icon = GFX_goal_GRI_triarchy 
-		x = -4
+		x = -5
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5524,7 +5411,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_expand_rgdf
 		icon = GFX_goal_Griffonian_Heer_2 
-		x = -2
+		x = -3
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5558,7 +5445,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_royal_corporations
 		icon = GFX_goal_generic_construct_infrastructure 
-		x = 2
+		x = 3
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5575,7 +5462,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_compassionate_ruler
 		icon = GFX_goal_ideology_social_democrat 
-		x = 4
+		x = 5
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5593,7 +5480,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_reinforce_central
 		icon = GFX_COS_Ferrer_Coup 
-		x = -5
+		x = -6
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5611,7 +5498,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_local_democracies
 		icon = GFX_goal_academic_diplomacy 
-		x = -3
+		x = -4
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5629,7 +5516,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_avenge_922_gestal
 		icon = GFX_goal_ban_blackrock 
-		x = -1
+		x = -2
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5678,9 +5565,52 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
+		id = BOI_end_verenian_squabble
+		icon = GFX_goal_eyriehouse
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = BOI_reform_regency_gestal
+		prerequisite = { focus = BOI_look_outside }
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		bypass = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
+		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = AVI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EYR
+			}
+		    create_wargoal = {
+				type = annex_everything
+				target = ERI
+			}
+		}
+	}	
+	shared_focus = {
 		id = BOI_cradle_of_griffonkind_gestal
 		icon = GFX_goal_planning_bonus 
-		x = 1
+		x = 2
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5708,7 +5638,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_educate_commoners
 		icon = GFX_goal_education 
-		x = 3
+		x = 4
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5725,7 +5655,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_support_charity
 		icon = GFX_focus_healthcare_program 
-		x = 5
+		x = 6
 		y = 2
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5742,7 +5672,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_rebuild_murkbeak_gestal
 		icon = GFX_goal_construction_engineering 
-		x = -1
+		x = -2
 		y = 3
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5766,16 +5696,46 @@ focus_tree = {
 				}
 			    add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 		}
 	}
 	shared_focus = {
+		id = BOI_discipline_verenian_nobles
+		icon = GFX_goal_POR_royal_edicts 
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = BOI_reform_regency_gestal
+		prerequisite = { focus = BOI_end_verenian_squabble }
+		available = {
+		    owns_state = 401
+			owns_state = 500
+			owns_state = 400
+			owns_state = 673
+			owns_state = 391
+			owns_state = 470
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
+		completion_reward = {
+			add_state_core = 401
+			add_state_core = 500
+			add_state_core = 400
+			add_state_core = 673
+			add_state_core = 391
+			add_state_core = 470
+		}
+	}	
+	shared_focus = {
 		id = BOI_rumare_act
 		icon = GFX_goal_new_treaty 
-		x = 1
+		x = 2
 		y = 3
 		cost = 5.00
 		relative_position_id = BOI_reform_regency_gestal
@@ -5808,6 +5768,7 @@ focus_tree = {
 		relative_position_id = BOI_reform_regency_gestal
 		prerequisite = { focus = BOI_rebuild_murkbeak_gestal }
 		prerequisite = { focus = BOI_rumare_act }
+		prerequisite = { focus = BOI_discipline_verenian_nobles }		
 
 		ai_will_do = {
 			factor = 15
@@ -5991,10 +5952,6 @@ focus_tree = {
 		will_lead_to_war_with = KAT
 		will_lead_to_war_with = ANG
 		will_lead_to_war_with = ROU
-		
-		bypass = {
-		    owns_state = 382
-		}
 		
 		available = {
 		    AND = {
@@ -6376,7 +6333,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			remove_ideas = idol_of_boreas_lost
+			remove_ideas = BOI_GAW_idol_lost
 			custom_effect_tooltip = BOI_CETT_ready_for_reclamation
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_reclamation
@@ -6724,113 +6681,112 @@ shared_focus = {
 
 
 shared_focus = {
-	id = BOI_strike_lakes
-	icon = GFX_goal_generic_more_territorial_claims
+	id = BOI_integrate_reichsarmee
+	icon = GFX_focus_wng_redwings
 	x = 0
 	y = 1
 	cost = 7.20
 	prerequisite = { focus = BOI_imperial_reclamation }
 	relative_position_id = BOI_imperial_reclamation
 	available = {
-		is_subject = no
+
 	}
 	ai_will_do = {
 		factor = 10
-		modifier = {
-			has_war = yes
-			factor = 0
-		}
-		modifier = {
-			NOT = {
-				has_completed_focus = GRI_strike_west
-			}
-			factor = 0.5
-		}
 	}
-	bypass = { 
-	    custom_trigger_tooltip = {
-			tooltip = GRI_core_AVI_BAN_EYR_ERI_LAK_BOI_tp
-		    AVI = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-			BAN = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-			EYR = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-			ERI = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-			LAK = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-			BOI = {
-			    OR = {
-				    exists = no
-				    is_subject_of = ROOT
-			    }
-		    }
-		}
-		389 = {
-			owner = {
-				OR = { 
-					tag = ROOT 
-					OR = { 
-						is_subject_of = ROOT  
-						is_in_faction_with = ROOT 
-					} 
-				}
-			}
-	    }
-	}
-	will_lead_to_war_with = AVI
-	will_lead_to_war_with = BAN
-	will_lead_to_war_with = EYR
-	will_lead_to_war_with = ERI
-	will_lead_to_war_with = BOI
-	will_lead_to_war_with = LAK
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BOI_strike_lakes"
-		create_wargoal = { type = annex_everything target = AVI }
-		create_wargoal = { type = annex_everything target = BAN }
-		create_wargoal = { type = annex_everything target = EYR }
-		create_wargoal = { type = annex_everything target = ERI }
-		if = {
-			limit = { country_exists = BOI }
-			create_wargoal = { type = annex_everything target = BOI }
-		}
-		if = {
-			limit = {
-				389 = {
-					owner = {
-						NOT = {
-							tag = ROOT
-							tag = BOI
-						}
-					}
-				}
+			add_field_marshal_role = {
+				character = GOY_BOI_erich_ebonwing
+				traits={ career_officer media_personality griffon_race_trait offensive_doctrine }
+				skill = 4
+				attack_skill = 5
+				defense_skill = 3 
+				planning_skill = 3
+				logistics_skill = 2
 			}
-			create_wargoal = { type = annex_everything target = 389.owner }
-		}
-		create_wargoal = { type = annex_everything target = LAK }
+			add_corps_commander_role = {
+				character = GOY_BOI_august_duskwing
+				traits = { griffon_race_trait infantry_leader fortress_buster artillery_expert }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = GOY_BOI_teodor_frohlich
+				traits = { trait_reckless politically_connected war_hero griffon_race_trait }
+				skill=3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 1
+			}
+			add_corps_commander_role = {
+				character = GOY_BOI_reinhold_thundertail
+				traits = { griffon_race_trait panzer_leader panzer_expert }
+				skill=3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_corps_commander_role = {
+				character = GOY_BOI_oskar_silverfeather
+				traits = { brilliant_strategist griffon_race_trait skilled_staffer }
+				skill=4
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 3
+			}
+			army_experience = 100		
+			}
 	}
-	search_filters = { FOCUS_FILTER_ANNEXATION }
+
+shared_focus = {
+	id = BOI_yale_univerisities
+	icon = GFX_zebra_science
+	x = -2
+	y = 1
+	cost = 7.20
+	prerequisite = { focus = BOI_imperial_reclamation }
+	relative_position_id = BOI_imperial_reclamation
+	available = {
+		owns_state = 382	
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		add_ideas = BOI_yale_support
+	}
+	search_filters = { }
+}
+
+shared_focus = {
+	id = BOI_archonates
+	icon = GFX_goal_generic_archonism
+	x = 2
+	y = 1
+	cost = 7.20
+	prerequisite = { focus = BOI_imperial_reclamation }
+	relative_position_id = BOI_imperial_reclamation
+	available = {
+		owns_state = 382	
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		custom_effect_tooltip = BOI_CETT_archons
+		hidden_effect = {
+			set_country_flag = BOI_FLAG_archons_unlocked
+		}					
+	}
+	search_filters = { }
 }
 
 shared_focus = {
@@ -6839,7 +6795,9 @@ shared_focus = {
 	x = -1
 	y = 2
 	cost = 7.20
-	prerequisite = { focus = BOI_strike_lakes }
+	prerequisite = { focus = BOI_integrate_reichsarmee }
+	prerequisite = { focus = BOI_yale_univerisities }
+	prerequisite = { focus = BOI_archonates }	
 	relative_position_id = BOI_imperial_reclamation
 	available = {
 		is_subject = no
@@ -6861,7 +6819,9 @@ shared_focus = {
 	x = 1
 	y = 2
 	cost = 7.20
-	prerequisite = { focus = BOI_strike_lakes }
+	prerequisite = { focus = BOI_integrate_reichsarmee }
+	prerequisite = { focus = BOI_yale_univerisities }
+	prerequisite = { focus = BOI_archonates }
 	relative_position_id = BOI_imperial_reclamation
 	available = {
 	    is_subject = no
@@ -6894,20 +6854,17 @@ shared_focus = {
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 4
+				level = 1
 				instant_build = yes
 			}
-		}
-		hidden_effect = {
-			country_event = { id = imperial.95 days = 1 }
 		}
 	}
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 }
 
 shared_focus = {
-	id = BOI_core_center
-	icon = GFX_goal_generic_dangerous_deal
+	id = BOI_noblesse
+	icon = GFX_zebra_monarch
 	x = 0
 	y = 3
 	cost = 7.20
@@ -6915,24 +6872,72 @@ shared_focus = {
 	prerequisite = { focus = BOI_rebuild_griffinstone_imperial }
 	relative_position_id = BOI_imperial_reclamation
 	available = { 
-	    is_subject = no
-		has_political_power > 50
 	}
-	cancel_if_invalid = no
-
 	ai_will_do = {
 		factor = 10
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BOI_core_center"
-		add_political_power = -150
-		AVI = { add_to_ROOT_potential_cores = yes }
-		BAN = { add_to_ROOT_potential_cores = yes }
-		EYR = { add_to_ROOT_potential_cores = yes }
-		ERI = { add_to_ROOT_potential_cores = yes }
-		LAK = { add_to_ROOT_potential_cores = yes }
-		BOI = { add_to_ROOT_potential_original_cores = yes }
+		add_ideas = BOI_noble_obligations
 	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = BOI_reichstag
+	icon = GFX_goal_a_parliament_and_executive_monarchy
+	x = -2
+	y = 3
+	cost = 7.20
+	prerequisite = { focus = BOI_respect_the_locals_imperial }
+	prerequisite = { focus = BOI_rebuild_griffinstone_imperial }
+	relative_position_id = BOI_imperial_reclamation
+	available = { 
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		if = {
+			limit = { has_idea = BOI_republicans_supressed }
+			remove_ideas = BOI_republicans_in_council
+		}
+		if = {
+			limit = { has_idea = BOI_republicans_in_council }
+			remove_ideas = BOI_republicans_in_council
+		}
+		add_ideas = BOI_imperial_parliament
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		add_political_power = 100
+		}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+}
+
+shared_focus = {
+	id = BOI_imperial_infrastructure
+	icon = GFX_infrastructure_road
+	x = 2
+	y = 3
+	cost = 7.20
+	prerequisite = { focus = BOI_respect_the_locals_imperial }
+	prerequisite = { focus = BOI_rebuild_griffinstone_imperial }
+	relative_position_id = BOI_imperial_reclamation
+	available = { 
+	}
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		    every_owned_state ={
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
 
@@ -7215,7 +7220,6 @@ shared_focus = {
 	y = 4
 	cost = 7.20
 	prerequisite = { focus = BOI_core_the_north }
-	prerequisite = { focus = BOI_core_center }
 	prerequisite = { focus = BOI_core_west }
 	relative_position_id = BOI_imperial_reclamation
 	available = {
@@ -7427,7 +7431,6 @@ shared_focus = {
 	y = 4
 	cost = 7.20
 	prerequisite = { focus = BOI_core_the_north }
-	prerequisite = { focus = BOI_core_center }
 	prerequisite = { focus = BOI_core_west }
 	relative_position_id = BOI_imperial_reclamation
 	available = {
@@ -8830,7 +8833,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
 			swap_ideas = {
-			    remove_idea = idol_of_boreas_lost 
+			    remove_idea = BOI_GAW_idol_lost 
 				add_idea = BOI_idol_loss_forgotten
 			}
 		}

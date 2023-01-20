@@ -1,30 +1,5 @@
 ideas = {
     ###OLD IDEAS###
-    country = {
-		idol_of_boreas_lost = {
-
-			modifier = {
-				stability_factor = -0.3
-			}
-		}
-	}
-	country = {
-		kingdom_with_no_king = {
-
-			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.05
-			}
-		}
-	}
-	country = {
-		home_of_the_griffons = {
-
-			modifier = {
-				stability_factor = 0.1
-			}
-		}
-	}
 	country = {
 		BOI_rage_on_griffonstone_nuker = { ##### Used when Griffonstone is nuked. Loc key in eaw_nuke_events
 		    available = {
@@ -40,48 +15,48 @@ ideas = {
 				army_core_defence_factor = 0.10
 			}
 		}
-	}
+	}	
     country = {
-	    #BOI_GAW_home_of_griffons = {
-		#	allowed = {
-		#		always = no
-		#	}
-		#	allowed_civil_war = {
-		#		always = yes
-		#	}
-		#	picture = generic_artillery_regiments
-		#	removal_cost = -1
-		#	modifier = {
-		#	    stability_factor = 0.1
-		#	}
-		#}
-		#BOI_GAW_idol_lost = {
-		#	allowed = {
-		#		always = no
-		#	}
-		#	allowed_civil_war = {
-		#		always = yes
-		#	}
-		#	picture = generic_artillery_regiments
-		#	removal_cost = -1
-		#	modifier = {
-		#	    stability_factor = -0.3
-		#	}
-		#}
-		#BOI_GAW_kingdom_with_no_king = {
-		#	allowed = {
-		#		always = no
-		#	}
-		#	allowed_civil_war = {
-		#		always = yes
-		#	}
-		#	picture = generic_artillery_regiments
-		#	removal_cost = -1
-		#	modifier = {
-		#	    stability_factor = -0.1
-		#	    political_power = -0.1
-		#	}
-		#}
+		BOI_GAW_kingdom_with_no_king = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = STW_absentee
+			removal_cost = -1
+			modifier = {
+			    stability_factor = -0.1
+			    political_power_gain = -0.05
+			}
+		}
+		BOI_GAW_home_of_griffons = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BOI_idea_gate_goy
+			removal_cost = -1
+			modifier = {
+			    stability_factor = 0.1
+			}
+		}
+		BOI_GAW_idol_lost = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BOI_idea_idol_goy
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.3
+			}
+		}		
 		BOI_political_deadlock = {
 			allowed = {
 				always = no
@@ -458,13 +433,13 @@ ideas = {
 			    artillery_equipment = {
 					build_cost_ic = -0.05
 				}
-				heavy_tank_equipment = {
+				heavy_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = -0.05
 				}
 			}
@@ -483,13 +458,13 @@ ideas = {
 				    soft_attack = 0.1
 					build_cost_ic = -0.05
 				}
-				heavy_tank_equipment = {
+				heavy_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = -0.05
 				}
 			}
@@ -539,13 +514,13 @@ ideas = {
 					reliability = 0.1
 					build_cost_ic = -0.05
 				}
-				heavy_tank_equipment = {
+				heavy_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.05
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = -0.05
 				}
 			}
@@ -587,12 +562,10 @@ ideas = {
 			}
 			picture = generic_coastal_defense_ships
 			removal_cost = -1
-			research_bonus = {
-    			naval_doctrine = 0.10
-			}
 			modifier = {
 			    navy_max_range_factor = 0.1
 				experience_gain_navy = 0.1
+				naval_doctrine_cost_factor = -0.1
 			}
 		}
 		BOI_air_academy = {
@@ -604,12 +577,10 @@ ideas = {
 			}
 			picture = air_support_focus
 			removal_cost = -1
-			research_bonus = {
-    			air_doctrine = 0.10
-			}
 			modifier = {
 			    air_ace_generation_chance_factor = 0.1
 			    experience_gain_air = 0.05
+				air_doctrine_cost_factor = -0.1
 			}
 		}
 		BOI_streamlined_airprod = {
@@ -622,19 +593,13 @@ ideas = {
 			picture = generic_air_research
 			removal_cost = -1
 			equipment_bonus = {
-			    fighter_equipment  = {
+			    small_plane_airframe  = {
 					build_cost_ic = -0.1
 				}
-				CAS_equipment  = {
+				medium_plane_airframe  = {
 					build_cost_ic = -0.1
 				}
-				heavy_fighter_equipment   = {
-					build_cost_ic = -0.1
-				}
-				tac_bomber_equipment   = {
-					build_cost_ic = -0.1
-				}
-				strat_bomber_equipment  = {
+				large_plane_airframe   = {
 					build_cost_ic = -0.1
 				}
 			}
@@ -674,7 +639,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = equestrian_influence
+			picture = EQS_equestrian_influence
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -731,7 +696,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = friendly_harmony
+			picture = EQS_friendly_harmony
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -787,7 +752,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = amethyst_university
+			picture = CRY_amethyst_university
 			removal_cost = -1
 			modifier = {
 			    opinion_gain_monthly_factor = 0.1
@@ -1003,7 +968,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idol_of_boreas_lost
+			picture = BOI_idea_idol_goy
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.2
@@ -1016,7 +981,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = collectivization_effort
+			picture = STG_collectivization_effort
 			removal_cost = -1
 			modifier = {
 			    monthly_population = 0.1
@@ -1045,7 +1010,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = the_final_push_GRW
+			picture = GRW_the_final_push
 			removal_cost = -1
 			modifier = {
 			    army_core_attack_factor = 0.1
@@ -1118,7 +1083,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = starfall
+			picture = NLR_starfall
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.1
@@ -1160,7 +1125,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = friendly_harmony
+			picture = EQS_friendly_harmony
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -1202,7 +1167,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = home_of_the_griffons
+			picture = BOI_idea_gate_goy
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.15
@@ -1332,7 +1297,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = war_of_liberation
+			picture = GRW_war_of_liberation
 			removal_cost = -1
 			modifier = {
 			    conscription_factor = -0.05
@@ -1358,7 +1323,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idol_of_boreas_lost
+			picture = BOI_idea_idol_goy
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
@@ -1413,7 +1378,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = equestrian_advisors
+			picture = CRY_equestrian_advisors
 			removal_cost = -1
 			modifier = {
 			    research_speed_factor = 0.03
@@ -1430,7 +1395,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = grover_vi
+			picture = GRI_Grover_VI
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.05
@@ -1533,6 +1498,7 @@ ideas = {
 			modifier = {
 			    stability_factor = 0.05
 				political_power_factor = -0.1
+				democratic_drift = 0.01				
 			}
 		}
 		BOI_republicans_supressed = {
@@ -1542,11 +1508,11 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = eqs_order_idea
+			picture = EQS_order
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
-				democratic_drift = 0.01
+				democratic_drift = 0.005
 			}
 		}
 		BOI_lord_gestal = {
@@ -1569,7 +1535,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idol_of_boreas_lost
+			picture = BOI_idea_idol_goy
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.2
@@ -1584,7 +1550,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = harmonic_stagnation
+			picture = EQS_harmonic_stagnation
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = -0.03
@@ -1693,7 +1659,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = magical_trainingidea
+			picture = EQS_magical_training
 			removal_cost = -1
 			modifier = {
 			    send_volunteer_size = 6
@@ -1706,7 +1672,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = weter
+			picture = GRF_weter
 			removal_cost = -1
 			modifier = {
 			    consumer_goods_factor = 0.1
@@ -1722,7 +1688,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = unicorn_academy
+			picture = EQS_unicorn_academy
 			removal_cost = -1
 			modifier = {
 			    weekly_manpower = -300
@@ -1924,6 +1890,7 @@ ideas = {
 			    OR = {
 				    has_war_with = FAT
 					has_war_with = GRI
+					has_war_with = JER					
 				}
 			}
 			allowed_civil_war = {
@@ -1935,6 +1902,8 @@ ideas = {
 			    army_org_factor = 0.1
 			    army_infantry_defence_factor = 0.1
 			    conscription_factor = 0.2
+				mobilization_speed = 0.5
+				training_time_factor = -0.25
 			}
 		}
 		BOI_grif_advisors = {
@@ -1967,6 +1936,54 @@ ideas = {
 				special_forces_cap = 0.05
 			}
 		}
+		BOI_yale_support = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = RAZ_education
+			removal_cost = -1
+			modifier = {
+			    research_speed_factor = 0.05
+			}
+		}
+		BOI_noble_obligations = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			available = {
+			}
+			picture = feudalism
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_factor = 0.05
+			    stability_factor = 0.05
+			    monthly_population = 0.10				
+			}
+		}
+	    BOI_imperial_parliament = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			modifier = {
+			    stability_factor = 0.05
+				democratic_drift = 0.01
+				democratic_acceptance = 25
+			}
+		}		
 	}
 	
 	########################
@@ -1981,7 +1998,7 @@ ideas = {
 				}
 			}		
 			traits = { armaments_organizer }
-			picture = dottedline
+			picture = EQS_SOL_dotted_line
 			ai_will_do = {
 				factor = 10
 			}
@@ -2151,7 +2168,7 @@ ideas = {
 				original_tag = "BOI"
 				has_dlc = "La Resistance"
 			}		
- 			traits = { head_of_intelligence_griffon }
+ 			traits = { head_of_intelligence }
 			picture = BOI_gunther
 			ai_will_do = {
 				factor = 1
@@ -2226,8 +2243,8 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-			research_bonus = {
-				land_doctrine = 0.10
+			modifier = {
+				land_doctrine_cost_factor = -0.1
 			}
 			available = {
 				
@@ -2281,7 +2298,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { army_logistics_2 }
-			picture = blueblood
+			picture = EQS_blueblood
 			ai_will_do = {
 				factor = 10
 			}
@@ -2486,7 +2503,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { navy_chief_decisive_battle_2 }
-			picture = cynosura
+			picture = EQS_cynosura
 			ai_will_do = {
 				factor = 10
 			}
@@ -2539,7 +2556,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { navy_chief_maneuver_2 }
-			picture = gunther
+			picture = JER_gunther
 			ai_will_do = {
 				factor = 1
 			}
@@ -2864,13 +2881,13 @@ ideas = {
 				armor = 0.1
 			}
 			equipment_bonus = {
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.1 instant = yes
 					maximum_speed = 0.1 instant = yes
 					hard_attack = -0.1 instant = yes
 					soft_attack = -0.1 instant = yes
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = -0.1 instant = yes
 					maximum_speed = 0.1 instant = yes
 					hard_attack = -0.1 instant = yes
@@ -2898,7 +2915,7 @@ ideas = {
 				armor = 0.1
 			}
 			equipment_bonus = {
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					ap_attack = 0.1 instant = yes
 					soft_attack = 0.1 instant = yes
 					hard_attack = 0.1 instant = yes

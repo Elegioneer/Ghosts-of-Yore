@@ -85,3 +85,37 @@ BOI_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+
+NTR_ai_behavior = {
+	name = "NTR_AI_BEHAVIOR"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = NTR_FIA
+		text = "RULE_OPTION_NTR_FIA"
+		desc = "RULE_OPTION_NTR_FIA_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NTR_STO
+		text = "RULE_OPTION_NTR_STO"
+		desc = "RULE_OPTION_NTR_STO_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NTR_ICE
+		text = "RULE_OPTION_NTR_ICE"
+		desc = "RULE_OPTION_NTR_ICE_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}

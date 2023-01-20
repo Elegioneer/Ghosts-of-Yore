@@ -1,0 +1,135 @@
+	NTR_aurora_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_manpower = 0.25
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_iron_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_black_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_shadow_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_blood_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_obsidian_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_storm_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_amber_tower_constructed = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_STG_palace_construction_effort
+
+		local_building_slots = 2
+		local_non_core_manpower = 0.1
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+		local_intel_to_enemies = -0.3
+		max_dig_in_factor = 0.5
+		static_anti_air_damage_factor = 0.25
+		static_anti_air_hit_chance_factor = 0.25
+		local_supplies = 0.25
+		}
+	NTR_frost_auxilias_region = {
+		enable = { always = yes }
+		
+		icon = GFX_decision_rifles
+
+		local_non_core_manpower = 0.3
+		resistance_decay = 0.25
+		resistance_target = -0.5
+		resistance_damage_to_garrison = -0.5
+		}		

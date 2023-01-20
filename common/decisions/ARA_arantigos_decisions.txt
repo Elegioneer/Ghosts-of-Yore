@@ -142,7 +142,7 @@ ARA_arantigan_restorations = {
 						is_capital = no
 					}
 				}
-				set_capital = 371
+				set_capital = { state = 371 }
 			}
 			WNG = { add_to_ROOT_potential_cores = yes }
 			FAL = { add_to_ROOT_potential_cores = yes }
@@ -334,6 +334,18 @@ ARA_puppet_show_cat = {
 			WNG = {
 			    exists = no
 			}
+			TAL = {
+			    exists = no
+			}
+			FRN = {
+			    exists = no
+			}
+			SIC = {
+			    exists = no
+			}
+			FAL = {
+			    exists = no
+			}			
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_TT_pup_karth
@@ -400,6 +412,24 @@ ARA_puppet_show_cat = {
 			JER = {
 			    exists = no
 			}
+			JES = {
+			    exists = no
+			}
+			POM = {
+			    exists = no
+			}
+			AET = {
+			    exists = no
+			}
+			HEL = {
+			    exists = no
+			}
+			FEZ = {
+			    exists = no
+			}
+			FLO = {
+			    exists = no
+			}			
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_TT_pup_aquil
@@ -457,6 +487,15 @@ ARA_puppet_show_cat = {
 			FAT = {
 			    exists = no
 			}
+			FAW = {
+			    exists = no
+			}
+			MNC = {
+			    exists = no
+			}
+			VED = {
+			    exists = no
+			}			
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_TT_pup_north
@@ -465,7 +504,8 @@ ARA_puppet_show_cat = {
 				   	every_owned_state = {
 					    limit = {
 						    OR = {
-					            is_claimed_by = FAT
+								is_core_of = FAT
+								is_core_of = FAW								
 								is_core_of = MNC
 								is_core_of = VED
 								is_core_of = SRS
@@ -514,6 +554,15 @@ ARA_puppet_show_cat = {
 			LUS = {
 			    exists = no
 			}
+			BRF = {
+			    exists = no
+			}
+			GRU = {
+			    exists = no
+			}
+			GRY = {
+			    exists = no
+			}			
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_TT_pup_eviconf
@@ -565,6 +614,9 @@ ARA_puppet_show_cat = {
 			MIT = {
 			    exists = no
 			}
+			CYA = {
+			    exists = no
+			}			
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_TT_pup_aster

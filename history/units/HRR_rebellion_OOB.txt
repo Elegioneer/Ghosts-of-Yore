@@ -1,0 +1,440 @@
+division_template = {
+	name = "Herzlander Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Knights Brigade"
+
+	regiments = {
+		knights = { x = 0 y = 0 }
+		knights = { x = 1 y = 0 }
+		knights = { x = 0 y = 1 }
+		knights = { x = 1 y = 1 }
+		knights = { x = 0 y = 2 }
+		knights = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Motorized Division"
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "Division I"
+		location = 10543
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division II"
+		location = 12575
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division III"
+		location = 10634
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division IV"
+		location = 10654
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division V"
+		location = 4953
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division VI"
+		location = 3116
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division VII"
+		location = 4826
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division VIII"
+		location = 12183
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division IX"
+		location = 10687
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division X"
+		location = 7865
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XI"
+		location = 10789
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XII"
+		location = 1995
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XIII"
+		location = 7984
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XIV"
+		location = 4347
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XV"
+		location = 12314
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XVI"
+		location = 4198
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XVII"
+		location = 7519
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XVIII"
+		location = 7596
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XIX"
+		location = 10474
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XX"
+		location = 4009
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXI"
+		location = 7580
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXII"
+		location = 10446
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXIII"
+		location = 12426
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXIV"
+		location = 4158
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXV"
+		location = 4203
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXVI"
+		location = 4099
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXVII"
+		location = 9972
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXVIII"
+		location = 12306
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXIX"
+		location = 10986
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXX"
+		location = 12943
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXI"
+		location = 10944
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXII"
+		location = 7550
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXIII"
+		location = 5219
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXIV"
+		location = 8255
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXV"
+		location = 8215
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXVI"
+		location = 8215
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXVII"
+		location = 8215
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Silberkralle"
+		location = 8215
+		division_template = "Knights Brigade"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Reichsarmee Veterans"
+		location = 8215
+		division_template = "Motorized Division"
+		start_experience_factor = 0.60
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXVIII"
+		location = 1166
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXIX"
+		location = 1166
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXX"
+		location = 1166
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Knights of the Three"
+		location = 1166
+		division_template = "Knights Brigade"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Avengers"
+		location = 1166
+		division_template = "Motorized Division"
+		start_experience_factor = 0.60
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXI"
+		location = 12763
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXXII"
+		location = 12763
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXIII"
+		location = 12763
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Knights of the Panther"
+		location = 12763
+		division_template = "Knights Brigade"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Republican Guard"
+		location = 12763
+		division_template = "Motorized Division"
+		start_experience_factor = 0.60
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXIV"
+		location = 4106
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXXV"
+		location = 4106
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Division XXXXVI"
+		location = 4106
+		division_template = "Herzlander Division"
+		start_experience_factor = 0.50
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Order of Big Floppa"
+		location = 4106
+		division_template = "Knights Brigade"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Motor Commando"
+		location = 4106
+		division_template = "Motorized Division"
+		start_experience_factor = 0.60
+		start_equipment_factor = 1.0
+	}	
+}

@@ -93,6 +93,8 @@ leader_traits = {
 	}
 	GOY_RGDF_leader = {
 	    random = no
+		special_forces_defence_factor = 0.1
+		army_defence_factor = 0.1
 	}
 	GOY_thrifty_broker = {
 	    random = no
@@ -131,4 +133,144 @@ leader_traits = {
 		political_power_factor = -0.1
 		drift_defence_factor = -0.75
 	}
+	GOY_god_of_north = {
+		random = no
+		political_power_gain = 0.2
+		stability_factor = 0.05
+		war_support_factor = 0.25
+		army_attack_factor = 0.1
+		army_morale_factor = 0.1
+		opinion_gain_monthly_factor = -0.5
+		justify_war_goal_time = -0.25
+	}
+	GOY_euan_advisor = {
+		random = no
+		political_power_factor = 0.05
+		trade_opinion_factor = 0.1
+	}
+	GOY_ntrfarmer = {
+		random = no
+		consumer_goods_factor = -0.03
+	}
+	GOY_ntralchemist = {
+		random = no
+		monthly_population = 0.1
+		stability_factor = 0.05
+	}
+	GOY_ntrgriffonchief = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.25
+		opinion_gain_monthly_factor = 0.1
+	}
+	GOY_ntrbard = {
+		random = no
+		war_support_factor = 0.1
+		conscription_factor = 0.05
+	}
+	GOY_ntrmetalshaper = {
+		random = no
+		research_speed_factor = 0.05
+		stability_factor = -0.05
+	}
+	GOY_ntr_artistans = {
+		random = no
+		industrial_capacity_factory = 0.05
+	}
+	GOY_ntr_crystal_carvers = {
+		random = no
+		consumer_goods_factor = -0.01
+	}
+	GOY_ntr_everfrost_armories = {
+		random = no
+		production_speed_arms_factory_factor = 0.1	
+	}
+	GOY_ntr_bear_warlord = {
+		random = no
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+	}
+	GOY_ntr_barkcoat_builders = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		conversion_cost_civ_to_mil_factor = -0.05
+		conversion_cost_mil_to_civ_factor = -0.05
+	}
+	GOY_ntr_foreign_traders = {
+		random = no
+	}
+	GOY_ntr_craft_guilds = {
+		random = no
+		line_change_production_efficiency_factor = 0.1
+	}
+	GOY_ntr_rockseekers = {
+		random = no
+		local_resources_factor = 0.1
+	}
+	GOY_caretaker = {
+		random = no
+		army_core_defence_factor = 0.05
+	}
+	GOY_schemer = {
+		random = no
+		intel_network_gain_factor = 0.1
+		decryption_power_factor	= 0.05
+	}
+	GOY_schemer = {
+		random = no
+		intel_network_gain_factor = 0.1
+		decryption_power_factor	= 0.05
+	}
+	GOY_screamingrepublican = {
+		random = no
+		war_support_factor = 0.05
+		opinion_gain_monthly_factor = -0.1
+	}
+	GOY_gallusfriendship = {
+		random = no
+		send_volunteer_size = 1
+	}
+	GOY_imperialloyalist = {
+		random = no
+		stability_factor = -0.05
+		political_power_gain = +0.05
+	}
+	GOY_claimant = {
+		random = no
+		stability_factor = 0.05
+		drift_defence_factor = 0.1
+		political_power_gain = -0.05
+	}
+	GOY_princesswinter = {
+		random = no
+		stability_factor = 0.1
+		army_morale_factor = 0.05
+		drift_defence_factor = 0.25
+	}
+	GOY_harbinger = {
+		random = no
+		army_morale_factor = 0.05
+		war_support_factor = 0.05
+	}
+	GOY_republican_chancellor = {
+		random = no
+		democratic_acceptance = 50		
+		political_power_gain = 0.05
+	}
+	GOY_vast_connections = {
+		random = no
+		opinion_gain_monthly_same_ideology_factor = 0.25
+		opinion_gain_monthly_factor = 0.1
+	}
+	GOY_democratic_socialist = {
+		random = no
+		consumer_goods_factor = 0.01
+		monthly_population = 0.1
+		democratic_acceptance = 50
+	}
+	GOY_commongriff_president = {
+		random = no
+		democratic_drift = 0.01
+		stability_factor = 0.05
+		war_support_factor = 0.05
+	}	
 }

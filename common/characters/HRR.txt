@@ -1,0 +1,858 @@
+characters = {
+	GOY_HRR_Ardensson = {
+		name = GOY_HRR_Ardenssonhector
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAT/GRANDPA_OWL_KNIGHT.tga"
+			}
+			army = {
+				large = "gfx/leaders/KAT/GRANDPA_OWL_KNIGHT.tga"
+			}
+		}
+		country_leader = {
+			desc = ""
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			desc = ""
+			traits = { griffon_race_trait inspirational_leader medical_expert unyielding_defender }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
+		}
+	}
+	GOY_HRR_willie_scherler = {
+		name = GOY_HRR_willie_scherler
+		portraits = {
+			civilian={
+				large="gfx/leaders/ANG/redneck.tga"
+			}
+		}
+		country_leader={
+			desc = ""
+			ideology = anarchist_communism
+			expire = "1965.1.1.1"
+		}
+	}
+	GOY_HRR_archon_erion_xii = {
+		name = GOY_HRR_archon_erion_xii
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ROU/Archon_2_0.tga"
+			}
+		}
+		country_leader={
+			desc = "ERION_DESC"
+			ideology = falangism
+			expire = "1965.1.1.1"
+		}
+	}
+	GOY_HRR_elias_bronzetail = {
+		name = GOY_HRR_elias_bronzetail
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/GRI/GRI_elias.tga"
+			}
+			army={
+				large="gfx/leaders/GRI/Elias.tga"
+			}
+			civilian = {
+				large = "gfx/leaders/GRI/Elias.tga"
+			}			
+		}
+		country_leader={
+			ideology = despotism
+			expire = "1965.1.1.1"
+		}		
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer griffon_race_trait defensive_doctrine thorough_planner }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			desc = GRI_elias_desc
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = GOY_HRR_elias_bronzetail
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			visible = {
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_chief_defensive_2 }
+		}
+	}
+	GOY_HRR_august_duskwing={
+		name=GOY_HRR_august_duskwing
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/GRI/GRI_august_duskwing.tga"
+			}
+			army={
+				large="gfx/leaders/GRI/August_Duskwing.tga"
+			}
+		}
+		corps_commander={
+			traits={ griffon_race_trait infantry_leader fortress_buster artillery_expert }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			desc = GRI_august_desc
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = GOY_HRR_august_duskwing
+			ledger = army
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_artillery_2 }
+		}		
+	}
+	GOY_HRR_reinhold_thundertail={
+		name=GOY_HRR_reinhold_thundertail
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/GRI/GRI_reinhold_thundertail.tga"
+			}
+			army={
+				large="gfx/leaders/GRI/Reinhold_Thundertail.tga"
+			}
+		}
+		corps_commander={
+			traits={ griffon_race_trait panzer_leader panzer_expert }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			desc = GRI_reinhold_desc
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = GOY_HRR_reinhold_thundertail
+			ledger = army
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_armored_2 }
+		}
+	}
+	GOY_HRR_pieter_best={
+		name="GOY_HRR_pieter_best"
+		portraits={
+			army={
+				large="gfx/leaders/FEA/Pieter_Best.tga"
+				small="GFX_idea_FEA_pieter"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer griffon_race_trait }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = GOY_HRR_pieter_best
+			ledger = army
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_infantry_1 }
+		}		
+	}
+	GOY_HRR_marc_kippenberger={
+		name=GOY_HRR_marc_kippenberger
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/ANG/idea_Marc_Kippenberger.tga"
+				large="gfx/leaders/ANG/Marc_Kippenberger.tga"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist griffon_race_trait ranger }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=2246
+			desc = marc_kippenberger_desc
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = GOY_HRR_marc_kippenberger
+			ledger = army
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { army_commando_1 }
+		}		
+	}
+	GOY_HRR_chiron_stormfeather={
+		name=GOY_HRR_chiron_stormfeather
+		portraits={
+			army={
+				large="gfx/leaders/FAT/Chiron_Stormfeather.tga"
+				small=GFX_idea_FAT_army_chief4
+			}
+		}
+		corps_commander={
+			traits={ media_personality infantry_officer griffon_race_trait }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=4
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GOY_HRR_chiron_stormfeather
+			cost = 100
+			allowed = {
+					original_tag = HRR
+				}
+			visible = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+		}
+	GOY_HRR_paul_von_griffinburg={
+		name="GOY_HRR_paul_von_griffinburg"
+		portraits={
+			army={
+				large="gfx/leaders/PYT/Paul_von_keks.tga"
+				small="GFX_idea_PYT_paul_von_griffinburg"
+			}
+		}
+		corps_commander={
+			traits={ griffon_race_trait organizer }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=4
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = GOY_HRR_paul_von_griffinburg
+			cost = 100
+			allowed = {
+					original_tag = HRR
+				}
+			visible = {
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}		
+	}
+	HRR_GOY_gerben_kogchel={
+		name="HRR_GOY_gerben_kogchel"
+		portraits={
+			civilian={
+				small="GFX_idea_FEA_kogchel"
+				large="gfx/leaders/FEA/Kogchel.tga"
+			}
+		}
+	}
+	HRR_GOY_gabriella_di_karthin={
+		name= HRR_GOY_gabriella_di_karthin
+		portraits={
+			civilian={
+				large="gfx/leaders/ROU/Gabriella.tga"
+			}
+		}
+	}
+	HRR_GOY_heinrich_kingfeather={
+		name= HRR_GOY_heinrich_kingfeather
+		portraits={
+			civilian={
+				large="gfx/leaders/FAT/Neu.tga"
+			}
+		}
+	}
+	HRR_GOY_dietrich_mach={
+		name="HRR_GOY_dietrich_mach"
+		portraits={
+			civilian={
+				large="gfx/leaders/PYT/Dietrich.tga"
+			}
+		}
+	}
+	HRR_GOY_winston_copperhill={
+		name=HRR_GOY_winston_copperhill
+		portraits={
+			civilian={
+				large="gfx/leaders/BRZ/winston_copperhill.tga"
+			}
+		}
+	}
+	HRR_GOY_regina_eagleclaw={
+		name="HRR_GOY_regina_eagleclaw"
+		portraits={
+			civilian={
+				large="gfx/leaders/STW/Regina_Eagleclaw.tga"
+			}
+		}
+		gender = female
+	}
+	HRR_GOY_advisor_1 = {
+		name = "HRR_GOY_advisor_1"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = HRR_GOY_advisor_1
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			traits = { air_chief_reform_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HRR_GOY_advisor_2 = {
+		name = "HRR_GOY_advisor_2"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = HRR_GOY_advisor_2
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			traits = { air_chief_safety_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HRR_GOY_advisor_3 = {
+		name = "HRR_GOY_advisor_3"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = HRR_GOY_advisor_3
+			cost = 200
+			allowed = {
+				original_tag = HRR
+			}
+			traits = { air_chief_ground_support_3 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HRR_GOY_Karel_Doorzetter={
+		name="HRR_GOY_Karel"
+		portraits={
+			army={
+				small="GFX_portrait_griffon_generic_navy_5_small"
+			}
+			army={
+				large="gfx/leaders/Asia/portrait_griffon_generic_navy_5.dds"
+			}
+		}
+		navy_leader={
+			traits={ griffon_race_trait ironside }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=1
+		}
+		advisor = {
+			slot = navy_chief 
+			idea_token = HRR_GOY_Karel_Doorzetter
+			cost = 200
+			allowed = {
+				original_tag = HRR
+			}
+			visible = {
+			}
+			traits = { navy_chief_decisive_battle_3 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HRR_GOY_konraad_helvuur={
+		name="HRR_GOY_konraad_helvuur"
+		portraits={
+			army={
+				small="GFX_idea_FEA_helvuur"
+			}
+			army={
+				large="gfx/leaders/FEA/konraad_helvuur.tga"
+			}
+		}
+		navy_leader={
+			traits={ griffon_race_trait seawolf }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=70569
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = HRR_GOY_konraad_helvuur
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			visible = {
+			}
+			traits = { navy_chief_commerce_raiding_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	HRR_GOY_otto_saxhagenplumenjar={
+		name=HRR_GOY_otto_saxhagenplumenjar
+		portraits={
+			army={
+				small=GFX_idea_FAT_navy_chief1
+			}
+			navy={
+				large="gfx/leaders/FAT/OskarII.tga"
+			}
+		}
+		navy_leader={
+			traits={ griffon_race_trait ironside }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=809
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = HRR_GOY_otto_saxhagenplumenjar
+			cost = 50
+			allowed = {
+					original_tag = HRR
+				}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+		}
+	}
+	HRR_GOY_advisor_4 = {
+		name = "HRR_GOY_advisor_4"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = HRR_GOY_advisor_4
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			research_bonus = {
+				nuclear = 0.10
+			}
+			traits = { nuclear_scientist }
+		}
+	}
+	HRR_GOY_advisor_5 = {
+		name = "HRR_GOY_advisor_5"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = HRR_GOY_advisor_5
+			ledger = air
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			traits = { air_warfare_theorist }
+		}
+	}
+	HRR_GOY_advisor_6 = {
+		name = "HRR_GOY_advisor_6"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = HRR_GOY_advisor_6
+			ledger = navy
+			cost = 100
+			allowed = {
+				original_tag = HRR
+			}
+			traits = { naval_theorist }
+		}
+	}
+	HRR_GOY_advisor_7 = {
+		name = "HRR_GOY_advisor_7"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = HRR_GOY_advisor_7
+			ledger = air
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { dive_bomber }
+		}
+	}
+	HRR_GOY_advisor_8 = {
+		name = "HRR_GOY_advisor_8"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = HRR_GOY_advisor_8
+			ledger = air
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { assault_avaition }
+		}
+	}
+	HRR_GOY_advisor_9 = {
+		name = "HRR_GOY_advisor_9"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = HRR_GOY_advisor_9
+			ledger = navy
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { grand_fleet_proponent }
+		}
+	}
+	HRR_GOY_advisor_10 = {
+		name = "HRR_GOY_advisor_10"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = HRR_GOY_advisor_10
+			ledger = navy
+			allowed = {
+				original_tag = HRR
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { submarine_specialist }
+		}
+	}
+	HRR_GOY_advisor_11 = {
+		name = HRR_GOY_advisor_11
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_11
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { head_of_intelligence }
+		}
+	}
+	HRR_GOY_advisor_12 = {
+		name = HRR_GOY_advisor_12
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_12
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { propaganda_expert }
+		}
+	}
+	HRR_GOY_advisor_13 = {
+		name = HRR_GOY_advisor_13
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_13
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { silent_workgriffon2 }
+		}
+	}
+	HRR_GOY_advisor_14 = {
+		name = HRR_GOY_advisor_14
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_14
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { captain_of_industry }
+		}
+	}
+	HRR_GOY_advisor_15 = {
+		name = HRR_GOY_advisor_15
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_15
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { economist }
+		}
+	}
+	HRR_GOY_advisor_16 = {
+		name = HRR_GOY_advisor_16
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_16
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { armaments_organizer }
+		}
+	}
+	HRR_GOY_advisor_17 = {
+		name = HRR_GOY_advisor_17
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_17
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { compassionate_gentleman }
+		}
+	}
+	HRR_GOY_advisor_18 = {
+		name = HRR_GOY_advisor_18
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_18
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { backroom_backstabber }
+		}
+	}
+	HRR_GOY_advisor_19 = {
+		name = HRR_GOY_advisor_19
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+		slot = political_advisor
+		idea_token = HRR_GOY_advisor_19
+		allowed = {
+				original_tag = "HRR"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+
+			}
+			visible = {
+
+			}
+			traits = { fortification_engineer }
+		}
+	}	
+}

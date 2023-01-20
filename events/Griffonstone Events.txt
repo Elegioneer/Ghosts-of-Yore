@@ -565,15 +565,17 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.008.a
-			kill_country_leader = yes
-			create_country_leader = {
-			    name = "Lord Gestal"
-				desc = BOI_gestal_leader_desc
-			    picture = "GOY_Gestal.tga"
-			    expire = "1965.1.1"
-			    ideology = despotism
-		    }
-			remove_unit_leader = 667902
+			retire_character = GOY_BOI_grandpagruff
+			add_country_leader_role = {
+				character = GOY_BOI_gestal
+				promote_leader = yes
+				country_leader = {
+				ideology = centrism
+				desc = "BOI_gestal_leader_desc"
+				expire = “1965.1.1.1”
+				traits = { GOY_imperialloyalist }
+			}
+			}
 			set_politics = {
 			    ruling_party = fascism
 			    elections_allowed = no
@@ -682,17 +684,16 @@ add_namespace = griffonstone_decision
 			}
 			add_ideas = BOI_republican_unrest
 			add_ideas = BOI_goldstone_cronies
-			create_corps_commander = {
-	            name = "Klaus Steelfeather"
-				id = 667901 #6679 for Griffonstone (BO in decimal code)
-	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
-	            traits = { griffon_race_trait career_officer infantry_officer }
-	            skill = 2
-	            attack_skill = 3
-	            defense_skill = 3
-	            planning_skill = 2
-	            logistics_skill = 3
-            }
+			add_corps_commander_role = {
+				character = GOY_BOI_klaus_steelfeather
+					traits = { griffon_race_trait career_officer infantry_officer }
+					skill = 2
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+					legacy_id = 667901
+			}			
 			custom_effect_tooltip = BOI_CETT_gestal_focus_tree
 			hidden_effect = {
 			    load_focus_tree = Griffonstone_gestal
@@ -725,29 +726,27 @@ add_namespace = griffonstone_decision
 				damage_building = { type = industrial_complex damage = 1 }
 			}
 			load_oob = BOI_goldstones_mercs_OOB
-			create_corps_commander = {
-	            name = "Mykhailo Dolgokrylenko"
-				id = 667904 #6679 for Griffonstone (BO in decimal code)
-	            portrait_path = "gfx/leaders/Asia/portrait_griffon_generic_land_15.dds"
-	            traits = { griffon_race_trait trait_reckless infantry_officer }
-	            skill = 3
-	            attack_skill = 2
-	            defense_skill = 3
-	            planning_skill = 3
-	            logistics_skill = 2
-            }
-			create_corps_commander = {
-	            name = "Silver Storm"
-				id = 667906 #6679 for Griffonstone (BO in decimal code)
-	            portrait_path = "gfx/leaders/CES/Stemis.tga"
-	            traits = { pony_race_trait war_hero harsh_leader }
-	            skill = 2
-	            attack_skill = 2
-	            defense_skill = 2
-	            planning_skill = 2
-	            logistics_skill = 1
-            }
-			remove_unit_leader = 667905
+			add_corps_commander_role = {
+				character = GOY_BOI_mikhaylo
+					traits = { griffon_race_trait trait_reckless infantry_officer }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+					legacy_id = 667904
+			}
+			add_corps_commander_role = {
+				character = GOY_BOI_silver_storm
+					traits = { pony_race_trait war_hero harsh_leader }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+					legacy_id = 667906
+			}
+			retire_character = GOY_BOI_greta
 			hidden_effect = {
 			    load_focus_tree = Griffonstone_goldstone
 				news_event = {
@@ -908,14 +907,17 @@ add_namespace = griffonstone_decision
 		
 	    option = {
 	        name = griffonstone.015.a
-			retire_country_leader = yes
-			create_country_leader = {
-			    name = "Lord Gestal"
-				desc = BOI_gestal_leader_desc
-			    picture = "GOY_Gestal.tga"
-			    expire = "1965.1.1"
-			    ideology = despotism
-		    }
+			retire_character = GOY_BOI_grandpagruff
+			add_country_leader_role = {
+				character = GOY_BOI_gestal
+				promote_leader = yes
+				country_leader = {
+				ideology = centrism
+				desc = "BOI_gestal_leader_desc"
+				expire = “1965.1.1.1”
+				traits = { GOY_imperialloyalist }
+			}
+			}
 			set_politics = {
 			    ruling_party = democratic
 			    elections_allowed = no
@@ -1595,25 +1597,28 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.227.a
 			hidden_effect = {
-			    retire_ideology_leader = democratic
+				remove_country_leader_role = {
+				character = GOY_BOI_gilda
+				ideology = liberalism
+				}
 			}
-			create_country_leader = {
-	            name = "Gallus"
-	            desc = BOI_gallus_desc
-	            picture = "GAW_Gallus.tga"
-	            expire = "1965.1.1"
-	            ideology = conservatism
-	            traits = {
-
-	            }
-            }
+			add_country_leader_role = {
+				Character = GOY_BOI_gallus
+				Promote_leader = yes
+				Country_leader = {
+				ideology = conservatism
+				desc = "BOI_gallus_desc"
+				expire = “1965.1.1.1”
+				traits = { GOY_gallusfriendship }
+				}
+				}
 			set_politics = {
 			    ruling_party = democratic
 		        elections_allowed = no
 			}
 			add_popularity = { ideology = democratic popularity = 0.2 }
 			swap_ideas = {
-			    remove_idea = idol_of_boreas_lost 
+			    remove_idea = BOI_GAW_idol_lost 
 				add_idea = BOI_idol_of_boreas
 			}
 			set_party_name = { ideology = democratic name = BOI_gallus_democrats long_name = BOI_gallus_democrats_long }
@@ -1641,19 +1646,22 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.205.a
-			remove_ideas = kingdom_with_no_king
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 			set_party_name = { ideology = democratic name = BOI_kingsBOIs long_name = BOI_kingsBOIs_long }
 			set_party_name = { ideology = neutrality name = BOI_nobles_party long_name = BOI_nobles_party_long }
-			create_field_marshal = {
-	            name = "Gallus"
-	            portrait_path = "gfx/leaders/BOI/GAW_Gallus.tga"
-	            traits = { griffon_race_trait trait_reckless media_personality infantry_leader organizer inspirational_leader }
-	            skill = 3
-	            attack_skill = 4
-	            defense_skill = 3
-	            planning_skill = 3
-	            logistics_skill = 2
-            }
+			add_field_marshal_role = {
+			character = GOY_BOI_gallus
+					traits = {
+	                   	griffon_race_trait trait_reckless media_personality infantry_leader organizer inspirational_leader
+	                    }
+					desc = "BOI_gallus_desc"
+					skill = 3
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+	                female = no
+			}
 			hidden_effect = {
 			    country_event = {
 				    id = griffonstone.285
@@ -1676,15 +1684,17 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.228.a
-			kill_ideology_leader = neutrality
-			create_country_leader = {
-			    name = "Lord Gestal"
-				desc = BOI_gestal_leader_desc
-			    picture = "GOY_Gestal.tga"
-			    expire = "1965.1.1"
-			    ideology = despotism
-		    }
-			remove_unit_leader = 667902
+			retire_character = GOY_BOI_grandpagruff
+			add_country_leader_role = {
+				character = GOY_BOI_gestal
+				promote_leader = yes
+				country_leader = {
+				ideology = centrism
+				desc = "BOI_gestal_leader_desc"
+				expire = “1965.1.1.1”
+				traits = { GOY_imperialloyalist }
+			}
+			}
 		}
 	}
 	country_event = { #The King and The Emperor
@@ -2009,26 +2019,29 @@ country_event = { #Herzländers unite! (cap)
 			set_variable = {
 				global.griffonian_empire_var = THIS
 			}
-			set_capital = 382
+			set_capital = { state = 382 }
 			add_ideas = GRI_grover_vi
-			remove_ideas = kingdom_with_no_king
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 			set_faction_name = GOY_reichspakt
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
 				set_party_name = { ideology = democratic name = BOI_dem_upgrade long_name = BOI_dem_upgrade_long }
 			    set_party_name = { ideology = communism name = GRI_communism_party long_name = GRI_communism_party_long }
-				retire_ideology_leader = fascism
-				create_country_leader = {
-	                name = "Archon Eros VII"
-	                desc = "eros_vii_desc"
-	                picture = "gfx/leaders/GRI/Fash_pope.tga"
-	                expire = "1965.1.1"
-	                ideology = falangism
-	                traits = {
-    
-	                }
-                }
+				remove_country_leader_role = {
+					character = GOY_BOI_goldstone
+					ideology = plutocracy
+				}
+				add_country_leader_role = {
+					Character = GOY_BOI_eros
+					Promote_leader = yes
+					Country_leader = {
+					ideology = falangism
+					desc = "eros_vii_desc"
+					expire = “1965.1.1.1”
+					traits = { }
+				}
+				}			
 			}
 		}
 	}
@@ -2048,36 +2061,41 @@ country_event = { #Herzländers unite! (cap)
 			set_variable = {
 				global.griffonian_empire_var = THIS
 			}
-			set_capital = 382
-			retire_country_leader = yes
-			create_country_leader = {
-	            name = "Empress Gabriela Eagleclaw"
-	            desc = "POLITICS_EAGLECLAW_DESC" #TODO Should be changed
-	            picture = "gfx/leaders/GRI/Gabriela.tga"
-	            expire = "1965.1.1"
-	            female = yes
-	            ideology = despotism
-	            traits = {
-		            STW_ambitious_ruler #TODO should be changed
-	            }
-            }
-			remove_ideas = kingdom_with_no_king
+			set_capital = { state = 382 }
+			remove_country_leader_role = {
+				character = GOY_BOI_gestal
+				ideology = centrism
+			}
+			add_country_leader_role = {
+				Character = GOY_BOI_duchess
+				Promote_leader = yes
+				Country_leader = {
+				ideology = oligarchism
+				desc = "GOY_BOI_duchess_desc"
+				expire = “1965.1.1.1”
+				traits = { STW_ambitious_ruler } #TODO Should be changed
+				}
+				}	
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }
 				set_party_name = { ideology = democratic name = BOI_dem_upgrade long_name = BOI_dem_upgrade_long }
 			    set_party_name = { ideology = communism name = GRI_communism_party long_name = GRI_communism_party_long }
-				retire_ideology_leader = fascism
-				create_country_leader = {
-	                name = "Archon Eros VII"
-	                desc = "eros_vii_desc"
-	                picture = "gfx/leaders/GRI/Fash_pope.tga"
-	                expire = "1965.1.1"
-	                ideology = falangism
-	                traits = {
-    
-	                }
-                }
+				remove_country_leader_role = {
+					character = GOY_BOI_goldstone
+					ideology = plutocracy
+				}
+				add_country_leader_role = {
+					Character = GOY_BOI_eros
+					Promote_leader = yes
+					Country_leader = {
+					ideology = falangism
+					desc = "eros_vii_desc"
+					expire = “1965.1.1.1”
+					traits = { }
+				}
+				}
 			}
 		}
 	}
@@ -2546,7 +2564,7 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 		    set_cosmetic_tag = BOI_REP
 	        name = griffonstone.218.a
-			remove_ideas = kingdom_with_no_king
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			add_country_leader_trait = republican_revolutionary
 			if = {
@@ -2596,7 +2614,7 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.267.a
-			remove_unit_leader = 667902
+			###remove_unit_leader = 667902 #Redundant?
 		}
 	}
 	country_event = { #Elections
@@ -2618,17 +2636,21 @@ country_event = { #Herzländers unite! (cap)
 			    base = 1
 			}
 			set_party_name = { ideology = democratic name = BOI_RRP_democrats long_name = BOI_RRP_democrats_long }
-			retire_country_leader = yes
-			create_country_leader = {
-	            name = "Greta"
-	            #desc = BOI_gilda_desc
-	            picture = "Greta.tga"
-	            expire = "1965.1.1"
-	            ideology = liberalism
-	            traits = {
-
-	            }
-            }
+			set_country_flag = goy_boi_presidentgreta
+			remove_country_leader_role = {
+				character = GOY_BOI_gilda
+				ideology = liberalism
+				}
+			add_country_leader_role = {
+				Character = GOY_BOI_greta
+				Promote_leader = yes
+				Country_leader = {
+				ideology = socialism
+				desc = ""
+				expire = “1965.1.1.1”
+				traits = { }
+				}
+				}
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -2639,17 +2661,21 @@ country_event = { #Herzländers unite! (cap)
 			    base = 1
 			}
 			set_party_name = { ideology = democratic name = BOI_GPL_democrats long_name = BOI_GPL_democrats_long }
-			retire_country_leader = yes
-			create_country_leader = {
-	            name = "Garner"
-	            #desc = BOI_gilda_desc
-	            picture = "GOY_Garner.tga"
-	            expire = "1965.1.1"
-	            ideology = liberalism
-	            traits = {
-
-	            }
-            }
+			set_country_flag = goy_boi_presidentgarner
+			remove_country_leader_role = {
+				character = GOY_BOI_gilda
+				ideology = liberalism
+				}
+			add_country_leader_role = {
+				Character = GOY_BOI_garner
+				Promote_leader = yes
+				Country_leader = {
+				ideology = liberalism
+				desc = ""
+				expire = “1965.1.1.1”
+				traits = { }
+				}
+				}			
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -2660,17 +2686,21 @@ country_event = { #Herzländers unite! (cap)
 			    base = 1
 			}
 			set_party_name = { ideology = democratic name = BOI_GFP_democrats long_name = BOI_GFP_democrats_long }
-			retire_country_leader = yes
-			create_country_leader = {
-	            name = "Gabby"
-	            #desc = BOI_gilda_desc
-	            picture = "Gabby.dds"
-	            expire = "1965.1.1"
-	            ideology = liberalism
-	            traits = {
-
-	            }
-            }
+			set_country_flag = goy_boi_presidentgabby
+			remove_country_leader_role = {
+				character = GOY_BOI_gilda
+				ideology = liberalism
+				}
+			add_country_leader_role = {
+				Character = GOY_BOI_gabby
+				Promote_leader = yes
+				Country_leader = {
+				ideology = liberalism
+				desc = ""
+				expire = “1965.1.1.1”
+				traits = { }
+				}
+				}			
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
 			}
@@ -3209,7 +3239,7 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.269.a
 			ai_chance = {
-			    base = 1
+			    base = 2
 				modifier = {
 				    factor = 10
 				    has_game_rule = {
@@ -3272,12 +3302,12 @@ country_event = { #Herzländers unite! (cap)
 			    uses = 1
 			    category = infantry_weapons
 		    }
-			add_tech_bonus = {
-			    name = gestal_gri_bonus_2
-			    bonus = 0.5
-			    uses = 1
-			    category = land_doctrine
-		    }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+		}
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 		}
 	}
@@ -3970,7 +4000,7 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.299.a
 			set_cosmetic_tag = BOI_BOIEMP
-			remove_ideas = kingdom_with_no_king
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
@@ -4234,4 +4264,55 @@ country_event = { #Herzländers unite! (cap)
 			add_ideas = BOI_neutral_foreign_policy
 		}
 	}
+country_event = { #Imperial coronation
+	id = griffonstone.303
+	title = griffonstone.303.t
+	desc = griffonstone.303.d
+	picture = GFX_event_griffenheim
+	fire_only_once = yes
+	is_triggered_only = no
+	trigger = {
+		tag = BOI
+		date > 1021.05.21.01
+		has_completed_focus = BOI_claim_regency
+		has_full_control_of_state = 389
+	}
+	mean_time_to_happen = {
+		days = 12
+	}
+	option = {
+		name = griffonstone.303.a
+		add_political_power = 200
+		add_stability = 0.05
+			remove_country_leader_role = {
+				character = GOY_BOI_gestal
+				ideology = centrism
+			}
+			add_country_leader_role = {
+				character = GOY_BOI_grover
+				promote_leader = yes
+				country_leader = {
+				ideology = despotism
+				desc = "grover_vi_desc"
+				expire = “1965.1.1.1”
+				traits = { }
+			}
+			}
+		remove_ideas = GRI_grover_vi			
+		country_event = {
+			id = griffonstone.304
+		}		
+	}
+	}
+country_event = { #Gestal Ending
+	id = griffonstone.304
+	title = griffonstone.304.t
+	desc = griffonstone.304.d
+	picture = GFX_event_griffenheim_night
+	fire_only_once = yes
+	is_triggered_only = yes		
+	option = {
+		name = griffonstone.304.a
+		}		
+	}		
 	

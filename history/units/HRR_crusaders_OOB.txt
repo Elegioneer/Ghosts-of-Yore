@@ -1,0 +1,47 @@
+division_template = {
+	name = "Knight Chapter"
+
+	regiments = {
+		knights = { x = 0 y = 0 }
+		knights = { x = 1 y = 0 }
+		knights = { x = 0 y = 1 }
+		knights = { x = 1 y = 1 }
+		knights = { x = 0 y = 2 }
+		knights = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "Hammers of Arcturius"
+		location = 4071
+		division_template = "Knight Chapter"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Sun Spears"
+		location = 4071
+		division_template = "Knight Chapter"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Black Shields"
+		location = 10537
+		division_template = "Knight Chapter"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "Errant Knights"
+		location = 10537
+		division_template = "Knight Chapter"
+		start_experience_factor = 0.80
+		start_equipment_factor = 1.0
+	}	
+}

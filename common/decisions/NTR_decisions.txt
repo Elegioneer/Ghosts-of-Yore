@@ -1,6 +1,6 @@
 NTR_spirits_blessings_cat = {
     NTR_metal_bless = {
-		icon = generic_nationalism
+		icon = generic_magic
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -27,13 +27,13 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
 	}
 	NTR_wood_bless = {
-		icon = generic_nationalism
+		icon = clover_lushi
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -63,13 +63,13 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
 	}
 	NTR_fire_bless = {
-		icon = generic_nationalism
+		icon = celestia
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -87,7 +87,7 @@ NTR_spirits_blessings_cat = {
 			}
 		}
 		modifier = {
-		    montly_population = 0.2
+		    monthly_population = 0.2
 			conscription = 0.01
 			casualty_trickleback = 0.1
 			experience_loss_factor = -0.1
@@ -99,13 +99,13 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
 	}
 	NTR_earth_bless = {
-		icon = generic_nationalism
+		icon = crystals
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -124,7 +124,7 @@ NTR_spirits_blessings_cat = {
 		}
 		modifier = {
 		    consumer_goods_factor = -0.05
-			local_resources = 0.1
+			local_resources_factor = 0.1
 		}
 		complete_effect = {
 		    hidden_effect = {
@@ -133,13 +133,13 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
 	}
 	NTR_water_bless = {
-		icon = generic_nationalism
+		icon = crossed_swords
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -167,13 +167,13 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
 	}
 	NTR_ice_bless = {
-		icon = generic_nationalism
+		icon = scroll
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -202,7 +202,7 @@ NTR_spirits_blessings_cat = {
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_blessing_active
+			    clr_country_flag = NTR_flag_blessing_active
 			}
 		}
 		days_remove = 180
@@ -211,7 +211,7 @@ NTR_spirits_blessings_cat = {
 
 NTR_dark_magic_cat = {
     NTR_ritual_dc = {
-		icon = generic_nationalism
+		icon = GFX_decision_sombra_dark_heart
 		cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -221,15 +221,22 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_the_ritual_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
+				has_government = fascism
+				is_subject = no
 			}
 		}
-		modifier = {
-		    
+		cancel_trigger = { 
+			OR = { 
+				is_subject = yes 
+				NOT = { has_government = fascism }
+			}
+		}
+		modifier = {   
 		}
 		complete_effect = {
 		    custom_effect_tooltip = NTR_tt_skynavia_mustdie
@@ -246,15 +253,17 @@ NTR_dark_magic_cat = {
 		remove_effect = {
 			hidden_effect = {
 			    SRS = {
-			        country_event = id = ntribes.51
+			        country_event = ntribes.51
 			    }
-			    remove_country_flag = NTR_flag_magick_active
+					country_event = ntribes.52
+			    clr_country_flag = NTR_flag_magick_active
+				set_country_flag = NTR_flag__ritual_finished
 			}
 		}
-		days_remove = 120
+		days_remove = 150
 	}
     NTR_raise_dead_dc = {
-		icon = generic_nationalism
+		icon = GFX_decision_skullgriff
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -267,31 +276,34 @@ NTR_dark_magic_cat = {
 			}
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {  
 		}
 		complete_effect = {
 		    hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }		
 		}
 		remove_effect = {
 		    add_manpower = 50000
 			hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 	NTR_raise_dead_dc_2 = {
-		icon = generic_nationalism
+		icon = GFX_decision_skullgriff
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -301,31 +313,34 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_raise_dead_improved
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {    
 		}
 		complete_effect = {
 		    hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }		
 		}
 		remove_effect = {
 		    add_manpower = 80000
 			hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
     NTR_cold_wave = {
-		icon = generic_nationalism
+		icon = GFX_decision_generic_magic
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -335,16 +350,14 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-			has_war = yes
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {   
 		}
 		complete_effect = {
 		    every_other_country = {
@@ -354,21 +367,25 @@ NTR_dark_magic_cat = {
 				add_timed_idea = {
 				    idea = NTR_unnatural_weather
 					days = 120
-				}
+				}		
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }
 			hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 	NTR_bloodlust = {
-	    icon = generic_nationalism
+	    icon = GFX_decision_generic_civil_support
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -378,34 +395,37 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {   
 		}
 		complete_effect = {
 		    add_timed_idea = {
 			    idea = NTR_bloodrage
 				days = 120
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }		
 			hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 	NTR_battlefield_magic = {
-	    icon = generic_nationalism
+	    icon = GFX_decision_book
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -415,35 +435,37 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-			has_war = yes
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {   
 		}
 		complete_effect = {
 		    add_timed_idea = {
 			    idea = NTR_sorcerer_generals
 				days = 120
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }			
 			hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 	NTR_shape_land = {
-	    icon = generic_nationalism
+	    icon = GFX_decision_minecraft
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -453,34 +475,37 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {   
 		}
 		complete_effect = {
 		    add_timed_idea = {
 			    idea = NTR_subdue_land
 				days = 120
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }		
 			hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 	NTR_unnatural_insight = {
-	    icon = generic_nationalism
+	    icon = GFX_decision_onmap_recruit_operative
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -490,67 +515,1942 @@ NTR_dark_magic_cat = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
 		}
 		available = {
-		    custom_effect_tooltip = NTR_tt_one_magick
-		    hidden_trigger = {
-			    NOT = {
-				    has_country_flag = NTR_flag_magick_active
+		    custom_trigger_tooltip = {
+				tooltip = NTR_tt_one_magick
+				NOT = {
+					has_country_flag = NTR_flag_magick_active
 				}
 			}
 		}
-		modifier = {
-		    
+		modifier = {    
 		}
 		complete_effect = {
 		    add_timed_idea = {
 			    idea = NTR_iseeyou
 				days = 120
 			}
+			add_timed_idea = {
+			idea = NTR_magical_disturbance
+            days = 120
+            }		
 			hidden_effect = {
 			    set_country_flag = NTR_flag_magick_active
 			}
 		}
 		remove_effect = {
 		    hidden_effect = {
-			    remove_country_flag = NTR_flag_magick_active
+			    clr_country_flag = NTR_flag_magick_active
 			}
 		}
 		days_remove = 120
 	}
 }
+
 NTR_liberate_np_cat = {
-    NTR_attack_dimpeak = {
-	    icon = generic_nationalism
+	NTR_demand_from_MNC = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_liberate_np_unlock
+			MNC = {
+				exists = yes
+				owns_state = 459
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_liberate_np_unlock
+		MNC = {
+				exists = yes
+				owns_state = 459
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+	MNC = {
+		country_event = ntribes.85
+		}
+	}
+	days_remove = 15
+	}
+	NTR_demand_from_VED = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_liberate_np_unlock
+			VED = {
+				exists = yes
+				owns_state = 584
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_liberate_np_unlock
+		VED = {
+				exists = yes
+				owns_state = 584
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+	VED = {
+		country_event = ntribes.88
+		}
+	}
+	days_remove = 15
+	}
+	NTR_demand_from_FAT = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_liberate_np_unlock
+			FAT = {
+				exists = yes
+				owns_state = 583
+				owns_state = 474
+				owns_state = 480
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_liberate_np_unlock
+		FAT = {
+				exists = yes
+				owns_state = 583
+				owns_state = 474
+				owns_state = 480
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+	FAT = {
+		country_event = ntribes.91
+		}
+	}
+	days_remove = 15
+	}
+	NTR_demand_from_FAW = {
+		icon = GFX_decision_generic_civil_support
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_liberate_np_unlock
+			FAW = {
+				exists = yes
+				owns_state = 583
+				owns_state = 474
+				owns_state = 480
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_liberate_np_unlock
+		FAW = {
+				exists = yes
+				owns_state = 583
+				owns_state = 474
+				owns_state = 480
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+	FAW = {
+		country_event = ntribes.94
+		}
+	}
+	days_remove = 15
+	}
+}
+
+NTR_knowledge_quest_cat = {
+	NTR_printhouse = {
+		icon = GFX_decision_book
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_POGress_unlock
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_POGress_unlock
+	}
+	modifier = {
+			political_power_factor = -0.1
+	}
+	remove_effect = {
+	decrease_illiteracy = yes
+	set_country_flag = NTR_flag_POGress_unlock_1
+	}
+	days_remove = 45
+	}
+NTR_village_schools = {
+		icon = GFX_decision_jachs_drawer
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			has_country_flag = NTR_flag_POGress_unlock_1
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_POGress_unlock
+	}
+	modifier = {
+			political_power_factor = -0.1
+	}
+	remove_effect = {
+	decrease_illiteracy = yes
+	set_country_flag = NTR_flag_POGress_unlock_2
+	}
+	days_remove = 90
+	}
+NTR_educate_adults = {
+		icon = GFX_decision_scroll
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			has_country_flag = NTR_flag_POGress_unlock_2
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_POGress_unlock
+	}
+	modifier = {
+			political_power_factor = -0.1
+	}
+	remove_effect = {
+	decrease_illiteracy = yes
+	set_country_flag = NTR_flag_POGress_unlock_3
+	}
+	days_remove = 120
+	}
+NTR_everfrost_university = {
+		icon = GFX_decision_generic_research
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			has_country_flag = NTR_flag_POGress_unlock_3
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_POGress_unlock
+	}
+	modifier = {
+			political_power_factor = -0.2
+	}
+	remove_effect = {
+	add_research_slot = 1
+	}
+	days_remove = 150
+	}
+}
+
+NTR_expand_mining_ops_cat = {
+NTR_moonrise_iron_mine = {
+		icon = GFX_decision_steel
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 602
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 1
+	}
+	remove_effect = {
+	602 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_moonrise_crystal_mine = {
+		icon = GFX_decision_crystals
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 602
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 1
+	}
+	remove_effect = {
+	602 = {
+				add_resource = {
+					type = crystals
+					amount = 20
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_cubrian_hills_mine = {
+		icon = GFX_decision_chromium
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 567
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	567 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_holy_forge_smeltery = {
+		icon = GFX_decision_steel
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 574
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	574 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_reopen_ostfloy_oil = {
+		icon = GFX_decision_oil
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 561
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	561 = {
+				add_resource = {
+					type = oil
+					amount = 30
+				}
+			}
+	set_country_flag = NTR_ostfloy_refinery_enabled
+	set_country_flag = NTR_ostfloy_refinery_expansion
+	}
+	days_remove = 60
+	}
+NTR_reclaim_littlegriff_mines = {
+		icon = GFX_decision_aluminium
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 585
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	585 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_resource = {
+					type = crystals
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_expand_braunles_mines = {
+		icon = GFX_decision_steel
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 601
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	601 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_resource = {
+					type = crystals
+					amount = 5
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+			}
+	}
+	days_remove = 60
+	}
+NTR_brantbeak_gold_mines = {
+		icon = GFX_decision_generic_construction
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 581
+			}
+	visible = {
+	    tag = NTR
+		owns_state = 581
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 3
+	}
+	remove_effect = {
+    add_ideas = NTR_gold_profits
+	}
+	days_remove = 120
+	}
+NTR_purchase_mining_equipment = {
+		icon = GFX_decision_generic_industry
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+	}
+	remove_effect = {
+    add_ideas = NTR_modern_mining_equipment
+	}
+	days_remove = 30
+	}
+}
+
+NTR_thomas_the_steam_engine_cat = {
+NTR_first_railroad = {
+		icon = GFX_decision_railroad
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 562
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+	}
+	modifier = {
+			civilian_factory_use = 1
+	}
+	remove_effect = {
+	562 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1		  
+		  }
+			build_railway = {
+                level = 1
+				start_province = 1307
+                target_province = 4553
+                build_only_on_allied = yes
+            }
+	set_country_flag = NTR_railroad_started
+	}
+	days_remove = 30
+	}
+NTR_eastern_line = {
+		icon = GFX_decision_railroad
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 563
+			has_country_flag = NTR_railroad_started
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+	}
+	modifier = {
+			civilian_factory_use = 1
+	}
+	remove_effect = {
+	563 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	567 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	build_railway = {
+        level = 1
+		start_province = 4553
+        target_province = 2075
+        build_only_on_allied = yes
+    }
+	set_country_flag = NTR_railord_progress_1
+	}
+	days_remove = 60
+	}
+NTR_connect_holy_forge = {
+		icon = GFX_decision_railroad
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 574
+			has_country_flag = NTR_railroad_started
+			has_country_flag = NTR_railord_progress_1
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+	}
+	modifier = {
+			civilian_factory_use = 1
+	}
+	remove_effect = {
+	574 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	602 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	build_railway = {
+        level = 1
+		start_province = 4553
+        target_province = 7654
+        build_only_on_allied = yes
+    }
+	set_country_flag = NTR_railord_progress_2
+	}
+	days_remove = 60
+	}
+NTR_connect_skynavia = {
+		icon = GFX_decision_railroad
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 522
+			has_country_flag = NTR_railroad_started
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	522 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	677 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	561 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	build_railway = {
+        level = 1
+		start_province = 1307
+        target_province = 6502
+        build_only_on_allied = yes
+    }
+	set_country_flag = NTR_railord_progress_3
+	}
+	days_remove = 60
+	}
+NTR_finish_railroad_construction = {
+		icon = GFX_decision_generic_construction
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			num_of_civilian_factories_available_for_projects > 2
+			has_country_flag = NTR_railord_progress_1
+			has_country_flag = NTR_railord_progress_2
+			has_country_flag = NTR_railord_progress_3
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+	}
+	modifier = {
+			civilian_factory_use = 3
+	}
+	remove_effect = {
+	every_owned_state = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+	add_ideas = NTR_modern_infrastructure
+	}
+	days_remove = 90
+	}
+NTR_cloudbury_railroad = {
+		icon = GFX_decision_railroad
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 485
+			has_country_flag = NTR_railroad_started
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+		owns_state = 485
+	}
+	modifier = {
+			civilian_factory_use = 3
+	}
+	remove_effect = {
+	485 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 2
+		  }
+	582 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	474 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+			build_railway = {
+                level = 1
+				start_province = 1307
+                target_province = 7146
+                build_only_on_allied = yes
+            }
+	}
+	days_remove = 60
+	}
+NTR_coast_railroad = {
+		icon = GFX_decision_railroad
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 150
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 429
+			owns_state = 432
+			has_country_flag = NTR_railroad_started
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+		owns_state = 429
+		owns_state = 432
+	}
+	modifier = {
+			civilian_factory_use = 3
+	}
+	remove_effect = {
+	429 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 2
+		  }
+	432 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	431 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	403 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	404 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	482 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	483 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	430 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	542 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+			build_railway = {
+                level = 1
+				start_province = 6502
+                target_province = 1808
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 1808
+                target_province = 278
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 278
+                target_province = 1295
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 1295
+                target_province = 9502
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 9502
+                target_province = 6563
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 6563
+                target_province = 7030
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 7030
+                target_province = 7148
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 7148
+                target_province = 9115
+                build_only_on_allied = yes
+            }
+			build_railway = {
+                level = 1
+				start_province = 9115
+                target_province = 6029
+                build_only_on_allied = yes
+            }
+	}
+	days_remove = 120
+	}
+NTR_connect_brantbeak = {
+		icon = GFX_decision_railroad
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 581
+			has_country_flag = NTR_railroad_started
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_choo_choo_unlock
+		owns_state = 581
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	459 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	475 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+	581 = {
+	      add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+		  add_extra_state_shared_building_slots = 1
+		  }
+		build_railway = {
+            level = 1
+			start_province = 7654
+            target_province = 7823
+            build_only_on_allied = yes
+        }
+	}
+	days_remove = 60
+	}
+}
+
+NTR_smuggling_cat = {
+NTR_purchase_bakaran_artillery = {
+		icon = GFX_decision_rifles
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			has_country_flag = NTR_flag_smuggling_unlock
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_smuggling_unlock
+	}
+	modifier = {
+	}
+	remove_effect = {
+	add_equipment_to_stockpile = {
+			    type = artillery_equipment
+				producer = BAK
+			    amount = 200
+			}
+	add_tech_bonus = {
+				name = NTR_arty_5
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+	}
+	days_remove = 15
+	}
+NTR_purchase_republican_guns = {
+		icon = GFX_decision_rifles
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			has_country_flag = NTR_flag_smuggling_unlock
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_smuggling_unlock
+	}
+	modifier = {
+	}
+	remove_effect = {
+	add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				producer = FAT
+			    amount = 1000
+			}
+	}
+	days_remove = 15
+	}
+NTR_purchase_imperial_guns = {
+		icon = GFX_decision_rifles
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			has_country_flag = NTR_flag_smuggling_unlock
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_smuggling_unlock
+	}
+	modifier = {
+	}
+	remove_effect = {
+	add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				producer = GRI
+			    amount = 2500
+			}
+	add_tech_bonus = {
+				name = NTR_inf_1
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+	}
+	days_remove = 15
+	}
+NTR_purchase_extra_guns = {
+		icon = GFX_decision_rifles
 		cost = 50
 		fire_only_once = no
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-            has_political_power = 50
-			any_neighbor_state = {
-			    state = 
+	available = {
+            has_political_power > 50
+			has_country_flag = NTR_flag_smuggling_unlock
+			country_exists = SRS
 			}
-		    custom_trigger_tooltip = {
-			    tooltip = NTR_tt_one_border_war
-			    NOT = {
-				    has_country_flag = NTR_tt_one_border_war
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_smuggling_unlock
+		country_exists = SRS
+	}
+	modifier = {
+	}
+	remove_effect = {
+	add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				producer = RCT
+			    amount = 500
+			}
+	}
+	days_remove = 30
+	}
+}
+
+NTR_expand_nl_cat = {
+NTR_league_invite_cloudbury = {
+		icon = GFX_decision_eng_trade_unions_support
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			has_country_flag = NTR_flag_expand_league_unlock
+				FAW = {
+				exists = yes
+				is_in_faction =  no
+				is_subject = no
+				NOT = {
+				    has_country_leader = {
+					    ruling_only = yes name = "Reinhard Suntail"
+					}
+				}
 				}
 			}
-		}
-		modifier = {
-		    
-		}
-		complete_effect = {
-		    
-			hidden_effect = {
-			    set_country_flag = NTR_flag_one_border_war
-			}
-		}
-		remove_effect = {
-		    hidden_effect = {
-			    remove_country_flag = NTR_flag_one_border_war
-			}
-		}
-		days_remove = 7
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_expand_league_unlock
+		FAW = {
+				exists = yes
+				}
 	}
+	modifier = {
+	}
+	remove_effect = {
+    	FAW = {
+		country_event = ntribes.70
+		}
+		}
+	days_remove = 5
+	}
+NTR_league_invite_vedina = {
+		icon = GFX_decision_eng_trade_unions_support
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			has_country_flag = NTR_flag_expand_league_unlock
+				VED = {
+				exists = yes
+				is_in_faction =  no
+				is_subject = no
+				NOT = {
+				has_government = fascism 
+				}
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_expand_league_unlock
+		NTR = {
+				exists = yes
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+    	VED = {
+		country_event = ntribes.73
+		}
+		}
+	days_remove = 5
+	}
+}
+
+NTR_pony_relations_cat = {
+NTR_river_fed_honorary_member = {
+		icon = GFX_decision_rivfed
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_pony_relations_unlock
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_pony_relations_unlock
+	}
+	modifier = {
+	}
+	remove_effect = {
+		if = {
+			limit = {
+			    RCT = {
+				    is_faction_leader = yes
+				}
+			}
+          	RCT = {country_event = { id = ntribes.79 } }
+			else_if = {
+			    limit = {
+				    has_global_flag = river_federation_founded
+				}
+				every_country = {
+				    limit = {
+					    has_country_flag = river_federation_founder
+					}
+			    	country_event = { id = ntribes.79 }
+				}
+			}
+			else = {
+			}
+		}
+	}
+	days_remove = 5
+	}
+NTR_contact_equestria = {
+		icon = GFX_decision_celestia
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 25
+			has_country_flag = NTR_flag_pony_relations_unlock
+			EQS = {
+				exists = yes
+				has_government = democratic
+				}
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_pony_relations_unlock
+		EQS = {
+				exists = yes
+				has_government = democratic
+				}
+	}
+	modifier = {
+	}
+	remove_effect = {
+	EQS = {
+		country_event = ntribes.82
+		}
+	}
+	days_remove = 5
+	}
+}
+NTR_dark_tower_cat = {
+NTR_aurora_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 562
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	562 = {
+	add_dynamic_modifier = { modifier = NTR_aurora_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_iron_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 485
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	485 = {
+	add_dynamic_modifier = { modifier = NTR_iron_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_black_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 382
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	382 = {
+	add_dynamic_modifier = { modifier = NTR_black_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_shadow_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 377
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	377 = {
+	add_dynamic_modifier = { modifier = NTR_shadow_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_blood_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 383
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	383 = {
+	add_dynamic_modifier = { modifier = NTR_blood_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_obsidian_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 536
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	536 = {
+	add_dynamic_modifier = { modifier = NTR_obsidian_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_storm_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 659
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	659 = {
+	add_dynamic_modifier = { modifier = NTR_storm_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+NTR_amber_tower = {
+		icon = GFX_decision_STG_palace_construction_effort
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+			tag = NTR
+            has_political_power > 100
+			has_country_flag = NTR_flag_dark_tower_unlock
+			owns_state = 508
+			num_of_civilian_factories > 8
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_dark_tower_unlock
+	}
+	modifier = {
+			civilian_factory_use = 8
+	}
+	remove_effect = {
+	508 = {
+	add_dynamic_modifier = { modifier = NTR_amber_tower_constructed }
+	}
+	}
+	days_remove = 120
+}
+}
+NTR_slave_mines_cat = {
+NTR_arrowpeak_slave_mine = {
+		icon = GFX_decision_steel
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 475
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	475 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+	475 = {
+				add_resource = {
+					type = crystals
+					amount = 10
+				}
+			}
+	475 = {
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+	475 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+NTR_highhill_slave_mine = {
+		icon = GFX_decision_crystals
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 568
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	568 = {
+				add_resource = {
+					type = crystals
+					amount = 20
+				}
+			}
+	568 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+	568 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+	568 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+NTR_coalfall_slave_mine = {
+		icon = GFX_decision_steel
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 488
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	488 = {
+				add_resource = {
+					type = crystals
+					amount = 20
+				}
+			}
+	488 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+	488 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+	488 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+NTR_vleugeland_slave_mine = {
+		icon = GFX_decision_chromium
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 396
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	396 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+	396 = {
+				add_resource = {
+					type = chromium
+					amount = 20
+				}
+			}
+	396 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+	396 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+NTR_westkeep_slave_mine = {
+		icon = GFX_decision_aluminium
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 448
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	448 = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+	448 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+			}
+	448 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+			}
+	448 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+NTR_wingbardy_slave_mine = {
+		icon = GFX_decision_rubber
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 100
+			num_of_civilian_factories_available_for_projects > 3
+			owns_state = 371
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 4
+	}
+	remove_effect = {
+		add_manpower = -50000
+	373 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			}
+	536 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			}
+	371 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			}
+	372 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			}
+	373 = {
+				add_manpower = -100000
+			}
+	536 = {
+				add_manpower = -100000
+			}
+	371 = {
+				add_manpower = -100000
+			}
+	372 = {
+				add_manpower = -100000
+			}			
+	}
+	days_remove = 60
+	}
+NTR_ecole_slave_mine = {
+		icon = GFX_decision_tungsten
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 50
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 595
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_slave_mines_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+		add_manpower = -25000
+	595 = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+	595 = {
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+			}
+	595 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+	595 = {
+				add_manpower = -100000
+
+			}
+	}
+	days_remove = 60
+	}
+}
+NTR_last_griffon_alliance_cat = {
+NTR_griffon_last_alliance = {
+    activation = {
+        has_completed_focus = NTR_purge_herz
+    }
+    available = {
+	    tag = NTR
+		has_completed_focus = NTR_purge_herz
+		owns_state = 512
+		owns_state = 371
+		owns_state = 445
+		owns_state = 385
+		owns_state = 389
+		owns_state = 377		
+    }
+    cancel_trigger = {
+		owns_state = 512
+		owns_state = 371
+		owns_state = 445
+		owns_state = 385
+		owns_state = 389
+		owns_state = 377		
+    }
+    icon = GFX_decision_crossed_swords
+    is_good = no
+    days_mission_timeout = 600
+    selectable_mission = no
+    complete_effect = {
+		add_political_power = 200
+    }
+    timeout_effect = {
+	custom_effect_tooltip = NTR_griffon_alliance_tooltip
+	news_event = ntribes_news.8
+	hidden_effect = {	
+		every_country = {
+		 limit = {
+						is_griffon_continent_griffon_country = yes
+						NOT = {
+							is_in_faction_with = NTR
+							}
+		has_war = yes
+					}
+		every_other_country = {
+		 limit = {
+						is_griffon_continent_griffon_country = yes
+						NOT = {
+							is_in_faction_with = NTR
+							}
+		has_war_with = PREV
+					}
+		white_peace = PREV
+		set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+		}
+		}	
+		every_other_country = {
+			limit = {
+				is_griffon_continent_griffon_country = yes
+				is_puppet = no				
+				NOT = {
+					is_in_faction_with = NTR
+					}
+			}
+				add_ideas = NTR_griffon_final_war_boost
+				declare_war_on = {
+					target = NTR
+					type = annex_everything
+				}
+		}
+    }
+	}
+}
 }
