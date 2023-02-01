@@ -1639,7 +1639,7 @@ ideas = {
 	##################
 	society_development_idea = {
 	    law = yes
-		use_list_view = yes
+		use_list_view = no
         
 		GOY_magical_society = {
 

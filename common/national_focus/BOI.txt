@@ -9122,4 +9122,21 @@ focus_tree = {
 		}
 	}
 }
+
+	focus_tree = {
+		id = Griffonstone_isolation_tree
+		country = {
+			factor = 0
+			modifier = {
+				add = 1
+				tag = BOI
+			}
+		}
+		default = no
+		continuous_focus_position = { x = 130 y = 1100 }
 	
+		shared_focus = BOI_birth_navy
+		shared_focus = BOI_from_ashes
+		shared_focus = BOI_royal_defence_force
+		shared_focus = BOI_create_airforce
+	}

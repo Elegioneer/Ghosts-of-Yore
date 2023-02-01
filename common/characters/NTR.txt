@@ -20,7 +20,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NTR/euan.tga"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_euan"
 			}
 		}
 		country_leader = {
@@ -55,11 +55,11 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/NTR/GOY_archer.tga"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_archer"
 			}
 			army = {
 				large = "gfx/leaders/NTR/GOY_archer.tga"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_archer"
 			}
 		}
 		country_leader = {
@@ -154,7 +154,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/NTR/Milana_Greyheart.tga"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_milana"
 			}
 			civilian = {
 				large = "gfx/leaders/NTR/Milana_Greyheart.tga"
@@ -193,7 +193,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/NTR/Dumb_griffon.tga"
-				small = "GFX_idea_unknown_advisor_griffon"
+				small = "GFX_idea_GOY_NTR_dumb_griffon"
 			}
 		}
 		corps_commander = {
@@ -233,7 +233,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/NTR/GOY_moltenrock.tga"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_moltenrock"
 			}
 		}
 		corps_commander = {
@@ -268,29 +268,12 @@ characters = {
 			traits = { army_entrenchment_2 }
 		}
 	}
-	GOY_NTR_muireach = {
-		name = NTR_muireach_barkcoat
-		portraits = {
-			army = {
-				large = "gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
-			}
-		}
-		corps_commander = {
-		traits = { pony_race_trait bleeding_heart winter_specialist }
-		desc = ""
-		skill = 2
-		attack_skill = 2
-		defense_skill = 1
-		planning_skill = 2
-		logistics_skill = 2
-		}
-	}
 	GOY_NTR_tearlach = {
 		name = NTR_tearlach_stormshield
 		portraits = {
 			army = {
 				large = "gfx/leaders/Pony/portrait_pony_generic_land_1.dds"
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_tearlach"
 			}
 		}
 		corps_commander = {
@@ -746,7 +729,7 @@ characters = {
 		name = NTR_aodhan_redhoof
 		portraits = {
 			army = {
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_GOY_NTR_old_pone"
 			}
 		}
 		advisor = {
@@ -770,15 +753,16 @@ characters = {
 		name = NTR_muireach_barkcoat
 		portraits = {
 			army = {
-				small = "GFX_idea_unknown_advisor"
+				large = "gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
+				small = "GFX_idea_GOY_NTR_muireach"
 			}
 		}
 		advisor = {
-		cost = 100
-		slot = high_command
-		ledger = army
-		idea_token = NTR_muireach_barkcoat
-		allowed = {
+			cost = 100
+			slot = high_command
+			ledger = army
+			idea_token = NTR_muireach_barkcoat
+			allowed = {
 				original_tag = "NTR"
 			}		
 			ai_will_do = {
@@ -789,6 +773,15 @@ characters = {
 			visible = {
 			}
 			traits = { army_regrouping_2 }
+		}
+		corps_commander = {
+		traits = { pony_race_trait bleeding_heart winter_specialist }
+		desc = ""
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 2
 		}
 	}
 	GOY_NTR_mungan = {
@@ -920,7 +913,7 @@ characters = {
 		name = NTR_iron_bear
 		portraits = {
 			army = {
-				small = "GFX_idea_unknown_advisor_bear"
+				small = "GFX_idea_GOY_NTR_roflbear"
 			}
 		}
 		advisor = {
@@ -946,6 +939,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/NTR/lachlan.tga"
+				small = "GFX_idea_GOY_NTR_lachlan"
 			}
 		}
 	}
@@ -970,7 +964,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/NTR/GOY_evilarthas.tga"
-				small = "GFX_idea_unknown_advisor_griffon"
+				small = "GFX_idea_GOY_NTR_evilarthas"
 			}
 		}
 	}

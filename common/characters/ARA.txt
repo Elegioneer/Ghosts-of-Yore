@@ -7,7 +7,7 @@ characters = {
 			}
 			army = {
 				large="gfx/leaders/ARA/dorotheos.tga"
-				small="GFX_idea_unknown_advisor_griffon"
+				small="GFX_idea_ARA_dorotheos"
 			}
 		}
 		country_leader = {
@@ -17,13 +17,29 @@ characters = {
 			id = -1
 		}
 		field_marshal = {
-		traits = { griffon_race_trait politically_connected media_personality brilliant_strategist trait_reckless inspirational_leader aggressive_assaulter }
-		skill = 3
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 4
-		logistics_skill = 3
-		legacy_id = 1333
+			traits = { griffon_race_trait politically_connected media_personality brilliant_strategist trait_reckless inspirational_leader aggressive_assaulter }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 1333
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = ARA_dorotheos_advisor
+			allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 20
+			}
+			available = {
+			}
+			visible = {
+			}
+			traits = { army_chief_offensive_2 }
 		}
 	}
 	GOY_ARA_margareth_featherin = {
@@ -40,11 +56,14 @@ characters = {
 			id = -1
 		}
 	}
-	GOY_ARA_ciriaco = {
+	ARA_ciriaco_mediate = {
 		name = GOY_ARA_ciriaco
 		portraits = {
-			civilian = {
-				large = "gfx/leaders/ARA/aranazbol.tga"
+			army={
+				small="GFX_idea_aranazbol"
+			}
+			civilian={
+				large="gfx/leaders/ARA/aranazbol.tga"
 			}
 		}
 		country_leader = {
@@ -52,6 +71,26 @@ characters = {
 			ideology = rozenkampism
 			expire = "1965.1.1.1"
 			id = -1
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			ledger = army
+			idea_token = GOY_ARA_ciriaco_advisor
+			allowed = {
+				original_tag = "ARA"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = ARA_new_academy_flag
+				has_character = ARA_ciriaco_mediate
+			}
+			visible = {
+
+			}
+			traits = { army_commando_2 }
 		}
 	}
 	GOY_ARA_antioco_moro = {
@@ -98,11 +137,11 @@ characters = {
 		legacy_id = 1334
 		}
 		advisor = {
-		cost = 200
-		slot = high_command
-		ledger = army
-		idea_token = soter_advisor
-		allowed = {
+			cost = 200
+			slot = high_command
+			ledger = army
+			idea_token = soter_advisor
+			allowed = {
 				original_tag = "ARA"
 			}		
 			ai_will_do = {
@@ -155,7 +194,7 @@ characters = {
 			visible = {
 
 			}
-			traits = { army_commando_2 }
+			traits = { army_infantry_1 }
 		}
 	}
 	GOY_ARA_lysimachus = {
@@ -180,32 +219,9 @@ characters = {
 		legacy_id = 1335
 		}
 		advisor = {
-		cost = 50
+		cost = 100
 		slot = army_chief
 		idea_token = lysimachus_advisor
-		allowed = {
-				original_tag = "ARA"
-			}		
-			ai_will_do = {
-				factor = 1
-			}
-			available = {
-				has_country_flag = ARA_new_academy_flag
-				custom_trigger_tooltip = {
-				    tooltip = ARA_lysimachus_army
-				    has_unit_leader = 1335
-				}
-			}
-			visible = {
-
-			}
-			traits = { army_chief_morale_1 }
-		}
-		advisor = {
-		cost = 100
-		slot = high_command
-		ledger = army
-		idea_token = ARA_lysimachus
 		allowed = {
 				original_tag = "ARA"
 			}		
@@ -247,7 +263,7 @@ characters = {
 		legacy_id = 1336
 		}
 		advisor = {
-		cost = 200
+		cost = 150
 		slot = army_chief
 		idea_token = nicator_advisor
 		allowed = {
@@ -267,29 +283,6 @@ characters = {
 
 			}
 			traits = { army_chief_planning_3 }
-		}
-		advisor = {
-		cost = 100
-		slot = high_command
-		ledger = army
-		idea_token = ARA_nicator
-		allowed = {
-				original_tag = "ARA"
-			}		
-			ai_will_do = {
-				factor = 1
-			}
-			available = {
-				has_country_flag = ARA_new_academy_flag
-				custom_trigger_tooltip = {
-				    tooltip = ARA_nicator_army
-				    has_unit_leader = 1336
-				}
-			}
-			visible = {
-
-			}
-			traits = { army_artillery_2 }
 		}
 	}
 	GOY_ARA_prelate_heraclius = {
@@ -640,7 +633,7 @@ characters = {
 		name = ARA_titus
 		portraits = {
 			army = {
-				small = "GFX_idea_generic_griffon_nuclear_scientist"
+				small="GFX_idea_FEA_advisor_7"
 			}
 		}
 		advisor = {
@@ -863,7 +856,7 @@ characters = {
 			    owns_state = 371
 			}
 			visible = {
-			    owns_state = 371
+			    has_country_flag = dorotheos_recovers_idol
 			}
  			traits = { navy_chief_commerce_raiding_2 }
 		}

@@ -49,11 +49,11 @@ ARA_historical = {
 	}
 
 	ai_national_focuses = {
-	    ARA_new_age_new_army
-		ARA_nation_under_arms
-		ARA_military_railroads
-		ARA_new_academy
-		ARA_prepare_the_people
+	    ARA_GOY_new_age_new_army
+		ARA_GOY_nation_under_arms
+		ARA_GOY_military_railroads
+		ARA_GOY_new_academy
+		ARA_GOY_prepare_the_people
 	    ARA_nationalization
 		ARA_state_of_war
 	    ARA_reorganise_high_command
@@ -69,16 +69,16 @@ ARA_historical = {
 		ARA_military_research_institute
 		#
 		ARA_craddle
-		ARA_the_cadets
+		ARA_GOY_the_cadets
 		ARA_kickstart_my_heart
 		ARA_rebuild_stone
 		#
 		ARA_fight_north
-		ARA_superior_warfare_doctrine
+		ARA_GOY_superior_warfare_doctrine
 		ARA_integrate_north
 		#
 		ARA_fight_avian
-		ARA_mandatory_training
+		ARA_GOY_mandatory_training
 		ARA_integrate_avian
 		#
 		ARA_ac_revelations

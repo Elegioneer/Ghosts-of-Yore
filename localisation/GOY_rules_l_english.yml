@@ -2,4 +2,5 @@
 
  ### GAME RULES ###
 
- RULE_GROUP_EXTRA_CONTENT_GOY:0 "Ghosts of Yore"
+ RULE_GROUP_EXTRA_CONTENT_GOY_AI:0 "Ghosts of Yore – AI Behavior"
+ 

@@ -72,6 +72,13 @@ add_manpower = 24239
 		instant_build = yes
 	}	
 }
+679 = {
+    add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}	
+}
 
 recruit_character = GOY_BOI_grandpagruff
 recruit_character = GOY_BOI_goldstone

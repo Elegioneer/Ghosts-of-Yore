@@ -45,7 +45,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_cult_of_speed_idea = {
+		ARA_GOY_cult_of_speed_idea = {
 			allowed = {
 				always = no
 			}
@@ -79,7 +79,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_continous_planning_idea = {
+		ARA_GOY_continous_planning_idea = {
 			allowed = {
 				always = no
 			}
@@ -96,7 +96,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_new_school_idea = {
+		ARA_GOY_new_school_idea = {
 			allowed = {
 				always = no
 			}
@@ -114,7 +114,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_guerilla_warfare_idea = {
+		ARA_GOY_guerilla_warfare_idea = {
 			allowed = {
 				always = no
 			}
@@ -133,7 +133,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_mandatory_training_idea = {
+		ARA_GOY_mandatory_training_idea = {
 			allowed = {
 				always = no
 			}
@@ -169,7 +169,7 @@ ideas = {
 	}
 
 	country = {
-		ARA_builder_divisions_idea = {
+		ARA_GOY_builder_divisions_idea = {
 			allowed = {
 				always = no
 			}
@@ -933,7 +933,7 @@ country = {
 	}
 	
 	country = {
-		ARA_mobilized_economy = {
+		ARA_GOY_mobilized_economy = {
 			allowed = {
 				always = no
 			}

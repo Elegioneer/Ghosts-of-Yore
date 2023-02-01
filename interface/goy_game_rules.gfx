@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goy_game_rule_ghostofyore"
+		texturefile = "gfx/game_rules/ghostofyore.dds"
+	}
+}

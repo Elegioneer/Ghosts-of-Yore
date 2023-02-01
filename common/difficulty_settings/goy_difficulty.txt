@@ -1,0 +1,23 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_ARA"
+		icon = "GFX_goy_game_rule_ghostofyore"
+		modifier = diff_strong_ai_generic
+		countries = { ARA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_BOI"
+		icon = "GFX_goy_game_rule_ghostofyore"
+		modifier = diff_strong_ai_generic
+		countries = { BOI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_NTR"
+		icon = "GFX_goy_game_rule_ghostofyore"
+		modifier = diff_strong_ai_generic
+		countries = { NTR }
+		multiplier = 2.0
+	}
+}

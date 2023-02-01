@@ -27,7 +27,10 @@ spriteTypes = {
 		name = "GFX_idea_ARA_craterus"
 		texturefile = "gfx/interface/ideas/idea_ARA_craterus.dds"
     }
-
+	SpriteType = {
+		name = "GFX_idea_ARA_dorotheos"
+		texturefile = "gfx/interface/ideas/idea_ARA_dorotheos.dds"
+    }
     SpriteType = {
 		name = "GFX_idea_ARA_goldstone"
 		texturefile = "gfx/interface/ideas/idea_ARA_lord_goldstone.dds"
@@ -194,5 +197,57 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_BOI_idea_idol_goy"
 		texturefile = "gfx/interface/ideas/BOI_idea_idol_goy.dds"
-	}	
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_roflbear"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_roflbear.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_archer"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_archer.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_euan"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_euan.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_evilarthas"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_evilarthas.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_lachlan"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_lachlan.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_moltenrock"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_moltenrock.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_dumb_griffon"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_dumb_griffon.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_muireach"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_muireach.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_milana"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_milana.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_redhoof"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_redhoof.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_tearlach"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_tearlach.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_old_pone"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_old_pone.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_ARA_arantiga_knight"
+		texturefile = "gfx/interface/ideas/idea_GOY_ARA_arantiga_knight.dds"
+	}
 }

@@ -10,15 +10,11 @@ add_namespace = arantiga_decision
 	title = arantiga.322.t
 	desc = arantiga.322.d
 	picture = GFX_event_ARA_arantiga
-	is_triggered_only = no
-	hidden = yes
-	trigger = { 
-	tag = ARA
-	}
+	is_triggered_only = yes
 	hidden = yes
 	immediate = {
 	    ARA = {
-		    country_event = { id = arantiga.001 days = 16 }
+			country_event = { id = arantiga.001 days = 16 }
 			country_event = { id = arantiga.002 days = 47 }
 			country_event = { id = arantiga.003 days = 70 }
 		}
@@ -87,7 +83,7 @@ add_namespace = arantiga_decision
 		country_leader = {
 		ideology = despotism
 		desc = "justified_traitor_desc"
-		expire = “1965.1.1.1”
+		expire = “1965.01.01.01”
 		traits = {  }
 		}
 		}
@@ -153,23 +149,10 @@ country_event = { #prodigal sons
 		add_advisor_role = {
 			character = GOY_ARA_craterus
 				advisor = {
-				slot = army_chief
-				cost = 100
-				idea_token = craterus_advisor
-				traits = { army_chief_maneuver_2 }
-				allowed = {
-				original_tag = "ARA"
-				}
-			}
-			activate = no
-			}
-		add_advisor_role = {
-			character = GOY_ARA_craterus
-				advisor = {
 				slot = high_command
 				ledger = army
 				cost = 100
-				idea_token = ARA_craterus
+				idea_token = craterus_advisor
 				traits = { army_armored_2 }
 				allowed = {
 				original_tag = "ARA"
@@ -223,7 +206,7 @@ country_event = { #prodigal sons
 	Country_leader = {
 	ideology = rexism
 	desc = "alexander_but_woke_desc"
-    expire = “1965.1.1.1”
+    expire = “1965.01.01.01”
     traits = { arantigos_reborn }
 	}
 	}
@@ -481,7 +464,7 @@ country_event = { #going lower
 				Country_leader = {
 				ideology = falangism
 				desc = "crazed_fanboy_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -617,7 +600,7 @@ country_event = { #going lower
 				Country_leader = {
 				ideology = falangism
 				desc = "crazed_fanboy_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -706,7 +689,7 @@ country_event = { #going lower
 				Country_leader = {
 				ideology = falangism
 				desc = "crazed_fanboy_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -809,7 +792,7 @@ country_event = { #going lower
 				Country_leader = {
 				ideology = falangism
 				desc = "crazed_fanboy_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -926,7 +909,7 @@ country_event = { #No remorse
 				Country_leader = {
 				ideology = falangism
 				desc = "crazed_fanboy_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -957,31 +940,32 @@ country_event = { #No remorse
 	}
 
 	country_event = { #Nicator's coup
-	id = arantiga.026
-	title = arantiga.026.t
-	desc = arantiga.026.d
-	picture = GFX_event_griffon_para
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-	name = arantiga.026.a
-	#custom_effect_tooltip = ara_tooltip_voices_3
-	add_manpower = -5000
-	add_stability = -0.05
-	add_war_support = -0.05
-	
-	retire_character = GOY_ARA_nicator
-	add_country_leader_role = {
+		id = arantiga.026
+		title = arantiga.026.t
+		desc = arantiga.026.d
+		picture = GFX_event_griffon_para
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = arantiga.026.a
+			#custom_effect_tooltip = ara_tooltip_voices_3
+			add_manpower = -5000
+			add_stability = -0.05
+			add_war_support = -0.05
+			retire_character = GOY_ARA_nicator
+			add_country_leader_role = {
 				Character = GOY_ARA_soter
 				Promote_leader = yes
 				Country_leader = {
-				ideology = populism
-				desc = "soter_president_desc"
-				expire = “1965.1.1.1”
-				traits = {  }
+					ideology = populism
+					desc = "soter_president_desc"
+					expire = “1965.01.01.01”
+					traits = {  }
+				}
 			}
-			}
-	}
+			set_party_name = {ideology = neutrality name = ARA_soter_coalition long_name = ARA_soter_coalition_long }
+		}
 	}
 	
 	
@@ -1023,6 +1007,9 @@ country_event = { #Griffonstone Archives
 	remove_ideas = ARA_absolute_reign
 	add_ideas = ARA_power_vacuum
 	add_ideas = ARA_absolute_chaos
+	GOY_ARA_nicator = {
+		promote_leader = yes
+	}
 	}
 	}
 	
@@ -1126,8 +1113,9 @@ country_event = { #Griffonstone Archives
 				Promote_leader = yes
 				Country_leader = {
 				ideology = nazism
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
+				set_party_name = {ideology = fascism name = ARA_crat_junta_party long_name = ARA_crat_junta_party }
 			}
 			}
 		    }
@@ -1166,17 +1154,20 @@ country_event = { #Griffonstone Archives
 			    remove_idea = ARA_power_vacuum
 			    add_idea = ARA_lysi_regency
 		    }
+			GOY_ARA_lysimachus = {
+				promote_leader = yes
+			}
 			hidden_effect = {
 			    complete_national_focus = ARA_inheritor
 			    add_country_leader_role = {
-				Character = GOY_ARA_craterus
-				Promote_leader = yes
-				Country_leader = {
-				ideology = despotism
-				expire = “1965.1.1.1”
-				traits = {  }
-			}
-			}
+					Character = GOY_ARA_craterus
+						Promote_leader = yes
+						Country_leader = {
+							ideology = despotism
+							expire = “1965.01.01.01”
+							traits = {  }
+						}
+				}
 				set_party_name = {ideology = neutrality name = ARA_moderates long_name = ARA_moderates_long }
 			}
 	    }
@@ -1374,14 +1365,17 @@ country_event = { #Griffonstone Archives
     	name = ARA_soter_coalition1
 	}
 	
-	remove_country_leader_role = GOY_ARA_nicator
+	remove_country_leader_role = {
+		character = GOY_ARA_nicator
+		ideology = despotism
+	}
 	add_country_leader_role = {
 				Character = GOY_ARA_soter
 				Promote_leader = yes
 				Country_leader = {
 				ideology = populism
 				desc = "soter_president_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -2414,7 +2408,7 @@ country_event = { #Griffonstone Archives
 							Country_leader = {
 							ideology = nazism
 							desc = ""
-							expire = “1965.1.1.1”
+							expire = “1965.01.01.01”
 							traits = {  }
 						}
 						}
@@ -3185,14 +3179,17 @@ country_event = { #Griffonstone Archives
 			add_ideas = ARA_Equality_under_Emperor
 			set_party_name = { ideology = neutrality name = ARA_EMP_oligarchs long_name = ARA_EMP_oligarchs_long }
 			
-			remove_country_leader_role = GOY_ARA_soter
+			remove_country_leader_role = {
+				character = GOY_ARA_soter
+				ideology = populism
+			}
 			add_country_leader_role = {
 				Character = GOY_ARA_treasurer
 				Promote_leader = yes
 				Country_leader = {
 				ideology = oligarchism
 				desc = "fat_trade_bird_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}
@@ -4080,7 +4077,7 @@ country_event = { #Detente
 					Country_leader = {
 					ideology = nazism
 					desc = ""
-					expire = “1965.1.1.1”
+					expire = “1965.01.01.01”
 					traits = {  }
 				}
 				}					
@@ -5007,7 +5004,7 @@ country_event = { #Rodier's coup
 				Country_leader = {
 				ideology = despotism
 				desc = "JER_POLITICS_Charles_DESC"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { GOY_inexperienced_ruler }
 			}
 			}
@@ -5058,13 +5055,13 @@ country_event = { #Victory over the necromancers
 			add_state_core = 417
 			add_state_core = 416
 			add_state_core = 415
-		add_country_leader_role = {
+			add_country_leader_role = {
 				Character = GOY_ARA_headmasterapesios
 				Promote_leader = yes
 				Country_leader = {
 				ideology = holy_order_f
 				desc = ""
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = {  }
 			}
 			}

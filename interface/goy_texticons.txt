@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_GOY_ghostofyore_texticon"
+		texturefile = "gfx/texticons/goy_ghostofyore_texticon.dds"
+		legacy_lazy_load = no
+	}
+}

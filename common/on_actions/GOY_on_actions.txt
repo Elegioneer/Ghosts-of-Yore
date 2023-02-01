@@ -1,16 +1,74 @@
 on_actions = {
     on_startup = {
 	    effect = {
-	        BOI = {
-		        country_event = {
-				    id = griffonstone.001
-					days = 9
+			add_to_array = { global.states_with_lore = 408.id }
+			add_to_array = { global.states_with_lore = 562.id }
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = NTR_ai_behavior
+						option = NTR_ISOLATION
+					}
 				}
+				NTR = {
+					load_focus_tree = generic_focus
+					drop_cosmetic_tag = yes
+				}
+				ELSE = {
+					
+				}
+			}
+			IF = {
+				limit = {
+					BOI = {
+						is_ai = yes
+					}
+					has_game_rule = {
+						rule = BOI_ai_behavior
+						option = BOI_ISOLATION
+					}
+				}
+				BOI = {
+					set_country_flag = BOI_deadlock_broken
+					load_focus_tree = Griffonstone_isolation_tree
+				}
+				ELSE = {
+					BOI = {
+						country_event = {
+							id = griffonstone.001
+							days = 70
+						}
+					}
+				}
+			}
+			BOI = {
 				country_event = {
 				    id = griffonstone.300
 					days = 357
 				}
 		    }
+			IF = {
+				limit = {
+					ARA = {
+						is_ai = yes
+					}
+					has_game_rule = {
+						rule = ARA_ai_behavior
+						option = ARANTIGA_ISOLATION
+					}
+				}
+				ARA = {
+					set_country_flag = ARA_FLAG_rise_of_arantiga
+				}
+				ELSE = {
+					ARA = {
+						country_event = {
+							id = arantiga.322
+							days = 1
+						}
+					}
+				}
+			}
 		}
 	}
     on_state_control_changed = { 

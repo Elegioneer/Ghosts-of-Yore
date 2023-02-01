@@ -25,5 +25,15 @@ units = {
 		division_template = "Sons of Arantigos"
 		start_experience_factor = 0.80
 		start_equipment_factor = 0.7
+		officers = {
+			unique = { "Hespaeros Mysterio" }
+			male = yes
+			portraits = {
+				army = {
+					large = "gfx/leaders/ARA/arantiga_knight.tga"
+					small = "GFX_idea_GOY_ARA_arantiga_knight"
+				}
+			}
+		}
 	}
 }

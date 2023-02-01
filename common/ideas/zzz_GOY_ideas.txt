@@ -1,0 +1,39 @@
+ideas = {
+	country = {
+	    GOY_national_strength_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BAL_hell
+			removal_cost = -1
+			modifier = {
+			    political_power_factor = 0.12
+			    experience_gain_army_factor = 0.12
+			    experience_gain_army_unit_factor = 0.1
+			    experience_gain_navy_factor = 0.12
+			    experience_gain_navy_unit_factor = 0.1
+			    experience_gain_air = 0.12
+			    attrition = -0.075
+			    supply_consumption_factor = -0.25
+			    army_morale_factor = 0.15
+			    dig_in_speed_factor = 0.12
+			    production_factory_max_efficiency_factor = 0.075
+			    PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.12
+			    PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR = 0.15
+			    ARMY_CORE_ATTACK_FACTOR = 0.075
+			    ARMY_CORE_DEFENCE_FACTOR = 0.075
+			    RESEARCH_SPEED_FACTOR = 0.05
+			    INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = 0.1
+			    LAND_REINFORCE_RATE = 0.01
+			    PLANNING_SPEED = 0.12
+			    ARMY_FUEL_CONSUMPTION_FACTOR = -0.2
+			    NAVY_FUEL_CONSUMPTION_FACTOR = -0.2
+			    AIR_FUEL_CONSUMPTION_FACTOR = -0.2
+			    AIR_MISSION_XP_FACTOR = 0.12
+			}
+		}
+	}
+}

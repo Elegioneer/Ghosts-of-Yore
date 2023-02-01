@@ -572,7 +572,7 @@ add_namespace = griffonstone_decision
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -914,7 +914,7 @@ add_namespace = griffonstone_decision
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -1608,7 +1608,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = conservatism
 				desc = "BOI_gallus_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { GOY_gallusfriendship }
 				}
 				}
@@ -1691,7 +1691,7 @@ country_event = { #Herzländers unite! (cap)
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -2038,7 +2038,7 @@ country_event = { #Herzländers unite! (cap)
 					Country_leader = {
 					ideology = falangism
 					desc = "eros_vii_desc"
-					expire = “1965.1.1.1”
+					expire = “1965.01.01.01”
 					traits = { }
 				}
 				}			
@@ -2072,7 +2072,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = oligarchism
 				desc = "GOY_BOI_duchess_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { STW_ambitious_ruler } #TODO Should be changed
 				}
 				}	
@@ -2092,7 +2092,7 @@ country_event = { #Herzländers unite! (cap)
 					Country_leader = {
 					ideology = falangism
 					desc = "eros_vii_desc"
-					expire = “1965.1.1.1”
+					expire = “1965.01.01.01”
 					traits = { }
 				}
 				}
@@ -2647,7 +2647,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = socialism
 				desc = ""
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { }
 				}
 				}
@@ -2672,7 +2672,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = liberalism
 				desc = ""
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { }
 				}
 				}			
@@ -2697,7 +2697,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = liberalism
 				desc = ""
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { }
 				}
 				}			
@@ -4294,7 +4294,7 @@ country_event = { #Imperial coronation
 				country_leader = {
 				ideology = despotism
 				desc = "grover_vi_desc"
-				expire = “1965.1.1.1”
+				expire = “1965.01.01.01”
 				traits = { }
 			}
 			}

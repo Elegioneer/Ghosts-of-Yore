@@ -1179,6 +1179,10 @@ TRD_AVI = {
 	color = rgb { 75 0 130 }
 	color_ui = rgb { 75 0 130 }
 }
+HAU_AVI = {
+	color = rgb { 75 0 130 }
+	color_ui = rgb { 75 0 130 }
+}
 FAT_AVI = {
 	color = rgb { 75 0 130 }
 	color_ui = rgb { 75 0 130 }
@@ -1196,6 +1200,10 @@ STW_AVI = {
 	color_ui = rgb { 75 0 130 }
 }
 GRY_AVI = {
+	color = rgb { 75 0 130 }
+	color_ui = rgb { 75 0 130 }
+}
+GRU_AVI = {
 	color = rgb { 75 0 130 }
 	color_ui = rgb { 75 0 130 }
 }

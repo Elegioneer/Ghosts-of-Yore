@@ -2,7 +2,8 @@
 
 ARA_ai_behavior = {
 	name = "ARA_AI_BEHAVIOR"
-	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI"
+	icon = "GFX_goy_game_rule_ghostofyore"
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
@@ -39,6 +40,12 @@ ARA_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ARANTIGA_ISOLATION
+		text = "RULE_OPTION_ARA_ISOLATION"
+		desc = "RULE_OPTION_ARA_ISOLATION_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
@@ -48,7 +55,8 @@ ARA_ai_behavior = {
 
 BOI_ai_behavior = {
 	name = "BOI_AI_BEHAVIOR"
-	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI"
+	icon = "GFX_goy_game_rule_ghostofyore"
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
@@ -79,6 +87,12 @@ BOI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = BOI_ISOLATION
+		text = "RULE_OPTION_BOI_ISOLATION"
+		desc = "RULE_OPTION_BOI_ISOLATION_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
@@ -88,7 +102,8 @@ BOI_ai_behavior = {
 
 NTR_ai_behavior = {
 	name = "NTR_AI_BEHAVIOR"
-	group = "RULE_GROUP_EXTRA_CONTENT_GOY"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI"
+	icon = "GFX_goy_game_rule_ghostofyore"
 	default = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
@@ -113,9 +128,49 @@ NTR_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
+		name = NTR_ISOLATION
+		text = "RULE_OPTION_NTR_ISOLATION"
+		desc = "RULE_OPTION_NTR_ISOLATION_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
 		allow_achievements = yes
 	}
 }
+
+#ARA_goy_strength = {
+#	name = "ARA_GOY_STRENGTH_NAME"
+#	group = "RULE_GROUP_EXTRA_CONTENT_GOY_STRENGTH"
+#	default = {
+#		name = DEFAULT
+#		text = "RULE_OPTION_DEFAULT"
+#		desc = "RULE_OPTION_DEFAULT_STRENGTH_DESC"
+#	}
+#	option = {
+#		name = ARA_STRENGTH_1
+#		text = "ARA_OPTION_STRENGTH_1"
+#		desc = "ARA_OPTION_STRENGTH_1_DESC"
+#		allow_achievements = no
+#	}
+#	option = {
+#		name = ARA_STRENGTH_2
+#		text = "ARA_OPTION_STRENGTH_2"
+#		desc = "ARA_OPTION_STRENGTH_2_DESC"
+#		allow_achievements = no
+#	}
+#	option = {
+#		name = ARA_STRENGTH_3
+#		text = "ARA_OPTION_STRENGTH_3"
+#		desc = "ARA_OPTION_STRENGTH_3_DESC"
+#		allow_achievements = no
+#	}
+#	option = {
+#		name = ARA_STRENGTH_4
+#		text = "ARA_OPTION_STRENGTH_4"
+#		desc = "ARA_OPTION_STRENGTH_4_DESC"
+#		allow_achievements = no
+#	}
+#}

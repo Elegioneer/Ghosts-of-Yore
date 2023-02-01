@@ -6271,7 +6271,7 @@ shared_focus = {
 		prerequisite = { focus = NTR_fools_traitors }
 		available = {
 		    has_war_with = HRR
-			surrender_progress = 0.25
+			surrender_progress > 0.25
 		}
 		bypass = {
 		    HRR = {
