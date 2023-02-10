@@ -33,4 +33,8 @@ spriteTypes = {
 		name = "GFX_event_goy_bookburn"
 		texturefile = "gfx/event_pictures/event_goy_bookburn.dds"
 	}
+	spriteType = {
+		name = "GFX_event_goy_iri_report"
+		texturefile = "gfx/event_pictures/event_goy_iri_report.dds"
+	}
 }

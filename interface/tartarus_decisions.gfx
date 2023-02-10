@@ -15,4 +15,36 @@ spriteTypes = {
 		name = "GFX_decision_bloodmoney"
 		texturefile = "gfx/interface/decisions/decision_bloodmoney.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_goy_cat_IRI_icon"
+		texturefile = "gfx/interface/decisions/decision_goy_cat_IRI_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_cat_recall_expats"
+		texturefile = "gfx/interface/decisions/decision_goy_cat_recall_expats.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_IRI_gottermalleus"
+		texturefile = "gfx/interface/decisions/decision_goy_IRI_gottermalleus.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_IRI_panaceum"
+		texturefile = "gfx/interface/decisions/decision_goy_IRI_panaceum.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_IRI_super_soldiers"
+		texturefile = "gfx/interface/decisions/decision_goy_IRI_super_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_IRI_teleport"
+		texturefile = "gfx/interface/decisions/decision_goy_IRI_teleport.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_recall_diaspora"
+		texturefile = "gfx/interface/decisions/decision_goy_recall_diaspora.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_recall_warriors"
+		texturefile = "gfx/interface/decisions/decision_goy_recall_warriors.dds"
+	}
 }

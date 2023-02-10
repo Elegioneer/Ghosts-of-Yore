@@ -247,6 +247,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_GOY_NTR_old_pone.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_GOY_drood_wisdom"
+		texturefile = "gfx/interface/ideas/idea_GOY_drood_wisdom.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_GOY_ARA_arantiga_knight"
 		texturefile = "gfx/interface/ideas/idea_GOY_ARA_arantiga_knight.dds"
 	}

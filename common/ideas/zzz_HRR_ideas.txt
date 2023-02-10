@@ -382,6 +382,7 @@ ideas = {
 			modifier = {
 			    conscription = 0.06
 				mobilization_speed = 0.25
+				training_time_factor = -0.2
 			}
 		}
 		HRR_rationing = {
@@ -389,7 +390,7 @@ ideas = {
 				always = no
 			}
 			cancel = {
-					has_war = no
+				has_war = no
 			}			
 			allowed_civil_war = {
 				always = yes

@@ -89,7 +89,7 @@ NTR_spirits_blessings_cat = {
 		modifier = {
 		    monthly_population = 0.2
 			conscription = 0.01
-			casualty_trickleback = 0.1
+			#casualty_trickleback = 0.1 Doesnt work
 			experience_loss_factor = -0.1
 		}
 		complete_effect = {
@@ -2383,74 +2383,74 @@ NTR_ecole_slave_mine = {
 	}
 }
 NTR_last_griffon_alliance_cat = {
-NTR_griffon_last_alliance = {
-    activation = {
-        has_completed_focus = NTR_purge_herz
-    }
-    available = {
-	    tag = NTR
-		has_completed_focus = NTR_purge_herz
-		owns_state = 512
-		owns_state = 371
-		owns_state = 445
-		owns_state = 385
-		owns_state = 389
-		owns_state = 377		
-    }
-    cancel_trigger = {
-		owns_state = 512
-		owns_state = 371
-		owns_state = 445
-		owns_state = 385
-		owns_state = 389
-		owns_state = 377		
-    }
-    icon = GFX_decision_crossed_swords
-    is_good = no
-    days_mission_timeout = 600
-    selectable_mission = no
-    complete_effect = {
-		add_political_power = 200
-    }
-    timeout_effect = {
-	custom_effect_tooltip = NTR_griffon_alliance_tooltip
-	news_event = ntribes_news.8
-	hidden_effect = {	
-		every_country = {
-		 limit = {
-						is_griffon_continent_griffon_country = yes
-						NOT = {
-							is_in_faction_with = NTR
-							}
-		has_war = yes
-					}
-		every_other_country = {
-		 limit = {
-						is_griffon_continent_griffon_country = yes
-						NOT = {
-							is_in_faction_with = NTR
-							}
-		has_war_with = PREV
-					}
-		white_peace = PREV
-		set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+	NTR_griffon_last_alliance = {
+		activation = {	
+			has_completed_focus = NTR_purge_herz
 		}
-		}	
-		every_other_country = {
-			limit = {
-				is_griffon_continent_griffon_country = yes
-				is_puppet = no				
-				NOT = {
-					is_in_faction_with = NTR
+		available = {	
+			tag = NTR
+			has_completed_focus = NTR_purge_herz
+			owns_state = 512
+			owns_state = 371
+			owns_state = 445
+			owns_state = 385
+			owns_state = 389
+			owns_state = 377		
+		}
+		cancel_trigger = {	
+			owns_state = 512
+			owns_state = 371
+			owns_state = 445
+			owns_state = 385
+			owns_state = 389
+			owns_state = 377		
+		}
+		icon = GFX_decision_crossed_swords
+		is_good = no
+		days_mission_timeout = 600
+		selectable_mission = no
+		complete_effect = {	
+			add_political_power = 200
+		}
+		timeout_effect = {
+			custom_effect_tooltip = NTR_griffon_alliance_tooltip
+			news_event = ntribes_news.8
+			hidden_effect = {	
+				every_country = {
+					limit = {
+						is_griffon_continent_griffon_country = yes
+						NOT = {
+							is_in_faction_with = NTR
+						}
+						has_war = yes
 					}
-			}
-				add_ideas = NTR_griffon_final_war_boost
-				declare_war_on = {
-					target = NTR
-					type = annex_everything
+					every_other_country = {
+						limit = {
+							is_griffon_continent_griffon_country = yes
+							NOT = {
+								is_in_faction_with = NTR
+							}
+							has_war_with = PREV
+						}
+						white_peace = PREV
+						set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+					}
 				}
+				every_other_country = {
+					limit = {
+						is_griffon_continent_griffon_country = yes
+						is_puppet = no				
+						NOT = {
+							is_in_faction_with = NTR
+						}
+					}
+					add_ideas = NTR_griffon_final_war_boost
+					declare_war_on = {
+						target = NTR
+						type = annex_everything
+					}
+				}
+			}
 		}
-    }
 	}
-}
 }

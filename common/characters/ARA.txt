@@ -786,7 +786,7 @@ characters = {
 		cost = 100
 		slot = high_command
 		ledger = air
-		idea_token = ARA_bellerophontes
+		idea_token = ARA_bellerophontes_2
 		allowed = {
 				original_tag = "ARA"
 			}		

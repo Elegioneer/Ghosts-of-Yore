@@ -2020,6 +2020,12 @@ country_event = { #Herzländers unite! (cap)
 				global.griffonian_empire_var = THIS
 			}
 			set_capital = { state = 382 }
+			382 = {
+				add_victory_points = {
+					province = 10537
+					value = 20
+				}
+			}
 			add_ideas = GRI_grover_vi
 			remove_ideas = BOI_GAW_kingdom_with_no_king
 			set_faction_name = GOY_reichspakt
@@ -2062,6 +2068,12 @@ country_event = { #Herzländers unite! (cap)
 				global.griffonian_empire_var = THIS
 			}
 			set_capital = { state = 382 }
+			382 = {
+				add_victory_points = {
+					province = 10537
+					value = 20
+				}
+			}
 			remove_country_leader_role = {
 				character = GOY_BOI_gestal
 				ideology = centrism

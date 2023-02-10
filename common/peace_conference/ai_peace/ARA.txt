@@ -1,0 +1,56 @@
+peace_ai_desires = {
+	
+	goy_arantigos_annex_griffonia = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+                is_griffon_core = yes
+            }
+            ROOT = {
+                original_tag = ARA
+            }
+			ROOT.FROM = { tag = ROOT }
+            ROOT = {
+                OR = {
+                    has_government = fascism
+					has_government = neutrality
+                }
+            }
+        }
+        ai_desire = 100
+    }
+	
+	goy_griffonstone_annex_griffonia = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+                is_griffon_core = yes
+            }
+            ROOT = {
+                original_tag = BOI
+            }
+			ROOT.FROM = { tag = ROOT }
+        }
+        ai_desire = 100
+    }
+	
+	goy_frost_kings_general_attitude = {
+        peace_action_type = take_states
+        enable = {
+            FROM.FROM.FROM = {
+                is_griffon_core = yes
+            }
+            ROOT = {
+                original_tag = NTR
+            }
+			ROOT.FROM = { tag = ROOT }
+            ROOT = {
+                OR = {
+                    has_government = fascism
+                }
+            }
+        }
+        ai_desire = 100
+    }
+	
+}

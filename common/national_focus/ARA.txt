@@ -538,7 +538,7 @@
 		### Army Focuses ###
 	shared_focus = {
 		id = ARA_GOY_new_age_new_army
-		icon = GFX_arantigan_generals
+		icon = GFX_goal_goy_military
 		x = 1
 		y = 0
 		cost = 5.00
@@ -556,7 +556,7 @@
 
 	shared_focus = {
 		id = ARA_GOY_new_academy
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_arantigan_generals
 		x = -5
 		y = 1
 		relative_position_id = ARA_GOY_new_age_new_army
@@ -577,7 +577,7 @@
 			category = land_doctrine
 		}
 			hidden_effect = {
-			    set_country_flag = ARA_GOY_new_academy_flag
+			    set_country_flag = ARA_new_academy_flag
 			}
 		}
 	}
@@ -1364,7 +1364,7 @@
 
 	shared_focus = {
 		id = ARA_GOY_unmatched_army
-		icon = GFX_focus_ger_oppose_hitler
+		icon = GFX_goal_goy_legionary_helm
 		x = 0
 		y = 7
 		relative_position_id = ARA_GOY_new_age_new_army
@@ -3083,6 +3083,7 @@ focus_tree = {
 			        has_country_flag = JER_rodier_is_why_arantiga
 			    }
 			}
+			owns_state = 377
 		}		
 		completion_reward = {
 			376 = {
@@ -3336,6 +3337,7 @@ focus_tree = {
 		        has_country_flag = JER_revolution_number_three1
 				has_country_flag = JER_cant_have_nice_things
 		    }
+			owns_state = 377
 		}
 		mutually_exclusive = { focus = ARA_conteprise }
 		completion_reward = {
@@ -3539,6 +3541,9 @@ focus_tree = {
 		cost = 2.00
 		prerequisite = { focus = ARA_greater_arantiga }
 		prerequisite = { focus = ARA_reward_allies }
+		available = {
+		    owns_state = 371
+		}
 		ai_will_do = {
 			base = 75
 		}
@@ -6073,7 +6078,7 @@ focus_tree = {
 				character = GOY_ARA_lysimachus
 				slot = country_leader
 				trait = GOY_jailor_of_arantiga
-				ideology = falangism
+				ideology = esotericism
 			}
 			news_event = arantiga_news.8
 		}
@@ -6589,7 +6594,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARA_governing_empire
-		icon = GFX_goal_DOM_The_Trial
+		icon = GFX_goal_goy_wngconvert_governing
 		x = 29
 		y = 0
 		cost = 5.00
@@ -7390,7 +7395,7 @@ focus_tree = {
 	    id = ARA_wingbardian_rubber
 		icon = GFX_goal_KTG_Rubber_Farming
 		x = -4
-		y = 2
+		y = 1
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_spoils_of_war }
@@ -7428,7 +7433,7 @@ focus_tree = {
 	    id = ARA_expand_penal_battalions
 		icon = GFX_goal_MAF_Graveyard
 		x = -2
-		y = 2
+		y = 1
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_spoils_of_war }
@@ -7446,7 +7451,7 @@ focus_tree = {
 	    id = ARA_rebuilding_navy
 		icon = GFX_goal_BEL_Battleship_Investements
 		x = -3
-		y = 3
+		y = 2
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_expand_penal_battalions }
@@ -7471,7 +7476,7 @@ focus_tree = {
 	    id = ARA_land_reclamation_crops
 		icon = GFX_goal_GRI_shitforest
 		x = -1
-		y = 3
+		y = 2
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_expand_penal_battalions }
@@ -7549,9 +7554,9 @@ focus_tree = {
 	
 	focus = {
 	    id = ARA_eyrs_gift_project
-		icon = GFX_goal_dam_1
+		icon = GFX_goal_SZC_dujiangyan_irrigation_system
 		x = -2
-		y = 4
+		y = 3
 		relative_position_id = ARA_spoils_of_war
 		cost = 10.00
 		prerequisite = { focus = ARA_land_reclamation_crops }
@@ -7576,7 +7581,7 @@ focus_tree = {
 	    id = ARA_rebuild_griffenheim
 		icon = GFX_goal_ITA_urban
 		x = 2
-		y = 2
+		y = 1
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_spoils_of_war }
@@ -7636,7 +7641,7 @@ focus_tree = {
 	    id = ARA_convince_scholars
 		icon = GFX_goal_mikusian
 		x = 1
-		y = 3
+		y = 2
 		relative_position_id = ARA_spoils_of_war
 		cost = 10.00
 		prerequisite = { focus = ARA_rebuild_griffenheim }
@@ -7654,7 +7659,7 @@ focus_tree = {
 	    id = ARA_emperors_only_achievement
 		icon = GFX_goal_quit_preindustrial_society
 		x = 3
-		y = 3
+		y = 2
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_rebuild_griffenheim }
@@ -7969,9 +7974,9 @@ focus_tree = {
 	
 	focus = {
 	    id = ARA_imperial_research_initiative
-		icon = GFX_Poison_Joke_Focus
+		icon = GFX_goal_goy_imperial_research_initiative
 		x = 2
-		y = 4
+		y = 3
 		relative_position_id = ARA_spoils_of_war
 		cost = 10.00
 		prerequisite = { focus = ARA_convince_scholars }
@@ -7990,7 +7995,7 @@ focus_tree = {
 	    id = ARA_ponies_of_aquileia
 		icon = GFX_goal_generic_ponykind
 		x = 4
-		y = 2
+		y = 1
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_spoils_of_war }
@@ -9280,7 +9285,7 @@ focus_tree = {
 	
 	focus = {
 	    id = ARA_final_reforms
-		icon = GFX_goal_monarchism
+		icon = GFX_goal_goy_wngconvert_reforms
 		x = 0
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
@@ -9529,9 +9534,6 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = ARA_the_last_crusade }
 		available = {
-		    NOT = {
-		        has_war_with = GRF
-		    }
 		    OR = {
 			    RCT = {
 				    AND = {

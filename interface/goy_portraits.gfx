@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_GOY_arantiga_knight"
+		textureFile = "gfx/leaders/ARA/arantiga_knight.tga"
+	}
+}

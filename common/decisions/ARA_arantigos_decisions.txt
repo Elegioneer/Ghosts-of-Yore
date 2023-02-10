@@ -163,7 +163,7 @@ ARA_arantigan_restorations = {
 
 ARA_arantigans_abroad = {
 	ARA_last_legion = {
-		icon = rifles
+		icon = GFX_decision_goy_recall_warriors
 		cost = 100
 		fire_only_once = yes
 		days_remove = 5
@@ -179,7 +179,7 @@ ARA_arantigans_abroad = {
 	}
 
 	ARA_true_legion = {
-		icon = rifles
+		icon = GFX_decision_goy_recall_warriors
 		cost = 100
 		fire_only_once = yes
 		days_remove = 5
@@ -195,7 +195,7 @@ ARA_arantigans_abroad = {
 	}
 
 	ARA_francistrian_volunteers = {
-		icon = rifles
+		icon = GFX_decision_goy_recall_warriors
 		cost = 100
 		fire_only_once = yes
 		days_remove = 10
@@ -214,7 +214,7 @@ ARA_arantigans_abroad = {
 	}
 
 	ARA_call_diaspora = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_recall_diaspora
 		cost = 100
 		fire_only_once = yes
 		days_remove = 20
@@ -672,8 +672,24 @@ ARA_renaming_cities = {
 }
 
 ARA_definetely_not_fake_IRI = {
+	ARA_miracle_cure = {
+		icon = GFX_decision_goy_IRI_panaceum
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			NOT = { has_country_flag = IRI_project_ongoing }
+		}
+		complete_effect = {
+			set_country_flag = IRI_project_ongoing
+			country_event = arantiga_decision.21
+		}
+	}
+	
 	ARA_hammer_of_god = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_IRI_gottermalleus
 		cost = 75
 		fire_only_once = yes
 		ai_will_do = {
@@ -689,24 +705,8 @@ ARA_definetely_not_fake_IRI = {
 		}
 	}
 
-	ARA_miracle_cure = {
-		icon = generic_nationalism
-		cost = 50
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 0
-		}
-		available = {
-			NOT = { has_country_flag = IRI_project_ongoing }
-		}
-		complete_effect = {
-			set_country_flag = IRI_project_ongoing
-			country_event = arantiga_decision.21
-		}
-	}
-
 	ARA_super_soldiers = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_IRI_super_soldiers
 		cost = 75
 		fire_only_once = yes
 		ai_will_do = {
@@ -722,7 +722,7 @@ ARA_definetely_not_fake_IRI = {
 	}
 
 	ARA_teleportation_device = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_IRI_teleport
 		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
@@ -798,6 +798,9 @@ ARA_northern_threat = {
 				}
 			}
 		}
+		visible = {
+			DED = { exists = yes }
+		}
 		complete_effect = {
 		    declare_war_on = { 
 		        type = annex_everything
@@ -805,32 +808,66 @@ ARA_northern_threat = {
 			}
 		}
 	}
-	ARA_order2electricboogaloo = {
-	    icon = generic_nationalism
+	#ARA_order2electricboogaloo = {
+	#    icon = generic_nationalism
+	#    cost = 0
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		factor = 10
+	#	}
+	#	visible = {
+	#	    owns_state = 456
+	#		owns_state = 451
+	#		owns_state = 425
+	#		owns_state = 427
+	#		owns_state = 428
+	#		owns_state = 566
+	#		owns_state = 426
+	#		owns_state = 564
+	#		owns_state = 565
+	#		owns_state = 419
+	#		owns_state = 420
+	#		owns_state = 418
+	#		owns_state = 417
+	#		owns_state = 416
+	#		owns_state = 415
+	#	}
+	#	complete_effect = {
+	#	    country_event = arantiga.109
+	#	}
+	#}
+	GOY_ARA_new_new_order = {
+		icon = generic_nationalism
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		visible = {
-		    owns_state = 456
-			owns_state = 451
-			owns_state = 425
-			owns_state = 427
-			owns_state = 428
-			owns_state = 566
-			owns_state = 426
-			owns_state = 564
-			owns_state = 565
-			owns_state = 419
-			owns_state = 420
-			owns_state = 418
-			owns_state = 417
-			owns_state = 416
-			owns_state = 415
+		    HLR = {
+				is_puppet_of = ARA
+			}
 		}
 		complete_effect = {
-		    country_event = arantiga.109
+			GOY_ARA_headmasterapesios = { set_nationality = HLR }
+			HLR = {
+				set_cosmetic_tag = HLR_arantiga
+				add_country_leader_role = {
+					Character = GOY_ARA_headmasterapesios
+					Promote_leader = yes
+					Country_leader = {
+						ideology = holy_order_f
+						desc = ""
+						expire = “1965.01.01.01”
+						traits = {  }
+					}
+				}
+				inherit_technology = ARA
+			}
+			ARA = {
+				set_autonomy = { target = HLR autonomy_state = autonomy_reichsprotectorate }
+			}
+			
 		}
 	}
 }

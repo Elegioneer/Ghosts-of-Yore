@@ -5,11 +5,11 @@ NTR_GATHERING_STORM_DESC1:0 "Northern edges of the Griffonia have always been a 
 
 ### State Description ###
 state_lore_text_container_state_name_short_562:0 "Everfrost"
-state_lore_text_container_state_name_562:0 "The §YCity§! of the §YCrystal Spires§!"
-state_lore_text_container_state_description_562:0 "It is a common belief across the world, that there are no cities in northern §YGriffonia§! - just bunches of shacks and log cabins, scattered along the frozen wasteland. It makes foreigners even more surprised when they visit §CEverfrost§! - capital of §YTir Deighe§! and its largest city. History of Everfrost begins with the unification of the §Ynorthern tribes§! by §CCainnech Snowflake§!. The great mages and craftsponies started to build then a structure, known today as §YSnowflake Palace§!, as a residence of a new king and a place of gatherings of the clans. It is said that the Palace was rather “grown”, than built, using techniques that were later forgotten - and druids managed to shape crystals into seven magnificent spires, that are the highest structures in the city.\n\nAs centuries have passed, the city slowly grew, becoming a main centre of commerce of Tir Deighe. After merchants, craftsponies followed, and when a §Ygreat library§! was created in the halls of Snowflake Palace, many ponies travelled to Evefrost to study knowledge of the previous generations. As a result Everfrost does not resemble any other city in Griffonia - it is a place of art and beauty, with even the smallest buildings being elaborately decorated through generations. Ponies tended to expand their dwellings both on the surface and below it - and one can see how next owners expanded homes they inherited - wanting to match the accomplishments of their ancestors. Of course one cannot forget about the §YGreat Clans§! - each of them, as a matter of honour, erected a large §Yspire-mansion§!, mimicking the royal palace as a show of clan wealth and power.\n\nHowever, years of war with §RSkynavia§! have also affected the Everfrost - though not directly attacked, it was flooded with §Yrefugees§! who now inhabit makeshift districts constructed on the outskirts of the capital. Warbands stop here, before marching to the front, and workshops produce weapons rather than works of art. Peace and harmony of the Everfrost are gone - perhaps forever, yet the city still remains the symbol of pony unity and their ingenuity."
+ state_lore_text_container_state_name_562:0 "The §YCity§! of the §YCrystal Spires§!"
+ state_lore_text_container_state_description_562:0 "It is a common belief across the world, that there are no cities in northern §YGriffonia§! - just bunches of shacks and log cabins, scattered along the frozen wasteland. It makes foreigners even more surprised when they visit §CEverfrost§! - capital of §YTir Deighe§! and its largest city. History of Everfrost begins with the unification of the §Ynorthern tribes§! by §CCainnech Snowflake§!. The great mages and craftsponies started to build then a structure, known today as §YSnowflake Palace§!, as a residence of a new king and a place of gatherings of the clans. It is said that the Palace was rather “grown”, than built, using techniques that were later forgotten - and druids managed to shape crystals into seven magnificent spires, that are the highest structures in the city.\n\nAs centuries have passed, the city slowly grew, becoming a main centre of commerce of Tir Deighe. After merchants, craftsponies followed, and when a §Ygreat library§! was created in the halls of Snowflake Palace, many ponies travelled to Evefrost to study knowledge of the previous generations. As a result Everfrost does not resemble any other city in Griffonia - it is a place of art and beauty, with even the smallest buildings being elaborately decorated through generations. Ponies tended to expand their dwellings both on the surface and below it - and one can see how next owners expanded homes they inherited - wanting to match the accomplishments of their ancestors. Of course one cannot forget about the §YGreat Clans§! - each of them, as a matter of honour, erected a large §Yspire-mansion§!, mimicking the royal palace as a show of clan wealth and power.\n\nHowever, years of war with §RSkynavia§! have also affected the Everfrost - though not directly attacked, it was flooded with §Yrefugees§! who now inhabit makeshift districts constructed on the outskirts of the capital. Warbands stop here, before marching to the front, and workshops produce weapons rather than works of art. Peace and harmony of the Everfrost are gone - perhaps forever, yet the city still remains the symbol of pony unity and their ingenuity."
 
 ### Parties ###
- NTR_snowflakes_party:0 "Snowflake Dynasty"
+NTR_snowflakes_party:0 "Snowflake Dynasty"
  NTR_snowflakes_party_long:0 "Snowflake Dynasty"
  NTR_stormshields_party:0 "Stormshield Clan"
  NTR_stormshields_party_long:0 "Stormshield Clan"
@@ -19,7 +19,7 @@ state_lore_text_container_state_description_562:0 "It is a common belief across 
  NTR_warrior_lodges_party_long:0 "Warrior Lodges"
 
 ### Ideas ###
- NTR_war_north:0 "War in the North"
+NTR_war_north:0 "War in the North"
  NTR_war_north_desc:0 "Ever since the Skynavians invaded, we were locked in a bloody war. A whole generation of ponies has perished in endless skirmishes, and now, we are on the brink of collapse. Our militia is exhausted, our resources are depleted, and it is clear that our current tactics will not allow us to win. As Skynavians are gathering their forces, we must act quickly if we want to save the tribes’ independence!"
  NTR_warriors_of_blizzard:0 "Warriors of Blizzard"
  NTR_warriors_of_blizzard_desc:0 "Northern ponies are experts in winter warfare. The North is their home, and they know how to use its properties to their advantage."
@@ -207,14 +207,6 @@ state_lore_text_container_state_description_562:0 "It is a common belief across 
  NTR_ice_fleet_desc:0 "It might have seemed ridiculous at first, but it works!"
  NTR_integrated_society:0 "Griffon Integration"
  NTR_integrated_society_desc:0 "It was not easy, but our society is now more opened to outsiders and we reap benefits of that."
- NTR_aurora_tower_constructed:0 "Aurora Tower"
- NTR_iron_tower_constructed:0 "Iron Tower"
- NTR_black_tower_constructed:0 "Black Tower"
- NTR_shadow_tower_constructed:0 "Shadow Tower"
- NTR_blood_tower_constructed:0 "Blood Tower"
- NTR_obsidian_tower_constructed:0 "Obsidian Tower"
- NTR_storm_tower_constructed:0 "Storm Tower"
- NTR_amber_tower_constructed:0 "Amber Tower"
  NTR_frost_auxilias_region:0 "Vartaian Auxiliaries"
  NTR_frost_auxilias_region_desc:0 "Assistance from Vartai ponies greatly helps in controlling this region."
  ntr_closed_economy:0 "Closed Economy"
@@ -236,13 +228,24 @@ state_lore_text_container_state_description_562:0 "It is a common belief across 
  NTR_all_front_desc:0 "Somehow, against all odds griffons are winning against us. We must mobilize every pony we can to stop them!"
  
 ### Laws ###
- GOY_magical_society:0 "Magical Society"
+GOY_magical_society:0 "Magical Society"
  GOY_magical_society_desc:0 "Magic flows through our lands and affects every single aspect of our citizens lives - we live in a communion with deities-spirits and benefit from their blessings. While we may lack proper industry, we are able to raise our buildings from crystal using magic, and our artistants create items of unsurpassable beauty and of wondrous qualities."
  GOY_slave_economy:0 "Slave Economy"
  GOY_slave_economy_desc:0 "Tyranny economy is a bizarre mixture of slavery, industrialisation and traditionalism. Most ponies live in traditional, tribal communities, frowning from advanced technology and being warriors or slave overseers. The Griffon population is enslaved and forced to work for their new overlords - with only those needed to operate industrial machinery, ponies don’t care to understand being treated somewhat more leniently. Little care is given to modernising the obtained industrial base and needs of slaves are neglected in favour of providing resources for the Tyranny’s war machine."
  GOY_druid_wisdom:0 "Wisdom of Druids"
  GOY_druid_wisdom_desc:0 "Education and science in our nation is restricted to the druids and their students."
- 
+
+### Dynamic Modifiers ###
+NTR_aurora_tower_constructed:0 "Aurora Tower"
+ NTR_iron_tower_constructed:0 "Iron Tower"
+ NTR_black_tower_constructed:0 "Black Tower"
+ NTR_shadow_tower_constructed:0 "Shadow Tower"
+ NTR_blood_tower_constructed:0 "Blood Tower"
+ NTR_obsidian_tower_constructed:0 "Obsidian Tower"
+ NTR_storm_tower_constructed:0 "Storm Tower"
+ NTR_amber_tower_constructed:0 "Amber Tower"
+ NTR_holy_forge_dynmodifier:0 "Holy Forge"
+
 ### Focus ###
 NTR_grim_reality:0 "Our Grim Reality"
 NTR_grim_reality_desc:0 "For centuries we lived in peace, undisturbed by griffons in the south - all changed when a group of Republicans invaded western tribes - and despite our efforts controlled roughly a third of our ancestral homeland. Despite two decades of warfare we were unable to defeat the griffons..."
@@ -1211,6 +1214,7 @@ NTR_slave_mines_unlock:0 "We can expand the mines"
  NTR_griffonstone_destruction:0 "Burn it down!"
  NTR_griffon_alliance_tooltip:0 "It is only a matter of time before griffons unite to fight against us!"
  NTR_solstice_tooltip:0 "Winter shall reign eternal!"
+ NTR_tt_one_magick:0 "Only one §Yspell§! can be active at a time."
  
 ### Leader Descriptions ###
  NTR_GOY_stormshield:0 "Euan Stormshield"

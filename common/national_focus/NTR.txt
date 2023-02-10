@@ -4761,7 +4761,10 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_fallen_gods }
 		completion_reward = {
-			add_ideas = GOY_druid_wisdom #TODO
+			swap_ideas = {
+				remove_idea = lack_of_scientists1
+				add_idea = GOY_druid_wisdom
+			}
 		}
 	}
 	shared_focus = {
@@ -4782,7 +4785,7 @@
 	}
 	shared_focus = {
 		id = NTR_reclaim_dinkau
-		icon = GFX_goal_zes_raid
+		icon = GFX_focus_indy_dread_fleet
 		x = -6
 		y = 3
 		cost = 5.00

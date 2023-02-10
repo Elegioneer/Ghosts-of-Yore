@@ -1490,33 +1490,34 @@ focus_tree = {
 				popularity = 0.2
 			}
 			hidden_effect = {
-			news_event = herzland_liberation_goy_news.2
-			set_cosmetic_tag = HRR_GOY_kingdom
-			add_ideas = HRR_GOY_groverfirst
-			set_party_name = {ideology = democratic name = HRR_GOY_king_dem long_name = HRR_GOY_king_dem_long }
-			set_party_name = {ideology = neutrality name = HRR_GOY_king_neu long_name = HRR_GOY_king_neu_long }
-			set_party_name = { ideology = fascism name = HRR_GOY_king_fas long_name = HRR_GOY_king_fas_long }
-			set_party_name = { ideology = communism name = HRR_GOY_king_com long_name = HRR_GOY_king_com_long }
-			add_country_leader_role = {
-				Character = HRR_GOY_gerben_kogchel
-				Promote_leader = yes
-				Country_leader = {
-				ideology = democratic_socialism
-				desc = ""
-				expire = “1965.01.01.01”
-				traits = { GOY_democratic_socialist }
-			}
-			}
-			add_country_leader_role = {
-				Character = HRR_GOY_gabriella_di_karthin
-				Promote_leader = yes
-				Country_leader = {
-				ideology = liberalism
-				desc = ""
-				expire = “1965.01.01.01”
-				traits = { GOY_commongriff_president }
-			}
-			}			
+				news_event = herzland_liberation_goy_news.2
+				set_cosmetic_tag = HRR_GOY_kingdom
+				add_ideas = HRR_GOY_groverfirst
+				set_party_name = {ideology = democratic name = HRR_GOY_king_dem long_name = HRR_GOY_king_dem_long }
+				set_party_name = {ideology = neutrality name = HRR_GOY_king_neu long_name = HRR_GOY_king_neu_long }
+				set_party_name = { ideology = fascism name = HRR_GOY_king_fas long_name = HRR_GOY_king_fas_long }
+				set_party_name = { ideology = communism name = HRR_GOY_king_com long_name = HRR_GOY_king_com_long }
+				add_country_leader_role = {
+					Character = HRR_GOY_gerben_kogchel
+					Promote_leader = yes
+					Country_leader = {
+						ideology = democratic_socialism
+						desc = ""
+						expire = “1965.01.01.01”
+						traits = { GOY_democratic_socialist }
+					}
+				
+				}
+				add_country_leader_role = {
+					Character = HRR_GOY_gabriella_di_karthin
+					Promote_leader = yes
+					Country_leader = {
+						ideology = liberalism
+						desc = ""
+						expire = “1965.01.01.01”
+						traits = { GOY_commongriff_president }
+					}
+				}		
 			}	
 		}
 	}

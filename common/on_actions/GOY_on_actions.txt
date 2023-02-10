@@ -1,6 +1,14 @@
 on_actions = {
     on_startup = {
 	    effect = {
+			574 = {
+				add_dynamic_modifier = { modifier = NTR_holy_forge_dynmodifier }
+			}
+			add_victory_points = {
+			    province = 1517
+				value = 5
+			}
+			set_province_name = { id = 1517 name = "Holy Forge" }
 			add_to_array = { global.states_with_lore = 408.id }
 			add_to_array = { global.states_with_lore = 562.id }
 			IF = {

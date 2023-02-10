@@ -31,32 +31,46 @@ MIT_soter = {
 	color_ui = rgb { 255 20 30 }
 }
 RIV_arantiga = {
-    color = rgb { 184 17 47 }
+	color = rgb { 184 17 47 }
     color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
 }
 BRD_arantiga = {
-    color = rgb { 184 17 47 }
+	color = rgb { 184 17 47 }
     color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
 }
 EQC_arantiga = {
-    color = rgb { 184 17 47 }
+	color = rgb { 184 17 47 }
     color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
 }
 MIT_arantiga = {
-    color = rgb { 20 86 144 }
-    color_ui = rgb { 15 99 172 }
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 20 86 144 }
+    #color_ui = rgb { 15 99 172 }
 }
 NTR_arantiga = {
-    color = rgb { 29 20 90 }
-    color_ui = rgb { 32 17 131 }
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 29 20 90 }
+    #color_ui = rgb { 32 17 131 }
 }
 NCH_arantiga = {
-    color = rgb { 2 91 68 }
-    color_ui = rgb { 2 91 68 }
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 2 91 68 }
+    #color_ui = rgb { 2 91 68 }
 }
 HLR_arantiga = {
-    color = rgb { 210 194 53 }
-    color_ui = rgb { 221 202 29 }
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 210 194 53 }
+    #color_ui = rgb { 221 202 29 }
 }
 BRZ_griffonstone = {
 	color = rgb { 105 66 112 }

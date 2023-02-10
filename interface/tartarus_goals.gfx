@@ -284,4 +284,24 @@ spriteTypes = {
 		name = "GFX_goal_GOY_crush_skynavia"
 		texturefile = "gfx/interface/goals/goal_GOY_crush_skynavia.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_military"
+		texturefile = "gfx/interface/goals/goal_goy_military.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_legionary_helm"
+		texturefile = "gfx/interface/goals/goal_goy_legionary_helm.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_wngconvert_governing"
+		texturefile = "gfx/interface/goals/goal_goy_wngconvert_governing.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_wngconvert_reforms"
+		texturefile = "gfx/interface/goals/goal_goy_wngconvert_reforms.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_imperial_research_initiative"
+		texturefile = "gfx/interface/goals/goal_goy_imperial_research_initiative.dds"
+	}
 }

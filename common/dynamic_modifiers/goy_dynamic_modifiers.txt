@@ -1,3 +1,12 @@
+	NTR_holy_forge_dynmodifier = {
+		
+		icon = GFX_modifiers_goy_holy_forge
+		
+		local_building_slots = 2
+		state_production_speed_buildings_factor = 0.2
+		local_supplies = 0.25
+		
+	}
 	NTR_aurora_tower_constructed = {
 		enable = { always = yes }
 		

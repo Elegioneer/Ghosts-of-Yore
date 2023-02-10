@@ -1743,9 +1743,10 @@ ideas = {
 		GOY_druid_wisdom = {
 			cost = -1
 			traits = { illiteracy_idea }
-			picture = SOL_sunrise_sparkle
+			picture = GOY_drood_wisdom
 			allowed = {
 				original_tag = NTR
+				has_government = fascism
 			}
 			available = {
 				has_idea = GOY_druid_wisdom
@@ -1754,7 +1755,7 @@ ideas = {
 				has_government = fascism
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			removal_cost = -1
 			modifier = {

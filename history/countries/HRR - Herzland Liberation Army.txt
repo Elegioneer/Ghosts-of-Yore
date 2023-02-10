@@ -72,7 +72,7 @@ if = {
 	}
 }
 
-set_convoys = 0
+set_convoys = 100
 set_popularities = {
 	democratic = 70
 	fascism = 5
@@ -85,9 +85,7 @@ set_politics = {
 	election_frequency = 36
 	elections_allowed = no
 }
-add_ideas = {
-    
-}
+
 set_stability = 0.50
 set_war_support = 0.65
 
@@ -136,6 +134,12 @@ recruit_character = HRR_GOY_advisor_16
 recruit_character = HRR_GOY_advisor_17
 recruit_character = HRR_GOY_advisor_18
 recruit_character = HRR_GOY_advisor_19
+
+add_ideas = {
+    service_by_requirement
+	closed_economy
+	tot_economic_mobilisation
+}
 
 set_rule = {
 	can_generate_female_aces = yes

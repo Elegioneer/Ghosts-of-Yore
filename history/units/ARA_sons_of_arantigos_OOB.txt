@@ -28,9 +28,10 @@ units = {
 		officers = {
 			unique = { "Hespaeros Mysterio" }
 			male = yes
+			gender = male
 			portraits = {
 				army = {
-					large = "gfx/leaders/ARA/arantiga_knight.tga"
+					large = "GFX_GOY_arantiga_knight"
 					small = "GFX_idea_GOY_ARA_arantiga_knight"
 				}
 			}
