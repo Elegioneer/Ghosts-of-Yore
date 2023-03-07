@@ -37,7 +37,7 @@
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_race_tech_1
+				name = GOY_bonus_race_druid
 				bonus = 0.5
 				uses = 2
 				category = race_tech
@@ -76,7 +76,7 @@
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_infy_eq_1
+				name = GOY_bonus_infy_eq_0
 				bonus = 0.25
 				uses = 1
 				category = infantry_weapons
@@ -128,7 +128,7 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_industry_1
+				name = GOY_bonus_industry_0
 				bonus = 0.5
 				uses = 1
 				category = industry
@@ -247,7 +247,7 @@
 		prerequisite = { focus = NTR_reform_milita }
 		completion_reward = {
 			add_tech_bonus = {
-				name = nuclear_boom
+				name = GOY_bonus_infy_eq_1
 				bonus = 1.0
 				uses = 1
 				category = infantry_weapons
@@ -270,7 +270,7 @@
 		prerequisite = { focus = NTR_copy_griffon }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_arty_1
+				name = GOY_bonus_arty_2
 				bonus = 0.5
 				uses = 2
 				category = artillery
@@ -293,7 +293,7 @@
 		prerequisite = { focus = NTR_copy_griffon }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_support_1
+				name = GOY_bonus_supp_0
 				bonus = 0.5
 				uses = 2
 				category = support_tech
@@ -326,7 +326,7 @@
 				}
 			}
 			add_tech_bonus = {
-				name = NTR_mecha_1
+				name = GOY_bonus_mecha_2
 				bonus = 0.5
 				uses = 2
 				category = cat_mechanized_equipment
@@ -366,7 +366,7 @@
 		prerequisite = { focus = NTR_perils_logistics }
 		completion_reward = {
 		    add_tech_bonus = {
-				name = NTR_infy_eq_2
+				name = GOY_bonus_infy_eq_2
 				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
@@ -395,7 +395,7 @@
 		prerequisite = { focus = NTR_ponies_wheels }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_tank_1
+				name = GOY_bonus_tank_0
 				bonus = 0.5
 				uses = 2
 				category = armor
@@ -450,7 +450,7 @@
 		prerequisite = { focus = NTR_our_gunsmiths }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_magi_eq_1
+				name = GOY_bonus_magi_eq_0
 				bonus = 1.0
 				uses = 1
 				category = magical_tech
@@ -551,7 +551,7 @@
 		mutually_exclusive = { focus = NTR_strength_in_numbers }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_pegasi_1
+				name = GOY_bonus_spec_troops_0
 				bonus = 0.5
 				uses = 2
 				category = pegasi_tech
@@ -589,7 +589,7 @@
 		prerequisite = { focus = NTR_through_skies }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_ship_1
+				name = GOY_bonus_ship_0
 				bonus = 0.5
 				uses = 4
 				category = naval_equipment
@@ -675,7 +675,7 @@
 				    has_tech = iw_small_airframe
 				}
 				add_tech_bonus = {
-					name = fighter_bonus
+					name = GOY_bonus_air_1
 					bonus = 0.5
 					uses = 1
 					category = light_air
@@ -713,7 +713,7 @@
 		prerequisite = { focus = NTR_expand_frostbell }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_submrn_1
+				name = GOY_bonus_smrn_2
 				bonus = 0.5
 				uses = 2
 				category = ss_tech
@@ -735,13 +735,13 @@
 		prerequisite = { focus = NTR_expand_frostbell }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_dstr_1
+				name = GOY_bonus_dstr_2
 				bonus = 0.5
 				uses = 2
 				category = dd_tech
 			}
 			add_tech_bonus = {
-				name = NTR_crus_1
+				name = GOY_bonus_crus_2
 				bonus = 0.5
 				uses = 2
 				category = cl_tech
@@ -763,13 +763,13 @@
 		prerequisite = { focus = NTR_expand_frostbell }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_bshi_1
+				name = GOY_bonus_bshi_2
 				bonus = 1.0
 				uses = 1
 				category = bb_tech
 			}
 			add_tech_bonus = {
-				name = NTR_carr_1
+				name = GOY_bonus_carr_2
 				bonus = 1.0
 				uses = 1
 				category = cv_tech
@@ -791,7 +791,7 @@
 		prerequisite = { focus = NTR_import_fighters }
 		completion_reward = {
 			add_tech_bonus = {
-				name = heavy_air
+				name = GOY_bonus_heavy_air_bonus
 				bonus = 0.5
 				uses = 2
 				category = heavy_air
@@ -814,7 +814,7 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_cumulus_enabled
 			add_tech_bonus = {
-				name = fighter_bonus
+				name = GOY_bonus_fighter_bonus
 				bonus = 0.5
 				uses = 2
 				category = light_air
@@ -915,13 +915,13 @@
 		prerequisite = { focus = NTR_bomber_development }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_marines_1
+				name = GOY_bonus_spec_ops_bonus
 				bonus = 1.0
 				uses = 1
 				category = marine_tech
 			}
 			add_tech_bonus = {
-				name = NTR_paras_1
+				name = GOY_bonus_spec_ops_bonus
 				bonus = 1.0
 				uses = 1
 				category = para_tech
@@ -967,7 +967,7 @@
 		prerequisite = { focus = NTR_crystal_bombs }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_nuke_1
+				name = GOY_bonus_magical_nukes
 				bonus = 0.75
 				uses = 1
 				category = nuclear
@@ -1373,7 +1373,7 @@
 		    owns_state = 522
 		}
 		completion_reward = {
-			#TODO modify “Exiled Clans” with +10% recruitable population factor
+			#TODO modify "Exiled Clans" with +10% recruitable population factor
 			add_manpower = 50000
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
@@ -1682,7 +1682,7 @@
 		completion_reward = {
 			add_political_power = -50
 			add_tech_bonus = {
-				name = NTR_industry_3
+				name = GOY_bonus_industrial_imports
 				bonus = 0.5
 				uses = 2
 				category = industry
@@ -1735,7 +1735,7 @@
 			    set_country_flag = NTR_flag_mining_unlock
 			}
 			add_tech_bonus = {
-				name = NTR_extract_1
+				name = GOY_bonus_extract_1
 				bonus = 0.5
 				uses = 2
 				category = excavation_tech
@@ -1765,7 +1765,7 @@
 				add_manpower = 50000
 			}
 			add_tech_bonus = {
-				name = NTR_industry_4
+				name = GOY_bonus_industry_1
 				bonus = 0.5
 				uses = 1
 				category = industry
@@ -1787,7 +1787,7 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_blackice_enabled
 			add_tech_bonus = {
-				name = NTR_electronics_1
+				name = GOY_bonus_electronics_0
 				bonus = 0.5
 				uses = 2
 				category = electronics
@@ -2102,7 +2102,7 @@
 		prerequisite = { focus = NTR_clan_greenhoof }
 		completion_reward = {
 			custom_effect_tooltip = NTR_rockseekers_enabled
-			#TODO get industry design company “Rockseekers” (+10% resource gathering efficiency)
+			#TODO get industry design company "Rockseekers" (+10% resource gathering efficiency)
 			add_resource = {
 				type = steel
 				amount = 8
@@ -2256,7 +2256,7 @@
 		prerequisite = { focus = NTR_clan_stormshield }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_pegasi_2
+				name = GOY_bonus_spec_troops_1
 				bonus = 1.0
 				uses = 2
 				category = pegasi_tech
@@ -2316,7 +2316,7 @@
 			     iw_small_airframe = 1
 			     }
 				add_tech_bonus = {
-					name = fighter_bonus
+					name = GOY_bonus_air_1
 					bonus = 0.5
 					uses = 1
 					category = light_air
@@ -2396,7 +2396,7 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_stratus_enabled
 			add_tech_bonus = {
-				name = medium_air
+				name = GOY_bonus_medium_air_bonus
 				bonus = 1.0
 				uses = 2
 				category = medium_air
@@ -2421,7 +2421,7 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_stormshieldairwing_enabled
 			add_tech_bonus = {
-				name = fighter_bonus
+				name = GOY_bonus_fighter_bonus
 				bonus = 1.0
 				uses = 2
 				category = light_air
@@ -3458,7 +3458,7 @@
 		prerequisite = { focus = NTR_clan_moltenrock }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_infy_eq_3
+				name = GOY_bonus_infy_eq_2
 				bonus = 0.75
 				uses = 2
 				category = infantry_weapons
@@ -3525,13 +3525,13 @@
 		prerequisite = { focus = NTR_expand_holy_forge }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_arty_2
+				name = GOY_bonus_arty_3
 				bonus = 0.5
 				uses = 1
 				category = artillery
 			}
 			add_tech_bonus = {
-				name = NTR_tank_2
+				name = GOY_bonus_tank_2
 				bonus = 0.5
 				uses = 1
 				category = armor
@@ -3571,7 +3571,7 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_moltenrockenchant_enabled
 		    add_tech_bonus = {
-				name = NTR_magi_eq_2
+				name = GOY_bonus_magi_eq_2
 				bonus = 0.5
 				uses = 1
 				category = magical_tech
@@ -3611,7 +3611,7 @@
 		completion_reward = {
 			add_ideas = NTR_endurance_blessing
 			add_tech_bonus = {
-				name = NTR_magi_eq_3
+				name = GOY_bonus_magi_eq_3
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
@@ -3676,7 +3676,7 @@
 			add_extra_state_shared_building_slots = 1
 			}
 			add_tech_bonus = {
-				name = NTR_industry_5
+				name = GOY_bonus_industry_1
 				bonus = 0.5
 				uses = 1
 				category = industry
@@ -3702,7 +3702,7 @@
 				state = 602
 			}
 			add_tech_bonus = {
-				name = NTR_extract_2
+				name = GOY_bonus_extract_1
 				bonus = 0.5
 				uses = 1
 				category = excavation_tech
@@ -3727,7 +3727,7 @@
 		    #TODO unlock barkcoat builders
 			add_ideas = NTR_built_to_last
 			add_tech_bonus = {
-				name = NTR_build_1
+				name = GOY_bonus_industry_1
 				bonus = 0.25
 				uses = 2
 				category = construction_tech
@@ -3813,7 +3813,7 @@
 		prerequisite = { focus = NTR_new_shipyard }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_ship_2
+				name = GOY_bonus_ship_3
 				bonus = 0.25
 				uses = 4
 				category = naval_equipment
@@ -3856,13 +3856,13 @@
 		prerequisite = { focus = NTR_many_shapes }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_bshi_2
+				name = GOY_bonus_bshi_2
 				bonus = 0.5
 				uses = 2
 				category = bb_tech
 			}
 			add_tech_bonus = {
-				name = NTR_carr_2
+				name = GOY_bonus_carr_2
 				bonus = 0.5
 				uses = 2
 				category = cv_tech
@@ -4151,7 +4151,7 @@
 				add_extra_state_shared_building_slots = 1
 			}
 			add_tech_bonus = {
-				name = NTR_industry_6
+				name = GOY_bonus_industry_2
 				bonus = 0.5
 				uses = 1
 				category = industry
@@ -4406,13 +4406,13 @@
 		prerequisite = { focus = NTR_subordinate_clans }
 		completion_reward = {
 			add_tech_bonus = {
-				name = NTR_infy_eq_4
+				name = GOY_bonus_infy_eq_1
 				bonus = 0.25
 				uses = 2
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
-				name = NTR_arty_3
+				name = GOY_bonus_arty_1
 				bonus = 0.25
 				uses = 1
 				category = artillery
@@ -4523,9 +4523,7 @@
 			factor = 10
 		}
 		bypass = {
-		    hidden_trigger = {
-			    has_completed_focus = NTR_ruins_of_sky
-			}
+			
 		}
 		available = {
 		    always = no
@@ -4636,7 +4634,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_tech_bonus = {
-				name = NTR_race_tech_2
+				name = GOY_bonus_race_eso
 				bonus = 0.5
 				uses = 2
 				category = race_tech
@@ -4803,7 +4801,7 @@
 			    amount = 25
 			}
 			add_tech_bonus = {
-				name = NTR_dstr_2
+				name = GOY_bonus_dstr_2
 				bonus = 0.25
 				uses = 2
 				category = dd_tech
@@ -4962,7 +4960,10 @@
 		prerequisite = { focus = NTR_chosen_of_ice }
 		mutually_exclusive = { focus = NTR_elite_warriors }
 		completion_reward = {
-			add_ideas = NTR_the_horde
+			swap_ideas = {
+			    remove_idea = NTR_chosen_ones
+				add_idea = NTR_the_horde
+			}
 		}
 	}
 	shared_focus = {
@@ -5008,13 +5009,13 @@
 			}
 			navy_experience = 25
 			add_tech_bonus = {
-				name = NTR_crus_2
+				name = GOY_bonus_crus_2
 				bonus = 0.25
 				uses = 2
 				category = cl_tech
 			}
 			add_tech_bonus = {
-				name = NTR_dstr_3
+				name = GOY_bonus_dstr_2
 				bonus = 0.25
 				uses = 1
 				category = dd_tech
@@ -5479,15 +5480,29 @@
 		will_lead_to_war_with = STW
 		will_lead_to_war_with = PYT
 		will_lead_to_war_with = YAL
-		will_lead_to_war_with = event_target:griffonian_empire
+		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD #tag alias for event_target:griffonian_empire
 		will_lead_to_war_with = BRZ
 		will_lead_to_war_with = KAT
 		will_lead_to_war_with = ANG
 		will_lead_to_war_with = ROU
 		completion_reward = {
-			declare_war_on = { 
-		        type = annex_everything
-	            target = event_target:griffonian_empire
+			IF = {
+			    limit = {
+				    GRI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRI
+			    }
+				else = {
+					declare_war_on = { 
+						type = annex_everything
+						target = GRD
+					}
+				}
 			}
 			IF = {
 			    limit = {
@@ -5673,19 +5688,19 @@
 		completion_reward = {
 			Improve_Science_Base = yes
 			add_tech_bonus = {
-				name = NTR_infy_eq_5
+				name = GOY_bonus_infy_eq_1
 				bonus = 0.5
 				uses = 2
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
-				name = NTR_arty_4
+				name = GOY_bonus_arty_1
 				bonus = 0.5
 				uses = 2
 				category = artillery
 			}
 			add_tech_bonus = {
-				name = NTR_tank_3
+				name = GOY_bonus_tank_1
 				bonus = 0.5
 				uses = 2
 				category = armor
@@ -7189,4 +7204,19 @@ shared_focus = {
 		country_event = ntribes.68		
 		}
 			}
-		}	
+		}
+########################################################
+    focus_tree = {
+	    id = Northern_tribes_nothing
+	    country = {
+		    factor = 0
+	    }
+	    default = no
+	    continuous_focus_position = { x = 5 y = 1000 }
+		shared_focus = NTR_clan_greenhoof
+		shared_focus = NTR_clan_brightflame
+		shared_focus = NTR_clan_stormshield
+		shared_focus = NTR_clan_moltenrock
+		shared_focus = NTR_clan_barkcoat
+	}
+	###

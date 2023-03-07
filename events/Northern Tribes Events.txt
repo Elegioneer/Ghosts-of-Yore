@@ -132,6 +132,9 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.322.e
 			load_focus_tree = Northern_tribes_ice
+			set_country_flag = NTR_flag_ice2
+			set_country_flag = NTR_flag_ice3
+			set_country_flag = NTR_flag_ice4
 		}
 		option = {
 		    name = ntribes.322.f
@@ -741,7 +744,7 @@ add_namespace = ntribes_news
 				Country_leader = {
 				ideology = falangism
 				desc = "NTR_gavin_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_harbinger }
 			}
 			}			
@@ -1217,7 +1220,7 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.21.a
             add_tech_bonus = {
-				name = NTR_arty_5
+				name = GOY_bonus_arty_0
 				bonus = 0.1
 				uses = 1
 				category = artillery
@@ -2408,6 +2411,10 @@ add_namespace = ntribes_news
 			custom_effect_tooltip = NTR_srs_emergency_army
 			hidden_effect = {
 				load_oob = SRS_emergency_ice_divisions
+				add_timed_idea = {
+				idea = NTR_kill_ntribes
+					days = 150
+				}
 			}
 		}
 	}
@@ -2456,7 +2463,7 @@ add_namespace = ntribes_news
 				Country_leader = {
 				ideology = tribal_federation
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = {  }
 			}
 			}			
@@ -3158,6 +3165,10 @@ add_namespace = ntribes_news
 		    name = ntribes.58.a
 			hidden_effect = {
 				retire_character = GOY_NTR_gavin
+				country_event = {
+					id = ntribes.104
+					days = 1
+				}
 			}
 			add_country_leader_role = {
 				Character = GOY_NTR_frostking
@@ -3165,11 +3176,24 @@ add_namespace = ntribes_news
 				Country_leader = {
 				ideology = esotericism
 				desc = "NTR_frost_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = {  }
 			}
 			}			
 			add_ideas = NTR_broken_ties
+			hidden_effect = {
+				set_technology = {
+					tech_support = 1
+					popup = no
+				}
+				set_technology = {
+					GOY_necromancy_tech = 1
+					popup = no
+				}
+				load_oob = NTR_necromancers_OOB
+			}
+			custom_effect_tooltip = NTR_TT_necromancers_available
+			unlock_national_focus = NTR_north_awakens
 			set_cosmetic_tag = NTR_TYRANNY
 		}
 	}
@@ -3402,7 +3426,7 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.102.a
-		country_event = ntribes.103
+			country_event = ntribes.103
 		}
 	}	
 	country_event = { #The Thaw
@@ -3417,4 +3441,17 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.103.a
 		}
-	}	
+	}
+	country_event = { #A Cold Night in Everfrost
+	    id = ntribes.104
+	    title = ntribes.104.t
+	    desc = ntribes.104.d
+	    picture = GFX_event_viking_harbour
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.104.a
+		}
+	}

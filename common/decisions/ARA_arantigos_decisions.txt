@@ -263,17 +263,717 @@ ARA_peace_nm_cat = {
 			factor = 100
 		}
 		available = {
-		    has_full_control_of_state = 354
-			has_full_control_of_state = 355
-			has_full_control_of_state = 356
-			has_full_control_of_state = 357
-			has_full_control_of_state = 358
-			has_full_control_of_state = 359
+			EQC = {
+				has_capitulated = yes
+			}
+		    controls_state = 354
+			controls_state = 355
+			controls_state = 356
+			controls_state = 357
+			controls_state = 358
+			controls_state = 359
 		}
 		complete_effect = {
-			EQC = {
-			    country_event = {
-				    id = arantiga_chaos.39
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = GOY_ARA_lysimachus
+					}
+					EQC = {
+						is_subject = yes
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_subject = EQC
+					}
+					PREV = {
+						country_event = {
+							id = arantiga_chaos.039
+							hours = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = GOY_ARA_lysimachus
+						}
+						EQC = {
+							is_subject = no
+						}
+					}
+					EQC = {
+						country_event = {
+							id = arantiga_chaos.039
+							hours = 2
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = GOY_ARA_dorotheos_featherin
+					}
+					EQC = {
+						is_subject = yes
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_subject = EQC
+					}
+					PREV = {
+						country_event = {
+							id = arantiga.164
+							hours = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = GOY_ARA_dorotheos_featherin
+						}
+						EQC = {
+							is_subject = no
+						}
+					}
+					EQC = {
+						country_event = {
+							id = arantiga.164
+							hours = 2
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ARA_canteribbienes_cat = {
+	ARA_reclaim_merediennes = {
+		icon = generic_nationalism
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		visible = {
+			MER = {
+				exists = yes
+				NOT = {
+					is_subject_of = ARA
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		remove_effect = {
+			declare_war_on = { 
+		        type = annex_everything
+	            target = MER
+			}
+		}
+	}
+	ARA_lay_dragons = { #e621.net
+		icon = generic_nationalism
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		visible = {
+			DRG = {
+				exists = yes
+				NOT = {
+					is_subject_of = ARA
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		remove_effect = {
+			declare_war_on = { 
+		        type = annex_everything
+	            target = DRG
+			}
+		}
+	}
+	ARA_operation_solstice = {
+		icon = generic_nationalism
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				OR = {
+					owns_state = 1196
+					any_other_country = {
+						is_subject_of = ARA
+						owns_state = 1196
+					}
+				}
+			}
+		}
+		available = {
+			has_tech = landing_craft
+			has_tech = marines
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		remove_effect = {
+			every_other_country = {
+				limit = {
+					owns_state = 1195
+				}
+				country_event = arantiga.165
+			}
+			ROOT = {
+				transfer_state = 1195
+			}
+		}
+	}
+	ARA_puerto_caballo = {
+		icon = generic_nationalism
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		available = {
+			
+			owns_state = 1195
+			owns_state = 1196
+			OR = {
+				has_subject = DRG
+				AND = {
+					owns_state = 6
+					owns_state = 7
+					owns_state = 8
+					owns_state = 9
+				}
+			}
+			PCB = {
+				is_subject = no
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		remove_effect = {
+			declare_war_on = { 
+		        type = annex_everything
+	            target = PCB
+			}
+		}
+	}
+	ARA_demand_eqs_islands = {
+		icon = generic_nationalism
+		cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		available = {
+			has_country_flag = ARA_yukka_enable
+			any_other_country = {
+				OR = {
+					tag = EQS
+					tag = NLR
+				}
+				OR = {
+					owns_state = 4
+					owns_state = 1194
+					owns_state = 1193
+					has_subject = PCB
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					EQS = { exists = yes }
+				}
+				EQS = {
+					country_event = arantiga.166
+				}
+				else = {
+					NLR = {
+						country_event = arantiga.166
+					}
+				}
+			}
+		}
+	}
+	ARA_yukka_treaty = {
+		icon = generic_nationalism
+		cost = 10
+		fire_only_once = yes
+		ai_will_do = {
+			base = 100
+		}
+		available = {
+			OR = {
+				OR = {
+					EQS = {
+						surrender_progress > 0.1
+					}
+					NLR = {
+						surrender_progress > 0.1
+					}
+				}
+				AND = {
+					controls_state = 4
+					controls_state = 1194
+					controls_state = 1193
+				}
+			}
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					EQS = {
+						exists = yes
+					}
+				}
+				country_event = {
+					id = arantiga.169
+					hours = 2
+				}
+			}
+			if = {
+				limit = {
+					NLR = {
+						exists = yes
+					}
+				}
+				country_event = {
+					id = arantiga.169
+					hours = 2
+				}
+			}
+			effect_tooltip = {
+				transfer_state = 4
+				if = {
+					limit = {
+						from = {
+							has_subject = PCB
+						}
+					}
+					transfer_state = 1194
+					transfer_state = 1193
+				}
+				transfer_state = 4
+			}
+		}
+	}
+}
+
+ARA_dev_islands_cat = {
+	ARA_core_meridiennes = {
+		icon = generic_nationalism
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			OR = {
+				has_subject = MER
+				AND = {
+					owns_state = 1196
+					owns_state = 1197
+					owns_state = 1198
+				}
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+			if = {
+				limit = {
+					MER = {
+						exists = yes
+						is_puppet_of = ARA
+					}
+				}
+				annex_country = {
+					target = MER
+					transfer_troops = yes
+				}
+			}
+			add_state_core = 1196
+			add_state_core = 1197
+			add_state_core = 1198
+		}
+	}
+	ARA_canterib_capital = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			1196 = {
+				is_core_of = ARA
+			}
+			1197 = {
+				is_core_of = ARA
+			}
+			1198 = {
+				is_core_of = ARA
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 20
+		}
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 20
+		}
+		remove_effect = {
+			set_province_name = { id = 20694 name = "Port-Featherin" }
+			1196 = {
+				add_victory_points = {
+					province = 20694
+					value = 10
+				}
+				add_manpower = 200000
+				set_state_category = large_city
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ARA_island_rubber = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 4
+			owns_state = 1194
+			owns_state = 1195
+			owns_state = 1196
+			owns_state = 1197
+			owns_state = 1198
+			num_of_civilian_factories_available_for_projects > 30
+		}
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 30
+		}
+		remove_effect = {
+			4 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			}
+			1194 = {
+				add_resource = {
+					type = rubber
+					amount = 25
+				}
+			}
+			1195 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+			}
+			1196 = {
+				add_resource = {
+					type = rubber
+					amount = 15
+				}
+			}
+			1197 = {
+				add_resource = {
+					type = rubber
+					amount = 16
+				}
+			}
+			1198 = {
+				add_resource = {
+					type = rubber
+					amount = 17
+				}
+			}
+		}
+	}
+	ARA_mine_the_mountain = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 7
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			7 = {
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+				add_resource = {
+					type = crystals
+					amount = 40
+				}
+			}
+		}
+	}
+	ARA_zebrican_fleet_hq = {
+		icon = generic_nationalism
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 1193
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		days_remove = 120
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = ARA_imperial_admiralty
+				add_idea = ARA_imperial_admiralty_2
+			}
+			1193 = {
+				add_building_construction = {
+					type = air_base 
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+		}
+	}
+	ARA_summer_harbour = {
+		icon = generic_nationalism
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 1195
+			num_of_civilian_factories_available_for_projects > 7
+		}
+		days_remove = 60
+		modifier = {
+			civilian_factory_use = 7
+		}
+		remove_effect = {
+			1195 = {
+				add_manpower = 25000
+				add_core_of = ARA
+				add_building_construction = {
+					type = air_base 
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+		}
+	}
+	ARA_purrsia_colonisation = {
+		icon = generic_nationalism
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			has_completed_focus = ARA_abyssinian_allegiance
+		}
+		available = {
+			owns_state = 784
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 10
+		}
+		remove_effect = {
+			784 = {
+				add_manpower = 100000
+				add_core_of = ARA
+				add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+			}
+		}
+	}
+	ARA_assist_abissynia = {
+		icon = generic_nationalism
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			has_completed_focus = ARA_abyssinian_allegiance
+			OR = {
+				is_in_faction_with = ABY
+				has_subject = ABY
+			}
+		}
+		activation = {	
+			has_completed_focus = ARA_abyssinian_allegiance
+			is_in_faction_with = ABY
+			NOT = {
+				has_subject = ABY
+			}
+		}
+		days_mission_timeout = 120
+		timeout_effect = {
+			ABY = {
+				leave_faction = yes
+				remove_opinion_modifier = {
+					target = ARA
+					modifier = ARA_strategic_partners
+				}
+			}
+		}
+		selectable_mission = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+		}
+		days_remove = 120
+		modifier = {
+			civilian_factory_use = 10
+		}
+		complete_effect = {
+			add_timed_idea = {
+				idea = ARA_investing_in_aby
+				days = 360
+			}
+			ABY = {
+				add_ideas = ARA_arantigan_aid_aby
+			}
+		}
+		remove_effect = {
+			775 = {
+				add_manpower = 250000
+				set_state_category = large_city
+				add_building_construction = {
+					type = industrial_complex 
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure 
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			772 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+			777 = {
+				add_resource = {
+					type = tungsten
+					amount = 20
+				}
+			}
+			782 = {
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+			741 = {
+				add_core_of = ABY
+				add_resource = {
+					type = aluminium
+					amount = 20
+				}
+				add_resource = {
+					type = steel
+					amount = 10
 				}
 			}
 		}
@@ -672,6 +1372,22 @@ ARA_renaming_cities = {
 }
 
 ARA_definetely_not_fake_IRI = {
+	ARA_quinctus = {
+		icon = GFX_decision_goy_IRI_panaceum
+		cost = 150
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			has_completed_focus = ARA_secrets_of_barrad
+			NOT = { has_country_flag = IRI_project_ongoing }
+		}
+		complete_effect = {
+			set_country_flag = IRI_project_ongoing
+			country_event = arantiga_decision.50
+		}
+	}
 	ARA_miracle_cure = {
 		icon = GFX_decision_goy_IRI_panaceum
 		cost = 50
@@ -858,7 +1574,7 @@ ARA_northern_threat = {
 					Country_leader = {
 						ideology = holy_order_f
 						desc = ""
-						expire = “1965.01.01.01”
+						expire = "1965.01.01.01"
 						traits = {  }
 					}
 				}
@@ -869,6 +1585,178 @@ ARA_northern_threat = {
 			}
 			
 		}
+	}	
+}
+
+ARA_reorg_zebrican_lands_cat = {
+	GOY_ARA_macaw_prot = {
+		icon = generic_nationalism
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+		    any_owned_state = {
+				is_core_of = MCW
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			release_puppet = MCW
+			GOY_ARA_gumi = {
+				set_nationality = MCW
+			}
+			MCW = {
+				set_cosmetic_tag = MCW_arantiga
+				hidden_effect = {
+					#recruit_character = GOY_ARA_gumi
+					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+				}
+				add_country_leader_role = {
+					Character = GOY_ARA_gumi
+					Promote_leader = yes
+					Country_leader = {
+						desc = "GOY_ARA_gumi_desc"
+						ideology = nazism
+						expire = "1965.01.01.01"
+						traits = { dictator }
+					}
+				}
+			}
+		}
+	}
+	GOY_ARA_colth_prot = {
+		icon = generic_nationalism
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+		    any_owned_state = {
+				OR = {
+					is_core_of = CTH
+					is_core_of = CDR
+					is_core_of = CVA
+				}
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			country_event = arantiga.126
+		}
+	}
+	GOY_ARA_hazru_prot = {
+		icon = generic_nationalism
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+		    any_owned_state = {
+				is_core_of = TBK
+				is_core_of = WAR
+				is_core_of = BAT
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = TBK
+						is_core_of = WAR
+						is_core_of = BAT
+					}
+				}
+				add_core_of = TBK
+			}
+			release_puppet = TBK
+			GOY_ARA_vasile = {
+				set_nationality = TBK
+			}
+			TBK = {
+				set_cosmetic_tag = TBK_arantiga
+				hidden_effect = {
+					#recruit_character = GOY_ARA_vasile
+					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+				}
+				add_country_leader_role = {
+					Character = GOY_ARA_vasile
+					Promote_leader = yes
+					Country_leader = {
+						ideology = nazism
+						expire = "1965.01.01.01"
+						traits = { ruthless_capitalist }
+					}
+				}
+			}
+		}
+	}
+	GOY_ARA_aris_prot = {
+		icon = generic_nationalism
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+		    any_owned_state = {
+				is_core_of = HIP
+			}
+		}
+		days_remove = 7
+		remove_effect = {
+			release_puppet = HIP
+			GOY_ARA_moonfeather = {
+				set_nationality = HIP
+			}
+			HIP = {
+				set_cosmetic_tag = HIP_arantiga
+				hidden_effect = {
+					#recruit_character = GOY_ARA_moonfeather
+					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+				}
+				add_country_leader_role = {
+					Character = GOY_ARA_moonfeather
+					Promote_leader = yes
+					Country_leader = {
+						ideology = nazism
+						expire = "1965.01.01.01"
+						traits = { dictator }
+					}
+				}
+			}
+			country_event = arantiga.127
+			hidden_effect = {
+				transfer_state = 1204
+				transfer_state = 1199
+				transfer_state = 687
+				transfer_state = 694
+				transfer_state = 693
+				1204 = {
+					set_resistance = 0
+					set_compliance = 40
+				}
+				1199 = {
+					set_resistance = 0
+					set_compliance = 40
+				}
+				687 = {
+					set_resistance = 0
+					set_compliance = 40
+				}
+				694 = {
+					set_resistance = 0
+					set_compliance = 40
+				}
+				693 = {
+					set_resistance = 0
+					set_compliance = 40
+				}
+			}
+		}
 	}
 }
-		

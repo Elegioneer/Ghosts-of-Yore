@@ -1,0 +1,7 @@
+spriteTypes = {
+	#### Leader trait icons ####
+	spriteType = {
+		name = "GFX_trait_goy_blind"
+		texturefile = "gfx/interface/traits/personal/trait_blind.dds"
+	}
+}

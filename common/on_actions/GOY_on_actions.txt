@@ -19,7 +19,7 @@ on_actions = {
 					}
 				}
 				NTR = {
-					load_focus_tree = generic_focus
+					load_focus_tree = Northern_tribes_nothing
 					drop_cosmetic_tag = yes
 				}
 				ELSE = {
@@ -79,7 +79,200 @@ on_actions = {
 			}
 		}
 	}
-    on_state_control_changed = { 
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = ARA
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_puppet_of = ARA
+					}
+					drop_cosmetic_tag = yes
+				}
+				drop_cosmetic_tag = yes
+				add_country_leader_role = {
+					Character = GOY_ARA_craterus
+					Promote_leader = yes
+					Country_leader = {
+						ideology = stratocracy
+						expire = "1965.01.01.01"
+						traits = {  }
+					}
+				}
+				set_party_name = {ideology = fascism name = ARA_crat_junta_party long_name = ARA_crat_junta_party }
+				GOY_ARA_craterus = {
+					Promote_leader = yes
+				}
+				#retire_character = GOY_ARA_arantigos
+				retire_character = GOY_ARA_dorotheos_featherin
+				retire_character = GOY_ARA_lysimachus
+				remove_ideas = {
+					ARA_militarized_economy
+					ARA_militarized_economy_2
+					ARA_every_griff
+					ARA_every_griff_2
+					ARA_one_language
+					ARA_tungsten_mind
+					ARA_dogs_of_war
+					ARA_arantigos_boreas1
+					ARA_arantigos_boreas2
+					ARA_arantigos_boreas3
+					ARA_arantigos_boreas4
+					ARA_power_vacuum
+					ARA_absolute_chaos
+					ARA_absolute_chaos1
+					ARA_absolute_chaos2
+					ARA_absolute_chaos3
+					ARA_absolute_chaos4
+					ARA_absolute_chaos5
+					ARA_absolute_chaos6
+					ARA_absolute_chaos7
+					ARA_slow_recovery
+					ARA_prison_economy_idea
+					ARA_fanatical_army
+					ARA_closed_nation
+					ARA_atomic_ascension
+					ARA_invigilation
+					ARA_faithful_fortress
+					ARA_imperial_government
+					ARA_absolute_reign
+					ARA_griffing_dams
+					ARA_yale_universities
+					ARA_conqueror
+					ARA_himss_idea
+					ARA_welfare_policy
+					ARA_griffonian_free_trade_agreement
+					ARA_idol_of_boreas
+					ARA_lysi_regency
+					ARA_knowledge_dangers
+					ARA_arantigos_eternal
+					ARA_great_temple
+					ARA_sicameon_rebellion
+					ARA_skyfall_trade
+					ARA_knights_of_arantigos
+					ARA_gryps
+					ARA_voices_of_dissent
+					ARA_whispers_of_dissent
+					ARA_Noble_Reservation
+					ARA_New_Nobility
+					ARA_Equality_under_Emperor
+					ARA_foreign_influence
+					ARA_pure_minds
+					ARA_state_of_peace
+				}
+				add_ideas = limited_conscription
+				add_ideas = export_focus
+				add_ideas = civilian_economy
+				swap_ideas = {
+					remove_idea = ARA_military_research_2
+					add_idea = ARA_military_research
+				}
+				swap_ideas = {
+					remove_idea = ARA_work_camp1
+					add_idea = ARA_work_camp
+				}
+				load_focus_tree = Arantiga_nothing
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = NTR
+					}
+				}
+				drop_cosmetic_tag = yes
+				add_country_leader_role = {
+					Character = NTR_GOY_gordonthearcher
+					Promote_leader = yes
+					Country_leader = {
+						ideology = stratocracy
+						expire = "1965.01.01.01"
+						traits = {  }
+					}
+				}
+				retire_character = GOY_NTR_gavin
+				retire_character = GOY_NTR_frostking
+				set_party_name = { ideology = fascism name = NTR_warrior_lodges_party long_name = NTR_warrior_lodges_party_long }
+				set_technology = {
+					GOY_necromancy_tech = 0
+					popup = no
+				}
+				remove_ideas = {
+					NTR_tribal_militias
+					NTR_tribal_militias_2
+					NTR_tribal_militias_3
+					NTR_tribal_militias_4
+					NTR_exiled_clans
+					NTR_exiled_clans_2
+					NTR_exiled_clans_3
+					NTR_divided_clans
+					NTR_frozen_curtain
+					NTR_circle_guidance
+					NTR_chosen_ones
+					NTR_broken_ties
+					NTR_broken_ties_1
+					NTR_the_horde
+					NTR_chosen_ones_1
+					NTR_feudal_overlords
+					NTR_feudal_overlords_1
+					NTR_industrial_slavery
+					NTR_undead_autonomy
+					NTR_undead_overseers_idea
+					NTR_pillage_herzland
+					NTR_widespread_unrest
+					NTR_conquerors_of_griffonia
+					NTR_extra_shifts
+					NTR_all_front
+					NTR_undead_surplus
+					NTR_riches_of_south
+					NTR_bloodrage
+					NTR_sorcerer_generals
+					NTR_subdue_land
+					NTR_iseeyou
+					NTR_magical_disturbance
+					NTR_dark_acolytes
+					NTR_icetribute
+				}
+				add_ideas = limited_conscription
+				add_ideas = export_focus
+				add_ideas = civilian_economy
+				swap_ideas = {
+					remove_idea = GOY_druid_wisdom
+					add_idea = lack_of_scientists1
+				}
+				load_focus_tree = Northern_tribes_nothing
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = BOI
+					}
+				}
+				drop_cosmetic_tag = yes
+				retire_character = GOY_BOI_gallus
+				retire_character = GOY_BOI_goldstone
+				add_country_leader_role = {
+					Character = GOY_BOI_grauschnabel
+					Promote_leader = yes
+					Country_leader = {
+						ideology = stratocracy
+						expire = "1965.01.01.01"
+						traits = {  }
+					}
+				}
+				set_party_name = { ideology = fascism name = BOI_prov_mil_gov long_name = BOI_prov_mil_gov_long }
+				set_party_name = { ideology = neutrality name = BOI_nobles_party long_name = BOI_nobles_party_long }
+				set_party_name = { ideology = democratic name = BOI_dem_init long_name = BOI_dem_init_long }
+			}
+		}
+	}
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+    on_state_control_changed = {
 	    effect = {
 	        if = {
 				limit = { #Idol of Boreas shifting spirit
@@ -109,7 +302,7 @@ on_actions = {
 					}
 				}
 			}
-			if = {
+			if = { #add discontent nobles to BOI
 			    limit = {
 			        FROM.FROM = { state = 382 }
 				    ROOT = {
@@ -128,6 +321,66 @@ on_actions = {
 				}
 				ROOT = {
 				    add_ideas = BOI_discontent_nobles
+				}
+			}
+			if = { #Cityfall Arantigos Karthin
+				limit = {
+					ROOT = {
+						tag = ARA
+						OR = {
+							has_country_leader = {
+								ruling_only = yes 
+								character = GOY_ARA_dorotheos_featherin
+							}
+							has_country_leader = {
+								ruling_only = yes 
+								character = GOY_ARA_lysimachus
+							}
+						}
+					}
+				
+					FROM.FROM = {
+						state = 371
+					}
+				}
+				ROOT = {
+					country_event = arantiga.102
+				}
+			}
+			if = { #Cityfall Arantigos Aquila
+				limit = {
+					ROOT = {
+						tag = ARA
+						has_country_leader = {
+							ruling_only = yes 
+							character = GOY_ARA_dorotheos_featherin
+						}
+					}
+				
+					FROM.FROM = {
+						state = 377
+					}
+				}
+				ROOT = {
+					country_event = arantiga.103
+				}
+			}
+			if = { #Cityfall Arantigos Griffenheim
+				limit = {
+					ROOT = {
+						tag = ARA
+						has_country_leader = {
+							ruling_only = yes 
+							character = GOY_ARA_dorotheos_featherin
+						}
+					}
+				
+					FROM.FROM = {
+						state = 382
+					}
+				}
+				ROOT = {
+					country_event = arantiga.104
 				}
 			}
 		}

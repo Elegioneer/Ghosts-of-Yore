@@ -10,7 +10,7 @@
 	NTR_aurora_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_1
 
 		local_building_slots = 2
 		local_manpower = 0.25
@@ -23,7 +23,7 @@
 	NTR_iron_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_8
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -39,7 +39,7 @@
 	NTR_black_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_2
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -55,7 +55,7 @@
 	NTR_shadow_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_4
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -71,7 +71,7 @@
 	NTR_blood_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_7
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -87,7 +87,7 @@
 	NTR_obsidian_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_6
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -103,7 +103,7 @@
 	NTR_storm_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_3
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1
@@ -119,7 +119,7 @@
 	NTR_amber_tower_constructed = {
 		enable = { always = yes }
 		
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_modifiers_goy_dark_towers_5
 
 		local_building_slots = 2
 		local_non_core_manpower = 0.1

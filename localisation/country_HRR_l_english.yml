@@ -1,7 +1,7 @@
 ﻿l_english:
 
-HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
- HRR_GOY_democratic:0 "Herzland Liberation Army"
+### Cosmetic Tags ###
+HRR_GOY_democratic:0 "Herzland Liberation Army"
  HRR_GOY_democratic_DEF:0 "Herzland Liberation Army"
  HRR_GOY_democratic_ADJ:0 "Herzlander"
  HRR_GOY_fascism:0 "Herzland Liberation Army"
@@ -38,8 +38,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_GOY_republic_communism_DEF:0 "Herzland Union"
  HRR_GOY_republic_communism_ADJ:0 "Herzlander"
  
- ### Leaders ###
- GOY_HRR_Ardenssonhector:0 "Hector Ardennson"
+### Leaders ###
+GOY_HRR_Ardenssonhector:0 "Hector Ardennson"
  GOY_HRR_willie_scherler:0 "Willie Scherler"
  GOY_HRR_archon_erion_xii:0 "Archon Erion XII"
  GOY_HRR_elias_bronzetail:0 "Elias Bronzetail"
@@ -50,8 +50,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_GOY_winston_copperhill:0 "Winston Copperhill"
  HRR_GOY_regina_eagleclaw:0 "Regina Eagleclaw"
  
- ### Other Characters ###
- GOY_HRR_august_duskwing:0 "August Duskwing"
+### Other Characters ###
+GOY_HRR_august_duskwing:0 "August Duskwing"
  GOY_HRR_reinhold_thundertail:0 "Reinhold Thundertail"
  GOY_HRR_pieter_best:0 "Pieter Best"
  GOY_HRR_marc_kippenberger:0 "Marc Kippenberger"
@@ -80,8 +80,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_GOY_advisor_18:0 "Ake Falkenrath"
  HRR_GOY_advisor_19:0 "Georg Habicht"
  
- ### Political Parties ###
- HRR_dem_party:0 "Liberation Front"
+### Political Parties ###
+HRR_dem_party:0 "Liberation Front"
  HRR_dem_party_long:0 "Liberation Front"
  HRR_neu_party:0 "Imperial Loyalists"
  HRR_neu_party_long:0 "Imperial Loyalists"
@@ -106,14 +106,14 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_GOY_rep_com:0 "HSP"
  HRR_GOY_rep_com_long:0 "Herzlander Socialist Party"
  
- ### Traits ###
- GOY_republican_chancellor:0 "Old Republican"
+### Traits ###
+GOY_republican_chancellor:0 "Old Republican"
  GOY_vast_connections:0 "Well Connected Noble"
  GOY_democratic_socialist:0 "Democratic Socialist"
  GOY_commongriff_president:0 "President of the Commongriffs"
  
- ### Tooltips ###
- HRR_railroad_tooltip:0 "We shall expand Herzland infrastructure."
+### Tooltips ###
+HRR_railroad_tooltip:0 "We shall expand Herzland infrastructure."
  HRR_resources_tooltip:0 "We can invest in new mining operations."
  HRR_companies_unlocked:0 "New design companies are unlocked."
  HRR_herzland_devscheme_tooltip:0 "We can start new development projects."
@@ -125,12 +125,12 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_fight_for_frost:0 "§YContinue as Tyranny of Ice§!"
  HRR_fight_for_freedom:0 "§RPlay as Herzland Liberation Army§!"
  
-  ### Country Flags ###
-  HRR_romau_destroyed:0 "Romau has been destroyed."
-  HRR_griffenheim_destroyed:0 "Griffenheim has been destroyed."
+### Country Flags ###
+HRR_romau_destroyed:0 "Romau has been destroyed."
+ HRR_griffenheim_destroyed:0 "Griffenheim has been destroyed."
  
-  ### Designs Companies ###
- HRR_imperial_arms_co:0 "Reichswaffen"
+### Designs Companies ###
+HRR_imperial_arms_co:0 "Reichswaffen"
  HRR_lionstone:0 "Löwenstein"
  HRR_bluedale:0 "Blautal Waffenhäuser"
  HRR_helheim:0 "Helheim Kannonen"
@@ -146,8 +146,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_imperial_motors:0 "Greifswagen"
  HRR_arcturian:0 "Arcturien Automobile"
  
- ### Decisions ###
- HRR_resource_extraction_cat:0 "Mining Operations Expansions"
+### Decisions ###
+HRR_resource_extraction_cat:0 "Mining Operations Expansions"
  HRR_resource_extraction_cat_desc:0 "To fully utilize the might of the industry of the Herzland we need more resources. Luckily, our prospectors have discovered new deposites ready to be used by us."
  HRR_osnabeak_oilfield:0 "Expand Osnabeak Oilfield"
  HRR_bronzehill_crystal:0 "Dig for Bronzehill Crystals"
@@ -167,8 +167,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_dam_griffking:0 "Dam the Griffking"
  HRR_dam_griffking_desc:0 "Griffkind, the mightiest of the Griffonia's rivers offers us an unique opportunity. With creation of new hydroelectric plants, we will be provided with vast energy reserves for our population and growing industry."
 
- ### Ideas ###
- HRR_terror_tactics:0 "Terror Tactics"
+### Ideas ###
+HRR_terror_tactics:0 "Terror Tactics"
  HRR_terror_tactics_desc:0 "Northern ponies have resorted to all sorts of brutal and outright genocidal tactics in order to stop us. Until we do not defeat them, they will continue to brutalize the population."
  HRR_war_winter:0 "War Against Winter"
  HRR_war_winter_desc:0 "Griffons, no matter their nationality or political views, join our army in mass to fight for freedom of the Heartlands."
@@ -249,8 +249,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_presidential_republic:0 "Presidential Republic"
  HRR_presidential_republic_desc:0 "While some might complain, there is no doubt that a strong president means strong republic."
 
- ### Focus ###
- HRR_reconstruction:0 "Reconstruction"
+### Focus ###
+HRR_reconstruction:0 "Reconstruction"
  HRR_reconstruction_desc:0 "Won has been won, yet our land and people are scarred by atrocities of the past years. Now, we need to focus on healing our nation and rebuilding our homes."
  HRR_rebuild_romau:0 "Rebuild Romau"
  HRR_rebuild_romau_desc:0 "We have failed to protect Romau from the northern barbarian. Once a great city lies in ruins and it is our fault. All we can do now is to bury the dead and try to save what is left of the Eternal City."
@@ -363,8 +363,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  HRR_changeling_lessons:0 "Lessons of Changeling Mission"
  HRR_changeling_lessons_desc:0 "Changeling military attache greatly helped to improve imperial armored technology. By studying documents left by them, and cooperation with officers trained by Changelings we should be able to improve our armoured forces military doctrine."
  
- ## Events ##
- herzland_liberation_goy.01.t:0 "The Fallen One"
+## Events ##
+herzland_liberation_goy.01.t:0 "The Fallen One"
  herzland_liberation_goy.01.d:0 "Everfrost stank death and smoke - like every other city after prolonged battle. And the battle for Everfrost was long - pony warriors fought till bitter end - either out of sheer hatred towards griffons, or fearing their ruler's reprisal. Streets were littered with bodies of both living and undead, and many districts have been completely destroyed. However, over this all destruction Snowflake Palace still stood, taunting griffons - not even the artillery fire was able to destroy its walls - whenever a hit, holes were being filled by magical ice, replacing all the damage inflicted to the structure. Frost King might have been cornered in his lair - but attackers could not get to him - every squad of soldiers or knights who entered inside did not return. \nHector Ardensson stood in front of the gate of the palace. For days, first when he slept, now even during daytime he heard a… call. Frost King was speaking to him - taunting him and demanding that the leader of the rebellion fought him in person - not by just sending underlings. And though other commanders tried to dissuade him, Hector knew it was his duty. Old knight went through remnants of the once intricate gates and entered the palace. Inside were also covered in ice - forming all kinds of weird ornaments and sculptures - some of them after closer examination turned out to be frozen bodies. He did not know how long he wandered through the corridors and empty rooms - but after many minutes he found a large hall - and inside it a single creature - a griffon. \nErik Grimclaw seemed to be asleep - leaning on his sword, his head lowered. However, as Hector approached, the younger griffon raised his head. “Hector. Frost King told me, you will come. Again, he was right.” Hector looked on as a fallen knight with utter contempt. “When I was told, you were seen on the frontlines, leading these undead monstrosities… I did not believe it. I thought you have perished in this grim land, and now Tyrant taunts us, like many times he raised others he had slain. But yet you are here. Tell me… Why?” Erik stayed silent for a long moment, his eyes gazing somewhere far away, as if he was somewhere else… “The living ones are weak. We just fight, bicker and betray each other. Do such miserable creatures really deserve freedom? For over thirty years griffons have been killing each other, for petty reasons. They do not deserve freedom, they deserve punishment for their wickedness. You think something will change when you win? These weaklings will just complain and tear apart whatever you build.” Hector drew his sword. “If we were like you believe, I would not be here. Armies of your ‘king’ would not be defeated. We might be weak, but inside every griffon is a spark, a potential for greatness. We will prevail. And we will build a better world.” Erik shrieked and jumped towards Hector, raising his sword. Ardensson was surprised by the speed and strength of Grimclaw - he might be younger, but nevertheless he should not move this quickly - and the old knight was quickly pushed into defense. With every dodge or paired strike, Hector felt, as he was losing his strength. Erik kept attacking and attacking… It would not be long before Arsensson would not have strength to raise his sword… He needed to finish this fight now. His chance was to use Erik rage against him. Hector deliberately feigned slipping - and when Erik tried to strike him down, he managed to get one, decisive stab. Erik stopped abruptly and stared on a blade protruding out of his chest. Fallen knight moved a few steps backwards, and then fell on the floor. Blood pool was quickly growing and it was obvious it was a fatal wound. Hector grabbed Erik’s sword and stood over him. Young knight said nothing, just lowered his head, reconciled with his fate. With one strike, Hector cut Erik’s head off. “I can only hope gods will have mercy upon you, Erik.” He said. There was now only one thing left..."
  herzland_liberation_goy.01.a:0 "...to kill the Tyrant"
  herzland_liberation_goy.02.t:0 "Godslaying"
@@ -402,8 +402,8 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  herzland_liberation_goy.09.a:0 "Power to the parliament!"
  herzland_liberation_goy.09.b:0 "Power to the president!"
  
- ## News Events ##
- herzland_liberation_goy_news.1.t:0 "The Thaw"
+## News Events ##
+herzland_liberation_goy_news.1.t:0 "The Thaw"
  herzland_liberation_goy_news.1.d:0 "[This.GetNewspaperHeader]Frost King has been defeated! After a long and destructive war, griffon rebels managed to defeat his hordes of pony and undead warriors and marched directly on his capital in Everfost. While details are unclear, it seems that grandmaster of the Silberkralle and leader of the rebellion, Hector Ardensson have personally slayed Frost King, ending his mad attempt to conquer Griffonia. With Frost King death his remaining undead servants have turned into dust, and ponies lost all will to fight. While many have perished and war has devastated central and northern Griffonia, survivors are celebrating on the streets - the nightmare is finally over!"
  herzland_liberation_goy_news.1.a:0 "Victory!"
  herzland_liberation_goy_news.1.b:0 "The Spring have come!"
@@ -419,6 +419,13 @@ HRR_cosmetic_tags:0 "### Cosmetic Tags ###"
  herzland_liberation_goy_news.3.b:0 "Unexepcted ending for sure"
  herzland_liberation_goy_news.3.c:0 "Interesting
  
- ## Order Of Battle ##
- HRR_volunter_brigades_OOB:0 "Volunteer Brigades"
+## Order Of Battle ##
+HRR_volunter_brigades_OOB:0 "Volunteer Brigades"
  HRR_crusaders_OOB:0 "Crusaders"
+ 
+### Unit Commander Ranks ###
+HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_0:0 "Generalmajor"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_1:0 "Generalmajor"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_2:0 "Generalleutnant"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_3:0 "Generalleutnant"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_4:0 "Gen. der Waffengatung"

@@ -183,7 +183,7 @@ add_namespace = herzland_liberation_goy_news
 				Country_leader = {
 				ideology = stratocracy
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 			}
 			}
 		    set_party_name = {ideology = fascism name = NTR_warrior_lodges_party long_name = NTR_warrior_lodges_party_long }			
@@ -305,7 +305,7 @@ add_namespace = herzland_liberation_goy_news
 				Country_leader = {
 				ideology = conservative_liberalism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_republican_chancellor }
 			}
 			add_stability = 0.05
@@ -324,7 +324,7 @@ add_namespace = herzland_liberation_goy_news
 				Country_leader = {
 				ideology = centrism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { stubbon_bulldog }
 			}
 			}
@@ -346,7 +346,7 @@ add_namespace = herzland_liberation_goy_news
 				Country_leader = {
 				ideology = despotism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_vast_connections }
 			}
 			}
@@ -408,7 +408,7 @@ add_namespace = herzland_liberation_goy_news
 				Country_leader = {
 				ideology = liberalism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_commongriff_president }
 			}
 			}
@@ -430,7 +430,7 @@ add_namespace = herzland_liberation_goy_news
 						Country_leader = {
 						ideology = liberalism
 						desc = ""
-						expire = “1965.01.01.01”
+						expire = "1965.01.01.01"
 						traits = { GOY_commongriff_president }
 					}
 					}
@@ -453,7 +453,7 @@ add_namespace = herzland_liberation_goy_news
 						Country_leader = {
 						ideology = liberalism
 						desc = ""
-						expire = “1965.01.01.01”
+						expire = "1965.01.01.01"
 						traits = { GOY_commongriff_president }
 					}
 					}

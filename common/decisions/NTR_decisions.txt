@@ -211,7 +211,7 @@ NTR_spirits_blessings_cat = {
 
 NTR_dark_magic_cat = {
     NTR_ritual_dc = {
-		icon = GFX_decision_sombra_dark_heart
+		icon = GFX_decision_goy_magik_killsky
 		cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -263,7 +263,7 @@ NTR_dark_magic_cat = {
 		days_remove = 150
 	}
     NTR_raise_dead_dc = {
-		icon = GFX_decision_skullgriff
+		icon = GFX_decision_goy_magik_zombies
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -303,7 +303,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
 	NTR_raise_dead_dc_2 = {
-		icon = GFX_decision_skullgriff
+		icon = GFX_decision_goy_magik_zombies
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -340,7 +340,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
     NTR_cold_wave = {
-		icon = GFX_decision_generic_magic
+		icon = GFX_decision_goy_magik_weather
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -356,6 +356,7 @@ NTR_dark_magic_cat = {
 					has_country_flag = NTR_flag_magick_active
 				}
 			}
+			has_war = yes
 		}
 		modifier = {   
 		}
@@ -367,7 +368,28 @@ NTR_dark_magic_cat = {
 				add_timed_idea = {
 				    idea = NTR_unnatural_weather
 					days = 120
-				}		
+				}
+				#every_state = { #Removed due to being unhelpful
+				#	limit = {
+				#		is_controlled_by = PREV
+				#	}
+				#	add_province_modifier = {
+				#		static_modifiers = {
+				#			weather_very_cold
+				#		}
+				#		province = {
+				#			all_provinces = yes
+				#		}
+				#	}
+				#	add_province_modifier = {
+				#		static_modifiers = {
+				#			weather_blizzard
+				#		}
+				#		province = {
+				#			all_provinces = yes
+				#		}
+				#	}
+				#}
 			}
 			add_timed_idea = {
 			idea = NTR_magical_disturbance
@@ -385,7 +407,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
 	NTR_bloodlust = {
-	    icon = GFX_decision_generic_civil_support
+	    icon = GFX_decision_goy_magik_bloodlust
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -425,7 +447,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
 	NTR_battlefield_magic = {
-	    icon = GFX_decision_book
+	    icon = GFX_decision_goy_magik_smarts
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -465,7 +487,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
 	NTR_shape_land = {
-	    icon = GFX_decision_minecraft
+	    icon = GFX_decision_goy_magik_mining
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -505,7 +527,7 @@ NTR_dark_magic_cat = {
 		days_remove = 120
 	}
 	NTR_unnatural_insight = {
-	    icon = GFX_decision_onmap_recruit_operative
+	    icon = GFX_decision_goy_magik_seeyou
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
@@ -1573,7 +1595,7 @@ NTR_purchase_bakaran_artillery = {
 			    amount = 200
 			}
 	add_tech_bonus = {
-				name = NTR_arty_5
+				name = GOY_bonus_arty_1
 				bonus = 0.5
 				uses = 1
 				category = artillery
@@ -1631,7 +1653,7 @@ NTR_purchase_imperial_guns = {
 			    amount = 2500
 			}
 	add_tech_bonus = {
-				name = NTR_inf_1
+				name = GOY_bonus_infy_eq_1
 				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
@@ -1820,18 +1842,16 @@ NTR_contact_equestria = {
 }
 NTR_dark_tower_cat = {
 NTR_aurora_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_aurora
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
-			owns_state = 562
-			num_of_civilian_factories > 8
+            owns_state = 562
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1848,18 +1868,16 @@ NTR_aurora_tower = {
 	days_remove = 120
 }
 NTR_iron_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_iron
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 485
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1876,18 +1894,16 @@ NTR_iron_tower = {
 	days_remove = 120
 }
 NTR_black_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_black
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 382
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1904,18 +1920,16 @@ NTR_black_tower = {
 	days_remove = 120
 }
 NTR_shadow_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_shadow
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 377
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1932,18 +1946,16 @@ NTR_shadow_tower = {
 	days_remove = 120
 }
 NTR_blood_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_blood
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 383
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1960,18 +1972,16 @@ NTR_blood_tower = {
 	days_remove = 120
 }
 NTR_obsidian_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_obsidian
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 536
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -1988,18 +1998,16 @@ NTR_obsidian_tower = {
 	days_remove = 120
 }
 NTR_storm_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_storm
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 659
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -2016,18 +2024,16 @@ NTR_storm_tower = {
 	days_remove = 120
 }
 NTR_amber_tower = {
-		icon = GFX_decision_STG_palace_construction_effort
+		icon = GFX_decision_goy_tower_amber
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
-			tag = NTR
-            has_political_power > 100
-			has_country_flag = NTR_flag_dark_tower_unlock
 			owns_state = 508
-			num_of_civilian_factories > 8
+			has_political_power > 149
+			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
 	    tag = NTR
@@ -2386,6 +2392,11 @@ NTR_last_griffon_alliance_cat = {
 	NTR_griffon_last_alliance = {
 		activation = {	
 			has_completed_focus = NTR_purge_herz
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_NTR_frostking
+			}
+			is_subject = no
 		}
 		available = {	
 			tag = NTR
@@ -2412,6 +2423,8 @@ NTR_last_griffon_alliance_cat = {
 		complete_effect = {	
 			add_political_power = 200
 		}
+		fire_only_once = yes
+		#war_with_on_timeout = #no idea how to code this, don't wanna deal with arrays
 		timeout_effect = {
 			custom_effect_tooltip = NTR_griffon_alliance_tooltip
 			news_event = ntribes_news.8

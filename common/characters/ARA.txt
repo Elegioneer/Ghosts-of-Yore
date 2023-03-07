@@ -1,5 +1,5 @@
 characters = {
-	GOY_ARA_dorotheos_featherin = {
+	GOY_ARA_dorotheos_featherin = { #next name is GOY_ARA_arantigos
 		name = GOY_ARA_dorotheos_featherin
 		portraits = {
 			civilian = {
@@ -873,29 +873,29 @@ characters = {
 			}
 		}
 	}
-	GOY_ARA_arantigos = {
-		name = GOY_ARA_arantigos
-		portraits = {
-			civilian = {
-				large="gfx/leaders/ARA/dorotheos.tga"
-			}
-		}
-	}
+	#GOY_ARA_arantigos = {
+	#	name = GOY_ARA_arantigos
+	#	portraits = {
+	#		civilian = {
+	#			large="gfx/leaders/ARA/dorotheos.tga"
+	#		}
+	#	}
+	#}
 	GOY_ARA_reiner = {
 		name = GOY_ARA_reiner
 	}
-	GOY_ARA_nicatorking = {
-		name = ARA_nicatorking
-		portraits = {
-			civilian = {
-				large="gfx/leaders/ARA/nicator.tga"
-			}
-			army = {
-				large="gfx/leaders/ARA/nicator.tga"
-				small="gfx/interface/ideas/idea_ARA_nicator.dds"
-			}
-		}
-	}
+	#GOY_ARA_nicatorking = {
+	#	name = ARA_nicatorking
+	#	portraits = {
+	#		civilian = {
+	#			large="gfx/leaders/ARA/nicator.tga"
+	#		}
+	#		army = {
+	#			large="gfx/leaders/ARA/nicator.tga"
+	#			small="gfx/interface/ideas/idea_ARA_nicator.dds"
+	#		}
+	#	}
+	#}
 	GOY_ARA_hermanepuppet = {
 		name = GOY_ARA_hermanepuppet
 		portraits = {
@@ -919,6 +919,7 @@ characters = {
 				large= "gfx/leaders/RCT/pumpkin_swirl.tga"
 			}
 		}
+		gender = male
 	}
 	GOY_ARA_headmasterapesios = {
 		name = GOY_ARA_headmasterapesios
@@ -927,6 +928,7 @@ characters = {
 				large= "gfx/leaders/Asia/portrait_griffon_generic_1.dds"
 			}
 		}
+		gender = male
 	}
 	GOY_ARA_soterpuppet = {
 		name = GOY_ARA_soterpuppet
@@ -935,5 +937,55 @@ characters = {
 				large= "gfx/leaders/ARA/soter.tga"
 			}
 		}
+		gender = male
+	}
+	GOY_ARA_benoam_gerza = {
+		name = CTH_batnoam_zarza
+		portraits = {
+			civilian = {
+				small="GFX_idea_CTH_benoam_gerza"
+				large="gfx/leaders/CVA/CVA_Zonzalze_Zarza.tga"
+			}
+		}
+		gender = male
+	}
+	GOY_ARA_zaron_zorrel={
+		name=CTH_zaron_zorrel
+		portraits={
+			civilian={
+				small="GFX_idea_CTH_zaron_zorrel"
+				large = "gfx/leaders/CTH/CTH_zaron_zorrel_leader.tga"
+			}
+		}
+		gender = male
+	}
+	GOY_ARA_gumi={
+		name=GOY_ARA_gumi_name
+		portraits={
+			civilian={
+				large = "gfx/leaders/MCW/GOY_gumi.tga"
+			}
+		}
+		gender = male
+	}
+	GOY_ARA_vasile = {
+		name = TBK_vasile
+		portraits = {
+			civilian = {
+				large="gfx/leaders/TBK/Vasile.tga"
+				small= GFX_idea_TBK_Advisor_Vasile
+			}
+		}
+		gender = male
+	}
+	GOY_ARA_moonfeather = {
+		name = HIP_SIR_plumage_moonfeather
+		portraits = {
+			civilian = {
+				large="gfx/leaders/HIP/Plumage_Moonfeather.tga"
+				small="gfx/interface/ideas/HIP/SIR/HIP_SIR_plumage_moonfeather.tga"
+			}
+		}
+		gender = male
 	}
 }

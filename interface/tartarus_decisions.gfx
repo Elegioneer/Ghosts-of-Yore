@@ -47,4 +47,72 @@ spriteTypes = {
 		name = "GFX_decision_goy_recall_warriors"
 		texturefile = "gfx/interface/decisions/decision_goy_recall_warriors.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_goy_dark_magik_icon"
+		texturefile = "gfx/interface/decisions/decision_cat_goy_dark_magik_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_bloodlust"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_bloodlust.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_killsky"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_killsky.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_mining"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_seeyou"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_seeyou.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_smarts"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_smarts.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_weather"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_weather.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magik_zombies"
+		texturefile = "gfx/interface/decisions/decision_goy_magik_zombies.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_goy_dark_towers_icon"
+		texturefile = "gfx/interface/decisions/decision_cat_goy_dark_towers_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_amber"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_amber.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_aurora"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_aurora.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_black"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_black.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_blood"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_blood.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_iron"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_iron.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_obsidian"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_obsidian.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_shadow"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_shadow.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_tower_storm"
+		texturefile = "gfx/interface/decisions/decision_goy_tower_storm.dds"
+	}
 }

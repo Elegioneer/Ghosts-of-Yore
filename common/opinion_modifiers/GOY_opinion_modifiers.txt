@@ -17,4 +17,8 @@ opinion_modifiers = {
 	NTR_dangerous_maniacs = {
 		value = -100
 	}
+	
+	ARA_strategic_partners = {
+		value = 150
+	}
 }

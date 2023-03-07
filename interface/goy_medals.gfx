@@ -1,0 +1,76 @@
+
+
+###### GOY Medals #######
+
+spriteTypes = {
+
+	### Medals
+	
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_1"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_2"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_3"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_4"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_5"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_5.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_6"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_6.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_7"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_7.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_ARA_medal_8"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_8.dds"
+	}
+	
+	### Frames
+	
+	spriteType = {
+		name = "GFX_medal_icon_goy_ara"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_strip.dds"
+		noOfFrames = 8
+    }
+	spriteType = {
+		name = "GFX_medal_icon_goy_ara_large"
+		texturefile = "gfx/interface/medals/GOY_ARA_medal_strip_large.dds"
+		noOfFrames = 8
+    }
+	
+	spriteType = {
+		name = "GFX_medal_icon_goy_ntr"
+		texturefile = "gfx/interface/medals/GOY_NTR_medal_strip.dds"
+		noOfFrames = 8
+    }
+	spriteType = {
+		name = "GFX_medal_icon_goy_ntr_large"
+		texturefile = "gfx/interface/medals/GOY_NTR_medal_strip_large.dds"
+		noOfFrames = 8
+    }
+    
+	spriteType = {
+		name = "GFX_medal_icon_goy_boi"
+		texturefile = "gfx/interface/medals/GOY_BOI_medal_strip.dds"
+		noOfFrames = 4
+    }
+	spriteType = {
+		name = "GFX_medal_icon_goy_boi_large"
+		texturefile = "gfx/interface/medals/GOY_BOI_medal_strip_large.dds"
+		noOfFrames = 4
+    }
+}

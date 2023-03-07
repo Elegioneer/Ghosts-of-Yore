@@ -1728,11 +1728,19 @@
 		ai_will_do = {
 			base = 50
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
-		completion_reward = {
-		add_ideas = { ARA_work_camp }
-		set_country_flag = work_camps_flag
-		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS}
+			completion_reward = {
+				add_ideas = { ARA_work_camp }
+				set_country_flag = work_camps_flag
+				custom_effect_tooltip = GOY_CETT_ARA_penbats
+				hidden_effect = {
+					#set_technology = {
+					#	penal_infantry = 1
+					#	popup = no
+					#}
+					load_oob = ARA_penbat_temp_OOB
+				}
+			}
 		}
 	
 	shared_focus = {
@@ -1970,7 +1978,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 290 y = 2500 }
+	continuous_focus_position = { x = 130 y = 1100 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -2013,7 +2021,7 @@ focus_tree = {
 			    set_country_flag = ARA_reorganise_high_command_flag
 			}
 			custom_effect_tooltip = ARA_CETT_arantigans_abroad
-			##Gives access to decisions “Arantigans Abroad”##
+			##Gives access to decisions "Arantigans Abroad"##
 		}
 }
 
@@ -2602,7 +2610,7 @@ focus_tree = {
 
 
 	default = no
-	continuous_focus_position = { x = 290 y = 2500 }
+	continuous_focus_position = { x = 130 y = 1100 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -3592,7 +3600,7 @@ focus_tree = {
 	}
 	
 	default = no
-	continuous_focus_position = { x = 290 y = 2500 }
+	continuous_focus_position = { x = 130 y = 1100 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -4006,23 +4014,18 @@ focus_tree = {
 		mutually_exclusive = { focus = ARA_i_love_democracy }
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			remove_country_leader_role = {
-				character = GOY_ARA_nicator
-				ideology = despotism
+			GOY_ARA_nicator = {
+				set_character_name = {
+					name = ARA_nicatorking
+				}
 			}
-			add_country_leader_role = {
-				Character = GOY_ARA_nicatorking
-				Promote_leader = yes
-				Country_leader = {
-				ideology = despotism
-				desc = "justified_traitor_2_desc"
-				expire = “1965.01.01.01”
-				traits = { arantiga_shield }
+			set_country_leader_description = {
+				ideology = neutrality
+				desc = justified_traitor_2_desc
 			}
-			}		
-		add_popularity = { ideology = neutrality popularity = 0.1 }
-		set_party_name = {ideology = neutrality name = ARA_nicator_royal long_name = ARA_nicator_royal_long }
-		country_event = arantiga_chaos.003
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			set_party_name = {ideology = neutrality name = ARA_nicator_royal long_name = ARA_nicator_royal_long }
+			country_event = arantiga_chaos.003
 		}
 	}		
 		
@@ -4606,7 +4609,7 @@ focus_tree = {
 		}
 					if = {
 						limit = {
-						NOT {
+						NOT = {
 						ARA = { has_country_flag = ARA_soter_president }
 						}
 						}
@@ -4664,7 +4667,7 @@ focus_tree = {
 		}
 					if = {
 						limit = {
-						NOT {
+						NOT = {
 						ARA = { has_country_flag = ARA_soter_president }
 						}
 						}
@@ -5791,12 +5794,16 @@ focus_tree = {
 		}
 		bypass = {
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 		    swap_ideas = {
 			    remove_idea = ARA_work_camp
 				add_idea = ARA_prison_economy_idea
 			}
+			hidden_effect = {
+				load_oob = ARA_penbats_OOB
+			}
+			custom_effect_tooltip = GOY_CETT_ARA_new_penbats
 		}
 	}
 	shared_focus = {
@@ -6575,7 +6582,7 @@ focus_tree = {
 	
 	default=no
 	
-	continuous_focus_position = { x = 290 y = 2500 }
+	continuous_focus_position = { x = 130 y = 1100 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -6621,7 +6628,7 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-		    country_event = arantiga.050 #“Nations of Empire”
+		    country_event = arantiga.050 #"Nations of Empire"
 			#Modify spirit Fragile Rule (+10% Recruitable population factor)
 			#custom_effect_tooltip = ARA_fragile_rule_tooltip_1
 			#hidden_effect = {
@@ -7058,7 +7065,7 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-			country_event = arantiga.051 #“Choosing Capital”
+			country_event = arantiga.051 #"Choosing Capital"
 		}
 	}
 	
@@ -7437,11 +7444,18 @@ focus_tree = {
 		relative_position_id = ARA_spoils_of_war
 		cost = 8.00
 		prerequisite = { focus = ARA_spoils_of_war }
+		available = {
+			has_completed_focus = ARA_work_camps
+		}
 		ai_will_do = {
 			base = 100
 		}
 		completion_reward = {
-            add_manpower = 300000
+			hidden_effect = {
+				load_oob = ARA_penbats_OOB
+			}
+            add_manpower = 200000
+			custom_effect_tooltip = GOY_CETT_ARA_new_penbats
             add_stability = -0.05
 			add_war_support = -0.05
 		}
@@ -7460,7 +7474,7 @@ focus_tree = {
 		}
 		completion_reward = {
             navy_experience = 50
-            #Get spirit “Retroffiting Navy” (+50% Dockyard Output for 180 days)
+            #Get spirit "Retroffiting Navy" (+50% Dockyard Output for 180 days)
 			add_timed_idea = {
 		        idea = ARA_retrofitting_navy
 		        days = 180
@@ -7566,12 +7580,12 @@ focus_tree = {
 		}
 		completion_reward = {
             add_stability = 0.05
-            #Gain spirit “Massive Spending” (+20% consumer goods for 360 days)
+            #Gain spirit "Massive Spending" (+20% consumer goods for 360 days)
 		    add_timed_idea = {
 			   idea = ARA_massive_spending
 			   days = 360
 			}
-            #After ending effects of “Massive spending” gain spirit “Griffking Dams” (+10% monthly population, -3% consumer goods)
+            #After ending effects of "Massive spending" gain spirit "Griffking Dams" (+10% monthly population, -3% consumer goods)
 			#TODO move to event
 			add_ideas = ARA_griffing_dams
 		}
@@ -7650,7 +7664,7 @@ focus_tree = {
 		}
 		completion_reward = {
             add_political_power = 50
-            #Get spirit “Universities of Yale” (+5% Research Speed)
+            #Get spirit "Universities of Yale" (+5% Research Speed)
 			add_ideas = ARA_yale_universities
 		}
 	}
@@ -7985,7 +7999,7 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-            #Enables set of decisions “IRI Projects”
+            #Enables set of decisions "IRI Projects"
 			custom_effect_tooltip = ARA_IRI_tooltip
 			custom_effect_tooltip = ARA_alhorsered_tp
 		}
@@ -9522,9 +9536,183 @@ focus_tree = {
 		}
 	}
 	focus = {
+	    id = ARA_north_zebrica
+		icon = GFX_goal_reverberating_across_north_zebrica
+		x = 5
+		y = 1
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_emperor_of_griffonkind }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			#create_wargoal = {
+			#	type = annex_everything
+			#	target = MCW
+			#}
+			every_other_country = { #Best wargoal ever
+				limit = {
+					any_owned_state = {
+						is_core_of = MCW
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						expire = 0
+						generator = { 721 725 831 820 722 723 724 720 806 719 717 718 716 715 }
+					}
+				}
+			}
+		}
+	}
+	focus = {
+	    id = ARA_sun_and_lightning
+		icon = GFX_HIP_ariscounter
+		x = 4
+		y = 2
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_north_zebrica }
+		mutually_exclusive = { focus = ARA_besting_the_storm }
+		available = {
+			HIP = {
+				is_subject = no
+				has_country_leader = {
+					ruling_only = yes
+					character = HIP_crack_lightning
+				}
+			}
+			BAT = {
+				OR = {
+					exists = no
+					is_subject_of = HIP
+				}
+			}
+			MCW = {
+				OR = {
+					exists = no
+					is_subject_of = HIP
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			HIP = {
+				country_event = arantiga.123
+			}
+		}
+	}
+	focus = {
+	    id = ARA_besting_the_storm
+		icon = GFX_goal_zebra_storm
+		x = 6
+		y = 2
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_north_zebrica }
+		mutually_exclusive = { focus = ARA_sun_and_lightning }
+		available = {
+			MCW = {
+				OR = {
+					exists = no
+					is_subject_of = ARA
+				}
+			}
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HIP
+				expire = 0
+			}
+		}
+	}
+	focus = {
+	    id = ARA_delenda_est
+		icon = GFX_goal_Generic_Kill_Colthage
+		x = 5
+		y = 3
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = {
+			focus = ARA_sun_and_lightning
+			focus = ARA_besting_the_storm
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			every_other_country = { #Best wargoal ever
+				limit = {
+					any_owned_state = {
+						is_core_of = CTH
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						expire = 0
+						generator = { 875 702 700 701 852 876 709 877 699 703 704 705 714 706 1093 1094 1095 }
+					}
+				}
+			}
+		}
+	}
+	focus = {
+	    id = ARA_reorganise_zebrica
+		icon = GFX_goal_reconfigure_north_zebrican_diplomacy
+		x = 7
+		y = 3
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = {
+			focus = ARA_sun_and_lightning
+			focus = ARA_besting_the_storm
+		}
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ARA_reorg_zebrican_lands_cat
+		}
+	}
+	focus = {
 	    id = ARA_detente_with_eastern_ponies
 		icon = GFX_goal_ARA_deal_with_rivrep
-		x = 7
+		x = 9
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9581,7 +9769,7 @@ focus_tree = {
 	focus = {
 	    id = ARA_flourishing_trade
 		icon = GFX_goal_riv_free_travel
-		x = 7
+		x = 8
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9625,7 +9813,7 @@ focus_tree = {
 	focus = {
 	    id = ARA_the_last_crusade
 		icon = GFX_goal_ARA_kill_rivrep
-		x = 9
+		x = 11
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9758,9 +9946,38 @@ focus_tree = {
 		}
 	}
 	focus = {
+	    id = ARA_secrets_of_barrad
+		icon = GFX_goal_dark_heart
+		x = 10
+		y = 2
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_the_last_crusade }
+		available = {
+			OR = {
+				BAR = {
+					is_subject_of = ARA
+				}
+				ARA = {
+					owns_state = 408
+				}
+			}
+			has_completed_focus = ARA_imperial_research_initiative
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			unlock_decision_tooltip = ARA_quinctus
+		}
+	}
+	focus = {
 	    id = ARA_master_of_the_east
 		icon = GFX_goal_ARA_master_of_the_east_vibrant
-		x = 9
+		x = 12
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9786,9 +10003,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-	    id = ARA_unexpected_opportunity
-		icon = GFX_goal_magic_of_friendship_end
-		x = -10
+	    id = ARA_unexpected_opportunity #Sunrise over New Mareland
+		icon = GFX_goal_attack_EQC
+		x = -5
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 3.00
@@ -9797,23 +10014,54 @@ focus_tree = {
 			base = 75
 		}
 		available = {
-			NOT = {
-					EQC = { is_in_faction_with = EQS
-				}
+			
+		}
+		bypass = {
+			all_state = {
+				is_core_of = EQC
+				is_owned_by = ARA
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_unexpected_opportunity"
-			create_wargoal = {
-				type = annex_everything
-				target = EQC
+			IF = {
+				limit = {
+					EQC = {
+						is_subject = yes
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_subject = EQC
+					}
+					country_event = {
+						id = arantiga.161
+						hours = 6
+					}
+				}
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = EQC
+							}
+						}
+						ROOT = {
+							create_wargoal = {
+								type = annex_everything
+								target = PREV
+								expire = 0
+							}
+						}
+					}
+				}
 			}
 		}
 	}
 	focus = {
 	    id = ARA_new_new_mareland
-		icon = GFX_focus_eqc_defence_of_the_commonwelth
-		x = -10
+		icon = GFX_goal_magic_of_friendship_end
+		x = -4
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9838,9 +10086,116 @@ focus_tree = {
 		}
 	}
 	focus = {
+	    id = ARA_claim_canteribbeans
+		icon = GFX_sic_navy_hat
+		x = -6
+		y = 2
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_unexpected_opportunity }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ARA_canteribbienes_cat
+		}
+	}
+	focus = {
+	    id = ARA_develop_island_bases
+		icon = GFX_goal_generic_naval_industry
+		x = -7
+		y = 3
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_claim_canteribbeans }
+		available = {
+			ARA = {
+			    owns_state = 356
+			}
+			EQC = {
+			    exists = no
+			}
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = ARA_dev_islands_cat
+		}
+	}
+	focus = {
+	    id = ARA_abyssinian_allegiance
+		icon = GFX_goal_WNG_ras
+		x = -5
+		y = 3
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 5.00
+		prerequisite = { focus = ARA_claim_canteribbeans }
+		available = {
+			
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 784
+				}
+				unlock_decision_tooltip = ARA_purrsia_colonisation
+			}
+			if = {
+				limit = {
+					ABY = {
+						exists = yes
+					}
+				}
+				ABY = {
+					country_event = {
+						id = arantiga.170
+						hours = 2
+					}
+				}
+				else_if = {
+					limit = {
+						any_owned_state = {
+							is_core_of = ABY
+						}
+					}
+					release_puppet = ABY
+					set_autonomy = { target = ABY autonomy_state = autonomy_satellite }
+					ABY = {
+						set_cosmetic_tag = ABY_arantiga
+						add_country_leader_role = {
+							character = ABY_taile_sehissie_clawomonid
+							promote_leader = yes
+							country_leader = {
+								ideology = nazism
+								expire = "1965.01.01.01"
+								id = -1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
 	    id = ARA_western_allies
 		icon = GFX_focus_indy_flag_1
-		x = -7
+		x = -11
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9868,7 +10223,7 @@ focus_tree = {
 	focus = {
 	    id = ARA_support_western_trade
 		icon = GFX_goal_SZC_silk
-		x = -7
+		x = -12
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9949,7 +10304,7 @@ focus_tree = {
 	focus = {
 	    id = ARA_rightful_ruler
 		icon = GFX_goal_EQC_fascism
-		x = -5
+		x = -9
 		y = 1
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -9993,9 +10348,51 @@ focus_tree = {
 		}
 	}
 	focus = {
+	    id = ARA_frosthill_nuclear
+		icon = GFX_nuke_gen
+		x = -10
+		y = 2
+		relative_position_id = ARA_emperor_of_griffonkind
+		cost = 8.00
+		prerequisite = {
+			focus = ARA_western_allies
+			focus = ARA_rightful_ruler
+		}
+		available = {
+			OR = {
+				owns_state = 281
+				any_other_country = {
+					is_in_faction_with = ARA
+					owns_state = 281
+				}
+			}
+			has_tech = nuclear_reactor
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_ideas = ARA_expanding_the_arsenal
+			281 = {
+				add_resource = {
+					type = crystals
+					amount = 24
+				}
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 	    id = ARA_western_mess
 		icon = GFX_goal_GEA_guerilla_warfare
-		x = -5
+		x = -8
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
 		cost = 5.00
@@ -10089,5 +10486,20 @@ focus_tree = {
 			}
 		}
 	}
+}
+
+focus_tree = {
+	id = Arantiga_nothing
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	continuous_focus_position = { x = 130 y = 1100 }
+	
+		shared_focus = ARA_the_new_airforce
+		shared_focus = ARA_self_strength
+		shared_focus = ARA_GOY_new_age_new_army
+		shared_focus = ARA_rumare_exercises
 }
 	

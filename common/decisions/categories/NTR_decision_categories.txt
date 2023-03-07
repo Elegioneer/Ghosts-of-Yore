@@ -10,15 +10,16 @@ NTR_spirits_blessings_cat = {
 }
 
 NTR_dark_magic_cat = {
-    icon = generic_political_actions
+    icon = GFX_decision_cat_goy_dark_magik_icon
 	allowed = {
         tag = NTR
     }
 	visible = {
-	    tag = NTR
 		has_country_flag = NTR_flag_dark_magic_unlock
-		has_government = fascism
-		is_subject = no
+		has_country_leader = {
+			ruling_only = yes 
+			character = GOY_NTR_frostking
+		}
 	}
 }
 
@@ -94,18 +95,20 @@ NTR_knowledge_quest_cat = {
         tag = NTR
     }
 	visible = {
-	    tag = NTR
 		has_country_flag = NTR_flag_POGress_unlock
 	}
 }
 NTR_dark_tower_cat = {
-    icon = GFX_decision_category_palace_of_the_soviets_cat
+    icon = GFX_decision_cat_goy_dark_towers_icon
 	allowed = {
         tag = NTR
     }
 	visible = {
-	    tag = NTR
 		has_country_flag = NTR_flag_dark_tower_unlock
+		has_country_leader = {
+			ruling_only = yes 
+			character = GOY_NTR_frostking
+		}
 	}
 }
 NTR_slave_mines_cat = {
@@ -114,8 +117,11 @@ NTR_slave_mines_cat = {
         tag = NTR
     }
 	visible = {
-	    tag = NTR
 		has_country_flag = NTR_slave_mines_unlock
+		has_country_leader = {
+			ruling_only = yes 
+			character = GOY_NTR_frostking
+		}
 	}
 }
 NTR_last_griffon_alliance_cat = {
@@ -124,10 +130,6 @@ NTR_last_griffon_alliance_cat = {
         tag = NTR
     }
 	visible = {
-	    tag = NTR
-		has_country_flag = NTR_flag_ice4
-		hidden_trigger = {
 		has_completed_focus = NTR_purge_herz
-		}
 	}
 }

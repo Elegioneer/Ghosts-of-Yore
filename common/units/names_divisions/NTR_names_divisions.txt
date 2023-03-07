@@ -1,0 +1,230 @@
+﻿# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template 
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because 
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming 
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not 
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names.
+#           Numbers must start from 1 and up.
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either: 
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip 
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in 
+#                                      the current game version.
+NTR_INF_01 = { 
+	name = "Infantry Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { NTR_INF_01 } 
+
+	fallback_name = "%d Warband" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "Swift Swords" }
+		2 = { "The Auroras" }
+		3 = { "Brightflame Clan Warriors" }
+		4 = { "Barkcoat Clan Warriors" }
+		5 = { "Moltenrock Clan Warriors" }
+		6 = { "Greenhoof Clan Warriors" }
+		7 = { "Northern Shields" }
+		8 = { "Knightslayers" }
+		9 = { "Greatswords" }
+		10 = { "Battleaxes" }
+		11 = { "Elf Lake Hammerers" }
+	} 
+}
+
+NTR_INF_02 = {
+	name = "Undead Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { has_country_flag = NTR_flag_ice2 } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { NTR_INF_01 } 
+
+	fallback_name = "%d Raised Warriors" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "Frostblades" }
+		2 = { "Bloodied Axes" }
+		3 = { "Soulcatchers" }
+		4 = { "Ravagers" }
+		5 = { "Desolators" }
+		6 = { "Skullcrushers" }
+		7 = { "Nightbringers" }
+		8 = { "Frozen Tears" }
+		9 = { "Endbringers" }
+		10 = { "Graveyard Walkers" }
+	}
+}
+
+NTR_INF_03 = { 
+	name = "Pegasus Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "infantry" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { NTR_INF_01 } 
+
+	fallback_name = "%d Wind Warriors" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "1. Stormshield Skyguard" }
+		2 = { "2. Stormshield Skyguard" }
+		3 = { "3. Stormshield Skyguard" }
+		4 = { "4. Stormshield Skyguard" }
+		5 = { "5. Stormshield Skyguard" }
+		6 = { "6. Stormshield Skyguard" }
+		7 = { "7. Stormshield Skyguard" }
+		8 = { "8. Stormshield Skyguard" }
+		9 = { "9. Stormshield Skyguard" }
+		10 = { "10. Stormshield Skyguard" }
+		11 = { "Everfrost Royal Guard" }
+	} 
+}
+
+NTR_MOT_01 = { 
+	name = "Motorized Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "motorized" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { NTR_INF_01 } 
+
+	fallback_name = "%d Motorband" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d Motorband 'Everfrost'" }
+		2 = { "%d Motorband 'Forest Riders'" }
+		3 = { "%d Motorband 'Griffhunters'" }
+		4 = { "%d Motorband 'Wheeled Champions'" }
+		5 = { "%d Motorband 'Pones on Trucks'" }
+		6 = { "%d Motorband 'Trucks with Pones'" }
+		7 = { "%d Motorband 'Fuzzy'" }
+	}
+} 
+
+NTR_MEC_01 = { 
+	name = "Mechanized Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "mechanized" } 
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { NTR_MOT_01 } 
+
+	fallback_name = "%d Halftrack Bandits" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	unordered = { 
+		1 = { "Armored Boxes" }
+		2 = { "Fast Strikers" }
+		3 = { "Mechaponies" }
+		4 = { "Furious and Fast" }
+		5 = { "Reclaimers" }
+	}
+}
+
+NTR_ARM_01 = { 
+	name = "Armored Division" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_INF_01 } 
+
+	fallback_name = "%d Metal Raiders" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	unordered = { 
+		1 = { "Moltenrock's Finest" }
+		2 = { "Metal Dragons" }
+		3 = { "Icebreakers" }
+		4 = { "Griffoncrushers" }
+		5 = { "Steel Steeds" }
+		6 = { "Fierce Strikers" }
+		7 = { "Dauntless" }
+		8 = { "Undented" }
+		9 = { "Unconquered" }
+		10 = { "Unchained" }
+		11 = { "Unnamed" }
+	}
+} 
+
+NTR_MAR_01 = { 
+	name = "Marine Regiment" 
+
+	for_countries = { NTR } 
+
+	can_use = { always = yes } 
+
+	division_types = { "marine" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ITA_MAR_01 } 
+
+	fallback_name = "%d Vinkingar Privateers" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "North Sea Raiders" }
+		2 = { "Scourge of the Seas" }
+		3 = { "River Rapids" }
+		69 = { "Mermaid Shaggers" }
+	}
+}

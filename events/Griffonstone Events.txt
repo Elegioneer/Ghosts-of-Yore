@@ -572,7 +572,7 @@ add_namespace = griffonstone_decision
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -914,7 +914,7 @@ add_namespace = griffonstone_decision
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -1608,7 +1608,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = conservatism
 				desc = "BOI_gallus_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_gallusfriendship }
 				}
 				}
@@ -1691,7 +1691,7 @@ country_event = { #Herzländers unite! (cap)
 				country_leader = {
 				ideology = centrism
 				desc = "BOI_gestal_leader_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { GOY_imperialloyalist }
 			}
 			}
@@ -2044,7 +2044,7 @@ country_event = { #Herzländers unite! (cap)
 					Country_leader = {
 					ideology = falangism
 					desc = "eros_vii_desc"
-					expire = “1965.01.01.01”
+					expire = "1965.01.01.01"
 					traits = { }
 				}
 				}			
@@ -2084,7 +2084,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = oligarchism
 				desc = "GOY_BOI_duchess_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { STW_ambitious_ruler } #TODO Should be changed
 				}
 				}	
@@ -2104,7 +2104,7 @@ country_event = { #Herzländers unite! (cap)
 					Country_leader = {
 					ideology = falangism
 					desc = "eros_vii_desc"
-					expire = “1965.01.01.01”
+					expire = "1965.01.01.01"
 					traits = { }
 				}
 				}
@@ -2635,7 +2635,7 @@ country_event = { #Herzländers unite! (cap)
 	    desc = griffonstone.250.d
 	    picture = GFX_event_vote_griffon
 		
-		allowed = {
+		trigger = {
 		    has_government = democratic
 		}
 		
@@ -2659,7 +2659,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = socialism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { }
 				}
 				}
@@ -2684,7 +2684,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = liberalism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { }
 				}
 				}			
@@ -2709,7 +2709,7 @@ country_event = { #Herzländers unite! (cap)
 				Country_leader = {
 				ideology = liberalism
 				desc = ""
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { }
 				}
 				}			
@@ -3309,7 +3309,7 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.271.a
 			add_tech_bonus = {
-			    name = gestal_gri_bonus_1
+			    name = GOY_bonus_infy_eq_1
 			    bonus = 0.5
 			    uses = 1
 			    category = infantry_weapons
@@ -3416,7 +3416,7 @@ country_event = { #Herzländers unite! (cap)
 	    fire_only_once = no
 		hidden = yes
 		
-		allowed = {
+		trigger = {
 		    has_idea = BOI_rumarean_unrest
 		}
 		
@@ -4285,7 +4285,7 @@ country_event = { #Imperial coronation
 	is_triggered_only = no
 	trigger = {
 		tag = BOI
-		date > 1021.05.21.01
+		date > 1021.05.21
 		has_completed_focus = BOI_claim_regency
 		has_full_control_of_state = 389
 	}
@@ -4306,7 +4306,7 @@ country_event = { #Imperial coronation
 				country_leader = {
 				ideology = despotism
 				desc = "grover_vi_desc"
-				expire = “1965.01.01.01”
+				expire = "1965.01.01.01"
 				traits = { }
 			}
 			}

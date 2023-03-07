@@ -1,0 +1,58 @@
+# options for map_icon_category:
+# For land units: infantry,armored,other
+# For sea units: ship,transport,uboat
+
+sub_units = {
+    goy_necromancer_company = {
+		abbreviation = "NECRO"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 10
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 100
+		training_time = 200
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.04
+		can_be_parachuted = yes
+
+		# Important Ability
+		breakthrough = 5
+		suppression_factor = 0.4
+		casualty_trickleback = 0.70
+		experience_loss_factor = -0.40
+		supply_consumption_factor = -0.15
+
+		essential = {
+			support_equipment
+		}
+
+		need = {
+			support_equipment = 20
+		}
+
+	}
+}

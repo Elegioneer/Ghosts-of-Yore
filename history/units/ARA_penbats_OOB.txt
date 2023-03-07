@@ -1,0 +1,62 @@
+units = {
+	division = {
+		location = 681
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 725
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1325
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1397
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1597
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 3723
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 3756
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 3963
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 4551
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 7224
+		division_template = "Penal Brigade"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

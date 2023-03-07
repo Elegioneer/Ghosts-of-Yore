@@ -1084,6 +1084,8 @@ BOI_gallus_democrats:0 "Regency Council"
 BOI_gallus_democrats_long:0 "The Regency Council of Griffonstone"
 BOI_nobles_party:0 "Nobles of Griffonstone"
 BOI_nobles_party_long:0 "Nobles of Griffonstone"
+BOI_prov_mil_gov:0 "Provisional Government"
+BOI_prov_mil_gov_long:0 "Provisional Military Government"
 
 ## Decisions ##
 BOI_war_for_liberation_category:0 "Launch the ELF's Insurrection"
@@ -1605,3 +1607,18 @@ griffonstone.303.a:0 "Huzzah! Huzzah! Huzzah!"
 griffonstone.304.t:0 "Duty Fulfilled"
 griffonstone.304.d:0 "It was a long day - military parade, religious ceremonies, coronation itself.... Speeches, speeches and even more speeches. Imperial coronation was probably the largest festivity Griffonstone saw for decades. Kaiser decided to honour Griffonstonians for their role in protecting and reclaiming the empire by letting their regiments to lead a parade of restored Reichsarmee, while lord Gestal himself was granted a title of duke of Griffonstone. Now however, as midnight has long passed, Gestal grew more and more tired with the coronation party he had to participate in. Officials and nobles, their small talks and puny plots to gain favour with the former regent... He wasn’t caring much for it. Now, he decided to look for peace in a quiet corner of the ballroom. Gestal really started to feel his age - all these years of struggles and both literal and political battles exhausted him. Long gone were days when he could work all day and night - now all he wanted to do was to nap until dinner, and later go back to bed. He wondered, how did Gruff manage to be so lively... Perhaps it was just pure anger and spite that powered the deceased chancellor? Of course peace never lasts and Gestal noticed a familiar figure wearing a general uniform. \n“Sir.” Klaus Steelfeather, now generalmajor in restored Reichsarmee approached his former employer. “May I bother you for a few minutes? I brought a bottle of wine and glass to celebrate your great success.”\n“Thank you for remembering about me cap... generalmajor.” Gestal instinctively called Steelfeather by his old rank. Officer poured wine to glasses and asked: “What the toast will be, sir?”\n“For the Empire of course.” They both raised glasses. “For the Empire...”\n“What are your next plans sir? I’m sure there is still much for you at the court...” \n“No, generalmajor. I did my job and now I would only be an obstacle. It is up to young ones like our emperor to decide about future of Griffonia... I... I think I need a rest. A long rest. I had no time to visit my estate for three years. I guess I’ll go fishing in Rumare Lake, and finally do something about rosegarden.” Gestal smiled fondly."
 griffonstone.304.a:0 "“I really like roses.”"
+
+### Unit Commander Ranks ###
+HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_0:0 "Generalmajor"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_1:0 "Generalmajor"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_2:0 "Generalleutnant"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_3:0 "Generalleutnant"
+ HRR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_4:0 "Generaloberst"
+ 
+### Medals ###
+GOY_BOI_iron_cross_medal:0 "The Iron Cross"
+ GOY_BOI_violet_ribbon_medal:0 "The Red Ribbon"
+ GOY_BOI_trinity_order_medal:0 "Order of the Trinity"
+ GOY_BOI_silver_griffon_medal:0 "Order of the Silver Griffon"
+ GOY_BOI_great_tree_medal:0 "Great Tree's Branch"
+ GOY_BOI_royal_order_medal:0 "Royal Order of Griffonstone"

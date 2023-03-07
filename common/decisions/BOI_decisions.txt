@@ -295,7 +295,7 @@ BOI_support_liberation_front_category = {
 		days_re_enable = 60
 		available = {
             has_equipment = {
-			    fighter_equipment > 99
+			    small_plane_airframe > 99
 			}
 		}
 		ai_will_do = {
@@ -304,7 +304,7 @@ BOI_support_liberation_front_category = {
 		complete_effect = {
 		    send_equipment = {
 			    target = ELF
-				type = fighter_equipment
+				type = small_plane_airframe
 				amount = 100
 			}
 		}
@@ -320,7 +320,7 @@ BOI_support_liberation_front_category = {
 		days_re_enable = 60
 		available = {
             has_equipment = {
-			    CAS_equipment > 99
+			    small_plane_cas_airframe > 99
 			}
 		}
 		ai_will_do = {
@@ -329,7 +329,7 @@ BOI_support_liberation_front_category = {
 		complete_effect = {
 		    send_equipment = {
 			    target = ELF
-				type = CAS_equipment
+				type = small_plane_cas_airframe
 				amount = 100
 			}
 		}

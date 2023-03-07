@@ -1,0 +1,12 @@
+#Imperial Research Institute was here
+technologies = {
+	GOY_necromancy_tech = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			goy_necromancer_company #YO
+		}
+	}
+}

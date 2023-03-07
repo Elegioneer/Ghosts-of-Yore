@@ -68,10 +68,30 @@ ARA_peace_nm_cat = {
 
 	visible = {
 		tag = ARA
-		has_completed_focus = ARA_creatures_most_wicked
+		OR = {
+			has_completed_focus = ARA_creatures_most_wicked
+			has_completed_focus = ARA_unexpected_opportunity
+		}
 		EQC = {
 		    has_war_with = ARA
 		}
+	}
+}
+
+ARA_canteribbienes_cat = {
+	icon = generic_political_actions
+	visible = {
+	    tag = ARA
+		has_government = fascism
+	    has_completed_focus = ARA_claim_canteribbeans
+	}
+}
+ARA_dev_islands_cat = {
+	icon = generic_political_actions
+	visible = {
+	    tag = ARA
+		has_government = fascism
+	    has_completed_focus = ARA_develop_island_bases
 	}
 }
 
@@ -150,5 +170,13 @@ ARA_return_land_cat = {
 				is_griffon_core = yes
 	        }
 		}
+	}
+}
+
+ARA_reorg_zebrican_lands_cat = {
+    #icon = 
+	visible = {
+	    original_tag = ARA
+		has_completed_focus = ARA_reorganise_zebrica
 	}
 }

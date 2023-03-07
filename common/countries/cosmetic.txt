@@ -42,6 +42,10 @@ BRD_arantiga = {
     #color = rgb { 184 17 47 }
     #color_ui = rgb { 193 40 63 }
 }
+FBK_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
 EQC_arantiga = {
 	color = rgb { 184 17 47 }
     color_ui = rgb { 193 40 63 }
@@ -72,9 +76,29 @@ HLR_arantiga = {
     #color = rgb { 210 194 53 }
     #color_ui = rgb { 221 202 29 }
 }
+CTH_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+MCW_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+TBK_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+HIP_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
 BRZ_griffonstone = {
 	color = rgb { 105 66 112 }
 	color_ui = rgb { 105 66 112 }
+}
+NTR_TYRANNY = {
+	color = rgb { 20 86 144 }
+    color_ui = rgb { 15 99 172 }
 }
 HRR_GOY = {
 	color = rgb { 255 158 47 }

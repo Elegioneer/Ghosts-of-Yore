@@ -1,5 +1,18 @@
 ideas = {
     country = {
+		NTR_kill_ntribes = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_syndicalism_drift_bonus
+			removal_cost = -1
+			modifier = {
+			    ai_focus_aggressive_factor = 1
+			}
+		}
 	    NTR_war_north = {
 			allowed = {
 				always = no
@@ -45,6 +58,8 @@ ideas = {
 				army_attack_factor = -0.1
 				army_defence_factor = -0.1
 				army_morale_factor = 0.1
+				unit_upkeep_attrition_factor = -0.2
+				out_of_supply_factor = -0.25
 				land_doctrine_cost_factor = 0.5
 			}
 		}
@@ -92,7 +107,8 @@ ideas = {
 			    army_org_factor = -0.05
 				army_attack_factor = -0.05
 				army_defence_factor = -0.05
-				army_morale_factor = 0.05
+				unit_upkeep_attrition_factor = -0.1
+				out_of_supply_factor = -0.1
 				land_doctrine_cost_factor = 0.25
 			}
 		}
@@ -869,6 +885,8 @@ ideas = {
 			modifier = {
 			    army_org_factor = -0.1
 				army_morale_factor = 0.1
+				unit_upkeep_attrition_factor = -0.2
+				out_of_supply_factor = -0.25
 				land_doctrine_cost_factor = 0.5
 			}
 		}
@@ -884,6 +902,8 @@ ideas = {
 			modifier = {
 			    army_org_factor = -0.1
 				army_morale_factor = 0.1
+				unit_upkeep_attrition_factor = -0.2
+				out_of_supply_factor = -0.25
 				land_doctrine_cost_factor = 0.3
 			}
 		}
@@ -915,6 +935,8 @@ ideas = {
 			modifier = {
 			    conscription = 0.04
 				army_morale_factor = 0.1
+				unit_upkeep_attrition_factor = -0.2
+				out_of_supply_factor = -0.25
 				land_doctrine_cost_factor = 0.2
 			}
 		}
@@ -990,8 +1012,10 @@ ideas = {
 			picture = GRF_militias
 			removal_cost = -1
 			modifier = {
-			    army_attack_factor = 0.05
+				special_forces_cap = 0.1
+				army_attack_factor = 0.05
 				army_defence_factor = 0.05
+				special_forces_min = 20
 			}
 		}
 		NTR_chosen_ones_1 = {
@@ -1481,8 +1505,8 @@ ideas = {
 			modifier = {
 			    min_export = -0.05
 				consumer_goods_factor = -0.01
+			}
 		}
-	}
 		NTR_coalition_ties = {
 			allowed = {
 				always = no
@@ -1497,8 +1521,8 @@ ideas = {
 				consumer_goods_factor = -0.02
 				research_speed_factor = 0.05
 				industrial_capacity_factory	= 0.1
+			}
 		}
-	}
 		NTR_ice_fleet = {
 			allowed = {
 				always = no
@@ -1511,9 +1535,9 @@ ideas = {
 			modifier = {
 				repair_speed_factor = 0.2
 				industrial_capacity_dockyard = 0.1				
+			}
 		}
-	}
-	NTR_integrated_society = {
+		NTR_integrated_society = {
 			allowed = {
 				always = no
 			}
@@ -1525,9 +1549,9 @@ ideas = {
 			modifier = {
 				non_core_manpower = 0.01
 				research_speed_factor = 0.05
+			}
 		}
-	}
-	NTR_dark_acolytes = {
+		NTR_dark_acolytes = {
 			allowed = {
 				always = no
 			}
@@ -1540,9 +1564,9 @@ ideas = {
 				max_command_power = 25
 				army_leader_start_level = 1
 				army_leader_start_attack_level = 1
+			}
 		}
-	}
-	NTR_skyfall_ship = {
+		NTR_skyfall_ship = {
 			allowed = {
 				always = no
 			}
@@ -1554,9 +1578,9 @@ ideas = {
 			modifier = {
 				industrial_capacity_dockyard = 0.2
 				production_speed_dockyard_factor = 0.1
+			}
 		}
-	}
-	NTR_skyfall_gun = {
+		NTR_skyfall_gun = {
 			allowed = {
 				always = no
 			}
@@ -1566,11 +1590,11 @@ ideas = {
 			picture = SOV_third_five_year_plan_military
 			removal_cost = -1
 			modifier = {
-			production_factory_efficiency_gain_factor = 0.1
-			industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
 		}
-	}
-	NTR_skyfall_industry = {
+		NTR_skyfall_industry = {
 			allowed = {
 				always = no
 			}
@@ -1580,11 +1604,11 @@ ideas = {
 			picture = viirascience
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = -0.03
-			research_speed_factor = 0.05
+				consumer_goods_factor = -0.03
+				research_speed_factor = 0.05
+			}
 		}
-	}
-	NTR_icetribute = {
+		NTR_icetribute = {
 			allowed = {
 				always = no
 			}
@@ -1594,10 +1618,10 @@ ideas = {
 			picture = LEC_staggering_reserves
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
 		}
-	}
-	NTR_avenge_griffonstone = {
+		NTR_avenge_griffonstone = {
 			allowed = {
 				always = no
 			}
@@ -1611,8 +1635,8 @@ ideas = {
 				war_support_factor = 0.25
 			}
 			targeted_modifier = { tag = NTR attack_bonus_against = 0.2 defense_bonus_against = 0.2 }
-	}
-	NTR_griffon_final_war_boost = {
+		}
+		NTR_griffon_final_war_boost = {
 			allowed = {
 				always = no
 			}
@@ -1649,15 +1673,12 @@ ideas = {
 			allowed = {
 				always = yes
 			}
-			visible = { 
-				tag = NTR
-			}
 			available = {
-				has_idea = GOY_magical_society
+			    has_government = fascism
 			}			
 			removal_cost = -1
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			modifier = {
 				stability_factor = 0.1
@@ -1669,7 +1690,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 		        global_building_slots_factor = -0.1
 				industry_air_damage_factor = -0.25
-				exodus_assimilation_proportion = -0.15
+				#exodus_assimilation_proportion = -0.15
 				industry_repair_factor = -0.1				
 			}
 		}
@@ -1686,6 +1707,9 @@ ideas = {
 			available = {
 			    has_government = fascism
 			}
+			allowed_civil_war = {
+				always = no
+			}
 			
 			modifier = {
 				ai_focus_peaceful_factor = 0.25
@@ -1700,7 +1724,7 @@ ideas = {
 				required_garrison_factor = 0.1
 				compliance_growth = -0.2
 				resistance_growth = 0.2
-				exodus_national_appeal = -0.5
+				#exodus_national_appeal = -0.5
 				industry_repair_factor = 0.05					
 			}
 			
@@ -2506,7 +2530,7 @@ materiel_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { infantry_equipment_manufacturer }
-		picture = JER_fer_de_lance
+		picture = CTH_light_aircraft_manufacturer
 		ai_will_do = {
 		factor = 1
 		}
@@ -2515,20 +2539,26 @@ materiel_manufacturer = {
 		visible = {
 		}
 		research_bonus = {
-		infantry_weapons = 0.05
+			infantry_weapons = 0.05
 		}
 		equipment_bonus = {
 			infantry_equipment = {
 				soft_attack = 0.05 instant = yes
-				}
+			}
+			melee_equipment_0 = {
+				soft_attack = 1 instant = yes
+				defense = 1 instant = yes
+				breakthrough = 1 instant = yes
+				build_cost_ic = -0.2 instant = yes
 			}
 		}
+	}
 	NTR_iron_bear_experstise = {
 		allowed = {
 		original_tag = "NTR"
 		}
 		traits = { artillery_manufacturer }
-		picture = generic_infantry_equipment_manufacturer_2
+		picture = generic_artillery_manufacturer_1
 		ai_will_do = {
 		factor = 1
 		}
@@ -2537,15 +2567,15 @@ materiel_manufacturer = {
 		visible = {
 		}
 		research_bonus = {
-		artillery = 0.05
+			artillery = 0.1
 		}
 		equipment_bonus = {
 			artillery = {
 				soft_attack = 0.05 instant = yes
 				hard_attack = 0.05 instant = yes
-				}
 			}
 		}
+	}
 	NTR_moltenrock_enchantment = {
 		allowed = {
 		original_tag = "NTR"
@@ -2730,20 +2760,18 @@ tank_manufacturer = {
 			heavy_tank_chassis = {
 				soft_attack = 0.05 instant = yes
 				armor_value = 0.05 instant = yes
-				}
 			}
 			medium_tank_chassis = {
 				soft_attack = 0.05 instant = yes
 				hard_attack = 0.05 instant = yes
-
-				}
+			}
 			light_tank_chassis = {
 				soft_attack = 0.05 instant = yes
 				maximum_speed = 0.05  instant = yes
-				}
-			
-		}
-		}
+			}
+		}	
+	}
+}
 
 aircraft_manufacturer = {
 	NTR_thunder_airwing = {

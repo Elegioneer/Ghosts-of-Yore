@@ -1,0 +1,83 @@
+﻿l_english:
+
+### Generic Tech Bonuses ###
+ GOY_bonus_arty_0:0 "Artillery experimentation"
+ GOY_bonus_arty_1:0 "Artillery reverse engineering"
+ GOY_bonus_arty_2:0 "Artillery development"
+ GOY_bonus_arty_3:0 "Artillery improvement"
+ #
+ GOY_bonus_supp_0:0 "Support equipment experimentation"
+ GOY_bonus_supp_1:0 "Support equipment reverse engineering"
+ GOY_bonus_supp_2:0 "Support equipment development"
+ GOY_bonus_supp_3:0 "Support equipment improvement"
+ #
+ GOY_bonus_mot_2:0 "Military trucks development"
+ GOY_bonus_mot_3:0 "Military trucks improvement"
+ #
+ GOY_bonus_mecha_0:0 "Half-track experimentation"
+ GOY_bonus_mecha_1:0 "Half-track reverse engineering"
+ GOY_bonus_mecha_2:0 "Half-track development"
+ GOY_bonus_mecha_3:0 "Half-track improvement"
+ #
+ GOY_bonus_tank_0:0 "Tank experimentation"
+ GOY_bonus_tank_1:0 "Tank reverse engineering"
+ GOY_bonus_tank_2:0 "Tank development"
+ GOY_bonus_tank_3:0 "Tank improvement"
+ #
+ GOY_bonus_infy_eq_0:0 "Firearms experimentation"
+ GOY_bonus_infy_eq_1:0 "Firearms reverse engineering"
+ GOY_bonus_infy_eq_2:0 "Firearms development"
+ GOY_bonus_infy_eq_3:0 "Firearms improvement"
+ #
+ GOY_bonus_race_his:0 "History studies"
+ GOY_bonus_race_druid:0 "Druidic insight"
+ GOY_bonus_race_mag:0 "Magical cultivation"
+ GOY_bonus_race_eso:0 "Esoteric experiments"
+ GOY_bonus_race_nazi:0 "National spirit reshaping"
+ GOY_bonus_race_tech:0 "Technological uplifting"
+ #
+ GOY_bonus_magi_eq_0:0 "Magical guns experimentation"
+ GOY_bonus_magi_eq_1:0 "Magical guns reverse engineering"
+ GOY_bonus_magi_eq_2:0 "Magical guns development"
+ GOY_bonus_magi_eq_3:0 "Magical guns improvement"
+ #
+ GOY_bonus_industry_0:0 "Industrial tools development"
+ GOY_bonus_industry_1:0 "Civil engineering effort"
+ GOY_bonus_industry_2:0 "Industrial machinery improvement"
+ #
+ GOY_bonus_extract_0:0 "Mining tools improvement"
+ GOY_bonus_extract_1:0 "New excavation techniques introduction"
+ #
+ GOY_bonus_electronics_0:0 "Electronics experimentation"
+ GOY_bonus_electronics_1:0 "Electronics development"
+ GOY_bonus_electronics_2:0 "Electronics improvement"
+ #
+ GOY_bonus_spec_troops_0:0 "Traditional fighting techniques revival"
+ GOY_bonus_spec_troops_1:0 "Traditional troops modernisation"
+ #
+ GOY_bonus_ship_0:0 "Navy modernisation"
+ GOY_bonus_ship_1:0 "Navy reverse engineering"
+ GOY_bonus_ship_2:0 "Navy development"
+ GOY_bonus_ship_3:0 "Navy improvement"
+ GOY_bonus_smrn_2:0 "Submarine development"
+ GOY_bonus_dstr_2:0 "Destroyer ship development"
+ GOY_bonus_crus_2:0 "Cruiser ship development"
+ GOY_bonus_carr_2:0 "Carrier ship development"
+ GOY_bonus_bshi_2:0 "Battleship development"
+ #
+ GOY_bonus_air_0:0 "Airplane experimentation"
+ GOY_bonus_air_1:0 "Airplane reverse engineering"
+ GOY_bonus_air_2:0 "Airplane development"
+ GOY_bonus_air_3:0 "Airplane improvement"
+ GOY_bonus_fighter_bonus:0 "Fighter plane development"
+ GOY_bonus_heavy_air_bonus:0 "Heavy plane development"
+ GOY_bonus_medium_air_bonus:0 "Medium plane development"
+ #
+ GOY_bonus_spec_ops_bonus:0 "Special forces training"
+ #
+ GOY_bonus_nuclear:0 "Nuclear fission experiments"
+ GOY_bonus_nuclear:1 "Uranium enrichment studies"
+ 
+### Specific Tech Bonuses ###
+GOY_bonus_magical_nukes:0 "Magical explosives studies"
+ GOY_bonus_industrial_imports:0 "Industrial machinery imports"

@@ -3,4 +3,36 @@ spriteTypes = {
 		name = "GFX_modifiers_goy_holy_forge"
 		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_holy_forge.dds"
 	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_1"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_1.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_2"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_2.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_3"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_3.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_4"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_4.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_5"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_5.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_6"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_6.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_7"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_7.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers_8"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_8.dds"
+	}
 }

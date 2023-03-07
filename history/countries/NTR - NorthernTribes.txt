@@ -55,7 +55,7 @@ set_party_name = { ideology = communism name = NTR_traitor_party long_name = NTR
 load_focus_tree = Northern_tribes_init
 
 recruit_character = GOY_NTR_Hyperborea
-recruit_character = FAT_provisional_council
+recruit_character = NTR_provisional_council
 recruit_character = GOY_NTR_Euan
 recruit_character = GOY_NTR_Gordon
 recruit_character = GOY_NTR_fiana

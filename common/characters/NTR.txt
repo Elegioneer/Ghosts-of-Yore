@@ -69,7 +69,7 @@ characters = {
 			id = -1
 		}
 		field_marshal = {
-		traits = { pony_race_trait politically_connected old_guard adaptable blind trait_reckless winter_specialist }
+		traits = { pony_race_trait politically_connected old_guard adaptable trait_goy_blind trait_reckless winter_specialist }
 		skill = 4
 		attack_skill = 4
 		defense_skill = 3

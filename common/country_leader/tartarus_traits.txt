@@ -65,6 +65,12 @@ leader_traits = {
 		army_morale_factor = 0.1
 		communism_acceptance = 20
 	}
+	GOY_arantigos_loyalist = {
+		random = no
+		stability_factor = -0.2
+		autonomy_gain = -0.5
+		extra_trade_to_overlord_factor = 0.25
+	}
 	GOY_tankbuilding_academy = { #loc is inside respective countries' files
 	    random = no
 	}
@@ -142,6 +148,7 @@ leader_traits = {
 		army_morale_factor = 0.1
 		opinion_gain_monthly_factor = -0.5
 		justify_war_goal_time = -0.25
+		ai_focus_aggressive_factor = 1
 	}
 	GOY_euan_advisor = {
 		random = no

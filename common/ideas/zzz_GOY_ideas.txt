@@ -1,4 +1,4 @@
-ideas = {
+ideas = { #Unused. Ignore.
 	country = {
 	    GOY_national_strength_1 = {
 			allowed = {
@@ -21,18 +21,18 @@ ideas = {
 			    army_morale_factor = 0.15
 			    dig_in_speed_factor = 0.12
 			    production_factory_max_efficiency_factor = 0.075
-			    PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.12
-			    PRODUCTION_LACK_OF_RESOURCE_PENALTY_FACTOR = 0.15
-			    ARMY_CORE_ATTACK_FACTOR = 0.075
-			    ARMY_CORE_DEFENCE_FACTOR = 0.075
-			    RESEARCH_SPEED_FACTOR = 0.05
-			    INDUSTRIAL_CAPACITY_DOCKYARD_FACTOR = 0.1
-			    LAND_REINFORCE_RATE = 0.01
-			    PLANNING_SPEED = 0.12
-			    ARMY_FUEL_CONSUMPTION_FACTOR = -0.2
-			    NAVY_FUEL_CONSUMPTION_FACTOR = -0.2
-			    AIR_FUEL_CONSUMPTION_FACTOR = -0.2
-			    AIR_MISSION_XP_FACTOR = 0.12
+			    production_factory_efficiency_gain_factor = 0.12
+			    production_lack_of_resource_penalty_factor = 0.15
+			    army_core_attack_factor = 0.075
+			    army_core_defence_factor = 0.075
+			    research_speed_factor = 0.05
+			    industrial_capacity_dockyard = 0.1
+			    land_reinforce_rate = 0.01
+			    planning_speed = 0.12
+			    army_fuel_consumption_factor = -0.2
+			    navy_fuel_consumption_factor = -0.2
+			    air_fuel_consumption_factor = -0.2
+			    air_mission_xp_gain_factor = 0.12
 			}
 		}
 	}

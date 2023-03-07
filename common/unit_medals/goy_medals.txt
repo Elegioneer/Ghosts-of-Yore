@@ -1,0 +1,555 @@
+# Valid unit modifiers are not exhaustive
+# Currently supported:
+# army_morale
+# army_morale_factor
+# army_org
+# army_org_factor
+# supply_consumption_factor
+# equipment_capture
+# equipment_capture_factor
+# army_fuel_capacity_factor
+# army_fuel_consumption_factor
+# recon_factor
+# recon_factor_while_entrenched
+# transport_capacity (?)
+# breakthrough_factor
+# armor_factor
+# army_strength_factor
+# experience_loss_factor
+# leader_modifiers applies unit modifiers to all units under them as a general, similarly to traits.
+# army_attack_factor
+# army_defence_factor
+# max_dig_in
+# max_dig_in_factor
+
+@cost = 30
+@big_cost = 60
+	
+	### GOY Medals ###
+	
+unit_medals = {
+	### ARA ###
+	GOY_ARA_knights_cross_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+		}
+		frame = 1
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			unit_upkeep_attrition_factor = -0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	GOY_ARA_sparletan_sun_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+		}
+		frame = 2
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			land_night_attack = 0.15
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	GOY_ARA_twin_swords_medal = {
+		
+		available = {
+			GOY_has_arantigan_medals_trigger = yes
+		}
+		frame = 3
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			terrain_penalty_reduction = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	GOY_ARA_communist_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+			OR = {
+				has_government = communism
+				AND = {
+					has_government = neutrality
+					has_country_leader = {
+						ruling_only = yes 
+						character = GOY_ARA_soter
+					}
+				}
+			}
+		}
+		frame = 4
+		icon = "GFX_medal_icon_goy_ara"
+	
+		cost = @big_cost
+		
+		unit_modifiers = {
+			max_dig_in = 10
+		}
+		
+		leader_modifiers = {
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	GOY_ARA_republican_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+			OR = {
+				has_government = democratic
+				has_country_leader = {
+					ruling_only = yes 
+					character = GOY_ARA_margareth_featherin
+				}
+				has_country_leader = {
+					ruling_only = yes 
+					character = GOY_ARA_nicator
+				}
+			}
+		}
+		frame = 5
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		leader_modifiers = {
+			experience_gain_army_unit_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	
+	GOY_ARA_order_of_arantigos_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+			has_government = fascism
+			OR = {
+				has_country_leader = {
+					ruling_only = yes 
+					character = GOY_ARA_dorotheos_featherin
+				}
+			}
+		}
+		frame = 6
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			special_forces_attack_factor = 0.1
+		}
+		
+		leader_modifiers = {
+			special_forces_attack_factor = 0.05
+			special_forces_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	
+	GOY_ARA_imperial_order_of_arantigos_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+			has_government = fascism
+			has_cosmetic_tag = ARA_EMP
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_ARA_dorotheos_featherin
+			}
+		}
+		frame = 7
+		icon = "GFX_medal_icon_goy_ara"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.1
+		}
+		
+		leader_modifiers = {
+			planning_speed = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	
+	GOY_ARA_order_of_arantigos_the_martyr_medal = {
+		
+		available = { 
+			GOY_has_arantigan_medals_trigger = yes
+			has_government = fascism
+			has_cosmetic_tag = ARA_HOLY
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_ARA_lysimachus
+			}
+		}
+		frame = 8
+		icon = "GFX_medal_icon_goy_ara"
+	
+		cost = @big_cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.1
+		}
+		
+		leader_modifiers = {
+			army_morale_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	
+	### NTR ###
+	GOY_NTR_reaver_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+		}
+		frame = 4
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			equipment_capture = 0.20
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	GOY_NTR_berserker_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+		}
+		frame = 2
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			special_forces_attack_factor = 0.10
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	GOY_NTR_lodge_veteran_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+		}
+		frame = 1
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			breakthrough_factor = 0.10
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	GOY_NTR_griffonslayer_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+		}
+		frame = 5
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.10
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	GOY_NTR_champ_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+		}
+		frame = 3
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.10
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+		
+	}
+	GOY_NTR_necromancer_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+			OR = {
+				has_country_leader = {
+					ruling_only = yes 
+					character = GOY_NTR_frostking
+				}
+				has_country_leader = {
+					ruling_only = yes 
+					character = GOY_NTR_gavin
+				}
+			}
+		}
+		frame = 6
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			experience_loss_factor = -0.3
+		}
+		leader_modifiers = {
+			experience_loss_factor = -0.15
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	GOY_NTR_princesses_chosen_medal = {
+		
+		available = {
+			GOY_has_ntribes_medals_trigger = yes
+			has_country_leader = {
+				ruling_only = yes 
+				character = NTR_GOY_princessfiana
+			}
+		}
+		frame = 8
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			army_core_defence_factor = 0.15
+		}
+		leader_modifiers = {
+			army_core_attack_factor = 0.075
+			army_core_defence_factor = 0.075
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	GOY_NTR_honorary_stormshield_medal = {
+		
+		available = { 
+			GOY_has_ntribes_medals_trigger = yes
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_NTR_Euan
+			}
+		}
+		frame = 7
+		icon = "GFX_medal_icon_goy_ntr"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.15
+		}
+		leader_modifiers = {
+			army_morale_factor = 0.1
+		}
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+		
+	}
+	
+	### BOI ###
+	GOY_BOI_iron_cross_medal = { #identical name and appearance to GRI's
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+		}
+		frame = 1
+		icon = "GFX_medal_icon_GRI"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_strength_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	GOY_BOI_violet_ribbon_medal = {
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+		}
+		frame = 1
+		icon = "GFX_medal_icon_goy_boi"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_morale_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	GOY_BOI_trinity_order_medal = {
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+		}
+		frame = 2
+		icon = "GFX_medal_icon_goy_boi"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			supply_consumption_factor = -0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	GOY_BOI_silver_griffon_medal = { #identical name and appearance to GRI's, Gestal-only
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_BOI_gestal
+			}
+		}
+		frame = 4
+		icon = "GFX_medal_icon_GRI"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_defence_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	GOY_BOI_great_tree_medal = {
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+		}
+		frame = 3
+		icon = "GFX_medal_icon_goy_boi"
+		
+		cost = @cost
+		
+		unit_modifiers = {
+			army_org_factor = 0.1
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 100
+		}
+	}
+	GOY_BOI_royal_order_medal = { #Gallus-only
+		
+		available = { 
+			GOY_has_griffonstonian_medals_trigger = yes
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_BOI_gallus
+			}
+		}
+		frame = 4
+		icon = "GFX_medal_icon_goy_boi"
+		
+		cost = @big_cost
+		
+		unit_modifiers = {
+			army_attack_factor = 0.1
+		}
+		
+		leader_modifiers = {
+			army_attack_factor = 0.05
+			army_defence_factor = 0.05
+		}
+		
+		one_time_effect = {
+			add_divisional_commander_xp = 150
+		}
+	}
+}
