@@ -112,8 +112,24 @@ GOY_has_arantigan_medals_trigger = {
 			has_cosmetic_tag = BRD_arantiga
 		}
 		AND = {
-			original_tag = RIV
+			original_tag = RCT
 			has_cosmetic_tag = RIV_arantiga
+		}
+		AND = {
+			original_tag = CTH
+			has_cosmetic_tag = CTH_arantiga
+		}
+		AND = {
+			original_tag = TBK
+			has_cosmetic_tag = TBK_arantiga
+		}
+		AND = {
+			original_tag = HIP
+			has_cosmetic_tag = HIP_arantiga
+		}
+		AND = {
+			original_tag = MCW
+			has_cosmetic_tag = MCW_arantiga
 		}
 	}
 }

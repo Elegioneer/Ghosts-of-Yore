@@ -107,7 +107,6 @@ recruit_character = GOY_ARA_reiner
 recruit_character = GOY_ARA_hermanepuppet
 recruit_character = GOY_ARA_lysimachuspuppet
 recruit_character = GOY_ARA_headmasterapesios
-recruit_character = GOY_ARA_soterpuppet
 recruit_character = GOY_ARA_riverprotector
 recruit_character = GOY_ARA_gumi
 recruit_character = GOY_ARA_vasile

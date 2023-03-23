@@ -44,7 +44,7 @@ ARA_definetely_not_fake_IRI = {
 }
 
 ARA_blyat_cat = {
-	icon = generic_political_actions
+	icon = border_conflicts
 
 	visible = {
 		tag = ARA
@@ -64,7 +64,7 @@ ARA_blyat_cat = {
 }
 
 ARA_peace_nm_cat = {
-	icon = generic_political_actions
+	icon = generic
 
 	visible = {
 		tag = ARA
@@ -79,7 +79,7 @@ ARA_peace_nm_cat = {
 }
 
 ARA_canteribbienes_cat = {
-	icon = generic_political_actions
+	icon = eng_appeal_to_imperial_loyalists
 	visible = {
 	    tag = ARA
 		has_government = fascism
@@ -87,7 +87,7 @@ ARA_canteribbienes_cat = {
 	}
 }
 ARA_dev_islands_cat = {
-	icon = generic_political_actions
+	icon = generic_industry
 	visible = {
 	    tag = ARA
 		has_government = fascism
@@ -96,7 +96,7 @@ ARA_dev_islands_cat = {
 }
 
 ARA_greneclyf_cat = {
-	icon = generic_political_actions
+	icon = border_conflicts
 
 	visible = {
 	    tag = ARA
@@ -110,7 +110,7 @@ ARA_greneclyf_cat = {
 }
 
 ARA_puppet_show_cat = {
-	icon = generic_political_actions
+	icon = generic_propaganda
 
 	visible = {
 		tag = ARA
@@ -119,7 +119,7 @@ ARA_puppet_show_cat = {
 }
 
 ARA_northern_threat = {
-    icon = generic_political_actions
+    icon = border_conflicts
 	visible = {
 	    original_tag = ARA
 		OR = {
@@ -174,7 +174,7 @@ ARA_return_land_cat = {
 }
 
 ARA_reorg_zebrican_lands_cat = {
-    #icon = 
+    icon = usa_congress
 	visible = {
 	    original_tag = ARA
 		has_completed_focus = ARA_reorganise_zebrica

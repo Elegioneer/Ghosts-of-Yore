@@ -40,6 +40,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_goy_IRI_teleport.dds"
 	}
 	spriteType = {
+		name = "GFX_decision_goy_IRI_barrad"
+		texturefile = "gfx/interface/decisions/decision_goy_IRI_barrad.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_plant_ara_flag"
+		texturefile = "gfx/interface/decisions/decision_goy_plant_ara_flag.dds"
+	}
+	spriteType = {
 		name = "GFX_decision_goy_recall_diaspora"
 		texturefile = "gfx/interface/decisions/decision_goy_recall_diaspora.dds"
 	}
@@ -114,5 +122,33 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_goy_tower_storm"
 		texturefile = "gfx/interface/decisions/decision_goy_tower_storm.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_cat"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_cat.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_earth"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_earth.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_fire"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_fire.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_ice"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_ice.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_metal"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_metal.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_water"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_water.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magiс_wood"
+		texturefile = "gfx/interface/decisions/decision_goy_magiс_wood.dds"
 	}
 }

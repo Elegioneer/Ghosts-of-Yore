@@ -9576,7 +9576,7 @@ focus_tree = {
 	}
 	focus = {
 	    id = ARA_sun_and_lightning
-		icon = GFX_HIP_ariscounter
+		icon = GFX_goal_goy_resize_ariscounter
 		x = 4
 		y = 2
 		relative_position_id = ARA_emperor_of_griffonkind
@@ -9959,7 +9959,7 @@ focus_tree = {
 					is_subject_of = ARA
 				}
 				ARA = {
-					owns_state = 408
+					owns_state = 624
 				}
 			}
 			has_completed_focus = ARA_imperial_research_initiative
@@ -10134,7 +10134,7 @@ focus_tree = {
 	}
 	focus = {
 	    id = ARA_abyssinian_allegiance
-		icon = GFX_goal_WNG_ras
+		icon = GFX_goal_goy_wngconvert_cats
 		x = -5
 		y = 3
 		relative_position_id = ARA_emperor_of_griffonkind

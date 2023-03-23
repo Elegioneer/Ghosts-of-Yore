@@ -1,45 +1,54 @@
 leader_traits = {
-	moderniser = {
-		random = no
-		army_org_factor = 0.05
-		production_speed_buildings_factor = 0.05
-		research_speed_factor = 0.025
-	}
-	integralist_king = {
-		random = no
-		army_morale_factor = 0.05
-		conscription_factor = 0.05
-		stability_factor = 0.05
-	}
-	ferrous_trait = {
-		random = no
-		political_power_gain = 0.1
-		political_advisor_cost_factor = -0.1
-		economy_cost_factor = -0.1
-		trade_laws_cost_factor = -0.1
-		mobilization_laws_cost_factor = -0.1
-	}
-	sturmgriefen_commander = {
-		random = no
-		experience_gain_army = 0.05
-		required_garrison_factor = -0.25
-	}
-	protector_cyan = {
-		random = no
-		targeted_modifier = { tag = MIT defense_bonus_against = 0.1 }
-		max_dig_in = 1.5
-		stability_factor = 0.10
-		defensive_war_stability_factor = 0.4
-	}
-	first_among_equals_trait = {
-		random = no
-		political_power_gain = 0.1
-		stability_factor = 0.05
-	}
-	arantiga_shield = {
+	#moderniser = { #GaW stuff
+	#	random = no
+	#	army_org_factor = 0.05
+	#	production_speed_buildings_factor = 0.05
+	#	research_speed_factor = 0.025
+	#}
+	#integralist_king = {
+	#	random = no
+	#	army_morale_factor = 0.05
+	#	conscription_factor = 0.05
+	#	stability_factor = 0.05
+	#}
+	#ferrous_trait = {
+	#	random = no
+	#	political_power_gain = 0.1
+	#	political_advisor_cost_factor = -0.1
+	#	economy_cost_factor = -0.1
+	#	trade_laws_cost_factor = -0.1
+	#	mobilization_laws_cost_factor = -0.1
+	#}
+	#sturmgriefen_commander = {
+	#	random = no
+	#	experience_gain_army = 0.05
+	#	required_garrison_factor = -0.25
+	#}
+	#protector_cyan = {
+	#	random = no
+	#	targeted_modifier = { tag = MIT defense_bonus_against = 0.1 }
+	#	max_dig_in = 1.5
+	#	stability_factor = 0.10
+	#	defensive_war_stability_factor = 0.4
+	#}
+	#first_among_equals_trait = {
+	#	random = no
+	#	political_power_gain = 0.1
+	#	stability_factor = 0.05
+	#}
+	
+	arantiga_shield = { #loc is inside respective countries' files
 		random = no
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
+	}
+	GOY_arantigan_advisors_trait = {
+		random = no
+		stability_factor = -0.1
+		political_power_gain = -0.1
+		research_speed_factor = 0.1
+		production_speed_industrial_complex_factor = 0.2
+		production_speed_infrastructure_factor = 0.2
 	}
 	unhinged_scientist = {
 	    random = no
@@ -71,7 +80,7 @@ leader_traits = {
 		autonomy_gain = -0.5
 		extra_trade_to_overlord_factor = 0.25
 	}
-	GOY_tankbuilding_academy = { #loc is inside respective countries' files
+	GOY_tankbuilding_academy = {
 	    random = no
 	}
 	GOY_mass_tank_manufacturer = {

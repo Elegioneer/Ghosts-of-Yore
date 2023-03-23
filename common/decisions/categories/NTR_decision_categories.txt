@@ -1,5 +1,5 @@
 NTR_spirits_blessings_cat = {
-    icon = book
+    icon = GFX_decision_goy_magiс_cat
 	allowed = {
         tag = NTR
     }

@@ -304,4 +304,12 @@ spriteTypes = {
 		name = "GFX_goal_goy_imperial_research_initiative"
 		texturefile = "gfx/interface/goals/goal_goy_imperial_research_initiative.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_wngconvert_cats"
+		texturefile = "gfx/interface/goals/goal_goy_wngconvert_cats.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_goy_resize_ariscounter"
+		texturefile = "gfx/interface/goals/goal_goy_resize_ariscounter.dds"
+	}
 }

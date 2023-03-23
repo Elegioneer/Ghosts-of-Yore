@@ -37,4 +37,8 @@ spriteTypes = {
 		name = "GFX_event_goy_iri_report"
 		texturefile = "gfx/event_pictures/event_goy_iri_report.dds"
 	}
+	spriteType = {
+		name = "GFX_event_goy_himss_barrad_end"
+		texturefile = "gfx/event_pictures/event_goy_himss_barrad_end.dds"
+	}
 }

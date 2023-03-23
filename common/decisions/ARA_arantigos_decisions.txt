@@ -235,7 +235,7 @@ ARA_arantigans_abroad = {
 
 ARA_blyat_cat = {
 	ARA_blyat = {
-		icon = generic_nationalism
+		icon = generic_ignite_civil_war
 		cost = 10
 		fire_only_once = yes
 		ai_will_do = {
@@ -256,7 +256,7 @@ ARA_blyat_cat = {
 
 ARA_peace_nm_cat = {
 	ARA_peace_nm = {
-		icon = generic_nationalism
+		icon = infiltrate_state
 		cost = 10
 		fire_only_once = yes
 		ai_will_do = {
@@ -359,7 +359,7 @@ ARA_peace_nm_cat = {
 
 ARA_canteribbienes_cat = {
 	ARA_reclaim_merediennes = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_plant_ara_flag
 		cost = 0
 		days_remove = 14
 		fire_only_once = yes
@@ -386,7 +386,7 @@ ARA_canteribbienes_cat = {
 		}
 	}
 	ARA_lay_dragons = { #e621.net
-		icon = generic_nationalism
+		icon = GFX_decision_goy_plant_ara_flag
 		cost = 0
 		days_remove = 14
 		fire_only_once = yes
@@ -399,9 +399,15 @@ ARA_canteribbienes_cat = {
 			}
 		}
 		ai_will_do = {
-			base = 10
+			base = 0
 			modifier = {
-				has_war = yes
+				owns_state = 1195
+				add = 10
+			}
+			modifier = {
+				DRG = {
+					is_subject = yes
+				}
 				factor = 0
 			}
 		}
@@ -413,7 +419,7 @@ ARA_canteribbienes_cat = {
 		}
 	}
 	ARA_operation_solstice = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_plant_ara_flag
 		cost = 0
 		days_remove = 14
 		fire_only_once = yes
@@ -452,7 +458,7 @@ ARA_canteribbienes_cat = {
 		}
 	}
 	ARA_puerto_caballo = {
-		icon = generic_nationalism
+		icon = GFX_decision_goy_plant_ara_flag
 		cost = 0
 		days_remove = 14
 		fire_only_once = yes
@@ -488,12 +494,11 @@ ARA_canteribbienes_cat = {
 		}
 	}
 	ARA_demand_eqs_islands = {
-		icon = generic_nationalism
+		icon = generic_decision
 		cost = 0
 		days_remove = 14
 		fire_only_once = yes
 		available = {
-			has_country_flag = ARA_yukka_enable
 			any_other_country = {
 				OR = {
 					tag = EQS
@@ -531,21 +536,24 @@ ARA_canteribbienes_cat = {
 		}
 	}
 	ARA_yukka_treaty = {
-		icon = generic_nationalism
+		icon = generic_decision
 		cost = 10
 		fire_only_once = yes
 		ai_will_do = {
 			base = 100
 		}
+		visible = {
+			has_country_flag = ARA_yukka_enable
+		}
 		available = {
 			OR = {
-				OR = {
-					EQS = {
-						surrender_progress > 0.1
-					}
-					NLR = {
-						surrender_progress > 0.1
-					}
+				EQS = {
+					has_war_with = ARA
+					surrender_progress > 0.1
+				}
+				NLR = {
+					has_war_with = ARA
+					surrender_progress > 0.1
 				}
 				AND = {
 					controls_state = 4
@@ -597,7 +605,7 @@ ARA_canteribbienes_cat = {
 
 ARA_dev_islands_cat = {
 	ARA_core_meridiennes = {
-		icon = generic_nationalism
+		icon = eng_propaganda_campaigns
 		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
@@ -633,7 +641,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_canterib_capital = {
-		icon = generic_nationalism
+		icon = generic_factory
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -686,7 +694,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_island_rubber = {
-		icon = generic_nationalism
+		icon = rubber
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -745,7 +753,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_mine_the_mountain = {
-		icon = generic_nationalism
+		icon = steel
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -773,7 +781,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_zebrican_fleet_hq = {
-		icon = generic_nationalism
+		icon = generic_army_support
 		cost = 75
 		fire_only_once = yes
 		ai_will_do = {
@@ -811,7 +819,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_summer_harbour = {
-		icon = generic_nationalism
+		icon = generic_construction
 		cost = 25
 		fire_only_once = yes
 		ai_will_do = {
@@ -847,7 +855,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_purrsia_colonisation = {
-		icon = generic_nationalism
+		icon = hol_draw_up_staff_plans
 		cost = 75
 		fire_only_once = yes
 		ai_will_do = {
@@ -881,7 +889,7 @@ ARA_dev_islands_cat = {
 		}
 	}
 	ARA_assist_abissynia = {
-		icon = generic_nationalism
+		icon = generic_factory
 		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
@@ -982,7 +990,7 @@ ARA_dev_islands_cat = {
 
 ARA_greneclyf_cat = {
     ARA_greneclyf = {
-		icon = generic_nationalism
+		icon = generic_prepare_civil_war
 		cost = 10
 		fire_only_once = yes
 		ai_will_do = {
@@ -1007,7 +1015,7 @@ ARA_greneclyf_cat = {
 
 ARA_puppet_show_cat = {
 	ARA_puppet_karth = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1079,7 +1087,7 @@ ARA_puppet_show_cat = {
 		}
 	}
 	ARA_puppet_aquil = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1166,7 +1174,7 @@ ARA_puppet_show_cat = {
 		}
 	}
 	ARA_puppet_north = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1230,7 +1238,7 @@ ARA_puppet_show_cat = {
 		}
 	}
 	ARA_puppet_eviconf = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1296,7 +1304,7 @@ ARA_puppet_show_cat = {
 		}
 	}
 	ARA_puppet_aster = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1350,7 +1358,7 @@ ARA_puppet_show_cat = {
 
 ARA_renaming_cities = {
 	ARA_rename_karthin = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 		cost = 50
 		fire_only_once = yes
 		ai_will_do = {
@@ -1373,7 +1381,7 @@ ARA_renaming_cities = {
 
 ARA_definetely_not_fake_IRI = {
 	ARA_quinctus = {
-		icon = GFX_decision_goy_IRI_panaceum
+		icon = GFX_decision_goy_IRI_barrad
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
@@ -1456,7 +1464,7 @@ ARA_definetely_not_fake_IRI = {
 
 ARA_return_land_cat = {
     ARA_return_land = {
-	    icon = generic_nationalism
+	    icon = infiltrate_state
 	    cost = 25
 	    ai_will_do = {
 			factor = 100
@@ -1502,7 +1510,7 @@ ARA_return_land_cat = {
 
 ARA_northern_threat = {
     ARA_kill_DED = {
-	    icon = generic_nationalism
+	    icon = generic_prepare_civil_war
 	    cost = 25
 		fire_only_once = yes
 	    ai_will_do = {
@@ -1553,7 +1561,7 @@ ARA_northern_threat = {
 	#	}
 	#}
 	GOY_ARA_new_new_order = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -1585,12 +1593,75 @@ ARA_northern_threat = {
 			}
 			
 		}
-	}	
+	}
+	GOY_ARA_give_hlr_to_ntr = {
+		icon = generic_form_nation
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			OR = {
+				HLR = {
+					is_puppet_of = ARA
+				}
+				any_owned_state = {
+					OR = {
+						is_core_of = DED
+						is_core_of = HLR
+					}
+				}
+			}
+			NTR = {
+				is_puppet_of = ARA
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = ARA_DED_to_NTR
+			hidden_effect = {
+			ARA = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = DED
+							is_core_of = HLR
+						}
+					}
+					NTR = {
+						transfer_state = PREV
+					}
+				}
+			}
+		    NTR = {
+				annex_country = {
+					target = HLR
+					transfer_troops = yes
+				}
+			    add_state_core = 456
+			    add_state_core = 451
+			    add_state_core = 425
+			    add_state_core = 427
+			    add_state_core = 428
+			    add_state_core = 566
+			    add_state_core = 426
+			    add_state_core = 564
+			    add_state_core = 565
+			    add_state_core = 419
+			    add_state_core = 420
+			    add_state_core = 418
+			    add_state_core = 417
+			    add_state_core = 416
+			    add_state_core = 415
+		    }
+			}
+		}
+	}
 }
 
 ARA_reorg_zebrican_lands_cat = {
 	GOY_ARA_macaw_prot = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -1604,30 +1675,33 @@ ARA_reorg_zebrican_lands_cat = {
 		days_remove = 7
 		remove_effect = {
 			release_puppet = MCW
-			GOY_ARA_gumi = {
-				set_nationality = MCW
-			}
 			MCW = {
 				set_cosmetic_tag = MCW_arantiga
-				hidden_effect = {
-					#recruit_character = GOY_ARA_gumi
-					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
-				}
-				add_country_leader_role = {
-					Character = GOY_ARA_gumi
-					Promote_leader = yes
-					Country_leader = {
-						desc = "GOY_ARA_gumi_desc"
-						ideology = nazism
-						expire = "1965.01.01.01"
-						traits = { dictator }
+			}
+			hidden_effect = {
+				ARA = {
+					GOY_ARA_gumi = {
+						set_nationality = MCW
+					}
+					MCW = {
+						set_party_name = { ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+						add_country_leader_role = {
+							Character = GOY_ARA_gumi
+							Promote_leader = yes
+							Country_leader = {
+								desc = "GOY_ARA_gumi_desc"
+								ideology = nazism
+								expire = "1965.01.01.01"
+								traits = { dictator }
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 	GOY_ARA_colth_prot = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -1648,7 +1722,7 @@ ARA_reorg_zebrican_lands_cat = {
 		}
 	}
 	GOY_ARA_hazru_prot = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -1656,9 +1730,12 @@ ARA_reorg_zebrican_lands_cat = {
 		}
 		visible = {
 		    any_owned_state = {
-				is_core_of = TBK
-				is_core_of = WAR
-				is_core_of = BAT
+				OR = {
+					is_core_of = TBK
+					is_core_of = WAR
+					is_core_of = BAT
+					is_core_of = ZUM
+				}
 			}
 		}
 		days_remove = 7
@@ -1669,34 +1746,38 @@ ARA_reorg_zebrican_lands_cat = {
 						is_core_of = TBK
 						is_core_of = WAR
 						is_core_of = BAT
+						is_core_of = ZUM
 					}
 				}
 				add_core_of = TBK
 			}
 			release_puppet = TBK
-			GOY_ARA_vasile = {
-				set_nationality = TBK
-			}
 			TBK = {
 				set_cosmetic_tag = TBK_arantiga
-				hidden_effect = {
-					#recruit_character = GOY_ARA_vasile
-					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
-				}
-				add_country_leader_role = {
-					Character = GOY_ARA_vasile
-					Promote_leader = yes
-					Country_leader = {
-						ideology = nazism
-						expire = "1965.01.01.01"
-						traits = { ruthless_capitalist }
+			}
+			hidden_effect = {
+				ARA = {
+					GOY_ARA_vasile = {
+						set_nationality = TBK
+					}
+					TBK = {
+						set_party_name = { ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+						add_country_leader_role = {
+							Character = GOY_ARA_vasile
+							Promote_leader = yes
+							Country_leader = {
+								ideology = nazism
+								expire = "1965.01.01.01"
+								traits = { ruthless_capitalist }
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 	GOY_ARA_aris_prot = {
-		icon = generic_nationalism
+		icon = generic_form_nation
 	    cost = 0
 		fire_only_once = yes
 		ai_will_do = {
@@ -1710,22 +1791,37 @@ ARA_reorg_zebrican_lands_cat = {
 		days_remove = 7
 		remove_effect = {
 			release_puppet = HIP
-			GOY_ARA_moonfeather = {
-				set_nationality = HIP
-			}
 			HIP = {
 				set_cosmetic_tag = HIP_arantiga
-				hidden_effect = {
-					#recruit_character = GOY_ARA_moonfeather
-					set_party_name = {ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_core_of = HIP
+						OR = {
+							is_core_of = TBK
+							is_core_of = WAR
+							is_core_of = BAT
+							is_core_of = ZUM
+						}
+					}
+					remove_core_of = HIP
 				}
-				add_country_leader_role = {
-					Character = GOY_ARA_moonfeather
-					Promote_leader = yes
-					Country_leader = {
-						ideology = nazism
-						expire = "1965.01.01.01"
-						traits = { dictator }
+				ARA = {
+					GOY_ARA_moonfeather = {
+						set_nationality = HIP
+					}
+					HIP = {
+						set_party_name = { ideology = fascism name = ARA_colony_party long_name = ARA_colony_party_long }
+						add_country_leader_role = {
+							Character = GOY_ARA_moonfeather
+							Promote_leader = yes
+							Country_leader = {
+								ideology = nazism
+								expire = "1965.01.01.01"
+								traits = { captain_of_industry }
+							}
+						}
 					}
 				}
 			}

@@ -717,14 +717,6 @@ characters = {
 			}
 			traits = { air_chief_ground_support_3 }
 		}
-		}
-	GOY_ARA_miga_ouranos2 = {
-		name = ARA_miga_ouranos
-		portraits = {
-			army = {
-				small = "GFX_idea_generic_griffon_grey"
-			}
-		}
 		advisor = {
 		cost = 100
 		slot = high_command
@@ -750,7 +742,7 @@ characters = {
 			}
  			traits = { air_strategic_bombing_2 }
 		}
-	}
+		}
 	GOY_ARA_bellerophontes = {
 		name = ARA_bellerophontes
 		portraits = {
@@ -930,17 +922,8 @@ characters = {
 		}
 		gender = male
 	}
-	GOY_ARA_soterpuppet = {
-		name = GOY_ARA_soterpuppet
-		portraits = {
-			civilian = {
-				large= "gfx/leaders/ARA/soter.tga"
-			}
-		}
-		gender = male
-	}
 	GOY_ARA_benoam_gerza = {
-		name = CTH_batnoam_zarza
+		name = GOY_ARA_benoam_gerza
 		portraits = {
 			civilian = {
 				small="GFX_idea_CTH_benoam_gerza"
@@ -950,7 +933,7 @@ characters = {
 		gender = male
 	}
 	GOY_ARA_zaron_zorrel={
-		name=CTH_zaron_zorrel
+		name=GOY_ARA_zaron_zorrel
 		portraits={
 			civilian={
 				small="GFX_idea_CTH_zaron_zorrel"
@@ -969,7 +952,7 @@ characters = {
 		gender = male
 	}
 	GOY_ARA_vasile = {
-		name = TBK_vasile
+		name = GOY_ARA_vasile
 		portraits = {
 			civilian = {
 				large="gfx/leaders/TBK/Vasile.tga"
@@ -979,7 +962,7 @@ characters = {
 		gender = male
 	}
 	GOY_ARA_moonfeather = {
-		name = HIP_SIR_plumage_moonfeather
+		name = GOY_ARA_moonfeather
 		portraits = {
 			civilian = {
 				large="gfx/leaders/HIP/Plumage_Moonfeather.tga"

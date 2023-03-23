@@ -1,6 +1,6 @@
 NTR_spirits_blessings_cat = {
     NTR_metal_bless = {
-		icon = generic_magic
+		icon = GFX_decision_goy_magiс_metal
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -33,7 +33,7 @@ NTR_spirits_blessings_cat = {
 		days_remove = 180
 	}
 	NTR_wood_bless = {
-		icon = clover_lushi
+		icon = GFX_decision_goy_magiс_wood
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -69,7 +69,7 @@ NTR_spirits_blessings_cat = {
 		days_remove = 180
 	}
 	NTR_fire_bless = {
-		icon = celestia
+		icon = GFX_decision_goy_magiс_fire
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -105,7 +105,7 @@ NTR_spirits_blessings_cat = {
 		days_remove = 180
 	}
 	NTR_earth_bless = {
-		icon = crystals
+		icon = GFX_decision_goy_magiс_earth
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -139,7 +139,7 @@ NTR_spirits_blessings_cat = {
 		days_remove = 180
 	}
 	NTR_water_bless = {
-		icon = crossed_swords
+		icon = GFX_decision_goy_magiс_water
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
@@ -173,7 +173,7 @@ NTR_spirits_blessings_cat = {
 		days_remove = 180
 	}
 	NTR_ice_bless = {
-		icon = scroll
+		icon = GFX_decision_goy_magiс_ice
 		cost = 25
 		fire_only_once = no
 		ai_will_do = {
