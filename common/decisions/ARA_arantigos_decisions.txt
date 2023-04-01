@@ -666,7 +666,7 @@ ARA_dev_islands_cat = {
 			civilian_factory_use = 20
 		}
 		remove_effect = {
-			set_province_name = { id = 20694 name = "Port-Featherin" }
+			set_province_name = { id = 20694 name = GOY_vp_port_featherin }
 			1196 = {
 				add_victory_points = {
 					province = 20694

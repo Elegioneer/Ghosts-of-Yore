@@ -907,22 +907,22 @@ ideas = {
 				land_doctrine_cost_factor = 0.3
 			}
 		}
-		NTR_frozen_curtain = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = FRA_fortification_focus
-			removal_cost = -1
-			modifier = {
-			    encryption_factor = 0.5
-				enemy_operative_detection_chance_factor = 0.25
-				enemy_operative_capture_chance_factor = 0.25
-				enemy_operative_intel_extraction_rate = -0.5
-			}
-		}
+		#NTR_frozen_curtain = {
+		#	allowed = {
+		#		always = no
+		#	}
+		#	allowed_civil_war = {
+		#		always = yes
+		#	}
+		#	picture = GFX_idea_GOY_frozen_economy
+		#	removal_cost = -1
+		#	modifier = {
+		#	    encryption_factor = 0.5
+		#		enemy_operative_detection_chance_factor = 0.25
+		#		enemy_operative_capture_chance_factor = 0.25
+		#		enemy_operative_intel_extraction_rate = -0.5
+		#	}
+		#}
 		NTR_warrior_lodges_idea = {
 			allowed = {
 				always = no
@@ -1016,6 +1016,7 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				special_forces_min = 20
+				equipment_capture = 0.10
 			}
 		}
 		NTR_chosen_ones_1 = {
@@ -1039,14 +1040,14 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = company_pile_of_guns
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
 				    reliability = -0.1
-					build_cost_ic = -0.2
+					build_cost_ic = -0.25
 				}
 			}
 		}
@@ -1125,6 +1126,8 @@ ideas = {
 			modifier = {
 			    conscription = 0.04
 				army_morale_factor = 0.1
+				unit_upkeep_attrition_factor = -0.2
+				out_of_supply_factor = -0.25
 				experience_loss_factor = -0.1
 				land_doctrine_cost_factor = 0.2
 			}
@@ -1322,7 +1325,7 @@ ideas = {
 			picture = viirafull
 			removal_cost = -1
 			modifier = {
-			    weekly_manpower = 1000
+			    weekly_manpower = 2000
 			    political_power_gain = -0.05
 			}
 		}
@@ -1663,7 +1666,7 @@ ideas = {
 	##################
 	society_development_idea = {
 	    law = yes
-		use_list_view = no
+		use_list_view = yes
         
 		GOY_magical_society = {
 
@@ -1671,10 +1674,15 @@ ideas = {
 			traits = { society_idea }
 			picture = idea_GOY_magical_economy
 			allowed = {
-				always = yes
+				original_tag = NTR
+			    has_government = democratic
+			}
+			visible = {
+				original_tag = NTR
+			    has_government = democratic
 			}
 			available = {
-			    has_government = fascism
+			    has_government = democratic
 			}			
 			removal_cost = -1
 			allowed_civil_war = {
@@ -1693,11 +1701,24 @@ ideas = {
 				#exodus_assimilation_proportion = -0.15
 				industry_repair_factor = -0.1				
 			}
+			
+			allowed_to_remove = {
+				NOT = {
+				    has_government = democratic
+				}
+			}
+			
+			cancel_if_invalid = yes
 		}
 		
 		GOY_slave_economy = {
 			allowed = {
-				always = no
+				original_tag = NTR
+			    has_government = fascism
+			}
+			visible = {
+				original_tag = NTR
+			    has_government = fascism
 			}
 			removal_cost = -1
 			picture = idea_GOY_slave_economy
@@ -1735,13 +1756,13 @@ ideas = {
 				}
 			}
 			
-			cancel_if_invalid = no
+			cancel_if_invalid = yes
 		}
 	}
 	trade_laws = { 
-	law = yes
-	use_list_view = no
-	ntr_closed_economy = {
+		law = yes
+		use_list_view = yes
+		ntr_closed_economy = {
 		
 			allowed = {
 				always = no
@@ -1758,6 +1779,37 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
+		}
+		GOY_NTR_frozen_curtain = {
+			allowed = {
+				original_tag = NTR
+				has_government = fascism
+			}
+			visible = {
+				original_tag = NTR
+				has_government = fascism
+			}
+			removal_cost = -1
+			picture = GFX_idea_GOY_frozen_economy
+			
+			modifier = {
+				min_export = 0
+				trade_opinion_factor = -0.75
+				encryption = 1
+				encryption_factor = 0.5
+				enemy_operative_detection_chance_factor = 0.25
+				enemy_operative_capture_chance_factor = 0.25
+				enemy_operative_intel_extraction_rate = -0.5
+				foreign_subversive_activites = -0.5
+			}
+			
+			allowed_to_remove = {
+				NOT = {
+				    has_government = fascism
+				}
+			}
+			
+			cancel_if_invalid = yes
 		}
 	}
 	illiteracy_level_idea = {
@@ -1776,6 +1828,7 @@ ideas = {
 				has_idea = GOY_druid_wisdom
 			}
 			visible = {
+				original_tag = NTR
 				has_government = fascism
 			}
 			allowed_civil_war = {
@@ -2538,12 +2591,10 @@ materiel_manufacturer = {
 		}
 		visible = {
 		}
-		research_bonus = {
-			infantry_weapons = 0.05
-		}
 		equipment_bonus = {
 			infantry_equipment = {
 				soft_attack = 0.05 instant = yes
+				build_cost_ic = -0.1 instant = yes
 			}
 			melee_equipment_0 = {
 				soft_attack = 1 instant = yes

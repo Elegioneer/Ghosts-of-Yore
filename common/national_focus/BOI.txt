@@ -1031,6 +1031,7 @@
 	            planning_skill = 3
 	            logistics_skill = 3
 		}
+		custom_effect_tooltip = GOY_BOI_klawsewitz_stats_tt
 		}
 	}
 	shared_focus = {
@@ -6704,6 +6705,7 @@ shared_focus = {
 				planning_skill = 3
 				logistics_skill = 2
 			}
+			custom_effect_tooltip = GOY_BOI_ebonwing_stats_tt
 			add_corps_commander_role = {
 				character = GOY_BOI_august_duskwing
 				traits = { griffon_race_trait infantry_leader fortress_buster artillery_expert }
@@ -6713,6 +6715,7 @@ shared_focus = {
 				planning_skill = 3
 				logistics_skill = 3
 			}
+			custom_effect_tooltip = GOY_BOI_duskwing_stats_tt
 			add_corps_commander_role = {
 				character = GOY_BOI_teodor_frohlich
 				traits = { trait_reckless politically_connected war_hero griffon_race_trait }
@@ -6722,6 +6725,7 @@ shared_focus = {
 				planning_skill = 3
 				logistics_skill = 1
 			}
+			custom_effect_tooltip = GOY_BOI_frohlich_stats_tt
 			add_corps_commander_role = {
 				character = GOY_BOI_reinhold_thundertail
 				traits = { griffon_race_trait panzer_leader panzer_expert }
@@ -6731,6 +6735,7 @@ shared_focus = {
 				planning_skill = 2
 				logistics_skill = 2
 			}
+			custom_effect_tooltip = GOY_BOI_thundertail_stats_tt
 			add_corps_commander_role = {
 				character = GOY_BOI_oskar_silverfeather
 				traits = { brilliant_strategist griffon_race_trait skilled_staffer }
@@ -6740,6 +6745,7 @@ shared_focus = {
 				planning_skill = 5
 				logistics_skill = 3
 			}
+			custom_effect_tooltip = GOY_BOI_silverfeather_stats_tt
 			army_experience = 100		
 			}
 	}

@@ -42,16 +42,18 @@ sub_units = {
 		# Important Ability
 		breakthrough = 5
 		suppression_factor = 0.4
-		casualty_trickleback = 0.70
+		casualty_trickleback = 0.80
 		experience_loss_factor = -0.40
-		supply_consumption_factor = -0.15
+		supply_consumption_factor = -0.2
 
 		essential = {
+			infantry_equipment
 			support_equipment
 		}
 
 		need = {
-			support_equipment = 20
+			infantry_equipment = 10
+			support_equipment = 5
 		}
 
 	}

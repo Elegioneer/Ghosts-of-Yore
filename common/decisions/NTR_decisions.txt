@@ -1,3 +1,291 @@
+NTR_frost_king_superhighway_cat = {
+	NTR_fks_1 = {
+		icon = GFX_decision_railroad
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+            has_political_power > 25
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 562
+			owns_state = 601
+		}
+		complete_effect = {
+			hidden_effect = {
+			country_event = {
+				id = ntribes.106
+				days = 15
+			}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			522 = {
+				add_manpower = -50000
+			}
+			562 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			621 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			build_railway = {
+				level = 2
+				start_province = 1307
+				target_province = 13235
+				build_only_on_allied = yes
+			}
+			set_country_flag = NTR_flag_fks_1
+		}
+		days_remove = 30
+	}
+	NTR_fks_2 = {
+		icon = GFX_decision_railroad
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			has_country_flag = NTR_flag_fks_unlock_1
+		}
+		available = {
+			has_country_flag = NTR_flag_fks_1
+            has_political_power > 25
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 601
+			owns_state = 474
+			owns_state = 485
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			522 = {
+				add_manpower = -75000
+			}
+			602 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			build_railway = {
+				level = 1
+				start_province = 13235
+				target_province = 7654
+				build_only_on_allied = yes
+			}
+			set_country_flag = NTR_flag_fks_3
+		}
+		days_remove = 30
+	}
+	NTR_fks_4 = {
+		icon = GFX_decision_railroad
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			has_country_flag = NTR_flag_fks_unlock_2
+		}
+		available = {
+			has_country_flag = NTR_flag_fks_1
+            has_political_power > 25
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 601
+			owns_state = 474
+			owns_state = 485
+		}
+		
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			set_country_flag = NTR_flag_fks_2
+			485 = {
+				add_manpower = -100000
+			}
+			601 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			474 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			582 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			effect_tooltip = {
+				build_railway = {
+					level = 2
+					start_province = 13235
+					target_province = 1832
+					build_only_on_allied = yes
+				}
+			}
+			hidden_effect = {
+			build_railway = {
+				level = 2
+				start_province = 13235
+				target_province = 745
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 2
+				start_province = 745
+				target_province = 7014
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 2
+				start_province = 7014
+				target_province = 1832
+				build_only_on_allied = yes
+			}
+			}
+		}
+		days_remove = 45
+	}
+	NTR_fks_3 = {
+		icon = GFX_decision_railroad
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+		visible = {
+			has_country_flag = NTR_flag_fks_unlock_2
+		}
+		available = {
+			has_country_flag = NTR_flag_fks_3
+			has_country_flag = NTR_flag_fks_2
+            has_political_power > 25
+			num_of_civilian_factories_available_for_projects > 0
+			owns_state = 574
+			owns_state = 459
+			owns_state = 475
+			owns_state = 476
+			owns_state = 581
+		}
+		complete_effect = {
+			hidden_effect = {
+			country_event = {
+				id = ntribes.105
+				days = 40
+			}
+			}
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			581 = {
+				add_manpower = -150000
+			}
+			459 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			475 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1		  
+			}
+			effect_tooltip = {
+				build_railway = {
+				level = 1
+				start_province = 7654
+				target_province = 12172
+				build_only_on_allied = yes
+			}
+			}
+			hidden_effect = {
+			build_railway = {
+				level = 1
+				start_province = 6224
+				target_province = 10552
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 10552
+				target_province = 1262
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 1262
+				target_province = 4765
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 4765
+				target_province = 3706
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 12172
+				target_province = 3706
+				build_only_on_allied = yes
+			}
+			build_railway = {
+				level = 1
+				start_province = 7654
+				target_province = 6224
+				build_only_on_allied = yes
+			}
+			clr_country_flag = NTR_flag_fks_1
+			clr_country_flag = NTR_flag_fks_2
+			clr_country_flag = NTR_flag_fks_3
+			clr_country_flag = NTR_flag_fks_unlock_1
+			clr_country_flag = NTR_flag_fks_unlock_2
+			}			
+		}
+		days_remove = 45
+	}
+}
+
 NTR_spirits_blessings_cat = {
     NTR_metal_bless = {
 		icon = GFX_decision_goy_magiс_metal
@@ -236,6 +524,7 @@ NTR_dark_magic_cat = {
 				NOT = { has_government = fascism }
 			}
 		}
+		war_with_on_complete = SRS
 		modifier = {   
 		}
 		complete_effect = {

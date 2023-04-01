@@ -6522,53 +6522,53 @@ focus_tree = {
 		    }
 			set_province_name = {
                 id = 11071
-                name = "Borealia"
+                name = GOY_vp_borealia
             }
 			set_province_name = {
                 id = 10005
-                name = "Invicta"
+                name = GOY_vp_invicta
             }
 			set_province_name = {
                 id = 9957
-                name = "Lysimachia"
+                name = GOY_vp_lysimachia
             }
 			set_province_name = {
                 id = 84
-                name = "Nova Karthin"
+                name = GOY_vp_nova_karthin
             }
 			set_province_name = {
                 id = 7091
-                name = "Victoria"
+                name = GOY_vp_victoria
             }
 			set_province_name = {
                 id = 10825
-                name = "Sollea"
+                name = GOY_vp_sollea
             }
 			set_province_name = {
                 id = 4143
-                name = "Gladius"
+                name = GOY_vp_gladius
             }
 			set_province_name = {
                 id = 1680
-                name = "Vere Nubes"
+                name = GOY_vp_vere_nubes
             }
 			354 = {
-			    set_state_name = "Borealia"
+			    set_state_name = GOY_vp_borealia
 			}
 			355 = {
-			    set_state_name = "Gladius"
+			    set_state_name = GOY_vp_gladius
 			}
 			356 = {
-			    set_state_name = "Invicta"
+			    set_state_name = GOY_vp_invicta
 			}
 			357 = {
-			    set_state_name = "Lysimachia"
+			    set_state_name = GOY_vp_lysimachia
 			}
 			358 = {
-			    set_state_name = "Nova Karthin"
+			    set_state_name = GOY_vp_nova_karthin
 			}
 			359 = {
-			    set_state_name = "Victoria"
+			    set_state_name = GOY_vp_victoria
 			}
 		}
 	}

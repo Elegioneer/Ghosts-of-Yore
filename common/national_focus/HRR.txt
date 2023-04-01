@@ -70,7 +70,7 @@ focus_tree = {
 			    province = 1027
 				value = 5
 			}
-			set_province_name = { id = 1027 name = "Romau" }			
+			set_province_name = { id = 1027 name = VICTORY_POINTS_1027 }			
 		}
 	}
 	focus = {
@@ -117,7 +117,7 @@ focus_tree = {
 			    province = 10537
 				value = 5
 			}
-			set_province_name = { id = 10537 name = "Griffenheim" }			
+			set_province_name = { id = 10537 name = VICTORY_POINTS_10537 }			
 		}
 	}
 	focus = {
@@ -1295,7 +1295,10 @@ focus_tree = {
 		prerequisite = { focus = HRR_fortify_cities }
 		prerequisite = { focus = HRR_uncover_caches }
 		completion_reward = {
-		load_oob = HRR_volunter_brigades_OOB
+			custom_effect_tooltip = HRR_volunter_brigades_OOB_tt
+			hidden_effect = {
+				load_oob = HRR_volunter_brigades_OOB
+			}
 		}
 	}
 	focus = {
@@ -1352,7 +1355,10 @@ focus_tree = {
 		prerequisite = { focus = HRR_volunteer_brigades }
 		prerequisite = { focus = HRR_sacrifices }		
 		completion_reward = {
-			load_oob = HRR_crusaders_OOB
+			custom_effect_tooltip = HRR_crusaders_OOB_tt
+			hidden_effect = {
+				load_oob = HRR_crusaders_OOB
+			}
 		}
 	}
 	focus = {

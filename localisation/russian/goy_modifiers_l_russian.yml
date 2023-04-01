@@ -1,0 +1,4 @@
+﻿l_russian:
+ modifier_army_sub_unit_penal_battalion_max_org_factor:0 "Организация штрафных батальонов"
+ modifier_army_sub_unit_penal_battalion_attack_factor:0 "Атака штрафных батальонов"
+ modifier_army_sub_unit_penal_battalion_supply_consumption_factor:0 "Расход припасов штрафных батальонов"

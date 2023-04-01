@@ -1,0 +1,12 @@
+
+
+###### GOY Tech #######
+
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_GOY_necromancy_tech_medium"
+		texturefile = "gfx/interface/technologies/goy_necromancer_research.dds"
+	}
+
+}

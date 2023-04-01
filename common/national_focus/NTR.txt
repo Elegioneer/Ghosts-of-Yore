@@ -4275,6 +4275,7 @@
 			hidden_effect = {
 			    set_country_flag = NTR_flag_dark_magic_unlock
 			}
+			unlock_decision_category_tooltip = NTR_dark_magic_cat
 		}
 	}
 	shared_focus = {
@@ -4364,6 +4365,7 @@
 			hidden_effect = {
 			    set_country_flag = NTR_flag_the_ritual_unlock
 			}
+			unlock_decision_tooltip = NTR_ritual_dc
 		}
 	}
 	shared_focus = {
@@ -4554,7 +4556,7 @@
 			562 = {
 			    add_building_construction = {
 				    type = arms_factory
-			        level = 1
+			        level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4562,11 +4564,15 @@
 			        level = 1
 					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 			}
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment
 			    amount = 2000
+			}
+			unlock_decision_category_tooltip = NTR_frost_king_superhighway_cat
+			hidden_effect = {
+				set_country_flag = NTR_flag_fks_unlock_1
 			}
 		}
 	}
@@ -4614,9 +4620,8 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_north_awakens }
 		completion_reward = {
-			add_ideas = ntr_closed_economy
 			add_stability = 0.05
-			add_ideas = NTR_frozen_curtain
+			add_ideas = GOY_NTR_frozen_curtain
 		}
 	}
 	shared_focus = {
@@ -4704,7 +4709,7 @@
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 6
+				amount = 10
 				state = 522
 			}
 		}
@@ -4823,6 +4828,21 @@
 		prerequisite = { focus = NTR_recover_materials }
 		completion_reward = {
 			Improve_Science_Base = yes
+			if = {
+				limit = {
+					has_tech = basic_train
+				}
+				set_technology = {
+					wartime_train = 1
+					popup = yes
+				}
+				else = {
+					set_technology = {
+						basic_train = 1
+						popup = yes
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -5207,7 +5227,7 @@
 		}
 		search_filters = {}
 		allow_branch = {
-			    has_country_flag = NTR_flag_ice3
+			has_country_flag = NTR_flag_ice3
 		}
 		completion_reward = {
 			458 = {
@@ -5233,6 +5253,16 @@
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
+			}
+			hidden_effect = {
+				set_country_flag = NTR_flag_fks_unlock_2
+			}
+			if = {
+				limit = {
+					has_completed_focus = NTR_scavange_ruins
+				}
+				unlock_decision_tooltip = NTR_fks_3
+				unlock_decision_tooltip = NTR_fks_4
 			}
 		}
 	}
@@ -5356,7 +5386,7 @@
 		}
 		search_filters = {}
 		allow_branch = {
-			    has_country_flag = NTR_flag_ice3
+			has_country_flag = NTR_flag_ice3
 		}
 		completion_reward = {
 			add_manpower = 50000
@@ -5443,6 +5473,7 @@
 	            planning_skill = 2
 	            logistics_skill = 2
 			}
+			custom_effect_tooltip = GOY_NTR_lachlan_stats_tt
 		}
 	}
 	shared_focus = {
@@ -5904,6 +5935,9 @@ shared_focus = {
 		prerequisite = { focus = NTR_the_heart }
 		completion_reward = {
 			custom_effect_tooltip = NTR_TT_no_one_oppose
+			effect_tooltip = {
+				add_ideas = NTR_pillage_herzland
+			}
 		}
 	}
 	shared_focus = {
@@ -5947,9 +5981,6 @@ shared_focus = {
 		available = {
 		    has_full_control_of_state = 674
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		search_filters = {}
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_unleash_wrath }
@@ -5974,7 +6005,7 @@ shared_focus = {
 			    province = 1027
 				value = -20
 			}
-			set_province_name = { id = 1027 name = "Ruins of Romau" }
+			set_province_name = { id = 1027 name = GOY_vp_rom_ruins }
 		    news_event = ntribes_news.2
 			HRR = {
 			    add_stability = -0.2
@@ -5994,10 +6025,7 @@ shared_focus = {
 		}
 		available = {
 		    has_full_control_of_state = 382
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}		
+		}	
 		search_filters = {}
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_unleash_wrath }
@@ -6022,7 +6050,7 @@ shared_focus = {
 			    province = 10537
 				value = -30
 			}
-			set_province_name = { id = 10537 name = "Ruins of Griffenheim" }
+			set_province_name = { id = 10537 name = GOY_vp_grif_ruins }
 			news_event = ntribes_news.3
 			HRR = {
 			    add_stability = -0.25
@@ -6047,9 +6075,6 @@ shared_focus = {
 		}
 		has_full_control_of_state = 382	
 		has_full_control_of_state = 674		
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}		
 		relative_position_id = NTR_unleash_wrath
 		prerequisite = { focus = NTR_destroy_city }
@@ -6198,9 +6223,6 @@ shared_focus = {
 		}
 		available = {
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		search_filters = {}
 		allow_branch = {
 			has_country_flag = NTR_flag_ice4 
@@ -6225,9 +6247,6 @@ shared_focus = {
 			factor = 10
 		}
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}		
 		search_filters = {}
 		relative_position_id = NTR_raise_slain
@@ -6254,9 +6273,6 @@ shared_focus = {
 			factor = 10
 		}
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}		
 		search_filters = {}
 		relative_position_id = NTR_raise_slain
@@ -6315,22 +6331,22 @@ shared_focus = {
 		search_filters = {}
 		relative_position_id = NTR_no_rest
 		prerequisite = { focus = NTR_no_rest }
+		allow_branch = {
+			has_country_flag = NTR_flag_ice4 
+		}
 		available = {
 		NOT = {
 		    country_exists = HRR
 		}
 		has_completed_focus = NTR_purge_herz		
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
-		custom_effect_tooltip = NTR_dark_towers_construction
-		hidden_effect = {
-		set_country_flag = NTR_flag_dark_tower_unlock
-		}
+			unlock_decision_category_tooltip = NTR_dark_tower_cat
+			hidden_effect = {
+				set_country_flag = NTR_flag_dark_tower_unlock
 			}
 		}
+	}
 	shared_focus = {
 		id = NTR_stock_slave_mines
 		icon = GFX_goal_forced_res
@@ -6343,22 +6359,22 @@ shared_focus = {
 		search_filters = {}
 		relative_position_id = NTR_no_rest
 		prerequisite = { focus = NTR_no_rest }
+		allow_branch = {
+			has_country_flag = NTR_flag_ice4 
+		}
 		available = {
 		NOT = {
 		    country_exists = HRR
 		}
 		has_completed_focus = NTR_purge_herz		
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
-		custom_effect_tooltip = NTR_slave_mines_text
-		hidden_effect = {
-		set_country_flag = NTR_slave_mines_unlock
-		}
+			unlock_decision_category_tooltip = NTR_slave_mines_cat
+			hidden_effect = {
+				set_country_flag = NTR_slave_mines_unlock
 			}
 		}
+	}
 	shared_focus = {
 		id = NTR_dark_gift
 		icon = GFX_goal_sombra_magic
@@ -6371,28 +6387,29 @@ shared_focus = {
 		search_filters = {}
 		relative_position_id = NTR_no_rest
 		prerequisite = { focus = NTR_no_rest }
-		available = {
-		NOT = {
-		    country_exists = HRR
-		}
-		has_completed_focus = NTR_purge_herz		
-		}
 		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
+			has_country_flag = NTR_flag_ice4 
+		}
+		available = {
+			NOT = {
+				country_exists = HRR
+			}
+			has_completed_focus = NTR_purge_herz		
 		}
 		completion_reward = {
-		add_ideas = NTR_dark_acolytes
-		add_corps_commander_role = {
-			Character = NTR_redsquall
-			traits = { pony_race_trait trait_reckless trait_focused }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-		}
+			add_ideas = NTR_dark_acolytes
+			add_corps_commander_role = {
+				Character = GOY_NTR_redsquall
+				traits = { pony_race_trait trait_reckless trait_focused }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
 			}
+			custom_effect_tooltip = GOY_NTR_redsquall_stats_tt
 		}
+	}
 	shared_focus = {
 		id = NTR_bring_down_the_sky
 		icon = GFX_goal_Attack_Skyfall
@@ -6411,9 +6428,6 @@ shared_focus = {
 		will_lead_to_war_with = FEZ
 		will_lead_to_war_with = HAU
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 			IF = {
@@ -6481,9 +6495,6 @@ shared_focus = {
 		will_lead_to_war_with = AET
 		will_lead_to_war_with = HEL
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 			IF = {
@@ -6626,9 +6637,6 @@ shared_focus = {
 		will_lead_to_war_with = LSC
 		available = {
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
 			IF = {
 			    limit = {
@@ -6705,9 +6713,6 @@ shared_focus = {
 		will_lead_to_war_with = EYR
 		will_lead_to_war_with = ERI
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 			IF = {
@@ -6805,9 +6810,6 @@ shared_focus = {
 		available = {
 		owns_state = 381
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
 			country_event = ntribes.64
 			}
@@ -6829,9 +6831,6 @@ shared_focus = {
 		prerequisite = { focus = NTR_extinguish_the_light }
 		available = {
 		owns_state = 377
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 			country_event = ntribes.65
@@ -6858,9 +6857,6 @@ shared_focus = {
 		owns_state = 553
 		owns_state = 389
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
 			add_ideas = NTR_icetribute
 			}
@@ -6883,9 +6879,6 @@ shared_focus = {
 		available = {
 		owns_state = 553
 		owns_state = 540
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 		custom_effect_tooltip = NTR_vartai_auxilia_tooltip
@@ -6929,9 +6922,6 @@ shared_focus = {
 		available = {
 		owns_state = 389
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
 		custom_effect_tooltip = NTR_griffonstone_destruction
 		hidden_effect = {
@@ -6960,9 +6950,6 @@ shared_focus = {
 		will_lead_to_war_with = SIC
 		will_lead_to_war_with = CYA
 		available = {
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 			IF = {
@@ -7092,9 +7079,6 @@ shared_focus = {
 		will_lead_to_war_with = GRY
 		available = {
 		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
-		}
 		completion_reward = {
 			IF = {
 			    limit = {
@@ -7194,9 +7178,6 @@ shared_focus = {
 		owns_state = 371
 		owns_state = 445
 		owns_state = 385		
-		}
-		allow_branch = {
-			    has_country_flag = NTR_flag_ice4 
 		}
 		completion_reward = {
 		custom_effect_tooltip = NTR_solstice_tooltip

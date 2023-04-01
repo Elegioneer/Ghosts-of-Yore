@@ -1,3 +1,14 @@
+NTR_frost_king_superhighway_cat = {
+    icon = generic_political_actions
+	allowed = {
+        tag = NTR
+    }
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_fks_unlock_1
+	}
+}
+
 NTR_spirits_blessings_cat = {
     icon = GFX_decision_goy_magiс_cat
 	allowed = {
@@ -16,9 +27,15 @@ NTR_dark_magic_cat = {
     }
 	visible = {
 		has_country_flag = NTR_flag_dark_magic_unlock
-		has_country_leader = {
-			ruling_only = yes 
-			character = GOY_NTR_frostking
+		OR = {
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_NTR_frostking
+			}
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_NTR_gavin
+			}
 		}
 	}
 }

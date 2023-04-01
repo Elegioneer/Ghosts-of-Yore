@@ -1,1 +1,28 @@
 ### List of changed EaW files
+# Everything Arantiga-related
+# common/bookmarks/the_gathering_storm.txt
+# common/countries/cosmetic.txt
+# common/decisions/categories/eaw_formable_category.txt
+# common/game_rules/EAW_game_rules.txt
+# common/scripted_localisation/EAW_state_lore_scripted_localisation.txt
+# common/scripted_localisation/EAW_welcomescreen_scripted_localisation.txt
+# common/scripted_triggers/EAW_medals_scripted_triggers.txt
+# common/scripted_triggers/GOY_triggers.txt — has replicas of some eaw triggers
+# events/EAW_Starting_Warning_Events.txt
+# interface/frontendmainview.gui
+# localisation/eaw_bookmarks_l_english.yml
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 

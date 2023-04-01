@@ -69,7 +69,7 @@ characters = {
 			id = -1
 		}
 		field_marshal = {
-		traits = { pony_race_trait politically_connected old_guard adaptable trait_goy_blind trait_reckless winter_specialist }
+		traits = { pony_race_trait politically_connected old_guard adaptable goy_blindness trait_reckless winter_specialist }
 		skill = 4
 		attack_skill = 4
 		defense_skill = 3
@@ -323,7 +323,7 @@ characters = {
 		defense_skill = 4
 		maneuvering_skill = 3
 		coordination_skill = 3
-		legacy_id = 70568
+		#legacy_id = 70568
 		}
 		advisor = {
 		cost = 200
@@ -969,10 +969,11 @@ characters = {
 		}
 	}
 	GOY_NTR_redsquall = {
-		name = NTR_redsquall
+		name = GOY_NTR_redsquall
 		portraits = {
-			civilian = {
+			army = {
 				large = "gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
+				small = "GFX_portrait_pony_generic_land_11_small"
 			}
 		}
 	}

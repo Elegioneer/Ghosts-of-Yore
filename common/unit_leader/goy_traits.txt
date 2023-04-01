@@ -1,9 +1,15 @@
 leader_traits = {
-	trait_goy_blind = { #loc is in NTR_localsiation
+	goy_blindness = { #loc is in NTR_localsiation
 		#icon = GFX_trait_blind #doesn't work
 		type = all
 		trait_type = status_trait
-
+		
+		allowed = {
+			FROM = {
+				tag = NTR
+			}
+		}
+		
 		modifier = {
 			planning_speed = -0.1
 		}
@@ -11,6 +17,8 @@ leader_traits = {
 			skill_bonus_factor = -0.1
 		}
 
-		new_commander_weight = { factor = 0 }
+		new_commander_weight = {
+			factor = 0
+		}
 	}
 }

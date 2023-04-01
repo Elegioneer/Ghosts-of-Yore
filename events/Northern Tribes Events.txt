@@ -2498,7 +2498,7 @@ add_namespace = ntribes_news
 			    add_manpower = -500000
 				set_state_category = pastoral
 			}
-			set_province_name = { id = 6502 name = "Ruins of New Skynavia" }
+			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
 			annex_country = { target = SRS transfer_troops = no }
 			set_victory_points = {
 			province = 6502
@@ -3188,7 +3188,7 @@ add_namespace = ntribes_news
 				}
 				set_technology = {
 					GOY_necromancy_tech = 1
-					popup = no
+					popup = yes
 				}
 				load_oob = NTR_necromancers_OOB
 			}
@@ -3366,7 +3366,7 @@ add_namespace = ntribes_news
                     level = 4
                 }
 				set_state_category = rural
-				set_province_name = { id = 7192 name = "Ruins of Griffonstone" }
+				set_province_name = { id = 7192 name = GOY_vp_stone_ruins }
 			}
 			add_victory_points = {
 			    province = 7192
@@ -3453,5 +3453,31 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.104.a
+		}
+	}
+	country_event = { #Servitude in Death
+	    id = ntribes.105
+	    title = ntribes.105.t
+	    desc = ntribes.105.d
+	    picture = GFX_event_polar_city_walls
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.105.a
+		}
+	}
+	country_event = { #Servitude in Life
+	    id = ntribes.106
+	    title = ntribes.106.t
+	    desc = ntribes.106.d
+	    picture = GFX_event_polar_forest
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.106.a
 		}
 	}

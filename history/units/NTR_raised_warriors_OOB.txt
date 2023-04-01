@@ -1,15 +1,3 @@
-division_template = {
-	name = "Raised Warriors"
-
-	division_names_group = NTR_INF_02
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-	}
-
-}
 units = {
     division = {
 		name = "Frozen Cohort"

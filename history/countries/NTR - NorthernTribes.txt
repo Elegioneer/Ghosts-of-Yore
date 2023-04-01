@@ -92,6 +92,7 @@ recruit_character = GOY_NTR_lachlan
 recruit_character = GOY_NTR_gavin
 recruit_character = GOY_NTR_frostking
 recruit_character = GOY_NTR_erik_grimclaw
+recruit_character = GOY_NTR_redsquall
 
 set_rule = {
 	can_generate_female_aces = yes

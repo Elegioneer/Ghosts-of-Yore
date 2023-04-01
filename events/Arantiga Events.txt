@@ -269,15 +269,15 @@ country_event = { #The Sparletan Language, "borrowed" from base mod
 		add_popularity = { ideology = fascism popularity = 0.05 }
 		set_province_name = {
 			id = 3756
-			name = "Pontelena"
+			name = GOY_vp_pontelena
 		}
 		set_province_name = {
 			id = 7266
-			name = "Sparléos"
+			name = GOY_vp_sparleos
 		}
 		set_province_name = {
 			id = 1325
-			name = "Halbuviros"
+			name = GOY_vp_halbuviros
 		}
 	}
 }
@@ -2724,7 +2724,7 @@ country_event = { #Griffonstone Archives
 			    add_manpower = -300000
 				set_state_category = rural
 			}
-			set_province_name = { id = 6502 name = "Ruins of New Skynavia" }
+			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
 			hidden_effect = {
 			    news_event = { id = arantiga_news.2 days = 5 }
 			}
@@ -6393,11 +6393,11 @@ country_event = { #Karthin - A New Name?
 	fire_only_once = yes
 	option = {
 		name = 	arantiga_decision.1.a
-		set_province_name = { id = 3144 name = "Dorotheopolis" }
+		set_province_name = { id = 3144 name = GOY_vp_dorotheopolis }
 	}
 	option = {
 		name = 	arantiga_decision.1.b
-		set_province_name = { id = 3144 name = "Arantiga" }
+		set_province_name = { id = 3144 name = GOY_vp_arantiga }
 	}
 }
 

@@ -203,7 +203,7 @@ characters = {
 			defense_skill=3
 			planning_skill=1
 			logistics_skill=2
-			legacy_id=2246
+			#legacy_id=2246
 			desc = marc_kippenberger_desc
 		}
 		advisor = {
@@ -441,7 +441,7 @@ characters = {
 			defense_skill=2
 			maneuvering_skill=1
 			coordination_skill=1
-			legacy_id=70569
+			#legacy_id=70569
 		}
 		advisor = {
 			slot = navy_chief
@@ -475,7 +475,7 @@ characters = {
 			defense_skill=3
 			maneuvering_skill=2
 			coordination_skill=2
-			legacy_id=809
+			#legacy_id=809
 		}
 		advisor={
 			slot = navy_chief

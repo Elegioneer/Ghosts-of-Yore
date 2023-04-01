@@ -254,4 +254,8 @@ spriteTypes = {
 		name = "GFX_idea_GOY_ARA_arantiga_knight"
 		texturefile = "gfx/interface/ideas/idea_GOY_ARA_arantiga_knight.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_GOY_frozen_economy"
+		texturefile = "gfx/interface/ideas/idea_GOY_frozen_economy.dds"
+	}
 }
