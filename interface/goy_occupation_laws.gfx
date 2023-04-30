@@ -1,0 +1,7 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_goy_occupation_policy_icon_strip"
+		texturefile = "gfx/interface/occupation/goy_occupation_policy_icon_strip.dds"
+		noOfFrames = 1
+	}
+}

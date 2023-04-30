@@ -35,4 +35,9 @@ spriteTypes = {
 		name = "GFX_modifiers_goy_dark_towers_8"
 		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_dark_towers_8.dds"
 	}
+	spriteType = {
+		name = "GFX_modifiers_goy_dark_towers"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_towers.dds"
+		noOfFrames = 8
+	}
 }

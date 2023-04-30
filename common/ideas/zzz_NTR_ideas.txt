@@ -1780,7 +1780,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 		}
-		GOY_NTR_frozen_curtain = {
+		GOY_frozen_economy = {
 			allowed = {
 				original_tag = NTR
 				has_government = fascism

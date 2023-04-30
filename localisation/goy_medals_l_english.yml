@@ -1,0 +1,29 @@
+﻿l_english:
+
+### ARA ###
+GOY_ARA_knights_cross_medal:0 "Order of Excellence"
+ GOY_ARA_sparletan_sun_medal:0 "Sun of Sparléos"
+ GOY_ARA_twin_swords_medal:0 "Twin Swords of Honour"
+ GOY_ARA_communist_medal:0 "Hero of Peoples' Liberation"
+ GOY_ARA_republican_medal:0 "Order of Merit"
+ GOY_ARA_order_of_arantigos_medal:0 "Order of Arantigos the Great"
+ GOY_ARA_imperial_order_of_arantigos_medal:0 "Imperial Order of Arantigos"
+ GOY_ARA_order_of_arantigos_the_martyr_medal:0 "Order of Arantigos II the Martyr"
+ 
+### BOI ###
+GOY_BOI_iron_cross_medal:0 "The Iron Cross"
+ GOY_BOI_violet_ribbon_medal:0 "The Red Ribbon"
+ GOY_BOI_trinity_order_medal:0 "Order of the Trinity"
+ GOY_BOI_silver_griffon_medal:0 "Order of the Silver Griffon"
+ GOY_BOI_great_tree_medal:0 "Great Tree's Branch"
+ GOY_BOI_royal_order_medal:0 "Royal Order of Griffonstone"
+ 
+### NTR ###
+GOY_NTR_reaver_medal:0 "Reaver"
+ GOY_NTR_berserker_medal:0 "Berserker"
+ GOY_NTR_lodge_veteran_medal:0 "Warrior Lodge Veteran"
+ GOY_NTR_griffonslayer_medal:0 "Griffonslayer" #Griffonlayer UwU LOL
+ GOY_NTR_champ_medal:0 "Champion of the Tribes"
+ GOY_NTR_necromancer_medal:0 "Adept of Necromancy"
+ GOY_NTR_princesses_chosen_medal:0 "Princess' Chosen"
+ GOY_NTR_honorary_stormshield_medal:0 "Honorary Dignified Stormshield"

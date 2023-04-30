@@ -312,4 +312,20 @@ spriteTypes = {
 		name = "GFX_goal_goy_resize_ariscounter"
 		texturefile = "gfx/interface/goals/goal_goy_resize_ariscounter.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_arantiga_rises"
+		texturefile = "gfx/interface/goals/goal_goy_arantiga_rises.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_dark_towers"
+		texturefile = "gfx/interface/goals/goal_GOY_dark_towers.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_solstice"
+		texturefile = "gfx/interface/goals/goal_GOY_solstice.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_dark_gift"
+		texturefile = "gfx/interface/goals/goal_GOY_dark_gift.dds"
+	}
 }

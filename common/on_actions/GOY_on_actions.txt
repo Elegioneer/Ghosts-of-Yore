@@ -205,6 +205,7 @@ on_actions = {
 					GOY_necromancy_tech = 0
 					popup = no
 				}
+				clr_country_flag = NTR_flag_frost_occ_available
 				remove_ideas = {
 					NTR_tribal_militias
 					NTR_tribal_militias_2
@@ -348,7 +349,7 @@ on_actions = {
 					}
 				}
 				ROOT = {
-					country_event = arantiga.102
+					#country_event = arantiga.102
 				}
 			}
 			if = { #Cityfall Arantigos Aquila
@@ -366,7 +367,7 @@ on_actions = {
 					}
 				}
 				ROOT = {
-					country_event = arantiga.103
+					#country_event = arantiga.103
 				}
 			}
 			if = { #Cityfall Arantigos Griffenheim
@@ -384,7 +385,7 @@ on_actions = {
 					}
 				}
 				ROOT = {
-					country_event = arantiga.104
+					#country_event = arantiga.104
 				}
 			}
 		}

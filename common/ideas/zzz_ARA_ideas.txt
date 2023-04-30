@@ -3936,19 +3936,24 @@ country = {
 		ARA_expanding_the_arsenal = {
 			allowed = {
 				always = no
-				any_other_country = {
-					is_in_faction_with = ARA
-					owns_state = 281
-				}
 			}
 			allowed_civil_war = {
 				always = yes
 			}
+			do_effect = {
+				any_country = {
+					OR = {
+						is_in_faction_with = ARA
+						tag = ARA
+					}
+					controls_state = 281
+				}
+			}
 			picture = EQS_nuclear_power
 			removal_cost = -1
 			modifier = {
-				nuclear_production = 1
 				nuclear_production_factor = 0.1
+				production_speed_nuclear_reactor_factor = 0.1
 			}
 		}
 		ARA_arantigan_payment = {

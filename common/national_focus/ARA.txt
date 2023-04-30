@@ -9516,7 +9516,7 @@ focus_tree = {
 	}
 	focus = {
 	    id = ARA_eternal_empire
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		icon = GFX_goal_goy_arantiga_rises
 		x = 0
 		y = 5
 		relative_position_id = ARA_emperor_of_griffonkind
@@ -10385,6 +10385,19 @@ focus_tree = {
 					type = nuclear_reactor
 					level = 1
 					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 281
+						}
+					}
+				}
+				add_offsite_building = {
+					type = nuclear_reactor
+					level = 1
 				}
 			}
 		}

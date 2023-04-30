@@ -8,15 +8,6 @@ state_lore_text_container_state_name_short_562:0 "Everfrost"
  state_lore_text_container_state_name_562:0 "The §YCity§! of the §YCrystal Spires§!"
  state_lore_text_container_state_description_562:0 "It is a common belief across the world, that there are no cities in northern §YGriffonia§! - just bunches of shacks and log cabins, scattered along the frozen wasteland. It makes foreigners even more surprised when they visit §CEverfrost§! - capital of §YTir Deighe§! and its largest city. History of Everfrost begins with the unification of the §Ynorthern tribes§! by §CCainnech Snowflake§!. The great mages and craftsponies started to build then a structure, known today as §YSnowflake Palace§!, as a residence of a new king and a place of gatherings of the clans. It is said that the Palace was rather “grown”, than built, using techniques that were later forgotten - and druids managed to shape crystals into seven magnificent spires, that are the highest structures in the city.\n\nAs centuries have passed, the city slowly grew, becoming a main centre of commerce of Tir Deighe. After merchants, craftsponies followed, and when a §Ygreat library§! was created in the halls of Snowflake Palace, many ponies travelled to Evefrost to study knowledge of the previous generations. As a result Everfrost does not resemble any other city in Griffonia - it is a place of art and beauty, with even the smallest buildings being elaborately decorated through generations. Ponies tended to expand their dwellings both on the surface and below it - and one can see how next owners expanded homes they inherited - wanting to match the accomplishments of their ancestors. Of course one cannot forget about the §YGreat Clans§! - each of them, as a matter of honour, erected a large §Yspire-mansion§!, mimicking the royal palace as a show of clan wealth and power.\n\nHowever, years of war with §RSkynavia§! have also affected the Everfrost - though not directly attacked, it was flooded with §Yrefugees§! who now inhabit makeshift districts constructed on the outskirts of the capital. Warbands stop here, before marching to the front, and workshops produce weapons rather than works of art. Peace and harmony of the Everfrost are gone - perhaps forever, yet the city still remains the symbol of pony unity and their ingenuity."
 
-### Parties ###
-NTR_snowflakes_party:0 "Династия Сноуфлейк"
- NTR_snowflakes_party_long:0 "Династия Сноуфлейк"
- NTR_stormshields_party:0 "Клан Стормшилд"
- NTR_stormshields_party_long:0 "Клан Стормшилд"
- NTR_traitor_party:0 "Сторонники Скайнавии"
- NTR_traitor_party_long:0 "Сторонники Скайнавии"
- NTR_warrior_lodges_party:0 "Совет дружин"
- NTR_warrior_lodges_party_long:0 "Совет дружин"
 
 ### Ideas ###
 NTR_war_north:0 "War in the North"
@@ -101,8 +92,8 @@ NTR_war_north:0 "War in the North"
  NTR_strict_hierarchy_desc:0 "Our society is divided into three groups - ponies, northern griffons and all south originating griffons. While ponies are dominant, griffons are mostly let to govern themselves in areas where they live, however they have little to no voice in our nation's politics."
  NTR_protector_homeland:0 "Protection of the Homeland"
  NTR_protector_homeland_desc:0 "Never another Skynavia!"
- NTR_ice_curtain_idea:0 "Ice Curtain"
- NTR_ice_curtain_idea_desc:0 "There is no such thing as “too many fortifications”"
+ GOY_frozen_economy:0 "Ice Curtain"
+ GOY_frozen_economy_desc:0 "There is no such thing as “too many fortifications”"
  NTR_fine_weapons:0 "Finest Weapons"
  NTR_fine_weapons_desc:0 "Moltenrock weaponsmiths create only the finest guns - all the others that do not meet their high standards are melted - it would be a disgrace for a craftsman to create a subpar item."
  NTR_endurance_blessing:0 "Blessing of Endurance"
@@ -1229,60 +1220,7 @@ NTR_TT_fate:0 "The fate of §CTir Deighe§! will be decided."
  NTR_TT_necromancers_available:0 "§gNecromancer§! §Ysupport companies§! are available for recruitment.\n2 §YNecromancer Divisions§! will be §Gdeployed§!."
  GOY_NTR_redsquall_stats_tt:0 "§RAttack Skill§!: §g4§!\n§ODefence Skill§!: §g3§!\n§GPlanning Skill§!: §g3§!\n§CLogistics Skill§!: §g3§!\n"
  GOY_NTR_lachlan_stats_tt:0 "§RAttack Skill§!: §g5§!\n§ODefence Skill§!: §g3§!\n§GPlanning Skill§!: §g2§!\n§CLogistics Skill§!: §g2§!\n"
- 
-### Leader Descriptions ###
-NTR_GOY_stormshield:0 "Эуан Стормшилд"
- GOY_stormshield_desc:0 "Since his youth, Euan has been fascinated with the outside world. Growing up in the coastal city of Frostbell, he pestered merchants and sailors, asking them about stories of the foreign lands. It was during that time, when he met Oskar Plumenjar – an exiled heir to the duchy of Cloudbury, who quickly became a friend of Euan – and later, his confidant. Influenced by friendship with Oskar and sailors' stories, Euan realised how much in need of changes was his homeland, and that the only way to win the war with Skynavians was to embrace the ways of griffons – and to outmatch them. Following the death of clan Stormshield's old chieftain, Euan challenged his heir to the traditional duel – and won, becoming the new clan leader. He soon made himself known as a talented diplomat and organiser, leading Stormshield to become the most influential northern clan. Now, being in charge of Tir Deighe itself, Euan is free to introduce the reforms meant to turn these ragged lands into a modern, unified state.\n\n§YPortrait By§!: Rich May"
- NTR_gavin:0 "Архидруид Гэвин" 
- NTR_gavin_desc:0 "Gavin the Frost Beard, archdruid of the Circle of Ice, was once one of the most respected ponies in the entire Tir Deighe. No one really knows how old he is - and the blessing of Ice made him live much longer than other ponies - far longer than a century, with passing years not dulling his sharp mind. He led the Circle longer than even the oldest ones remember and many asked him for advice - making him one of the most influential ponies in Tir Deighe, rivalling even chieftains of the Great Clans.\n\nNow however, the archdruid has realised that drastic measures must be taken if ponies want to survive griffon onslaught. After descending to the Vault of Broken Swords and making a pact with Kings of Storm, Archdruid was given immense powers - which he intends to use to destroy enemies of the northern ponies. It is a dangerous deal, but Gavin knows that it is the only way to save what he loves most - his kinsponies.\n\n§YPortrait By§!: Leo the Pone"
- NTR_frost_desc:0 "Creature of grief, guilt and vengeance, the Frost King - no longer Gavin the Frots Beard, but not really a Frost King of old. His goal is to protect his pony subjects and claim the position they deserve - as only rulers of Griffonia. His hatred towards Griffons is immense, and his goal is to enslave the entire griffonkind, to make it pay for their crimes against northern ponies. Few know what is the true extent of the Frost King powers, but few doubt he is one of the most powerful sorcerers to ever walk the world. Now, he turns his eyes south - and griffons shall tremble in fear, when undead armies will march to impose a will of their sovereign.\n\n§YPortrait By§!: Leo the Pone"
- NTR_frostking:0 "Морозный Король"
- NTR_GOY_princessfiana:0 "Княгиня Фиана II"
- GOY_fiana_desc:0 "Fiana was never meant to be a ruler. Youngest of the children of the previous prince, Fothad III, Fiana was born barely a few years before the skynavian invasion - and when griffons attacked, was just a child. However her older brothers and father have perished during the first years of the war with griffons, leaving Fiana the last of the Snowflake line - and crowned princess in 995. Despite being only fourteen at a time, Fiana tried her best to mediate between increasingly conflicted clans, however was largely unable to solve any of the issues that plagued her realm. Young, inexperienced and not respected by elders and chieftains, she nevertheless tried her best in ruling the nation . She is still being seen as a unifying symbol - a last member of Snowflake clan, the reminder of the past days of peace and harmony. While rather meek and shy, Fiana is determined to save Tir Deighe - and not sacrifice centuries old traditions doing so."
- NTR_GOY_gordonthearcher:0 "Гордон Лучник"
- NTR_GOY_greyfox:0 "Грей Фокс"
 
-### Cosmetic Tags ###
-NTR_GOY_democratic:0 "Тир Дейге"
- NTR_GOY_democratic_DEF:0 "Северное Королевство"
- NTR_GOY_democratic_ADJ:0 "Северн."
- NTR_GOY_fascism:0 "Тир Дейге"
- NTR_GOY_fascism_DEF:0 "Северное Государство"
- NTR_GOY_fascism_ADJ:0 "Северн."
- NTR_GOY_neutrality:0 "Тир Дейге"
- NTR_GOY_neutrality_DEF:0 "Северное Княжество"
- NTR_GOY_neutrality_ADJ:0 "Северн."
- NTR_GOY_communism:0 "Свободные Северные Коммуны"
- NTR_GOY_communism_DEF:0 "Свободные Северные Коммуны"
- NTR_GOY_communism_ADJ:0 "Северн."
- NTR_QUEEN_democratic:0 "Северное Королевство"
- NTR_QUEEN_democratic_DEF:0 "Северное Королевство"
- NTR_QUEEN_democratic_ADJ:0 "Северн."
- NTR_QUEEN_neutrality:0 "Северное Королевство"
- NTR_QUEEN_neutrality_DEF:0 "Северное Королевство"
- NTR_QUEEN_neutrality_ADJ:0 "Северн."
- NTR_PRINCE_democratic:0 "Северное Княжество"
- NTR_PRINCE_democratic_DEF:0 "Северное Княжество"
- NTR_PRINCE_democratic_ADJ:0 "Северн."
- NTR_PRINCE_neutrality:0 "Северное Княжество"
- NTR_PRINCE_neutrality_DEF:0 "Северное Княжество"
- NTR_PRINCE_neutrality_ADJ:0 "Северн."
- NTR_TYRANNY_fascism:0 "Ледовая Тирания"
- NTR_TYRANNY_fascism_DEF:0 "Ледовая Тирания"
- NTR_TYRANNY_fascism_ADJ:0 "Северн."
- 
-### Political Parties ###
-NTR_council_party:0 "Северный совет"
- NTR_council_party_long:0 "Северный совет"
- NTR_royal_party:0 "Партия Её Величества"
- NTR_royal_party_long:0 "Партия Её Величества"
- NTR_druids_party:0 "Ледовый Ковен"
- NTR_druids_party_long:0 "Ледовый Ковен"
- NTR_clan_council:0 "Совет кланов"
- NTR_clan_council_long:0 "Совет кланов"
-
-### Factions ###
-NTR_northern_league:0 "Северная Лига"
 
 ### Traits ###
 GOY_popular_fiana:0 "Popular Leader"
@@ -1509,32 +1447,8 @@ NTR_ostfloy_refinery:0 "Ostfloy Refinery"
  NTR_carvers_of_ice:0 "Ice Carvers"
  NTR_dinkau_shipyard:0 "Dinkau Shipyard"
 
-### Medals ###
-GOY_NTR_reaver_medal:0 "Опустошитель"
- GOY_NTR_berserker_medal:0 "Берсерк"
- GOY_NTR_lodge_veteran_medal:0 "Дружинник-ветеран"
- GOY_NTR_griffonslayer_medal:0 "Истребитель грифонов"
- GOY_NTR_champ_medal:0 "Племенной чемпион"
- GOY_NTR_necromancer_medal:0 "Адепт некромантии"
- GOY_NTR_princesses_chosen_medal:0 "Избранный княгини"
- GOY_NTR_honorary_stormshield_medal:0 "Почётный Стормшилд"
-
-### Unit Commander Ranks ###
-NTR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_0:0 "Тысячник"
- NTR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_1:0 "Чемпион дружины"
- NTR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_2:0 "Старший дружинник"
- NTR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_3:0 "Воевода"
- NTR_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_4:0 "Посадник"
-
 ### Tech ###
 GOY_necromancy_tech:0 "Боевая Некромантия"
 
 ### Necromancer support company ###
 goy_necromancer_company:0 "Шабаш Некромантов"
-
-### Victory Points and State Names##
-GOY_vp_sky_ruins:0 "Руины Новой Скайнавии"
- GOY_vp_grif_ruins:0 "Руины Грифенхайма"
- GOY_vp_stone_ruins:0 "Руины Грифонстоуна"
- GOY_vp_rom_ruins:0 "Руины Ромау"
- GOY_vp_holy_forge:0 "Священная Кузня"

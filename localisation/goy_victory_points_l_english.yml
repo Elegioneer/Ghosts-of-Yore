@@ -1,0 +1,25 @@
+﻿l_english:
+##Victory Point and State names
+
+### ARA-related ##
+GOY_vp_port_featherin:0 "Port-Featherin"
+ GOY_vp_borealia:0 "Borealia"
+ GOY_vp_invicta:0 "Invicta"
+ GOY_vp_lysimachia:0 "Lysimachia"
+ GOY_vp_nova_karthin:0 "Nova Karthin"
+ GOY_vp_victoria:0 "Victoria"
+ GOY_vp_sollea:0 "Sollea"
+ GOY_vp_gladius:0 "Gladius"
+ GOY_vp_vere_nubes:0 "Vere Nubes"
+ GOY_vp_pontelena:0 "Pontelena"
+ GOY_vp_sparleos:0 "Sparléos"
+ GOY_vp_halbuviros:0 "Halbuviros"
+ GOY_vp_dorotheopolis:0 "Dorotheopolis"
+ GOY_vp_arantiga:0 "Arantiga"
+ 
+### NTR-related ##
+GOY_vp_sky_ruins:0 "Ruins of New Skynavia"
+ GOY_vp_grif_ruins:0 "Ruins of Griffenheim"
+ GOY_vp_stone_ruins:0 "Ruins of Griffonstone"
+ GOY_vp_rom_ruins:0 "Ruins of Romau"
+ GOY_vp_holy_forge:0 "Holy Forge"

@@ -1,0 +1,29 @@
+﻿l_english:
+
+### ARA ###
+GOY_ARA_knights_cross_medal:0 "Орден Отличия"
+ GOY_ARA_sparletan_sun_medal:0 "Солнце Спарлеоса"
+ GOY_ARA_twin_swords_medal:0 "Скрещенные Мечи Чести"
+ GOY_ARA_communist_medal:0 "Герой Народного Освобождения"
+ GOY_ARA_republican_medal:0 "Медаль за Заслуги"
+ GOY_ARA_order_of_arantigos_medal:0 "Орден Арантигоса Великого"
+ GOY_ARA_imperial_order_of_arantigos_medal:0 "Императорский Орден Арантигоса"
+ GOY_ARA_order_of_arantigos_the_martyr_medal:0 "Орден Арантигоса II Мученика"
+ 
+### BOI ###
+GOY_BOI_iron_cross_medal:0 "Железный Крест"
+ GOY_BOI_violet_ribbon_medal:0 "Красная Лента"
+ GOY_BOI_trinity_order_medal:0 "Орден Троицы"
+ GOY_BOI_silver_griffon_medal:0 "Орден Серебряного грифона"
+ GOY_BOI_great_tree_medal:0 "Ветвь Великого Дерева"
+ GOY_BOI_royal_order_medal:0 "Орден Его Величества"
+ 
+### NTR ###
+GOY_NTR_reaver_medal:0 "Опустошитель"
+ GOY_NTR_berserker_medal:0 "Берсерк"
+ GOY_NTR_lodge_veteran_medal:0 "Дружинник-ветеран"
+ GOY_NTR_griffonslayer_medal:0 "Истребитель грифонов"
+ GOY_NTR_champ_medal:0 "Племенной чемпион"
+ GOY_NTR_necromancer_medal:0 "Адепт некромантии"
+ GOY_NTR_princesses_chosen_medal:0 "Избранный княгини"
+ GOY_NTR_honorary_stormshield_medal:0 "Почётный Стормшилд"

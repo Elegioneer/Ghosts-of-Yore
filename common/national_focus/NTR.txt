@@ -4621,7 +4621,7 @@
 		prerequisite = { focus = NTR_north_awakens }
 		completion_reward = {
 			add_stability = 0.05
-			add_ideas = GOY_NTR_frozen_curtain
+			add_ideas = GOY_frozen_economy
 		}
 	}
 	shared_focus = {
@@ -5077,9 +5077,25 @@
 		prerequisite = { focus = NTR_slave_economy }
 		prerequisite = { focus = NTR_take_magic }
 		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = VED
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = VED
+				}
+			}
+			hidden_effect = {
+			every_other_country = { #Best wargoal ever
+				limit = {
+					original_tag = VED
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+						expire = 0
+					}
+				}
+			}
 			}
 		}
 	}
@@ -5230,6 +5246,8 @@
 			has_country_flag = NTR_flag_ice3
 		}
 		completion_reward = {
+			custom_effect_tooltip = NTR_tt_frost_occ_available
+			set_country_flag = NTR_flag_frost_occ_available
 			458 = {
 			    add_building_construction = {
 				    type = industrial_complex
@@ -6321,7 +6339,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = NTR_symbol_of_power
-		icon = GFX_goal_crystal_palace
+		icon = GFX_goal_GOY_dark_towers
 		x = 0
 		y = 1
 		cost = 5.00
@@ -6377,7 +6395,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = NTR_dark_gift
-		icon = GFX_goal_sombra_magic
+		icon = GFX_goal_GOY_dark_gift
 		x = -2
 		y = 1
 		cost = 5.00
@@ -6881,7 +6899,23 @@ shared_focus = {
 		owns_state = 540
 		}
 		completion_reward = {
-		custom_effect_tooltip = NTR_vartai_auxilia_tooltip
+			custom_effect_tooltip = NTR_vartai_auxilia_tooltip
+			effect_tooltip = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 633
+							state = 634
+							state = 553
+							state = 537
+							state = 540
+							state = 552
+							state = 505
+						}
+					}
+					add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
+				}
+			}
 			hidden_effect = {
 				633 = {
 				add_dynamic_modifier = { modifier = NTR_frost_auxilias_region }
@@ -6923,10 +6957,10 @@ shared_focus = {
 		owns_state = 389
 		}
 		completion_reward = {
-		custom_effect_tooltip = NTR_griffonstone_destruction
-		hidden_effect = {
+		#custom_effect_tooltip = NTR_griffonstone_destruction
+		#hidden_effect = {
 		country_event = ntribes.67		
-		}
+		#}
 			}
 		}		
 shared_focus = {
@@ -7162,7 +7196,7 @@ shared_focus = {
 		}
 	shared_focus = {
 		id = NTR_the_solstice
-		icon = GFX_goal_cry_evil_genius
+		icon = GFX_goal_GOY_solstice
 		x = 0
 		y = 5
 		cost = 5.00
@@ -7181,9 +7215,9 @@ shared_focus = {
 		}
 		completion_reward = {
 		custom_effect_tooltip = NTR_solstice_tooltip
-		hidden_effect = {
-		country_event = ntribes.68		
-		}
+		#hidden_effect = {
+			country_event = ntribes.68		
+		#}
 			}
 		}
 ########################################################

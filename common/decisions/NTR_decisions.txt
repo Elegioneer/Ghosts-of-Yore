@@ -68,8 +68,7 @@ NTR_frost_king_superhighway_cat = {
             has_political_power > 25
 			num_of_civilian_factories_available_for_projects > 0
 			owns_state = 601
-			owns_state = 474
-			owns_state = 485
+			owns_state = 522
 		}
 		modifier = {
 			civilian_factory_use = 1

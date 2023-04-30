@@ -63,7 +63,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = ""
+			desc = "NTR_GOY_gordonthearcher_desc"
 			ideology = stratocracy
 			expire = "1965.1.1.1"
 			id = -1
@@ -161,7 +161,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-		traits = { pony_race_trait trait_reckless }
+		traits = { medical_expert pony_race_trait trait_reckless }
 		desc = ""
 		skill = 2
 		attack_skill = 1
@@ -913,15 +913,16 @@ characters = {
 		name = NTR_iron_bear
 		portraits = {
 			army = {
+				large = "gfx/leaders/NTR/GOY_ironbear.tga"
 				small = "GFX_idea_GOY_NTR_roflbear"
 			}
 		}
 		advisor = {
-		cost = 100
-		slot = high_command
-		ledger = army
-		idea_token = NTR_iron_bear
-		allowed = {
+			cost = 100
+			slot = high_command
+			ledger = army
+			idea_token = NTR_iron_bear
+			allowed = {
 				original_tag = "NTR"
 			}		
 			ai_will_do = {
@@ -932,6 +933,15 @@ characters = {
 			visible = {
 			}
 			traits = { GOY_ntr_bear_warlord }
+		}
+		corps_commander = {
+			traits = { bear_race_trait bearer_of_artillery winter_specialist }
+			desc = ""
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}	
 	GOY_NTR_lachlan = {
@@ -972,8 +982,8 @@ characters = {
 		name = GOY_NTR_redsquall
 		portraits = {
 			army = {
-				large = "gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
-				small = "GFX_portrait_pony_generic_land_11_small"
+				large = "GFX_portrait_riv_pony_generic_1"
+				small = "GFX_portrait_riv_pony_generic_1_small"
 			}
 		}
 	}
