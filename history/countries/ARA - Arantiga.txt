@@ -2,6 +2,8 @@
 oob = "ARA_1007"
 set_research_slots = 2
 
+set_global_flag = ghosts_of_yore_enabled
+
 set_technology = {
 	griffon_race = 1
 	tech_griffon_army = 1

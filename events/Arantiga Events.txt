@@ -1203,6 +1203,7 @@ country_event = { #Griffonstone Archives
 				days = 360
 			}
 			add_ideas = ARA_great_temple
+			save_current_manpower = yes
 			371 = {
 			    add_manpower = 500000
 			    add_extra_state_shared_building_slots = 5
@@ -1212,6 +1213,7 @@ country_event = { #Griffonstone Archives
 					instant_build = yes
 				}
 			}
+			restore_previous_manpower = yes
 	    }
 	}
 	country_event = { #arantigan atrocities
@@ -1224,9 +1226,11 @@ country_event = { #Griffonstone Archives
 	    option = {
 	        name = arantiga_chaos.026.a
 	        add_stability = -0.1
+			save_current_manpower = yes
 			358 = {
 			    add_manpower = 200000
 			}
+			restore_previous_manpower = yes
 	    }
 	}
 	country_event = { #arantigan exiles
@@ -1412,6 +1416,7 @@ country_event = { #Griffonstone Archives
 				days = 90
 			}
 			add_ideas = ARA_sicameon_rebellion
+			save_current_manpower = yes
 			every_owned_state = {
 			    limit = {
 				    is_core_of = SIC
@@ -1474,6 +1479,7 @@ country_event = { #Griffonstone Archives
                     damage = 2
                 }
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	
@@ -1500,6 +1506,7 @@ country_event = { #Griffonstone Archives
 			add_manpower = -100000
 			add_political_power = -100
 			add_stability = -0.1
+			save_current_manpower = yes
 			445 = {
 			    add_manpower = -500000
 				damage_building = {
@@ -1665,6 +1672,7 @@ country_event = { #Griffonstone Archives
                     damage = 2
                 }
 			}
+			restore_previous_manpower = yes
 			hidden_effect = {
 			    news_event = arantiga_news.10
 			}
@@ -4665,6 +4673,7 @@ country_event = { #Death of an Idea
 		ai_chance = {
 			base = 5
 		}
+		save_current_manpower = yes
 		add_political_power = -100
 		377 = {
 		    add_manpower = -50000
@@ -4681,6 +4690,7 @@ country_event = { #Death of an Idea
 		376 = {
 		    add_manpower = -50000
 		}
+		restore_previous_manpower = yes
 	}
 }
 
@@ -5164,9 +5174,11 @@ country_event = { #Child Dies
 	fire_only_once = yes
 	option = {
 		name = 	arantiga.099.a
+		save_current_manpower = yes
 		382 = {
 		    add_manpower = -300000
 		}
+		restore_previous_manpower = yes
 		add_stability = -0.10
 		add_war_support = -0.10
 		add_timed_idea = {

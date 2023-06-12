@@ -81,6 +81,17 @@ on_actions = {
 					}
 				}
 			}
+			IF = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+				}
+				NTR = {
+					add_ideas = GOY_spirits_religion
+				}
+				GSG = {
+					add_ideas = griffon_race
+				}
+			}
 		}
 	}
 	on_capitulation = {

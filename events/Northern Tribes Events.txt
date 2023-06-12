@@ -1256,6 +1256,7 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.23.a
+			save_current_manpower = yes
             522 = {
                 add_manpower = -500000
                 remove_core_of = SRS
@@ -1292,6 +1293,7 @@ add_namespace = ntribes_news
                     country_event = ntribes.59
                 }
             }
+			restore_previous_manpower = yes
 		}
         option = {
 		    name = ntribes.23.b
@@ -1341,6 +1343,7 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.24.a
 			add_manpower = -25000
+			save_current_manpower = yes
 			542 = {
 			    add_manpower = -20000
 			    add_extra_state_shared_building_slots = 1
@@ -1353,6 +1356,7 @@ add_namespace = ntribes_news
 			    add_manpower = -20000
 			    add_extra_state_shared_building_slots = 1
 			}
+			restore_previous_manpower = yes
 		}
 		option = {
 		    name = ntribes.24.b
@@ -1469,6 +1473,7 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.28.a
+			save_current_manpower = yes
 			563 = {
 			    add_manpower = -100000
 			}
@@ -1495,6 +1500,7 @@ add_namespace = ntribes_news
 			    country_event = ntribes.61
 			}
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #Influx of Refugees
@@ -1576,6 +1582,7 @@ add_namespace = ntribes_news
 				trait = GOY_god_of_north
 				ideology = esotericism
 			}
+			save_current_manpower = yes
             485 = {
                 add_manpower = -500000
             }
@@ -1591,6 +1598,7 @@ add_namespace = ntribes_news
             432 = {
                 add_manpower = -100000
             }
+			restore_previous_manpower = yes
             hidden_effect = {
             #stw brz fea pyt gri yal ang kat
                 IF = {
@@ -1710,6 +1718,7 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.32.a
             custom_effect_tooltip = NTR_tt_kill_ten_k
+			save_current_manpower = yes
 			hidden_effect = {
 			    #Angriver
 			547 = {
@@ -1835,6 +1844,7 @@ add_namespace = ntribes_news
 			    add_manpower = -10000
 			}
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #Long March North
@@ -1865,6 +1875,7 @@ add_namespace = ntribes_news
             add_stability = -0.05
             add_war_support = -0.05
             custom_effect_tooltip = NTR_tt_kill_five_k
+			save_current_manpower = yes
 			hidden_effect = {
 			    #Angriver
 			547 = {
@@ -1990,6 +2001,7 @@ add_namespace = ntribes_news
 			    add_manpower = -5000
 			}
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #The Mission
@@ -2022,6 +2034,7 @@ add_namespace = ntribes_news
                 type = infantry_equipment
                 amount = -5000
             }
+			save_current_manpower = yes
             382 = {
                 set_demilitarized_zone = yes
                 add_manpower = -100000
@@ -2029,6 +2042,7 @@ add_namespace = ntribes_news
                 damage_building = { type = arms_factory damage = 2.0 }
                 damage_building = { type = infrastructure damage = 2.0 }
             }
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #The Meeting
@@ -2119,6 +2133,7 @@ add_namespace = ntribes_news
                 type = infantry_equipment
                 amount = -5000
             }
+			save_current_manpower = yes
             #Romau
 			674 = {
 			    add_manpower = -50000
@@ -2171,6 +2186,7 @@ add_namespace = ntribes_news
 			    add_manpower = -5000
 				set_demilitarized_zone = yes
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #The Heart
@@ -2213,6 +2229,7 @@ add_namespace = ntribes_news
                 type = infantry_equipment
                 amount = -2500
             }
+			save_current_manpower = yes
             434 = {
 			    add_manpower = -5000
                 set_demilitarized_zone = yes
@@ -2245,6 +2262,7 @@ add_namespace = ntribes_news
 			    add_manpower = -5000
                 set_demilitarized_zone = yes
 			}
+			restore_previous_manpower = yes
 		}
 	}
     country_event = { #The Herzland Rebellion
@@ -2340,17 +2358,22 @@ add_namespace = ntribes_news
 					add_equipment_to_stockpile = {
 						type = artillery_equipment
 						producer = GRI
-						amount = 250
+						amount = 1000
 					}
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
 						producer = GRI
-						amount = 7500
+						amount = 15000
+					}
+					add_equipment_to_stockpile = {
+						type = magical_equipment
+						producer = GRI
+						amount = 5000
 					}
 					add_equipment_to_stockpile = {
 						type = support_equipment
 						producer = GRI
-						amount = 250
+						amount = 1000
 					}
 					add_equipment_to_stockpile = {
 						type = train_equipment
@@ -2360,8 +2383,28 @@ add_namespace = ntribes_news
 					add_equipment_to_stockpile = {
 						type = anti_tank_equipment
 						producer = GRI
-						amount = 250
-					}					
+						amount = 1000
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						producer = GRI
+						amount = 2000
+					}
+					add_equipment_to_stockpile = {
+						type = cas_3
+						producer = GRI
+						amount = 500
+					}
+					add_equipment_to_stockpile = {
+						type = improved_fighter_default
+						producer = GRI
+						amount = 750
+					}
+					add_equipment_to_stockpile = {
+						type = improved_medium_tank_default
+						producer = GRI
+						amount = 500
+					}
 				}				
 			}
 		}
@@ -2412,7 +2455,7 @@ add_namespace = ntribes_news
 			hidden_effect = {
 				load_oob = SRS_emergency_ice_divisions
 				add_timed_idea = {
-				idea = NTR_kill_ntribes
+					idea = NTR_kill_ntribes
 					days = 150
 				}
 			}
@@ -3257,6 +3300,7 @@ add_namespace = ntribes_news
 			}
 			add_stability = -0.1
 			add_manpower = -50000
+			save_current_manpower = yes
             377 = {
 			    add_manpower = -250000
 			}
@@ -3312,7 +3356,8 @@ add_namespace = ntribes_news
             406 = {
 			    add_manpower = -50000
 			}			
-			}					
+			}
+			restore_previous_manpower = yes			
 		}
 	}
 	country_event = { #Aquileian Pony Refugees
@@ -3329,9 +3374,11 @@ add_namespace = ntribes_news
 			ai_chance = {
 			    base = 10
 			}
+			save_current_manpower = yes
             362 = {
 			    add_manpower = -50000
 			}	
+			restore_previous_manpower = yes
 		}
 	}
 	country_event = { #Griffonstone burns
@@ -3351,6 +3398,7 @@ add_namespace = ntribes_news
 			add_manpower = -100000
 			add_stability = -0.05
 			add_war_support = -0.05
+			save_current_manpower = yes
             389 = {
 			    add_manpower = -500000
 				remove_building = {
@@ -3371,19 +3419,20 @@ add_namespace = ntribes_news
 			add_victory_points = {
 			    province = 7192
 				value = -15
-			}			
-			news_event = ntribes_news.7	
-		hidden_effect = {
-		every_other_country = {
-			limit = {
-				is_griffon_continent_griffon_country = yes
-				NOT = {
-					is_in_faction_with = NTR
-					}
 			}
+			restore_previous_manpower = yes
+			news_event = ntribes_news.7	
+			hidden_effect = {
+			every_other_country = {
+				limit = {
+					is_griffon_continent_griffon_country = yes
+					NOT = {
+						is_in_faction_with = NTR
+					}
+				}
 				add_ideas = NTR_avenge_griffonstone
-		}
-		}
+			}
+			}
 		}	
 		}
 	country_event = { #Oblivion

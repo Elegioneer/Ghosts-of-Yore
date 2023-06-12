@@ -6465,7 +6465,7 @@ shared_focus = {
 		is_subject = no
 	}
 	bypass = {
-		OR = { 
+		OR = {
 		    VED = { 
 		        exists = no 
 		    }
@@ -6490,6 +6490,16 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BOI_go_after_vedina"
 		create_wargoal = { type = annex_everything target = VED }
+		if = {
+			limit = {
+				has_global_flag = tales_of_griffonia_enabled
+				GFG = { exists = yes }
+			}
+			create_wargoal = {
+				type = annex_everything 
+				target = GFG
+			}
+		}
 		hidden_effect = {
 			every_country_with_original_tag = {
 				original_tag_to_check = VED

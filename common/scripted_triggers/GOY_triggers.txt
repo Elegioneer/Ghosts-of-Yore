@@ -90,9 +90,12 @@ country_with_custom_advisors = {
 		original_tag = CTL
 		original_tag = MQA
 		original_tag = CVA
+		original_tag = HEL
 		original_tag = FRN
 		original_tag = JES
 		original_tag = TAL
+		original_tag = PLB
+		original_tag = ARA
 		original_tag = TBK
 		original_tag = CTH
 		original_tag = HIE
@@ -116,6 +119,7 @@ country_with_custom_designers = {
 		original_tag = CHN
 		original_tag = STG
 		original_tag = GRF
+		original_tag = GFF
 		original_tag = NLR
 		original_tag = OLE
 		original_tag = WNG
@@ -123,6 +127,7 @@ country_with_custom_designers = {
 		original_tag = JER
 		original_tag = FBK
 		original_tag = FIR
+		original_tag = WAT
 		original_tag = GRY
 		original_tag = BAL
 		original_tag = CES
@@ -176,6 +181,7 @@ country_with_custom_designers = {
 		original_tag = JES
 		original_tag = TAL
 		original_tag = CTL
+		original_tag = PLB
 		original_tag = FAT
 		original_tag = FAW
 		original_tag = CTH
@@ -289,6 +295,7 @@ check_has_focus_tree_to_switch_to_fascism = {
 	NOT = { original_tag = WNG }
 	NOT = { original_tag = GRI }
 	NOT = { original_tag = FAT }
+	NOT = { original_tag = PLB }
 	NOT = { original_tag = EQS }
 	NOT = { original_tag = SCS }
 	NOT = { original_tag = OLE }
@@ -359,6 +366,7 @@ check_has_focus_tree_to_switch_to_fascism = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }
@@ -375,6 +383,7 @@ check_has_focus_tree_to_switch_to_democratic = {
 	NOT = { original_tag = JER }
 	NOT = { original_tag = WNG }
 	NOT = { original_tag = FAT }
+	NOT = { original_tag = PLB }
 	NOT = { original_tag = SCS }
 	NOT = { original_tag = OLE }
 	NOT = { original_tag = EQC }
@@ -443,6 +452,7 @@ check_has_focus_tree_to_switch_to_democratic = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }
@@ -459,6 +469,7 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = { original_tag = STL }
 	NOT = { original_tag = JER }
 	NOT = { original_tag = WNG }
+	NOT = { original_tag = PLB }
 	NOT = { original_tag = EQS }
 	NOT = { original_tag = OLE }
 	NOT = { original_tag = FEA }
@@ -526,6 +537,7 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }

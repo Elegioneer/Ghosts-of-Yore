@@ -42,7 +42,7 @@ NTR_INF_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { NTR_INF_01 } 
 
-	fallback_name = "%d Warband" 
+	fallback_name = "%d. Warband" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -73,7 +73,7 @@ NTR_INF_02 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { NTR_INF_01 } 
 
-	fallback_name = "%d Raised Warriors" 
+	fallback_name = "%d. Raised Warriors" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -103,7 +103,7 @@ NTR_INF_03 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { NTR_INF_01 } 
 
-	fallback_name = "%d Wind Warriors" 
+	fallback_name = "%d. Wind Warriors" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -134,18 +134,18 @@ NTR_MOT_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { NTR_INF_01 } 
 
-	fallback_name = "%d Motorband" 
+	fallback_name = "%d. Motorband" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = { 
-		1 = { "%d Motorband 'Everfrost'" }
-		2 = { "%d Motorband 'Forest Riders'" }
-		3 = { "%d Motorband 'Griffhunters'" }
-		4 = { "%d Motorband 'Wheeled Champions'" }
-		5 = { "%d Motorband 'Pones on Trucks'" }
-		6 = { "%d Motorband 'Trucks with Pones'" }
-		7 = { "%d Motorband 'Fuzzy'" }
+		1 = { "%d. Motorband 'Everfrost'" }
+		2 = { "%d. Motorband 'Forest Riders'" }
+		3 = { "%d. Motorband 'Griffhunters'" }
+		4 = { "%d. Motorband 'Wheeled Champions'" }
+		5 = { "%d. Motorband 'Pones on Trucks'" }
+		6 = { "%d. Motorband 'Trucks with Pones'" }
+		7 = { "%d. Motorband 'Fuzzy'" }
 	}
 } 
 
@@ -161,7 +161,7 @@ NTR_MEC_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { NTR_MOT_01 } 
 
-	fallback_name = "%d Halftrack Bandits" 
+	fallback_name = "%d. Halftrack Bandits" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -186,7 +186,7 @@ NTR_ARM_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ITA_INF_01 } 
 
-	fallback_name = "%d Metal Raiders" 
+	fallback_name = "%d. Metal Raiders" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -217,7 +217,7 @@ NTR_MAR_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ITA_MAR_01 } 
 
-	fallback_name = "%d Vinkingar Privateers" 
+	fallback_name = "%d. Vinkingar Privateers" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.

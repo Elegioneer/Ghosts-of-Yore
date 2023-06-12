@@ -28,7 +28,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_local_self_management
+			picture = wingbardian_influence
 			removal_cost = -1
 			targeted_modifier = {
 				tag = WNG

@@ -502,7 +502,7 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 		}
 		visible = {
 		    has_country_flag = NTR_flag_the_ritual_unlock
@@ -2131,14 +2131,14 @@ NTR_contact_equestria = {
 NTR_dark_tower_cat = {
 NTR_aurora_tower = {
 		icon = GFX_decision_goy_tower_aurora
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
             owns_state = 562
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2153,18 +2153,18 @@ NTR_aurora_tower = {
 	add_dynamic_modifier = { modifier = NTR_aurora_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_iron_tower = {
 		icon = GFX_decision_goy_tower_iron
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 485
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2179,18 +2179,18 @@ NTR_iron_tower = {
 	add_dynamic_modifier = { modifier = NTR_iron_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_black_tower = {
 		icon = GFX_decision_goy_tower_black
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 382
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2205,18 +2205,18 @@ NTR_black_tower = {
 	add_dynamic_modifier = { modifier = NTR_black_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_shadow_tower = {
 		icon = GFX_decision_goy_tower_shadow
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 377
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2231,18 +2231,18 @@ NTR_shadow_tower = {
 	add_dynamic_modifier = { modifier = NTR_shadow_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_blood_tower = {
 		icon = GFX_decision_goy_tower_blood
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 383
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2257,18 +2257,18 @@ NTR_blood_tower = {
 	add_dynamic_modifier = { modifier = NTR_blood_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_obsidian_tower = {
 		icon = GFX_decision_goy_tower_obsidian
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 536
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2283,18 +2283,18 @@ NTR_obsidian_tower = {
 	add_dynamic_modifier = { modifier = NTR_obsidian_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_storm_tower = {
 		icon = GFX_decision_goy_tower_storm
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 659
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2309,18 +2309,18 @@ NTR_storm_tower = {
 	add_dynamic_modifier = { modifier = NTR_storm_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 NTR_amber_tower = {
 		icon = GFX_decision_goy_tower_amber
-		cost = 150
+		cost = 100
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 10
 		}
 	available = {
 			owns_state = 508
-			has_political_power > 149
+			has_political_power > 99
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {
@@ -2335,7 +2335,7 @@ NTR_amber_tower = {
 	add_dynamic_modifier = { modifier = NTR_amber_tower_constructed }
 	}
 	}
-	days_remove = 120
+	days_remove = 90
 }
 }
 NTR_slave_mines_cat = {

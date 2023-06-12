@@ -66,7 +66,7 @@ GOY_frost_occupation = {
 	icon = "GFX_goy_occupation_policy_icon_strip:1"
 	sound_effect = "Martial_Law_Interface_Brutally_Oppressive_Occupation_Unique_FAS"
 	fallback_law = autonomous_occupation
-	main_fallback_law = no
+	#main_fallback_law = no
 	gui_order = 1
 	
 	visible = {
@@ -93,14 +93,15 @@ GOY_frost_occupation = {
 	#suppressed_state_modifier
 	state_modifier = {
 		#monthly_population = -0.5 #doesnt work
-		resistance_target = -0.8
+		no_compliance_gain = 1
+		resistance_target = -0.6
 		resistance_decay = 1
-		compliance_gain = -0.1
-		required_garrison_factor = -0.6
-		resistance_damage_to_garrison = 0
-		local_non_core_manpower = 0.5
-		local_factories = 1
-		local_resources = 0.5
+		#compliance_gain = -0.1
+		required_garrison_factor = -0.5
+		resistance_damage_to_garrison = 0.2
+		local_non_core_manpower = 0.25
+		local_factories = 0.4
+		local_resources = 0.3
 	}
 	
 	ai_will_do = {

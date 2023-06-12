@@ -1,0 +1,46 @@
+ideas = {
+
+	TOG_religion = {
+		law = yes
+		use_list_view = yes
+
+		GOY_arantigos_boreas_religion = {
+
+			visible = {
+				has_idea = GOY_arantigos_boreas_religion
+			}
+			picture = PAP_Legionary_Spirit
+
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				army_org_factor = 0.05
+			}
+			
+			allowed_to_remove = {
+			}
+
+			cancel_if_invalid = no
+		}
+		GOY_spirits_religion = {
+
+			visible = {
+				has_idea = GOY_spirits_religion
+			}
+			picture = GOY_wisp_religion
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				resistance_target_on_our_occupied_states = 0.2
+			}
+			
+			allowed_to_remove = {
+			}
+
+			cancel_if_invalid = no
+		}
+	}
+}

@@ -172,9 +172,11 @@ add_namespace = herzland_liberation_goy_news
 		    name = herzland_liberation_goy.02.a
 			news_event = herzland_liberation_goy_news.1
 			remove_ideas = HRR_war_winter
+			save_current_manpower = yes
             562 = {
                 add_manpower = -300000
-            }			
+            }
+			restore_previous_manpower = yes
 		NTR = {
 			retire_character = GOY_NTR_frostking
 			add_country_leader_role = {

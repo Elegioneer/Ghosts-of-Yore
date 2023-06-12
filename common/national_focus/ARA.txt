@@ -2488,6 +2488,12 @@ focus_tree = {
 		add_ideas = ARA_arantigos_boreas1
 		hidden_effect = {
 		    set_country_flag = ARA_arantigos_boreas_flag
+			if = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+				}
+				add_ideas = GOY_arantigos_boreas_religion
+			}
 		}
 		custom_effect_tooltip = ARA_heraclius_tp
 		
@@ -6351,7 +6357,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_creatures_most_wicked
-		icon = GFX_goal_No_One_is_Truly_Innocent
+		icon = GFX_goal_CTH_no_one_is_truly_innocent
 		x = 2
 		y = 1
 		cost = 5.00
@@ -9115,6 +9121,16 @@ focus_tree = {
 				type = annex_everything 
 				target = VED
 			}
+			}
+			if = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+					GFG = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = GFG
+				}
 			}
 		}
 	}

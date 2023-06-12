@@ -1239,7 +1239,7 @@
 			    exists = no
 			}
 			VED = {
-			is_in_faction_with = NTR
+				is_in_faction_with = NTR
 			}
 			
 		}
@@ -1248,6 +1248,16 @@
 			create_wargoal = {
 				type = annex_everything
 				target = VED
+			}
+			if = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+					GFG = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = GFG
+				}
 			}
 		}
 	}
@@ -2598,9 +2608,10 @@
 				popularity = 0.03
 			}
 			add_war_support = 0.05
-			custom_effect_tooltip = NTR_lodges_tt
-			hidden_effect = {
-				load_oob = NTR_lodges_OOB
+			country_event = ntribes.19
+			swap_ideas = {
+			    remove_idea = NTR_tribal_militias
+				add_idea = NTR_loyal_militias
 			}
 		}
 	}
@@ -2638,12 +2649,11 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_redeem_ice }
 		completion_reward = {
-			swap_ideas = {
-			    remove_idea = NTR_tribal_militias
-				add_idea = NTR_loyal_militias
-			}
 			add_stability = 0.03
-			country_event = ntribes.19
+			custom_effect_tooltip = NTR_lodges_tt
+			hidden_effect = {
+				load_oob = NTR_lodges_OOB
+			}
 		}
 	}
 	shared_focus = {
@@ -4944,6 +4954,8 @@
 		relative_position_id = NTR_north_awakens
 		prerequisite = { focus = NTR_whole_again }
 		completion_reward = {
+			custom_effect_tooltip = NTR_tt_frost_occ_available
+			set_country_flag = NTR_flag_frost_occ_available
 			add_ideas = GOY_slave_economy
 		}
 	}
@@ -5096,6 +5108,16 @@
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+					GFG = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = GFG
+				}
+			}
 			}
 		}
 	}
@@ -5224,8 +5246,8 @@
 		}
 		completion_reward = {
 		    custom_effect_tooltip = NTR_TT_all_tremble
+			country_event = ntribes.31
 			hidden_effect = {
-			    country_event = ntribes.31
 			    set_country_flag = NTR_flag_ice3
 				mark_focus_tree_layout_dirty = yes
 			}
@@ -5246,8 +5268,7 @@
 			has_country_flag = NTR_flag_ice3
 		}
 		completion_reward = {
-			custom_effect_tooltip = NTR_tt_frost_occ_available
-			set_country_flag = NTR_flag_frost_occ_available
+			
 			458 = {
 			    add_building_construction = {
 				    type = industrial_complex
