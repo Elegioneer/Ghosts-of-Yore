@@ -101,10 +101,16 @@ ARA_greneclyf_cat = {
 	visible = {
 	    tag = ARA
 		has_government = fascism
-	    OR = {
-		    owns_state = 668
-		    owns_state = 669
-		    owns_state = 670
+	    any_country = {
+			OR = {
+				original_tag = ARA
+				is_in_faction_with = ARA
+			}
+			OR = {
+				owns_state = 668
+				owns_state = 669
+				owns_state = 670
+			}
 		}
 	}
 }
@@ -126,7 +132,7 @@ ARA_northern_threat = {
 		    any_neighbor_country = {
 		        original_tag = DED
 		    }
-			FBK = {
+			any_other_country = {
 			    AND = {
 				    is_subject_of = ARA
 					any_neighbor_country = {
@@ -134,16 +140,11 @@ ARA_northern_threat = {
 					}
 				}
 			}
-			NTR = {
-			    AND = {
-				    is_subject_of = ARA
-					any_neighbor_country = {
-					    original_tag = DED
-					}
+			any_other_country = {
+				AND = {
+					original_tag = HLR
+					is_subject_of = ARA
 				}
-			}
-			ARA = {
-			    owns_state = 415
 			}
 		}
 	}
@@ -159,12 +160,13 @@ ARA_return_land_cat = {
 				is_in_faction_with = ARA
 			}
 			OR = {
-			    is_in_faction_with = RCT
-				is_in_faction_with = FRE
-				is_in_faction_with = NIM
-				is_in_faction_with = BAK
-				is_in_faction_with = DEP
-				is_in_faction_with = LCT
+			    is_river_fed_member = yes
+				original_tag = RCT
+				original_tag = FRE
+				original_tag = NIM
+				original_tag = BAK
+				original_tag = DEP
+				original_tag = LCT
 			}
 		    any_owned_state = {
 				is_griffon_core = yes

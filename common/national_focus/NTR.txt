@@ -154,7 +154,7 @@
 			hidden_effect = {
                 if = { 
 				limit = { has_country_flag = NTR_FLAG_blizzard }
-			    country_event = ntribes.55 
+			    country_event = ntribes.107 
 				}
 				else = {
 				country_event = ntribes.5
@@ -671,29 +671,76 @@
 		completion_reward = {
 			add_political_power = -50
 			if = {
-			    limit = {
-				    has_tech = iw_small_airframe
+				limit = {
+					has_dlc = "By Blood Alone"
 				}
-				add_tech_bonus = {
-					name = GOY_bonus_air_1
-					bonus = 0.5
-					uses = 1
-					category = light_air
+				set_technology = {
+			        iw_small_airframe = 1
+					basic_small_airframe = 1
+					early_bombs = 1
+					aa_lmg = 1
+					engines_1 = 1
+			    }
+				create_equipment_variant = {
+					name = "Fukker D.17"
+					type = small_plane_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						fixed_auxiliary_weapon_slot_2 = empty
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+						special_type_slot_3 = empty	
+					}
+					icon = "GFX_commonwealth_2d_fighter1_medium"
 				}
 				add_equipment_to_stockpile = {
-			        type = fighter_equipment_0 
-				    amount = 10
-			    }
-				else = {				
-					set_technology = {
-			            iw_small_airframe = 1
-			        }
-					generic_early_fighter = yes
-					add_equipment_to_stockpile = {
-						type = small_plane_airframe_0
-						variant_name = "Early Fighter"
-						amount = 25
+					type = small_plane_airframe_1
+					variant_name = "Fukker D.17"
+					amount = 50
+					producer = NTR
+				}
+				create_equipment_variant = {
+					name = "Fukker D.18 'Scheiss-Werfer'"
+					type = small_plane_cas_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						fixed_auxiliary_weapon_slot_2 = empty
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+						special_type_slot_3 = empty	
 					}
+					icon = "GFX_commonwealth_2d_CAS1_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_1
+					variant_name = "Fukker D.18 'Scheiss-Werfer'"
+					amount = 50
+					producer = NTR
+				}
+			}
+			else = {
+				set_technology = {
+			        early_fighter = 1
+					fighter1 = 1
+			        CAS1 = 1
+			    }
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = RCT
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = RCT
 				}
 			}
 		}
@@ -1049,7 +1096,7 @@
 				    can_create_factions = yes
 				}
 			}
-			custom_effect_tooltip = NTR_TT_expand_league_unlock
+			unlock_decision_category_tooltip = NTR_expand_nl_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_expand_league_unlock
 			}
@@ -1124,7 +1171,7 @@
 		relative_position_id = NTR_world_awaits
 		prerequisite = { focus = NTR_reach_out_neighbours focus = NTR_look_beyond_sea focus = NTR_bend_the_knee }
 		completion_reward = {
-			custom_effect_tooltip = NTR_TT_pony_relations_unlock
+			unlock_decision_category_tooltip = NTR_pony_relations_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_pony_relations_unlock
 			}
@@ -1635,7 +1682,7 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_aggressive_modernisation }
 		completion_reward = {
-			custom_effect_tooltip = NTR_TT_POGress_unlock
+			unlock_decision_category_tooltip = NTR_knowledge_quest_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_POGress_unlock
 			}
@@ -1713,7 +1760,7 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_fund_development }
 		completion_reward = {
-			custom_effect_tooltip = NTR_TT_choo_choo_unlock
+			unlock_decision_category_tooltip = NTR_thomas_the_steam_engine_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_choo_choo_unlock
 			}
@@ -1740,7 +1787,7 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_fund_development }
 		completion_reward = {
-			custom_effect_tooltip = NTR_TT_mining_unlock
+			unlock_decision_category_tooltip = NTR_expand_mining_ops_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_mining_unlock
 			}
@@ -3078,6 +3125,7 @@
 		mutually_exclusive = { focus = NTR_ponies_land }
 		completion_reward = {
 			add_ideas = NTR_integration_effort
+			custom_effect_tooltip = NTR_TT_fianas_secret
 		}
 	}
 	shared_focus = {
@@ -3395,7 +3443,7 @@
 	}
 	shared_focus = {
 		id = NTR_unification
-		icon = GFX_focus_generic_eagle
+		icon = GFX_goal_revolution_pony
 		x = -1
 		y = 8
 		cost = 5.00
@@ -3411,7 +3459,7 @@
 			add_state_core = 474
 			add_state_core = 480
 			add_state_core = 459
-			custom_effect_tooltip = NTR_TT_liberate_np_unlock
+			unlock_decision_category_tooltip = NTR_liberate_np_cat
 			hidden_effect = {
 			    set_country_flag = NTR_flag_liberate_np_unlock
 			}
@@ -3431,9 +3479,610 @@
 		prerequisite = { focus = NTR_we_are_different focus = NTR_we_can_be_equals focus = NTR_ice_curtain }
 		completion_reward = {
 			set_cosmetic_tag = NTR_PRINCE
-			country_event = ntribes.25
+			
+			if = {
+				limit = {
+					has_completed_focus = NTR_princess_of_all
+				}
+				country_event = ntribes.119
+				unlock_decision_tooltip = NTR_claim_our_destiny
+				set_country_flag = NTR_flag_destiny_unlocked
+				else = {
+					country_event = ntribes.25
+				}
+			}
 		}
 	}
+	
+	### Secret Expansion
+	shared_focus = {
+		id = NTR_fiana_break_knights
+		icon = GFX_goal_griffon_levy
+		x = -1
+		y = 10
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_final_sunset }
+		mutually_exclusive = { focus = NTR_reach_out_vedina }
+		available = {
+			owns_state = 581
+		}
+		bypass = {
+			VED = { exists = no }
+		}
+		will_lead_to_war_with = VED
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = VED
+				}
+			}
+			hidden_effect = {
+			every_other_country = { #Best wargoal ever
+				limit = {
+					original_tag = VED
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+						expire = 0
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = tales_of_griffonia_enabled
+					GFG = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything 
+					target = GFG
+				}
+			}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_reach_out_vedina
+		icon = GFX_HON_peace_in_our_time
+		x = 1
+		y = 10
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_final_sunset }
+		mutually_exclusive = { focus = NTR_fiana_break_knights }
+		available = {
+			has_completed_focus = NTR_friendship_between_races
+			owns_state = 581
+			VED = {
+				is_subject = no
+				has_government = democratic
+			}
+		}
+		bypass = {
+			VED = { exists = no }
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					original_tag = VED
+				}
+				country_event = {
+					id = ntribes.116
+					days = 1
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_final_sunset
+		icon = GFX_goal_graveyard
+		x = 0
+		y = 9
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_north_ascendant }
+		prerequisite = { focus = NTR_unification }
+		bypass = {
+			MNC = { exists = no }
+		}
+		allow_branch = {
+			has_country_flag = NTR_flag_fiana_claims_destiny
+		}
+		will_lead_to_war_with = MNC
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MNC
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_southern_migration
+		icon = GFX_goal_pony_passport
+		x = -1
+		y = 11
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_fiana_break_knights focus = NTR_reach_out_vedina }
+		mutually_exclusive = { focus = NTR_griffon_charter }
+		available = {
+			has_completed_focus = NTR_stratify_society
+			owns_state = 429
+		}
+		completion_reward = {
+			add_stability = -0.05
+			save_current_manpower = yes
+			every_state = {
+				limit = {
+					OR = {
+					state = 562
+					state = 563
+					state = 522
+					}
+				}
+				add_manpower = -100000
+			}
+			every_state = {
+				limit = {
+					OR = {
+					state = 483
+					state = 430
+					state = 575
+					state = 548
+					state = 576
+					state = 582
+					state = 449
+					state = 450
+					state = 475
+					state = 581
+					state = 477
+					state = 476
+					}
+				}
+				add_core_of = NTR
+				add_manpower = 50000
+			}
+			restore_previous_manpower = yes
+		}
+	}
+	shared_focus = {
+		id = NTR_griffon_charter
+		icon = GFX_goal_GRI_culture
+		x = 1
+		y = 11
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_fiana_break_knights focus = NTR_reach_out_vedina }
+		mutually_exclusive = { focus = NTR_southern_migration }
+		available = {
+			has_completed_focus = NTR_friendship_between_races
+			#owns_state = 429
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = -100
+			MNC = { add_to_ROOT_potential_cores = yes }
+			VED = { add_to_ROOT_potential_cores = yes }
+			FAT = { add_to_ROOT_potential_cores = yes }
+			hidden_effect = {
+				FAW = { add_to_ROOT_potential_cores = yes }
+			}
+			#enables Kingfeather
+			custom_effect_tooltip = NTR_TT_can_hire_kingfeather
+			show_ideas_tooltip = NTR_kingfeather_advisor
+		}
+	}
+	shared_focus = {
+		id = NTR_queen_of_hearts
+		icon = GFX_focus_ETH_keep_the_chitet
+		x = -1
+		y = 12
+		cost = 5.00
+		ai_will_do = {
+			base = 0
+			modifier = {
+				strength_ratio = { tag = GRD ratio > 1.0 }
+				add = 100
+			}
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_southern_migration focus = NTR_griffon_charter }
+		mutually_exclusive = { focus = NTR_princess_and_emperor }
+		bypass = {
+			owns_state = 382
+		}
+		available = {
+			has_global_flag = GRI_empire_rising_flag
+			GRD = {
+				exists = yes
+			}
+		}
+		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD
+		completion_reward = {
+			if = {
+				limit = {
+					GRI = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GRI
+				}
+				else = {
+					create_wargoal = {
+						type = annex_everything
+						target = GRD
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_princess_and_emperor
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties_pony_griffon
+		x = 1
+		y = 12
+		cost = 2.00
+		ai_will_do = {
+			base = 10
+			modifier = {
+				strength_ratio = { tag = GRD ratio > 1.0 }
+				add = -10
+			}
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_southern_migration focus = NTR_griffon_charter }
+		mutually_exclusive = { focus = NTR_queen_of_hearts }
+		available = {
+			has_global_flag = GRI_empire_rising_flag
+			GRD = {
+				exists = yes
+				NOT = {
+					has_war_with = NTR
+				}
+			}
+		}
+		will_lead_to_war_with = GRD
+		completion_reward = {
+			GRD = {
+				country_event = {
+					id = ntribes.108
+					days = 1
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_south_sovereign
+		icon = GFX_goal_Duskclaw_Icon_Vacant
+		x = -1
+		y = 13
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_queen_of_hearts }
+		mutually_exclusive = { focus = NTR_princess_herzland }
+		available = {
+			has_completed_focus = NTR_southern_migration
+			owns_state = 382
+			owns_state = 520
+			owns_state = 423
+			GRD = {
+				exists = no
+			}
+			FEA = {
+				exists = no
+			}
+			KAT = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			news_event = ntribes_news.9
+			set_cosmetic_tag = NTR_QUEEN
+			GOY_NTR_fiana = {
+				set_character_name = {
+					name = NTR_queen_fiana
+				}
+			}
+			hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+					state = 378
+					state = 399
+					state = 447
+					}
+				}
+				add_core_of = FEA
+			}
+			every_state = {
+				limit = {
+					OR = {
+					state = 674
+					state = 397
+					state = 555
+					state = 411
+					state = 547
+					state = 422
+					state = 398
+					state = 402
+					state = 439
+					state = 665
+					}
+				}
+				add_core_of = KAT
+			}
+			}
+			release_puppet = FEA
+			set_autonomy = { target = FEA autonomy_state = autonomy_subjugated_vassal }
+			release_puppet = KAT
+			set_autonomy = { target = KAT autonomy_state = autonomy_subjugated_vassal }
+			hidden_effect = {
+				FEA = {
+					set_cosmetic_tag = FEA_NTR_UK
+				}
+			
+				KAT = {
+					set_cosmetic_tag = KAT_NTR_UK
+					add_country_leader_role = {
+						Character = KAT_grandmaster_erik_grimclaw
+						Promote_leader = yes
+						Country_leader = {
+							ideology = harmonic_constitutionalism
+							desc = ""
+							expire = "1965.01.01.01"
+							traits = {  }
+						}
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GRI
+						is_core_of = STW
+					}
+				}
+				add_claim_by = NTR
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_princess_herzland
+		icon = GFX_zebra_monarch
+		x = 1
+		y = 13
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_queen_of_hearts }
+		mutually_exclusive = { focus = NTR_south_sovereign }
+		available = {
+			has_completed_focus = NTR_griffon_charter
+			owns_state = 382
+			GRD = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			#feel the silliness, embrace it
+			hidden_effect = {
+				save_global_event_target_as = griffonian_empire
+				set_variable = {
+					global.griffonian_empire_var = THIS
+				}
+			}
+			set_cosmetic_tag = NTR_UK
+			GOY_NTR_fiana = {
+				set_character_name = {
+					name = NTR_queen_fiana
+				}
+			}
+			news_event = ntribes_news.10
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GRD
+						is_core_of = GRI
+						is_core_of = STW
+						is_core_of = FEA
+						is_core_of = PYT
+						is_core_of = KAT
+						is_core_of = YAL
+						is_core_of = ANG
+					}
+				}
+				add_claim_by = NTR
+				add_dynamic_modifier = { modifier = NTR_integrated_griffon_populace }
+			}	
+		}
+	}
+	shared_focus = {
+		id = NTR_born_to_rule
+		icon = GFX_goal_HEJ_Arab_Legion
+		x = -2
+		y = 14
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_south_sovereign }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NTR_strict_hierarchy
+				}
+				swap_ideas = {
+					remove_idea = NTR_strict_hierarchy
+					add_idea = NTR_strict_hierarchy_2
+				}
+				else = {
+					add_ideas = NTR_strict_hierarchy_2
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_fate_of_emperor
+		icon = GFX_goal_grover_vi
+		x = 0
+		y = 14
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		bypass = {
+			has_global_flag = GRI_grover_vi_dead
+		}
+		prerequisite = { focus = NTR_south_sovereign focus = NTR_princess_herzland }
+		completion_reward = {
+			country_event = ntribes.114
+		}
+	}
+	shared_focus = {
+		id = NTR_northern_knights
+		icon = GFX_PAP_legionary_spirit
+		x = 2
+		y = 14
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_princess_herzland }
+		completion_reward = {
+			set_technology = {
+				tech_knights = 1
+				popup = yes
+			}
+			hidden_effect = {
+				set_technology = {
+					tech_knights2 = 1
+					tech_knights_regular = 1
+					tech_knights_regular2 = 1
+					popup = no
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_recruit_aux
+		icon = GFX_goal_GRI_army_expansion
+		x = -3
+		y = 15
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_born_to_rule }
+		completion_reward = {
+			add_ideas = NTR_herz_aux
+		}
+	}
+	shared_focus = {
+		id = NTR_remind_tribute
+		icon = GFX_goal_gold_reserve_2
+		x = -1
+		y = 15
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_born_to_rule }
+		completion_reward = {
+			KAT = {
+				add_ideas = NTR_fianas_tribute
+			}
+			FEA = {
+				add_ideas = NTR_fianas_tribute
+			}
+		}
+	}
+	shared_focus = {
+		id = NTR_capital_question
+		icon = GFX_focus_generic_improve_the_administration
+		x = 1
+		y = 15
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_northern_knights }
+		completion_reward = {
+			country_event = ntribes.115
+		}
+	}
+	shared_focus = {
+		id = NTR_griffons_council
+		icon = GFX_goal_improve_relations_pony_griffon
+		x = 3
+		y = 15
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		search_filters = {}
+		relative_position_id = NTR_follow_old
+		prerequisite = { focus = NTR_northern_knights }
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NTR_integrated_society
+				}
+				swap_ideas = {
+					remove_idea = NTR_integrated_society
+					add_idea = NTR_union_of_equals
+				}
+				else = {
+					add_ideas = NTR_union_of_equals
+				}
+			}
+		}
+	}
+	
 	###
 	shared_focus = {
 		id = NTR_clan_moltenrock
@@ -3824,7 +4473,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = GOY_bonus_ship_3
-				bonus = 0.25
+				bonus = 0.75
 				uses = 4
 				category = naval_equipment
 			}
@@ -4872,7 +5521,7 @@
 			    limit = {
 				    has_idea = volunteer_only
 				}
-				add_ideas = limited_conscription
+				add_ideas = extensive_conscription
 				else_if = {
 				    limit = {
 					    has_idea = limited_conscription
@@ -4900,7 +5549,7 @@
 			    limit = {
 				    has_idea = civilian_economy
 				}
-				add_ideas = low_economic_mobilisation
+				add_ideas = partial_economic_mobilisation
 				else_if = {
 				    limit = {
 					    has_idea = low_economic_mobilisation
@@ -5192,6 +5841,7 @@
 			set_rule = {
 			    can_use_kamikaze_pilots = yes
 			}
+			custom_effect_tooltip = GOY_NTR_TT_berserker_charge
 			hidden_effect = {
 			    set_technology = {
 				    popup = no
@@ -5864,45 +6514,102 @@
 		prerequisite = { focus = NTR_salvage_guns }
 		completion_reward = {
 			if = {
-			    limit = {
-				    has_tech = iw_small_airframe
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				set_technology = {
+			        iw_small_airframe = 1
+					basic_small_airframe = 1
+					early_bombs = 1
+					aa_lmg = 1
+					engines_1 = 1
+			    }
+				create_equipment_variant = {
+					name = "Fukker D.17"
+					type = small_plane_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						fixed_auxiliary_weapon_slot_2 = empty
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+						special_type_slot_3 = empty	
+					}
+					icon = "GFX_commonwealth_2d_fighter1_medium"
 				}
 				add_equipment_to_stockpile = {
-					type = small_plane_airframe_0
-					variant_name = "Early Fighter"
-					amount = 100
-				}
-				else = {
-			        set_technology = {
-			            iw_small_airframe = 1
-			        }
-				add_equipment_to_stockpile = {
-					type = small_plane_airframe_0
-					variant_name = "Early Fighter"
+					type = small_plane_airframe_1
+					variant_name = "Fukker D.17"
 					amount = 50
+					producer = NTR
 				}
+				create_equipment_variant = {
+					name = "Fukker D.18 'Scheiss-Werfer'"
+					type = small_plane_cas_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						fixed_auxiliary_weapon_slot_2 = empty
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+						special_type_slot_3 = empty	
+					}
+					icon = "GFX_commonwealth_2d_CAS1_medium"
 				}
-		    }
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_1
+					variant_name = "Fokker D.18 'Scheiss-Werfer'"
+					amount = 50
+					producer = NTR
+				}
+			}
+			else = {
+				set_technology = {
+			        early_fighter = 1
+					fighter1 = 1
+			        CAS1 = 1
+			    }
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = FAT
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = FAT
+				}
+			}
 			if = {
-			    limit = {
-				    has_tech = iw_medium_airframe
+				limit = {
+					OR = {
+						AND = {
+							has_tech = iw_small_airframe
+							has_tech = engines_1
+							has_tech = aa_lmg
+							has_tech = early_bombs
+							has_tech = basic_small_airframe
+						}
+						AND = {
+							has_tech = early_fighter
+							has_tech = fighter1
+							has_tech = CAS1
+						}
+					}
 				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_0
-					variant_name = "Early Bomber"
-					amount = 100
+				add_tech_bonus = {
+					name = GOY_bonus_fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_air
 				}
-				else = {
-			        set_technology = {
-			            iw_medium_airframe = 1
-			        }
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_0
-					variant_name = "Early Bomber"
-					amount = 50
-				}
-				}
-		    }
+			}
 		}
 	}
 shared_focus = {

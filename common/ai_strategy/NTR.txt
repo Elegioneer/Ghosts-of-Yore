@@ -1,0 +1,139 @@
+GOY_NTR_Frost_King_strat = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+		OR = {
+			has_game_rule = {
+				rule = NTR_ai_behavior
+				option = NTR_ICE
+			}
+			has_completed_focus = NTR_cold_hearted
+		}
+	}
+	abort = {
+		OR = {
+			is_subject = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	ai_strategy = {
+		type = land_xp_spend_priority
+		value = 100
+	}
+	ai_strategy = {
+		type = production_upgrade_desire_offset
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		id = infantry
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = support
+		value = 25
+	}
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		id = support
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 15
+	}
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		id = artillery
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -100
+	}
+	#Army Composition
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = -100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = pegasi
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 90
+	}
+	ai_strategy = {
+        type = force_build_armies
+        value = 1000
+    }
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 60
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = -30
+	}
+}

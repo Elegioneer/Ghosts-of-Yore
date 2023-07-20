@@ -138,15 +138,96 @@
 			base = 5
 		}
 		completion_reward = {
-				set_technology = {
-					iw_small_airframe = 1
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_tech = iw_small_airframe
+							has_tech = engines_1
+							has_tech = aa_lmg
+							has_tech = early_bombs
+						}
+						AND = {
+							has_tech = early_fighter
+							has_tech = early_bomber
+						}
+					}
 				}
-				generic_early_fighter = yes
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 1.0
+					uses = 2
+					category = light_air
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				set_technology = {
+			        iw_small_airframe = 1
+					early_bombs = 1
+					aa_lmg = 1
+					engines_1 = 1
+					popup = no
+			    }
+				create_equipment_variant = {
+					name = "Macchi M.14"
+					type = small_plane_airframe_0
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_commonwealth_2d_early_fighter_medium"
+				}
+				create_equipment_variant = {
+					name = "Caproni Ca.42"
+					type = small_plane_cas_airframe_0
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_1_2x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_commonwealth_2d_early_fighter_medium"
+				}
 				add_equipment_to_stockpile = {
 					type = small_plane_airframe_0
-					variant_name = "Early Fighter"
-					amount = 150
+					variant_name = "Macchi M.14"
+					amount = 100
+					producer = ARA
 				}
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_0
+					variant_name = "Caproni Ca.42"
+					amount = 50
+					producer = ARA
+				}
+			}
+			else = {
+				set_technology = {
+			        early_fighter = 1
+					early_bomber = 1
+			    }
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 100
+					producer = WNG
+				}
+				add_equipment_to_stockpile = {
+					type = tac_bomber_equipment_0
+					amount = 50
+					producer = WNG
+				}
+			}
 		}
 	}
 
@@ -1551,22 +1632,22 @@
 			}
 		add_resource = {
 				type = steel
-				amount = 5
+				amount = 7
 				state = 470
 			}
 		add_resource = {
 				type = aluminium
-				amount = 10
+				amount = 12
 				state = 470
 			}
 		add_resource = {
 				type = steel
-				amount = 5
+				amount = 8
 				state = 673
 			}
 		add_resource = {
 				type = tungsten
-				amount = 5
+				amount = 6
 				state = 391
 			}
 		}
@@ -1591,12 +1672,12 @@
 		completion_reward = {
 		add_resource = {
 				type = aluminium
-				amount = 5
+				amount = 6
 				state = 488
 			}
 		add_resource = {
 				type = steel
-				amount = 10
+				amount = 12
 				state = 488
 			}
 		add_resource = {
@@ -1606,17 +1687,17 @@
 			}
 		add_resource = {
 				type = aluminium
-				amount = 5
+				amount = 4
 				state = 531
 			}
 		add_resource = {
 				type = steel
-				amount = 10
+				amount = 11
 				state = 531
 			}
 		add_resource = {
 				type = chromium
-				amount = 10
+				amount = 14
 				state = 531
 			}
 		}
@@ -1691,6 +1772,23 @@
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 		increase_science_base = yes
+		if = {
+			limit = {
+				has_idea = proper_science_base
+			}
+			add_tech_bonus = {
+			    name = ara_electronics_pony_bonus
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+			    name = ara_electronics_pony_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
 		}
 		}
 	
@@ -1707,10 +1805,24 @@
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-		add_stability = -0.05
-		add_war_support = -0.05
-		add_timed_idea = { idea = ARA_national_effort  days = 365 }
-		
+			add_timed_idea = { idea = ARA_national_effort days = 365 }
+			custom_effect_tooltip = GOY_ARA_CETT_after365days
+			effect_tooltip = {
+				add_timed_idea = { idea = ARA_industrial_fatigue days = 180 }
+			}
+			hidden_effect = {
+				set_variable = {
+					var = var_goy_aranateffdate
+					value = global.date
+				}
+				add_to_variable = {
+					var = var_goy_aranateffdate
+					value = 8.76
+				}
+				country_event = {
+					id = arantiga.174
+				}
+			}
 		}
 		}
 	
@@ -2736,12 +2848,12 @@ focus_tree = {
 			}
 			}
 			custom_effect_tooltip = ARA_herzlander_solidarity
-			hidden_effect = {
-			    country_event = {
-				    id = arantiga.152
-					days = 1
-				}
-			}
+			#hidden_effect = {
+			    #country_event = {
+				#    id = arantiga.152
+				#	days = 1
+				#}
+			#}
 		}
 	}
 
@@ -2760,11 +2872,11 @@ focus_tree = {
 		available = {
     		has_global_flag =  GRI_grover_vi_dead
 			382 = { is_owned_and_controlled_by = ROOT }
-			hidden_trigger = {
-			    NOT = {
-				    has_global_flag = GOY_lord_protector_defeated
-				}
-			}
+			#hidden_trigger = {
+			#   NOT = {
+			#	    has_global_flag = GOY_lord_protector_defeated
+			#	}
+			#}
 		}
 		completion_reward = {
 			country_event = arantiga.098
@@ -2806,9 +2918,9 @@ focus_tree = {
  			}
 			382 = { is_owned_and_controlled_by = ROOT }
 		}
-		bypass = {
-		    has_global_flag = GOY_lord_protector_defeated
-		}
+		#bypass = {
+		#    has_global_flag = GOY_lord_protector_defeated
+		#}
 		completion_reward = {
 		    country_event = arantiga.099
 		}
@@ -6634,7 +6746,7 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-		    country_event = arantiga.050 #"Nations of Empire"
+		    country_event = arantiga.050 #"Nations of the Empire"
 			#Modify spirit Fragile Rule (+10% Recruitable population factor)
 			#custom_effect_tooltip = ARA_fragile_rule_tooltip_1
 			#hidden_effect = {
@@ -7541,32 +7653,32 @@ focus_tree = {
 			}
 			add_resource = {
 				type = steel
-				amount = 20
+				amount = 22
 				state = 411
 			}
 			add_resource = {
 				type = crystals
-				amount = 20
+				amount = 18
 				state = 411
 			}
 			add_resource = {
 				type = steel
-				amount = 10
+				amount = 11
 				state = 422
 			}
 			add_resource = {
 				type = crystals
-				amount = 10
+				amount = 13
 				state = 422
 			}
 			add_resource = {
 				type = steel
-				amount = 10
+				amount = 12
 				state = 547
 			}
 			add_resource = {
-				type = crystals
-				amount = 10
+				type = tungsten
+				amount = 9
 				state = 547
 			}
 		}
@@ -8477,7 +8589,7 @@ focus_tree = {
 		x = -6
 		y = 2
 		relative_position_id = ARA_what_remains
-		cost = 3.00
+		cost = 4.00
 		prerequisite = { focus = ARA_jewel_of_the_west }
 		ai_will_do = {
 			base = 75
@@ -8711,7 +8823,7 @@ focus_tree = {
 		x = -3
 		y = 3
 		relative_position_id = ARA_what_remains
-		cost = 7.00
+		cost = 4.00
 		prerequisite = { focus = ARA_into_evi_valley }
 		ai_will_do = {
 			base = 75
@@ -8730,7 +8842,7 @@ focus_tree = {
 		x = -1
 		y = 3
 		relative_position_id = ARA_what_remains
-		cost = 7.00
+		cost = 4.00
 		prerequisite = { focus = ARA_into_evi_valley }
 		ai_will_do = {
 			base = 75
@@ -8961,7 +9073,7 @@ focus_tree = {
 		x = 5
 		y = 2
 		relative_position_id = ARA_what_remains
-		cost = 5.00
+		cost = 4.00
 		prerequisite = { focus = ARA_from_romau_to_midoria }
 		ai_will_do = {
 			base = 75
@@ -9140,7 +9252,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = ARA_what_remains
-		cost = 5.00
+		cost = 4.00
 		prerequisite = { focus = ARA_final_accord }
 		ai_will_do = {
 			base = 75
@@ -9158,13 +9270,16 @@ focus_tree = {
 		x = 3
 		y = 3
 		relative_position_id = ARA_what_remains
-		cost = 1.00
+		cost = 2.00
 		prerequisite = { focus = ARA_final_accord }
 		ai_will_do = {
 			base = 75
 		}
 		available = {
 		    owns_state = 522
+		}
+		bypass = {
+			has_global_flag = GOY_flag_skynavia_ruined
 		}
 		completion_reward = {
             country_event = arantiga.065 #Destruction of Skynavia
@@ -9309,7 +9424,12 @@ focus_tree = {
 			}
 			add_stability = 0.10
 			add_war_support = 0.10
-			add_ideas = ARA_conqueror
+			add_trait = {
+				character = GOY_ARA_dorotheos_featherin
+				slot = country_leader
+				trait = GOY_ara_conqueror_doro
+				ideology = nazism
+			}
 		}
 	}
 	
@@ -9488,6 +9608,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_fate_of_traitors"
 			country_event = { id = arantiga_govern.016 }
+			delete_unit_template_and_units = {
+				division_template = "Penal Brigade"
+				disband = yes
+			}
 		}
 	}
 	focus = {
@@ -10131,11 +10255,18 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = { focus = ARA_claim_canteribbeans }
 		available = {
-			ARA = {
-			    owns_state = 356
+			any_country = {
+				OR = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+				}
+				owns_state = 356
 			}
 			EQC = {
-			    exists = no
+				OR = {
+					exists = no
+					is_puppet_of = ARA
+				}
 			}
 		}
 		bypass = {

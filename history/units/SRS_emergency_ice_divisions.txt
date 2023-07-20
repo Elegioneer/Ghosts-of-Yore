@@ -24,7 +24,7 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Pony Volunteer Brigage"
+		name = "Pony Volunteer Brigade"
 		location = 452
 		division_template = "Skynavian Militias"
 		start_experience_factor = 0.2

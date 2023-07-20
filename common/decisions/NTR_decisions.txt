@@ -1,3 +1,24 @@
+NTR_claim_our_destiny_cat = {
+	NTR_claim_our_destiny = {
+		icon = GFX_decision_statue
+		cost = 100
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			controls_state = 485
+		}
+		complete_effect = {
+			custom_effect_tooltip = NTR_TT_claim_destiny
+			hidden_effect = {
+				set_country_flag = NTR_flag_fiana_claims_destiny
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+}
+
 NTR_frost_king_superhighway_cat = {
 	NTR_fks_1 = {
 		icon = GFX_decision_railroad
@@ -555,7 +576,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+			    has_manpower < 300000
+				add = 100
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -595,7 +620,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+			    has_manpower < 300000
+				add = 100
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_raise_dead_improved
@@ -632,7 +661,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+			    has_war = yes
+				add = 10
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -699,7 +732,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+			    has_war = yes
+				add = 10
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -711,6 +748,7 @@ NTR_dark_magic_cat = {
 					has_country_flag = NTR_flag_magick_active
 				}
 			}
+			has_war = yes
 		}
 		modifier = {   
 		}
@@ -739,7 +777,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
+			modifier = {
+			    has_war = yes
+				add = 2
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -751,6 +793,7 @@ NTR_dark_magic_cat = {
 					has_country_flag = NTR_flag_magick_active
 				}
 			}
+			has_war = yes
 		}
 		modifier = {   
 		}
@@ -779,7 +822,11 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 5
+			modifier = {
+			    has_war = yes
+				add = -5
+			}
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -819,7 +866,7 @@ NTR_dark_magic_cat = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			base = 0
 		}
 		visible = {
 		    has_country_flag = NTR_flag_dark_magic_unlock
@@ -858,7 +905,7 @@ NTR_dark_magic_cat = {
 
 NTR_liberate_np_cat = {
 	NTR_demand_from_MNC = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_crossed_swords
 		cost = 25
 		fire_only_once = yes
 		ai_will_do = {
@@ -890,7 +937,7 @@ NTR_liberate_np_cat = {
 	days_remove = 15
 	}
 	NTR_demand_from_VED = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_crossed_swords
 		cost = 25
 		fire_only_once = yes
 		ai_will_do = {
@@ -922,7 +969,7 @@ NTR_liberate_np_cat = {
 	days_remove = 15
 	}
 	NTR_demand_from_FAT = {
-		icon = GFX_decision_generic_civil_support
+		icon = GFX_decision_crossed_swords
 		cost = 25
 		fire_only_once = yes
 		ai_will_do = {
@@ -1069,7 +1116,7 @@ NTR_educate_adults = {
 	days_remove = 120
 	}
 NTR_everfrost_university = {
-		icon = GFX_decision_generic_research
+		icon = GFX_decision_CTH_Scientifids
 		cost = 150
 		fire_only_once = yes
 		ai_will_do = {
@@ -2151,6 +2198,9 @@ NTR_aurora_tower = {
 	remove_effect = {
 	562 = {
 	add_dynamic_modifier = { modifier = NTR_aurora_tower_constructed }
+	}
+	hidden_effect = {
+		set_country_flag = NTR_built_aurora_tower
 	}
 	}
 	days_remove = 90

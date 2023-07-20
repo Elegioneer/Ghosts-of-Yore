@@ -200,12 +200,14 @@ on_actions = {
 					}
 				}
 				drop_cosmetic_tag = yes
+				
 				add_country_leader_role = {
 					Character = NTR_GOY_gordonthearcher
 					Promote_leader = yes
 					Country_leader = {
 						ideology = stratocracy
 						expire = "1965.01.01.01"
+						desc = NTR_GOY_gordonthearcher_desc
 						traits = {  }
 					}
 				}

@@ -570,7 +570,7 @@ focus_tree = {
 		prerequisite = { focus = HRR_heal_north }
 		completion_reward = {
 			add_ideas = HRR_extra_resources
-			custom_effect_tooltip = HRR_resources_tooltip
+			unlock_decision_category_tooltip = HRR_resource_extraction_cat
 			hidden_effect = {
 				set_country_flag = HRR_flag_mineral_extraction_unlocked
 			}
@@ -646,7 +646,7 @@ focus_tree = {
 		prerequisite = { focus = HRR_welfare_pol }
 		prerequisite = { focus = HRR_restructure_industrial_companies }
 		completion_reward = {
-			custom_effect_tooltip = HRR_herzland_devscheme_tooltip
+			unlock_decision_category_tooltip = HRR_herzland_scheme_cat
 			hidden_effect = {
 				set_country_flag = HRR_flag_devscheme_unlocked
 			}			

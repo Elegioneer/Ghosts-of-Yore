@@ -100,6 +100,30 @@ NTR_TYRANNY = {
 	color = rgb { 20 86 144 }
     color_ui = rgb { 15 99 172 }
 }
+NTR_UK = {
+	color = rgb { 85 50 225 }
+    color_ui = rgb { 85 50 219 }
+}
+BRZ_NTR_UK = {
+	color = rgb { 85 50 225 }
+    color_ui = rgb { 85 50 219 }
+}
+NTR_GRIFFEMP = {
+	color = rgb { 229 138 47 }
+	color_ui = rgb { 229 138 47 }
+}
+KAT_NTR_UK = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
+FEA_NTR_UK = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
+BRZ_NTR_SUBJ = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
 HRR_GOY = {
 	color = rgb { 255 158 47 }
 	color_ui = rgb { 220 158 47 }
@@ -498,6 +522,21 @@ PLB_schizo_puppet = {
 PLB_soryth = {
 	color = rgb { 151 255 255}
 	color_ui = rgb { 151 255 255}
+}
+
+PLB_crusade = {
+	color = rgb { 87 104 170 }
+	color_ui = rgb { 87 104 170 }
+}
+
+PLB_realm_of_beasts = {
+	color = rgb { 94 63 140 }
+	color_ui = rgb { 94 63 140 }
+}
+
+PLB_woodland = {
+	color = rgb { 62 97 88 }
+	color_ui = rgb { 62 97 88 }
 }
 
 HAU_PLB_puppet = {

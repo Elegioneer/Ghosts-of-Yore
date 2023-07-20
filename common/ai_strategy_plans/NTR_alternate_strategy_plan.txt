@@ -64,10 +64,36 @@ BOI_iceking = {
 	}
 
 	ai_national_focuses = {
-	    
+	    NTR_grim_reality
+		NTR_holy_forge
+		NTR_rally_warriors
+		NTR_druids
+		NTR_meet_clans
+		NTR_look_east
+		NTR_great_council
+		NTR_reclaim_holy_forge
+		NTR_convince_them
+		NTR_deal_with_stormshields
+		NTR_solidify_control
+		NTR_demand_more
+		NTR_wisdom_of_circle
+		NTR_support_weaponsmiths
+		NTR_scavange_ruins
+		NTR_total_reparations
+		NTR_slave_economy
+		NTR_undead_hordes
+		NTR_break_knights
+		NTR_revenge_sunstriker
+		NTR_crush_dream
 	}
 
 	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		cat_production = 15.0
+		dispersed_industry_category = 15.0
+		artillery = 5.0
+		support_tech = 5.0
 	}
 
 	ideas = {
@@ -80,7 +106,7 @@ BOI_iceking = {
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
+		factor = 1.5
 		modifier = {
 			factor = 1.0
 		}

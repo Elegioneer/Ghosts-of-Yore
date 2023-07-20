@@ -156,8 +156,9 @@ country_event = { #prodigal sons
 					traits = { army_armored_2 }
 				}
 			}
+			load_oob = ARA_sons_of_arantigos_OOB
 		}
-		load_oob = ARA_sons_of_arantigos_OOB
+		
 	}
 }
 	
@@ -2224,6 +2225,14 @@ country_event = { #Griffonstone Archives
 					province = 7266
 					value = 65
 				}
+				add_victory_points = {
+					province = 3756
+					value = 25
+				}
+				add_victory_points = {
+					province = 1325
+					value = 20
+				}
 				add_manpower = 500000
 				set_state_category = large_city
 				add_building_construction = {
@@ -2240,8 +2249,20 @@ country_event = { #Griffonstone Archives
 			    add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				    type = infrastructure
-					level = 1
+					level = 2
 					instant_build = yes
+				}
+				build_railway = {
+					level = 3
+					start_province = 7266
+					target_province = 3756
+					build_only_on_allied = yes
+				}
+				build_railway = {
+					level = 3
+					start_province = 7266
+					target_province = 1325
+					build_only_on_allied = yes
 				}
 			}
 			
@@ -2735,6 +2756,7 @@ country_event = { #Griffonstone Archives
 			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
 			hidden_effect = {
 			    news_event = { id = arantiga_news.2 days = 5 }
+				set_global_flag = GOY_flag_skynavia_ruined #loc in ara's files
 			}
 		}
 	}
@@ -3245,14 +3267,14 @@ country_event = { #Griffonstone Archives
 		picture = GFX_event_medieval_tower
 		option = {
 			name = arantiga_govern.016.a
-			add_popularity = { ideology = democratic popularity = 0.05 }
-			add_popularity = { ideology = communism popularity = 0.05 }
+			add_popularity = { ideology = democratic popularity = 0.01 }
+			add_popularity = { ideology = communism popularity = 0.01 }
 			remove_ideas = ARA_work_camp
 		}
 		option = {
 			name = arantiga_govern.016.b
-			add_popularity = { ideology = democratic popularity = 0.01 }
-			add_popularity = { ideology = communism popularity = 0.01 }
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			add_popularity = { ideology = communism popularity = 0.1 }
 			swap_ideas = {
 		    	remove_idea = ARA_work_camp 
 				add_idea = ARA_work_camp1
@@ -3286,6 +3308,8 @@ country_event = { #Griffonstone Archives
 	picture = GFX_event_griffon_para
 	option = {
 		name = arantiga_govern.018.a
+		add_stability = -0.2
+		add_war_support = -0.3
 		remove_ideas = ARA_militarized_economy 
 		remove_ideas = ARA_every_griff
 	}
@@ -4602,6 +4626,7 @@ country_event = { #de Charbon 2
 	id = arantiga.085
 	title = arantiga.085.t
 	desc = arantiga.085.d
+	picture = GFX_event_griffon_para
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -4716,6 +4741,12 @@ country_event = { #Coronation
 		set_party_name = { ideology = neutrality name = ARA_EMP_elites long_name = ARA_EMP_elites_long }
 		set_party_name = { ideology = democratic name = ARA_EMP_democrats long_name = ARA_EMP_democrats_long }
 		set_party_name = { ideology = communism name = ARA_EMP_communists long_name = ARA_EMP_communists_long }
+		hidden_effect = {
+			save_global_event_target_as = griffonian_empire
+			set_variable = {
+				global.griffonian_empire_var = THIS
+			}
+		}
 	}
 }
 
@@ -6083,10 +6114,16 @@ country_event = { #Herzländers attack!
 	id = arantiga.120
 	title = arantiga.120.t
 	desc = arantiga.120.d
+	picture = GFX_event_griffon_diplomacy
 	is_triggered_only = yes
 	fire_only_once = no
 	option = {
 		name = 	arantiga.120.a
+		effect_tooltip = {
+			FROM = {
+				declare_war_on = { type = puppet_wargoal_focus target = ARA }
+			}
+		}
 	}
 }
 country_event = { #Herzländers unite! (cap)
@@ -6120,6 +6157,7 @@ country_event = { #de Charbon 1
 	desc = arantiga.122.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_event_mlp_movie_tree
 	option = {
 		name = 	arantiga.122.a
 		ai_chance = {
@@ -6273,8 +6311,12 @@ country_event = { #rein in colthage
 		every_owned_state = {
 			limit = {
 				OR = {
-					is_core_of = CVA
+					is_core_of = CTH
 					is_core_of = CDR
+					is_core_of = CVA
+					is_core_of = CGI
+					is_core_of = BKH
+					is_core_of = LMB
 				}
 			}
 			add_core_of = CTH
@@ -7499,9 +7541,9 @@ country_event = { #Hedonism
 		desc = arantiga.166.d
 		picture = GFX_event_griffon_diplomacy
 	    is_triggered_only = yes
-	    fire_only_once = yes
+	    fire_only_once = no
 	    option = {
-		    name = arantiga.166.a
+		    name = arantiga.166.a #yay
 			ai_chance = {
 			    base = 1
 				modifier = {
@@ -7527,7 +7569,17 @@ country_event = { #Hedonism
 			}
 			FROM = {
 				country_event = arantiga.167
-				transfer_state = 4
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 4
+						state = 1195
+					}
+				}
+				FROM = {
+					transfer_state = PREV
+				}
 			}
 			if = {
 				limit = {
@@ -7540,7 +7592,7 @@ country_event = { #Hedonism
 			}
 		}
 		option = {
-		    name = arantiga.166.b
+		    name = arantiga.166.b #nay
 			ai_chance = {
 			    base = 1
 				modifier = {
@@ -7559,7 +7611,7 @@ country_event = { #Hedonism
 		desc = arantiga.167.d
 		picture = GFX_event_generic_pony_diplomacy
 	    is_triggered_only = yes
-	    fire_only_once = yes
+	    fire_only_once = no
 	    option = {
 		    name = arantiga.167.a
 			ai_chance = {
@@ -7587,7 +7639,7 @@ country_event = { #Hedonism
 		desc = arantiga.168.d
 		picture = GFX_event_generic_pony_diplomacy
 	    is_triggered_only = yes
-	    fire_only_once = yes
+	    fire_only_once = no
 	    option = {
 		    name = arantiga.168.a
 			ai_chance = {
@@ -7617,7 +7669,7 @@ country_event = { #Hedonism
 		desc = arantiga.169.d
 		picture = GFX_event_shore
 	    is_triggered_only = yes
-	    fire_only_once = yes
+	    fire_only_once = no
 	    option = {
 		    name = arantiga.169.a
 			ai_chance = {
@@ -7847,5 +7899,94 @@ country_event = { #Hedonism
                 target = JER
                 transfer_troops = yes
             }
+		}
+	}
+	country_event = { #Check on the Year of National Effort idea
+	    id = arantiga.174
+		hidden = yes
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    immediate = {
+			if = {
+				limit = {
+					check_variable = {
+						var = global.date
+						value = ARA.var_goy_aranateffdate
+						compare = greater_than_or_equals
+					}
+				}
+				#Finita la comedia!
+				remove_ideas = ARA_national_effort
+				remove_ideas = ARA_national_effort_1
+				remove_ideas = ARA_national_effort_2
+				remove_ideas = ARA_national_effort_3
+				add_timed_idea = { idea = ARA_industrial_fatigue days = 180 }
+				else = {
+					country_event = {
+						id = arantiga.174
+						days = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					num_of_civilian_factories > 50
+					OR = {
+						has_idea = ARA_national_effort
+						has_idea = ARA_national_effort_1
+						has_idea = ARA_national_effort_2
+						has_idea = ARA_national_effort_3
+					}
+				}
+				remove_ideas = ARA_national_effort_1
+				remove_ideas = ARA_national_effort_2
+				remove_ideas = ARA_national_effort
+				add_ideas = ARA_national_effort_3
+			}
+			if = {
+				limit = {
+					num_of_civilian_factories < 50
+					OR = {
+						has_idea = ARA_national_effort
+						has_idea = ARA_national_effort_1
+						has_idea = ARA_national_effort_2
+						has_idea = ARA_national_effort_3
+					}
+				}
+				remove_ideas = ARA_national_effort_1
+				remove_ideas = ARA_national_effort
+				remove_ideas = ARA_national_effort_3
+				add_ideas = ARA_national_effort_2
+			}
+			if = {
+				limit = {
+					num_of_civilian_factories < 30
+					OR = {
+						has_idea = ARA_national_effort
+						has_idea = ARA_national_effort_1
+						has_idea = ARA_national_effort_2
+						has_idea = ARA_national_effort_3
+					}
+				}
+				remove_ideas = ARA_national_effort
+				remove_ideas = ARA_national_effort_2
+				remove_ideas = ARA_national_effort_3
+				add_ideas = ARA_national_effort_1
+			}
+			if = {
+				limit = {
+					num_of_civilian_factories < 20
+					OR = {
+						has_idea = ARA_national_effort
+						has_idea = ARA_national_effort_1
+						has_idea = ARA_national_effort_2
+						has_idea = ARA_national_effort_3
+					}
+				}
+				remove_ideas = ARA_national_effort_1
+				remove_ideas = ARA_national_effort_2
+				remove_ideas = ARA_national_effort_3
+				add_ideas = ARA_national_effort
+			}
 		}
 	}

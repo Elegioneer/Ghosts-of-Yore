@@ -1,0 +1,178 @@
+unique_id = goy_achievements
+
+goy_ach_arantigos_end = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = ARA
+    }
+    
+    happened = {
+		has_completed_focus = ARA_eternal_empire
+    }    
+}
+goy_ach_frost_king_end = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = NTR
+    }
+    
+    happened = {
+		has_completed_focus = NTR_the_solstice
+    }    
+}
+goy_ach_double_royal_trouble = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = BOI
+    }
+    
+    happened = {
+		has_completed_focus = BOI_new_diarchy
+    }    
+}
+goy_ach_victory_for_hrr = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		tag = HRR
+    }
+    
+    happened = {
+		has_completed_focus = HRR_heart_darkness
+    }    
+}
+goy_ach_let_me_show_you = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = NTR
+    }
+    
+    happened = {
+		has_completed_focus = NTR_princess_herzland
+    }    
+}
+goy_ach_king_in_castle = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = NTR
+    }
+    
+    happened = {
+		has_country_flag = NTR_built_aurora_tower
+    }    
+}
+goy_ach_master_of_puppets = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = ARA
+    }
+    
+    happened = {
+		WNG = {
+			is_subject_of = ARA
+			custom_trigger_tooltip = {
+				tooltip = ARA_TT_used_puppet_show
+				has_cosmetic_tag = WNG_soter
+			}
+		}
+		JER = {
+			is_subject_of = ARA
+			custom_trigger_tooltip = {
+				tooltip = ARA_TT_used_puppet_show
+				has_cosmetic_tag = JER_soter
+			}
+		}
+		FAT = {
+			is_subject_of = ARA
+			custom_trigger_tooltip = {
+				tooltip = ARA_TT_used_puppet_show
+				has_cosmetic_tag = FAT_soter
+			}
+		}
+		LUS = {
+			is_subject_of = ARA
+			custom_trigger_tooltip = {
+				tooltip = ARA_TT_used_puppet_show
+				has_cosmetic_tag = LUS_soter
+			}
+		}
+		MIT = {
+			is_subject_of = ARA
+			custom_trigger_tooltip = {
+				tooltip = ARA_TT_used_puppet_show
+				has_cosmetic_tag = MIT_soter
+			}
+		}
+    }    
+}
+goy_ach_gigantomachy = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = ARA
+    }
+    
+    happened = {
+		OR = {
+			has_war_with = GRI
+			has_war_with = GRD
+		}
+		has_war_with = JER
+		has_war_with = WNG
+    }    
+}
+#goy_ach_maars_mind_tricks = { #semi-impossible because Gallus has to defeat Doro to get his (real) idol
+#    possible = {
+#        # classic triggers used in all vanilla achievements
+#        difficulty > 1
+#        has_start_date < 1007.01.02
+#        has_any_custom_difficulty_setting = no
+#        game_rules_allow_achievements = yes
+#		#
+#		original_tag = ARA
+#    }
+#    
+#    happened = {
+#		has_idea = ARA_idol_of_boreas
+#		has_idea = BOI_idol_of_boreas
+#    }    
+#}
+### IDEAS: 1) Achievement for Arantigos to grant land to all of his generals. 2) Achievement for completing all of IRI's projects.

@@ -580,7 +580,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = generic_deal_with_the_devil2
+			picture = ROA_senate_divide
 			removal_cost = -1
 			modifier = {
 			    political_power_gain = -0.2
@@ -605,6 +605,51 @@ ideas = {
 				conscription_factor = -0.05
 				non_core_manpower = -0.01
 				required_garrison_factor = -0.2
+			}
+		}
+		NTR_strict_hierarchy_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = triumphant_will
+			removal_cost = -1
+			modifier = {
+			    stability_factor = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				non_core_manpower = -0.01
+				required_garrison_factor = -0.2
+			}
+		}
+		NTR_herz_aux = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = griffon_army2
+			removal_cost = -1
+			modifier = {
+			    weekly_manpower = 500
+			}
+		}
+		NTR_fianas_tribute = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = TBK_sevcom
+			removal_cost = -1
+			modifier = {
+				mic_to_overlord_factor = 0.1
+				cic_to_overlord_factor = 0.2
+			    extra_trade_to_overlord_factor = 0.25
 			}
 		}
 		NTR_protector_homeland = {
@@ -651,11 +696,11 @@ ideas = {
 			removal_cost = -1
 			equipment_bonus = {
 			    infantry_equipment = {
-				    reliability = 0.05
+				    reliability = 0.1
 					build_cost_ic = 0.1
 				}
 				artillery_equipment = {
-				    reliability = 0.05
+				    reliability = 0.1
 					build_cost_ic = 0.1
 				}
 			}
@@ -1547,11 +1592,29 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = EQS_order
+			picture = GRF_militias
 			removal_cost = -1
 			modifier = {
-				non_core_manpower = 0.01
-				research_speed_factor = 0.05
+				stability_factor = -0.05
+				conscription_factor = 0.1
+				non_core_manpower = 0.05
+			}
+		}
+		NTR_union_of_equals = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GRF_militias
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				compliance_growth = 0.1
+				conscription_factor = 0.1
+				non_core_manpower = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 		NTR_dark_acolytes = {
@@ -1858,12 +1921,30 @@ ideas = {
 	##################
 	
 political_advisor = {
+		NTR_kingfeather_advisor = {
+			allowed = {
+				original_tag = "NTR"
+			}		
+			traits = { GOY_ntrsupportiverepublican }
+			picture = FAT_political_pragmatist
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_government = democratic
+			}
+			visible = {
+				
+			}
+		}
+	}
+political_advisor = {
 		NTR_euan_stormshield = {
 			allowed = {
 				original_tag = "NTR"
 			}		
 			traits = { GOY_euan_advisor }
-			picture = unknown_advisor
+			picture = GOY_NTR_euan
 			ai_will_do = {
 				factor = 1
 			}
@@ -2046,7 +2127,7 @@ theorist = {
  			traits = { GOY_ntrmetalshaper }
 			picture = NMS_Colt_Ice
 			ai_will_do = {
-				factor = 1
+				base = 5
 			}
 			visible = {
 			}
@@ -2064,7 +2145,7 @@ theorist = {
  			traits = { naval_theorist }
 			picture = LCT_silent_workhorse
 			ai_will_do = {
-				factor = 1
+				factor = 0
 			}
 			visible = {
 			}
@@ -2081,7 +2162,7 @@ army_chief = {
 		traits = { army_chief_morale_3 }
 		picture = unknown_advisor
 		ai_will_do = {
-		factor = 1
+		factor = 0
 		}
 		visible = {
 			}
@@ -2100,7 +2181,7 @@ army_chief = {
 		traits = { army_chief_offensive_2 }
 		picture = unknown_advisor
 		ai_will_do = {
-		factor = 1
+			base = 25
 		}
 		visible = {
 			}
@@ -2206,7 +2287,7 @@ navy_chief = {
  		traits = { navy_chief_reform_2 }
 		picture = RCT_taloniser
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2222,7 +2303,7 @@ navy_chief = {
  		traits = { navy_chief_commerce_raiding_3 }
 		picture = FBK_advisor13
 		ai_will_do = {
-			factor = 1
+			factor = 2
 			}
 		visible = {
 		}
@@ -2238,7 +2319,7 @@ navy_chief = {
  		traits = { navy_chief_naval_aviation_1 }
 		picture = FBK_advisor5
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2256,7 +2337,7 @@ high_command = {
  		traits = { army_entrenchment_2 }
 		picture = unknown_advisor
 		ai_will_do = {
-			factor = 1
+			factor = 3
 			}
 		visible = {
 		}
@@ -2278,7 +2359,7 @@ high_command = {
  		traits = { army_infantry_1 }
 		picture = unknown_advisor
 		ai_will_do = {
-			factor = 1
+			factor = 3
 			}
 		visible = {
 		}
@@ -2299,7 +2380,7 @@ high_command = {
  		traits = { army_regrouping_2 }
 		picture = unknown_advisor
 		ai_will_do = {
-			factor = 1
+			factor = 3
 			}
 		visible = {
 		}
@@ -2316,7 +2397,7 @@ high_command = {
  		traits = { army_artillery_2 }
 		picture = WIT_Industry_Captain
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2333,7 +2414,7 @@ high_command = {
  		traits = { air_bomber_interception_2 }
 		picture = RCT_ermilia_chernozemishna
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2350,7 +2431,7 @@ high_command = {
  		traits = { air_air_superiority_3 }
 		picture = FIR_advisor12
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2367,7 +2448,7 @@ high_command = {
  		traits = { navy_screen_2 }
 		picture = FBK_advisor6
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2384,7 +2465,7 @@ high_command = {
  		traits = { navy_fleet_logistics_2 }
 		picture = RCT_syndra
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			}
 		visible = {
 		}
@@ -2401,7 +2482,7 @@ high_command = {
  		traits = { GOY_ntr_bear_warlord }
 		picture = unknown_advisor_bear
 		ai_will_do = {
-			factor = 1
+			factor = 3
 			}
 		visible = {
 		}
@@ -2418,7 +2499,7 @@ industrial_concern = {
 		traits = { refinery_concern }
 		picture = bul_petrol_ad
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		available = {
 			has_country_flag = NTR_ostfloy_refinery_enabled
@@ -2440,7 +2521,7 @@ industrial_concern = {
 		traits = { GOY_ntr_artistans }
 		picture = WAT_Council_of_Keepers
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 		}
@@ -2456,7 +2537,7 @@ industrial_concern = {
 		traits = { GOY_ntr_crystal_carvers }
 		picture = feat_company_6
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		available = {
 		}
@@ -2475,7 +2556,7 @@ industrial_concern = {
 		traits = { GOY_ntr_everfrost_armories }
 		picture = MIT_national_armory
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		available = {
 		}
@@ -2491,7 +2572,7 @@ industrial_concern = {
 		traits = { GOY_ntr_barkcoat_builders }
 		picture = SCS_tank_1
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		available = {
 		has_completed_focus = NTR_master_builders
@@ -2509,7 +2590,7 @@ industrial_concern = {
 		traits = { industrial_concern }
 		picture = FBK_advisor29
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		available = {
 		has_completed_focus = NTR_open_frostbell
@@ -2531,7 +2612,7 @@ industrial_concern = {
 		traits = { industrial_concern }
 		picture = feat_company_3
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		available = {
 		has_completed_focus = NTR_electronics_production
@@ -2552,7 +2633,7 @@ industrial_concern = {
 		traits = { GOY_ntr_craft_guilds }
 		picture = generic_industrial_concern_1
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		available = {
 		has_completed_focus = NTR_arts_and_crafts
@@ -2570,7 +2651,7 @@ industrial_concern = {
 		traits = { GOY_ntr_rockseekers }
 		picture = feat_company_2
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 		available = {
 		has_completed_focus = NTR_use_rockseekers
@@ -2589,7 +2670,7 @@ materiel_manufacturer = {
 		traits = { infantry_equipment_manufacturer }
 		picture = CTH_light_aircraft_manufacturer
 		ai_will_do = {
-		factor = 1
+		factor = 5
 		}
 		available = {
 		}
@@ -2615,7 +2696,7 @@ materiel_manufacturer = {
 		traits = { artillery_manufacturer }
 		picture = generic_artillery_manufacturer_1
 		ai_will_do = {
-		factor = 1
+		factor = 0
 		}
 		available = {
 		}
@@ -2638,7 +2719,7 @@ materiel_manufacturer = {
 		traits = { infantry_equipment_manufacturer }
 		picture = generic_industrial_concern_3
 		ai_will_do = {
-		factor = 1
+		factor = 5
 		}
 		available = {
 		has_completed_focus = NTR_weaponised_magic
@@ -2663,7 +2744,7 @@ materiel_manufacturer = {
 		traits = { motorized_equipment_manufacturer }
 		picture = PYT_infantry_concern
 		ai_will_do = {
-		factor = 1
+		factor = 0
 		}
 		available = {
 		has_completed_focus = NTR_ponies_wheels
@@ -2692,7 +2773,7 @@ materiel_manufacturer = {
 		traits = { artillery_manufacturer }
 		picture = generic_artillery_manufacturer_3
 		ai_will_do = {
-		factor = 1
+		factor = 0
 		}
 		available = {
 		has_completed_focus = NTR_advanced_artillery
@@ -2715,7 +2796,7 @@ materiel_manufacturer = {
 		traits = { artillery_manufacturer }
 		picture = nevskoye_design_bureau
 		ai_will_do = {
-		factor = 1
+		factor = 0
 		}
 		available = {
 		has_completed_focus = NTR_foreign_arms_producers
@@ -2740,7 +2821,7 @@ materiel_manufacturer = {
 		traits = { infantry_equipment_manufacturer }
 		picture = generic_infantry_equipment_manufacturer_3
 		ai_will_do = {
-		factor = 1
+		factor = 10
 		}
 		available = {
 		has_completed_focus = NTR_our_gunsmiths
@@ -3032,7 +3113,7 @@ naval_manufacturer = {
 		traits = { naval_manufacturer }
 		picture = generic_naval_manufacturer_2
 		ai_will_do = {
-		factor = 1
+		factor = 5
 		}
 		available = {
 		has_completed_focus = NTR_refurbish_dinkau

@@ -177,7 +177,14 @@ add_namespace = herzland_liberation_goy_news
                 add_manpower = -300000
             }
 			restore_previous_manpower = yes
-		NTR = {
+			hidden_effect = {
+				country_event = {
+					id = herzland_liberation_goy.10
+					days = 14
+				}
+			}
+			effect_tooltip = {
+			NTR = {
 			retire_character = GOY_NTR_frostking
 			add_country_leader_role = {
 				Character = GOY_NTR_Gordon
@@ -189,7 +196,8 @@ add_namespace = herzland_liberation_goy_news
 			}
 			}
 		    set_party_name = {ideology = fascism name = NTR_warrior_lodges_party long_name = NTR_warrior_lodges_party_long }			
-		}			
+			}
+			}
 		}
 	}	
 	country_event = { #To Forgive a Monster
@@ -219,14 +227,30 @@ add_namespace = herzland_liberation_goy_news
 					    transfer_state = 561
 					    transfer_state = 522
 						transfer_state = 574
-						add_ideas = limited_conscription_ara
-						load_focus_tree = generic_focus
+						add_ideas = volunteer_only
+						add_ideas = export_focus
+						add_ideas = low_economic_mobilisation
+						#load_focus_tree = Northern_tribes_nothing
+						set_cosmetic_tag = NTR_GRIFFEMP
+					}
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = DED
+								is_core_of = HLR
+								is_core_of = EWI
+							}
+						}
+						NTR = {
+							add_state_core = PREV
+							transfer_state = PREV
+						}
 					}
 					HRR = {
 					   	puppet = NTR
 					    set_autonomy = { target = NTR autonomy_state = autonomy_satellite }
 					}
-					}		
+			}
 		}
 	    option = {
 		    name = herzland_liberation_goy.03.b
@@ -425,18 +449,16 @@ add_namespace = herzland_liberation_goy_news
 				ideology = neutrality
 				popularity = 0.3
 			}	
-				hidden_effect = {
-					add_country_leader_role = {
-						Character = HRR_GOY_gabriella_di_karthin
-						Promote_leader = yes
-						Country_leader = {
-						ideology = liberalism
-						desc = ""
-						expire = "1965.01.01.01"
-						traits = { GOY_commongriff_president }
-					}
-					}
-				}			
+			add_country_leader_role = {
+				Character = HRR_GOY_heinrich_kingfeather
+				Promote_leader = yes
+				Country_leader = {
+					ideology = harmonic_constitutionalism
+					desc = ""
+					expire = "1965.01.01.01"
+					traits = { GOY_republican_chancellor }
+				}
+			}
 		}
 	    option = {
 		    name = herzland_liberation_goy.07.c
@@ -448,18 +470,16 @@ add_namespace = herzland_liberation_goy_news
 				ideology = communism
 				popularity = 0.3
 			}			
-				hidden_effect = {
-					add_country_leader_role = {
-						Character = HRR_GOY_gabriella_di_karthin
-						Promote_leader = yes
-						Country_leader = {
-						ideology = liberalism
-						desc = ""
-						expire = "1965.01.01.01"
-						traits = { GOY_commongriff_president }
-					}
-					}
+			add_country_leader_role = {
+				Character = HRR_GOY_gerben_kogchel
+				Promote_leader = yes
+				Country_leader = {
+					ideology = socialism
+					desc = ""
+					expire = "1965.01.01.01"
+					traits = { GOY_democratic_socialist }
 				}
+			}
 		}		
 	}
 	country_event = { #Nobles and Revolutionaries
@@ -497,6 +517,20 @@ add_namespace = herzland_liberation_goy_news
 		    name = herzland_liberation_goy.09.b
 			add_ideas = HRR_presidential_republic
 		}		
+	}
+	country_event = { #Final Victory
+	    id = herzland_liberation_goy.10
+	    title = herzland_liberation_goy.10.t
+	    desc = herzland_liberation_goy.10.d
+	    picture = GFX_event_medieval_city_3
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = herzland_liberation_goy.10.a
+			add_stability = 0.03
+		}	
 	}	
 	
 	

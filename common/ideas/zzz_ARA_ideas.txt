@@ -231,7 +231,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = FRA_scw_intervention_republicans_focus
+			picture = ARA_swords_and_cap
 			removal_cost = -1
 			modifier = {
 				conscription = -0.01
@@ -767,7 +767,24 @@ country = {
 			}
 			}
 			}
-	
+	country = {
+		ARA_industrial_fatigue = {
+			allowed = {
+			always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_syndicalism_drift_bonus
+			modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			production_speed_buildings_factor = -0.1
+			industrial_capacity_factory = -0.1
+			}
+			}
+			}
 	country = {
 		ARA_national_effort = {
 			allowed = {
@@ -778,10 +795,64 @@ country = {
 			}
 			removal_cost = -1
 			picture = HIRA_economy
-			modifier = {	
+			modifier = {
+			consumer_goods_factor = -0.2
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_buildings_factor = 0.1
-			consumer_goods_factor = -0.2
+			industrial_capacity_factory = 0.2
+			}
+			}
+			}
+	country = {
+		ARA_national_effort_1 = {
+			allowed = {
+			always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HIRA_economy
+			modifier = {
+			consumer_goods_factor = -0.15
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.2
+			}
+			}
+			}
+	country = {
+		ARA_national_effort_2 = {
+			allowed = {
+			always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HIRA_economy
+			modifier = {
+			consumer_goods_factor = -0.10
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.2
+			}
+			}
+			}
+	country = {
+		ARA_national_effort_3 = {
+			allowed = {
+			always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = HIRA_economy
+			modifier = {
+			consumer_goods_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.2
 			}
 			}
@@ -818,7 +889,7 @@ country = {
 			modifier = {
 			production_factory_efficiency_gain_factor = 0.1
 			industrial_capacity_factory = 0.1
-			consumer_goods_factor = -0.1
+			consumer_goods_factor = -0.05
 			}
 			}
 			}
@@ -2852,28 +2923,30 @@ country = {
 			picture = eng_steady_as_she_goes
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.01
+				min_export = 0.05
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.1
 			}
 		}
 	}
-	country = {
-		ARA_conqueror = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = {
-			    has_government = fascism
-			}
-			picture = ARA_swords_and_cap
-			removal_cost = -1
-			modifier = {
-			    justify_war_goal_time = -0.50
-			}
-		}
-	}
+	#country = {
+	#	ARA_conqueror = {
+	#		allowed = {
+	#			always = no
+	#		}
+	#		allowed_civil_war = {
+	#			always = yes
+	#		}
+	#		available = {
+	#		    has_government = fascism
+	#		}
+	#		picture = ARA_swords_and_cap
+	#		removal_cost = -1
+	#		modifier = {
+	#		    justify_war_goal_time = -0.50
+	#		}
+	#	}
+	#}
 	country = {
 		ARA_conquest_of_the_west = {
 			allowed = {
@@ -2887,8 +2960,8 @@ country = {
 			picture = GRW_post_war_desolation
 			removal_cost = -1
 			modifier = {
-			    conscription_factor = -0.05
-				stability_factor = 0.10
+			    conscription_factor = -0.15
+				stability_factor = -0.10
 				consumer_goods_factor = 0.10
 			}
 		}
@@ -3126,7 +3199,7 @@ country = {
 			picture = slavery
 			modifier = {
 			production_speed_buildings_factor = 0.05
-			stability_factor = -0.03
+			stability_factor = -0.1
 			}
 			}
 			}

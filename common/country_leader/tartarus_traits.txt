@@ -46,6 +46,7 @@ leader_traits = {
 		random = no
 		stability_factor = -0.1
 		political_power_gain = -0.1
+		autonomy_gain = -0.5
 		research_speed_factor = 0.1
 		production_speed_industrial_complex_factor = 0.2
 		production_speed_infrastructure_factor = 0.2
@@ -198,7 +199,7 @@ leader_traits = {
 	}
 	GOY_ntr_everfrost_armories = {
 		random = no
-		production_speed_arms_factory_factor = 0.1	
+		production_speed_arms_factory_factor = 0.1
 	}
 	GOY_ntr_bear_warlord = {
 		random = no
@@ -217,6 +218,7 @@ leader_traits = {
 	GOY_ntr_craft_guilds = {
 		random = no
 		line_change_production_efficiency_factor = 0.1
+		equipment_conversion_speed = 0.1
 	}
 	GOY_ntr_rockseekers = {
 		random = no
@@ -288,5 +290,21 @@ leader_traits = {
 		democratic_drift = 0.01
 		stability_factor = 0.05
 		war_support_factor = 0.05
-	}	
+	}
+	GOY_ara_conqueror_doro = {
+		random = no
+		justify_war_goal_time = -0.50
+	}
+	GOY_ntrsupportiverepublican = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.1
+		neutrality_acceptance = 50
+	}
+	GOY_ntr_protectornorth = {
+		random = no
+		stability_factor = 0.1
+		army_core_defence_factor = 0.1
+		drift_defence_factor = 0.25
+	}
 }

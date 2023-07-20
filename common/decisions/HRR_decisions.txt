@@ -28,7 +28,7 @@ HRR_osnabeak_oilfield = {
 	days_remove = 60
 	}
 HRR_bronzehill_crystal = {
-		icon = GFX_decision_crystal
+		icon = GFX_decision_crystals
 		cost = 75
 		fire_only_once = yes
 		ai_will_do = {
@@ -385,7 +385,7 @@ HRR_low_griffking_zone = {
 			factor = 10
 		}
 	available = {
-            has_political_power > 159
+            has_political_power > 150
 			num_of_civilian_factories_available_for_projects > 7
 			}
 	visible = {

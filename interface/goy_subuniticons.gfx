@@ -11,4 +11,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/counters/divisions_small/onmap_support_unit_goy_necromancer_company_icon.dds"
 		noOfFrames = 2
 	}
+	
+	spriteType = {
+		name = "GFX_unit_goy_necromancer_company_icon_small"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_support_unit_goy_necromancer_company_icon.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 }

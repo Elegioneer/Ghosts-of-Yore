@@ -42,6 +42,7 @@ add_ideas = {
 	NTR_exiled_clans
 	NTR_divided_clans
 	lack_of_scientists1
+	closed_economy
 }
 #set_country_flag = have_regular_puppets
 set_stability = 0.65
@@ -93,6 +94,8 @@ recruit_character = GOY_NTR_gavin
 recruit_character = GOY_NTR_frostking
 recruit_character = GOY_NTR_erik_grimclaw
 recruit_character = GOY_NTR_redsquall
+recruit_character = GOY_NTR_clown_grover_vi
+recruit_character = GOY_NTR_kingfeather
 
 set_rule = {
 	can_generate_female_aces = yes

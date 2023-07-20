@@ -63,10 +63,10 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "NTR_GOY_gordonthearcher_desc"
 			ideology = stratocracy
-			expire = "1965.1.1.1"
-			id = -1
+			expire = "1965.01.01.01"
+			desc = NTR_GOY_gordonthearcher_desc
+			traits = {  }
 		}
 		field_marshal = {
 		traits = { pony_race_trait politically_connected old_guard adaptable goy_blindness trait_reckless winter_specialist }
@@ -268,6 +268,14 @@ characters = {
 			traits = { army_entrenchment_2 }
 		}
 	}
+	GOY_NTR_clown_grover_vi={
+		name=GOY_NTR_clown_grover_vi
+		portraits={
+			civilian={
+				large="gfx/leaders/GRI/GroverVI.tga"
+			}
+		}
+	}
 	GOY_NTR_tearlach = {
 		name = NTR_tearlach_stormshield
 		portraits = {
@@ -467,6 +475,31 @@ characters = {
 
 			}
 			traits = { GOY_ntralchemist }
+		}
+	}
+	GOY_NTR_kingfeather = {
+		name = GOY_NTR_kingfeather
+		portraits = {
+			civilian = {
+				small=GFX_idea_FAT_political_pragmatist
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = NTR_kingfeather_advisor
+			allowed = {
+				original_tag = "NTR"
+			}		
+			ai_will_do = {
+				factor = 100
+			}
+			available = {
+				is_subject = no
+			}
+			visible = {
+				has_completed_focus = NTR_griffon_charter
+			}
+			traits = { GOY_ntrsupportiverepublican }
 		}
 	}
 	GOY_NTR_henrik = {

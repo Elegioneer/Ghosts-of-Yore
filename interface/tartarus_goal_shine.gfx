@@ -2497,30 +2497,44 @@ spriteTypes = {
 		name = "GFX_goal_GOY_solstice_shine"
 		texturefile = "gfx/interface/goals/goal_GOY_solstice.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_GOY_solstice.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
 
 		animation = {
 			animationmaskfile = "gfx/interface/goals/goal_GOY_solstice.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
+			animationtexturefile = "gfx/interface/goals/shine_overlay_GOY_snowfall.dds" 	##<- the animated file
+			animationrotation = 145.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.5				# in seconds
 			animationdelay = 0			# in seconds
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			play_on_show = yes
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		#animation = {
+		#	animationmaskfile = "gfx/interface/goals/goal_GOY_solstice.dds"
+		#	animationtexturefile = "gfx/interface/goals/shine_overlay_GOY_solstice_snow.dds" 	##<- the animated file
+		#	animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+		#	animationlooping = no			# yes or no ;)
+		#	animationtime = 1				# in seconds
+		#	animationdelay = 0			# in seconds
+		#	animationblendmode = "add"       #add, multiply, overlay
+		#	animationtype = "pulsing"      #scrolling, rotating, pulsing
+		#	animationrotationoffset = { x = 0.0 y = 0.0 }
+		#	animationtexturescale = { x = 1.0 y = 1.0 }
+		#}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_GOY_solstice.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay_GOY_sunshine.dds" 	##<- the animated file
+			animationrotation = 0.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 1			# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "pulsing"      #scrolling, rotating, pulsing #pulsing is a little broken
+			play_on_show = no
+			animationrotationoffset = { x = 5.0 y = 5.0 }
+			animationtexturescale = { x = 0.6 y = 0.6 }
 		}
 		legacy_lazy_load = no
 	}

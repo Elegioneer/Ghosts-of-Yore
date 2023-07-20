@@ -7,6 +7,21 @@
 		local_supplies = 0.25
 		
 	}
+	NTR_integrated_griffon_populace = {
+		enable = {
+			is_owned_by = NTR
+		}
+		
+		icon = GFX_modifiers_goy_integrated_griffons
+		
+		local_building_slots_factor = 0.25
+		local_non_core_manpower = 0.25
+		local_resources_factor = 0.25
+		local_factories = 0.25
+		resistance_decay = 0.25
+		resistance_target = -0.25
+		resistance_damage_to_garrison = -0.5
+	}
 	NTR_aurora_tower_constructed = {
 		enable = { always = yes }
 		
@@ -141,4 +156,15 @@
 		resistance_decay = 0.25
 		resistance_target = -0.5
 		resistance_damage_to_garrison = -0.5
-		}		
+		}
+	
+	#ARA_national_effort = {
+	#	enable = { always = yes }
+	#	picture = HIRA_economy
+	#	modifier = {	
+	#		consumer_goods_factor = var_ARAnateffort
+	#		production_factory_efficiency_gain_factor = 0.2
+	#		production_speed_buildings_factor = 0.1
+	#		industrial_capacity_factory = 0.2
+	#	}
+	#}

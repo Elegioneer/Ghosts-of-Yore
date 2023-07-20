@@ -511,6 +511,98 @@ add_namespace = ntribes_news
 			}
 	    }
 	}
+	news_event = { #New Order
+	    id = ntribes_news.9
+	    title = ntribes_news.9.t
+	    desc = ntribes_news.9.d
+		picture = GFX_news_pegasi_city
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = ntribes_news.9.a
+			trigger = {
+			    OR = {
+				    original_tag = NTR
+					is_in_faction_with = NTR
+				}
+			}
+		}
+		option = {
+	        name = ntribes_news.9.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = NTR
+						original_tag = NTR
+					}
+				}
+			}
+	    }
+		option = {
+	        name = ntribes_news.9.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = NTR
+						original_tag = NTR
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #Birth of a united kingdom
+	    id = ntribes_news.10
+	    title = ntribes_news.10.t
+	    desc = ntribes_news.10.d
+		picture = GFX_news_pegasi_city
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = ntribes_news.10.a
+			trigger = {
+			    OR = {
+				    original_tag = NTR
+					is_in_faction_with = NTR
+				}
+			}
+		}
+		option = {
+	        name = ntribes_news.10.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = NTR
+						original_tag = NTR
+					}
+				}
+			}
+	    }
+		option = {
+	        name = ntribes_news.10.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = NTR
+						original_tag = NTR
+				    }
+				}
+			}
+	    }
+	}
 	
 	#### COUNTRY FOCUS EVENTS ####
 	country_event = { #Last of her Blood
@@ -712,7 +804,7 @@ add_namespace = ntribes_news
 	    id = ntribes.55
 	    title = ntribes.55.t
 	    desc = ntribes.55.d
-	    picture = GFX_event_crystal_city_evening
+	    picture = GFX_event_polar_city
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -764,7 +856,7 @@ add_namespace = ntribes_news
 	    id = ntribes.05
 	    title = ntribes.05.t
 	    desc = ntribes.05.d
-	    picture = GFX_event_crystal_fair
+	    picture = GFX_event_polar_city
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -798,6 +890,7 @@ add_namespace = ntribes_news
 			    }
 		    }
 			custom_effect_tooltip = NTR_TT_load_reform_tree
+			
 			hidden_effect = {
 				load_focus_tree = Northern_tribes_reform
 			}
@@ -837,6 +930,7 @@ add_namespace = ntribes_news
 			    }
 		    }
 			custom_effect_tooltip = NTR_TT_load_trad_tree
+			unlock_national_focus = NTR_follow_old
 			hidden_effect = {
 				load_focus_tree = Northern_tribes_trad
 			}
@@ -1300,10 +1394,10 @@ add_namespace = ntribes_news
             522 = {
                 add_manpower = -100000
             }
-            add_stability = -0.05
+            add_stability = -0.1
             add_popularity = {
                 ideology = communism
-                popularity = 0.05
+                popularity = 0.1
             }
             hidden_effect = {
                 set_country_flag = NTR_flag_princess_of_all
@@ -2049,7 +2143,7 @@ add_namespace = ntribes_news
 	    id = ntribes.37
 	    title = ntribes.37.t
 	    desc = ntribes.37.d
-	    picture = GFX_event_griffon_soldier
+	    picture = GFX_event_griffon_camp
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -2062,7 +2156,7 @@ add_namespace = ntribes_news
 	    id = ntribes.38
 	    title = ntribes.38.t
 	    desc = ntribes.38.d
-	    picture = GFX_event_medieval_tower
+	    picture = GFX_event_griffon_para
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -2118,7 +2212,7 @@ add_namespace = ntribes_news
 	    id = ntribes.40
 	    title = ntribes.40.t
 	    desc = ntribes.40.d
-	    picture = GFX_event_griffon_para
+	    picture = GFX_event_griffon_soldier
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -2277,12 +2371,61 @@ add_namespace = ntribes_news
 		immediate = {
 		    hidden_effect = {
 				set_country_flag = NTR_flag_ice4
-				mark_focus_tree_layout_dirty = yes			
+				mark_focus_tree_layout_dirty = yes	
 			    news_event = {
 				    id = ntribes_news.5
 					hours = 6	
 				}
-				unlock_national_focus = NTR_no_rest		
+				unlock_national_focus = NTR_no_rest
+				every_state = {
+					limit = {
+						OR = {
+							#is_core_of = FAT
+							is_core_of = GRI
+							state = 547
+							state = 422
+							state = 411
+							state = 506
+							state = 554
+							state = 423
+							state = 665
+							state = 402
+							state = 439
+							state = 398
+							state = 399
+							state = 447
+							state = 378
+							state = 674
+							state = 555
+							state = 437
+							state = 397
+							state = 405
+							state = 382
+							state = 666
+							state = 440
+							state = 441
+							state = 520
+							state = 434
+							state = 498
+							state = 538
+							state = 433
+							state = 497
+							state = 443
+							state = 545
+							state = 546
+							state = 486
+							state = 458
+							state = 424
+							state = 479
+							state = 492
+							state = 568
+							state = 539
+						}
+					}
+					HRR = {
+						add_state_core = PREV
+					}
+				}
 				HRR = {
 					transfer_state = 547
 					transfer_state = 422
@@ -2311,50 +2454,53 @@ add_namespace = ntribes_news
 					transfer_state = 443
 					transfer_state = 424
 					transfer_state = 479
-					add_state_core = 547
-					add_state_core = 422
-					add_state_core = 411
-					add_state_core = 506
-					add_state_core = 554
-					add_state_core = 423
-					add_state_core = 665
-					add_state_core = 402
-					add_state_core = 439
-					add_state_core = 398
-					add_state_core = 399
-					add_state_core = 447
-					add_state_core = 378
-					add_state_core = 674
-					add_state_core = 555
-					add_state_core = 437
-					add_state_core = 397
-					add_state_core = 405
-					add_state_core = 382
-					add_state_core = 666
-					add_state_core = 440
-					add_state_core = 441
-					add_state_core = 520
-					add_state_core = 434
-					add_state_core = 498
-					add_state_core = 538
-					add_state_core = 433
-					add_state_core = 497
-					add_state_core = 443
-					add_state_core = 545
-					add_state_core = 546
-					add_state_core = 486
-					add_state_core = 458
-					add_state_core = 424
-					add_state_core = 479
-					add_state_core = 492
-					add_state_core = 568
-					add_state_core = 539
+					#add_state_core = 547
+					#add_state_core = 422
+					#add_state_core = 411
+					#add_state_core = 506
+					#add_state_core = 554
+					#add_state_core = 423
+					#add_state_core = 665
+					#add_state_core = 402
+					#add_state_core = 439
+					#add_state_core = 398
+					#add_state_core = 399
+					#add_state_core = 447
+					#add_state_core = 378
+					#add_state_core = 674
+					#add_state_core = 555
+					#add_state_core = 437
+					#add_state_core = 397
+					#add_state_core = 405
+					#add_state_core = 382
+					#add_state_core = 666
+					#add_state_core = 440
+					#add_state_core = 441
+					#add_state_core = 520
+					#add_state_core = 434
+					#add_state_core = 498
+					#add_state_core = 538
+					#add_state_core = 433
+					#add_state_core = 497
+					#add_state_core = 443
+					#add_state_core = 545
+					#add_state_core = 546
+					#add_state_core = 486
+					#add_state_core = 458
+					#add_state_core = 424
+					#add_state_core = 479
+					#add_state_core = 492
+					#add_state_core = 568
+					#add_state_core = 539
 					inherit_technology = TRD
-					add_ideas = HRR_war_winter
 					add_ideas = HRR_economic_devastation
 					add_ideas = HRR_disorganized_army
-					add_ideas = HRR_military_governing			
-					load_oob = HRR_rebellion_OOB
+					add_ideas = HRR_military_governing
+					add_ideas = GOY_HRR_elias_bronzetail
+					add_ideas = GOY_HRR_pieter_best
+					add_ideas = GOY_HRR_reinhold_thundertail
+					add_ideas = GOY_HRR_marc_kippenberger
+					delete_unit_template_and_units = { division_template = "Necromancer Division" disband = no } #WHYYYY
 					add_equipment_to_stockpile = {
 						type = artillery_equipment
 						producer = GRI
@@ -2363,7 +2509,17 @@ add_namespace = ntribes_news
 					add_equipment_to_stockpile = {
 						type = infantry_equipment
 						producer = GRI
-						amount = 15000
+						amount = 5000
+					}
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_0
+						producer = GRI
+						amount = 5000
+					}
+					add_equipment_to_stockpile = {
+						type = melee_equipment_1
+						producer = GRI
+						amount = 5000
 					}
 					add_equipment_to_stockpile = {
 						type = magical_equipment
@@ -2390,49 +2546,204 @@ add_namespace = ntribes_news
 						producer = GRI
 						amount = 2000
 					}
-					add_equipment_to_stockpile = {
-						type = cas_3
-						producer = GRI
-						amount = 500
+					#add_equipment_to_stockpile = {
+					#	type = cas_3
+					#	producer = GRI
+					#	amount = 500
+					#}
+					#add_equipment_to_stockpile = {
+					#	type = improved_fighter_default
+					#	producer = GRI
+					#	amount = 750
+					#}
+					#add_equipment_to_stockpile = {
+					#	type = improved_medium_tank_default
+					#	producer = GRI
+					#	amount = 500
+					#}
+				}
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					HRR = {
+						set_technology = {
+							iw_small_airframe = 1
+							basic_small_airframe = 1
+							improved_small_airframe = 1
+							aa_lmg = 1
+							aa_hmg = 1
+							engines_1 = 1
+							engines_2 = 1
+							engines_3 = 1
+							aa_cannon_1 = 1
+							popup = no
+						}
+					create_equipment_variant = {
+						name = "Beef.109"
+						type = small_plane_airframe_2
+						parent_version = 0
+						allow_without_tech = yes
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+							fixed_auxiliary_weapon_slot_2 = empty
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = empty
+							special_type_slot_2 = empty	
+							special_type_slot_3 = empty	
+						}
+						icon = "GFX_commonwealth_2d_fighter2_medium"
+						obsolete = no
 					}
 					add_equipment_to_stockpile = {
-						type = improved_fighter_default
-						producer = GRI
+						type = small_plane_airframe_2
+						variant_name = "Beef.109"
 						amount = 750
+						producer = HRR
+					}
+					create_equipment_variant = {
+						name = "AdJu. 87"
+						type = small_plane_cas_airframe_2
+						parent_version = 0
+						allow_without_tech = yes
+						modules = {
+							fixed_main_weapon_slot = small_bomb_bay
+							fixed_auxiliary_weapon_slot_1 = bomb_locks
+							fixed_auxiliary_weapon_slot_2 = empty
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = hmg_defense_turret_2x
+							special_type_slot_2 = empty	
+							special_type_slot_3 = empty	
+						}
+						icon = "GFX_commonwealth_2d_CAS2_medium"
+						obsolete = no
 					}
 					add_equipment_to_stockpile = {
-						type = improved_medium_tank_default
-						producer = GRI
+						type = small_plane_cas_airframe_2
+						variant_name = "AdJu. 87"
 						amount = 500
+						producer = HRR
 					}
-				}				
-			}
+					}
+				}
+				else = {
+					HRR = {
+						set_technology = {
+							early_fighter = 1
+							fighter1 = 1
+							fighter2 = 1
+							fighter3 = 1
+							CAS1 = 1
+							CAS2 = 1
+							CAS3 = 1
+							popup = no
+						}
+					add_equipment_to_stockpile = {
+						type = fighter_equipment_3
+						amount = 750
+						producer = HRR
+					}
+					add_equipment_to_stockpile = {
+						type = CAS_equipment_3
+						amount = 500
+						producer = HRR
+					}
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					HRR = {
+						set_technology = {
+							gwtank_chassis = 1
+							basic_medium_tank_chassis = 1
+							improved_medium_tank_chassis = 1
+							engine_tech_1 = 1
+							engine_tech_2 = 1
+							armor_tech_1 = 1
+							armor_tech_2 = 1
+							interwar_artillery = 1
+							artillery1 = 1
+							artillery2 = 1
+							artillery3 = 1
+							artillery4 = 1
+							popup = no
+						}
+					create_equipment_variant = {
+						name = "PzKpfw IV 'Freiheit'"
+						type = medium_tank_chassis_2
+						parent_version = 0
+						allow_without_tech = yes
+						modules = {
+							main_armament_slot = tank_medium_cannon_2
+							turret_type_slot = tank_medium_three_man_tank_turret 
+							suspension_type_slot = tank_bogie_suspension
+							armor_type_slot = tank_cast_armor
+							engine_type_slot = tank_diesel_engine
+							special_type_slot_1 = wet_ammo_storage
+							special_type_slot_2 = sloped_armor
+							special_type_slot_3 = tank_radio_1
+							special_type_slot_4 = empty
+						}
+						upgrades = {
+							tank_nsb_engine_upgrade = 14
+							tank_nsb_armor_upgrade = 10
+						}
+						icon = "GFX_generic_medium_BAB_camo"
+						obsolete = no
+					}
+					add_equipment_to_stockpile = {
+						type = medium_tank_chassis_2
+						variant_name = "PzKpfw IV 'Freiheit'"
+						amount = 500
+						producer = HRR
+					}
+					}
+				}
+				else = {
+					HRR = {
+					add_equipment_to_stockpile = {
+						type = medium_tank_equipment_2
+						amount = 500
+						producer = HRR
+					}
+					}
+				}
+				HRR = {
+					load_oob = HRR_rebellion_OOB
+				}
+			}			
 		}
 	    option = {
 		    name = ntribes.43.a
 			custom_effect_tooltip = HRR_fight_for_frost
 			hidden_effect = {
-			set_country_flag = NTR_flag_ice4
-			mark_focus_tree_layout_dirty = yes
-			declare_war_on = { 
-		        type = annex_everything
-	            target = HRR
+				set_country_flag = NTR_flag_ice4
+				mark_focus_tree_layout_dirty = yes
+				declare_war_on = { 
+					type = annex_everything
+					target = HRR
+				}			
 			}			
-		}			
 		}
 		option = {
 		    name = ntribes.43.b			
 			custom_effect_tooltip = HRR_fight_for_freedom
 			hidden_effect = {
-			set_country_flag = NTR_flag_ice4
-			mark_focus_tree_layout_dirty = yes	
-			declare_war_on = { 
-		         type = annex_everything
-	             target = HRR
-			}			
-			HRR = { change_tag_from = ROOT }			
+				set_country_flag = NTR_flag_ice4
+				mark_focus_tree_layout_dirty = yes	
+				declare_war_on = { 
+					type = annex_everything
+					target = HRR
+				}			
+				HRR = { change_tag_from = ROOT }
+				HRR = {
+					unlock_national_focus = HRR_melt_ice
+				}
+			}
 		}
-	}
 	}
 	country_event = { #Deadly Threat
 	    id = ntribes.50
@@ -2544,9 +2855,12 @@ add_namespace = ntribes_news
 			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
 			annex_country = { target = SRS transfer_troops = no }
 			set_victory_points = {
-			province = 6502
-			value = 5
-		}
+				province = 6502
+				value = 5
+			}
+			hidden_effect = {
+				set_global_flag = GOY_flag_skynavia_ruined #loc in ara's files
+			}
 		}
 	}
 	country_event = { #Joining Northern League - FAW
@@ -2917,7 +3231,15 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.85.a
 			ai_chance = {
-			    base = 10
+			    base = 5
+				modifier = {
+					has_government = fascism
+					add = -5
+				}
+				modifier = {
+					has_government = communism
+					add = -5
+				}
 			}
 			NTR = {
 		transfer_state = 459
@@ -2928,7 +3250,7 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.85.b
 			ai_chance = {
-			    base = 2
+			    base = 10
 			}
 			NTR = {
 		country_event = ntribes.87
@@ -2989,7 +3311,15 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.88.a
 			ai_chance = {
-			    base = 10
+			    base = 5
+				modifier = {
+					has_government = fascism
+					add = -5
+				}
+				modifier = {
+					has_government = democratic
+					add = 5
+				}
 			}
 			NTR = {
 		transfer_state = 584
@@ -3000,7 +3330,7 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.88.b
 			ai_chance = {
-			    base = 2
+			    base = 10
 			}
 			NTR = {
 		country_event = ntribes.90
@@ -3061,7 +3391,13 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.91.a
 			ai_chance = {
-			    base = 10
+			    base = 5
+				modifier = {
+					NTR = {
+						has_completed_focus = NTR_princess_of_all
+					}
+					add = -5
+				}
 			}
 			NTR = {
 		transfer_state = 583
@@ -3074,7 +3410,7 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.91.b
 			ai_chance = {
-			    base = 2
+			    base = 10
 			}
 			NTR = {
 		country_event = ntribes.93
@@ -3135,7 +3471,14 @@ add_namespace = ntribes_news
 	    option = {
 		    name = ntribes.94.a
 			ai_chance = {
-			    base = 10
+			    base = 5
+				modifier = {
+					NTR = {
+						has_completed_focus = NTR_princess_of_all
+						
+					}
+					add = -5
+				}
 			}
 			NTR = {
 		transfer_state = 583
@@ -3148,7 +3491,7 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.94.b
 			ai_chance = {
-			    base = 2
+			    base = 10
 			}
 			NTR = {
 		country_event = ntribes.96
@@ -3222,7 +3565,7 @@ add_namespace = ntribes_news
 				expire = "1965.01.01.01"
 				traits = {  }
 			}
-			}			
+			}
 			add_ideas = NTR_broken_ties
 			hidden_effect = {
 				set_technology = {
@@ -3238,6 +3581,17 @@ add_namespace = ntribes_news
 			custom_effect_tooltip = NTR_TT_necromancers_available
 			unlock_national_focus = NTR_north_awakens
 			set_cosmetic_tag = NTR_TYRANNY
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"The Firstborn\" division_template = \"Necromancer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.8" 
+						owner = NTR
+					}
+				}
+			}
 		}
 	}
 	country_event = { #Last Stand
@@ -3528,5 +3882,380 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.106.a
+		}
+	}
+	country_event = { #The Return
+	    id = ntribes.107
+	    title = ntribes.107.t
+	    desc = ntribes.107.d
+	    picture = GFX_event_polar_city
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.107.a
+			country_event = ntribes.55
+		}
+	}
+	country_event = { #Tir Deighe submits to GRD
+	    id = ntribes.108
+	    title = ntribes.108.t
+	    desc = ntribes.108.d
+	    picture = GFX_event_viking_harbour
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.108.a #yes
+			NTR = {
+				country_event = {
+					id = ntribes.109
+					days = 1
+				}
+			}
+			effect_tooltip = {
+				GRD = {
+					puppet = NTR
+				}
+			}
+		}
+		option = {
+		    name = ntribes.108.b #gib land
+			NTR = {
+				country_event = {
+					id = ntribes.110
+					days = 1
+				}
+			}
+			effect_tooltip = {
+				GRD = {
+					puppet = NTR
+				}
+				NTR = {
+					every_owned_state = {
+						limit = {
+							is_griffon_core = yes
+						}
+						GRD = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+		option = {
+		    name = ntribes.108.c #no
+			NTR = {
+				country_event = {
+					id = ntribes.111
+					days = 1
+				}
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = FROM
+			}
+		}
+	}
+	country_event = { #108 - yay
+	    id = ntribes.109
+	    title = ntribes.109.t
+	    desc = ntribes.109.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.109.a
+			GRD = {
+				puppet = NTR
+			}
+			hidden_effect = {
+				set_cosmetic_tag = NTR_GRIFFEMP
+			}
+		}
+	}
+	country_event = { #108 - land
+	    id = ntribes.110
+	    title = ntribes.110.t
+	    desc = ntribes.110.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.110.a
+			GRD = {
+				add_to_faction = NTR
+				country_event = {
+					id = ntribes.112
+					days = 1
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_griffon_core = yes
+				}
+				GRD = {
+					transfer_state = PREV
+				}
+			}
+			hidden_effect = {
+				set_cosmetic_tag = NTR_GRIFFEMP
+			}
+		}
+		option = {
+		    name = ntribes.110.b
+			unlock_national_focus = NTR_queen_of_hearts
+			GRD = {
+				country_event = {
+					id = ntribes.113
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #108 - nay
+	    id = ntribes.111
+	    title = ntribes.111.t
+	    desc = ntribes.111.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.111.a
+			unlock_national_focus = NTR_queen_of_hearts
+		}
+	}
+	country_event = { #110 - yay
+	    id = ntribes.112
+	    title = ntribes.112.t
+	    desc = ntribes.112.d
+	    picture = GFX_event_polar_city
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.112.a
+			effect_tooltip = {
+				GRD = {
+					add_to_faction = NTR
+				}
+				NTR = {
+					every_owned_state = {
+						limit = {
+							is_griffon_core = yes
+						}
+						GRD = {
+							transfer_state = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+	country_event = { #110 - nay
+	    id = ntribes.113
+	    title = ntribes.113.t
+	    desc = ntribes.113.d
+	    picture = GFX_event_polar_city
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.113.a
+			create_wargoal = {
+			    type = annex_everything
+			    target = FROM
+			}
+		}
+	}
+	country_event = { #appoint grover as ruler of Bronzehill
+	    id = ntribes.114
+	    title = ntribes.114.t
+	    desc = ntribes.114.d
+	    picture = GFX_event_griffenheim_night
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.114.a
+			if = {
+				limit = {
+					has_cosmetic_tag = NTR_UK
+				}
+				BRZ = {
+					hidden_effect = {
+						set_cosmetic_tag = BRZ_NTR_UK
+					}
+				}
+				else = {
+					BRZ = {
+						hidden_effect = {
+							set_cosmetic_tag = BRZ_NTR_SUBJ
+						}
+					}
+				}
+			}
+			add_political_power = 50
+			add_stability = 0.05
+			release_puppet = BRZ
+			GOY_NTR_clown_grover_vi = {
+				set_nationality = BRZ	
+			}
+			BRZ = {
+				hidden_effect = {
+				set_cosmetic_tag = BRZ_NTR_UK
+				}
+				add_country_leader_role = {
+					Character = GOY_NTR_clown_grover_vi
+					Promote_leader = yes
+					Country_leader = {
+						ideology = harmonic_constitutionalism
+						desc = ""
+						expire = "1965.01.01.01"
+						traits = {  }
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Moving capital
+	    id = ntribes.115
+	    title = ntribes.115.t
+	    desc = ntribes.115.d
+	    picture = GFX_event_eqc_sunset
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.115.a
+			add_political_power = -50
+			562 = {
+				add_manpower = 200000
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 2
+			}
+		}
+		option = {
+		    name = ntribes.115.b
+			set_capital = { state = 485 }
+			add_political_power = -100
+			add_stability = 0.05
+			485 = {
+				add_manpower = 400000
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	country_event = { #VED alliance offer
+	    id = ntribes.116
+	    title = ntribes.116.t
+	    desc = ntribes.116.d
+	    picture = GFX_event_polar_city
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.116.a
+			effect_tooltip = {
+				NTR = {
+					create_faction = GOY_boreal_alliance
+					add_to_faction = VED
+				}
+			}
+			country_event = {
+				id = ntribes.117
+				days = 1
+			}
+		}
+		option = {
+		    name = ntribes.116.b
+			country_event = {
+				id = ntribes.118
+				days = 1
+			}
+		}
+	}
+	country_event = { #yay
+	    id = ntribes.117
+	    title = ntribes.117.t
+	    desc = ntribes.117.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.117.a
+			create_faction = GOY_boreal_alliance
+			add_to_faction = FROM
+		}
+	}
+	country_event = { #nay
+	    id = ntribes.118
+	    title = ntribes.118.t
+	    desc = ntribes.118.d
+	    picture = GFX_event_griffon_diplomacy
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.118.a
+			
+		}
+	}
+	country_event = { #A Calm Day
+	    id = ntribes.119
+	    title = ntribes.119.t
+	    desc = ntribes.119.d
+	    picture = GFX_event_palace_hall
+		
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		
+	    option = {
+		    name = ntribes.119.a
+			hidden_effect = {
+			remove_trait = {
+				character = GOY_NTR_fiana
+				slot = country_leader
+				trait = GOY_claimant
+				ideology = conservatism
+			}	
+			}
+			add_trait = {
+				character = GOY_NTR_fiana
+				slot = country_leader
+				trait = GOY_ntr_protectornorth
+				ideology = conservatism
+			}			
 		}
 	}

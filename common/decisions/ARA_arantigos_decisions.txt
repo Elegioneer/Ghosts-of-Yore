@@ -426,15 +426,22 @@ ARA_canteribbienes_cat = {
 		visible = {
 			NOT = {
 				OR = {
-					owns_state = 1196
+					owns_state = 1195
 					any_other_country = {
 						is_subject_of = ARA
-						owns_state = 1196
+						owns_state = 1195
 					}
 				}
 			}
 		}
 		available = {
+			OR = {
+				owns_state = 1196
+				any_other_country = {
+					is_subject_of = ARA
+					owns_state = 1196
+				}
+			}
 			has_tech = landing_craft
 			has_tech = marines
 		}
@@ -479,6 +486,18 @@ ARA_canteribbienes_cat = {
 				is_subject = no
 			}
 		}
+		visible = {
+			NOT = {
+				OR = {
+					has_subject = PCB
+					AND = {
+						owns_state = 1193
+						owns_state = 1194
+					}
+				}
+				
+			}
+		}
 		ai_will_do = {
 			base = 10
 			modifier = {
@@ -520,18 +539,14 @@ ARA_canteribbienes_cat = {
 			}
 		}
 		remove_effect = {
-			if = {
+			every_other_country = {
 				limit = {
-					EQS = { exists = yes }
-				}
-				EQS = {
-					country_event = arantiga.166
-				}
-				else = {
-					NLR = {
-						country_event = arantiga.166
+					OR = {
+						owns_state = 4
+						owns_state = 1195
 					}
 				}
+				country_event = arantiga.166
 			}
 		}
 	}
@@ -547,11 +562,12 @@ ARA_canteribbienes_cat = {
 		}
 		available = {
 			OR = {
-				EQS = {
-					has_war_with = ARA
-					surrender_progress > 0.1
-				}
-				NLR = {
+				any_other_country = {
+					OR = {
+						owns_state = 4
+						owns_state = 1195
+						has_subject = PCB
+					}
 					has_war_with = ARA
 					surrender_progress > 0.1
 				}
@@ -564,30 +580,19 @@ ARA_canteribbienes_cat = {
 		}
 		complete_effect = {
 			add_war_support = 0.05
-			if = {
+			every_other_country = {
 				limit = {
-					EQS = {
-						exists = yes
+					OR = {
+						owns_state = 4
+						owns_state = 1195
+						has_subject = PCB
 					}
 				}
-				country_event = {
-					id = arantiga.169
-					hours = 2
-				}
-			}
-			if = {
-				limit = {
-					NLR = {
-						exists = yes
-					}
-				}
-				country_event = {
-					id = arantiga.169
-					hours = 2
-				}
+				country_event = arantiga.169
 			}
 			effect_tooltip = {
 				transfer_state = 4
+				transfer_state = 1195
 				if = {
 					limit = {
 						from = {
@@ -597,7 +602,6 @@ ARA_canteribbienes_cat = {
 					transfer_state = 1194
 					transfer_state = 1193
 				}
-				transfer_state = 4
 			}
 		}
 	}
@@ -761,6 +765,7 @@ ARA_dev_islands_cat = {
 		}
 		available = {
 			owns_state = 7
+			has_tech = excavation3
 			num_of_civilian_factories_available_for_projects > 10
 		}
 		days_remove = 60
@@ -1480,6 +1485,15 @@ ARA_return_land_cat = {
 		    NOT = {
 		        has_war_with = RCT
 		    }
+			any_neighbor_country = {
+		    NOT = {
+				is_in_faction_with = ARA
+			}
+			is_river_fed_member = yes
+		    any_owned_state = {
+				is_griffon_core = yes
+	        }
+			}
 		}
 		days_re_enable = 30
 		complete_effect = {
@@ -1502,6 +1516,56 @@ ARA_return_land_cat = {
 					    has_country_flag = river_federation_founder
 					}
 			    	country_event = arantiga.111
+				}
+			}
+		}
+	}
+	ARA_return_land_2 = {
+	    icon = generic_prepare_civil_war
+	    cost = 10
+	    ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					enemies_strength_ratio > 1.5
+					strength_ratio = { tag = RCT ratio < 1 }
+				}
+			}
+		}
+		visible = {
+		    NOT = {
+		        has_war_with = RCT
+		    }
+			any_neighbor_country = {
+		    NOT = {
+				is_in_faction_with = ARA
+			}
+			OR = {
+			    original_tag = RCT
+				original_tag = FRE
+				original_tag = NIM
+				original_tag = BAK
+				original_tag = DEP
+				original_tag = LCT
+			}
+		    any_owned_state = {
+				is_griffon_core = yes
+	        }
+			}
+		}
+		days_re_enable = 30
+		complete_effect = {
+			every_other_country = { #Best wargoal ever
+				limit = {
+					any_owned_state = {
+						is_griffon_core = yes
+					}
+				}
+				create_wargoal = {
+					type = topple_government
+					target = PREV
+					expire = 0
 				}
 			}
 		}
@@ -1597,7 +1661,7 @@ ARA_northern_threat = {
 	GOY_ARA_give_hlr_to_ntr = {
 		icon = generic_form_nation
 	    cost = 0
-		fire_only_once = yes
+		fire_only_once = no
 		ai_will_do = {
 			factor = 100
 		}
@@ -1616,44 +1680,43 @@ ARA_northern_threat = {
 			NTR = {
 				is_puppet_of = ARA
 			}
+			NOT = {
+				GOY_ARA_headmasterapesios = {
+					has_nationality = HLR
+				}
+			}
 		}
 		complete_effect = {
 			custom_effect_tooltip = ARA_DED_to_NTR
 			hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = DED
+						is_core_of = HLR
+						is_core_of = EWI
+					}
+				}
+				NTR = {
+					add_state_core = PREV
+				}
+			}
+			NTR = {
+				annex_country = {
+					target = HLR
+					transfer_troops = yes
+				}
+		    }
 			ARA = {
 				every_owned_state = {
 					limit = {
-						OR = {
-							is_core_of = DED
-							is_core_of = HLR
-						}
+						is_core_of = NTR
 					}
 					NTR = {
 						transfer_state = PREV
 					}
 				}
 			}
-		    NTR = {
-				annex_country = {
-					target = HLR
-					transfer_troops = yes
-				}
-			    add_state_core = 456
-			    add_state_core = 451
-			    add_state_core = 425
-			    add_state_core = 427
-			    add_state_core = 428
-			    add_state_core = 566
-			    add_state_core = 426
-			    add_state_core = 564
-			    add_state_core = 565
-			    add_state_core = 419
-			    add_state_core = 420
-			    add_state_core = 418
-			    add_state_core = 417
-			    add_state_core = 416
-			    add_state_core = 415
-		    }
 			}
 		}
 	}
@@ -1677,6 +1740,8 @@ ARA_reorg_zebrican_lands_cat = {
 			release_puppet = MCW
 			MCW = {
 				set_cosmetic_tag = MCW_arantiga
+				transfer_state = 726
+				transfer_state = 727
 			}
 			hidden_effect = {
 				ARA = {
@@ -1735,6 +1800,7 @@ ARA_reorg_zebrican_lands_cat = {
 					is_core_of = WAR
 					is_core_of = BAT
 					is_core_of = ZUM
+					is_core_of = ZAR
 				}
 			}
 		}
@@ -1747,6 +1813,7 @@ ARA_reorg_zebrican_lands_cat = {
 						is_core_of = WAR
 						is_core_of = BAT
 						is_core_of = ZUM
+						is_core_of = ZAR
 					}
 				}
 				add_core_of = TBK
