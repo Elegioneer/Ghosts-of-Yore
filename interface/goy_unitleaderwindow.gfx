@@ -4,4 +4,8 @@ spriteTypes = {
 		name = "GFX_trait_goy_blindness"
 		texturefile = "gfx/interface/traits/personal/trait_blind.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_goy_exiled_bearlord"
+		texturefile = "gfx/interface/traits/personal/trait_goy_exiled_bearlord.dds"
+	}
 }

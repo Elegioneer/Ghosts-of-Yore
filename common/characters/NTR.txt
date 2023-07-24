@@ -320,7 +320,8 @@ characters = {
 		name = NTR_tiobaid_reaver
 		portraits = {
 			army = {
-			small = "GFX_idea_FBK_advisor13"
+			large = "GFX_portrait_pony_generic_5"
+			small = "GFX_idea_GOY_NTR_tiobaide"
 			}
 		}
 		navy_leader = {
@@ -779,7 +780,7 @@ characters = {
 			}
 			visible = {
 			}
-			traits = { army_infantry_1 }
+			traits = { army_infantry_2 }
 		}
 	}		
 	GOY_NTR_muireach = {
@@ -839,7 +840,7 @@ characters = {
 			}
 			visible = {
 			}
-			traits = { army_artillery_2 }
+			traits = { army_artillery_1 }
 		}
 	}
 	GOY_NTR_sorcha = {
@@ -965,10 +966,10 @@ characters = {
 			}
 			visible = {
 			}
-			traits = { GOY_ntr_bear_warlord }
+			traits = { GOY_ntr_bear_warlord_2 }
 		}
 		corps_commander = {
-			traits = { bear_race_trait bearer_of_artillery winter_specialist }
+			traits = { bear_race_trait goy_exiled_bearlord winter_specialist }
 			desc = ""
 			skill = 2
 			attack_skill = 2

@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_GOY_arantiga_knight"
 		textureFile = "gfx/leaders/ARA/arantiga_knight.tga"
 	}
+	spriteType = {
+		name = "GFX_GOY_smiling_fiana"
+		textureFile = "gfx/leaders/NTR/goy_happy_pink_waifu.tga"
+	}
 }

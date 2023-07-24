@@ -993,6 +993,7 @@ BOI_CETT_archons:0 "Archons are now available as advisors"
  GOY_BOI_thundertail_stats_tt:0 "§RAttack Skill§!: §g4§!\n§ODefence Skill§!: §g2§!\n§GPlanning Skill§!: §g2§!\n§CLogistics Skill§!: §g2§!\n"
  GOY_BOI_silverfeather_stats_tt:0 "§RAttack Skill§!: §g2§!\n§ODefence Skill§!: §g3§!\n§GPlanning Skill§!: §g5§!\n§CLogistics Skill§!: §g3§!\n"
  
+
 ## Decisions ##
 BOI_war_for_liberation_category:0 "Launch the ELF's Insurrection"
 BOI_start_war_for_liberation:0 "Supply the Conspirators"
@@ -1102,7 +1103,7 @@ griffonstone_news.06.b:0 "Outrageous!"
 griffonstone_news.06.c:0 "Interesting..."
 
 ## Order Of Battle ##
-BOI_goldstones_mercs_OOB:0 "Наёмники Голдстоуна"
+BOI_goldstones_mercs_OOB:0 "Goldstone's mercenaries"
 
 ## Events ##
 griffonstone.001.t:0 "Homecoming"

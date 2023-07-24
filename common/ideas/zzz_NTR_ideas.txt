@@ -284,7 +284,7 @@ ideas = {
 			modifier = {
 			    air_range_factor = 0.1
 				air_weather_penalty = -0.2
-			    experience_gain_air = 0.01
+			    experience_gain_air = 0.05
 			}
 		}
 		NTR_new_diplomatic = {
@@ -1314,6 +1314,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.2
 			}
 		}
 		NTR_griffon_knowledge = {
@@ -1741,11 +1742,12 @@ ideas = {
 			    has_government = democratic
 			}
 			visible = {
-				original_tag = NTR
-			    has_government = democratic
+			#	original_tag = NTR
+			#   has_government = democratic
+				has_idea = GOY_magical_society
 			}
 			available = {
-			    has_government = democratic
+			    has_idea = GOY_magical_society
 			}			
 			removal_cost = -1
 			allowed_civil_war = {
@@ -1780,8 +1782,9 @@ ideas = {
 			    has_government = fascism
 			}
 			visible = {
-				original_tag = NTR
-			    has_government = fascism
+				#original_tag = NTR
+			    #has_government = fascism
+				has_idea = GOY_slave_economy
 			}
 			removal_cost = -1
 			picture = slavery
@@ -1789,7 +1792,7 @@ ideas = {
 			traits = { society_idea }
 			
 			available = {
-			    has_government = fascism
+				has_idea = GOY_slave_economy
 			}
 			allowed_civil_war = {
 				always = no
@@ -1853,8 +1856,12 @@ ideas = {
 				has_government = fascism
 			}
 			visible = {
-				original_tag = NTR
-				has_government = fascism
+				#original_tag = NTR
+				#has_government = fascism
+				has_idea = GOY_frozen_economy
+			}
+			available = {
+				has_idea = GOY_frozen_economy
 			}
 			removal_cost = -1
 			picture = GFX_idea_GOY_frozen_economy
@@ -2599,8 +2606,8 @@ industrial_concern = {
 		has_completed_focus = NTR_open_frostbell
 		}
 		research_bonus = {
-		industry = 0.05
-		electronics = 0.05
+			industry = 0.1
+			electronics = 0.05
 		}
 	}
 }
@@ -2621,7 +2628,7 @@ industrial_concern = {
 		has_completed_focus = NTR_electronics_production
 		}
 		research_bonus = {
-		electronics = 0.1
+			electronics = 0.1
 		}
 	}
 }
@@ -2682,9 +2689,9 @@ materiel_manufacturer = {
 				build_cost_ic = -0.1 instant = yes
 			}
 			melee_equipment_0 = {
-				soft_attack = 1 instant = yes
+				soft_attack = 0.75 instant = yes
 				defense = 1 instant = yes
-				breakthrough = 1 instant = yes
+				breakthrough = 0.75 instant = yes
 				build_cost_ic = -0.2 instant = yes
 			}
 		}
@@ -2701,6 +2708,14 @@ materiel_manufacturer = {
 		available = {
 		}
 		visible = {
+		}
+		on_add = {
+			owner = {
+				set_technology = {
+					pre_gw_artillery = 1
+					popup = yes
+				}
+			}
 		}
 		research_bonus = {
 			artillery = 0.1
@@ -2728,15 +2743,20 @@ materiel_manufacturer = {
 		has_completed_focus = NTR_weaponised_magic
 		}
 		research_bonus = {
-		artillery = 0.05
+			artillery = 0.05
+			infantry_weapons = 0.05
 		}
 		equipment_bonus = {
+			infantry_equipment = {
+				hard_attack = 0.1 instant = yes
+				ap_attack = 0.2 instant = yes
+			}
 			magical_equipment = {
 				soft_attack = 0.05 instant = yes
 				hard_attack = 0.05 instant = yes
-				}
 			}
 		}
+	}
 	NTR_iceshard_trucks = {
 		allowed = {
 		original_tag = "NTR"
@@ -2757,15 +2777,15 @@ materiel_manufacturer = {
 		}
 		equipment_bonus = {
 			motorized_equipment = {
-				build_cost_ic = -0.05 instant = yes
-				}
+				build_cost_ic = -0.1 instant = yes
 			}
+		}
 		equipment_bonus = {
 			mechanized_equipment = {
 				build_cost_ic = -0.05 instant = yes
-				}
 			}
 		}
+	}
 	NTR_holy_forge_artillery_armory = {
 		allowed = {
 		original_tag = "NTR"
@@ -2773,7 +2793,7 @@ materiel_manufacturer = {
 		traits = { artillery_manufacturer }
 		picture = generic_artillery_manufacturer_3
 		ai_will_do = {
-		factor = 0
+			factor = 5
 		}
 		available = {
 		has_completed_focus = NTR_advanced_artillery
@@ -2781,14 +2801,17 @@ materiel_manufacturer = {
 		visible = {
 		has_completed_focus = NTR_advanced_artillery
 		}
+		research_bonus = {
+			artillery = 0.1
+		}
 		equipment_bonus = {
 			artillery = {
 				soft_attack = 0.1 instant = yes
 				hard_attack = 0.1 instant = yes
-				}
+				reliability = 0.1 instant = yes
 			}
-
 		}
+	}
 	NTR_koper_armory = {
 		allowed = {
 		original_tag = "NTR"
@@ -2796,24 +2819,21 @@ materiel_manufacturer = {
 		traits = { artillery_manufacturer }
 		picture = nevskoye_design_bureau
 		ai_will_do = {
-		factor = 0
+			factor = 0
 		}
 		available = {
-		has_completed_focus = NTR_foreign_arms_producers
+			has_completed_focus = NTR_foreign_arms_producers
 		}
 		visible = {
-		has_completed_focus = NTR_foreign_arms_producers
+			has_completed_focus = NTR_foreign_arms_producers
 		}
 		equipment_bonus = {
 			artillery = {
-				soft_attack = 0.05 instant = yes
-				hard_attack = 0.05 instant = yes
-				}
+				soft_attack = 0.15 instant = yes
+				build_cost_ic = 0.1 instant = yes
 			}
-		research_bonus = {
-			artillery = 0.1
 		}
-		}
+	}
 	NTR_moltenrock_guns = {
 		allowed = {
 		original_tag = "NTR"
@@ -2830,17 +2850,18 @@ materiel_manufacturer = {
 		has_completed_focus = NTR_our_gunsmiths
 		}
 		research_bonus = {
-		infantry_weapons = 0.05
+			infantry_weapons = 0.1
 		}
 		equipment_bonus = {
 			infantry_equipment = {
-				soft_attack = 0.05 instant = yes
+				soft_attack = 0.1 instant = yes
+				defense = 0.1 instant = yes
 				build_cost_ic = -0.1 instant = yes
-				reliability = 0.05 instant = yes
-				}
+				reliability = 0.1 instant = yes
 			}
 		}
 	}
+}
 
 tank_manufacturer = {
 	NTR_scavanged_designs = {

@@ -162,11 +162,12 @@ leader_traits = {
 	}
 	GOY_euan_advisor = {
 		random = no
-		political_power_factor = 0.05
+		political_power_factor = 0.1
 		trade_opinion_factor = 0.1
 	}
 	GOY_ntrfarmer = {
 		random = no
+		mobilization_speed = 0.2
 		consumer_goods_factor = -0.03
 	}
 	GOY_ntralchemist = {
@@ -176,8 +177,8 @@ leader_traits = {
 	}
 	GOY_ntrgriffonchief = {
 		random = no
-		opinion_gain_monthly_same_ideology_factor = 0.25
-		opinion_gain_monthly_factor = 0.1
+		non_core_manpower = 0.05
+		opinion_gain_monthly_factor = 0.2
 	}
 	GOY_ntrbard = {
 		random = no
@@ -186,52 +187,94 @@ leader_traits = {
 	}
 	GOY_ntrmetalshaper = {
 		random = no
-		research_speed_factor = 0.05
+		research_speed_factor = 0.1
 		stability_factor = -0.05
 	}
 	GOY_ntr_artistans = {
 		random = no
-		industrial_capacity_factory = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor 0.1
 	}
 	GOY_ntr_crystal_carvers = {
 		random = no
-		consumer_goods_factor = -0.01
+		consumer_goods_factor = -0.03
 	}
 	GOY_ntr_everfrost_armories = {
 		random = no
 		production_speed_arms_factory_factor = 0.1
 	}
-	GOY_ntr_bear_warlord = {
+	GOY_ntr_bear_warlord_1 = {
 		random = no
+		#allowed = {
+		#	FROM = {
+		#		original_tag = NTR
+		#	}
+		#}
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
+		
+		command_cap = 30
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	GOY_ntr_bear_warlord_2 = {
+		random = no
+		#allowed = {
+		#	FROM = {
+		#		original_tag = NTR
+		#	}
+		#}
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		max_dig_in = 5
+		
+		command_cap = 20
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+	GOY_ntr_bear_warlord_3 = {
+		random = no
+		#allowed = {
+		#	FROM = {
+		#		original_tag = NTR
+		#	}
+		#}
+		army_org_factor = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		max_dig_in = 5
+		
+		command_cap = 10
+		
+		ai_will_do = {
+			factor = 4
+		}
 	}
 	GOY_ntr_barkcoat_builders = {
 		random = no
-		production_speed_buildings_factor = 0.05
-		conversion_cost_civ_to_mil_factor = -0.05
-		conversion_cost_mil_to_civ_factor = -0.05
+		production_speed_buildings_factor = 0.15
+		conversion_cost_civ_to_mil_factor = -0.1
+		conversion_cost_mil_to_civ_factor = -0.1
 	}
 	GOY_ntr_foreign_traders = {
 		random = no
 	}
 	GOY_ntr_craft_guilds = {
 		random = no
-		line_change_production_efficiency_factor = 0.1
-		equipment_conversion_speed = 0.1
+		line_change_production_efficiency_factor = 0.2
+		equipment_conversion_speed = 0.2
 	}
 	GOY_ntr_rockseekers = {
 		random = no
-		local_resources_factor = 0.1
+		local_resources_factor = 0.15
 	}
 	GOY_caretaker = {
 		random = no
 		army_core_defence_factor = 0.05
-	}
-	GOY_schemer = {
-		random = no
-		intel_network_gain_factor = 0.1
-		decryption_power_factor	= 0.05
 	}
 	GOY_schemer = {
 		random = no

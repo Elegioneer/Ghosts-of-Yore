@@ -146,9 +146,9 @@ bookmarks = {
 			NTR_warriors_of_blizzard	
 			}
 			focuses = {
+				NTR_times_changing
 				NTR_grim_reality
-				NTR_age_of_magic
-				NTR_north_awakens
+				NTR_follow_old
 			}
 		}
 

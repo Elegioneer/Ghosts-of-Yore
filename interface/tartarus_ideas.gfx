@@ -262,4 +262,8 @@ spriteTypes = {
 		name = "GFX_idea_GOY_wisp_religion"
 		texturefile = "gfx/interface/ideas/idea_GOY_wisp_religion.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_tiobaide"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_tiobaide.dds"
+	}
 }

@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_russian:
 #ALL TAG LOCALISATIONS GO HERE
 
 ### ARA ###
@@ -31,7 +31,7 @@ ARA_REP_neutrality:0 "Республика Арантига"
  MIT_arantiga_fascism:0 "Протекторат Астерион"
  EQC_arantiga_fascism:0 "Протекторат Новый Мэйрленд"
  NTR_arantiga_fascism:0 "Гиперборейский Протекторат"
- HLR_arantiga_fascism:0 "Арантигский Орден"
+ HLR_arantiga_fascism:0 "Орден Арантигоса"
  RIV_arantiga_fascism_DEF:0 "Арантигский Протекторат Речных Земель"
  BRD_arantiga_fascism_DEF:0 "Арантигский Южный Протекторат"
  MIT_arantiga_fascism_DEF:0 "Арантигский Протекторат Астерион"
@@ -180,13 +180,13 @@ BOI_GRIF_HERZ_communism:0 "Социалистическая Республика
 
 ### NTR ###
 NTR_GOY_democratic:0 "Тир Дейге"
- NTR_GOY_democratic_DEF:0 "Северное Королевство"
+ NTR_GOY_democratic_DEF:0 "Северные Земли"
  NTR_GOY_democratic_ADJ:0 "Северн."
  NTR_GOY_fascism:0 "Тир Дейге"
- NTR_GOY_fascism_DEF:0 "Северное Государство"
+ NTR_GOY_fascism_DEF:0 "Северные Земли"
  NTR_GOY_fascism_ADJ:0 "Северн."
  NTR_GOY_neutrality:0 "Тир Дейге"
- NTR_GOY_neutrality_DEF:0 "Северное Княжество"
+ NTR_GOY_neutrality_DEF:0 "Северные Земли"
  NTR_GOY_neutrality_ADJ:0 "Северн."
  NTR_GOY_communism:0 "Свободные Северные Коммуны"
  NTR_GOY_communism_DEF:0 "Свободные Северные Коммуны"
@@ -206,6 +206,15 @@ NTR_GOY_democratic:0 "Тир Дейге"
  NTR_TYRANNY_fascism:0 "Ледовая Тирания"
  NTR_TYRANNY_fascism_DEF:0 "Ледовая Тирания"
  NTR_TYRANNY_fascism_ADJ:0 "Северн."
+ NTR_UK_democratic:0 "Риогхахд Аонайхте"
+ NTR_UK_democratic_DEF:0 "Соединенное Королевство Херцланда и Северной Грифонии"
+ NTR_UK_democratic_ADJ:0 "Северо-грифонск."
+ NTR_UK_fascism:0 "Импиреахд Борета"
+ NTR_UK_fascism_DEF:0 "Северная Империя"
+ NTR_UK_fascism_ADJ:0 "Северо-грифонск."
+ NTR_UK_neutrality:0 "Риогхахд Аонайхте"
+ NTR_UK_neutrality_DEF:0 "Соединенное Королевство Херцланда и Северной Грифонии"
+ NTR_UK_neutrality_ADJ:0 "Северо-грифонск."
  
 ### HRR ###
 HRR_GOY_democratic:0 "Освободительная Армия Херцланда"

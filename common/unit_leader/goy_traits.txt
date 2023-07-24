@@ -21,4 +21,27 @@ leader_traits = {
 			factor = 0
 		}
 	}
+	goy_exiled_bearlord = {
+		type = land
+		trait_type = personality_trait
+		
+		modifier = {
+			planning_speed = 0.10
+			army_artillery_attack_factor = 0.10
+		}
+		allowed = {
+			FROM = {
+				original_tag = NTR
+			}
+		}
+		
+		#slot = high_command
+		#specialist_advisor_trait = GOY_ntr_bear_warlord_1 #Can't hide these in officer corps roles, so feature scrapped :(
+		#expert_advisor_trait = GOY_ntr_bear_warlord_2
+		#genius_advisor_trait = GOY_ntr_bear_warlord_3
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 }

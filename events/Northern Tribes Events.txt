@@ -890,7 +890,7 @@ add_namespace = ntribes_news
 			    }
 		    }
 			custom_effect_tooltip = NTR_TT_load_reform_tree
-			
+			unlock_national_focus = NTR_times_changing
 			hidden_effect = {
 				load_focus_tree = Northern_tribes_reform
 			}
@@ -1154,7 +1154,7 @@ add_namespace = ntribes_news
 		    name = ntribes.14.b
 			add_timed_idea = {
 			    idea = NTR_prepared_assault
-				days = 270
+				days = 150
 			}
 		}
 		option = {
@@ -4091,7 +4091,7 @@ add_namespace = ntribes_news
 		    name = ntribes.114.a
 			if = {
 				limit = {
-					has_cosmetic_tag = NTR_UK
+					has_completed_focus = NTR_princess_herzland
 				}
 				BRZ = {
 					hidden_effect = {
@@ -4113,9 +4113,7 @@ add_namespace = ntribes_news
 				set_nationality = BRZ	
 			}
 			BRZ = {
-				hidden_effect = {
-				set_cosmetic_tag = BRZ_NTR_UK
-				}
+				load_focus_tree = generic_focus
 				add_country_leader_role = {
 					Character = GOY_NTR_clown_grover_vi
 					Promote_leader = yes
@@ -4249,13 +4247,21 @@ add_namespace = ntribes_news
 				slot = country_leader
 				trait = GOY_claimant
 				ideology = conservatism
-			}	
+			}
+				GOY_NTR_fiana = {
+					#set_character_name = {
+					#	name = ITA_vittorio_emanuele_iii_roman_emperor
+					#}
+					set_portraits = {
+						civilian = { large = GFX_GOY_smiling_fiana }
+					}
+				}
 			}
 			add_trait = {
 				character = GOY_NTR_fiana
 				slot = country_leader
 				trait = GOY_ntr_protectornorth
 				ideology = conservatism
-			}			
+			}		
 		}
 	}

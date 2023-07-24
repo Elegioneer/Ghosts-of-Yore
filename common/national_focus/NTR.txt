@@ -681,49 +681,50 @@
 					aa_lmg = 1
 					engines_1 = 1
 			    }
+				custom_effect_tooltip = NTR_TT_add_100_planes
 				create_equipment_variant = {
-					name = "Fukker D.17"
+					name = "Airgo DH.1"
 					type = small_plane_airframe_1
 					parent_version = 0
 					allow_without_tech = yes
 					modules = {
 						fixed_main_weapon_slot = light_mg_4x
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						fixed_auxiliary_weapon_slot_2 = empty
 						engine_type_slot = engine_1_1x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
-						special_type_slot_3 = empty	
 					}
 					icon = "GFX_commonwealth_2d_fighter1_medium"
 				}
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = small_plane_airframe_1
-					variant_name = "Fukker D.17"
+					variant_name = "Airgo DH.1"
 					amount = 50
 					producer = NTR
 				}
+				}
 				create_equipment_variant = {
-					name = "Fukker D.18 'Scheiss-Werfer'"
+					name = "Airgo DH.4"
 					type = small_plane_cas_airframe_1
 					parent_version = 0
 					allow_without_tech = yes
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						fixed_auxiliary_weapon_slot_2 = empty
 						engine_type_slot = engine_1_1x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
-						special_type_slot_3 = empty	
 					}
 					icon = "GFX_commonwealth_2d_CAS1_medium"
 				}
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = small_plane_cas_airframe_1
-					variant_name = "Fukker D.18 'Scheiss-Werfer'"
+					variant_name = "Airgo DH.4"
 					amount = 50
 					producer = NTR
+				}
 				}
 			}
 			else = {
@@ -1343,9 +1344,11 @@
 		}
 		completion_reward = {
 			country_event = ntribes.11
+			hidden_effect = {
 			news_event = {
 			    id = ntribes_news.4
 				hours = 12
+			}
 			}
 			MNC = { add_to_ROOT_potential_cores = yes }
 		    FAT = { add_to_ROOT_potential_cores = yes }
@@ -1720,6 +1723,12 @@
 			add_equipment_to_stockpile = {
 			    type = convoy_1
 			    amount = 50
+			}
+			if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				add_ideas = export_focus
 			}
 			add_ideas = NTR_northern_passage
 		}
@@ -2368,16 +2377,81 @@
 		relative_position_id = NTR_clan_stormshield
 		prerequisite = { focus = NTR_riders_storm }
 		completion_reward = {
-			add_political_power = -50		
-			set_technology = {
-			     iw_small_airframe = 1
-			     }
-				add_tech_bonus = {
-					name = GOY_bonus_air_1
-					bonus = 0.5
-					uses = 1
-					category = light_air
-				}				 
+			add_political_power = -50
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				set_technology = {
+			        iw_small_airframe = 1
+					basic_small_airframe = 1
+					early_bombs = 1
+					aa_lmg = 1
+					engines_1 = 1
+			    }
+				custom_effect_tooltip = NTR_TT_add_100_planes
+				create_equipment_variant = {
+					name = "Airgo DH.1"
+					type = small_plane_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_commonwealth_2d_fighter1_medium"
+				}
+				hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_1
+					variant_name = "Airgo DH.1"
+					amount = 50
+					producer = NTR
+				}
+				}
+				create_equipment_variant = {
+					name = "Airgo DH.4"
+					type = small_plane_cas_airframe_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_1_1x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_commonwealth_2d_CAS1_medium"
+				}
+				hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_1
+					variant_name = "Airgo DH.4"
+					amount = 50
+					producer = NTR
+				}
+				}
+			}
+			else = {
+				set_technology = {
+			        early_fighter = 1
+					fighter1 = 1
+			        CAS1 = 1
+			    }
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_1
+					amount = 50
+					producer = RCT
+				}
+				add_equipment_to_stockpile = {
+					type = CAS_equipment_1
+					amount = 50
+					producer = RCT
+				}
+			}				 
 		}
 	}
 	shared_focus = {
@@ -2785,7 +2859,7 @@
 		completion_reward = {
 			add_timed_idea = {
 			    idea = NTR_like_wind
-				days = 180
+				days = 120
 			}
 		}
 	}
@@ -2892,7 +2966,7 @@
 			}
 			add_timed_idea = {
 			    idea = NTR_defensive_tactics
-				days = 180
+				days = 120
 			}
 		}
 	}
@@ -6524,6 +6598,7 @@
 					aa_lmg = 1
 					engines_1 = 1
 			    }
+				custom_effect_tooltip = NTR_TT_add_100_planes
 				create_equipment_variant = {
 					name = "Fukker D.17"
 					type = small_plane_airframe_1
@@ -6532,19 +6607,19 @@
 					modules = {
 						fixed_main_weapon_slot = light_mg_4x
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						fixed_auxiliary_weapon_slot_2 = empty
 						engine_type_slot = engine_1_1x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
-						special_type_slot_3 = empty	
 					}
 					icon = "GFX_commonwealth_2d_fighter1_medium"
 				}
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = small_plane_airframe_1
 					variant_name = "Fukker D.17"
 					amount = 50
 					producer = NTR
+				}
 				}
 				create_equipment_variant = {
 					name = "Fukker D.18 'Scheiss-Werfer'"
@@ -6554,19 +6629,19 @@
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						fixed_auxiliary_weapon_slot_2 = empty
 						engine_type_slot = engine_1_1x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
-						special_type_slot_3 = empty	
 					}
 					icon = "GFX_commonwealth_2d_CAS1_medium"
 				}
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = small_plane_cas_airframe_1
-					variant_name = "Fokker D.18 'Scheiss-Werfer'"
+					variant_name = "Fukker D.18 'Scheiss-Werfer'"
 					amount = 50
 					producer = NTR
+				}
 				}
 			}
 			else = {
