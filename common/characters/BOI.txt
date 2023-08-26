@@ -924,7 +924,8 @@ characters = {
 		name = GOY_BOI_trueklawsewitz
 		portraits = {
 			army = {
-				large = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+				large = "gfx/leaders/BOI/GOY_Klawsewitz.dds"
+				small="GFX_idea_GOY_BOI_klawsewitz"
 			}
 		}
 	}

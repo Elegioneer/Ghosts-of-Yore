@@ -321,7 +321,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = EQS_harmonic_stagnation2
+			picture = FRA_liberte_egalite_solidarite
 			removal_cost = -1
 			modifier = {
 			    required_garrison_factor = -0.2
@@ -1274,7 +1274,7 @@ ideas = {
 			picture = capital_outflow
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    civilian_factory_use = 5
 			}
 		}
 		NTR_massive_expenses = {
@@ -1287,7 +1287,7 @@ ideas = {
 			picture = capital_outflow
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.2
+			    civilian_factory_use = 10
 			}
 		}
 		NTR_like_wind = {
@@ -2487,7 +2487,7 @@ high_command = {
 		original_tag = "NTR"
 			}		
  		traits = { GOY_ntr_bear_warlord }
-		picture = unknown_advisor_bear
+		picture = generic_artillery_manufacturer_2
 		ai_will_do = {
 			factor = 3
 			}
@@ -2504,7 +2504,7 @@ industrial_concern = {
 			original_tag = "NTR"
 		}		
 		traits = { refinery_concern }
-		picture = bul_petrol_ad
+		picture = HIP_SIR_ARI_securing_oil
 		ai_will_do = {
 			factor = 0
 		}
@@ -2817,7 +2817,7 @@ materiel_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { artillery_manufacturer }
-		picture = nevskoye_design_bureau
+		picture = BAK_koper
 		ai_will_do = {
 			factor = 0
 		}
@@ -2869,7 +2869,7 @@ tank_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { tank_manufacturer }
-		picture = feat_company_16
+		picture = man_five_year_plan_tank
 		ai_will_do = {
 		factor = 1
 		}
@@ -2969,9 +2969,9 @@ aircraft_manufacturer = {
 				reliability = 0.05 instant = yes
 				}
 			}
-		research_bonus = {
-		air_equipment = 0.05
-		}
+		#research_bonus = {
+		#air_equipment = 0.05
+		#}
 		}
 	NTR_griffon_designs = {
 		allowed = {
@@ -3070,7 +3070,7 @@ naval_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { raiding_fleet_naval_manufacturer }
-		picture = GRY_air_man_1
+		picture = HIP_trade
 		ai_will_do = {
 		factor = 1
 		}
@@ -3084,7 +3084,7 @@ naval_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { battlefleet_designer }
-		picture = generic_naval_manufacturer_3
+		picture = liberty_ships_focus
 		ai_will_do = {
 		factor = 1
 		}

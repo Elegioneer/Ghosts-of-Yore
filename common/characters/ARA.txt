@@ -165,7 +165,7 @@ characters = {
 		portraits = {
 			army = {
 				large="gfx/leaders/ARA/cassander.tga"
-				small="gfx/interface/ideas/idea_ARA_cassander.dds"
+				small="gfx/interface/ideas/idea_GOY_ARA_cassander.dds"
 			}
 		}
 		corps_commander = {

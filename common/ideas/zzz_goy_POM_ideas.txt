@@ -1,0 +1,147 @@
+ideas = {
+    country = {
+	    POM_flowenian_chokepoint = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			remove = {
+				owns_state = #todo flowena
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = -0.25
+			}
+			targeted_modifier = {
+				tag = FLO
+				cic_to_target_factor = 0.25
+				extra_trade_to_target_factor = 0.5
+			}	
+		}
+		POM_pomovarran_uprising = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.75
+				stability = -0.3
+				fascism_drift = -0.01
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+				#todo cant deploy or edit units
+			}
+		}
+		POM_warlord_government = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+			}
+		}
+		POM_economic_devastation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.25
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+				local_resources = 0.2
+			}
+		}
+		POM_military_legacy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				max_planning = 0.1
+			}
+		}
+	}
+	economy = {
+	    law = yes
+		use_list_view = no
+        
+	    goy_pom_criminal_economy = {
+			allowed = {
+				always = no
+			}
+			visible = {
+				has_idea = goy_pom_criminal_economy
+			}
+			removal_cost = -1
+			picture = civilian_economy
+			
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
+			}
+			
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+
+		
+	}
+
+	industrial_concern = {
+		designer = yes
+
+		
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		
+	}
+
+	naval_manufacturer = {
+		designer = yes
+
+		
+	}
+
+	tank_manufacturer = {
+		designer = yes
+
+		
+	}	
+}

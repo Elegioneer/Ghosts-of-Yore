@@ -266,4 +266,12 @@ spriteTypes = {
 		name = "GFX_idea_GOY_NTR_tiobaide"
 		texturefile = "gfx/interface/ideas/idea_GOY_NTR_tiobaide.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_squall"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_squall.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_BOI_klawsewitz"
+		texturefile = "gfx/interface/ideas/idea_goy_BOI_klawsewitz.dds"
+	}
 }

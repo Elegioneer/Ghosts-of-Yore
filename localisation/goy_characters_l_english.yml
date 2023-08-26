@@ -1,6 +1,18 @@
 ﻿l_english:
  
  ### ARA ###
+ GOY_ARA_dorotheos_featherin:0 "Dorotheos Featherin"
+ GOY_ARA_margareth_featherin:0 "Margareth Featherin"
+ GOY_ARA_ciriaco:0 "Ciriaco Mediate"
+ GOY_ARA_antioco_moro:0 "Antioco Moro"
+ GOY_NTR_hyperborea:0 "Hyperborean Governorate"
+ GOY_ARA_hermanepuppet:0 "King Hermane I"
+ GOY_ARA_lysimachuspuppet:0 "Protector Lysimachus"
+ GOY_ARA_riverprotector:0 "Pumpkin Swirl"
+ GOY_ARA_jetset:0 "Jet Set"
+ GOY_ARA_headmasterapesios:0 "Headmaster Apesios"
+ GOY_ARA_arantigos:0 "Arantigos II"
+ ARA_nicatorking:0 "Nicator I Whitebeak"
  # Margareth
  generic_neutral_leader_desc:0 "§YBorn§!: January 21, 973 ALB, Sparleto\n\n§YBiography§!: Baroness Margareth Featherin has been ruling Arantiga for the past decade with a just and fair claw, but even she cannot deny that under her reign, there has been a decisive lack of progress as Wingbardian capitalists seized most of the Arantigan industry. However, she believes that the pen is mightier than the sword, and that Arantiga's current woes can be resolved with a few careful words, something her more notable brother and general in the army, Dorotheos, disagrees with."
  # Dorotheos

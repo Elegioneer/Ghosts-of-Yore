@@ -4109,6 +4109,15 @@ add_namespace = ntribes_news
 			add_political_power = 50
 			add_stability = 0.05
 			release_puppet = BRZ
+			if = {
+				limit = {
+					date > 1021.5.21
+				}
+				set_portraits = {
+					character = GOY_NTR_clown_grover_vi 
+					civilian = { large ="gfx/leaders/ANG/Grover_VI_angry_no_flag.tga" }
+				}
+			}
 			GOY_NTR_clown_grover_vi = {
 				set_nationality = BRZ	
 			}

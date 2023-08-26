@@ -3022,7 +3022,7 @@ focus_tree = {
 			has_global_flag = JER_revolution_ended
 			JER = { 
 				has_government = neutrality
-				has_country_leader = { ruling_only = yes name = "Vivienne Discret" }
+				has_country_leader = { ruling_only = yes character = JER_vivienne_discret }
 			}						
 	    }
 		completion_reward = {
@@ -4469,7 +4469,7 @@ focus_tree = {
 		    has_country_flag = ARA_soter_march_flag
 		}
 		available = {
-		    has_country_leader = { name = "Soter Litori" ruling_only = yes}
+		    has_country_leader = { character = GOY_ARA_soter ruling_only = yes}
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		bypass = {

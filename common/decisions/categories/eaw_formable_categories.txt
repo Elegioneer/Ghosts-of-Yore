@@ -68,8 +68,10 @@ form_griffon_empire_category = {
 	allowed = {
 		is_griffon_continent_griffon_country = yes
 		NOT = {
-			original_tag = ARA #
-			original_tag = BOI #
+			OR = {
+				original_tag = ARA #
+				original_tag = BOI #
+			}
 		}
 	}
 }

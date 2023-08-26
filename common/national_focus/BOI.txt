@@ -1947,6 +1947,7 @@
 					engines_1 = 1
 					popup = no
 			    }
+				custom_effect_tooltip = BOI_TT_add_100_planes
 				create_equipment_variant = {
 					name = "Fukker D.19"
 					type = small_plane_airframe_0
@@ -1961,21 +1962,26 @@
 					}
 					icon = "GFX_commonwealth_2d_early_fighter_medium"
 				}
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = small_plane_airframe_0
 					variant_name = "Fukker D.19"
 					amount = 100
 					producer = BOI
 				}
+				}
 			}
 			else = {
 				set_technology = {
 			        early_fighter = 1
 			    }
+				custom_effect_tooltip = BOI_TT_add_100_planes
+				hidden_effect = {
 				add_equipment_to_stockpile = {
 					type = fighter_equipment_0
 					amount = 100
 					producer = GRI
+				}
 				}
 			}			
 		}
@@ -4814,7 +4820,7 @@ focus_tree = {
 		available = {
 		    has_country_leader = {
 			    ruling_only = yes
-				name = Greta
+				character = GOY_BOI_greta
 			}
 		}
 
@@ -4842,11 +4848,11 @@ focus_tree = {
 		    OR = {
 		        has_country_leader = {
 			        ruling_only = yes
-				    name = Greta
+				    character = GOY_BOI_greta
 			    }
 			    has_country_leader = {
 			        ruling_only = yes
-				    name = Gabby
+				    character = GOY_BOI_gabby
 			    }
 			}
 			EQS = {
@@ -4880,7 +4886,7 @@ focus_tree = {
 		available = {
 		    has_country_leader = {
 			    ruling_only = yes
-				name = Gabby
+				character = GOY_BOI_gabby
 			}
 		}
 
@@ -4918,11 +4924,11 @@ focus_tree = {
 		    OR = {
 		        has_country_leader = {
 			        ruling_only = yes
-				    name = Garner
+				    character = GOY_BOI_garner
 			    }
 			    has_country_leader = {
 			        ruling_only = yes
-				    name = Gabby
+				    character = GOY_BOI_gabby
 			    }
 			}
 		}
@@ -5104,8 +5110,8 @@ focus_tree = {
 		prerequisite = { focus = BOI_new_direction }
 		available = {
 		    has_country_leader = {
-			    ruling_only = yes
-				name = Garner
+				ruling_only = yes
+				character = GOY_BOI_garner
 			}
 		}
 
@@ -5845,9 +5851,9 @@ focus_tree = {
 					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
-				        has_country_leader = { name = "Archon Eros VII" ruling_only = yes }
-					    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
-						has_country_leader = { name = "Grover VI" ruling_only = yes }
+				        has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes }
+					    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
+						has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
 					}
 				}
 				STW = {
@@ -5855,7 +5861,7 @@ focus_tree = {
 					is_subject = no
 					is_neighbor_of = BOI
 					owns_state = 382
-				    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
+				    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
 				}
 				BRZ = {
 				    exists = yes
@@ -5863,8 +5869,8 @@ focus_tree = {
 					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
-					    has_country_leader = { name = "Winston Copperhill" ruling_only = yes }
-					    has_country_leader = { name = "Count Ignatius Bronzetail" ruling_only = yes }
+					    has_country_leader = { character = BRZ_winston_copperhill ruling_only = yes }
+					    has_country_leader = { character = BRZ_count_ignatius_bronzetail ruling_only = yes }
 					}
 				}
 				YAL = {
@@ -5873,8 +5879,8 @@ focus_tree = {
 					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
-				        has_country_leader = { name = "Rector Magnificus Mikusian" ruling_only = yes }
-						has_country_leader = { name = "Grover II" ruling_only = yes }
+				        has_country_leader = { character = YAL_rector_magnificus_mikusian ruling_only = yes }
+						has_country_leader = { character = YAL_emperor_grover_ii ruling_only = yes }
 				    }
 				}
 			}
@@ -5893,9 +5899,9 @@ focus_tree = {
 						is_neighbor_of = BOI
 						owns_state = 382
 					    OR = {
-					        has_country_leader = { name = "Archon Eros VII" ruling_only = yes }
-					        has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
-						    has_country_leader = { name = "Grover VI" ruling_only = yes }
+					        has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes }
+							has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
+							has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
 					    }
 				    }
 				}
@@ -5915,7 +5921,7 @@ focus_tree = {
 						is_subject = no
 						is_neighbor_of = BOI
 						owns_state = 382
-					    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
+					    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
 				    }
 				}
 				custom_effect_tooltip = BOI_CETT_gestal_endgame
@@ -5935,8 +5941,8 @@ focus_tree = {
 						is_neighbor_of = BOI
 						owns_state = 382
 					    OR = {
-					        has_country_leader = { name = "Winston Copperhill" ruling_only = yes }
-						    has_country_leader = { name = "Count Ignatius Bronzetail" ruling_only = yes }
+					        has_country_leader = { character = BRZ_winston_copperhill ruling_only = yes }
+							has_country_leader = { character = BRZ_count_ignatius_bronzetail ruling_only = yes }
 					    }
 				    }
 				}
@@ -5957,8 +5963,8 @@ focus_tree = {
 						is_neighbor_of = BOI
 						owns_state = 382
 					    OR = {
-					        has_country_leader = { name = "Rector Magnificus Mikusian" ruling_only = yes }
-						    has_country_leader = { name = "Grover II" ruling_only = yes }
+					        has_country_leader = { character = YAL_rector_magnificus_mikusian ruling_only = yes }
+							has_country_leader = { character = YAL_emperor_grover_ii ruling_only = yes }
 					    }
 				    }
 				}
@@ -6010,9 +6016,9 @@ focus_tree = {
 					is_subject = no
 					owns_state = 382
 				    OR = {
-				        has_country_leader = { name = "Archon Eros VII" ruling_only = yes }
-					    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
-						has_country_leader = { name = "Grover VI" ruling_only = yes }
+				        has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes }
+					    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
+						has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
 					}
 				}
 				}
@@ -6021,7 +6027,7 @@ focus_tree = {
 				    exists = yes
 					is_subject = no
 					owns_state = 382
-				    has_country_leader = { name = "Duchess Gabriela Eagleclaw" ruling_only = yes }
+				    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
 				}
 				}
 				NOT = {
@@ -6030,8 +6036,8 @@ focus_tree = {
 					is_subject = no
 					owns_state = 382
 				    OR = {
-					    has_country_leader = { name = "Winston Copperhill" ruling_only = yes }
-					    has_country_leader = { name = "Count Ignatius Bronzetail" ruling_only = yes }
+					    has_country_leader = { character = BRZ_winston_copperhill ruling_only = yes }
+					    has_country_leader = { character = BRZ_count_ignatius_bronzetail ruling_only = yes }
 					}
 				}
 				}
@@ -6041,8 +6047,8 @@ focus_tree = {
 					is_subject = no
 					owns_state = 382
 				    OR = {
-				        has_country_leader = { name = "Rector Magnificus Mikusian" ruling_only = yes }
-						has_country_leader = { name = "Grover II" ruling_only = yes }
+				        has_country_leader = { character = YAL_rector_magnificus_mikusian ruling_only = yes }
+						has_country_leader = { character = YAL_emperor_grover_ii ruling_only = yes }
 				    }
 				}
 				}

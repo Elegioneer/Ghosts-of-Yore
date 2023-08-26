@@ -2072,7 +2072,7 @@ ideas = {
 				    NOT = {
 				        has_country_leader = {
 			                ruling_only = yes
-				            name = Gabby
+				            character = GOY_BOI_gabby
 			            }
 				    }
 				}
@@ -2098,7 +2098,7 @@ ideas = {
 				    NOT = {
 				        has_country_leader = {
 			                ruling_only = yes
-				            name = Garner
+				            character = GOY_BOI_garner
 			            }
 				    }
 				}
@@ -2435,7 +2435,7 @@ ideas = {
 				    NOT = {
 				        has_country_leader = {
 			                ruling_only = yes
-				            name = Greta
+				            character = GOY_BOI_greta
 			            }
 				    }
 				}

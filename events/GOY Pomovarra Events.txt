@@ -1,0 +1,163 @@
+#	░░░░░░░░░░░░░░
+#░░░░░▀▄░░░▄▀░░░░░
+#░░░░▄█▀███▀█▄░░░░
+#░░░█▀███████▀█░░░
+#░░░█░█▀▀▀▀▀█░█░░░
+#░░░░░░▀▀░▀▀░░░░░░
+#░░░░░░░░░░░░░░░░░
+#
+	add_namespace = goy_pomovarra
+	add_namespace = goy_pomovarra_news
+	
+	country_event = { #debug treeload
+		id = goy_pomovarra.001
+		title = goy_pomovarra.001.t
+		desc = goy_pomovarra.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_pomovarra.001.a
+			load_focus_tree = Pomovarra_goy_init
+		}
+		option = {
+			name = goy_pomovarra.001.b
+			load_focus_tree = Pomovarra_goy_reiher
+		}
+		option = {
+			name = goy_pomovarra.001.c
+			#load_focus_tree = Griffonstone_gallus_1
+		}
+		option = {
+			name = goy_pomovarra.001.e
+			#load_focus_tree = Griffonstone_gallus_1
+		}
+		option = {
+			name = goy_pomovarra.001.f
+			#load_focus_tree = Griffonstone_gallus_1
+		}
+	}
+	country_event = { #The Party
+		id = goy_pomovarra.2
+		title = goy_pomovarra.2.t
+		desc = goy_pomovarra.2.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.2.a
+			501 = {
+				add_manpower = -100
+				add_stability = -0.05
+				add_war_support = 0.05
+			}
+		}
+	}
+	country_event = { #Interesting Times
+		id = goy_pomovarra.3
+		title = goy_pomovarra.3.t
+		desc = goy_pomovarra.3.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.3.a
+			#
+		}
+	}
+	country_event = { #Loyal Hound
+		id = goy_pomovarra.4
+		title = goy_pomovarra.4.t
+		desc = goy_pomovarra.4.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.4.a
+			#todo Add general role for “Heinrich Schattenzahn” (Level: 2, skills 1,1, 4, 1, traits: Diamond Dog, Trickster, Organizer, Commando), add political advisor “Heinrich Schattenzahn, Trait name: Former Intelligence Agent” (+1 agent available, intel network gan factor +10%, decryption factor +10%)
+		}
+	}
+	country_event = { #Rally
+		id = goy_pomovarra.5
+		title = goy_pomovarra.5.t
+		desc = goy_pomovarra.5.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.5.a
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+		}
+	}
+	country_event = { #Preparations
+		id = goy_pomovarra.6
+		title = goy_pomovarra.6.t
+		desc = goy_pomovarra.6.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.6.a
+			#
+		}
+	}
+	country_event = { #Fateful Moment
+		id = goy_pomovarra.7
+		title = goy_pomovarra.7.t
+		desc = goy_pomovarra.7.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.7.a
+			country_event = {
+				id = goy_pomovarra.10
+				hours = 2
+			}
+			set_country_flag = POM_FLAG_yes_shot
+		}
+		option = {
+			name = goy_pomovarra.7.b
+			set_country_flag = POM_FLAG_no_shot
+		}
+	}
+	country_event = { #Bring Down the Sky
+		id = goy_pomovarra.8
+		title = goy_pomovarra.8.t
+		desc = goy_pomovarra.8.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.8.a
+			unlock_national_focus = POM_rogue_prince
+		}
+	}
+	country_event = { #Battle of Cervys
+		id = goy_pomovarra.9
+		title = goy_pomovarra.9.t
+		desc = goy_pomovarra.9.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.9.a
+			unlock_national_focus = POM_ar_chas
+			#todo Load natives focus tree, Remove all starting pomovarran generals, remove Heinrich Schattenzahn as advisor, kill Leopold Reiher and Schattenzahn as characters, Get world event “Pomovarran Revolt”, rename supremacy party as “Boar Warriors”, make non-alligned ruling party, remove national spirits “Pomovarran Uprising”, “Military Legacy” and “Warlord Government”. Add national spirit “Internal Divisions” (-10% stability, -10% war support, -0,25 daily political power), Add national spirit “Freedom or Death!” (+5% attack on core territory, +5% defense on core territory), Add national spirit “Disorganized Military” (-10% planning speed, -20% max planning, -5% army organization), Remove all original divisions and spawn 4 divisions, each of them composed of 8 infantry brigades, regular experience, Get Rebel General Set (Look into Extras)
+		}
+	}
+	country_event = { #One lucky shot
+		id = goy_pomovarra.10
+		title = goy_pomovarra.10.t
+		desc = goy_pomovarra.10.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.10.a
+			
+		}
+	}

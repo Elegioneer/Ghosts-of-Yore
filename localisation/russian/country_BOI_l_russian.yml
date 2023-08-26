@@ -992,7 +992,7 @@ BOI_CETT_archons:0 "Archons are now available as advisors"
  GOY_BOI_frohlich_stats_tt:0 "§RAttack Skill§!: §g2§!\n§ODefence Skill§!: §g4§!\n§GPlanning Skill§!: §g3§!\n§CLogistics Skill§!: §g1§!\n"
  GOY_BOI_thundertail_stats_tt:0 "§RAttack Skill§!: §g4§!\n§ODefence Skill§!: §g2§!\n§GPlanning Skill§!: §g2§!\n§CLogistics Skill§!: §g2§!\n"
  GOY_BOI_silverfeather_stats_tt:0 "§RAttack Skill§!: §g2§!\n§ODefence Skill§!: §g3§!\n§GPlanning Skill§!: §g5§!\n§CLogistics Skill§!: §g3§!\n"
- 
+BOI_TT_add_100_planes:0 "§Y100§! units of §YBasic Fighter§! are added to the antional stockpile."
 
 ## Decisions ##
 BOI_war_for_liberation_category:0 "Launch the ELF's Insurrection"

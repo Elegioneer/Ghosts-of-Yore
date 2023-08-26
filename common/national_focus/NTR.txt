@@ -1146,7 +1146,8 @@
 			    is_owner_neighbor_of = NTR
 				NOT = {
 				    has_country_leader = {
-					    ruling_only = yes name = "Ferdinand Dawnclaw"
+					    ruling_only = yes
+						character = GRI_ferdinand_dawnclaw
 					}
 				}
 			}
@@ -1222,7 +1223,8 @@
 				FAW = {
 				    exists = yes
 					has_country_leader = {
-					    ruling_only = yes name = "Reinhard Suntail"
+					    ruling_only = yes
+						character = FAT_reinhard_suntail
 					}
 				}
 			}
