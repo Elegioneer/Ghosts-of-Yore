@@ -23,3 +23,7 @@ GOY_vp_sky_ruins:0 "Руины Новой Скайнавии"
  GOY_vp_stone_ruins:0 "Руины Грифонстоуна"
  GOY_vp_rom_ruins:0 "Руины Ромау"
  GOY_vp_holy_forge:0 "Священная Кузня"
+ 
+### POM-related ##
+GOY_vp_pomazhon:0 "Помазон"
+ GOY_vp_cervys:0 "Гервйис"

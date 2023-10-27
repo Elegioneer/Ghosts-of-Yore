@@ -9,7 +9,7 @@ ideas = {
 			visible = {
 				has_idea = GOY_arantigos_boreas_religion
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 
 			removal_cost = -1
 

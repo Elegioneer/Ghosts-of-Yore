@@ -1,6 +1,7 @@
 ﻿capital = 382
 set_cosmetic_tag = HRR_GOY
 set_research_slots = 4
+set_oob = HRR_rebellion_OOB
 
 set_technology = {
 	griffon_race = 1
@@ -17,6 +18,7 @@ set_technology = {
 	tech_support = 1
 	tech_mountaineers = 1
 	fuel_silos = 1
+	tech_trucks = 1
 	motorised_infantry = 1
 	basic_train = 1
 }
@@ -89,7 +91,6 @@ set_politics = {
 set_stability = 0.50
 set_war_support = 0.65
 
-set_cosmetic_tag = HRR_GOY
 set_party_name = { ideology = democratic name = HRR_dem_party long_name = HRR_dem_party_long }
 set_party_name = { ideology = neutrality name = HRR_neu_party long_name = HRR_neu_party_long }
 set_party_name = { ideology = fascism name = HRR_fas_party long_name = HRR_fas_party_long }

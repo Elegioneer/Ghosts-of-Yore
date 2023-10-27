@@ -1,0 +1,22 @@
+POM_blackmarket_cat = {
+    icon = GFX_decision_caticon_princess
+	allowed = {
+        tag = POM
+    }
+	visible = {
+	    tag = POM
+		has_country_leader = { character = GOY_POM_reiher ruling_only = yes}
+		has_country_flag = POM_allowed_blackmarket_flag
+	}
+}
+POM_goy_industrial_plans_cat = {
+    icon = GFX_decision_caticon_princess
+	allowed = {
+        tag = POM
+    }
+	visible = {
+	    tag = POM
+		has_government = communism
+		has_country_flag = POM_allowed_indplans_flag
+	}
+}

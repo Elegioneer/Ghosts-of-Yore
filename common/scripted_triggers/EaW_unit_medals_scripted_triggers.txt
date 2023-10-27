@@ -61,6 +61,14 @@ should_have_river_republic_trigger = {
 	original_tag = RCT
 }
 
+should_have_kirian_medals_trigger = {
+	OR = {
+		original_tag = KIR
+		original_tag = KIS
+		original_tag = KIC
+	}
+}
+
 ############ GHOSTS OF YORE SECTION #############
 
 should_have_any_unique_medals_trigger = {
@@ -73,6 +81,7 @@ should_have_any_unique_medals_trigger = {
 		should_have_aquileia_medals_trigger = yes
 		should_have_wingbardian_medals_trigger = yes
 		should_have_river_republic_trigger = yes
+		should_have_kirian_medals_trigger = yes
 		##############################
 		GOY_has_arantigan_medals_trigger = yes
 		GOY_has_ntribes_medals_trigger = yes

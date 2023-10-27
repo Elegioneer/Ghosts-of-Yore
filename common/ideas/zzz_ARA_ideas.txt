@@ -144,7 +144,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				training_time_factor = -0.10
-				conscription_factor = 0.05
+				mobilization_speed = 0.1
 			}
 		}
 	}
@@ -412,7 +412,7 @@ country = {
 			picture = generic_foreign_capital
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				political_power_gain = -0.10
 				production_speed_buildings_factor = 0.05
 			}
@@ -433,7 +433,7 @@ country = {
 			picture = generic_goods_red_bonus
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				political_power_gain = 0.10
 				stability_factor = 0.05
 			}
@@ -587,7 +587,7 @@ country = {
 			available = {
 				has_government = fascism
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 				army_morale_factor = 0.05
@@ -740,7 +740,7 @@ country = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			modifier = {	
 			drift_defence_factor = 0.25
 			fascism_drift = 0.1
@@ -758,7 +758,7 @@ country = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			modifier = {	
 			drift_defence_factor = 0.5
 			fascism_drift = 0.2
@@ -796,7 +796,7 @@ country = {
 			removal_cost = -1
 			picture = HIRA_economy
 			modifier = {
-			consumer_goods_factor = -0.2
+			consumer_goods_factor = -0.4
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.2
@@ -814,7 +814,7 @@ country = {
 			removal_cost = -1
 			picture = HIRA_economy
 			modifier = {
-			consumer_goods_factor = -0.15
+			consumer_goods_factor = -0.3
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.2
@@ -832,7 +832,7 @@ country = {
 			removal_cost = -1
 			picture = HIRA_economy
 			modifier = {
-			consumer_goods_factor = -0.10
+			consumer_goods_factor = -0.2
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.2
@@ -850,7 +850,7 @@ country = {
 			removal_cost = -1
 			picture = HIRA_economy
 			modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.1
 			production_factory_efficiency_gain_factor = 0.2
 			production_speed_buildings_factor = 0.1
 			industrial_capacity_factory = 0.2
@@ -889,7 +889,7 @@ country = {
 			modifier = {
 			production_factory_efficiency_gain_factor = 0.1
 			industrial_capacity_factory = 0.1
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.1
 			}
 			}
 			}
@@ -941,7 +941,7 @@ country = {
 			picture = TBK_The_Natural_Place_Theory
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				political_power_gain = 0.1
 			}
 		}
@@ -994,8 +994,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 				training_time_factor = -0.10
-				conscription_factor = 0.05
-				mobilization_speed = 0.1
+				conscription_factor = 0.1
 			}
 		}
 	}
@@ -1064,7 +1063,7 @@ country = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 			stability_factor = 0.05
@@ -1117,7 +1116,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 			monthly_population = 0.1
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.1
 			stability_factor = 0.1
 		}
 		}
@@ -1264,7 +1263,7 @@ country = {
 			picture = ara_medium_resistance
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.25
 			stability_factor = -0.4
 			war_support_factor = -0.4
 			army_org_Factor = -0.5
@@ -1304,7 +1303,7 @@ country = {
 			picture = ara_low_resistance
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.25
 			stability_factor = -0.2
 			war_support_factor = -0.2
 			army_org_Factor = -0.5
@@ -1342,7 +1341,7 @@ country = {
 			picture = ara_low_resistance
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.25
 			stability_factor = -0.4
 			war_support_factor = -0.4
 			army_org_Factor = -0.1
@@ -1361,7 +1360,7 @@ country = {
 			picture = ara_low_resistance
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.25
 			stability_factor = -0.2
 			war_support_factor = -0.2
 			army_org_Factor = -0.1
@@ -1380,7 +1379,7 @@ country = {
 			picture = generic_goods_red_bonus
 			removal_cost = -1
 			modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.25
 			stability_factor = -0.1
 			war_support_factor = -0.1
 			army_org_Factor = -0.1
@@ -1432,7 +1431,7 @@ country = {
 			removal_cost = -1
 			    modifier = {
 			        opinion_gain_monthly_factor = 0.25
-			        consumer_goods_factor = -0.02
+			        consumer_goods_factor = -0.05
 		        }
 		    }
 		}
@@ -1466,7 +1465,7 @@ country = {
 				    political_power_factor = -0.1
 			        conscription_factor = 0.1
 					industrial_capacity_factory = 0.1
-			        consumer_goods_factor = -0.05
+			        consumer_goods_factor = -0.1
 					neutrality_drift = 0.02
 			        democratic_drift = 0.01
 					communism_drift = 0.01
@@ -2446,7 +2445,7 @@ country = {
 			picture = FRA_la_deluge
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_gain = 0.2
 			}
 		}
@@ -2463,7 +2462,7 @@ country = {
 				has_government = fascism
 			}
 			removal_cost = -1
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			modifier = {	
 			    drift_defence_factor = 0.5
 			    fascism_drift = 0.2
@@ -2485,7 +2484,7 @@ country = {
 				has_government = fascism
 			}
 			removal_cost = -1
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			modifier = {	
 			    drift_defence_factor = 0.5
 			    fascism_drift = 0.25
@@ -2507,7 +2506,7 @@ country = {
 			picture = SPR_seize_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.2
 			}
 		}
 	}
@@ -2582,7 +2581,7 @@ country = {
 			picture = NLR_thunder
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
 				monthly_population = 0.1
 			}
 		}
@@ -2613,7 +2612,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2629,7 +2628,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2645,7 +2644,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2661,7 +2660,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2677,7 +2676,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2693,7 +2692,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2709,7 +2708,7 @@ country = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				political_power_factor -0.05
 			}
 		}
@@ -2832,7 +2831,7 @@ country = {
 			picture = generic_economic_increase
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.10
 				trade_opinion_factor = 0.20
 			}
@@ -2852,7 +2851,7 @@ country = {
 			picture = trade
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
 				trade_opinion_factor = 0.30
 				min_export = 0.10
@@ -2905,7 +2904,7 @@ country = {
 			picture = eng_steady_as_she_goes
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 	}
@@ -2924,7 +2923,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 				min_export = 0.05
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.1
 			}
 		}
@@ -2962,7 +2961,7 @@ country = {
 			modifier = {
 			    conscription_factor = -0.15
 				stability_factor = -0.10
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.2
 			}
 		}
 	}
@@ -3161,9 +3160,9 @@ country = {
 			picture = STG_food_market
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.10
-				monthly_population = 0.10
-				stability_factor = 0.10
+				consumer_goods_factor = 0.2
+				monthly_population = 0.1
+				stability_factor = 0.1
 				fascism_drift = 0.01
 			}
 		}
@@ -3181,7 +3180,7 @@ country = {
 			picture = NCH_end_deals_idea
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				trade_opinion_factor = 0.25
 				min_export = 0.05
 			}
@@ -3214,9 +3213,9 @@ country = {
 			removal_cost = -1
 			picture = syndicate_of_defence
 			modifier = {
-			    stability_factor = -0.10
-				war_support_factor = -0.10
-				consumer_goods_factor = 0.10
+			    stability_factor = -0.1
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.2
 			}
 		}
 	}
@@ -3234,9 +3233,9 @@ country = {
 			removal_cost = -1
 			picture = NIM_warrior_society
 			modifier = {
-			    stability_factor = -0.20
-				war_support_factor = -0.20
-				consumer_goods_factor = 0.10
+			    stability_factor = -0.2
+				war_support_factor = -0.2
+				consumer_goods_factor = 0.2
 				conscription_factor = -0.25
 			}
 		}
@@ -3390,8 +3389,8 @@ country = {
 			picture = capital_outflow
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.10
-				political_power_factor = -0.10
+			    consumer_goods_factor = 0.2
+				political_power_factor = -0.1
 			}
 		}
 	}
@@ -3479,7 +3478,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
-			    consumer_goods_factor = -0.10
+			    consumer_goods_factor = -0.2
 			    democratic_drift = 0.01
 				local_resources_factor = 0.1
 			}
@@ -3552,7 +3551,7 @@ country = {
 			picture = capital_outflow
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.3
+				consumer_goods_factor = 0.6
 				production_speed_buildings_factor = -0.75
 				industrial_capacity_factory = -0.25
 				political_power_factor = -0.25
@@ -3590,7 +3589,7 @@ country = {
 			modifier = {
 				political_power_gain = 0.1
 				stability_factor = -0.1
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.05
 			}
 		}
 	}
@@ -3604,7 +3603,7 @@ country = {
 			}
 			available = {
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 			    political_power_factor = 0.1
@@ -3895,7 +3894,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.1
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 		    }
 		}
 	}
@@ -4084,7 +4083,7 @@ country = {
 			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				research_speed_factor = 0.05
 				industrial_capacity_factory = 0.15
 			}
@@ -4132,7 +4131,7 @@ country = {
 			picture = civilian_economy
 			
 			modifier = {
-				consumer_goods_factor = 0.35
+				consumer_goods_expected_value = 0.35
 				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
@@ -4939,7 +4938,7 @@ country = {
 				original_tag = "ARA"
 			}
 			
-			picture = GRI_helheim
+			picture = ARA_xyston_developments
 			
 			research_bonus = {
 				artillery = 0.15
@@ -5022,12 +5021,14 @@ country = {
 			
 			equipment_bonus = {
 				medium_tank_chassis = {
-					build_cost_ic = -0.25
+					build_cost_ic = -0.2
 					hard_attack = -0.1
+					soft_attack = -0.1
 				}
 				light_tank_chassis = {
-					build_cost_ic = -0.25
+					build_cost_ic = -0.2
 					hard_attack = -0.1
+					soft_attack = -0.1
 				}
 			}
 		}

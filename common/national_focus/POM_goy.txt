@@ -5,21 +5,21 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 1000 y = 1200 }
+	    continuous_focus_position = { x = 1000 y = 100 }
 		shared_focus = POM_bayonet_throne
 		
 	}
 	###
 	shared_focus = {
 		id = POM_bayonet_throne
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GOY_pom_bayonet_throne
 		x = 0
 		y = 0
 		cost = 1.00
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.2
 		}
@@ -34,7 +34,7 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_bayonet_throne }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.3
 		}
@@ -49,7 +49,7 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_bayonet_throne }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.4
 		}
@@ -64,7 +64,7 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_bayonet_throne }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.5
 		}
@@ -79,7 +79,7 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_bayonet_throne }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.6
 		}
@@ -97,7 +97,7 @@
 		prerequisite = { focus = POM_old_friend }
 		prerequisite = { focus = POM_past_glory }
 		prerequisite = { focus = POM_children_pomovarra }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.7
 		}
@@ -105,17 +105,17 @@
 	shared_focus = {
 		id = POM_open_caches
 		icon = GFX_goal_unknown
-		x = -3
+		x = -1
 		y = 3
 		cost = 2.00
 		ai_will_do = {
 			factor = 10
 		}
 		prerequisite = { focus = POM_the_gamble }
-		available = {
+		allow_branch = {
 			has_country_flag = POM_FLAG_no_shot
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -132,17 +132,17 @@
 	shared_focus = {
 		id = POM_fortify_camris
 		icon = GFX_goal_unknown
-		x = -1
+		x = 1
 		y = 3
 		cost = 2.00
 		ai_will_do = {
 			factor = 10
 		}
 		prerequisite = { focus = POM_the_gamble }
-		available = {
+		allow_branch = {
 			has_country_flag = POM_FLAG_no_shot
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			672 = {
 			    add_building_construction = {
@@ -157,7 +157,7 @@
 	shared_focus = {
 		id = POM_trap_is_set
 		icon = GFX_goal_unknown
-		x = -2
+		x = 0
 		y = 4
 		cost = 2.00
 		ai_will_do = {
@@ -165,13 +165,31 @@
 		}
 		prerequisite = { focus = POM_open_caches }
 		prerequisite = { focus = POM_fortify_camris }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.8
 		}
 	}
 	shared_focus = {
 		id = POM_gather_guerrillas
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = POM_the_gamble }
+		allow_branch = {
+			has_country_flag = POM_FLAG_yes_shot
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_manpower = 5000
+		}
+	}
+	shared_focus = {
+		id = POM_one_bridge
 		icon = GFX_goal_unknown
 		x = 1
 		y = 3
@@ -180,28 +198,10 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_the_gamble }
-		available = {
+		allow_branch = {
 			has_country_flag = POM_FLAG_yes_shot
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		completion_reward = {
-			add_manpower = 5000
-		}
-	}
-	shared_focus = {
-		id = POM_one_bridge
-		icon = GFX_goal_unknown
-		x = 3
-		y = 3
-		cost = 4.00
-		ai_will_do = {
-			factor = 10
-		}
-		prerequisite = { focus = POM_the_gamble }
-		available = {
-			has_country_flag = POM_FLAG_yes_shot
-		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			501 = {
 			    damage_building = { type = infrastructure damage = 1 }
@@ -211,7 +211,7 @@
 	shared_focus = {
 		id = POM_on_hunter
 		icon = GFX_goal_unknown
-		x = 2
+		x = 0
 		y = 4
 		cost = 2.00
 		ai_will_do = {
@@ -219,11 +219,13 @@
 		}
 		prerequisite = { focus = POM_gather_guerrillas }
 		prerequisite = { focus = POM_one_bridge }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			country_event = goy_pomovarra.9
 		}
 	}
+########################################################
+#				REIHER PATH
 ########################################################
     focus_tree = {
 	    id = Pomovarra_goy_reiher
@@ -231,7 +233,7 @@
 		    factor = 0
 	    }
 	    default = no
-	    continuous_focus_position = { x = 1500 y = 1200 }
+	    continuous_focus_position = { x = 1500 y = 100 }
 		shared_focus = POM_rogue_prince
 		shared_focus = POM_expand_black_market
 		shared_focus = POM_keep_bureaucracy
@@ -240,14 +242,14 @@
 	###
 	shared_focus = {
 		id = POM_rogue_prince
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GOY_pom_reiher_knives
 		x = 0
 		y = 0
 		cost = 2.00
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		
 		completion_reward = {
 			
@@ -263,9 +265,19 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_rogue_prince }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_political_power = -10
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = POM
+			}
+			unlock_decision_category_tooltip = POM_goy_blackmarket_cat
+			hidden_effect = {
+				set_country_flag = POM_allowed_blackmarket_flag
+			}
+			#todo blackamrket decision set
 		}
 	}
 	shared_focus = {
@@ -278,9 +290,18 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_rogue_prince }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			672 = {
+				add_manpower = -5000
+			}
+			501 = {
+				add_manpower = -5000
+			}
+			swap_ideas = {
+				remove_idea = POM_hostile_population
+				add_idea = POM_hostile_population_hunted
+			}
 		}
 	}
 	shared_focus = {
@@ -293,9 +314,20 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_rogue_prince }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 501
+			}
+			501 = {
+				add_building_construction = {
+					type = arms_factory #industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -309,9 +341,9 @@
 		}
 		prerequisite = { focus = POM_procure_guns }
 		prerequisite = { focus = POM_hunt_down_remnants }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			country_event = goy_pomovarra.11
 		}
 	}
 	shared_focus = {
@@ -325,9 +357,10 @@
 		}
 		prerequisite = { focus = POM_procure_guns }
 		prerequisite = { focus = POM_hunt_down_remnants }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_war_support = 0.05
+			army_experience = 25
 		}
 	}
 	shared_focus = {
@@ -342,9 +375,11 @@
 		prerequisite = { focus = POM_procure_guns }
 		prerequisite = { focus = POM_hunt_down_remnants }
 		prerequisite = { focus = POM_scavenge_steelworks }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			load_oob = POM_goy_black_company #(9 infantry brigades, engineer and artillery support, veteran experience)
+			unlock_decision_category_tooltip = POM_goy_mercs_cat
+			#todo make mercs decisions, set up black company
 		}
 	}
 	shared_focus = {
@@ -358,9 +393,9 @@
 		}
 		prerequisite = { focus = POM_hunt_down_remnants }
 		prerequisite = { focus = POM_scavenge_steelworks }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			country_event = goy_pomovarra.13
 		}
 	}
 	shared_focus = {
@@ -374,9 +409,15 @@
 		}
 		prerequisite = { focus = POM_hunt_down_remnants }
 		prerequisite = { focus = POM_scavenge_steelworks }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_political_power = 50
+			add_stability = -0.02
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = POM
+			}
 		}
 	}
 	shared_focus = {
@@ -390,9 +431,14 @@
 		}
 		prerequisite = { focus = POM_intensify_drills }
 		prerequisite = { focus = POM_soldiers_of_fortune }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	shared_focus = {
@@ -406,9 +452,12 @@
 		}
 		prerequisite = { focus = POM_soldiers_of_fortune }
 		prerequisite = { focus = POM_one_bad_flower }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		
 		completion_reward = {
-			
+			FLO = {
+				country_event = goy_pomovarra.14
+			}
 		}
 	}
 	shared_focus = {
@@ -422,9 +471,13 @@
 		}
 		prerequisite = { focus = POM_gather_staff }
 		prerequisite = { focus = POM_preliminary_bomb }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		will_lead_to_war_with = FLO
 		completion_reward = {
-			
+			declare_war_on = { 
+		        type = annex_everything
+	            target = FLO
+			}
 		}
 	}
 	shared_focus = {
@@ -436,10 +489,14 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			owns_state = 442
+		}
 		prerequisite = { focus = POM_operation_cauliflower }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			country_event = goy_pomovarra.15
+			#todo enable and set to be ticking decision “Growing Instability”
 		}
 	}
 	shared_focus = {
@@ -452,9 +509,14 @@
 			factor = 10
 		}
 		
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			hidden_effect = {
+				set_country_flag = POM_expanded_blackmarket_flag
+			}
+			unlock_decision_tooltip = POM_buy_trucks
+			unlock_decision_tooltip = POM_buy_artillery
+			unlock_decision_tooltip = POM_buy_manufactory
 		}
 	}
 	shared_focus = {
@@ -467,9 +529,9 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_expand_black_market }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -482,9 +544,14 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_expand_black_market }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_infy_eq_2
+				bonus = 0.50
+				uses = 2
+				category = infantry_weapons
+			}
 		}
 	}
 	shared_focus = {
@@ -498,9 +565,14 @@
 		}
 		prerequisite = { focus = POM_create_research_bureau }
 		prerequisite = { focus = POM_buy_blueprints }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_arty_2
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
 		}
 	}
 	shared_focus = {
@@ -514,9 +586,82 @@
 		}
 		prerequisite = { focus = POM_create_research_bureau }
 		prerequisite = { focus = POM_buy_blueprints }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			air_experience = 25
+			add_tech_bonus = {
+				name = GOY_bonus_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_air
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_tech = iw_small_airframe
+							has_tech = engines_1
+							has_tech = aa_lmg
+							has_tech = early_bombs
+						}
+						has_tech = early_fighter
+					}
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_fighter_bonus
+					bonus = 1.0
+					uses = 1
+					category = light_air
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				set_technology = {
+			        iw_small_airframe = 1
+					early_bombs = 1
+					aa_lmg = 1
+					engines_1 = 1
+					popup = no
+			    }
+				custom_effect_tooltip = POM_TT_add_50_planes
+				create_equipment_variant = {
+					name = "Fukker D.19"
+					type = small_plane_airframe_0
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_main_weapon_slot = light_mg_4x
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						engine_type_slot = engine_1_2x
+						special_type_slot_1 = empty
+						special_type_slot_2 = empty	
+					}
+					icon = "GFX_commonwealth_2d_early_fighter_medium"
+				}
+				hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_0
+					variant_name = "Fukker D.19"
+					amount = 50
+					producer = POM
+				}
+				}
+			}
+			else = {
+				set_technology = {
+			        early_fighter = 1
+			    }
+				custom_effect_tooltip = POM_TT_add_50_planes
+				hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = fighter_equipment_0
+					amount = 50
+					producer = GRI
+				}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -530,9 +675,14 @@
 		}
 		prerequisite = { focus = POM_standard_artillery }
 		prerequisite = { focus = POM_scavenge_flowena_airport }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_race_nazi
+				bonus = 0.5
+				uses = 2
+				category = knights_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -546,9 +696,14 @@
 		}
 		prerequisite = { focus = POM_standard_artillery }
 		prerequisite = { focus = POM_scavenge_flowena_airport }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_tank_1
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
 		}
 	}
 	shared_focus = {
@@ -562,9 +717,14 @@
 		}
 		prerequisite = { focus = POM_standard_artillery }
 		prerequisite = { focus = POM_scavenge_flowena_airport }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_supp_2
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -576,9 +736,15 @@
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		available = {
+			has_completed_focus = POM_moving_in
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POM_warlord_government
+				add_idea = POM_flowenian_administration
+			}
 		}
 	}
 	shared_focus = {
@@ -591,9 +757,12 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_keep_bureaucracy }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POM_economic_devastation
+				add_idea = POM_economic_devastation_taxed
+			}
 		}
 	}
 	shared_focus = {
@@ -606,9 +775,16 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_keep_bureaucracy }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_political_power = 25
+			442 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -622,9 +798,12 @@
 		}
 		prerequisite = { focus = POM_tax_policy }
 		prerequisite = { focus = POM_foreign_capital }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POM_economic_devastation_taxed
+				add_idea = POM_economic_devastation_deregulated
+			}
 		}
 	}
 	shared_focus = {
@@ -638,9 +817,20 @@
 		}
 		prerequisite = { focus = POM_tax_policy }
 		prerequisite = { focus = POM_foreign_capital }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = GOY_bonus_industry_1
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_electronics_1
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
 		}
 	}
 	shared_focus = {
@@ -654,9 +844,27 @@
 		}
 		prerequisite = { focus = POM_remove_regulations }
 		prerequisite = { focus = POM_hire_engineers }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			442 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			442 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 442
+			}
 		}
 	}
 	shared_focus = {
@@ -670,9 +878,13 @@
 		}
 		prerequisite = { focus = POM_remove_regulations }
 		prerequisite = { focus = POM_hire_engineers }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_ideas = POM_claws_off_economy
+			swap_ideas = {
+				remove_idea = goy_pom_criminal_economy
+				add_idea = war_economy
+			}
 		}
 	}
 	shared_focus = {
@@ -686,9 +898,9 @@
 		}
 		prerequisite = { focus = POM_remove_regulations }
 		prerequisite = { focus = POM_hire_engineers }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			increase_society_development_with_tt = yes
 		}
 	}
 	shared_focus = {
@@ -700,9 +912,11 @@
 		ai_will_do = {
 			factor = 10
 		}
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_state_core = 442
+			set_capital = 442
+			decrease_poverty = yes
 		}
 	}
 	shared_focus = {
@@ -715,9 +929,12 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_moving_in }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POM_hostile_population_hunted
+				add_idea = POM_apathetic_population
+			}
 		}
 	}
 	shared_focus = {
@@ -730,9 +947,13 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_moving_in }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_political_power = 250
+			add_timed_idea = {
+				idea = POM_spoils_of_flowena
+				days = 180
+			}
 		}
 	}
 	shared_focus = {
@@ -745,9 +966,39 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_moving_in }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		will_lead_to_war_with = HEL
+		will_lead_to_war_with = AET
 		completion_reward = {
-			
+			declare_war_on = { 
+		        type = annex_everything
+	            target = HEL
+			}
+			declare_war_on = { 
+		        type = annex_everything
+	            target = AET
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						NOT = {
+							has_war_with = POM
+						}
+						any_owned_state = {
+							OR = {
+								is_core_of = HEL
+								is_core_of = AET
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -761,9 +1012,9 @@
 		}
 		prerequisite = { focus = POM_flowenian_recruits }
 		mutually_exclusive = { focus = POM_elite_army }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			remove_ideas = POM_apathetic_population
 		}
 	}
 	shared_focus = {
@@ -777,9 +1028,12 @@
 		}
 		prerequisite = { focus = POM_flowenian_recruits }
 		mutually_exclusive = { focus = POM_strength_in_numbers }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POM_military_legacy
+				add_idea = POM_finest_in_griffonia
+			}
 		}
 	}
 	shared_focus = {
@@ -792,9 +1046,31 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_operation_lumberjack }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		will_lead_to_war_with = JER
 		completion_reward = {
-			
+			declare_war_on = { 
+		        type = annex_everything
+	            target = JER
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						NOT = {
+							has_war_with = POM
+						}
+						any_owned_state = {
+							is_core_of = JER
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -807,9 +1083,16 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_operation_lumberjack }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_political_power = 200
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = POM
+			}
+			add_manpower = 20000
+			add_stability = -0.05
 		}
 	}
 	shared_focus = {
@@ -822,9 +1105,9 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_strength_in_numbers }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_ideas = POM_flexible_command
 		}
 	}
 	shared_focus = {
@@ -837,9 +1120,9 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_strength_in_numbers focus = POM_elite_army }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_ideas = POM_pillagers_extraordinaires
 		}
 	}
 	shared_focus = {
@@ -852,9 +1135,9 @@
 			factor = 10
 		}
 		prerequisite = { focus = POM_elite_army }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			add_ideas = POM_aggressive_assaulters
 		}
 	}
 	shared_focus = {
@@ -862,14 +1145,17 @@
 		icon = GFX_goal_unknown
 		x = 2
 		y = 9
-		cost = 5.00
+		cost = 2.00
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			owns_state = 377
+		}
 		prerequisite = { focus = POM_operation_midnight focus = POM_bounty_of_greifwald }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			
+			country_event = goy_pomovarra.16
 		}
 	}
 	shared_focus = {
@@ -881,10 +1167,5850 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			FEZ = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+		bypass = {
+			FEZ = {exists = no}
+		}
 		prerequisite = { focus = POM_operation_midnight focus = POM_bounty_of_greifwald }
-		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = POM
+			}
+			442 = {
+				add_building_construction = {
+					type = arms_factory #industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+########################################################
+#				COMMIES PATH						   #
+########################################################
+	focus_tree = {
+	    id = Pomovarra_goy_communists
+	    country = {
+		    factor = 0
+	    }
+	    default = no
+	    continuous_focus_position = { x = 1400 y = 1000 }
+		shared_focus = POM_needs_of_the_revolution
+		shared_focus = POM_captain_takes_the_helm
+		shared_focus = POM_claw_of_the_revolution
+		shared_focus = POM_liberate_herzland
+		shared_focus = POM_topple_oligarchs
+		shared_focus = POM_commemorate_our_leader
+		shared_focus = POM_purge_allardists
+		
+	}
+	shared_focus = {
+		id = POM_needs_of_the_revolution
+		icon = GFX_goal_GOY_pom_needs_of_revolution
+		x = -4
+		y = 0
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = GOY_bonus_industry_1
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy
+				add_idea = POM_warlord_legacy_1
+			}
+			add_timed_idea = {
+				idea = POM_rebuilding_industry
+				days = 90
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_reconstruciton_brigades
+		icon = GFX_goal_unknown
+		x = -5
+		y = 1
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_needs_of_the_revolution }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_1
+				add_idea = POM_warlord_legacy_2
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_nationalise_the_industry
+		icon = GFX_goal_unknown
+		x = -3
+		y = 1
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_needs_of_the_revolution }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = outdated_industry
+			add_ideas = POM_nationalised_industry
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 377
+						state = 435
+						state = 376
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_industry_2
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_purge_the_academia
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_nationalise_the_industry }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = GOY_pom_revolutionary_academia
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.5
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_socialist_austerity
+		icon = GFX_goal_unknown
+		x = -4
+		y = 2
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reconstruciton_brigades }
+		prerequisite = { focus = POM_nationalise_the_industry }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					has_idea = POM_warlord_legacy_2
+				}
+				swap_ideas = {
+					remove_idea = POM_warlord_legacy_2
+					add_idea = POM_warlord_legacy_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POM_warlord_legacy_4
+					add_idea = POM_warlord_legacy_5
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_land_collectivisation
+		icon = GFX_goal_unknown
+		x = -6
+		y = 2
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reconstruciton_brigades }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = {
+					has_idea = POM_warlord_legacy_2
+				}
+				swap_ideas = {
+					remove_idea = POM_warlord_legacy_2
+					add_idea = POM_warlord_legacy_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = POM_warlord_legacy_3
+					add_idea = POM_warlord_legacy_5
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_revolutionary_education #education and propaganda
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_purge_the_academia }
+		prerequisite = { focus = POM_socialist_austerity }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = GOY_pom_education_propaganda
+			add_tech_bonus = {
+				name = GOY_bonus_industry_2
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_retool_the_economy
+		icon = GFX_goal_unknown
+		x = -5
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_collectivisation }
+		prerequisite = { focus = POM_socialist_austerity }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy
+				add_idea = POM_great_march
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_1
+				add_idea = POM_great_march
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_2
+				add_idea = POM_great_march
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_3
+				add_idea = POM_great_march
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_4
+				add_idea = POM_great_march
+			}
+			swap_ideas = {
+				remove_idea = POM_warlord_legacy_5
+				add_idea = POM_great_march
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 377
+						state = 435
+						state = 376
+						state = 448
+						state = 442
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = war_economy
+			set_country_flag = war_economy_only_flag
+		}
+	}
+	shared_focus = {
+		id = POM_redemption_camps
+		icon = GFX_goal_unknown
+		x = -7
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_collectivisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = POM_labour_camps
+		}
+	}
+	shared_focus = {
+		id = POM_living_standards
+		icon = GFX_goal_unknown
+		x = -8
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_redemption_camps }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = no_poverty
+		}
+	}
+	shared_focus = {
+		id = POM_industrial_combines
+		icon = GFX_goal_unknown
+		x = -6
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_redemption_camps }
+		prerequisite = { focus = POM_retool_the_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_great_march
+				add_idea = POM_great_march_1
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_industrial_planning
+		icon = GFX_goal_unknown
+		x = -4
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_retool_the_economy }
+		prerequisite = { focus = POM_revolutionary_education }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			unlock_decision_category_tooltip = POM_goy_industrial_plans_cat
+			hidden_effect = {
+				set_country_flag = POM_allowed_indplans_flag
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_autarkic_revolution
+		icon = GFX_goal_unknown
+		x = -7
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_living_standards }
+		prerequisite = { focus = POM_industrial_combines }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = closed_economy
+			set_country_flag = trade_laws_blocked
+			add_tech_bonus = {
+				name = GOY_bonus_industry_1
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+			377 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			376 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 1
+			}
+			modify_building_resources = {
+				building = industrial_complex
+				resource = steel
+				amount = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_expand_the_mines
+		icon = GFX_goal_unknown
+		x = -5
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_industrial_combines }
+		prerequisite = { focus = POM_industrial_planning }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_great_march_1
+				add_idea = POM_great_march_2
+			}
+			add_resource = {
+				type = steel
+				amount = 24
+				state = 407
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 517
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 435
+			}
+			add_resource = {
+				type = tungsten
+				amount = 21
+				state = 407
+			}
+			add_resource = {
+				type = aluminium
+				amount = 18
+				state = 448
+			}
+			add_resource = {
+				type = chromium
+				amount = 24
+				state = 421
+			}
+			add_resource = {
+				type = oil
+				amount = 25
+				state = 493
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_full_speed_ahead #To Match and Surpass
+		icon = GFX_goal_unknown
+		x = -6
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_autarkic_revolution }
+		prerequisite = { focus = POM_expand_the_mines } 
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry2
+				add_idea = modern_society
+			}			
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_claw_of_the_revolution
+		icon = GFX_goal_GOY_pom_claws_of_revolution
+		x = 4
+		y = 0
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = POM_revolutionary_militias
+				add_idea = POM_revolutionary_militias_1
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_new_general_staff
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_claw_of_the_revolution }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			swap_ideas = {
+				remove_idea = POM_revolutionary_militias_1
+				add_idea = POM_revolutionary_militias_2
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_salvage_aquileian_eq
+		icon = GFX_goal_unknown
+		x = 5
+		y = 1
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_claw_of_the_revolution }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_decomptage
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_new_general_staff }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_ideas = POM_revolutionary_commissars
+		}
+	}
+	shared_focus = {
+		id = POM_communard_revolutionary_army
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_new_general_staff }
+		prerequisite = { focus = POM_salvage_aquileian_eq }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_manpower = -5000
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.3
+			}
+			add_stability = -0.03
+			swap_ideas = {
+				remove_idea = POM_revolutionary_militias_2
+				add_idea = POM_communard_rev_army
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_army_design_bureau
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_salvage_aquileian_eq }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_tech_bonus = {
+					name = GOY_bonus_infy_eq_2
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_arty_2
+					bonus = 0.5
+					uses = 1
+					category = artillery
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_supp_2
+					bonus = 0.5
+					uses = 1
+					category = support_tech
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_redemption_brigades
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_decomptage }
+		prerequisite = { focus = POM_communard_revolutionary_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_manpower = 100000
+			division_template = {
+				name = "Penal Brigade"
+
+				division_names_group = POM_INF_03
+			
+				regiments = {
+					penal_battalion = { x = 0 y = 0 }
+					penal_battalion = { x = 1 y = 0 }
+					penal_battalion = { x = 0 y = 1 }
+					penal_battalion = { x = 1 y = 1 }
+					penal_battalion = { x = 0 y = 2 }
+					penal_battalion = { x = 1 y = 2 }
+					penal_battalion = { x = 0 y = 3 }
+					penal_battalion = { x = 1 y = 3 }
+					penal_battalion = { x = 0 y = 4 }
+					penal_battalion = { x = 1 y = 4 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 96
+				priority = 0
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_steel_vanguard
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_communard_revolutionary_army }
+		prerequisite = { focus = POM_army_design_bureau }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOY_bonus_tank_0
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_ideas = POM_red_armour
+			set_technology = {
+				JER_magical_tanks_tech = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_restore_production_lines
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_army_design_bureau }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 377
+						state = 435
+						state = 517
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			#todo enable starting aquileian companies
+		}
+	}
+	shared_focus = {
+		id = POM_reorganise_communard_airforce
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_redemption_brigades }
+		prerequisite = { focus = POM_steel_vanguard }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			air_experience = 50
+			add_tech_bonus = {
+				name = GOY_bonus_tank_0
+				bonus = 0.5
+				uses = 3
+				category = air_equipment
+			}
+			add_ideas = POM_communard_airforce
+		}
+	}
+	shared_focus = {
+		id = POM_doctrine_of_aggression
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_steel_vanguard }
+		prerequisite = { focus = POM_restore_production_lines }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_communard_rev_army
+				add_idea = POM_communard_rev_army_1
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_red_ocean
+		icon = GFX_goal_unknown
+		x = 8
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_restore_production_lines }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = GOY_bonus_tank_0
+				bonus = 0.5
+				uses = 5
+				category = naval_equipment
+			}
+			add_ideas = POM_communard_navy
+		}
+	}
+	shared_focus = {
+		id = POM_victory_or_death
+		icon = GFX_goal_unknown
+		x = 5
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_doctrine_of_aggression }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+			custom_effect_tooltip = super_combat_abilities_tt
+			set_country_flag = HIP_SIR_fanatic_tactics #enables super force attack and super last stand
+		}
+	}
+	shared_focus = {
+		id = POM_steal_the_fire
+		icon = GFX_goal_unknown
+		x = 7
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_doctrine_of_aggression }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_tech_bonus = {
+				name = GOY_bonus_nuclear_1
+				bonus = 0.5
+				uses = 2
+				category = nuclear
+			}
+			add_ideas = POM_red_sun_rising
+		}
+	}
+	shared_focus = {
+		id = POM_new_ecole_militaire
+		icon = GFX_goal_unknown
+		x = 6
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_victory_or_death }
+		prerequisite = { focus = POM_steal_the_fire }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25
+			add_ideas = POM_red_officer_corps
+			swap_ideas = {
+				remove_idea = POM_communard_rev_army_1
+				add_idea = POM_communard_rev_army_2
+			}
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_captain_takes_the_helm
+		icon = GFX_goal_GOY_pom_captain_allard
+		x = 0
+		y = 0
+		cost = 1.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution
+				add_idea = POM_chaotic_revolution_1
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = JER
+						is_core_of = AET
+						is_core_of = HEL
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_galvanise_the_pop
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_captain_takes_the_helm }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution_1
+				add_idea = POM_chaotic_revolution_2
+			}
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution_3
+				add_idea = POM_chaotic_revolution_4
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+		}
+	}
+	shared_focus = {
+		id = POM_defeat_warlords
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_captain_takes_the_helm }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_manpower = -25000
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution_1
+				add_idea = POM_chaotic_revolution_3
+			}
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution_2
+				add_idea = POM_chaotic_revolution_4
+			}
+			country_event = goy_pomovarra.19
+		}
+	}
+	shared_focus = {
+		id = POM_convene_the_committee
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 2.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_galvanise_the_pop }
+		prerequisite = { focus = POM_defeat_warlords }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			country_event = goy_pomovarra.20
+		}
+	}
+	shared_focus = {
+		id = POM_reactionary_trials
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_convene_the_committee }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			country_event = goy_pomovarra.21
+		}
+	}
+	shared_focus = {
+		id = POM_revolutionary_zeal
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 3.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_convene_the_committee }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_ideas = POM_voice_of_commune
+		}
+	}
+	shared_focus = {
+		id = POM_terror_as_order
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 4.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reactionary_trials }
+		prerequisite = { focus = POM_revolutionary_zeal }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			country_event = goy_pomovarra.22
+		}
+	}
+	shared_focus = {
+		id = POM_centralise_authority
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reactionary_trials }
+		prerequisite = { focus = POM_revolutionary_zeal }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_glory_of_war
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reactionary_trials }
+		prerequisite = { focus = POM_revolutionary_zeal }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_master_destiny
+		icon = GFX_goal_unknown
+		x = -3
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_terror_as_order }
+		prerequisite = { focus = POM_centralise_authority }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_control_the_past
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_terror_as_order }
+		prerequisite = { focus = POM_centralise_authority }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_enemies_within
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_centralise_authority }
+		prerequisite = { focus = POM_glory_of_war }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_enemies_without
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_centralise_authority }
+		prerequisite = { focus = POM_glory_of_war }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_cult_of_the_revolution
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_master_destiny }
+		prerequisite = { focus = POM_control_the_past }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_le_patron
+		icon = GFX_goal_GOY_pom_le_patron
+		x = 0
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_control_the_past }
+		prerequisite = { focus = POM_enemies_within }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_liberators_of_the_world
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_enemies_within }
+		prerequisite = { focus = POM_enemies_without }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_liberate_herzland
+		icon = GFX_goal_unknown
+		x = -1
+		y = 7
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_topple_oligarchs
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_red_rumare
+		icon = GFX_goal_unknown
+		x = -2
+		y = 8
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberate_herzland }
+		prerequisite = { focus = POM_topple_oligarchs }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_destroy_imperial_vestiges
+		icon = GFX_goal_unknown
+		x = 0
+		y = 8
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberate_herzland }
+		prerequisite = { focus = POM_topple_oligarchs }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_strike_karthinia
+		icon = GFX_goal_unknown
+		x = 2
+		y = 8
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberate_herzland }
+		prerequisite = { focus = POM_topple_oligarchs }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_light_the_pyre
+		icon = GFX_goal_unknown
+		x = -3
+		y = 9
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_red_rumare }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_into_evi_valley
+		icon = GFX_goal_unknown
+		x = -1
+		y = 9
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_red_rumare }
+		prerequisite = { focus = POM_destroy_imperial_vestiges }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_northern_liberation
+		icon = GFX_goal_unknown
+		x = 1
+		y = 9
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_destroy_imperial_vestiges }
+		prerequisite = { focus = POM_strike_karthinia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_humble_the_south
+		icon = GFX_goal_unknown
+		x = 3
+		y = 9
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_strike_karthinia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_pacify_the_valley
+		icon = GFX_goal_unknown
+		x = -2
+		y = 10
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_light_the_pyre }
+		prerequisite = { focus = POM_into_evi_valley }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_red_sun_rises
+		icon = GFX_goal_unknown
+		x = 0
+		y = 10
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_into_evi_valley }
+		prerequisite = { focus = POM_northern_liberation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_establish_northern_workcamps
+		icon = GFX_goal_unknown
+		x = 2
+		y = 10
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_northern_liberation }
+		prerequisite = { focus = POM_humble_the_south }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_intercontinental_campaigns
+		icon = GFX_goal_unknown
+		x = 0
+		y = 11
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_pacify_the_valley }
+		prerequisite = { focus = POM_red_sun_rises }
+		prerequisite = { focus = POM_establish_northern_workcamps }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_death_of_allard
+		icon = GFX_goal_GOY_pom_death_of_allard
+		x = 0
+		y = 1
+		relative_position_id = POM_intercontinental_campaigns
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_death_of_allard_FLAG
+		}
+		prerequisite = { focus = POM_intercontinental_campaigns }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_commemorate_our_leader
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_death_of_allard }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_purge_allardists
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_death_of_allard }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reassess_sentences
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_commemorate_our_leader }
+		prerequisite = { focus = POM_purge_allardists }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_retreat_from_the_riverlands
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_commemorate_our_leader }
+		prerequisite = { focus = POM_purge_allardists }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_revolution_on_one_continent
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_commemorate_our_leader }
+		prerequisite = { focus = POM_purge_allardists }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_end_cultural_policies
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reassess_sentences }
+		prerequisite = { focus = POM_retreat_from_the_riverlands }
+		prerequisite = { focus = POM_revolution_on_one_continent }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_share_the_spoils
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		relative_position_id = POM_death_of_allard
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reassess_sentences }
+		prerequisite = { focus = POM_retreat_from_the_riverlands }
+		prerequisite = { focus = POM_revolution_on_one_continent }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#########################
+	#		NATIVES			#
+	#########################
+	focus_tree = {
+	    id = Pomovarra_goy_natives
+	    country = {
+		    factor = 0
+	    }
+	    default = no
+	    continuous_focus_position = { x = 60 y = 700 }
+		shared_focus = POM_liberation_army
+		shared_focus = POM_ar_chas
+		shared_focus = POM_our_past_and_future
+		shared_focus = POM_our_glorious_past
+		shared_focus = POM_the_poisonous_flower
+		shared_focus = POM_rebuild_our_economy
+		shared_focus = POM_expand_pomazhon_airfield
+		shared_focus = POM_call_of_the_ocean
+		
+	}
+	shared_focus = {
+		id = POM_liberation_army
+		icon = GFX_goal_unknown
+		x = 4
+		y = 0
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_cervys_cannons
+		icon = GFX_goal_unknown
+		x = -4
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberation_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_military_motorisation
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberation_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_formalise_our_doctrine
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberation_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_standardise_infantry_weapons
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberation_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_learn_from_the_past
+		icon = GFX_goal_unknown
+		x = 4
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_liberation_army }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_establish_the_mic
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_cervys_cannons }
+		prerequisite = { focus = POM_military_motorisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_children_pomovarra_native
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_formalise_our_doctrine }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reform_officer_corps
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_formalise_our_doctrine }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_retrain_our_forces
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_standardise_infantry_weapons }
+		prerequisite = { focus = POM_learn_from_the_past }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_outrun_our_enemies
+		icon = GFX_goal_unknown
+		x = -4
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_establish_the_mic }
+		mutually_exclusive = { focus = POM_resist_any_damage }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_resist_any_damage #tank any damage
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		mutually_exclusive = { focus = POM_outrun_our_enemies }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_establish_the_mic }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_fregneux_military_academy
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_children_pomovarra_native }
+		prerequisite = { focus = POM_reform_officer_corps }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_mandatory_military_service #everygriff a soldier
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_retrain_our_forces }
+		mutually_exclusive = { focus = POM_expand_elite_formations }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_elite_formations
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_retrain_our_forces }
+		mutually_exclusive = { focus = POM_mandatory_military_service }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_production #more tanks more guns #armouoberenn expansion
+		icon = GFX_goal_unknown
+		x = -3
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_outrun_our_enemies focus = POM_resist_any_damage }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rather_death_than_dishonour
+		icon = GFX_goal_unknown
+		x = -1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_fregneux_military_academy }
+		mutually_exclusive = { focus = POM_champions_of_pomovarra }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_champions_of_pomovarra
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_fregneux_military_academy }
+		mutually_exclusive = { focus = POM_rather_death_than_dishonour }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_direndall_project
+		icon = GFX_goal_unknown
+		x = 3
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_liberation_army
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_mandatory_military_service focus = POM_expand_elite_formations }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_rebuild_our_economy
+		icon = GFX_goal_unknown
+		x = 26
+		y = 0
+		offset = { 
+			x = 1
+			y = 0
+			trigger = {
+				OR = {
+					has_country_flag = POM_FLAG_camriz_won
+				}
+			}
+		}
+		offset = { 
+			x = 4
+			y = 0
+			trigger = {
+				OR = {
+					has_country_flag = POM_FLAG_morel_won
+					has_country_flag = POM_FLAG_morel_won_2
+				}
+			}
+		}
+		cost = 5.00
+		
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_country_roads
+		icon = GFX_goal_unknown
+		x = -7
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rebuild_our_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_eagleton_route
+		icon = GFX_goal_unknown
+		x = -8
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_country_roads }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_infrastructure_investments
+		icon = GFX_goal_unknown
+		x = -6
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_country_roads }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_window_into_the_world
+		icon = GFX_goal_unknown
+		x = -7
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_eagleton_route }
+		prerequisite = { focus = POM_infrastructure_investments }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_riches_of_the_land
+		icon = GFX_goal_unknown
+		x = -3
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rebuild_our_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_exploit_cam_deposits
+		icon = GFX_goal_unknown
+		x = -4
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_riches_of_the_land }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_refurbish_steelworks
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_riches_of_the_land }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rubber_substitutes
+		icon = GFX_goal_unknown
+		x = -5
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_exploit_cam_deposits }
+		prerequisite = { focus = POM_refurbish_steelworks }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_black_gold
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_exploit_cam_deposits }
+		prerequisite = { focus = POM_refurbish_steelworks }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_synthetic_crystals
+		icon = GFX_goal_unknown
+		x = -6
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rubber_substitutes }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_dig_even_deeper
+		icon = GFX_goal_unknown
+		x = -4
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rubber_substitutes }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_strive_for_autarky
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_black_gold }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_village_schools #teacher in every village
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rebuild_our_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			decrease_illiteracy = yes
+		}
+	}
+	shared_focus = {
+		id = POM_adult_literacy
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_village_schools }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			decrease_illiteracy = yes
+			add_stability = 0.05
+		}
+	}
+	shared_focus = {
+		id = POM_engineering_courses
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_adult_literacy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_technical_research_institute
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_adult_literacy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_university_of_pomazhon
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_engineering_courses }
+		prerequisite = { focus = POM_technical_research_institute }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_economy_reforged
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_towards_the_future }
+		prerequisite = { focus = POM_university_of_pomazhon }
+		prerequisite = { focus = POM_strive_for_autarky }
+		prerequisite = { focus = POM_steady_ahead }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_towards_the_future
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_economy_reforged }
+		prerequisite = { focus = POM_university_of_pomazhon }
+		prerequisite = { focus = POM_strive_for_autarky }
+		prerequisite = { focus = POM_steady_ahead }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_due_industrialisation #kickstart industrialisation
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rebuild_our_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_cervys_industrial_zone
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_due_industrialisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_modernise_fregneux_armory
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_due_industrialisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_heavy_industry
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_cervys_industrial_zone }
+		prerequisite = { focus = POM_modernise_fregneux_armory }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_integrate_flowenian_industry
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_cervys_industrial_zone }
+		prerequisite = { focus = POM_modernise_fregneux_armory }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_steady_ahead
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_heavy_industry }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_arcturius_plan
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_integrate_flowenian_industry }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_utilise_flowenian_expertise
+		icon = GFX_goal_unknown
+		x = 6
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_integrate_flowenian_industry }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_clear_the_land
+		icon = GFX_goal_unknown
+		x = 7
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rebuild_our_economy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_modernise_agriculture
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_clear_the_land }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_welfare_programs
+		icon = GFX_goal_unknown
+		x = 8
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_clear_the_land }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_urban_centres
+		icon = GFX_goal_unknown
+		x = 7
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_rebuild_our_economy
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_modernise_agriculture }
+		prerequisite = { focus = POM_welfare_programs }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_expand_pomazhon_airfield
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_arcturius_plan
+		
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_bring_the_bombers
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_pomazhon_airfield }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_train_new_pilots
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_pomazhon_airfield }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_finance_new_fighters
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_pomazhon_airfield }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_even_bigger_bombers
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bring_the_bombers }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_aces_in_the_skies
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bring_the_bombers }
+		prerequisite = { focus = POM_train_new_pilots }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_air_defences
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_train_new_pilots }
+		prerequisite = { focus = POM_finance_new_fighters }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_continue_aircraft_development
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_train_new_pilots }
+		prerequisite = { focus = POM_finance_new_fighters }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_wrath_of_boreas
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_even_bigger_bombers }
+		prerequisite = { focus = POM_aces_in_the_skies }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_radar_research
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_aces_in_the_skies }
+		prerequisite = { focus = POM_expand_air_defences }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_roaring_rockets
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_air_defences }
+		prerequisite = { focus = POM_continue_aircraft_development }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_lightning_fast #todo discuss another name #too many lightnings
+		icon = GFX_goal_unknown
+		x = -1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_death_from_above }
+		prerequisite = { focus = POM_wrath_of_boreas }
+		prerequisite = { focus = POM_radar_research }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_death_from_above
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_expand_pomazhon_airfield
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_lightning_fast }
+		prerequisite = { focus = POM_radar_research }
+		prerequisite = { focus = POM_roaring_rockets }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_call_of_the_ocean
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = POM_dig_even_deeper
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_review_foreign_doctrines
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_call_of_the_ocean }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_ramp_up_production
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_call_of_the_ocean }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_procure_transport_vessels
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_call_of_the_ocean }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_subversive_submarines
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_review_foreign_doctrines }
+		prerequisite = { focus = POM_ramp_up_production }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_crucial_cruisers
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_review_foreign_doctrines }
+		prerequisite = { focus = POM_ramp_up_production }
+		prerequisite = { focus = POM_procure_transport_vessels }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_diverse_destroyers
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_ramp_up_production }
+		prerequisite = { focus = POM_procure_transport_vessels }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_build_battleships
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_commission_carriers }
+		prerequisite = { focus = POM_subversive_submarines }
+		prerequisite = { focus = POM_crucial_cruisers }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_commission_carriers
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_build_battleships }
+		prerequisite = { focus = POM_crucial_cruisers }
+		prerequisite = { focus = POM_diverse_destroyers }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_sea_boars
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_call_of_the_ocean
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_build_battleships }
+		prerequisite = { focus = POM_commission_carriers }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_ar_chas
+		icon = GFX_goal_GOY_pom_ar_chas
+		x = 13
+		y = 0
+		cost = 5.00
+		
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_revolt_won
+		}
+		
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_unify_the_movement
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_ar_chas }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_cultural_recovery
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_ar_chas }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_organise_civilian_gov
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_unify_the_movement }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_empty_armories
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_unify_the_movement }
+		prerequisite = { focus = POM_cultural_recovery }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_galvanise_the_pop_native
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_cultural_recovery }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_cervys_trials
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_organise_civilian_gov }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_gather_volunteer_brigades
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_empty_armories }
+		prerequisite = { focus = POM_galvanise_the_pop_native }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_fifth_column
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_empty_armories }
+		prerequisite = { focus = POM_galvanise_the_pop_native }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_sideline_the_left
+		icon = GFX_goal_unknown
+		x = -1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_cervys_trials }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rip_off_the_petals
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_gather_volunteer_brigades }
+		prerequisite = { focus = POM_fifth_column }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_final_showdown
+		icon = GFX_goal_GOY_pom_take_da_chair
+		x = 0
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_ar_chas
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_sideline_the_left }
+		prerequisite = { focus = POM_rip_off_the_petals }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	# Camriz focus tree
+	shared_focus = {
+		id = POM_our_past_and_future
+		icon = GFX_goal_GOY_pom_camriz_guns
+		x = 14
+		y = 0
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_boar_warrior
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_past_and_future }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_our_flowenian_foes
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_past_and_future }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_of_ponies_and_war
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_past_and_future }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rein_in_clans
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_boar_warrior }
+		prerequisite = { focus = POM_our_flowenian_foes }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_legacy_of_the_revolution
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_flowenian_foes }
+		prerequisite = { focus = POM_of_ponies_and_war }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_on_the_crossroads
+		icon = GFX_goal_GOY_pom_on_the_crossroads
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_past_and_future
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rein_in_clans }
+		prerequisite = { focus = POM_legacy_of_the_revolution }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	# Camriz neutrality
+	shared_focus = {
+		id = POM_feathisian_connection
+		icon = GFX_goal_GOY_pom_fia_connection
+		x = -1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_NA
+		}
+		prerequisite = { focus = POM_on_the_crossroads }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_bronze_age_of_pomovarra
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_NA
+		}
+		prerequisite = { focus = POM_on_the_crossroads }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_our_friends_in_westkeep
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_feathisian_connection }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_war_for_greifwald
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_feathisian_connection }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_request_more_support
+		icon = GFX_goal_unknown
+		x = -5
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_friends_in_westkeep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_lessons_of_the_revolt
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bronze_age_of_pomovarra }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_make_amends_to_rep
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bronze_age_of_pomovarra }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_war_of_vengeance
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_friends_in_westkeep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_integrate_adelart
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_war_for_greifwald }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_old_faith_old_country
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_lessons_of_the_revolt }
+		prerequisite = { focus = POM_make_amends_to_rep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_grand_council
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_lessons_of_the_revolt }
+		prerequisite = { focus = POM_make_amends_to_rep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_one_language_one_nation
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_lessons_of_the_revolt }
+		prerequisite = { focus = POM_make_amends_to_rep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_last_stand_of_pomovarra
+		icon = GFX_goal_unknown
+		x = -5
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_war_of_vengeance }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_verenian_campaign
+		icon = GFX_goal_unknown
+		x = -3
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_war_of_vengeance }
+		prerequisite = { focus = POM_integrate_adelart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_withered_lilly
+		icon = GFX_goal_unknown
+		x = -1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_war_of_vengeance }
+		prerequisite = { focus = POM_integrate_adelart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_legacy_of_the_shadow_war
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_old_faith_old_country }
+		prerequisite = { focus = POM_the_grand_council }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_restrict_citizenship
+		icon = GFX_goal_unknown
+		x = 3
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_old_faith_old_country }
+		prerequisite = { focus = POM_one_language_one_nation }
+		prerequisite = { focus = POM_the_grand_council }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_clan_honour_guards
+		icon = GFX_goal_unknown
+		x = 5
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_grand_council }
+		prerequisite = { focus = POM_one_language_one_nation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reorganise_eastern_regions
+		icon = GFX_goal_unknown
+		x = -4
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_verenian_campaign }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_impose_reparations
+		icon = GFX_goal_unknown
+		x = -2
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_withered_lilly }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_our_rightful_lands
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_withered_lilly }
+		prerequisite = { focus = POM_restrict_citizenship }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_divide_aquileia
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_withered_lilly }
+		prerequisite = { focus = POM_restrict_citizenship }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_return_of_the_prodigal_children
+		icon = GFX_goal_unknown
+		x = 4
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_restrict_citizenship }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_declare_pomovarran_republic
+		icon = GFX_goal_unknown
+		x = -4
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_rightful_lands }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_on_our_own
+		icon = GFX_goal_unknown
+		x = 0
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_honour_the_deal }
+		prerequisite = { focus = POM_our_rightful_lands }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_honour_the_deal
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_on_our_own }
+		prerequisite = { focus = POM_our_rightful_lands }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_guided_democracy #guided republic
+		icon = GFX_goal_unknown
+		x = -5
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_declare_pomovarran_republic }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_worthy_successor
+		icon = GFX_goal_unknown
+		x = -3
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_declare_pomovarran_republic }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_extend_citizenship_in_greifwald
+		icon = GFX_goal_unknown
+		x = -1
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_on_our_own }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_northern_claims
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_on_our_own }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_war_for_herzland
+		icon = GFX_goal_unknown
+		x = 3
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_honour_the_deal }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_create_PFOC #joint oil venture
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_honour_the_deal }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_griffon_prosperity #prosperity of the griffons
+		icon = GFX_goal_unknown
+		x = -6
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_guided_democracy }
+		prerequisite = { focus = POM_worthy_successor }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_unify_the_nation
+		icon = GFX_goal_unknown
+		x = -4
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_guided_democracy }
+		prerequisite = { focus = POM_worthy_successor }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_loyalty_to_the_state
+		icon = GFX_goal_unknown
+		x = -2
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_guided_democracy }
+		prerequisite = { focus = POM_worthy_successor }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_status_of_free_cities
+		icon = GFX_goal_unknown
+		x = 0
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_extend_citizenship_in_greifwald }
+		prerequisite = { focus = POM_northern_claims }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_set_new_borders
+		icon = GFX_goal_unknown
+		x = 2
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_northern_claims focus = POM_war_for_herzland }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_break_of_dawn #breaking the dawn
+		icon = GFX_goal_unknown
+		x = 4
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_northern_claims focus = POM_war_for_herzland }
+		prerequisite = { focus = POM_create_PFOC }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_pact_military_manoeuvres
+		icon = GFX_goal_unknown
+		x = 6
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_create_PFOC }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	# Camriz Harmonic
+	shared_focus = {
+		id = POM_leaving_the_past_behind
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_DEM
+		}
+		prerequisite = { focus = POM_on_the_crossroads }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_free_media_free_minds
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_leaving_the_past_behind }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_allies_in_the_north
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_leaving_the_past_behind }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_decentralisation_of_the_state
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_leaving_the_past_behind }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_pan_aetian_academy #aetian academy
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_free_media_free_minds }
+		prerequisite = { focus = POM_allies_in_the_north }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_fight_the_aquileian_menace
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_westkeep_conference }
+		prerequisite = { focus = POM_free_media_free_minds }
+		prerequisite = { focus = POM_allies_in_the_north }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_westkeep_conference
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		mutually_exclusive = { focus = POM_fight_the_aquileian_menace }
+		prerequisite = { focus = POM_allies_in_the_north }
+		prerequisite = { focus = POM_decentralisation_of_the_state }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_many_nations_one_future
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_allies_in_the_north }
+		prerequisite = { focus = POM_decentralisation_of_the_state }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_dream_of_a_united_aetia #dream of aetia
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_on_the_crossroads
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_fight_the_aquileian_menace focus = POM_westkeep_conference }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+			set_cosmetic_tag = POM_aetia
+		}
+	}
+	# Aetia
+	shared_focus = {
+		id = POM_aetian_principles
+		icon = GFX_goal_unknown
+		x = -4
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_DEM_2
+		}
+		prerequisite = { focus = POM_dream_of_a_united_aetia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_prosperous_economy
+		icon = GFX_goal_unknown
+		x = -5
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_aetian_principles }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_encourage_political_participation
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_aetian_principles }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_aetian_foreign_legion
+		icon = GFX_goal_unknown
+		x = -4
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_prosperous_economy }
+		prerequisite = { focus = POM_encourage_political_participation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_leave_no_one_behind
+		icon = GFX_goal_unknown
+		x = 4
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_DEM_2
+		}
+		prerequisite = { focus = POM_dream_of_a_united_aetia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rural_development_fund
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_leave_no_one_behind }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_welfare_state
+		icon = GFX_goal_unknown
+		x = 5
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_leave_no_one_behind }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_fortress_republic
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rural_development_fund }
+		prerequisite = { focus = POM_the_welfare_state }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_our_work_is_not_yet_done
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_dream_of_a_united_aetia
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_camriz_won_DEM_2
+		}
+		prerequisite = { focus = POM_dream_of_a_united_aetia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_land_of_many_creatures
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_work_is_not_yet_done }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_move_capital_to_westkeep
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_work_is_not_yet_done }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_free_tarrin
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_of_many_creatures }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_aetian_development_scheme
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_of_many_creatures }
+		prerequisite = { focus = POM_move_capital_to_westkeep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_formalise_our_political_system
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_move_capital_to_westkeep }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_bring_order_to_fezara
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_free_tarrin }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reclaim_verenia
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_free_tarrin }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_gardens_of_flowena
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_formalise_our_political_system }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_expand_the_diplomatic_corps
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_formalise_our_political_system }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_protect_our_freedom
+		icon = GFX_goal_unknown
+		x = -4
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bring_order_to_fezara }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_integrate_outlying_regions
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bring_order_to_fezara }
+		prerequisite = { focus = POM_reclaim_verenia }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_invest_in_our_future
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_gardens_of_flowena }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_safe_haven
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_gardens_of_flowena }
+		prerequisite = { focus = POM_expand_the_diplomatic_corps }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_aetia_on_the_world_stage
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_expand_the_diplomatic_corps }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_all_griffons_can_dream
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_our_work_is_not_yet_done
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_integrate_outlying_regions }
+		prerequisite = { focus = POM_invest_in_our_future }
+		prerequisite = { focus = POM_safe_haven }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	#
+	shared_focus = {
+		id = POM_our_glorious_past
+		icon = GFX_goal_GOY_pom_morel_boar
+		x = 13
+		y = 0
+		cost = 5.00
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_morel_won
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_poisonous_flower
+		icon = GFX_goal_GOY_pom_burn_flowena
+		x = 4
+		y = 0
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_morel_won
+		}
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reestablish_the_clan_system
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_glorious_past }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_purify_the_language
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_our_glorious_past }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
 		}
 	}
 	
+	shared_focus = {
+		id = POM_slander_the_PPP
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_poisonous_flower }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	
+	shared_focus = {
+		id = POM_reclaim_adelart
+		icon = GFX_goal_unknown
+		x = 5
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_poisonous_flower }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_voice_of_pomovarra
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reestablish_the_clan_system }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_boars_of_arcturius
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reestablish_the_clan_system }
+		prerequisite = { focus = POM_purify_the_language }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_raise_the_bulwark
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reestablish_the_clan_system }
+		prerequisite = { focus = POM_purify_the_language }
+		prerequisite = { focus = POM_slander_the_PPP }
+		prerequisite = { focus = POM_reclaim_adelart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reintegrate_old_pomovarra
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_slander_the_PPP }
+		prerequisite = { focus = POM_reclaim_adelart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reconquer_greifwald
+		icon = GFX_goal_unknown
+		x = 6
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reclaim_adelart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_live_by_the_sword
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_voice_of_pomovarra }
+		prerequisite = { focus = POM_boars_of_arcturius }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_slay_the_great_maar
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_raise_the_bulwark }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_liberate_verenia
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reintegrate_old_pomovarra }
+		prerequisite = { focus = POM_reconquer_greifwald }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_every_griffon_a_warrior
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_slay_the_great_maar }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_city_of_darkness
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_slay_the_great_maar }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_give_all_we_can
+		icon = GFX_goal_unknown
+		x = 4
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_slay_the_great_maar }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_taking_the_mantle
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_our_glorious_past
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		allow_branch = {
+			has_country_flag = POM_FLAG_morel_won_2
+		}
+		prerequisite = { focus = POM_city_of_darkness }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_land_of_equines
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_taking_the_mantle }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_destroy_aquileian_legacy
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_taking_the_mantle }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_born_to_rule
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_taking_the_mantle }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_a_city_for_the_king #the city of the king
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_of_equines }
+		prerequisite = { focus = POM_destroy_aquileian_legacy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_eternal_epic
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_land_of_equines }
+		prerequisite = { focus = POM_destroy_aquileian_legacy }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_pomovarrisation #pomovarrise the population
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_destroy_aquileian_legacy }
+		prerequisite = { focus = POM_born_to_rule }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_dwell_on_the_past
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_destroy_aquileian_legacy }
+		prerequisite = { focus = POM_born_to_rule }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_reaching_the_sky
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_eternal_epic }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_eastern_kin
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_eternal_epic }
+		prerequisite = { focus = POM_pomovarrisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_establish_tarrin_march
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_pomovarrisation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_rip_out_the_heart #rip off the heart
+		icon = GFX_goal_GOY_pom_rip_out_heart
+		x = 0
+		y = 4
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_reaching_the_sky }
+		prerequisite = { focus = POM_eastern_kin }
+		prerequisite = { focus = POM_establish_tarrin_march }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_hermit_kingdom
+		icon = GFX_goal_unknown
+		x = -2
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rip_out_the_heart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_pomovarra_ascendant
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rip_out_the_heart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_the_claw_of_the_gods
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_rip_out_the_heart }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_end_the_imperial_line
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_hermit_kingdom }
+		prerequisite = { focus = POM_pomovarra_ascendant }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_griffonian_dominions
+		icon = GFX_goal_unknown
+		x = 0
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_the_hermit_kingdom }
+		prerequisite = { focus = POM_pomovarra_ascendant }
+		prerequisite = { focus = POM_the_claw_of_the_gods }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_old_forest_reservation
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_pomovarra_ascendant }
+		prerequisite = { focus = POM_the_claw_of_the_gods }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_tame_the_great_river
+		icon = GFX_goal_unknown
+		x = -3
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_end_the_imperial_line }
+		prerequisite = { focus = POM_griffonian_dominions }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_eclipse_the_south
+		icon = GFX_goal_unknown
+		x = -1
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_end_the_imperial_line }
+		prerequisite = { focus = POM_griffonian_dominions }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_bring_down_the_hellsword
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_griffonian_dominions }
+		prerequisite = { focus = POM_old_forest_reservation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_brave_northern_storms
+		icon = GFX_goal_unknown
+		x = 3
+		y = 7
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_griffonian_dominions }
+		prerequisite = { focus = POM_old_forest_reservation }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_enforce_a_tribute
+		icon = GFX_goal_unknown
+		x = -2
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_tame_the_great_river }
+		prerequisite = { focus = POM_eclipse_the_south }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_eternal_vigilance
+		icon = GFX_goal_unknown
+		x = 0
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_eclipse_the_south }
+		prerequisite = { focus = POM_bring_down_the_hellsword }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_resettlement_programme
+		icon = GFX_goal_unknown
+		x = 2
+		y = 8
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_bring_down_the_hellsword }
+		prerequisite = { focus = POM_brave_northern_storms }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}
+	shared_focus = {
+		id = POM_everlasting_legacy
+		icon = GFX_goal_GOY_pom_morels_book
+		x = 0
+		y = 9
+		cost = 5.00
+		relative_position_id = POM_taking_the_mantle
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		prerequisite = { focus = POM_enforce_a_tribute }
+		prerequisite = { focus = POM_eternal_vigilance }
+		prerequisite = { focus = POM_resettlement_programme }
+		search_filters = { FOCUS_FILTER_UNDEFINED }
+		completion_reward = {
+			#todo
+		}
+	}

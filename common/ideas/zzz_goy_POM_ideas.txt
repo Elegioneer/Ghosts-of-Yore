@@ -7,10 +7,10 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			remove = {
-				owns_state = #todo flowena
+			cancel = {
+				owns_state = 442
 			}
-			picture = civilian_economy
+			picture = trade
 			removal_cost = -1
 			modifier = {
 				trade_opinion_factor = -0.25
@@ -28,11 +28,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = civilian_economy
+			picture = unhappy_army_3
 			removal_cost = -1
 			modifier = {
 				conscription_factor = -0.75
-				stability = -0.3
+				stability_factor = -0.3
 				fascism_drift = -0.01
 				democratic_drift = 0.01
 				neutrality_drift = 0.01
@@ -46,7 +46,7 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = civilian_economy
+			picture = TBK_sevele
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.3
@@ -59,13 +59,13 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = civilian_economy
+			picture = pos_subvert
 			removal_cost = -1
 			modifier = {
 				monthly_population = -0.25
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 				production_speed_buildings_factor = -0.1
-				local_resources = 0.2
+				local_resources_factor = -0.2
 			}
 		}
 		POM_military_legacy = {
@@ -75,12 +75,736 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
-			picture = civilian_economy
+			picture = RAZ_loyal_army
 			removal_cost = -1
 			modifier = {
 				army_org_factor = 0.05
-				army_org_regain = 0.05
+				army_morale_factor = 0.05
 				max_planning = 0.1
+			}
+		}
+		POM_internal_divisions = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.25
+			}
+		}
+		POM_freedom_or_death = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defense_factor = 0.05
+			}
+		}
+		POM_disorganised_military = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				max_planning = -0.2
+				planning_speed = -0.1
+				army_org_factor = -0.05
+			}
+		}
+		POM_finest_in_griffonia = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				max_planning = 0.2
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		POM_hostile_population = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.75
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+		POM_hostile_population_hunted = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.75
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		POM_flowenian_administration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+			}
+		}
+		POM_economic_devastation_taxed = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.25
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = 0.2
+			}
+		}
+		POM_economic_devastation_deregulated = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.25
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.05
+				local_resources = 0.3
+			}
+		}
+		POM_apathetic_population = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.25
+			}
+		}
+		POM_spoils_of_flowena = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.4
+			}
+		}
+		POM_flexible_command = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.5
+			}
+		}
+		POM_pillagers_extraordinaires = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				no_supply_grace = 48
+				supply_consumption_factor = -0.25
+			}
+		}
+		POM_aggressive_assaulters = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.1
+			}
+		}
+		POM_claws_off_economy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.2
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		POM_rebuilding_industry = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				industry_repair_factor = 0.5
+				industry_free_repair_factor = 0.25
+				consumer_goods_factor = 0.2
+			}
+		}
+		POM_chaotic_revolution = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			}
+		}
+		POM_chaotic_revolution_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.25
+				war_support_factor = -0.25
+			}
+		}
+		POM_chaotic_revolution_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.25
+			}
+		}
+		POM_chaotic_revolution_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+				war_support_factor = -0.25
+			}
+		}
+		POM_chaotic_revolution_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3
+			}
+		}
+		POM_past_vestiges = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				democratic_drift = 0.01
+				neutrality_drift = 0.01
+				fascism_drift = 0.01
+			}
+		}
+		POM_voice_of_commune = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.05
+				war_support_factor = 0.1
+				drift_defence_factor = 0.25
+				conscription_factor = 0.05
+			}
+		}
+		POM_paranoia_fear = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.1
+				encryption_factor = 0.5
+				foreign_subversive_activites = -0.25
+			}
+		}
+		POM_revolutionary_militias = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.1
+				army_org_factor = -0.2
+				max_planning = -0.5
+			}
+		}
+		POM_revolutionary_militias_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.1
+				army_org_factor = -0.2
+				max_planning = -0.25
+			}
+		}
+		POM_revolutionary_militias_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.1
+				army_org_factor = -0.1
+			}
+		}
+		POM_communard_rev_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.2
+				army_org_factor = -0.1
+			}
+		}
+		POM_revolutionary_commissars = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defense_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		POM_red_armour = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			equipment_bonus = {
+				armor = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					armor_value = 0.1
+				}
+			}
+		}
+		POM_communard_airforce = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				air_agility_factor = 0.1
+				air_maximum_speed_factor = 0.2
+				air_close_air_support_org_damage_factor = 0.1
+				air_strategic_bomber_bombing_factor = 0.2
+				air_range_factor = 0.1
+			}
+		}
+		POM_communard_rev_army_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				army_morale_factor = 0.2
+				army_org_factor = -0.1
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.2
+				planning_speed = 0.25
+				experience_loss_factor = 0.1
+			}
+		}
+		POM_communard_rev_army_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				army_morale_factor = 0.2
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.2
+				planning_speed = 0.25
+				experience_loss_factor = 0.1
+			}
+		}
+		POM_communard_navy = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				naval_coordination = 0.2
+				naval_damage_factor = 0.1
+				naval_defense_factor = 0.1
+				navy_max_range_factor = 0.25
+			}
+		}
+		POM_red_sun_rising = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				nuclear_production_factor = 0.25
+			}
+		}
+		POM_red_officer_corps = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				max_command_power = 50
+				army_leader_start_level	= 1
+				army_leader_start_attack_level = 1
+			}
+		}
+		POM_warlord_legacy = { #origin
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+		POM_warlord_legacy_1 = { #universal
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.2
+				local_resources_factor = -0.2
+			}
+		}
+		POM_warlord_legacy_2 = { #rec brigades pure
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+		POM_warlord_legacy_3 = { #soc austerity pure
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+		POM_warlord_legacy_4 = { #land collectivisation pure
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+		POM_warlord_legacy_5 = { #land collectivisation + soc austerity
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.5
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+		POM_great_march = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = -0.25
+			}
+		}
+		POM_great_march_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				monthly_population = -0.25
+			}
+		}
+		POM_great_march_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				industrial_capacity_factory = 0.1
+				local_resources_factor = 0.2
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				monthly_population = -0.25
+			}
+		}
+		POM_nationalised_industry = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+		}
+		POM_labour_camps = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = civilian_economy
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.05
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
 			}
 		}
 	}
@@ -89,6 +813,7 @@ ideas = {
 		use_list_view = no
         
 	    goy_pom_criminal_economy = {
+			picture = GOY_criminal_economy
 			allowed = {
 				always = no
 			}
@@ -96,17 +821,17 @@ ideas = {
 				has_idea = goy_pom_criminal_economy
 			}
 			removal_cost = -1
-			picture = civilian_economy
 			
 			modifier = {
-				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
-				max_fuel_factor = -0.25
-				fuel_gain_factor = -0.4
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				political_power_gain = -0.2
+				consumer_goods_expected_value = 0.20
+				production_speed_buildings_factor = 0.10
+				local_resources_factor = 0.15
 			}
+			
+			default = no
 			
 			allowed_to_remove = {
 				always = no
@@ -115,6 +840,70 @@ ideas = {
 			cancel_if_invalid = no
 		}
 	}
+	city_idea = {
+		law = yes
+		use_list_view = no
+		
+		GOY_pom_revolutionary_academia = {
+			picture = GOY_criminal_economy
+			cost = -1
+			traits = { science_idea }
+			allowed = {
+				always = no
+			}
+			visible = {
+				has_idea = GOY_pom_revolutionary_academia
+			}
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.1
+				political_power_gain = 0.05
+				war_support_factor = 0.1
+				drift_defence_factor = 0.25
+			}
+			
+			default = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	illiteracy_level_idea = {
+		law = yes
+		use_list_view = yes
+		
+		GOY_pom_education_propaganda = { #revolutionary education
+			picture = GOY_criminal_economy
+			cost = -1
+			traits = { illiteracy_idea }
+			allowed = {
+				always = no
+			}
+			visible = {
+				has_idea = GOY_pom_education_propaganda
+			}
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				communism_drift = 0.01
+				army_morale_factor = 0.05
+			}
+			
+			default = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+
 	materiel_manufacturer = {
 		designer = yes
 

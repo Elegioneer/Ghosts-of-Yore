@@ -20,11 +20,17 @@ sub_units = {
 		group = support
 
 		categories = {
+			category_front_line
 			category_support_battalions
 			category_army
 		}
 
-
+		
+		battalion_mult = {
+			category = category_light_infantry
+			breakthrough = 0.25
+		}
+		
 		combat_width = 0
 
 		#Size Definitions
@@ -40,7 +46,7 @@ sub_units = {
 		can_be_parachuted = yes
 
 		# Important Ability
-		breakthrough = 5
+		breakthrough = 2
 		suppression_factor = 0.4
 		casualty_trickleback = 0.80
 		experience_loss_factor = -0.40
@@ -55,6 +61,7 @@ sub_units = {
 			infantry_equipment = 10
 			support_equipment = 5
 		}
-
+		
+		same_support_type = field_hospital
 	}
 }

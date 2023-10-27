@@ -59,7 +59,7 @@ leader_traits = {
 	imperial_treasurer = {
 	    random = no
 		stability_factor = -0.10
-		consumer_goods_factor = -0.05
+		consumer_goods_factor = -0.1
 	}
 	indominable_will = {
 	    random = no
@@ -111,6 +111,7 @@ leader_traits = {
 	    random = no
 		special_forces_defence_factor = 0.1
 		army_defence_factor = 0.1
+		experience_gain_army = 0.4
 	}
 	GOY_thrifty_broker = {
 	    random = no
@@ -168,7 +169,7 @@ leader_traits = {
 	GOY_ntrfarmer = {
 		random = no
 		mobilization_speed = 0.2
-		consumer_goods_factor = -0.03
+		consumer_goods_factor = -0.05
 	}
 	GOY_ntralchemist = {
 		random = no
@@ -182,8 +183,8 @@ leader_traits = {
 	}
 	GOY_ntrbard = {
 		random = no
+		weekly_manpower = 200
 		war_support_factor = 0.1
-		conscription_factor = 0.05
 	}
 	GOY_ntrmetalshaper = {
 		random = no
@@ -197,7 +198,7 @@ leader_traits = {
 	}
 	GOY_ntr_crystal_carvers = {
 		random = no
-		consumer_goods_factor = -0.03
+		consumer_goods_factor = -0.1
 	}
 	GOY_ntr_everfrost_armories = {
 		random = no
@@ -324,7 +325,7 @@ leader_traits = {
 	}
 	GOY_democratic_socialist = {
 		random = no
-		consumer_goods_factor = 0.01
+		consumer_goods_factor = 0.05
 		monthly_population = 0.1
 		democratic_acceptance = 50
 	}
@@ -349,5 +350,12 @@ leader_traits = {
 		stability_factor = 0.1
 		army_core_defence_factor = 0.1
 		drift_defence_factor = 0.25
+	}
+	GOY_former_operative_trait = {
+		random = no
+		operative_slot = 1
+		intel_network_gain_factor = 0.1
+		own_operative_detection_chance_factor = -0.1
+		decryption_factor = 0.1
 	}
 }

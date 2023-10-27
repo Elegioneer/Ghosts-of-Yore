@@ -9,6 +9,59 @@
 	add_namespace = goy_pomovarra
 	add_namespace = goy_pomovarra_news
 	
+	#
+	#### NEWS EVENTS
+	#
+	news_event = { #Arantigan Empire Proclamation
+	    id = goy_pomovarra_news.1
+	    title = goy_pomovarra_news.1.t
+	    desc = goy_pomovarra_news.1.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_bronclyn_bridge
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = goy_pomovarra_news.1.a
+			trigger = {
+			    OR = {
+				    original_tag = POM
+					is_in_faction_with = POM
+				}
+			}
+		}
+		option = {
+	        name = goy_pomovarra_news.1.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = POM
+						original_tag = POM
+					}
+				}
+			}
+	    }
+		option = {
+	        name = goy_pomovarra_news.1.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = POM
+				    }
+				}
+			}
+	    }
+	}
+	
+	
+	#
+	#### COUNTRY EVENTS
+	#
 	country_event = { #debug treeload
 		id = goy_pomovarra.001
 		title = goy_pomovarra.001.t
@@ -26,15 +79,55 @@
 		}
 		option = {
 			name = goy_pomovarra.001.c
-			#load_focus_tree = Griffonstone_gallus_1
+			load_focus_tree = Pomovarra_goy_communists
+			set_country_flag = POM_death_of_allard_FLAG
 		}
 		option = {
 			name = goy_pomovarra.001.e
-			#load_focus_tree = Griffonstone_gallus_1
+			load_focus_tree = Pomovarra_goy_natives
+			set_country_flag = POM_FLAG_revolt_won
+			country_event = goy_pomovarra.322
+		}
+	}
+	country_event = { #debug native treeload
+		id = goy_pomovarra.322
+		title = goy_pomovarra.322.t
+		desc = goy_pomovarra.322.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_pomovarra.322.a
+			set_country_flag = POM_FLAG_revolt_won
+			clr_country_flag = POM_FLAG_camriz_won
+			clr_country_flag = POM_FLAG_camriz_won_DEM
+			clr_country_flag = POM_FLAG_camriz_won_DEM_2
+			clr_country_flag = POM_FLAG_camriz_won_NA
+			clr_country_flag = POM_FLAG_morel_won
+			clr_country_flag = POM_FLAG_morel_won_2
+			mark_focus_tree_layout_dirty = yes
 		}
 		option = {
-			name = goy_pomovarra.001.f
-			#load_focus_tree = Griffonstone_gallus_1
+			name = goy_pomovarra.322.b
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_camriz_won
+			set_country_flag = POM_FLAG_camriz_won_DEM
+			set_country_flag = POM_FLAG_camriz_won_DEM_2
+			mark_focus_tree_layout_dirty = yes
+		}
+		option = {
+			name = goy_pomovarra.322.c
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_camriz_won
+			set_country_flag = POM_FLAG_camriz_won_NA
+			mark_focus_tree_layout_dirty = yes
+		}
+		option = {
+			name = goy_pomovarra.322.e
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_morel_won
+			set_country_flag = POM_FLAG_morel_won_2
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	country_event = { #The Party
@@ -47,10 +140,10 @@
 		option = {
 			name = goy_pomovarra.2.a
 			501 = {
-				add_manpower = -100
-				add_stability = -0.05
-				add_war_support = 0.05
+				add_manpower = -100	
 			}
+			add_stability = -0.05
+			add_war_support = 0.05
 		}
 	}
 	country_event = { #Interesting Times
@@ -118,10 +211,12 @@
 				hours = 2
 			}
 			set_country_flag = POM_FLAG_yes_shot
+			mark_focus_tree_layout_dirty = yes
 		}
 		option = {
 			name = goy_pomovarra.7.b
 			set_country_flag = POM_FLAG_no_shot
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	country_event = { #Bring Down the Sky
@@ -133,6 +228,11 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.8.a
+			load_focus_tree = Pomovarra_goy_reiher
+			swap_ideas = {
+				remove_idea = POM_pomovarran_uprising
+				add_idea = POM_hostile_population
+			}
 			unlock_national_focus = POM_rogue_prince
 		}
 	}
@@ -145,8 +245,58 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.9.a
+			load_focus_tree = Pomovarra_goy_natives
+			set_country_flag = POM_FLAG_revolt_won
 			unlock_national_focus = POM_ar_chas
-			#todo Load natives focus tree, Remove all starting pomovarran generals, remove Heinrich Schattenzahn as advisor, kill Leopold Reiher and Schattenzahn as characters, Get world event “Pomovarran Revolt”, rename supremacy party as “Boar Warriors”, make non-alligned ruling party, remove national spirits “Pomovarran Uprising”, “Military Legacy” and “Warlord Government”. Add national spirit “Internal Divisions” (-10% stability, -10% war support, -0,25 daily political power), Add national spirit “Freedom or Death!” (+5% attack on core territory, +5% defense on core territory), Add national spirit “Disorganized Military” (-10% planning speed, -20% max planning, -5% army organization), Remove all original divisions and spawn 4 divisions, each of them composed of 8 infantry brigades, regular experience, Get Rebel General Set (Look into Extras)
+			GOY_POM_reiher = {
+				clr_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_schattenzahn = {
+				clr_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_feuerstein = {
+				clr_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_falkenrath = {
+				clr_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_camriz = {
+				set_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_renan = {
+				set_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_silverwing = {
+				set_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_seznec = {
+				set_character_flag = GOY_char_available_flag
+			}
+			remove_ideas = {
+				POM_pomovarran_uprising
+				POM_warlord_government
+				POM_military_legacy
+			}
+			add_ideas = {
+				POM_internal_divisions
+				POM_freedom_or_death
+				POM_disorganised_military
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			GOY_POM_reiher = {
+				retire = yes
+			}
+			GOY_POM_schattenzahn = {
+				retire = yes
+			}
+			delete_unit_template_and_units = { division_template = "Hired Knights" } #disband = yes, will refund equipment/manpower. default is no
+			delete_unit_template_and_units = { division_template = "Mercenary Division" }
+			load_oob = POM_goy_rebel_start
+			set_party_name = { ideology = fascism name = POM_goy_boar_party long_name = POM_goy_boar_party_long }
+			#todo Get world event “Pomovarran Revolt”
 		}
 	}
 	country_event = { #One lucky shot
@@ -159,5 +309,297 @@
 		option = {
 			name = goy_pomovarra.10.a
 			
+		}
+	}
+	country_event = { #Breaking out the gates
+		id = goy_pomovarra.11
+		title = goy_pomovarra.11.t
+		desc = goy_pomovarra.11.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.11.a
+			add_political_power = 100
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+				producer = POM
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = POM
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = POM
+			}
+			add_manpower = -2000
+			JER = {
+				country_event = goy_pomovarra.12
+			}
+			JRR = { #westkeep
+				country_event = goy_pomovarra.12
+			}
+		}
+	}
+	country_event = { #Raid on westkeep
+		id = goy_pomovarra.12
+		title = goy_pomovarra.12.t
+		desc = goy_pomovarra.12.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_pomovarra.12.a
+			trigger = {
+				tag = JER
+				NOT = {
+					owns_state = 448
+				}
+			}
+			add_stability = -0.02
+			add_political_power = -25
+		}
+		option = {
+			name = goy_pomovarra.12.a
+			trigger = {
+				tag = JRR
+			}
+			add_stability = -0.05
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = JRR
+			}
+		}
+		option = {
+			name = goy_pomovarra.12.a
+			trigger = {
+				tag = JER
+				owns_state = 448
+			}
+			add_stability = -0.05
+			add_political_power = -25
+			add_manpower = -5000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = JRR
+			}
+		}
+	}
+	country_event = { #traitor
+		id = goy_pomovarra.13
+		title = goy_pomovarra.13.t
+		desc = goy_pomovarra.13.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.13.a
+			add_political_power = 50
+			#show_ideas_tooltip = todo “Antoine de Bleuetaille” (Flowenian Banker: -5% consumer goods, +0,1 daily political power, -5% stability)
+		}
+	}
+	country_event = { #artillery strike
+		id = goy_pomovarra.14
+		title = goy_pomovarra.14.t
+		desc = goy_pomovarra.14.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.14.a
+			add_manpower = -500
+			442 = {
+				add_manpower = -5000
+				damage_building = { type = arms_factory damage = 1 }
+			}
+			add_stability = -0.05
+			add_war_support = -0.03
+		}
+	}
+	country_event = { #retribution
+		id = goy_pomovarra.15
+		title = goy_pomovarra.15.t
+		desc = goy_pomovarra.15.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.15.a
+			#
+		}
+	}
+	country_event = { #end of the wild ride
+		id = goy_pomovarra.16
+		title = goy_pomovarra.16.t
+		desc = goy_pomovarra.16.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.16.a
+			GOY_POM_reiher = {
+				retire = yes
+			}
+			GOY_POM_schattenzahn = {
+				retire = yes
+			}
+			add_country_leader_role = {
+				character = GOY_POM_nazi_chair
+				promote_leader = yes
+				country_leader = {
+					desc = GOY_POM_nazi_chair_desc
+					ideology = stratocracy
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+			country_event = goy_pomovarra.17
+		}
+	}
+	country_event = { #escape of the rats
+		id = goy_pomovarra.17
+		title = goy_pomovarra.17.t
+		desc = goy_pomovarra.17.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.17.a
+			country_event = goy_pomovarra.18
+		}
+	}
+	country_event = { #a revolutionary rises
+		id = goy_pomovarra.18
+		title = goy_pomovarra.18.t
+		desc = goy_pomovarra.18.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.18.a
+			hidden_effect = {
+				GOY_POM_nazi_chair = {
+					retire = yes
+				}
+				news_event = {
+					id = goy_pomovarra_news.1
+					hours = 8
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.3
+			}
+			set_capital = { state = 377 }
+			load_focus_tree = Pomovarra_goy_communists
+			create_faction = goy_pom_allard_faction
+			remove_ideas = {
+				#todo remove all reiher ideas
+			}
+			add_ideas = {
+				POM_chaotic_revolution
+				POM_revolutionary_militias
+				POM_warlord_legacy
+			}
+			set_party_name = { ideology = communism name = POM_goy_allard_party long_name = POM_goy_allard_party_long }
+			set_party_name = { ideology = fascism name = POM_goy_nationalist_party long_name = POM_goy_nationalist_party_long }
+			set_party_name = { ideology = democratic name = POM_goy_comdem_party long_name = POM_goy_comdem_party_long }
+			set_party_name = { ideology = neutrality name = POM_goy_comneu_party long_name = POM_goy_comneu_party_long }
+		}
+	}
+	country_event = { #people's justice
+		id = goy_pomovarra.19
+		title = goy_pomovarra.19.t
+		desc = goy_pomovarra.19.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.19.a
+		}
+	}
+	country_event = { #committee session
+		id = goy_pomovarra.20
+		title = goy_pomovarra.20.t
+		desc = goy_pomovarra.20.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.20.a
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.03
+			}
+			swap_ideas = {
+				remove_idea = POM_chaotic_revolution_4
+				add_idea = POM_past_vestiges
+			}
+		}
+	}
+	country_event = { #cutting hydra's heads
+		id = goy_pomovarra.21
+		title = goy_pomovarra.21.t
+		desc = goy_pomovarra.21.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.21.a
+			add_political_power = -50
+			every_owned_state = {
+				add_manpower = -1000
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+		}
+	}
+	country_event = { #on the gallows
+		id = goy_pomovarra.22
+		title = goy_pomovarra.22.t
+		desc = goy_pomovarra.22.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.22.a
+			every_owned_state = {
+				add_manpower = -20000
+			}
+			add_ideas = POM_paranoia_fear
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
 		}
 	}

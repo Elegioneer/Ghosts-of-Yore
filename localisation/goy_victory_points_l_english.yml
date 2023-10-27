@@ -23,3 +23,7 @@ GOY_vp_sky_ruins:0 "Ruins of New Skynavia"
  GOY_vp_stone_ruins:0 "Ruins of Griffonstone"
  GOY_vp_rom_ruins:0 "Ruins of Romau"
  GOY_vp_holy_forge:0 "Holy Forge"
+ 
+### POM-related ##
+GOY_vp_pomazhon:0 "Pomazhon"
+ GOY_vp_cervys:0 "Cervys"

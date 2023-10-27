@@ -1,0 +1,689 @@
+#       _______
+#     _/       \_
+#    / |       | \
+#   /  |__   __|  \
+#  |__/((o| |o))\__|
+#  |      | |      |
+#  |\     |_|     /|
+#  | \           / |
+#   \| /  ___  \ |/
+#    \ | / _ \ | /
+#     \_________/
+#      _|_____|_
+# ____|_________|____
+#/                   \
+	
+	add_namespace = goy_ai_pain
+	
+	country_event = { #AI Extra Armies (Only spawns if AI is strengthened)
+		id = goy_ai_pain.001
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		hidden = yes
+		immediate = {
+			if = {
+				limit = {
+					OR = {
+						stockpile_ratio = { 
+							archetype = infantry_equipment
+							ratio < 1
+						}
+						stockpile_ratio = { 
+							archetype = support_equipment
+							ratio < 1
+						}
+						stockpile_ratio = { 
+							archetype = motorized_equipment
+							ratio < 1
+						}
+					}
+				}
+				GoY_get_help_infantry = yes
+			}
+			if = {
+				limit = {
+					has_tech = mechanised_infantry
+					has_dlc = "No Step Back"
+					OR = {
+						stockpile_ratio = { 
+							archetype = medium_tank_chassis
+							ratio < 0.5
+						}
+						stockpile_ratio = { 
+							archetype = mechanized_equipment
+							ratio < 0.5
+						}
+					}
+				}
+				GoY_get_help_tanks = yes
+			}
+			else_if = {
+				limit = {
+					has_tech = mechanised_infantry
+					OR = {
+						stockpile_ratio = { 
+							archetype = medium_tank_equipment
+							ratio < 0.5
+						}
+						stockpile_ratio = { 
+							archetype = mechanized_equipment
+							ratio < 0.5
+						}
+					}
+				}
+				GoY_get_help_tanks = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_army_size = {
+							size < 48
+							type = infantry
+						}
+						has_war_with_major = yes
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Support Infantry Division"
+						}
+					}
+					division_template = {
+						name = "Support Infantry Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							artillery_brigade = { x = 3 y = 0 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+							#logistics_company = { x = 0 y = 2 }
+							#signal_company = { x = 0 y = 3 }
+						}
+					}
+				}
+				
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Support Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_army_size = {
+							size < 12
+							type = motorized
+						}
+						has_war_with_major = yes
+					}
+					has_tech = motorised_infantry
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Support Motorized Division"
+						}
+					}
+					division_template = {
+						name = "Support Motorized Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							motorized = { x = 0 y = 0 }
+							motorized = { x = 0 y = 1 }
+							motorized = { x = 0 y = 2 }
+							motorized = { x = 0 y = 3 }
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							motorized = { x = 1 y = 2 }
+							motorized = { x = 1 y = 3 }
+							mot_artillery_brigade = { x = 2 y = 0 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							logistics_company = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					create_unit = {
+						division = "division_template = \"Support Motorized Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_army_size = {
+						size < 8
+						type = armor
+					}
+					has_tech = mechanised_infantry
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Armoured Spear Division"
+						}
+					}
+					division_template = {
+						name = "Armoured Spear Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+						
+						regiments = {
+							medium_armor = { x = 0 y = 0 }
+							medium_armor = { x = 0 y = 1 }
+							medium_armor = { x = 0 y = 2 }
+							medium_armor = { x = 0 y = 3 }
+							medium_armor = { x = 0 y = 4 }
+							mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+							mechanized = { x = 1 y = 2 }
+							mechanized = { x = 1 y = 3 }
+							mechanized = { x = 1 y = 4 }
+							mot_artillery_brigade = { x = 2 y = 0 }
+						}
+					
+						support = {
+							artillery = { x = 0 y = 0 }
+							mot_recon = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					create_unit = {
+						division = "division_template = \"Armoured Spear Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_army_size = {
+						size < 10
+						type = mechanized
+					}
+					has_tech = mechanised_infantry
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Support Mechanized Division"
+						}
+					}
+					division_template = {
+						name = "Support Mechanized Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+						
+						regiments = {
+							mechanized = { x = 0 y = 0 }
+							mechanized = { x = 0 y = 1 }
+							mechanized = { x = 0 y = 2 }
+							mechanized = { x = 0 y = 3 }
+							mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+							mechanized = { x = 1 y = 2 }
+							mechanized = { x = 1 y = 3 }
+							mot_artillery_brigade = { x = 2 y = 0 }
+							mot_artillery_brigade = { x = 2 y = 1 }
+						}
+					
+						support = {
+							artillery = { x = 0 y = 0 }
+							mot_recon = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					create_unit = {
+						division = "division_template = \"Support Mechanized Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_war_with = GRI
+					NOT = {
+						has_template = "Imperial Deserters"
+					}
+				}
+				add_manpower = 100000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 500
+				}
+				division_template = {
+					name = "Imperial Deserters"
+					
+					is_locked = yes
+					force_allow_recruiting = yes
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+					}
+				
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						logistics_company = { x = 0 y = 3 }
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+					}
+					create_unit = {
+						division = "division_template = \"Imperial Deserters\" start_experience_factor = 0.8 start_equipment_factor = 1"
+						owner = PREV
+						count = 24
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_war_with = GRI
+						}
+						has_template = "Imperial Deserters"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Imperial Deserters"
+						disband = no
+					}
+				}
+				else = {
+					random_owned_state = {
+						limit = {
+							is_fully_controlled_by = PREV
+						}
+						create_unit = {
+							division = "division_template = \"Imperial Deserters\" start_experience_factor = 0.8 start_equipment_factor = 1"
+							owner = PREV
+							count = 5
+						}
+					}
+				}
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = GoY_AI_defeated
+					}
+					has_war_with_major = yes
+				}
+				country_event = {
+					id = goy_ai_pain.1
+					days = 70
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = GoY_AI_defeated
+					}
+					has_war = yes
+				}
+				country_event = {
+					id = goy_ai_pain.1
+					days = 100
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = GoY_AI_defeated
+					}
+				}
+				country_event = {
+					id = goy_ai_pain.1
+					days = 180
+				}
+			}
+		}
+	}
+	
+	country_event = { #AI Learn Techs
+		id = goy_ai_pain.002
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		hidden = yes
+		immediate = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+					is_ai = yes
+				}
+				set_technology = {
+					motorised_infantry = 1
+					mechanised_infantry = 1
+					gwtank_chassis = 1
+					basic_medium_tank_chassis = 1
+					popup = no
+				}
+				create_equipment_variant = {
+					name = "Geistpanzer III"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_medium_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret 
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = additional_machine_guns
+						special_type_slot_2 = sloped_armor
+						special_type_slot_3 = expanded_fuel_tank
+						special_type_slot_4 = empty
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 8
+						tank_nsb_armor_upgrade = 5
+					}
+					icon = "GFX_changeling_2d_basic_medium_tank_medium"
+					obsolete = no
+				}
+				else = {
+					set_technology = {
+						motorised_infantry = 1
+						mechanised_infantry = 1
+						gwtank = 1
+						improved_light_tank = 1
+						basic_medium_tank = 1
+						popup = no
+					}
+				}
+			}
+			GoY_get_help_tanks = yes
+			country_event = {
+				id = goy_ai_pain.4
+				days = 548
+			}
+		}
+	}
+	
+	country_event = { #Improve Templates
+		id = goy_ai_pain.003
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		hidden = yes
+		immediate = {
+			if = {
+				limit = {
+					tag = NTR
+					has_tech = GOY_necromancy_tech
+					is_ai = yes
+				}
+				add_units_to_division_template = {
+					template_name = "Support Infantry Division"
+					regiments = {
+						artillery_brigade = 3
+					}
+					support = {
+						goy_necromancer_company = 0
+						logistics_company = 0
+					}
+				}
+				else_if = {
+					limit = {
+						is_ai = yes
+					}
+					add_units_to_division_template = {
+						template_name = "Support Infantry Division"
+						regiments = {
+							artillery_brigade = 3
+						}
+						support = {
+							signal_company = 0
+							logistics_company = 0
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	country_event = { #AI Get Better Tank
+		id = goy_ai_pain.004
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		hidden = yes
+		immediate = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+					is_ai = yes
+				}
+				create_equipment_variant = {
+					name = "Geistpanzer IV"
+					type = medium_tank_chassis_2
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_medium_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret 
+						suspension_type_slot = tank_christie_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = additional_machine_guns
+						special_type_slot_2 = sloped_armor
+						special_type_slot_3 = tank_radio_1
+						special_type_slot_4 = expanded_fuel_tank
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 14
+						tank_nsb_armor_upgrade = 9
+					}
+					icon = "GFX_changeling_2d_improved_medium_tank_medium"
+					obsolete = no
+				}
+				GoY_get_help_tanks = yes
+				country_event = {
+					id = goy_ai_pain.5
+					days = 730
+				}
+			}
+		}
+	}
+	
+	country_event = { #AI Get Best Tank
+		id = goy_ai_pain.005
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = no
+		hidden = yes
+		immediate = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+					is_ai = yes
+				}
+				create_equipment_variant = {
+					name = "Geistpanzer V"
+					type = medium_tank_chassis_3
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						main_armament_slot = tank_medium_cannon_3
+						turret_type_slot = tank_medium_three_man_tank_turret 
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_cast_armor
+						engine_type_slot = tank_petrol_electric_engine
+						special_type_slot_1 = wet_ammo_storage
+						special_type_slot_2 = sloped_armor
+						special_type_slot_3 = tank_radio_2
+						special_type_slot_4 = easy_maintenance
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 13
+						tank_nsb_armor_upgrade = 14
+					}
+					icon = "GFX_changeling_2d_advanced_medium_tank_medium"
+					obsolete = no
+				}
+				GoY_get_help_tanks = yes
+			}
+		}
+	}
+	
+	country_event = { #KILL ALL ZEBRICAN COUNTRIES (besides Azir, my beloved <3) TO REMOVE LAG
+		id = goy_ai_pain.66
+		#title = goy_ai_pain.001.t
+		#desc = goy_ai_pain.001.d
+		#picture = 
+		is_triggered_only = yes
+		fire_only_once = yes
+		hidden = yes
+		immediate = {
+			every_country = {
+				limit = {
+					has_focus_tree = generic_zebra_focus
+					NOT = {
+						OR = {
+							tag = ABY
+							tag = MCW
+							tag = HRV
+							tag = CGI
+							tag = LMB
+							tag = ZAI
+						}
+					}
+				}
+				every_owned_state = {
+					add_core_of = ZAI
+					set_state_category = wasteland
+					remove_building = {
+						type = arms_factory
+						level = 10
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 10
+					}
+					add_manpower = -3000000
+					ZAI = {
+						transfer_state = PREV
+					}
+				}
+				891 = {
+					set_state_category = wasteland
+					remove_building = {
+						type = arms_factory
+						level = 10
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 10
+					}
+				}
+				894 = {
+					set_state_category = wasteland
+					remove_building = {
+						type = arms_factory
+						level = 10
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 10
+					}
+				}
+				897 = {
+					set_state_category = wasteland
+					remove_building = {
+						type = arms_factory
+						level = 10
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 10
+					}
+				}
+				ZAI = {
+					add_manpower = -200000000
+				}
+			}
+		}
+	}

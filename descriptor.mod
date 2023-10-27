@@ -1,4 +1,4 @@
-version="2.4"
+version="2.5"
 picture="Thumbnail.png"
 tags={
 	"Alternative History"
@@ -9,5 +9,5 @@ name="EaW – Ghosts of Yore"
 dependencies={
 	"Equestria at War"
 }
-supported_version="1.12.*"
+supported_version="1.13.*"
 remote_file_id="2381203376"

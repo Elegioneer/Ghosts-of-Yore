@@ -144,7 +144,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.05
-			    consumer_goods_factor = -0.03
+			    consumer_goods_factor = -0.05
 				trade_opinion_factor = 0.2
 			}
 		}
@@ -681,7 +681,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.05
@@ -714,7 +714,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    stability_factor = 0.1
-            	consumer_goods_factor = 0.03		  
+            	consumer_goods_factor = 0.05	  
 			}
 		}
 		BOI_fight_for_griffonstone = {
@@ -824,7 +824,7 @@ ideas = {
 			picture = generic_flexible_foreign_policy2
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.03
+			    consumer_goods_factor = -0.05
 				min_export = 0.1
 			}
 		}
@@ -958,7 +958,7 @@ ideas = {
 			modifier = {
 			    stability_factor = 0.05
 			    conscription_factor = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 			}
 		}
 		BOI_idol_loss_healed = {
@@ -1102,7 +1102,7 @@ ideas = {
 			modifier = {
 			    stability_factor = 0.1
 				monthly_population = 0.1
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.05
 			}
 		}
 		BOI_refugee_haven = {
@@ -1156,7 +1156,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 				min_export = 0.1
 			}
 		}
@@ -1340,7 +1340,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    stability_factor = -0.05
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.2
 			}
 		}
 		BOI_resistance_to_reforms = {
@@ -1368,7 +1368,7 @@ ideas = {
 			picture = LEC_exhausted_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 			}
 		}
 		BOI_equestrian_advisors = {
@@ -1382,7 +1382,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    research_speed_factor = 0.03
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 				stability_factor = 0.05
 				war_support_factor = -0.1
 				democratic_drift = 0.01
@@ -1425,7 +1425,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.15
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.1
 				stability_factor = -0.05
 				trade_opinion_factor = -0.25
 			}
@@ -1440,7 +1440,7 @@ ideas = {
 			picture = LEC_high_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 				political_power_factor = -0.05
 			}
 		}
@@ -1483,7 +1483,7 @@ ideas = {
 			picture = chi_hyper_inflation3
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 			}
 		}
 	    BOI_republicans_in_council = {
@@ -1553,7 +1553,7 @@ ideas = {
 			picture = EQS_harmonic_stagnation
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.03
+			    consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.1
 				min_export = 0.05
 			}
@@ -1568,7 +1568,7 @@ ideas = {
 			picture = ELF_might
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 			}
 		}
 		BOI_generous_funding_recipient = {
@@ -1581,7 +1581,7 @@ ideas = {
 			picture = GRF_militias
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.1
+			    consumer_goods_factor = -0.2
 				political_power_factor = 0.1
 			}
 		}
@@ -1595,7 +1595,7 @@ ideas = {
 			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.1
 				min_export = 0.1
 			}
@@ -1610,7 +1610,7 @@ ideas = {
 			picture = Generic_bank_idea_icon
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 			}
 		}
 		BOI_griffonstone_reconstruction = {
@@ -1623,7 +1623,7 @@ ideas = {
 			picture = IRE_heavy_industry
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 			}
 		}
 		BOI_griffonstone_expansion = {
@@ -1636,7 +1636,7 @@ ideas = {
 			picture = IRE_heavy_industry
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.15
+			    consumer_goods_factor = 0.3
 			}
 		}
 		BOI_land_compensation = {
@@ -1649,7 +1649,7 @@ ideas = {
 			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 			}
 		}
 		BOI_volunteers_for_equestria = {
@@ -1675,7 +1675,7 @@ ideas = {
 			picture = GRF_weter
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 				air_weather_penalty = -0.5
 				winter_attrition_factor = -0.1
 				heat_attrition_factor = -0.1
@@ -1728,7 +1728,7 @@ ideas = {
 			modifier = {
 			    trade_opinion_factor = 0.1
 				min_export = 0.05
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
 			}
 		}
 		BOI_smugglers_activity = {
@@ -1758,7 +1758,7 @@ ideas = {
 			modifier = {
 			    monthly_population = -0.1
 				stability_factor = -0.05
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
 			}
 		}
 		BOI_sixth_family = {
@@ -1772,7 +1772,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 			}
 		}
 		BOI_rampant_crime = {
@@ -1855,7 +1855,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.2
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 			}
 		}
 		BOI_reformed_archonates = {
@@ -1882,7 +1882,7 @@ ideas = {
 			picture = chi_hyper_inflation
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 			}
 		}
 		BOI_last_stand = {
@@ -1963,7 +1963,7 @@ ideas = {
 			picture = feudalism
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.05
 				political_power_factor = 0.05
 			    stability_factor = 0.05
 			    monthly_population = 0.10				
@@ -2709,7 +2709,7 @@ ideas = {
 				original_tag = "BOI"
 			}		
 			traits = { motorized_equipment_manufacturer }
-			picture = generic_motorized_equipment_manufacturer_3
+			picture = BOI_GMW
 			ai_will_do = {
 				factor = 1
 			}

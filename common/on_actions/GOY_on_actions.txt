@@ -1,6 +1,37 @@
 on_actions = {
     on_startup = {
-	    effect = {
+	    effect = { #GHOSTS OF YORE SETUP EFFECTS
+			every_country = {
+				limit = {
+					OR = {
+						tag = ARA
+						tag = NTR
+						tag = HRR
+						tag = BOI
+						tag = POM
+					}
+					is_ai = yes
+					has_country_custom_difficulty_setting = yes
+				}
+				set_technology = {
+					GOY_longer_supply_chains = 1
+					GOY_adaptive_camouflage = 1
+					GOY_resource_smuggling = 1
+					popup = no
+				}
+				country_event = {
+					id = goy_ai_pain.1
+					days = 300
+				}
+				country_event = {
+					id = goy_ai_pain.2
+					days = 1277
+				}
+				country_event = {
+					id = goy_ai_pain.3
+					days = 750
+				}
+			}
 			574 = {
 				add_dynamic_modifier = { modifier = NTR_holy_forge_dynmodifier }
 			}
@@ -13,6 +44,8 @@ on_actions = {
 				value = -5
 			}
 			set_province_name = { id = 1517 name = GOY_vp_holy_forge }
+			set_province_name = { id = 8073 name = GOY_vp_cervys }
+			set_province_name = { id = 4382 name = GOY_vp_pomazhon }
 			add_to_array = { global.states_with_lore = 408.id }
 			add_to_array = { global.states_with_lore = 562.id }
 			IF = {
@@ -87,6 +120,42 @@ on_actions = {
 				}
 				NTR = {
 					add_ideas = GOY_spirits_religion
+					add_equipment_to_stockpile = {
+						type = artillery_equipment_0
+						amount = 500
+					}
+					division_template = {
+						name = "Berserker Division"
+					
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 3 y = 0 }
+							infantry = { x = 3 y = 1 }
+							artillery_brigade = { x = 3 y = 2 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							#engineer = { x = 0 y = 1 }
+						}
+					}
+					random_owned_state = {
+						limit = {
+							is_fully_controlled_by = PREV
+						}
+						create_unit = {
+							division = "division_template = \"Berserker Division\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = PREV
+							count = 3
+						}
+					}
 				}
 				GSG = {
 					add_ideas = griffon_race
@@ -96,6 +165,15 @@ on_actions = {
 	}
 	on_capitulation = {
 		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = yes
+						has_country_custom_difficulty_setting = yes
+					}
+				}
+				set_country_flag = GoY_AI_defeated
+			}
 			if = {
 				limit = {
 					ROOT = {
@@ -219,6 +297,7 @@ on_actions = {
 					popup = no
 				}
 				clr_country_flag = NTR_flag_frost_occ_available
+				remove_decision = NTR_ritual_dc
 				remove_ideas = {
 					NTR_tribal_militias
 					NTR_tribal_militias_2

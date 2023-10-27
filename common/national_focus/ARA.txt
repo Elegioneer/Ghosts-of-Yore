@@ -2297,11 +2297,10 @@ focus_tree = {
 		prerequisite = { focus = ARA_right_to_rule }
 		available = {
 		    hidden_trigger = {
-			    NOT = {
-				    AND = {
-				        is_ai = yes
-					    has_war = yes
-					}
+			    OR = {
+					is_ai = no
+					has_war = no
+					has_country_custom_difficulty_setting = yes
 				}
 			}
 		}
@@ -2318,13 +2317,38 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		    create_wargoal = {
-				type = annex_everything
-				target = LAK
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = LAK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BOI
+				}
 			}
-		    create_wargoal = {
-				type = annex_everything
-				target = BOI
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						NOT = {
+							original_tag = FRN
+							original_tag = TAL
+							original_tag = WNG
+						}
+						any_owned_state = {
+							OR = {
+								is_core_of = LAK
+								is_core_of = BOI
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2391,11 +2415,10 @@ focus_tree = {
 		prerequisite = { focus = ARA_right_to_rule }
 		available = {
 		    hidden_trigger = {
-			    NOT = {
-				    AND = {
-				        is_ai = yes
-					    has_war = yes
-					}
+			    OR = {
+					is_ai = no
+					has_war = no
+					has_country_custom_difficulty_setting = yes
 				}
 			}
 		}
@@ -2413,30 +2436,50 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		create_wargoal = {
-				type = annex_everything
-				target = EYR
-			}
-		create_wargoal = {
-				type = annex_everything
-				target = ERI
-			}
-		if = {
-		    limit = {
-			    AND = {
-				    EYR = {
-					    is_subject_of = AVI
+			if = {
+				limit = {
+					OR = {
+						EYR = {
+							is_subject_of = AVI
+						}
+						ERI = {
+							is_subject_of = AVI
+						}
 					}
-					ERI = {
-					    is_subject_of = AVI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = AVI
+				}
+			}
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = EYR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ERI
+				}
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = EYR
+								is_core_of = ERI
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}
-			create_wargoal = {
-			    type = annex_everything
-				target = AVI
-			}
-		}
 		}
 	}
 	
@@ -2476,15 +2519,17 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = { focus = ARA_right_to_rule }
 		available = {
-		    ARA = {
-				is_neighbor_of = AVI
+		    AVI = {
+				OR = {
+					is_neighbor_of = ARA
+					exists = no
+				}
 			}
 		    hidden_trigger = {
-			    NOT = {
-				    AND = {
-				        is_ai = yes
-					    has_war = yes
-					}
+				OR = {
+					is_ai = no
+					has_war = no
+					has_country_custom_difficulty_setting = yes
 				}
 			}
 		}
@@ -2493,13 +2538,32 @@ focus_tree = {
 		    470 = { is_owned_by = ROOT }
 		}
 		completion_reward = {	
-			create_wargoal = {
-				type = annex_everything
-				target = AVI
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = AVI
+				}
 			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = AVI
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
 			}
-			}
-			
+		}
+	}
+	
 	Focus = {
 		id = ARA_integrate_avian
 		icon = GFX_goal_DEI_focus_disband_volksraad
@@ -2766,6 +2830,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = { 
 				limit = {
 						GRI = { exists = yes }
@@ -2774,6 +2839,20 @@ focus_tree = {
 				type = annex_everything 
 				target = GRI
 			}
+			}
+			}
+			every_other_country = { #Best wargoal ever
+				limit = {
+					owns_state = 382
+				}
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						expire = 0
+						generator = GRI.core_states
+					}
+				}
 			}
 			IF = { 
 				limit = {
@@ -3015,7 +3094,7 @@ focus_tree = {
 		cost = 3.00
 		prerequisite = { focus = ARA_die_is_cast }
 		ai_will_do = {
-			base = 75
+			base = 100
 		}
 		mutually_exclusive = { focus = ARA_march_west }
 		available = {
@@ -3252,27 +3331,12 @@ focus_tree = {
 		cost = 3.00
 		prerequisite = { focus = ARA_die_is_cast }
 		ai_will_do = {
-			base = 0
+			base = 100
 			modifier = {
-			    JER = {
-				    OR = {
-				        has_government = fascism
-						has_government = democratic
-						has_government = communism
-					}
-				}
-				add = 75
-			}
-			modifier = {
-			    has_war = yes
-				JER = {
-				    OR = {
-				        has_government = fascism
-						has_government = democratic
-						has_government = communism
-					}
-				}
-				add = -75
+				JER = { 
+					has_country_leader = { ruling_only = yes character = JER_vivienne_discret }
+				}	
+				add = -100
 			}
 		}
 		mutually_exclusive = { focus = ARA_marriage_of_convience }
@@ -6723,6 +6787,9 @@ focus_tree = {
 		x = 29
 		y = 0
 		cost = 5.00
+		ai_will_do = {
+			base = 100
+		}
 		completion_reward = {
 		    #custom_effect_tooltip = ARA_fragile_rule_tooltip
 			#hidden_effect = {
@@ -9708,7 +9775,7 @@ focus_tree = {
 						type = take_state_focus
 						target = PREV
 						expire = 0
-						generator = { 721 725 831 820 722 723 724 720 806 719 717 718 716 715 }
+						generator = MCW.core_states
 					}
 				}
 			}
@@ -9819,7 +9886,7 @@ focus_tree = {
 						type = take_state_focus
 						target = PREV
 						expire = 0
-						generator = { 875 702 700 701 852 876 709 877 699 703 704 705 714 706 1093 1094 1095 }
+						generator = CTH.core_states
 					}
 				}
 			}

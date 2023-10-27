@@ -840,7 +840,7 @@ characters = {
 			}
 			visible = {
 			}
-			traits = { army_artillery_1 }
+			traits = { army_concealment_2 }
 		}
 	}
 	GOY_NTR_sorcha = {

@@ -1,0 +1,43 @@
+GoY_kill_rumare_hopefully = {
+	enable = {
+		OR = {
+			original_tag = BOI
+			original_tag = ARA
+		}
+		AND = {
+			has_war_with = LAK
+			is_neighbor_of = LAK
+		}
+	}
+	abort = {
+		casualties_inflicted_by = {
+			opponent = LAK
+			thousands > 150
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = front_unit_request
+		tag = LAK
+		value = 50
+	}
+	ai_strategy = {
+		type = front_armor_score
+		id = "LAK"
+		value = -200
+	}
+	ai_strategy = {
+		type = front_control
+		tag = LAK
+		
+		priority = 100
+		
+		#ratio = 0.2
+		
+		ordertype = front_control
+		execution_type = rush
+		execute_order = yes
+		manual_attack = yes
+	}
+}

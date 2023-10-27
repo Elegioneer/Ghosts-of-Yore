@@ -1,3 +1,16 @@
+NTR_goy_noaat_smiths_upgrade_cat = {
+    icon = GFX_decision_cat_goy_northern_smiths
+	allowed = {
+        tag = NTR
+    }
+	visible = {
+		OR = {
+			has_idea = NTR_northern_weaponsmiths
+			has_idea = NTR_northern_weaponsmiths_1
+			has_idea = NTR_northern_weaponsmiths_2
+		}
+	}
+}
 NTR_claim_our_destiny_cat = {
     icon = GFX_decision_caticon_princess
 	allowed = {

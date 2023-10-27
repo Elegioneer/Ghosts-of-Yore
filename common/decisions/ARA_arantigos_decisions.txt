@@ -1064,7 +1064,26 @@ ARA_puppet_show_cat = {
 			custom_effect_tooltip = ARA_TT_pup_karth
 			hidden_effect = {
 			    ARA = {
-				   	every_owned_state = {
+					every_owned_state = {
+					    limit = {
+						    OR = {
+					            is_claimed_by = WNG
+								is_core_of = WNG
+								is_core_of = TAL
+								is_core_of = FRN
+								is_core_of = SIC
+								is_core_of = FAL
+							}
+							is_core_of = ARA
+						}
+						remove_core_of = WNG
+						remove_core_of = TAL
+						remove_core_of = FRN
+						remove_core_of = SIC
+						remove_core_of = FAL
+						remove_claim_by = WNG
+					}
+				   	every_state = {
 					    limit = {
 						    OR = {
 					            is_claimed_by = WNG
@@ -1072,6 +1091,9 @@ ARA_puppet_show_cat = {
 								is_core_of = FRN
 								is_core_of = SIC
 								is_core_of = FAL
+							}
+							NOT = {
+								is_core_of = ARA
 							}
 						}
 						add_core_of = WNG
@@ -1149,7 +1171,7 @@ ARA_puppet_show_cat = {
 			hidden_effect = {
 			    ARA = {
 				    add_state_core = 496
-				   	every_owned_state = {
+				   	every_state = {
 					    limit = {
 						    OR = {
 					            is_claimed_by = JER
@@ -1159,6 +1181,9 @@ ARA_puppet_show_cat = {
 								is_core_of = HEL
 								is_core_of = FEZ
 								is_core_of = FLO
+							}
+							NOT = {
+								is_core_of = ARA
 							}
 						}
 						add_core_of = JER
@@ -1214,7 +1239,7 @@ ARA_puppet_show_cat = {
 			custom_effect_tooltip = ARA_TT_pup_north
 			hidden_effect = {
 			    ARA = {
-				   	every_owned_state = {
+				   	every_state = {
 					    limit = {
 						    OR = {
 								is_core_of = FAT
@@ -1223,6 +1248,9 @@ ARA_puppet_show_cat = {
 								is_core_of = VED
 								is_core_of = SRS
 								is_core_of = NTR
+							}
+							NOT = {
+								is_core_of = ARA
 							}
 						}
 						add_core_of = FAT

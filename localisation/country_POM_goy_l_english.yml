@@ -2,4 +2,32 @@
 
 ### Bookmarks ###
  
- 
+### Traits ###
+GOY_former_operative_trait:0 "Former Intelligence Agent"
+
+### National Focus ###
+POM_bayonet_throne:0 "Throne of Bayonets"
+POM_bayonet_throne_desc:0 "It has been twenty-seven years since colonel Reiher conquered Pomovarra and proclaimed himself its prince. However, the situation has been growing increasingly unstable, and the end of his reign might be near..."
+
+### Events ###
+goy_pomovarra.2.t:0 "The Party"
+goy_pomovarra.2.d:0 ""
+goy_pomovarra.2.a:0 ""
+
+
+### Ideas/National Spirits ###
+goy_pom_criminal_economy:0 "Criminal Economy"
+goy_pom_criminal_economy_desc:0 ""
+POM_flowenian_chokepoint:0 "Flowenian Chokepoint"
+POM_flowenian_chokepoint_desc:0 "Us being situated in the Peripherie, flanked by Verenia and surrounded by lesser unfriendly polities – offspring of bloody civil wars – our only viable trade route lies through the city of Flowena. However, their total control over a major railroad and one of Griffking’s tributary rivers allows them to strangle our trade with customs and limitations."
+POM_pomovarran_uprising:0 "Pomovarran Uprising"
+POM_pomovarran_uprising_desc:0 "The locals passionately hate us and take every casual opportunity to sabotage our rule. The more ideological Pomovarrans wage guerilla warfare, making our existence here one of constant struggle. We cannot hope for any support from them, and whoever we recruit quickly proves to be a rebel mole. We have to rely on the few foreigners living here and mercenaries to man our army. Rebels grow bolder with every day, and soon they will strike."
+POM_warlord_government:0 "Warlord Government"
+POM_warlord_government_desc:0 "Despite our grandiose claim to power, we are little more than an army stranded in a distant land. Our rule over Pomovarra is one of military occupation, and our ‘bureaucracy’ is nearly non-existent, with military commanders wielding absolute power over the regions assigned to them. Obviously, this does not work very well."
+POM_economic_devastation:0 "Economic Devastation"
+POM_economic_devastation_desc:0 "Three decades of unending conflict have crippled our economy and scarred the land. Many factories and farms are abandoned or destroyed, famine is an ever-looming threat, and outside investments are nearly non-existent. "
+POM_military_legacy:0 "Military Legacy"
+POM_military_legacy_desc:0 "Our precarious position forced us to stay sharp, and officers that once served in the Reichsarmee managed to reforge a bunch of deserters and mercenaries that once made up our ‘army’ into a formidable fighting force. Idiots and cowards have long ago died fighting the rebels, and those who remained are well-disciplined, organised, and determined."
+
+### Tooltips ###
+

@@ -151,4 +151,20 @@ spriteTypes = {
 		name = "GFX_decision_goy_magiс_wood"
 		texturefile = "gfx/interface/decisions/decision_goy_magiс_wood.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_goy_northern_smiths"
+		texturefile = "gfx/interface/decisions/decision_cat_goy_northern_smiths.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_flaming_sword"
+		texturefile = "gfx/interface/decisions/decision_goy_flaming_sword.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_hammers_crossed"
+		texturefile = "gfx/interface/decisions/decision_goy_hammers_crossed.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_magic_hat"
+		texturefile = "gfx/interface/decisions/decision_goy_magic_hat.dds"
+	}
 }

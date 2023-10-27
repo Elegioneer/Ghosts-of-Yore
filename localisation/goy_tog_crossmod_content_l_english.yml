@@ -1,7 +1,13 @@
 ﻿l_english:
 
-# RELIGIONS
+# RELIGIONS FOR TOG
 GOY_arantigos_boreas_religion:0 "Cult of Arantigos-Boreas"
 GOY_arantigos_boreas_religion_desc:0 ""
 GOY_spirits_religion:0 "Northern Spirits Worship"
 GOY_spirits_religion_desc:0 ""
+
+# MISC
+GOY_mass_mobilisation_idea:0 "Mass Mobilisation"
+GOY_magical_melee_equipment:0 "Magical Pre-Gunpowder Equipment"
+GOY_magical_melee_equipment_short:0 "Magic Staffs"
+GOY_magical_melee_equipment_tech:0 "Magic Staffs"

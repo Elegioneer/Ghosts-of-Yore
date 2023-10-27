@@ -13,6 +13,21 @@ ideas = {
 			    ai_focus_aggressive_factor = 1
 			}
 		}
+		NTR_death_skynavia = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_syndicalism_drift_bonus
+			removal_cost = -1
+			modifier = {
+			    army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				forced_surrender_limit = -0.75
+			}
+		}
 	    NTR_war_north = {
 			allowed = {
 				always = no
@@ -354,7 +369,7 @@ ideas = {
 			modifier = {
 			    min_export = 0.05
 			    trade_opinion_factor = 0.1
-			    consumer_goods_factor = -0.03
+			    consumer_goods_factor = -0.05
 			}
 		}
 		NTR_greenhouses = {
@@ -380,7 +395,7 @@ ideas = {
 			picture = LEC_staggering_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.1
+			    consumer_goods_factor = -0.2
 				production_factory_efficiency_gain_factor = 0.2
 				production_factory_max_efficiency_factor = 0.1
 				industrial_capacity_factory = 0.1
@@ -397,7 +412,7 @@ ideas = {
 			picture = GRW_ricefield_training
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 			}
 		}
 		NTR_bountiful_land = {
@@ -1007,7 +1022,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.1
@@ -1071,7 +1086,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = PAP_Legionary_Spirit
+			picture = GOY_legionary_spirit
 			removal_cost = -1
 			modifier = {
 			    special_forces_cap = 0.2
@@ -1106,9 +1121,10 @@ ideas = {
 			picture = LIT_crown_4
 			removal_cost = -1
 			modifier = {
-			    local_building_slots_factor = -0.2
+			    production_speed_buildings_factor = 0.2
 				local_resources_factor = 0.1
-				monthly_population = 0.1
+				consumer_goods_factor = -0.05
+				non_core_manpower = 0.05
 			}
 		}
 		NTR_industrial_slavery = {
@@ -1124,6 +1140,7 @@ ideas = {
 			    industrial_capacity_factory = 0.2
 				local_building_slots_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
+				required_garrison_factor = 0.2
 				stability_factor = -0.10
 				monthly_population = -0.2
 			}
@@ -1138,10 +1155,10 @@ ideas = {
 			picture = LIT_crown_4
 			removal_cost = -1
 			modifier = {
-			    local_building_slots_factor = -0.2
+			    production_speed_buildings_factor = 0.2
 				local_resources_factor = 0.1
-				monthly_population = 0.1
-				non_core_manpower = 0.01
+				consumer_goods_factor = -0.1
+				non_core_manpower = 0.1
 				required_garrison_factor = -0.2
 			}
 		}
@@ -1156,6 +1173,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    max_command_power = 25
+				command_power_gain_mult = 0.2
 				army_org_factor = 0.05
 			}
 		}
@@ -1202,7 +1220,7 @@ ideas = {
 			picture = BAL_hell
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.2
+			    consumer_goods_factor = -0.4
 			}
 		}
 		NTR_widespread_unrest = {
@@ -1385,7 +1403,7 @@ ideas = {
 			picture = generic_foreign_capital
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.1
+			    consumer_goods_factor = -0.2
 			}
 		}
 		NTR_unnatural_weather = {
@@ -1402,7 +1420,7 @@ ideas = {
 				acclimatization_cold_climate_gain_factor = -1.5
 				stability_factor = -0.2
 				air_weather_penalty = 0.2
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.2
 			}
 		}
 		NTR_bloodrage = {
@@ -1497,7 +1515,7 @@ ideas = {
 			picture = spr_seize_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.05
+			    consumer_goods_factor = -0.1
 			}
 		}
 		NTR_modern_mining_equipment = {
@@ -1553,7 +1571,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    min_export = -0.05
-				consumer_goods_factor = -0.01
+				consumer_goods_factor = -0.05
 			}
 		}
 		NTR_coalition_ties = {
@@ -1567,7 +1585,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			    min_export = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 				research_speed_factor = 0.05
 				industrial_capacity_factory	= 0.1
 			}
@@ -1671,7 +1689,7 @@ ideas = {
 			picture = viirascience
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.05
 				research_speed_factor = 0.05
 			}
 		}
@@ -1685,7 +1703,7 @@ ideas = {
 			picture = LEC_staggering_reserves
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}
 		}
 		NTR_avenge_griffonstone = {
@@ -1713,15 +1731,15 @@ ideas = {
 			picture = unhappy_army_3
 			removal_cost = -1
 			modifier = {
-				conscription = 0.06
+				conscription = 0.1
 				army_morale_factor = 0.1
 				army_org_factor = 0.1
 				training_time_factor = -0.25			
 				war_support_factor = 0.1
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.2
 				industrial_capacity_factory = 0.25
 			}
-			targeted_modifier = { tag = NTR attack_bonus_against = 0.2 defense_bonus_against = 0.2 }
+			targeted_modifier = { tag = NTR attack_bonus_against = 0.1 defense_bonus_against = 0.2 }
 		}
 	}
 
@@ -1802,7 +1820,7 @@ ideas = {
 				#ai_focus_peaceful_factor = 0.25
 			    #army_core_attack_factor = 0.05
 				#army_core_defence_factor = 0.05
-				consumer_goods_factor = 0.1
+				consumer_goods_expected_value = 0.05
 				production_factory_efficiency_gain_factor = -0.10
 				production_factory_max_efficiency_factor = -0.10
 				local_resources_factor = 0.2
@@ -1840,6 +1858,10 @@ ideas = {
 			removal_cost = -1
 			picture = closed_economy
 			
+			rule = {
+				can_access_market = no
+			}
+			
 			modifier = {
 				min_export = 0
 			}
@@ -1865,6 +1887,10 @@ ideas = {
 			}
 			removal_cost = -1
 			picture = GFX_idea_GOY_frozen_economy
+			
+			rule = {
+				can_access_market = no
+			}
 			
 			modifier = {
 				min_export = 0
@@ -2675,13 +2701,25 @@ materiel_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { infantry_equipment_manufacturer }
-		picture = CTH_light_aircraft_manufacturer
+		picture = GOY_NTR_northern_smiths
 		ai_will_do = {
-		factor = 5
+			factor = 5
 		}
 		available = {
 		}
 		visible = {
+			NOT = {
+				has_country_flag = NTR_goy_noaat_smiths_upgrade_1
+				has_country_flag = NTR_goy_noaat_smiths_upgrade_2
+				has_country_flag = NTR_goy_noaat_smiths_upgrade_3
+			}
+		}
+		on_add = {
+			custom_effect_tooltip = NTR_goy_TT_noaat_better_smiths
+			activate_decision = NTR_upgrade_smiths_1
+		}
+		on_remove = {
+			remove_decision = NTR_upgrade_smiths_1
 		}
 		equipment_bonus = {
 			infantry_equipment = {
@@ -2689,10 +2727,116 @@ materiel_manufacturer = {
 				build_cost_ic = -0.1 instant = yes
 			}
 			melee_equipment_0 = {
-				soft_attack = 0.75 instant = yes
-				defense = 1 instant = yes
-				breakthrough = 0.75 instant = yes
-				build_cost_ic = -0.2 instant = yes
+				soft_attack = 3 instant = yes
+				defense = 4 instant = yes
+				breakthrough = 3 instant = yes
+			}
+		}
+	}
+	NTR_northern_weaponsmiths_1 = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = GOY_NTR_northern_smiths
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		visible = {
+			has_country_flag = NTR_goy_noaat_smiths_upgrade_1
+		}
+		on_add = {
+			activate_decision = NTR_upgrade_smiths_2
+		}
+		on_remove = {
+			remove_decision = NTR_upgrade_smiths_2
+		}
+		equipment_bonus = {
+			
+			melee_equipment_0 = {
+				soft_attack = 7 instant = yes
+				hard_attack = 1000 instant = yes
+				defense = 6 instant = yes
+				breakthrough = 7 instant = yes
+				hardness = 49 instant = yes
+				build_cost_ic = 0.15 instant = yes
+			}
+		}
+	}
+	NTR_northern_weaponsmiths_2 = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = GOY_NTR_northern_smiths
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		visible = {
+			has_country_flag = NTR_goy_noaat_smiths_upgrade_2
+		}
+		on_add = {
+			activate_decision = NTR_upgrade_smiths_3
+		}
+		on_remove = {
+			remove_decision = NTR_upgrade_smiths_3
+		}
+		equipment_bonus = {
+			
+			melee_equipment_0 = {
+				soft_attack = 10 instant = yes
+				hard_attack = 3000 instant = yes
+				ap_attack = 5000 instant = yes
+				air_attack = 5000 instant = yes
+				defense = 8 instant = yes
+				breakthrough = 9 instant = yes
+				hardness = 99 instant = yes
+				armor_value = 10000 instant = yes
+				reliability = -0.05 instant = yes
+				build_cost_ic = 0.45 instant = yes
+			}
+		}
+	}
+	NTR_northern_weaponsmiths_3 = {
+		allowed = {
+		original_tag = "NTR"
+		}
+		traits = { infantry_equipment_manufacturer }
+		picture = GOY_NTR_northern_smiths
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		visible = {
+			has_country_flag = NTR_goy_noaat_smiths_upgrade_3
+		}
+		on_add = {
+			owner = {
+				set_technology = {
+					GOY_magical_melee_equipment_tech = 1
+					popup = yes
+				}
+			}
+		}
+		equipment_bonus = {
+			
+			melee_equipment_0 = {
+				soft_attack = 13 instant = yes
+				hard_attack = 7000 instant = yes
+				ap_attack = 15000 instant = yes
+				air_attack = 5000 instant = yes
+				defense = 13 instant = yes
+				breakthrough = 13 instant = yes
+				hardness = 199 instant = yes
+				armor_value = 10000 instant = yes
+				maximum_speed = 0.25 instant = yes
+				reliability = -0.15 instant = yes
+				build_cost_ic = 0.85 instant = yes
 			}
 		}
 	}
@@ -2701,7 +2845,7 @@ materiel_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { artillery_manufacturer }
-		picture = generic_artillery_manufacturer_1
+		picture = GOY_NTR_iron_bear_crew
 		ai_will_do = {
 		factor = 0
 		}
@@ -3070,7 +3214,7 @@ naval_manufacturer = {
 		original_tag = "NTR"
 		}
 		traits = { raiding_fleet_naval_manufacturer }
-		picture = HIP_trade
+		picture = GOY_NTR_barkcoat_shipwrights
 		ai_will_do = {
 		factor = 1
 		}

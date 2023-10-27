@@ -11,6 +11,7 @@ set_technology = {
 	pre_gw_artillery = 1
 	tech_support = 1
 	tech_recon = 1
+	tech_trucks = 1
 	basic_train = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
@@ -48,6 +49,10 @@ set_popularities = {
 	communism = 10
 	neutrality = 35
 }
+set_party_name = { ideology = neutrality name = POM_goy_rebel_party long_name = POM_goy_rebel_party_long }
+set_party_name = { ideology = fascism name = POM_goy_reiher_party long_name = POM_goy_reiher_party_long }
+set_party_name = { ideology = democratic name = POM_goy_camriz_party long_name = POM_goy_camriz_party_long }
+set_party_name = { ideology = communism name = POM_goy_commie_party long_name = POM_goy_commie_party_long }
 set_politics = {
 	ruling_party = fascism
 	elections_allowed = no
@@ -66,14 +71,45 @@ add_ideas = {
 	POM_economic_devastation
 	POM_military_legacy
 }
+
+add_manpower = 25000
+
+load_focus_tree = Pomovarra_goy_init
+
+set_cosmetic_tag = POM_GOY
+
 set_country_flag = better_science_base_unlocked
 set_country_flag = have_regular_puppets
 
 set_stability = 0.45
 set_war_support = 0.4
 
-recruit_character = POM_horman_de_camris
-recruit_character = POM_nicolas_de_camris
+#recruit_character = POM_horman_de_camris #EaW
+#recruit_character = POM_nicolas_de_camris #EaW
+
+recruit_character = GOY_POM_reiher #GoY
+recruit_character = GOY_POM_feuerstein
+recruit_character = GOY_POM_falkenrath
+recruit_character = GOY_POM_schattenzahn
+
+recruit_character = GOY_POM_liberation_commitee
+recruit_character = GOY_POM_charlotte_corneille
+
+recruit_character = GOY_POM_camriz
+recruit_character = GOY_POM_renan
+recruit_character = GOY_POM_silverwing
+recruit_character = GOY_POM_morel
+recruit_character = GOY_POM_seznec
+
+GOY_POM_reiher = {
+	set_character_flag = GOY_char_available_flag
+}
+GOY_POM_feuerstein = {
+	set_character_flag = GOY_char_available_flag
+}
+GOY_POM_falkenrath = {
+	set_character_flag = GOY_char_available_flag
+}
 
 set_rule = {
 	can_generate_female_aces = yes

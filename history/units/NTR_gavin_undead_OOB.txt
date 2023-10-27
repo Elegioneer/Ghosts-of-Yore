@@ -1,6 +1,9 @@
 division_template = {
 	name = "Raised Warriors"
-
+	
+	is_locked = yes
+	force_allow_recruiting = yes
+	
 	division_names_group = NTR_INF_02
 
 	regiments = {

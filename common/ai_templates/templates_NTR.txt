@@ -239,6 +239,7 @@ infantry_NTR = {
 				anti_tank_brigade = 1
 			}
 			support = {
+				goy_necromancer_company = 1
 				engineer = 1
 				recon = 1
 				artillery = 1
@@ -365,6 +366,7 @@ pegasi_shock_GOY_NTR = {
 			match_value = 4000.0
 
 			support = {
+				goy_necromancer_company = 1
 				engineer = 1
 				artillery = 1
 				anti_tank = 1
@@ -378,6 +380,7 @@ pegasi_shock_GOY_NTR = {
 		}
 
 		allowed_types = {
+			goy_necromancer_company
 			pegasi
 			unicorn_company
 			engineer

@@ -48,7 +48,7 @@ spriteTypes = {
 
     SpriteType = {
 		name = "GFX_idea_ARA_h_and_t"
-		texturefile = "gfx/interface/ideas/company_ARA_h_plus_t.tga"
+		texturefile = "gfx/interface/ideas/company_ARA_h_plus_t.dds"
     }
     
     SpriteType = {
@@ -273,5 +273,33 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_GOY_BOI_klawsewitz"
 		texturefile = "gfx/interface/ideas/idea_goy_BOI_klawsewitz.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_criminal_economy"
+		texturefile = "gfx/interface/ideas/idea_GOY_criminal_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_legionary_spirit"
+		texturefile = "gfx/interface/ideas/idea_GOY_legionary_spirit.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_BOI_GMW"
+		texturefile = "gfx/interface/ideas/idea_BOI_GMW.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_barkcoat_shipwrights"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_barkcoat_shipwrights.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_northern_smiths"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_northern_smiths.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_iron_bear_crew"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_iron_bear_crew.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ARA_xyston_developments"
+		texturefile = "gfx/interface/ideas/idea_ARA_xyston_developments.dds"
 	}
 }

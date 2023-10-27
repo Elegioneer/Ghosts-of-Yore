@@ -20,4 +20,11 @@ difficulty_settings = {
 		countries = { NTR }
 		multiplier = 2.0
 	}
+	difficulty_setting = {
+		key = "custom_diff_strong_HRR"
+		icon = "GFX_goy_game_rule_ghostofyore"
+		modifier = diff_strong_ai_generic
+		countries = { HRR }
+		multiplier = 2.0
+	}
 }

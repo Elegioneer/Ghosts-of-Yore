@@ -165,10 +165,10 @@ defined_text = { # Country
 		trigger = { original_tag = FEA }
 		localization_key = EAW_WS_FEA
 	}
-	#text = {
-	#	trigger = { original_tag = ARA }
-	#	localization_key = EAW_WS_ARA
-	#}
+	text = {
+		trigger = { original_tag = ARA }
+		localization_key = EAW_WS_ARA
+	}
 	text = {
 		trigger = { original_tag = SIC }
 		localization_key = EAW_WS_SIC
@@ -336,6 +336,18 @@ defined_text = { # Country
 		localization_key = EAW_WS_OLV
 	}
 	text = {
+		trigger = { original_tag = KIR }
+		localization_key = EAW_WS_KIR
+	}
+	text = {
+		trigger = { original_tag = KIS }
+		localization_key = EAW_WS_KIS
+	}
+	text = {
+		trigger = { original_tag = KIC }
+		localization_key = EAW_WS_KIC
+	}
+	text = {
 		trigger = { original_tag = GAZ }
 		localization_key = EAW_WS_GAZ
   }
@@ -404,7 +416,6 @@ defined_text = {
 		localization_key = GOY_WS_HRR_desc
 	}	
 	#################
-	name = GetCountryIntro
 	text = {
 		trigger = { original_tag = VED }
 		localization_key = EAW_WS_VED_desc
@@ -558,10 +569,10 @@ defined_text = {
 		trigger = { original_tag = FEA }
 		localization_key = EAW_WS_FEA_desc
 	}
-	#text = {
-	#	trigger = { original_tag = ARA }
-	#	localization_key = EAW_WS_ARA_desc
-	#}
+	text = {
+		trigger = { original_tag = ARA }
+		localization_key = EAW_WS_ARA_desc
+	}
 	text = {
 		trigger = { original_tag = SIC }
 		localization_key = EAW_WS_SIC_desc
@@ -718,6 +729,22 @@ defined_text = {
 	text = {
 		trigger = { original_tag = OLV }
 		localization_key = EAW_WS_OLV_desc
+	}
+	text = {
+		trigger = { original_tag = KIR }
+		localization_key = EAW_WS_KIR_desc
+	}
+	text = {
+		trigger = { original_tag = KIS }
+		localization_key = EAW_WS_KIS_desc
+	}
+	text = {
+		trigger = { original_tag = KIC }
+		localization_key = EAW_WS_KIC_desc
+	}
+	text = {
+		trigger = { original_tag = KXN }
+		localization_key = EAW_WS_KXN_desc
 	}
 	text = {
 		trigger = { original_tag = GAZ }
@@ -912,6 +939,18 @@ defined_text = {
 	text = {
 		trigger = { original_tag = ELF }
 		localization_key = EAW_WS_header_text_ELF
+	}
+	text = {
+		trigger = { original_tag = KIR }
+		localization_key = EAW_WS_header_text_KIR
+	}
+	text = {
+		trigger = { original_tag = KIS }
+		localization_key = EAW_WS_header_text_KIS
+	}
+	text = {
+		trigger = { original_tag = KIC }
+		localization_key = EAW_WS_header_text_KIC
 	}
 	text = {
 		localization_key = EAW_WS_standard_header_text

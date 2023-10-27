@@ -1,0 +1,43 @@
+# GOY Equipment
+
+equipments = {
+
+	# NTR MIO equipment
+	GOY_magical_melee_equipment = {
+		#year = 1010
+		# can_be_produced = {
+		# 	NOT = {
+		# 	}
+		# }
+		
+		archetype = magical_equipment
+		#picture = GFX_GOY_magical_melee_equipment_tech_medium
+		#is_convertable = yes
+		priority = 10
+		visual_level = 3
+		
+		#
+		maximum_speed = 6
+		
+		#Defensive Abilities
+		defense = 36
+		breakthrough = 8
+		hardness = 0.25
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 20
+		hard_attack = 9
+		ap_attack = 24
+		air_attack = 7.5
+		
+		#
+		reliability = 0.65
+		build_cost_ic = 0.6
+		resources = {
+			steel = 3
+			crystals = 4
+			tungsten = 1
+		}
+	}
+}

@@ -314,7 +314,16 @@
 		prerequisite = { focus = NTR_big_guns }
 		prerequisite = { focus = NTR_perils_logistics }
 		completion_reward = {
-			custom_effect_tooltip = NTR_iceshard_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_kopferberg_waffen_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_iceshard_enabled
+			}
 		    IF = {
 			    limit = {
 				    NOT = {
@@ -365,6 +374,16 @@
 		prerequisite = { focus = NTR_big_guns }
 		prerequisite = { focus = NTR_perils_logistics }
 		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_moltenrock_guns_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_moltenrockguns_enabled
+			}
 		    add_tech_bonus = {
 				name = GOY_bonus_infy_eq_2
 				bonus = 0.5
@@ -472,9 +491,17 @@
 		prerequisite = { focus = NTR_hide_in_metal }
 		mutually_exclusive = { focus = NTR_advanced_artillery }
 		completion_reward = {
-			custom_effect_tooltip = NTR_holyforgetank_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_holy_forge_tank_armory_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_holyforgetank_enabled
+			}
 			add_ideas = NTR_streamlined_tank
-			#TODO enable Holy Forge Tank
 		}
 	}
 	shared_focus = {
@@ -491,9 +518,17 @@
 		prerequisite = { focus = NTR_hide_in_metal }
 		mutually_exclusive = { focus = NTR_terrifying_tanks }
 		completion_reward = {
-			custom_effect_tooltip = NTR_holyforgearty_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_holy_forge_artillery_armory_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_holyforgearty_enabled
+			}
 			add_ideas = NTR_forged_artillery
-			#TODO enable Holy Forge Arty
 		}
 	}
 	shared_focus = {
@@ -712,7 +747,7 @@
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						engine_type_slot = engine_1_1x
+						engine_type_slot = engine_1_2x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
 					}
@@ -743,6 +778,13 @@
 					amount = 50
 					producer = RCT
 				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_thunder_airwing_organization
 			}
 		}
 	}
@@ -860,14 +902,22 @@
 		prerequisite = { focus = NTR_airports_construction }
 		prerequisite = { focus = NTR_import_fighters }
 		completion_reward = {
-			custom_effect_tooltip = NTR_cumulus_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_cumulus_airplanes_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_cumulus_enabled
+			}
 			add_tech_bonus = {
 				name = GOY_bonus_fighter_bonus
 				bonus = 0.5
 				uses = 2
 				category = light_air
 			}			
-			#TODO enable cumulous airplanes
 		}
 	}
 	shared_focus = {
@@ -905,8 +955,16 @@
 		    owns_state = 522
 		}
 		completion_reward = {
-			custom_effect_tooltip = NTR_dinkau_enabled
-			#TODO enable Dinkau Shipyard
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_dinkau_shipyard_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_dinkau_enabled
+			}
 			522 = {
 			    add_building_construction = {
 				    type = naval_base
@@ -1910,8 +1968,16 @@
 		relative_position_id = NTR_aggressive_modernisation
 		prerequisite = { focus = NTR_invite_merchants }
 		completion_reward = {
-			custom_effect_tooltip = NTR_koper_enabled
-			#TODO enable Koper armoury?
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_koper_armory_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_koper_enabled
+			}
 			563 = {
 			    add_building_construction = {
 				    type = arms_factory
@@ -2422,7 +2488,7 @@
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						engine_type_slot = engine_1_1x
+						engine_type_slot = engine_1_2x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
 					}
@@ -2527,7 +2593,16 @@
 		prerequisite = { focus = NTR_import_planes }
 		mutually_exclusive = { focus = NTR_defend_skies }
 		completion_reward = {
-			custom_effect_tooltip = NTR_stratus_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_stratus_manufactory_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_stratus_enabled
+			}
 			add_tech_bonus = {
 				name = GOY_bonus_medium_air_bonus
 				bonus = 1.0
@@ -2535,7 +2610,6 @@
 				category = medium_air
 				}
 			add_ideas = NTR_bomber_focus
-			#TODO enable stratus manufactury
 		}
 	}
 	shared_focus = {
@@ -2552,7 +2626,16 @@
 		prerequisite = { focus = NTR_import_planes }
 		mutually_exclusive = { focus = NTR_strike_enemies }
 		completion_reward = {
-			custom_effect_tooltip = NTR_stormshieldairwing_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_stormshield_airwing_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_stormshieldairwing_enabled
+			}
 			add_tech_bonus = {
 				name = GOY_bonus_fighter_bonus
 				bonus = 1.0
@@ -2560,7 +2643,6 @@
 				category = light_air
 			}
 			add_ideas = NTR_fighter_focus
-			#TODO enable stormshield airwing
 		}
 	}
 	###
@@ -4304,14 +4386,22 @@
 		prerequisite = { focus = NTR_no_limits }
 		prerequisite = { focus = NTR_strive_to_perfection }
 		completion_reward = {
-			custom_effect_tooltip = NTR_moltenrockenchant_enabled
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_moltenrock_enchantment_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_moltenrockenchant_enabled
+			}
 		    add_tech_bonus = {
 				name = GOY_bonus_magi_eq_2
 				bonus = 0.5
 				uses = 1
 				category = magical_tech
 			}
-			#TODO enable moltenrock enchantments
 		}
 	}
 	shared_focus = {
@@ -4618,9 +4708,17 @@
 		prerequisite = { focus = NTR_many_shapes }
 		prerequisite = { focus = NTR_roam_the_waves_trad }
 		completion_reward = {
-		custom_effect_tooltip = NTR_icecarvers_enabled
-		add_ideas = NTR_ice_fleet
-			#TODO unlock carvers of ice company (merged with ice fleet idea)
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = NTR_carvers_of_ice_organization
+			}
+			else = {
+				custom_effect_tooltip = NTR_icecarvers_enabled
+				add_ideas = NTR_ice_fleet
+			}
 		}
 	}
 	#
@@ -5172,9 +5270,34 @@
 		relative_position_id = NTR_cold_hearted
 		prerequisite = { focus = NTR_unleash_blizzard }
 		completion_reward = {
-		custom_effect_tooltip = NTR_raisewarriors_divisions
-		hidden_effect = {
-			load_oob = NTR_raised_warriors_OOB
+			custom_effect_tooltip = NTR_raisewarriors_divisions
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Raised Warriors"
+						}
+					}
+					division_template = {
+						name = "Raised Warriors"
+
+						division_names_group = NTR_INF_02
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+						}
+
+					}
+				}
+				else = {
+					set_division_template_lock = {
+						division_template = "Raised Warriors"
+						is_locked = no
+					}
+				}
+				load_oob = NTR_raised_warriors_OOB
 			}
 		}
 	}
@@ -5871,12 +5994,17 @@
 				    type = annex_everything
 				    target = FAW
 			    }
-				else = {
-				    create_wargoal = {
-				        type = annex_everything
-				        target = FAT
-			        }
+			}
+			IF = {
+			    limit = {
+				    FAT = {
+					    exists = yes
+					}
 				}
+			    create_wargoal = {
+				    type = annex_everything
+				    target = FAT
+			    }
 			}
 		}
 	}
@@ -5888,6 +6016,9 @@
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
+		}
+		bypass = {
+			MNC = { exists = no }
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6293,10 +6424,50 @@
 		            type = annex_everything
 	                target = GRI
 			    }
-				else = {
-					declare_war_on = { 
-						type = annex_everything
-						target = GRD
+			}
+			else_if = {
+				limit = {
+				    GRD = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = GRD
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						tag = global.griffonian_empire_var
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 382
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 674
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}
@@ -6631,7 +6802,7 @@
 					modules = {
 						fixed_main_weapon_slot = small_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = light_mg_4x
-						engine_type_slot = engine_1_1x
+						engine_type_slot = engine_1_2x
 						special_type_slot_1 = empty
 						special_type_slot_2 = empty	
 					}
@@ -7253,6 +7424,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    TRD = {
@@ -7293,7 +7465,27 @@ shared_focus = {
 				}
 			}
 			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = TRD
+								is_core_of = FEZ
+								is_core_of = HAU
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
 		}
+	}
 	shared_focus = {
 		id = NTR_extinguish_the_light
 		icon = GFX_goal_aquileia
@@ -7320,6 +7512,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    HEL = {
@@ -7439,6 +7632,28 @@ shared_focus = {
 				}
 			}
 			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = HEL
+								is_core_of = AET
+								is_core_of = FLO
+								is_core_of = POM
+								is_core_of = JER
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+			}
 		}
 	shared_focus = {
 		id = NTR_the_last_crusade
@@ -7461,6 +7676,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    HLQ = {
@@ -7514,6 +7730,27 @@ shared_focus = {
 				}
 			}
 			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = HLQ
+								is_core_of = LNS
+								is_core_of = LSN
+								is_core_of = LSC
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+			}
 		}
 	shared_focus = {
 		id = NTR_turn_rumare_red
@@ -7538,6 +7775,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    ERI = {
@@ -7614,6 +7852,29 @@ shared_focus = {
 	                target = LAK
 			    }
 				else = {
+				}
+			}
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = ERI
+								is_core_of = EYR
+								is_core_of = AVI
+								is_core_of = BAN
+								is_core_of = BOI
+								is_core_of = LAK
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
 				}
 			}
 			}
@@ -7700,8 +7961,8 @@ shared_focus = {
 		prerequisite = { focus = NTR_the_last_crusade }
 		prerequisite = { focus = NTR_extinguish_the_light }
 		available = {
-		owns_state = 553
-		owns_state = 540
+			owns_state = 553
+			owns_state = 540
 		}
 		completion_reward = {
 			custom_effect_tooltip = NTR_vartai_auxilia_tooltip
@@ -7791,6 +8052,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    WNG = {
@@ -7871,19 +8133,6 @@ shared_focus = {
 			}
 			IF = {
 			    limit = {
-				    JES = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = JES
-			    }
-				else = {
-				}
-			}
-			IF = {
-			    limit = {
 				    FAL = {
 					    exists = yes
 					}
@@ -7893,6 +8142,30 @@ shared_focus = {
 	                target = FAL
 			    }
 				else = {
+				}
+			}
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = WNG
+								is_core_of = TAL
+								is_core_of = FRN
+								is_core_of = ARA
+								is_core_of = SIC
+								is_core_of = CYA
+								is_core_of = FAL
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
 				}
 			}			
 			}
@@ -7919,6 +8192,7 @@ shared_focus = {
 		available = {
 		}
 		completion_reward = {
+			effect_tooltip = {
 			IF = {
 			    limit = {
 				    LUS = {
@@ -7995,6 +8269,29 @@ shared_focus = {
 	                target = CYA
 			    }
 				else = {
+				}
+			}
+			}
+			hidden_effect = {
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = LUS
+								is_core_of = BRF
+								is_core_of = GRW
+								is_core_of = GRu
+								is_core_of = GRY
+								is_core_of = CYA
+							}
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							type = annex_everything
+							target = PREV
+						}
+					}
 				}
 			}
 			}

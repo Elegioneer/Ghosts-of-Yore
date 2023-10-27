@@ -1,4 +1,4 @@
-spriteTypes = {	
+spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_arantigan_heavy_industry"
@@ -327,5 +327,69 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_goal_GOY_dark_gift"
 		texturefile = "gfx/interface/goals/goal_GOY_dark_gift.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_ar_chas"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_ar_chas.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_camriz_guns"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_camriz_guns.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_fia_connection"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_fia_connection.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GOY_pom_morel_boar"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_morel_boar.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_reiher_knives"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_reiher_knives.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_bayonet_throne"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_bayonet_throne.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_burn_flowena"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_burn_flowena.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_morels_book"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_morels_book.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_rip_out_heart"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_rip_out_heart.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_take_da_chair"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_take_da_chair.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_on_the_crossroads"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_on_the_crossroads.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_needs_of_revolution"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_needs_of_revolution.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_claws_of_revolution"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_claws_of_revolution.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_captain_allard"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_captain_allard.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_death_of_allard"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_death_of_allard.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_le_patron"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_le_patron.dds"
 	}
 }

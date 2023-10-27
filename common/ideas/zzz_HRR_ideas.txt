@@ -45,7 +45,7 @@ ideas = {
 			picture = WAR_devastated_economy
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.1
+			    consumer_goods_factor = 0.2
 				stability_factor = -0.1
 				monthly_population = -0.2
 				local_resources_factor = -0.1
@@ -90,7 +90,7 @@ ideas = {
 			picture = pos_subvert
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.05
+			    consumer_goods_factor = 0.1
 				stability_factor = -0.05
 				monthly_population = -0.1
 				local_resources_factor = -0.05
@@ -149,7 +149,7 @@ ideas = {
 			picture = WNG_COM_health
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.03
+				consumer_goods_factor = 0.05
 				monthly_population = 0.1
 				stability_factor = 0.1
 			}
@@ -179,7 +179,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_capacity_factory = 0.1
-				consumer_goods_factor = -0.02					
+				consumer_goods_factor = -0.05			
 			}
 		}
 	    HRR_agriculture_expanded = {
@@ -206,7 +206,7 @@ ideas = {
 			picture = generic_economic_increase
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 				industrial_capacity_factory = 0.1
 				production_speed_buildings_factor = 0.05
 				min_export = -0.05
@@ -398,7 +398,7 @@ ideas = {
 			picture = HIP_foodstamps
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.1
+			    consumer_goods_factor = -0.2
 				stability_factor = -0.1
 				monthly_population = -0.5
 			}
@@ -467,7 +467,7 @@ ideas = {
 			modifier = {
 			stability_factor = 0.1
 			political_power_gain = 0.05
-			consumer_goods_factor = -0.03
+			consumer_goods_factor = -0.05
 			}
 		}
 		HRR_tolerantsociety = {
@@ -581,7 +581,7 @@ ideas = {
 			removal_cost = -1			
 			modifier = {
 				political_power_factor = 0.1
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.1
 			}		
 	}
 		HRR_parliamentary_republic = {
@@ -594,7 +594,7 @@ ideas = {
 			picture = Generic_Election_Campaign
 			removal_cost = -1			
 			modifier = {
-			 consumer_goods_factor = -0.03
+			 consumer_goods_factor = -0.05
 			 compliance_growth = 0.05
 			 political_power_gain = -0.1
 			}		

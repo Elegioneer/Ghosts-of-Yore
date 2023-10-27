@@ -1,6 +1,45 @@
-ideas = { #Unused. Ignore.
+ideas = {
+	economy = {
+	    law = yes
+		use_list_view = no
+        
+		goy_war_economy_locked = {
+
+			cost = 150
+			removal_cost = -1
+			
+			picture = war_economy
+			
+			allowed = {
+				always = no
+			}
+			visible = {
+				has_idea = goy_war_economy_locked
+			}
+			
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				political_power_gain = -0.20
+			}
+			
+			default = no
+			
+			allowed_to_remove = {
+				always = no
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				
+			}
+		}
+	}
 	country = {
-	    GOY_national_strength_1 = {
+	    GOY_national_strength_1 = { #Unused. Ignore.
 			allowed = {
 				always = no
 			}
@@ -33,6 +72,20 @@ ideas = { #Unused. Ignore.
 			    navy_fuel_consumption_factor = -0.2
 			    air_fuel_consumption_factor = -0.2
 			    air_mission_xp_gain_factor = 0.12
+			}
+		}
+		GOY_mass_mobilisation_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_war_preparation
+			removal_cost = -1
+			modifier = {
+			    mobilization_speed = 1
+				weekly_manpower = 1000
 			}
 		}
 	}

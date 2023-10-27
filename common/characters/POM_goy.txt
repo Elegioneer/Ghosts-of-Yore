@@ -1,0 +1,267 @@
+characters = {
+	GOY_POM_liberation_commitee = {
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POM/GOY_very_nice_chair.tga"
+			}
+		}
+		country_leader = {
+			desc = GOY_POM_liberation_commitee_desc
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GOY_POM_charlotte_corneille = {
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			}
+		}
+		country_leader = {
+			desc = GOY_POM_charlotte_corneille_desc
+			ideology = syndicalism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	GOY_POM_reiher = {
+		name = GOY_POM_reiher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POM/GOY_reiher.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+			army = {
+				large = "gfx/leaders/POM/GOY_reiher.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		country_leader = {
+			desc = GOY_POM_reiher_desc
+			ideology = stratocracy
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			desc = ""
+			traits = { griffon_race_trait brilliant_strategist career_officer trickster inspirational_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_nazi_chair = {
+		name = GOY_POM_nazi_chair
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/POM/GOY_nazi_chair.tga"
+			}
+		}
+	}
+	GOY_POM_schattenzahn = {
+		name = GOY_POM_schattenzahn
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_schattenzahn.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { diamond_dog_race_trait organizer trickster commando }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 1
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_schattenzahn_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { GOY_former_operative_trait }
+		}
+	}
+	GOY_POM_floppen = {
+		name = GOY_POM_floppen
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_floppen.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait trait_reckless hill_fighter }
+			skill = 1 #TODO
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_feuerstein = {
+		name = GOY_POM_feuerstein
+		portraits = {
+			army = {
+				large = "gfx/leaders/Herzland/portrait_herzland_generic_male_3.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait trait_reckless hill_fighter }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_falkenrath = {
+		name = GOY_POM_falkenrath
+		portraits = {
+			army = {
+				large = "gfx/leaders/Aquileian_Generics/portrait_aquileian_generic_griffon_land_female_6.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait old_guard engineer_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_camriz = {
+		name = GOY_POM_camriz
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_camriz.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		country_leader = {
+			desc = GOY_POM_camriz_desc
+			ideology = harmonic_libertarianism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			desc = ""
+			traits = { griffon_race_trait war_hero harsh_leader trickster commando }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_morel = {
+		name = GOY_POM_morel
+		portraits = {
+			army = {
+				large="gfx/leaders/POM/Horman_de_Camris.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+	}
+	GOY_POM_renan = {
+		name = GOY_POM_renan
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_renan.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait trait_reckless ranger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_silverwing = {
+		name = GOY_POM_silverwing
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_silverwing.tga"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait engineer_officer politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_seznec = {
+		name = GOY_POM_seznec
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait trait_cautious infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+}

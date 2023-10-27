@@ -1,0 +1,182 @@
+	POM_blackmarket_cat = {
+		POM_buy_rifles = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_allowed_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+				}
+			}
+		}
+		POM_buy_rifles_better = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_allowed_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+				}
+			}
+		}
+		POM_buy_supplies = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_expanded_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 250
+				}
+			}
+		}
+		POM_buy_supplies_better = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_expanded_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 300
+				}
+			}
+		}
+		POM_buy_trucks = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_expanded_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = 100
+				}
+			}
+		}
+		POM_buy_artillery = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_expanded_blackmarket_flag
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 250
+				}
+			}
+		}
+		POM_buy_manufactory = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 14
+			ai_will_do = {
+				factor = 5
+			}
+			visible = {
+				has_country_flag = POM_expanded_blackmarket_flag
+				NOT = {
+					check_variable = { POM_free_factories_var < 5 }
+				}
+			}
+			available = {
+				
+			}
+			complete_effect = {
+				custom_effect_tooltip = POM_TT_only_five_free_factories
+				IF = {
+					limit = {
+						check_variable = { POM_free_factories_var < 1 }
+					}
+					set_variable = { var = POM_free_factories_var value = 1 }
+					else = {
+					    add_to_variable = { var = POM_free_factories_var value = 1 }
+					}
+				}
+			}
+			remove_effect = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}

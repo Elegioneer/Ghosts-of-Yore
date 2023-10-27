@@ -48,7 +48,7 @@ HRR_railroad_tooltip:0 "Improves §Yinfrastructure§! in all §YImperial Heartla
  HRR_herzlandism_tooltip:0 "§O[HRR.GetName]§! gets §Yclaims§! on all states of §YGreater Herzland§!, can make them §GCores§! if §CCompliance§! reaches 40%, and is able to use the §CIntegration§! §YOccupation Policy§!."
  HRR_fight_for_frost:0 "§YContinue as the§! §0Tyranny of Ice§!."
  HRR_fight_for_freedom:0 "§YSwitch countries to the§! §OHerzland Liberation Army§!."
- HRR_volunter_brigades_OOB_tt:0 "§Y8 Divisions§! of §Volunteer Brigades§! will be §Gdeployed§!."
+ HRR_volunter_brigades_OOB_tt:0 "§Y8 Divisions§! of §CVolunteer Brigades§! will be §Gdeployed§!."
  HRR_crusaders_OOB_tt:0 "§Y4 Divisions§! of §CKnight Chapters§! will be §Gdeployed§!."
  
 ### Country Flags ###

@@ -84,6 +84,9 @@ characters = {
 	GOY_BOI_gertrude = {
 		name = GOY_BOI_gertrude
 		portraits = {
+			civilian={
+				large="gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+			}
 		}
 		country_leader = {
 			desc = ""
@@ -713,7 +716,7 @@ characters = {
 		name = BOI_mikhaylo_advisor
 		portraits = {
 			army = {
-				large = "gfx/leaders/Asia/portrait_griffon_generic_land_15.dds"
+				large = "gfx/leaders/BOI/GOY_Dolgokrylenko.tga"
 				small = "gfx/interface/ideas/idea_BOI_mykhailo.dds"
 			}
 		}

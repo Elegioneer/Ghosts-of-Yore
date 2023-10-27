@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_GOY_mio_trait_icon_magical_sword"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/GOY_mio_trait_icon_magical_sword.dds"
+	}
+}

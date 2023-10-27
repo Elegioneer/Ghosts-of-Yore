@@ -2755,6 +2755,9 @@ country_event = { #Griffonstone Archives
 			}
 			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
 			hidden_effect = {
+				SRS = {
+					set_capital = { state = 542 }
+				}
 			    news_event = { id = arantiga_news.2 days = 5 }
 				set_global_flag = GOY_flag_skynavia_ruined #loc in ara's files
 			}

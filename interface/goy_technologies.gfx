@@ -8,5 +8,23 @@ spriteTypes = {
 		name = "GFX_GOY_necromancy_tech_medium"
 		texturefile = "gfx/interface/technologies/goy_necromancer_research.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_NTR_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GOY_magical_melee_equipment_tech_medium"
+		texturefile = "gfx/interface/technologies/NTR_magical_melee_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_GOY_magical_melee_equipment_medium"
+		texturefile = "gfx/interface/technologies/NTR_magical_melee_weapons.dds"
+	}
 
 }

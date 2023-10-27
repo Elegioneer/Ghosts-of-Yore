@@ -452,7 +452,7 @@
 		prerequisite = { focus = BOI_connect_blackhollow }
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -470,9 +470,9 @@
 		prerequisite = { focus = BOI_restore_roads }
 		prerequisite = { focus = BOI_ask_for_loans }
 		
-		available = {
-		    has_political_power > 75
-		}
+		#available = {
+		#    has_political_power > 75
+		#}
 
 		ai_will_do = {
 			factor = 10
@@ -483,6 +483,13 @@
 			add_timed_idea = {
 			    idea = BOI_tax_breaks_idea
 				days = 240
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_GMW_organization
 			}
 		}
 	}
@@ -496,7 +503,7 @@
 		prerequisite = { focus = BOI_tax_breaks }
 
 		ai_will_do = {
-			factor = 15
+			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -513,6 +520,13 @@
 				amount = 5
 				state = 384
 			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_wohnsitz_kanonenfabrik_organization
+			}
 		}
 	}
 	shared_focus = {
@@ -525,7 +539,7 @@
 		prerequisite = { focus = BOI_tax_breaks }
 
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -587,7 +601,7 @@
 		prerequisite = { focus = BOI_flame_industry }
 
 		ai_will_do = {
-			factor = 20
+			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -623,6 +637,12 @@
 		prerequisite = { focus = BOI_rebuild_griffonstone }
 		prerequisite = { focus = BOI_modern_age }
 		mutually_exclusive = { focus = BOI_great_archive }
+		
+		available = {
+			NOT = {
+				has_idea = BOI_griffonstone_reconstruction
+			}
+		}
 
 		ai_will_do = {
 			factor = 20
@@ -666,7 +686,7 @@
 		prerequisite = { focus = BOI_great_archive focus = BOI_griffon_home }
 
 		ai_will_do = {
-			factor = 25
+			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -683,7 +703,7 @@
 		prerequisite = { focus = BOI_ask_for_loans }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -719,7 +739,7 @@
 		prerequisite = { focus = BOI_demolish_slums }
 
 		ai_will_do = {
-			factor = 15
+			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -777,7 +797,7 @@
 		prerequisite = { focus = BOI_farm_mecha }
 
 		ai_will_do = {
-			factor = 15
+			factor = 5
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -1419,6 +1439,13 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_kopferberg_waffen_organization
+			}
 			add_tech_bonus = {
 			    name = modernise_eq_bonus
 			    bonus = 1
@@ -1983,7 +2010,14 @@
 					producer = GRI
 				}
 				}
-			}			
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_klaue_aviation_organization
+			}
 		}
 	}
 	shared_focus = {
@@ -2027,7 +2061,14 @@
 				bonus = 1.0
 				uses = 2
 				category = medium_air
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
 				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_storch_werke_organization
+			}
 		}
 	}
 	shared_focus = {
@@ -2081,6 +2122,13 @@
 					category = cas_bomber
 				}
 			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_greiffsturm_organization
+			}
 		}
 	}
 	shared_focus = {
@@ -2102,7 +2150,14 @@
 				bonus = 1.0
 				uses = 2
 				category = heavy_air
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
 				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_grossflugel_organization
+			}
 		}
 	}
 	shared_focus = {
@@ -2572,6 +2627,50 @@ focus_tree = {
 			    type = annex_everything
 				target = LAK
 			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					
+					declare_war_on = { 
+						type = annex_everything
+						target = LAK
+					}
+					
+					division_template = {
+						name = "Support Marine Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 0 y = 2 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+							marine = { x = 1 y = 2 }
+							marine = { x = 2 y = 0 }
+							marine = { x = 2 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+						}
+					}
+					
+					384 = {
+						create_unit = {
+							division = "division_template = \"Support Marine Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+							owner = PREV
+							prioritize_location = 753
+							count = 1
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -2718,7 +2817,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 30
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -2765,7 +2864,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -2803,7 +2902,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 30
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -2846,7 +2945,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 30
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -2892,7 +2991,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 30
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -2917,7 +3016,7 @@ focus_tree = {
 		    is_puppet = no
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 60
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
@@ -2951,7 +3050,7 @@ focus_tree = {
 		cost = 2.00
 
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
 		completion_reward = {
@@ -2985,7 +3084,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_coronation }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -3005,7 +3104,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_coronation }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
@@ -3022,7 +3121,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_reestablish_royal_guard }
 
 		ai_will_do = {
-			factor = 5
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
@@ -3040,7 +3139,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_appoint_prime_minister }
 
 		ai_will_do = {
-			factor = 15
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
@@ -3075,7 +3174,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_griffonstone_cmc }
 
 		ai_will_do = {
-			factor = 5
+			factor = 20
 		}
 		completion_reward = {
 			add_ideas = BOI_friendship_school
@@ -3268,7 +3367,7 @@ focus_tree = {
 		#}
 
 		ai_will_do = {
-			factor = 15
+			factor = 20
 		}
 		completion_reward = {
 			country_event = griffonstone.206
@@ -3289,7 +3388,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
@@ -3340,7 +3439,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_look_west }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
@@ -3570,7 +3669,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_new_diarchy focus = BOI_proclaim_new_kingdom }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
@@ -3587,7 +3686,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_new_diarchy focus = BOI_proclaim_new_kingdom }
 
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
@@ -3612,7 +3711,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		completion_reward = {
 			add_opinion_modifier = {
@@ -3636,7 +3735,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_integrate_skyfall }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		completion_reward = {
 		    set_rule = { can_create_factions = yes }
@@ -3660,7 +3759,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
@@ -3684,7 +3783,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_align_with_equestria }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
@@ -3703,7 +3802,7 @@ focus_tree = {
 		prerequisite = { focus = BOI_align_with_equestria }
 
 		ai_will_do = {
-			factor = 10
+			factor = 20
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
@@ -4383,6 +4482,50 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 				target = LAK
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					
+					declare_war_on = { 
+						type = annex_everything
+						target = LAK
+					}
+					
+					division_template = {
+						name = "Support Marine Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 0 y = 2 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+							marine = { x = 1 y = 2 }
+							marine = { x = 2 y = 0 }
+							marine = { x = 2 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+						}
+					}
+				
+					384 = {
+						create_unit = {
+							division = "division_template = \"Support Marine Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+							owner = PREV
+							prioritize_location = 753
+							count = 1
+						}
+					}
+				}
 			}
 		}
 	}
@@ -5687,6 +5830,50 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 				target = LAK
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					
+					declare_war_on = { 
+						type = annex_everything
+						target = LAK
+					}
+					
+					division_template = {
+						name = "Support Marine Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 0 y = 2 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+							marine = { x = 1 y = 2 }
+							marine = { x = 2 y = 0 }
+							marine = { x = 2 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+						}
+					}
+				
+					384 = {
+						create_unit = {
+							division = "division_template = \"Support Marine Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+							owner = PREV
+							prioritize_location = 753
+							count = 1
+						}
+					}
+				}
 			}
 		}
 	}
@@ -8168,6 +8355,50 @@ focus_tree = {
 			create_wargoal = {
 			    type = annex_everything
 				target = LAK
+			}
+			hidden_effect = {
+				IF = {
+					limit = {
+						is_ai = yes
+					}
+					
+					declare_war_on = { 
+						type = annex_everything
+						target = LAK
+					}
+					
+					division_template = {
+						name = "Support Marine Division"
+						
+						is_locked = yes
+						force_allow_recruiting = yes
+					
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 0 y = 2 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+							marine = { x = 1 y = 2 }
+							marine = { x = 2 y = 0 }
+							marine = { x = 2 y = 1 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+						}
+					}
+				
+					384 = {
+						create_unit = {
+							division = "division_template = \"Support Marine Division\" start_experience_factor = 0.5 start_equipment_factor = 1"
+							owner = PREV
+							prioritize_location = 753
+							count = 1
+						}
+					}
+				}
 			}
 		}
 	}

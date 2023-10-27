@@ -1,0 +1,2220 @@
+#####################
+###### MATERIEL #####
+#####################
+### ARANTIGA ###
+ARA_xiphos_arms_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_TRD_tigerdale
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		infantry_equipment
+		magical_equipment
+	}
+	research_categories = { infantry_weapons }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+ARA_sparlean_motors_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_porsche
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+	}
+	research_categories = { mio_cat_tech_all_motorized_mechanized }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+ARA_xyston_developments_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_ARA_xyston_developments
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+	research_categories = { mio_cat_all_artillery_equipment }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+}
+################
+### GRIFFONSTONE ###
+BOI_kopferberg_waffen_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_TRD_tigerdale
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_modernise_eq
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_modernise_eq
+		}
+	}
+	
+	equipment_type = {
+		infantry_equipment
+		magical_equipment
+	}
+	research_categories = { infantry_weapons }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			defense = 0.1
+		}
+	}
+}
+BOI_GMW_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_BOI_GMW
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_tax_breaks
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_tax_breaks
+		}
+	}
+	
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+	}
+	research_categories = { mio_cat_tech_all_motorized_mechanized }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+}
+BOI_wohnsitz_kanonenfabrik_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_GRI_helheim
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_guns_wohnsitz
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_guns_wohnsitz
+		}
+	}
+	
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+	research_categories = { mio_cat_all_artillery_equipment }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+####################
+### NORTHERN TRIBES ###
+NTR_northern_weaponsmiths_organization = {
+	icon = GFX_idea_GOY_NTR_northern_smiths
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+	}
+	
+	equipment_type = {
+		infantry_equipment
+		magical_equipment
+		support_equipment
+	}
+	research_categories = { infantry_weapons support_tech }
+	
+	tree_header_text = {
+		text = mio_header_GOY_refinement
+		x = 2
+	}
+	tree_header_text = {
+		text = mio_header_GOY_advancement
+		x = 6
+	}
+
+	initial_trait = {
+		name = mio_initial_trait_GOY_ancestral_wisdom
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		equipment_bonus = {
+			soft_attack = 1
+			defense = 1
+			breakthrough = 1
+		}
+	}
+	
+	trait = {
+		token = mio_trait_GOY_NTR_stay
+		name = mio_trait_GOY_NTR_stay
+		icon = GFX_generic_mio_trait_icon_unique
+		special_trait_background = yes
+		
+		ai_will_do = {
+			factor = 0 #I ain't teaching the AI to use this crap
+		}
+		
+		mutually_exclusive = { mio_trait_GOY_NTR_move_on }
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=2 y=0 }
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.25
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_sturdier_shields
+		name = mio_trait_GOY_NTR_sturdier_shields
+		icon = GFX_generic_mio_trait_icon_defense
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_stay }
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=-1 y=1 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			defense = 3
+			hardness = 49
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_sharper_swords
+		name = mio_trait_GOY_NTR_sharper_swords
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_stay }
+		
+		
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=0 y=1 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			breakthrough = 6
+			soft_attack = 2
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_stronger_bows
+		name = mio_trait_GOY_NTR_stronger_bows
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_stay }
+		
+		
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=1 y=1 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			soft_attack = 4
+			hard_attack = 1000
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_tungsten_armour
+		name = mio_trait_GOY_NTR_tungsten_armour
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_sturdier_shields mio_trait_GOY_NTR_sharper_swords }
+		
+		
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=-1 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			hardness = 50
+			armor_value = 10000
+			build_cost_ic = 0.1
+		}
+		#resources = {
+		#	tungsten = 1
+		#}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_adamantine_blades #PRAISE THE MINERS!
+		name = mio_trait_GOY_NTR_adamantine_blades
+		icon = GFX_generic_mio_trait_icon_hardness
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_sharper_swords }
+		
+		
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=0 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			soft_attack = 3
+			breakthrough = 2
+			reliability = -0.05
+			build_cost_ic = 0.1
+		}
+		#resources = {
+		#	crystals = 1
+		#}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_rubber_bowstrings
+		name = mio_trait_GOY_NTR_rubber_bowstrings
+		icon = GFX_generic_mio_trait_icon_ap_attack
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_sharper_swords mio_trait_GOY_NTR_stronger_bows }
+		
+		
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=1 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			hard_attack = 2000
+			ap_attack = 5000
+			air_attack = 5000
+			build_cost_ic = 0.1
+		}
+		#resources = {
+		#	rubber = 1
+		#}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_armor_supports
+		name = mio_trait_GOY_NTR_armor_supports
+		icon = GFX_generic_mio_trait_icon_max_strength
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_tungsten_armour }
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=-1 y=3 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			defense = 5
+			hardness = 100
+			build_cost_ic = 0.1
+		}
+		#resources = {
+		#	steel = 1
+		#}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_anti_tank_crossbows
+		name = mio_trait_GOY_NTR_anti_tank_crossbows
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_rubber_bowstrings }
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=1 y=3 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+
+		equipment_bonus = {
+			hard_attack = 4000
+			ap_attack = 10000
+			build_cost_ic = 0.1
+		}
+		#resources = {
+		#	steel = 1
+		#}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_magical_infusion
+		name = mio_trait_GOY_NTR_magical_infusion
+		icon = GFX_GOY_mio_trait_icon_magical_sword
+		special_trait_background = yes
+		
+		all_parents = { mio_trait_GOY_NTR_armor_supports mio_trait_GOY_NTR_adamantine_blades mio_trait_GOY_NTR_anti_tank_crossbows }
+		
+		limit_to_equipment_type = { melee_equipment_0 }
+		
+		position = { x=0 y=4 }
+		relative_position_id = mio_trait_GOY_NTR_stay
+		
+		equipment_bonus = {
+			soft_attack = 4
+			breakthrough = 4
+			defense = 4
+			maximum_speed = 0.25
+			reliability = -0.1
+			build_cost_ic = 0.2
+		}
+		on_complete = {
+			FROM = {
+				set_technology = {
+					GOY_magical_melee_equipment_tech = 1
+				}
+			}
+		}
+		resources = {
+			crystals = 1
+		}
+	}
+	trait = {
+		token = mio_trait_GOY_NTR_move_on
+		name = mio_trait_GOY_NTR_move_on
+		icon = GFX_generic_mio_department_icon_infantry_quality
+		
+		mutually_exclusive = { mio_trait_GOY_NTR_stay }
+
+		position = { x=6 y=0 }
+		
+		organization_modifier = {
+			
+		}
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+	}
+	trait = {
+		token = generic_mio_trait_drum_pattern_sights
+		name = generic_mio_trait_drum_pattern_sights
+		icon = GFX_generic_mio_trait_icon_defense
+		
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		position = { x=1 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+	trait = {
+		token = generic_mio_trait_reinforced_stocks
+		name = generic_mio_trait_reinforced_stocks
+		icon = GFX_generic_mio_trait_icon_reliability
+		
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		position = { x=-1 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			reliability = 0.03
+		}
+	}
+	trait = {
+		token = generic_mio_trait_bolt_action
+		name = generic_mio_trait_bolt_action
+		icon = GFX_generic_mio_department_icon_infantry_line_efficiency
+		
+		all_parents = { mio_trait_GOY_NTR_move_on }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		position = { x=-1 y=1 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		all_parents = { mio_trait_GOY_NTR_move_on }
+
+		mutually_exclusive = { generic_mio_trait_semi_auto }
+		
+		equipment_bonus = {
+			soft_attack = -0.03
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+		}
+	}
+	trait = {
+		token = generic_mio_trait_semi_auto
+		name = generic_mio_trait_semi_auto
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=1 y=1 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		all_parents = { mio_trait_GOY_NTR_move_on }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		mutually_exclusive = { generic_mio_trait_bolt_action }
+
+		equipment_bonus = {
+			soft_attack = 0.03
+			breakthrough = 0.03
+			reliability = -0.03
+		}
+	}
+	trait = {
+		token = generic_mio_trait_medium_machineguns
+		name = generic_mio_trait_medium_machineguns
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=0 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+		
+		equipment_bonus = {
+			breakthrough = 0.07
+			build_cost_ic = 0.08
+		}
+	}
+	trait = {
+		token = generic_mio_trait_mass_rifle_production
+		name = generic_mio_trait_mass_rifle_production
+		icon = GFX_generic_mio_department_icon_facilities
+
+		position = { x=-2 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_cost_factor = -0.03
+		}
+
+		organization_modifier = {
+			military_industrial_organization_design_team_assign_cost = -0.3
+		}
+	}
+	trait = {
+		token = generic_mio_trait_quality_materials
+		name = generic_mio_trait_quality_materials
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=2 y=2 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		any_parent = { generic_mio_trait_semi_auto generic_mio_trait_bolt_action }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+	}
+	trait = {
+		token = generic_mio_trait_vehicle_mounted_capabilities
+		name = generic_mio_trait_vehicle_mounted_capabilities
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=-1 y=3 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		all_parents = { generic_mio_trait_mass_rifle_production generic_mio_trait_reinforced_stocks }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		equipment_bonus = {
+			breakthrough = 0.06
+			build_cost_ic = 0.05
+		}
+	}
+	trait = {
+		token = generic_mio_trait_advanced_barrel_forging
+		name = generic_mio_trait_advanced_barrel_forging
+		icon = GFX_generic_mio_trait_icon_efficiency_gain
+
+		position = { x=0 y=3 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		all_parents = { generic_mio_trait_medium_machineguns }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.03
+		}
+	}
+	trait = {
+		token = generic_mio_trait_improved_small_arms_bullet_design
+		name = generic_mio_trait_improved_small_arms_bullet_design
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=1 y=3 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+
+		all_parents = { generic_mio_trait_quality_materials generic_mio_trait_drum_pattern_sights }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			breakthrough = 0.03
+		}
+	}
+	trait = {
+		token = generic_mio_trait_anti_vechicle_land_mines
+		name = generic_mio_trait_anti_vechicle_land_mines
+		icon = GFX_generic_mio_department_icon_infantry_quality
+
+		position = { x=-1 y=4 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+		
+		mutually_exclusive = { generic_mio_trait_heavy_anti_armor_ammunition }
+
+		any_parent = { generic_mio_trait_vehicle_mounted_capabilities generic_mio_trait_improved_small_arms_bullet_design }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		equipment_bonus = {
+			defense = 0.05
+			hard_attack = 0.05
+			build_cost_ic = 0.05
+
+		}
+	}
+	trait = {
+		token = generic_mio_trait_heavy_anti_armor_ammunition
+		name = generic_mio_trait_heavy_anti_armor_ammunition
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=1 y=4 }
+		relative_position_id = mio_trait_GOY_NTR_move_on
+		
+		mutually_exclusive = { generic_mio_trait_anti_vechicle_land_mines }
+
+		any_parent = { generic_mio_trait_vehicle_mounted_capabilities generic_mio_trait_improved_small_arms_bullet_design }
+		
+		limit_to_equipment_type = { infantry_equipment magical_equipment }
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			ap_attack = 0.25
+		}
+	}
+}
+NTR_moltenrock_enchantment_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_industrial_concern_3
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_weaponised_magic
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_weaponised_magic
+		}
+	}
+	
+	equipment_type = {
+		magical_equipment
+	}
+	research_categories = { magical_equipment }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.10
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+NTR_iron_bear_experstise_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_GOY_NTR_iron_bear_crew
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+	}
+	research_categories = { mio_cat_all_artillery_equipment }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.075
+		}
+		equipment_bonus = {
+			
+		}
+	}
+}
+NTR_iceshard_trucks_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_PYT_infantry_concern
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_ponies_wheels
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_ponies_wheels
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+NTR_holy_forge_artillery_armory_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_3
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_advanced_artillery
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_advanced_artillery
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			reliability = 0.05
+		}
+	}
+}
+NTR_koper_armory_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_BAK_koper
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_foreign_arms_producers
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_foreign_arms_producers
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+}
+NTR_moltenrock_guns_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_our_gunsmiths
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_our_gunsmiths
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			build_cost_ic = 0.05
+		}
+	}
+}
+
+#######################
+#####################
+###### TANKS ########
+#####################
+### ARANTIGA ###
+ARA_sarrissa_metalworks_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	add_trait = {
+		token = ARA_mio_trait_heavy_barrel
+		name = ARA_mio_trait_heavy_barrel
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_fully_cast_turret
+
+		all_parents = { generic_mio_trait_fully_cast_turret }
+		#limit_to_equipment_type = { mio_cat_eq_all_heavy_tank }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+			ap_attack = 0.1
+			hard_attack = 0.1
+		}
+	}
+}
+
+ARA_arantigan_armor_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+
+	initial_trait = {
+		equipment_bonus = {
+			armor_value = 0.05
+			defense = 0.05
+		}
+	}
+	
+	add_trait = { 
+		token = ARA_mio_trait_fuel_additives
+		name = ARA_mio_trait_fuel_additives
+		icon = GFX_generic_mio_trait_icon_fuel_consumption
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = generic_mio_trait_improved_suspension
+
+		all_parents = { generic_mio_trait_improved_suspension }
+		#limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
+
+		equipment_bonus = {
+			fuel_consumption = -0.1
+		}
+	}
+}
+
+ARA_fulgur_works_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+
+	initial_trait = {
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			hard_attack = -0.05
+			soft_attack = -0.05
+		}
+	}
+	
+	add_trait = { 
+		token = ARA_mio_oversized_turbocharger
+		name = ARA_mio_oversized_turbocharger
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_improved_ventilation
+
+		all_parents = { generic_mio_improved_ventilation }
+		#limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+			reliability = -0.05
+		}
+	}
+	add_trait = { 
+		token = ARA_mio_high_yield_cartidges
+		name = ARA_mio_high_yield_cartidges
+		icon = GFX_generic_mio_department_icon_tank_light_tank_spg
+		special_trait_background = yes
+
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_enlarged_breech
+
+		all_parents = { generic_mio_enlarged_breech }
+		#limit_to_equipment_type = { mio_cat_eq_all_medium_tank }
+
+		equipment_bonus = {
+			hard_attack = 0.1
+			soft_attack = 0.1
+			reliability = -0.05
+		}
+	}
+}
+################
+### GRIFFONSTONE ###
+BOI_kupferberg_panzerfabrik_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+		owner = {
+			has_completed_focus = BOI_flame_industry
+		}
+	}
+	visible = {
+		
+		owner = {
+			has_completed_focus = BOI_flame_industry
+		}
+	}
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			ap_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+}
+
+BOI_stahladler_werke_organization = {
+	include = generic_medium_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = { mio_cat_eq_all_medium_tank }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			armor_value = 0.05
+			defense = 0.05
+		}
+	}
+}
+
+BOI_greifesten_metallwerke_organization = {
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_steel_beasts
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_steel_beasts
+		}
+	}
+	
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_medium_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			hard_attack = -0.05
+			soft_attack = -0.05
+		}
+	}
+}
+
+BOI_wohnsitz_panzerinstitut_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_BOI_panzerinstitut
+
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_steel_beasts
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_steel_beasts
+		}
+	}
+	
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_efficiency_gain_factor = -0.1
+			production_efficiency_cap_factor = -0.2
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			reliability = 0.05
+			armor_value = 0.05
+			hard_attack = 0.05
+			soft_attack = 0.05
+		}
+	}
+}
+####################
+### NORTHERN TRIBES ###
+NTR_scavanged_designs_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_man_five_year_plan_tank
+
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			reliability = -0.05
+		}
+	}
+}
+NTR_holy_forge_tank_armory_organization = {
+	include = generic_main_battle_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+
+	allowed = {	
+		tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_terrifying_tanks
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_terrifying_tanks
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+#######################
+#####################
+###### PLANES #######
+#####################
+### ARANTIGA ###
+ARA_twin_swords_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		mio_cat_eq_only_light_fighter
+	}
+	research_categories = { mio_cat_all_light_fighter_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_agility = 0.05
+		}
+	}
+}
+ARA_arantigan_aeronautics_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_medium_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+ARA_royal_aerial_company_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		large_plane_airframe
+		large_plane_maritime_patrol_plane_airframe
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+}
+ARA_h_and_t_aircraft_organization = {
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_ARA_h_and_t
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		small_plane_cas_airframe
+		cv_small_plane_cas_airframe
+	}
+	research_categories = { mio_cat_all_cas_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.05
+		}
+	}
+}
+################
+### GRIFFONSTONE ###
+BOI_klaue_aviation_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_import_fighters
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_import_fighters
+		}
+	}
+	
+	equipment_type = {
+		mio_cat_eq_only_light_fighter
+	}
+	research_categories = { mio_cat_all_light_fighter_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_agility = 0.05
+		}
+	}
+}
+BOI_storch_werke_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_bomber_designs
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_bomber_designs
+		}
+	}
+	
+	equipment_type = {
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_medium_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+BOI_grossflugel_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_new_strategic_bombers
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_new_strategic_bombers
+		}
+	}
+	
+	equipment_type = {
+		large_plane_airframe
+		large_plane_maritime_patrol_plane_airframe
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+}
+BOI_greiffsturm_organization = {
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_ARA_h_and_t
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = BOI_CAS
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = BOI_CAS
+		}
+	}
+	
+	equipment_type = {
+		small_plane_cas_airframe
+		cv_small_plane_cas_airframe
+	}
+	research_categories = { mio_cat_all_cas_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_ground_attack = 0.05
+		}
+	}
+}
+####################
+### NORTHERN TRIBES ###
+NTR_thunder_airwing_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_FIR_advisor27
+	
+	allowed = {	
+		OR = {
+			tag = NTR
+			is_subject_of = NTR
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		mio_cat_eq_only_light_fighter
+	}
+	research_categories = { mio_cat_all_light_fighter_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			
+		}
+	}
+}
+NTR_holy_forge_workshop_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = NTR
+			is_subject_of = NTR
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	
+	equipment_type = {
+		mio_cat_eq_all_medium_plane
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_medium_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.05
+		}
+	}
+}
+NTR_stormshield_airwing_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_FBK_advisor26
+	
+	allowed = {	
+		OR = {
+			tag = NTR
+			is_subject_of = NTR
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_defend_skies
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_defend_skies
+		}
+	}
+	
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			maximum_speed = 0.05
+			air_agility = 0.05
+		}
+	}
+}
+NTR_cumulus_airplanes_organization = {
+	include = generic_high_agility_fighter_aircraft_organization
+	icon = GFX_idea_dornier
+	
+	allowed = {	
+		OR = {
+			tag = NTR
+			is_subject_of = NTR
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_improve_fighter_designs
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_improve_fighter_designs
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_range = 0.05
+			air_agility = 0.05
+		}
+	}
+}
+NTR_stratus_manufactory_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			tag = NTR
+			is_subject_of = NTR
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_strike_enemies
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_strike_enemies
+		}
+	}
+	
+	equipment_type = {
+		large_plane_airframe
+		large_plane_maritime_patrol_plane_airframe
+		transport_plane_equipment
+	}
+	research_categories = { mio_cat_all_heavy_aircraft_and_modules }
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			air_range = 0.1
+		}
+	}
+}
+
+#######################
+#####################
+###### SHIPS ########
+#####################
+### ARANTIGA ###
+ARA_karthin_shipyards_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			controls_state = 371
+		}
+	}
+
+	initial_trait = {
+		production_bonus = {
+			refit_speed = 0.25
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+ARA_aquila_shipyards_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			controls_state = 377
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			surface_visibility = -0.05
+			naval_speed = 0.05
+		}
+	}
+}
+ARA_skyfall_shipyards_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	
+	allowed = {	
+		OR = {
+			tag = ARA
+			is_subject_of = ARA
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			controls_state = 381
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			armor_value = 0.05
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+	}
+}
+################
+### GRIFFONSTONE ###
+BOI_goldener_hof_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = { 
+			    is_coastal = yes
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			armor_value = 0.05
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+	}
+}
+BOI_greiffenwerft_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = { 
+			    is_coastal = yes
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.07
+		}
+	}
+}
+BOI_guto_werft_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+	
+	allowed = {	
+		OR = {
+			tag = BOI
+			is_subject_of = BOI
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = { 
+			    is_coastal = yes
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			surface_visibility = -0.05
+			naval_speed = 0.05
+		}
+	}
+}
+####################
+### NORTHERN TRIBES ###
+NTR_northern_raiders_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_GOY_NTR_barkcoat_shipwrights
+	
+	allowed = {	
+		original_tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			surface_visibility = -0.05
+			naval_speed = 0.05
+		}
+		
+	}
+}
+NTR_ironsides_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+	
+	allowed = {	
+		original_tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			fuel_consumption = -0.1
+		}
+		
+	}
+}
+NTR_carvers_of_ice_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	
+	allowed = {	
+		original_tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_floating_icebergs
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_floating_icebergs
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			#military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			#production_efficiency_gain_factor = 0.2
+			#production_efficiency_cap_factor = 0.2
+			production_cost_factor = -0.2
+			production_resource_need_factor = -0.25
+			production_resource_penalty_factor = -0.25
+		}
+		equipment_bonus = {
+			armor_value = -0.1
+		}
+	}
+}
+NTR_dinkau_shipyard_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	
+	allowed = {	
+		original_tag = NTR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			has_completed_focus = NTR_refurbish_dinkau
+		}
+	}
+	visible = {
+		owner = {
+			has_completed_focus = NTR_refurbish_dinkau
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			armor_value = 0.05
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+	}
+}
+#######################
+
+
+### HRR'S GRI COPY ###
+HRR_imperial_arms_co_organization = {
+	name = imperial_arms_co
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_GRI_imperial_arms_co
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+}
+HRR_bluedale_organization = {
+	name = bluedale
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_siemens
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+}
+HRR_helheim_organization = {
+	name = helheim
+	include = generic_artillery_organization
+	icon = GFX_idea_GRI_helheim
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+}
+HRR_lionstone_organization = {
+	name = lionstone
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_GRI_lionstone
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		limit_to_equipment_type = { motorized_equipment } 
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+}
+#
+HRR_armada_organization = {
+	name = armada
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_GRI_armada
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+	}
+	initial_trait = {
+		equipment_bonus = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+	}
+}
+HRR_alligator_organization = {
+	name = alligator
+	include = generic_escort_ship_organization
+	icon = GFX_idea_GRI_alligator
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { mio_cat_eq_all_destroyer } 
+		equipment_bonus = {
+			build_cost_ic = -0.07
+		}
+	}
+
+}
+HRR_kraken_organization = {
+	name = kraken
+	include = generic_raider_ship_organization
+	icon = GFX_idea_GRI_kraken
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { ship_hull_cruiser } 
+		equipment_bonus = {
+			armor_value = 0.05
+			anti_air_attack = 0.07
+			surface_visibility = -0.05
+			naval_speed = 0.05
+		}
+	}
+}
+#
+HRR_imperial_motors_organization = {
+	name = imperial_motors
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_GRI_mobile_tank_manufacturer
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		limit_to_equipment_type = { light_tank_chassis } 
+		equipment_bonus = {
+			hard_attack = 0.05
+		}
+	}
+}
+HRR_arcturian_organization = {
+	name = arcturian
+	include = generic_medium_tank_organization
+	icon = GFX_idea_GRI_arcturian
+
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+	initial_trait = {
+		limit_to_equipment_type = { medium_tank_chassis } 
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+}
+#
+HRR_alpha_organization = {
+	name = alpha
+	icon = GFX_idea_GRI_alpha
+	include = generic_light_aircraft_organization
+
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+}
+HRR_beta_organization = {
+	name = beta
+	icon = GFX_idea_GRI_beta
+	include = generic_medium_aircraft_organization
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+}
+HRR_gamma_organization = {
+	name = gamma
+	icon = GFX_idea_GRI_gamma
+	include = generic_heavy_aircraft_organization
+	allowed = {
+		original_tag = HRR
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		
+	}
+}

@@ -75,8 +75,8 @@
  #
  GOY_bonus_spec_ops_bonus:0 "Special forces training"
  #
- GOY_bonus_nuclear:0 "Nuclear fission experiments"
- GOY_bonus_nuclear:1 "Uranium enrichment studies"
+ GOY_bonus_nuclear_0:0 "Nuclear fission experiments"
+ GOY_bonus_nuclear_1:0 "Uranium enrichment studies"
  
 ### Specific Tech Bonuses ###
 GOY_bonus_magical_nukes:0 "Magical explosives studies"
