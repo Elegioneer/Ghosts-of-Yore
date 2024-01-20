@@ -5151,6 +5151,11 @@ country_event = { #Rodier's coup #Arantiga
 		    type = annex_everything
 			target = JER
 		}
+		effect_tooltip = {
+			JER_vivienne_discret = {
+				set_nationality = ARA
+			}
+		}
 	    set_country_flag = JER_rodier_is_why_arantiga
 		set_country_flag = JER_cant_have_nice_things
 	}
@@ -5165,21 +5170,35 @@ country_event = { #Rodier's coup
 	option = {
 		name = 	arantiga.108.a
 		leave_faction = yes
+		remove_country_leader_role = {
+			character = JER_vivienne_discret
+			ideology = despotism
+		}
 		set_politics = {
 	        ruling_party = neutrality
 		    elections_allowed = no
 		}
-	add_country_leader_role = {
-				Character = JER_charlesguillaumeferdinand_de_greifenwaldstrawberry
-				Promote_leader = yes
-				Country_leader = {
+		add_country_leader_role = {
+			Character = JER_charlesguillaumeferdinand_de_greifenwaldstrawberry
+			Promote_leader = yes
+			Country_leader = {
 				ideology = despotism
 				desc = "JER_POLITICS_Charles_DESC"
 				expire = "1965.01.01.01"
 				traits = { GOY_inexperienced_ruler }
 			}
+		}
+		JER_charlesguillaumeferdinand_de_greifenwaldstrawberry = {
+			promote_character = despotism
+		}
+		JER_charlesguillaumeferdinand_de_greifenwaldstrawberry = {
+			set_character_name = {
+				name = GOY_charlesguillame_name
 			}
-		remove_unit_leader = 75652
+		}
+		JER_vivienne_discret = {
+			set_nationality = ARA
+		}
 	}
 }
 

@@ -1566,6 +1566,25 @@ NTR_ostfloy_refinery:0 "Ostfloy Refinery"
 ### Tech ###
 GOY_necromancy_tech:0 "Militarised Necromancy"
 
+NTR_melee_equipment_0:0 "Снаряжение Предков"
+NTR_melee_equipment_0_short:0 "Северные Копья"
+
+NTR_infantry_equipment_0:0 "Кустарные мушкеты"
+NTR_infantry_equipment_0_short:0 "Мушкеты"
+NTR_infantry_equipment_1:0 "Арсенал Молтенрок модель 1"
+NTR_infantry_equipment_1_short:0 "Молтенрок М1"
+NTR_infantry_equipment_2:0 "Экспериментальный Автомат Молтенрок"
+NTR_infantry_equipment_2_short:0 "Молтенрок ЭА"
+NTR_infantry_equipment_3:0 "Улучшенная Боевая Автоматическая Винтовка Молтенрок"
+NTR_infantry_equipment_3_short:0 "Молтенрок УБАВ"
+NTR_infantry_equipment_4:0 "Штурмовая винтовка Молтенрок М19"
+NTR_infantry_equipment_4_short:0 "Молтенрок ШВ-19"
+NTR_infantry_equipment_5:0 "Штурмовая винтовка Молтенрок М25"
+NTR_infantry_equipment_5_short:0 "Молтенрок ШВ-25"
+
+NTR_super_heavy_tank_equipment_1:0 "Prince Fothad"
+NTR_super_heavy_tank_equipment_1_short:0 "Prince Fothad"
+
 ### Necromancer support company ###
 goy_necromancer_company:0 "Necromancer Coven"
  
