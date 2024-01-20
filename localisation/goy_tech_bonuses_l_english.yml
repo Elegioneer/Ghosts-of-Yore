@@ -72,8 +72,20 @@
  GOY_bonus_fighter_bonus:0 "Fighter plane development"
  GOY_bonus_heavy_air_bonus:0 "Heavy plane development"
  GOY_bonus_medium_air_bonus:0 "Medium plane development"
+ GOY_bonus_cv_air_bonus:0 "Naval aviation development"
  #
  GOY_bonus_spec_ops_bonus:0 "Special forces training"
+ #
+ GOY_bonus_staff_training:0 "Staff Training"
+ GOY_bonus_military_exercises:0 "Military Exercises"
+ #
+ GOY_bonus_radio_0:0 "Radio experementation"
+ GOY_bonus_radio_1:0 "Radio development"
+ GOY_bonus_radar_0:0 "RADAR experimentation"
+ GOY_bonus_radar_1:0 "Frequency modulation"
+ #
+ GOY_bonus_rocketry_0:0 "Jet propulsion experementation"
+ GOY_bonus_rocketry_1:0 "Rocketry development"
  #
  GOY_bonus_nuclear_0:0 "Nuclear fission experiments"
  GOY_bonus_nuclear_1:0 "Uranium enrichment studies"

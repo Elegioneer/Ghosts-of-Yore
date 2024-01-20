@@ -280,8 +280,8 @@ characters = {
 		name = NTR_tearlach_stormshield
 		portraits = {
 			army = {
-				large = "gfx/leaders/Pony/portrait_pony_generic_land_1.dds"
-				small = "GFX_idea_GOY_NTR_tearlach"
+				large = "gfx/leaders/NTR/GOY_tribal_pone.tga"
+				small = "GFX_idea_GOY_NTR_tribal_pone"
 			}
 		}
 		corps_commander = {
@@ -787,8 +787,8 @@ characters = {
 		name = NTR_muireach_barkcoat
 		portraits = {
 			army = {
-				large = "gfx/leaders/Pony/portrait_pony_generic_land_11.dds"
-				small = "GFX_idea_GOY_NTR_muireach"
+				large = "gfx/leaders/NTR/GOY_hairy_pone.tga"
+				small = "GFX_idea_GOY_NTR_hairy_pone"
 			}
 		}
 		advisor = {

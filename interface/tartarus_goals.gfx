@@ -392,4 +392,8 @@ spriteTypes = {
 		name = "GFX_goal_GOY_pom_le_patron"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_le_patron.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_griffons_dream"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_griffons_dream.dds"
+	}
 }

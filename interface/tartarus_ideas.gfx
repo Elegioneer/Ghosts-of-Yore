@@ -99,6 +99,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_ARA_alhorsered.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_GOY_ARA_Reiner"
+		texturefile = "gfx/interface/ideas/idea_GOY_ARA_Reiner.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_BOI_garner"
 		texturefile = "gfx/interface/ideas/BOI_idea_garner.dds"
 	}
@@ -301,5 +305,13 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_ARA_xyston_developments"
 		texturefile = "gfx/interface/ideas/idea_ARA_xyston_developments.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_hairy_pone"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_hairy_pone.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_NTR_tribal_pone"
+		texturefile = "gfx/interface/ideas/idea_GOY_NTR_tribal_pone.dds"
 	}
 }

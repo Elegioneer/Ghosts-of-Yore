@@ -2410,7 +2410,7 @@ focus_tree = {
 		icon = GFX_goal_gaw_gruff 
 		x = 0
 		y = 3
-		cost = 5.00
+		cost = 8.00
 		relative_position_id = BOI_fallen_kingdom
 		prerequisite = { focus = BOI_prepare_for_war }
 		prerequisite = { focus = BOI_whip_council }

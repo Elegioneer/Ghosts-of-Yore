@@ -40,7 +40,7 @@ unit_medals = {
 		cost = @cost
 		
 		unit_modifiers = {
-			unit_upkeep_attrition_factor = -0.15
+			attrition = -0.2
 		}
 		
 		one_time_effect = {

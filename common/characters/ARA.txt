@@ -877,11 +877,11 @@ characters = {
 		name = GOY_ARA_reiner
 		portraits = {
 			civilian = {
-				large="gfx/leaders/Herzland/portrait_herzland_generic_male_12.tga"
+				large="gfx/leaders/ARA/Reiner.tga"
 			}
 			army = {
-				large="gfx/leaders/Herzland/portrait_herzland_generic_male_12.tga"
-				small="gfx/interface/ideas/idea_GOY_ARA_herzland_knight.dds"
+				large="gfx/leaders/ARA/Reiner.tga"
+				small="GFX_idea_GOY_ARA_Reiner"
 			}
 		}
 	}

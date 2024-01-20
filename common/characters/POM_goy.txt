@@ -25,6 +25,38 @@ characters = {
 			id = -1
 		}
 	}
+	GOY_POM_allard_the_communard = {
+		name = GOY_POM_allard_the_communard
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/JER/Victor.tga"
+			}
+		}
+	}
+	GOY_POM_dialusides={
+		name=NIM_dialusides
+		portraits={
+			civilian={
+				large="gfx/leaders/NIM/nim_communism.tga"
+			}
+		}
+	}
+	GOY_POM_comrade_applethorn={
+		name=FBK_comrade_applethorn
+		portraits={
+			civilian={
+				large="gfx/leaders/FBK/Applethorn.tga"
+			}
+		}
+	}
+	POM_karl_steelwing = {
+		name=POM_karl_steelwing
+		portraits={
+			civilian={
+				#todo small="gfx/leaders/FBK/Applethorn.tga"
+			}
+		}
+	}
 	GOY_POM_reiher = {
 		name = GOY_POM_reiher
 		portraits = {
@@ -189,6 +221,41 @@ characters = {
 			logistics_skill = 3
 			visible = {
 				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_luca = {
+		name = HEL_luca
+		portraits = {
+			civilian={ 
+				large="gfx/leaders/HEL/Luca.tga"
+				small="gfx/interface/ideas/Advisors/HEL/HEL_luca.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_luca_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			visible = {
+				has_idea = POM_old_believers
+			}
+			traits = { GOY_old_believer_trait }
+		}
+	}
+	GOY_POM_grijsbek = {
+		name = GOY_POM_grijsbek
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_camriz.tga" #todo
+				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
 			}
 		}
 	}

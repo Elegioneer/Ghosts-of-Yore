@@ -4,14 +4,34 @@ on_actions = {
 			every_country = {
 				limit = {
 					OR = {
-						tag = ARA
-						tag = NTR
-						tag = HRR
-						tag = BOI
-						tag = POM
+						AND = {
+							tag = ARA	
+							is_ai = yes
+							has_game_rule = {
+								rule = GOY_ARA_ai_help
+								option = GOY_ai_help_yes
+							}
+						}
+						AND = {
+							tag = BOI
+							is_ai = yes
+							has_game_rule = {
+								rule = GOY_BOI_ai_help
+								option = GOY_ai_help_yes
+							}
+						}
+						AND = {
+							tag = NTR
+							is_ai = yes
+							has_game_rule = {
+								rule = GOY_NTR_ai_help
+								option = GOY_ai_help_yes
+							}
+						}
+						#HRR set up in its initial event
+						#tag = POM
 					}
 					is_ai = yes
-					has_country_custom_difficulty_setting = yes
 				}
 				set_technology = {
 					GOY_longer_supply_chains = 1
@@ -169,7 +189,13 @@ on_actions = {
 				limit = {
 					ROOT = {
 						is_ai = yes
-						has_country_custom_difficulty_setting = yes
+						OR = {
+							tag = ARA
+							tag = BOI
+							tag = NTR
+							tag = HRR
+							tag = POM
+						}
 					}
 				}
 				set_country_flag = GoY_AI_defeated

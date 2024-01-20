@@ -1,0 +1,16 @@
+
+
+###### GOY Party icons #######
+
+spriteTypes = {
+
+	spriteType = {
+        name = "GFX_ideology_ARA_nazism"
+        texturefile = "gfx/interface/ideologies/GOY_arantigan_resurrectionism.dds"
+    }
+	spriteType = {
+        name = "GFX_ideology_NTR_esotericism"
+        texturefile = "gfx/interface/ideologies/GOY_dark_lord_reign.dds"
+    }
+
+}

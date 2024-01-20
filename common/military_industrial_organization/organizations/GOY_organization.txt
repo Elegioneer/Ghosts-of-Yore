@@ -290,6 +290,9 @@ NTR_northern_weaponsmiths_organization = {
 			hardness = 49
 			build_cost_ic = 0.05
 		}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_sturdier_shields
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_sharper_swords
@@ -311,6 +314,9 @@ NTR_northern_weaponsmiths_organization = {
 			soft_attack = 2
 			build_cost_ic = 0.05
 		}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_sharper_swords
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_stronger_bows
@@ -331,6 +337,9 @@ NTR_northern_weaponsmiths_organization = {
 			soft_attack = 4
 			hard_attack = 1000
 			build_cost_ic = 0.05
+		}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_stronger_bows
 		}
 	}
 	trait = {
@@ -356,6 +365,9 @@ NTR_northern_weaponsmiths_organization = {
 		#resources = {
 		#	tungsten = 1
 		#}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_tungsten_armour
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_adamantine_blades #PRAISE THE MINERS!
@@ -381,6 +393,9 @@ NTR_northern_weaponsmiths_organization = {
 		#resources = {
 		#	crystals = 1
 		#}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_adamantine_blades
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_rubber_bowstrings
@@ -406,6 +421,9 @@ NTR_northern_weaponsmiths_organization = {
 		#resources = {
 		#	rubber = 1
 		#}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_rubber_bowstrings
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_armor_supports
@@ -428,6 +446,9 @@ NTR_northern_weaponsmiths_organization = {
 		#resources = {
 		#	steel = 1
 		#}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_armor_supports
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_anti_tank_crossbows
@@ -450,6 +471,9 @@ NTR_northern_weaponsmiths_organization = {
 		#resources = {
 		#	steel = 1
 		#}
+		on_complete = {
+			custom_effect_tooltip = GOY_NTR_TT_anti_tank_crossbows
+		}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_magical_infusion
@@ -478,10 +502,12 @@ NTR_northern_weaponsmiths_organization = {
 					GOY_magical_melee_equipment_tech = 1
 				}
 			}
+			custom_effect_tooltip = GOY_NTR_TT_magical_infusion
 		}
-		resources = {
-			crystals = 1
-		}
+		#
+		#resources = {
+		#	crystals = 1
+		#}
 	}
 	trait = {
 		token = mio_trait_GOY_NTR_move_on
@@ -1218,8 +1244,8 @@ NTR_scavanged_designs_organization = {
 		
 	}
 	
-	equipment_type = { armor }
-	research_categories = { mio_cat_tech_all_armor_and_modules }
+	equipment_type = { armor train_equipment railway_gun_equipment }
+	research_categories = { mio_cat_tech_all_armor_and_modules train_tech }
 
 	initial_trait = {
 		organization_modifier = {

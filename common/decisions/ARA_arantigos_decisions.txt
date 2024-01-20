@@ -237,15 +237,17 @@ ARA_blyat_cat = {
 	ARA_blyat = {
 		icon = generic_ignite_civil_war
 		cost = 10
+		days_remove = 14
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 100
+			base = 100
 			modifier = {
 			    has_war = yes
 				add = -100
 			}
 		}
-		complete_effect = {
+		war_with_on_remove = BAN
+		remove_effect = {
 			declare_war_on = {
                 target = BAN
                 type = annex_everything
@@ -442,8 +444,14 @@ ARA_canteribbienes_cat = {
 					owns_state = 1196
 				}
 			}
-			has_tech = landing_craft
+			OR = {
+				has_tech = landing_craft
+				has_tech = mtg_landing_craft
+			}
 			has_tech = marines
+		}
+		highlight_states = {
+			state = 1195
 		}
 		ai_will_do = {
 			base = 10
@@ -578,6 +586,12 @@ ARA_canteribbienes_cat = {
 				}
 			}
 		}
+		highlight_states = {
+			state = 4
+			state = 1193
+			state = 1194
+			state = 1195
+		}
 		complete_effect = {
 			add_war_support = 0.05
 			every_other_country = {
@@ -625,6 +639,11 @@ ARA_dev_islands_cat = {
 				}
 			}
 		}
+		highlight_states = {
+			state = 1196
+			state = 1197
+			state = 1198
+		}
 		days_remove = 60
 		remove_effect = {
 			if = {
@@ -664,6 +683,9 @@ ARA_dev_islands_cat = {
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 20
+		}
+		highlight_states = {
+			state = 1196
 		}
 		days_remove = 90
 		modifier = {
@@ -712,6 +734,14 @@ ARA_dev_islands_cat = {
 			owns_state = 1197
 			owns_state = 1198
 			num_of_civilian_factories_available_for_projects > 30
+		}
+		highlight_states = {
+			state = 4
+			state = 1194
+			state = 1195
+			state = 1196
+			state = 1197
+			state = 1198
 		}
 		days_remove = 90
 		modifier = {
@@ -800,6 +830,9 @@ ARA_dev_islands_cat = {
 		modifier = {
 			civilian_factory_use = 10
 		}
+		highlight_states = {
+			state = 1193
+		}
 		remove_effect = {
 			swap_ideas = {
 				remove_idea = ARA_imperial_admiralty
@@ -838,6 +871,9 @@ ARA_dev_islands_cat = {
 		modifier = {
 			civilian_factory_use = 7
 		}
+		highlight_states = {
+			state = 1195
+		}
 		remove_effect = {
 			1195 = {
 				add_manpower = 25000
@@ -872,6 +908,9 @@ ARA_dev_islands_cat = {
 		available = {
 			owns_state = 784
 			num_of_civilian_factories_available_for_projects > 10
+		}
+		highlight_states = {
+			state = 784
 		}
 		days_remove = 90
 		modifier = {
@@ -931,6 +970,13 @@ ARA_dev_islands_cat = {
 		days_remove = 120
 		modifier = {
 			civilian_factory_use = 10
+		}
+		highlight_states = {
+			state = 772
+			state = 775
+			state = 777
+			state = 782
+			state = 741
 		}
 		complete_effect = {
 			add_timed_idea = {
@@ -1404,6 +1450,9 @@ ARA_renaming_cities = {
 			371 = {
 				is_owned_by = ARA
 			}
+		}
+		highlight_states = {
+			state = 371
 		}
 		complete_effect = {
 			add_stability = -0.025

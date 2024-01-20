@@ -13,6 +13,7 @@
  GOY_ARA_headmasterapesios:0 "Headmaster Apesios"
  GOY_ARA_arantigos:0 "Arantigos II"
  ARA_nicatorking:0 "Nicator I Whitebeak"
+ ARA_hespaeros_name:0 "Hespaeros"
  # Margareth
  generic_neutral_leader_desc:0 "§YBorn§!: January 21, 973 ALB, Sparleto\n\n§YBiography§!: Baroness Margareth Featherin has been ruling Arantiga for the past decade with a just and fair claw, but even she cannot deny that under her reign, there has been a decisive lack of progress as Wingbardian capitalists seized most of the Arantigan industry. However, she believes that the pen is mightier than the sword, and that Arantiga's current woes can be resolved with a few careful words, something her more notable brother and general in the army, Dorotheos, disagrees with."
  # Dorotheos
@@ -83,15 +84,16 @@ GOY_HRR_Ardenssonhector:0 "Hector Ardennson"
  HRR_GOY_dietrich_mach:0 "Dietrich Mach"
  HRR_GOY_winston_copperhill:0 "Winston Copperhill"
  HRR_GOY_regina_eagleclaw:0 "Regina Eagleclaw"
+
 ### POM ###
 GOY_POM_liberation_commitee:0 "Reconstruction Committee"
- GOY_POM_liberation_commitee_desc:0 ""
+ GOY_POM_liberation_commitee_desc:0 "While Harmann Camriz and Olivier Morel hate each other with a burning passion, they are willing to work together to fight the enemies of Pomovarra – at least for now. It is obvious that such an alliance will not last long."
  GOY_POM_charlotte_corneille:0 "Charlotte Corneille"
  GOY_POM_charlotte_corneille_desc:0 ""
  GOY_POM_camriz:0 "Harmann Camriz"
- GOY_POM_camriz_desc:0 ""
+ GOY_POM_camriz_desc:0 "§YBorn§!: 957 ALB, Luxwingburg\n\n§YBiography§!: Coming from a family of Pomovarran migrants who left for Feathisia to escape poverty, young Harmann grew up listening to stories of Pomovarra’s glorious past. He dreamt of one day studying history, however, his parents could never afford higher education for him. In hopes of earning enough money to pay university fees, Harmann enlisted into the ducal army right before the outbreak of the Republican Revolution. He survived the war only to learn that his family died when a stray artillery shell hit the house they lived in. Harmann deserted the army and journeyed South, back to Pomovarra. Not long after that, another revolution led to the collapse of the Aquileian reign over the region, and Harmann joined the nascent rebellion, only to see it violently crushed soon after. With a grim determination, Camriz continued his fight against prince-colonel’s goons. His military experience quickly led him into the highest echelons of the rebel movement, and in the end – to the position of leadership over Pomovarra.\n\n§YPortrait By§!: Leo the Pone"
  GOY_POM_morel:0 "Olivier Morel"
- GOY_POM_morel_desc:0 ""
+ GOY_POM_morel_desc:0 "§YBorn§!: 968 ALB, Westkeep\n\n§YBiography§!: Despite his rabid nationalism, Olivier Morel does not have even a drop of Pomovarran blood in his veins. His father, a minor official within the Aquileian bureaucratic apparatus, was sent on an assignment to Pomazhon as punishment – and his family moved along as well. Olivier – then just a young kid – grew enamoured with Pomovarra’s history, studying the works of (also Aquileian) poets praising the ‘unshakable spirit of Pomovarran warriors’. In his teenage years, Olivier got involved with the Pomovarran revolutionary underground, becoming known for his highly radical ideas and natural charisma which helped him overcome the distrust of fellow Pomovarrans towards ‘the outsider’. During the Pomovarran uprising, he supported the rebel cause, and with the gradual demise of rebel commanders in the fighting, Morel’s power grew. With every pamphlet he wrote and every rally he led, his fame spread. Now, after becoming the sole leader of Pomovarrans, he is ready to lead them into a future of war and glory."
  GOY_POM_reiher:0 "Leopold Reiher"
  GOY_POM_reiher_desc:0 "§YBorn§!: 953 ALB, Griffenheim\n\n§YBiography§!: Coming from a military family, the path before Leopold Reiher was set from the start: a life of service in the Reichsarmee. Leopold proved himself to be a talented officer, quickly climbing through the ranks and becoming one of the youngest colonels within the imperial army by the time the revolution came about. When the Empire started falling apart, Reiher commanded a regiment in Verenia. As the region was plunged into complete chaos, Reiher went rogue, followed by his unit. Colonel’s forces quickly grew, his undeniable charisma attracting deserters from both imperial and republican forces. It was then that he got in contact with Flowenian patricians who needed an army to deal with a rebellion in Pomovarra. Reiher quickly crushed the uprising, but to the dismay of his clients, refused to return the region into their claws, instead proclaiming himself Prince of Pomovarra. His ‘princedom’ being little more than a warlord's fief, Reiher is well-respected by his subordinates, but hated by most of his subjects who deem Reiher one of the worst overlords in the long history of foreign rule over Pomovarra, making his reign one of endless struggle with the rebellious population.\n\n§YPortrait By§!: Leo the Pone"
  GOY_POM_feuerstein:0 "Gustav Feuerstein"
@@ -103,3 +105,5 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  GOY_POM_schattenzahn:0 "Heinrich Schattenzahn"
  GOY_POM_nazi_chair:0 "Collapsed Government"
  GOY_POM_nazi_chair_desc:0 "After the escape of 'Prince-Colonel' Reiher and his goons, all hell broke loose."
+ GOY_POM_grijsbek:0 "Hendrik Grijsbek"
+

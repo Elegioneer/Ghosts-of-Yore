@@ -1490,6 +1490,7 @@ NTR_spirits_blessings_cat:0 "Magic of the Spirits"
 
 ### Opinion Modifiers ###
 NTR_dangerous_maniacs:0 "Dangerous maniacs"
+NTR_dangerous_maniacs_inv:0 "Dangerous maniacs"
 
 ### Advisors ###
 NTR_euan_stormshield:0 "Euan Stormshield"

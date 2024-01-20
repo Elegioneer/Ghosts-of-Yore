@@ -356,6 +356,39 @@ leader_traits = {
 		operative_slot = 1
 		intel_network_gain_factor = 0.1
 		own_operative_detection_chance_factor = -0.1
+		decryption_power_factor = 0.2
+		decryption_factor = 0.25
+		encryption_factor = 0.25
+	}
+	GOY_le_patron_trait = {
+		random = no
+		political_power_factor = 0.2
+		political_advisor_cost_factor = -0.25
+		communism_drift = 0.01
+	}
+	GOY_POM_black_marketeer_trait = {
+		random = no
+		consumer_goods_factor = -0.05
+		min_export = -0.05
+		intel_network_gain_factor = 0.1
 		decryption_factor = 0.1
+	}
+	GOY_POM_poms_regent = {
+		random = no
+		army_attack_factor = 0.05
+		war_support_factor = 0.05
+		fascism_drift = 0.01
+	}
+	GOY_POM_poms_king = {
+		random = no
+		army_attack_factor = 0.05
+		war_support_factor = 0.1
+		political_power_gain = 0.1
+		fascism_drift = 0.01
+	}
+	GOY_old_believer_trait = {
+		random = no
+		stability_factor = 0.1
+		fascism_drift = 0.01
 	}
 }

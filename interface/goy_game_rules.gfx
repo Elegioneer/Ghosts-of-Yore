@@ -4,4 +4,8 @@ spriteTypes = {
 		name = "GFX_goy_game_rule_ghostofyore"
 		texturefile = "gfx/game_rules/ghostofyore.dds"
 	}
+	SpriteType = {
+		name = "GFX_goy_game_rule_ghostofyore_helm"
+		texturefile = "gfx/game_rules/ghostofyore_helm.dds"
+	}
 }

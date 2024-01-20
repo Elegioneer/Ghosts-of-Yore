@@ -6006,6 +6006,28 @@
 				    target = FAT
 			    }
 			}
+			IF = {
+				limit = {
+					FAT = { exists = no }
+					FAW = { exists = no }
+				}
+				every_other_country = { #Best wargoal ever
+					limit = {
+						any_owned_state = {
+							OR = {
+								is_core_of = FAT
+								is_core_of = FAW
+							}
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {

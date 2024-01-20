@@ -1810,11 +1810,45 @@ add_namespace = ntribes_news
                 }
             }
 			every_other_country = {
+				limit = {
+					OR = {
+						AND = {
+							tag = PLB
+							has_cosmetic_tag = PLB_wastes
+						}
+						AND = {
+							tag = ZAR
+							has_cosmetic_tag = ZAR_worm_nz
+						}
+					}
+				}
 			    add_opinion_modifier = {
                     target = NTR
                     modifier = NTR_dangerous_maniacs
 		    	}
             }
+			IF = {
+				limit = {
+					ZAR = {
+						has_cosmetic_tag = ZAR_worm_nz
+					}
+				}
+				add_opinion_modifier = {
+                    target = NTR
+                    modifier = NTR_dangerous_maniacs_inv
+		    	}
+			}
+			IF = {
+				limit = {
+					PLB = {
+						has_cosmetic_tag = PLB_wastes
+					}
+				}
+				add_opinion_modifier = {
+                    target = NTR
+                    modifier = NTR_dangerous_maniacs_inv
+		    	}
+			}
 		}
 	}
     country_event = { #Refugees from Tir Deighe
@@ -1834,11 +1868,11 @@ add_namespace = ntribes_news
 			}
 		}
 	}
-	country_event = { #Landscape after the battle #TODO
+	country_event = { #Landscape after the battle
 	    id = ntribes.32
 	    title = ntribes.32.t
 	    desc = ntribes.32.d
-	    picture = GFX_event_night_and_fog #TODO
+	    picture = GFX_event_night_and_fog
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
@@ -2681,9 +2715,9 @@ add_namespace = ntribes_news
 						modules = {
 							fixed_main_weapon_slot = small_bomb_bay
 							fixed_auxiliary_weapon_slot_1 = bomb_locks
-							fixed_auxiliary_weapon_slot_2 = empty
+							fixed_auxiliary_weapon_slot_2 = light_mg_4x
 							engine_type_slot = engine_3_1x
-							special_type_slot_1 = hmg_defense_turret_1x
+							special_type_slot_1 = empty
 							special_type_slot_2 = empty	
 							special_type_slot_3 = empty	
 						}
@@ -2857,6 +2891,47 @@ add_namespace = ntribes_news
 				hidden_effect = {
 					HRR = {
 						unlock_national_focus = HRR_melt_ice
+					}
+					if = {
+						limit = {
+							has_game_rule = {
+								rule = GOY_HRR_ai_help
+								option = GOY_ai_help_yes
+							}
+						}
+						HRR = {
+							set_technology = {
+								GOY_longer_supply_chains = 1
+								GOY_adaptive_camouflage = 1
+								GOY_resource_smuggling = 1
+								popup = no
+							}
+							country_event = goy_ai_pain.1
+							country_event = goy_ai_pain.3
+							country_event = {
+								id = goy_ai_pain.2
+								days = 365
+							}
+							random_owned_state = {
+								limit = {
+									is_fully_controlled_by = PREV
+									is_core_of = PREV
+									NOT = {
+										state = 531
+									}
+								}
+								create_unit = {
+									division = "division_template = \"Herzlander Division\" start_experience_factor = 0.7 start_equipment_factor = 1"
+									owner = PREV
+									count = 12
+								}
+								create_unit = {
+									division = "division_template = \"Knights Brigade\" start_experience_factor = 0.8 start_equipment_factor = 1"
+									owner = PREV
+									count = 6
+								}
+							}
+						}
 					}
 				}
 			}			

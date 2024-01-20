@@ -2083,7 +2083,7 @@ focus_tree = {
 	id = Arantiga_coup
 	
 	country = {
-		factor = 0
+		base = 0
 		modifier = {
 			add = 100
 			tag = ARA
@@ -2300,7 +2300,10 @@ focus_tree = {
 			    OR = {
 					is_ai = no
 					has_war = no
-					has_country_custom_difficulty_setting = yes
+					has_game_rule = {
+						rule = GOY_ARA_ai_help
+						option = GOY_ai_help_yes
+					}
 				}
 			}
 		}
@@ -2418,7 +2421,15 @@ focus_tree = {
 			    OR = {
 					is_ai = no
 					has_war = no
-					has_country_custom_difficulty_setting = yes
+					AND = {
+						NOT = {
+							has_war_with = LAK
+						}
+						has_game_rule = {
+							rule = GOY_ARA_ai_help
+							option = GOY_ai_help_yes
+						}
+					}
 				}
 			}
 		}
@@ -2529,7 +2540,10 @@ focus_tree = {
 				OR = {
 					is_ai = no
 					has_war = no
-					has_country_custom_difficulty_setting = yes
+					has_game_rule = {
+						rule = GOY_ARA_ai_help
+						option = GOY_ai_help_yes
+					}
 				}
 			}
 		}
@@ -7873,19 +7887,19 @@ focus_tree = {
 				days = 60
 			}
 			build_railway = {
-                level = 1
+                level = 2
 				start_province = 10537
                 target_province = 9195
                 build_only_on_allied = yes
             }
 			build_railway = {
-                level = 1
+                level = 2
 				start_province = 10537
                 target_province = 12691
                 build_only_on_allied = yes
             }
 			build_railway = {
-                level = 1
+                level = 2
 				start_province = 10537
                 target_province = 4573
                 build_only_on_allied = yes
@@ -8640,6 +8654,13 @@ focus_tree = {
 			    has_war = yes
 				add = -75
 			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
+			}
 		}
 		completion_reward = {
             TRD ={ #Arantigan Threat 
@@ -8763,6 +8784,13 @@ focus_tree = {
 			    has_war = yes
 				add = -75
 			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
+			}
 		}
 		completion_reward = {
 		    IF = {
@@ -8813,6 +8841,13 @@ focus_tree = {
 			    has_war = yes
 				add = -75
 			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
+			}
 		}
 		completion_reward = {
 		    IF = {
@@ -8851,6 +8886,13 @@ focus_tree = {
 			modifier = {
 			    has_war = yes
 				add = -75
+			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
 			}
 		}
 		completion_reward = {
@@ -9109,6 +9151,13 @@ focus_tree = {
 			    has_war = yes
 				add = -75
 			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
+			}
 		}
 		completion_reward = {
 		    IF = {
@@ -9240,6 +9289,13 @@ focus_tree = {
 			    has_war = yes
 				add = -75
 			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
+			}
 		}
 		completion_reward = {
 		    IF = {
@@ -9270,6 +9326,13 @@ focus_tree = {
 			modifier = {
 			    has_war = yes
 				add = -75
+			}
+			modifier = {
+				has_game_rule = {
+					rule = GOY_ARA_ai_help
+					option = GOY_ai_help_yes
+				}
+				add = 40
 			}
 		}
 		completion_reward = {

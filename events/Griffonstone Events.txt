@@ -316,21 +316,21 @@ add_namespace = griffonstone_decision
 	    picture = GFX_event_western_griffon_city
 		immediate = {
 		    hidden_effect = {
-			     country_event = {
-				     id = griffonstone.002
-					 days = 20
-			     }
-			 }
+			    country_event = {
+					id = griffonstone.002
+					days = 20
+			    }
+			}
 		}
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
 	    option = {
-	         name = griffonstone.001.a 
-			 country_event = {
-			     id = griffonstone.016
-			 }
+	        name = griffonstone.001.a
+			country_event = {
+			    id = griffonstone.016
+			}
 		}
 	}
 	
@@ -344,7 +344,7 @@ add_namespace = griffonstone_decision
 	    fire_only_once = yes
 		
 	    option = {
-	         name = griffonstone.016.a 
+	        name = griffonstone.016.a 
 		}
 	}
 	
@@ -357,14 +357,20 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.003
+					days = 11
+			    }
+			}
+		}
+		
 	    option = {
-	         name = griffonstone.002.a
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.003
-					 days = 11
-			     }
-			 }
+	        name = griffonstone.002.a
+			effect_tooltip = {
+			    country_event = griffonstone.003
+			}
 		}
 	}
 	
@@ -377,18 +383,21 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.004
+					days = 38
+			    }
+			}
+		}
+		
 	    option = {
-	         name = griffonstone.003.a
-			 add_stability = -0.03
-			 384 = {
-			     add_manpower = -300
-			 }
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.004
-					 days = 38
-			     }
-			 }
+	        name = griffonstone.003.a
+			add_stability = -0.03
+			384 = {
+			    add_manpower = -300
+			}
 		}
 	}
 	
@@ -401,14 +410,17 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.005
+					days = 5
+			    }
+			}
+		}
+		
 	    option = {
-	         name = griffonstone.004.a
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.005
-					 days = 5
-			     }
-			 }
+	        name = griffonstone.004.a
 		}
 	}
 	
@@ -421,14 +433,17 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.006
+					days = 5
+			    }
+			}
+		}
+		
 	    option = {
-	         name = griffonstone.005.a
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.006
-					 days = 5
-			     }
-			 }
+	        name = griffonstone.005.a
 		}
 	}
 	
@@ -441,15 +456,18 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.007
+					days = 6
+			    }
+			}
+		}
+		
 	    option = {
-	         name = griffonstone.006.a
-			 add_popularity = { ideology = democratic popularity = 0.03 }
-			 hidden_effect = {
-			     country_event = {
-				     id = griffonstone.007
-					 days = 6
-			     }
-			 }
+	        name = griffonstone.006.a
+			add_popularity = { ideology = democratic popularity = 0.03 }
 		}
 	}
 	
@@ -461,6 +479,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.007.a
@@ -563,6 +582,15 @@ add_namespace = griffonstone_decision
 	    is_triggered_only = yes
 	    fire_only_once = yes
 		
+		immediate = {
+		    hidden_effect = {
+			    country_event = {
+					id = griffonstone.009
+					days = 3
+			    }
+			}
+		}
+		
 	    option = {
 	        name = griffonstone.008.a
 			retire_character = GOY_BOI_grandpagruff
@@ -589,12 +617,6 @@ add_namespace = griffonstone_decision
 			389 = { 
 			    add_manpower = -20000
 			}
-			hidden_effect = {
-			    country_event = {
-			         id = griffonstone.009
-					 days = 3
-			    }
-			}
 		}
 	}
 	
@@ -606,6 +628,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	         name = griffonstone.009.a
@@ -667,6 +690,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.010.a
@@ -715,6 +739,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.011.a
@@ -767,6 +792,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	         name = griffonstone.012.a
@@ -788,6 +814,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.017.a
@@ -805,6 +832,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.013.a
@@ -884,6 +912,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	         name = griffonstone.014.a
@@ -904,6 +933,7 @@ add_namespace = griffonstone_decision
 		
 	    is_triggered_only = yes
 	    fire_only_once = yes
+		timeout_days = 5
 		
 	    option = {
 	        name = griffonstone.015.a

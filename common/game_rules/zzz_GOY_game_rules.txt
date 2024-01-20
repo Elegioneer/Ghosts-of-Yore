@@ -143,3 +143,72 @@ NTR_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+
+GOY_ARA_ai_help = {
+	name = "GOY_ARA_AI_HELP"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
+	icon = "GFX_goy_game_rule_ghostofyore_helm"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_HELP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOY_ai_help_yes
+		text = "GOY_AI_HELP_YES"
+		desc = "GOY_AI_HELP_YES_desc"
+		allow_achievements = yes
+	}
+}
+GOY_BOI_ai_help = {
+	name = "GOY_BOI_AI_HELP"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
+	icon = "GFX_goy_game_rule_ghostofyore_helm"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_HELP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOY_ai_help_yes
+		text = "GOY_AI_HELP_YES"
+		desc = "GOY_AI_HELP_YES_desc"
+		allow_achievements = yes
+	}
+}
+GOY_NTR_ai_help = {
+	name = "GOY_NTR_AI_HELP"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
+	icon = "GFX_goy_game_rule_ghostofyore_helm"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_HELP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOY_ai_help_yes
+		text = "GOY_AI_HELP_YES"
+		desc = "GOY_AI_HELP_YES_desc"
+		allow_achievements = yes
+	}
+}
+GOY_HRR_ai_help = {
+	name = "GOY_HRR_AI_HELP"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
+	icon = "GFX_goy_game_rule_ghostofyore_helm"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_HELP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOY_ai_help_yes
+		text = "GOY_AI_HELP_YES"
+		desc = "GOY_AI_HELP_YES_desc"
+		allow_achievements = yes
+	}
+}

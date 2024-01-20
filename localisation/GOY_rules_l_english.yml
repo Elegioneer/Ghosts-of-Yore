@@ -3,4 +3,11 @@
  ### GAME RULES ###
 
  RULE_GROUP_EXTRA_CONTENT_GOY_AI:0 "Ghosts of Yore – AI Behavior"
- 
+ RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP:0 "Ghosts of Yore – AI Buffs"
+ GOY_AI_HELP_YES:0 "Buffs Applied"
+ GOY_AI_HELP_YES_desc:0 "If this nation is controlled by AI, it will receive:\n- §YInfantry§!, §Ymotorised§!, §Ymechanised§!, and §Yarmoured divisions§! (if it has completed the required research) at §Yregular intervals§!.\n- §YSpare equipment§! and §Ymanpower§!.\n- §YExtra resources§! and §Rdecreased§! §Yout-of-supply penalties§!.\n§REnable this option only if you don't intend to fight this AI nation and want to see it succeed or if you're ready a very tough challenge§!."
+ GOY_ARA_AI_HELP:0 "Buff @ARA Arantiga"
+ GOY_BOI_AI_HELP:0 "Buff @BOI Griffonstone"
+ GOY_NTR_AI_HELP:0 "Buff @NTR Tir Deighe"
+ GOY_HRR_AI_HELP:0 "Buff @HRR Herzland Liberation Front"
+ RULE_OPTION_DEFAULT_AI_HELP_DESC:0 "This nation is receiving no special buffs."

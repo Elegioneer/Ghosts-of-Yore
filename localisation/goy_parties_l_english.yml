@@ -29,6 +29,9 @@ ARA_salvation_party:0 "National Salvation"
  ARA_colony_party_long:0 "Arantigan Colonial Administration"
  ARA_protectorate_party:0 "Arantigan Administration"
  ARA_protectorate_party_long:0 "Arantigan Protectorate Administration"
+ #
+ #ARA_nazism:0 "Arantigan Resurrectionism"
+ #ARA_nazism_desc:0 ""
  
 ## BOI ##
 BOI_neu_init:0 "Regency Council"
@@ -73,6 +76,8 @@ NTR_snowflakes_party:0 "Snowflake Dynasty"
  NTR_druids_party_long:0 "Circle of Ice"
  NTR_clan_council:0 "Clan Council"
  NTR_clan_council_long:0 "Council of the Clans"
+ #
+ NTR_esotericism_desc:0 "A magical being of immense power controls this country and uses it to expand its influence. The state is an extension of the will of the Dark Lord who rules as he pleases, with no regard to the well-being of his subjects. While elaborate hierarchies of acolytes, minions, and slaves exist in this kind of state, ultimately everyone is subservient to the Dark Lord. Rulers of such polities rely on dark magic, necromancy, demonology or other unholy means to keep their realm stable and protected from incursions by worldly forces that seek to end their reign of terror."
  
 ### HRR ###
 HRR_dem_party:0 "Liberation Front"
@@ -120,3 +125,7 @@ POM_goy_rebel_party:0 "Rebel Alliance"
  POM_goy_comdem_party_long:0 "Partie des Aquileian Travailleurs"
  POM_goy_comneu_party:0 "MPdA"
  POM_goy_comneu_party_long:0 "Mouvement Patriote d'Aquileia"
+ POM_goy_camriz_party:0 "Camriz Clique"
+ POM_goy_camriz_party_long:0 "Camriz Clique"
+ POM_goy_provgov_party:0 "Provisional Government"
+ POM_goy_provgov_party_long:0 "Provisional Government"

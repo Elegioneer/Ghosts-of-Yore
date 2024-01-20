@@ -156,7 +156,126 @@ country_event = { #prodigal sons
 					traits = { army_armored_2 }
 				}
 			}
-			load_oob = ARA_sons_of_arantigos_OOB
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				division_template = {
+					name = "DUMMY DIVISION"
+
+					division_names_group = ARA_INF_02
+
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 2 y = 0 }
+						knights = { x = 3 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 2 y = 1 }
+						knights = { x = 3 y = 1 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						goy_necromancer_company = { x = 0 y = 2 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Sons of Arantigos"
+
+					division_names_group = ARA_INF_02
+
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 2 y = 0 }
+						knights = { x = 3 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 2 y = 1 }
+						knights = { x = 3 y = 1 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Sons of Arantigos\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.8 start_equipment_factor = 0.75"
+						officer = {
+							name = ARA_hespaeros_name
+							portraits = {
+								army = {
+									large = GFX_GOY_arantiga_knight
+									small = GFX_idea_GOY_ARA_arantiga_knight
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				random_country_division = {
+					limit = {
+						division_has_battalion_in_template = goy_necromancer_company
+					}
+					add_divisional_commander_xp = 1800
+					add_history_entry = {
+						key = ARA_sons_of_arantigos_key
+						subject = ARA_sons_of_arantigos_subj
+						allow = no #(allow medal award)
+					}
+					change_division_template = { division_template = "Sons of Arantigos" }
+				}
+				delete_unit_template_and_units = {
+					division_template = "DUMMY DIVISION"
+					disband = no
+				}
+			}
+			else = {
+				division_template = {
+					name = "Sons of Arantigos"
+
+					division_names_group = ARA_INF_02
+
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 2 y = 0 }
+						knights = { x = 3 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 2 y = 1 }
+						knights = { x = 3 y = 1 }
+					}
+
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Sons of Arantigos\" division_template = \"Sons of Arantigos\" start_experience_factor = 0.8 start_equipment_factor = 0.75"
+						officer = {
+							name = ARA_hespaeros_name
+							portraits = {
+								army = {
+									large = GFX_GOY_arantiga_knight
+									small = GFX_idea_GOY_ARA_arantiga_knight
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+			}
 		}
 		
 	}

@@ -136,6 +136,22 @@ HRR_GOY_kingdom = {
 	color = rgb { 255 158 47 }
 	color_ui = rgb { 220 158 47 }
 }
+POM_goy_aquileia = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 145 25 45 }
+}
+POM_ONE_COMMUNE = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 145 25 45 }
+}
+RCT_ALLARD = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 150 50 70 }
+}
+FBK_ALLARD = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 160 50 90 }
+}
 ################################
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
@@ -1450,6 +1466,10 @@ HLR_AVI = {
 	color = rgb { 75 0 130 }
 	color_ui = rgb { 75 0 130 }
 }
+TAL_AVI = {
+	color = rgb { 75 0 130 }
+	color_ui = rgb { 75 0 130 }
+}
 DED_mandate = {
 	color = rgb { 229 138 47 }
 	color_ui = rgb { 229 138 47 }
@@ -2738,8 +2758,8 @@ ZAR_WORM_ending = {
     color_ui = rgb { 0 0 0 }
 }
 CTL_HIN_V = {
-	color = rgb { 1 31 158 }
-    color_ui = rgb { 1 31 158 }
+	color = rgb { 15 40 125 }
+    color_ui = rgb { 15 40 125 }
 }
 PLB_exuvia_changelingia = {
 	color = rgb { 13 157 199 }

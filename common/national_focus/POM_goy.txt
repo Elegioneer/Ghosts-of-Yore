@@ -915,7 +915,7 @@
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
 			add_state_core = 442
-			set_capital = 442
+			set_capital = { state = 442}
 			decrease_poverty = yes
 		}
 	}
@@ -1971,6 +1971,19 @@
 		prerequisite = { focus = POM_army_design_bureau }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = POM_TT_add_aquileian_orgs
+			}
+			ELSE = {
+				custom_effect_tooltip = POM_TT_add_aquileian_manufs
+			}
+			set_country_flag = POM_FLAG_aquiuleian_companies
+			hidden_effect = {
+				country_event = goy_pomovarra.37
+			}
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -1985,7 +1998,6 @@
 					instant_build = yes
 				}
 			}
-			#todo enable starting aquileian companies
 		}
 	}
 	shared_focus = {
@@ -2303,7 +2315,7 @@
 		icon = GFX_goal_unknown
 		x = 0
 		y = 4
-		cost = 5.00
+		cost = 4.00
 		ai_will_do = {
 			factor = 10
 		}
@@ -2314,7 +2326,8 @@
 		prerequisite = { focus = POM_revolutionary_zeal }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_total_control
+			country_event = goy_pomovarra.23
 		}
 	}
 	shared_focus = {
@@ -2322,7 +2335,7 @@
 		icon = GFX_goal_unknown
 		x = 2
 		y = 4
-		cost = 5.00
+		cost = 4.00
 		ai_will_do = {
 			factor = 10
 		}
@@ -2333,7 +2346,7 @@
 		prerequisite = { focus = POM_revolutionary_zeal }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_world_revolution
 		}
 	}
 	shared_focus = {
@@ -2352,7 +2365,22 @@
 		prerequisite = { focus = POM_centralise_authority }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			custom_effect_tooltip = POM_TT_apostates
+			hidden_effect = {
+			    every_other_country = {
+				    limit = {
+						has_idea = griffon_race
+					    not = {
+						    has_idea = detached_country
+						}
+					}
+			        reverse_add_opinion_modifier = {
+                        target = POM
+                        modifier = POM_apostates
+					}
+                }
+			}
+			country_event = goy_pomovarra.24
 		}
 	}
 	shared_focus = {
@@ -2371,7 +2399,7 @@
 		prerequisite = { focus = POM_centralise_authority }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.26
 		}
 	}
 	shared_focus = {
@@ -2390,7 +2418,7 @@
 		prerequisite = { focus = POM_glory_of_war }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_no_resistance
 		}
 	}
 	shared_focus = {
@@ -2409,7 +2437,7 @@
 		prerequisite = { focus = POM_glory_of_war }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_shadow_claw
 		}
 	}
 	shared_focus = {
@@ -2428,7 +2456,7 @@
 		prerequisite = { focus = POM_control_the_past }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.27
 		}
 	}
 	shared_focus = {
@@ -2447,7 +2475,7 @@
 		prerequisite = { focus = POM_enemies_within }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_country_leader_trait = GOY_le_patron_trait
 		}
 	}
 	shared_focus = {
@@ -2466,7 +2494,10 @@
 		prerequisite = { focus = POM_enemies_without }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_world_revolution
+				add_idea = POM_world_revolution_1
+			}
 		}
 	}
 	#
@@ -2480,11 +2511,181 @@
 			factor = 10
 		}
 		available = {
-			
+			has_completed_focus = POM_convene_the_committee
 		}
+		will_lead_to_war_with = FEA
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = YAL
+		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD #tag alias for event_target:griffonian_empire
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = ROU
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    GRI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRI
+			    }
+			}
+			else_if = {
+				limit = {
+				    GRD = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = GRD
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						tag = global.griffonian_empire_var
+					}
+					ROOT = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 382
+					}
+					ROOT = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 674
+					}
+					ROOT = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    FEA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FEA
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    STW = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = STW
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    PYT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = PYT
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    YAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = YAL
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BRZ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BRZ
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    KAT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = KAT
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    ANG = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ANG
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    ROU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ROU
+			    }
+				else = {
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2497,11 +2698,54 @@
 			factor = 10
 		}
 		available = {
-			
+			has_completed_focus = POM_convene_the_committee
 		}
+		will_lead_to_war_with = TRD
+		will_lead_to_war_with = FEZ
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    TRD = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = TRD
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = TRD
+									is_core_of = FEZ
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    FEZ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FEZ
+			    }
+				else = {
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2514,13 +2758,181 @@
 			factor = 10
 		}
 		available = {
-			
+			TRD = {
+				exists = no
+			}
+			GRD = {
+				exists = no
+			}
 		}
 		prerequisite = { focus = POM_liberate_herzland }
 		prerequisite = { focus = POM_topple_oligarchs }
+		will_lead_to_war_with = LAK
+		will_lead_to_war_with = BOI
+		will_lead_to_war_with = BAN
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    ERI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ERI
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = ERI
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    EYR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = EYR
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = EYR
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    AVI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = AVI
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = AVI
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    BAN = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BAN
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = BAN
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    BOI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BOI
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								is_core_of = BOI
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    LAK = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LAK
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = ERI
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2533,13 +2945,47 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_must_have_cores
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[GRD.GetName]"
+			GRD = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[TRD.GetName]"
+			TRD = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[FEZ.GetName]"
+			FEZ = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_liberate_herzland }
 		prerequisite = { focus = POM_topple_oligarchs }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_global_flag =  GRI_grover_vi_dead
+				}
+				country_event = goy_pomovarra.28
+				else = {
+					country_event = goy_pomovarra.29
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2556,9 +3002,239 @@
 		}
 		prerequisite = { focus = POM_liberate_herzland }
 		prerequisite = { focus = POM_topple_oligarchs }
+		will_lead_to_war_with = WNG
+		will_lead_to_war_with = TAL
+		will_lead_to_war_with = FRN
+		will_lead_to_war_with = ARA
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = CYA
+		will_lead_to_war_with = MIT
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    WNG = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = WNG
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = WNG
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    TAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = TAL
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = TAL
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    FRN = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FRN
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = FRN
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    ARA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ARA
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = ARA
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    SIC = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = SIC
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = SIC
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    CYA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = CYA
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = CYA
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    MIT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FAL
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = MIT
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    FAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FAL
+			    }
+				else = {
+					every_other_country = { #Best wargoal ever
+						limit = {
+							any_owned_state = {
+								OR = {
+									is_core_of = FAL
+								}
+							}
+						}
+						ROOT = {
+							declare_war_on = {
+								type = annex_everything
+								target = PREV
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2571,12 +3247,75 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_must_have_cores
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[BOI.GetName]"
+			BOI = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[BAN.GetName]"
+			BAN = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[AVI.GetName]"
+			AVI = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[ERI.GetName]"
+			ERI = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[EYR.GetName]"
+			EYR = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_red_rumare }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = BOI
+						is_core_of = BAN
+						is_core_of = AVI
+						is_core_of = ERI
+						is_core_of = EYR
+					}
+				}
+				add_resistance = 20
+				add_resistance_target = 20
+				add_manpower = -50000
+			}
+			custom_effect_tooltip = POM_TT_core_rumare
+			hidden_effect = {
+			BOI = { add_to_ROOT_potential_cores = yes }
+			BAN = { add_to_ROOT_potential_cores = yes }
+			AVI = { add_to_ROOT_potential_cores = yes }
+			ERI = { add_to_ROOT_potential_cores = yes }
+			EYR = { add_to_ROOT_potential_cores = yes }
+			}
 		}
 	}
 	shared_focus = {
@@ -2593,9 +3332,137 @@
 		}
 		prerequisite = { focus = POM_red_rumare }
 		prerequisite = { focus = POM_destroy_imperial_vestiges }
+		#
+		will_lead_to_war_with = HLQ
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = LSM
+		will_lead_to_war_with = LSC
+		#
+		will_lead_to_war_with = LUS
+		will_lead_to_war_with = BRF
+		will_lead_to_war_with = GRW
+		will_lead_to_war_with = GRU
+		will_lead_to_war_with = GRY
+		#
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    HLQ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = HLQ
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LNS = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LNS
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LSM = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LSM
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LSC = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LSC
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    LUS = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LUS
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BRF = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BRF
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRW = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRW
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRU
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    GRY = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRY
+			    }
+				else = {
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2610,11 +3477,95 @@
 		available = {
 			
 		}
+		will_lead_to_war_with = HAU
+		will_lead_to_war_with = FAT
+		will_lead_to_war_with = GRW
+		will_lead_to_war_with = FAW
+		will_lead_to_war_with = MNC
+		will_lead_to_war_with = VED
+		will_lead_to_war_with = SRS
+		will_lead_to_war_with = NTR
 		prerequisite = { focus = POM_destroy_imperial_vestiges }
 		prerequisite = { focus = POM_strike_karthinia }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    HAU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = HAU
+			    }
+			}
+			IF = {
+			    limit = {
+				    FAT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FAT
+			    }
+			}
+			IF = {
+			    limit = {
+				    FAW = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FAW
+			    }
+			}
+			IF = {
+			    limit = {
+				    MNC = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = MNC
+			    }
+			}
+			IF = {
+			    limit = {
+				    VED = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = VED
+			    }
+			}
+			IF = {
+			    limit = {
+				    SRS = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = SRS
+			    }
+			}
+			IF = {
+			    limit = {
+				    NTR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = NTR
+			    }
+			}
 		}
 	}
 	shared_focus = {
@@ -2627,12 +3578,96 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_must_have_cores
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[WNG.GetName]"
+			WNG = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[FAL.GetName]"
+			FAL = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[FRN.GetName]"
+			FRN = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[TAL.GetName]"
+			TAL = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[ARA.GetName]"
+			ARA = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[SIC.GetName]"
+			SIC = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[CYA.GetName]"
+			CYA = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_strike_karthinia }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = WNG
+						is_core_of = FAL
+						is_core_of = FRN
+						is_core_of = TAL
+						is_core_of = ARA
+						is_core_of = SIC
+						is_core_of = CYA
+						is_core_of = MIT
+					}
+				}
+				add_resistance = 20
+				add_resistance_target = 20
+				add_manpower = -50000
+			}
+			custom_effect_tooltip = POM_TT_core_karthinia
+			hidden_effect = {
+			WNG = { add_to_ROOT_potential_cores = yes }
+			FAL = { add_to_ROOT_potential_cores = yes }
+			FRN = { add_to_ROOT_potential_cores = yes }
+			TAL = { add_to_ROOT_potential_cores = yes }
+			ARA = { add_to_ROOT_potential_cores = yes }
+			SIC = { add_to_ROOT_potential_cores = yes }
+			CYA = { add_to_ROOT_potential_cores = yes }
+			}
 		}
 	}
 	shared_focus = {
@@ -2645,13 +3680,136 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_must_have_cores
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[HLQ.GetName]"
+			HLQ = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[LNS.GetName]"
+				OR = {
+				AND = {
+					552 = {
+						is_core_of = LNS
+					}
+					LNS = {
+						all_core_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				AND = {
+					540 = {
+						is_core_of = LSM
+					}
+					LSM = {
+						all_core_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				AND = {
+					505 = {
+						is_core_of = LSC
+					}
+					LSC = {
+						all_core_state = {
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[LUS.GetName]"
+			LUS = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[BRF.GetName]"
+			BRF = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[GRW.GetName]"
+			GRW = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[GRU.GetName]"
+			GRU = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[GRY.GetName]"
+			GRY = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_light_the_pyre }
 		prerequisite = { focus = POM_into_evi_valley }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = HLQ
+						is_core_of = LNS
+						is_core_of = LSM
+						is_core_of = LSC
+						is_core_of = LUS
+						is_core_of = BRF
+						is_core_of = GRW
+						is_core_of = GRU
+						is_core_of = GRY
+					}
+				}
+				add_resistance = 20
+				add_resistance_target = 20
+				add_manpower = -50000
+			}
+			custom_effect_tooltip = POM_TT_core_evivalley
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LSM
+							is_core_of = LSC
+						}
+					}
+					add_core_of = LNS
+					remove_core_of = LSM
+					remove_core_of = LSC
+				}
+				HLQ = { add_to_ROOT_potential_cores = yes }
+				LNS = { add_to_ROOT_potential_cores = yes }
+				LUS = { add_to_ROOT_potential_cores = yes }
+				BRF = { add_to_ROOT_potential_cores = yes }
+				GRW = { add_to_ROOT_potential_cores = yes }
+				GRU = { add_to_ROOT_potential_cores = yes }
+				GRY = { add_to_ROOT_potential_cores = yes }
+			}
 		}
 	}
 	shared_focus = {
@@ -2664,13 +3822,199 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_no_other_griffonian_griffon_country
+			NOT = {
+				any_other_country = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					has_idea = griffon_race
+					NOT = {
+						OR = {
+							tag = DED
+							tag = EWI
+							tag = HLR
+							tag = NCH
+							tag = EQC
+						}
+					}
+				}
+			}
+			}
 		}
+		will_lead_to_war_with = DEP
+		will_lead_to_war_with = LCT
+		will_lead_to_war_with = RCT
+		will_lead_to_war_with = BAK
+		will_lead_to_war_with = DMT
+		will_lead_to_war_with = NIM
+		will_lead_to_war_with = WIT
+		will_lead_to_war_with = FRE
+		will_lead_to_war_with = BAR
+		will_lead_to_war_with = ZES
+		will_lead_to_war_with = OLV
+		will_lead_to_war_with = WAT
+		will_lead_to_war_with = FBK
+		will_lead_to_war_with = FIR
 		prerequisite = { focus = POM_into_evi_valley }
 		prerequisite = { focus = POM_northern_liberation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+			    limit = {
+				    DEP = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = DEP
+			    }
+			}
+			IF = {
+			    limit = {
+				    LCT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = LCT
+			    }
+			}
+			IF = {
+			    limit = {
+				    RCT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = RCT
+			    }
+			}
+			IF = {
+			    limit = {
+				    BAK = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BAK
+			    }
+			}
+			IF = {
+			    limit = {
+				    DMT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = DMT
+			    }
+			}
+			IF = {
+			    limit = {
+				    NIM = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = NIM
+			    }
+			}
+			IF = {
+			    limit = {
+				    WIT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = WIT
+			    }
+			}
+			IF = {
+			    limit = {
+				    FRE = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FRE
+			    }
+			}
+			IF = {
+			    limit = {
+				    BAR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BAR
+			    }
+			}
+			IF = {
+			    limit = {
+				    ZES = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ZES
+			    }
+			}
+			IF = {
+			    limit = {
+				    OLV = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = OLV
+			    }
+			}
+			IF = {
+			    limit = {
+				    WAT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = WAT
+			    }
+			}
+			IF = {
+			    limit = {
+				    FBK = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FBK
+			    }
+			}
+			IF = {
+			    limit = {
+				    FIR = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FIR
+			    }
+			}
 		}
 	}
 	shared_focus = {
@@ -2683,13 +4027,150 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_must_have_cores
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[FAT.GetName]"
+			OR = {
+			FAT = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			AND = {
+			485 = {
+				is_core_of = FAW
+			}
+			FAW = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[MNC.GetName]"
+			MNC = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[VED.GetName]"
+			VED = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[SRS.GetName]"
+			SRS = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[NTR.GetName]"
+			NTR = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
+			custom_trigger_tooltip = {
+				tooltip = "[HAU.GetName]"
+			HAU = {
+				all_core_state = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_northern_liberation }
 		prerequisite = { focus = POM_humble_the_south }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+						is_core_of = FAT
+						is_core_of = FAW
+						is_core_of = MNC
+						is_core_of = VED
+						is_core_of = SRS
+						is_core_of = NTR
+						is_core_of = HAU
+					}
+				}
+				add_resistance = 20
+				add_resistance_target = 20
+				add_manpower = -50000
+			}
+			custom_effect_tooltip = POM_TT_core_north
+			hidden_effect = {
+			FAT = { add_to_ROOT_potential_cores = yes }
+			FAW = { add_to_ROOT_potential_cores = yes }
+			MNC = { add_to_ROOT_potential_cores = yes }
+			VED = { add_to_ROOT_potential_cores = yes }
+			SRS = { add_to_ROOT_potential_cores = yes }
+			NTR = { add_to_ROOT_potential_cores = yes }
+			HAU = { add_to_ROOT_potential_cores = yes }
+			}
+			585 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				add_resource = {
+					type = crystals
+					amount = 21
+				}
+			}
+			583 = {
+				add_resource = {
+					type = steel
+					amount = 19
+				}
+				add_resource = {
+					type = crystals
+					amount = 18
+				}
+			}
+			480 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+			}
+			459 = {
+				add_resource = {
+					type = steel
+					amount = 18
+				}
+				add_resource = {
+					type = tungsten
+					amount = 22
+				}
+			}
+			475 = {
+				add_resource = {
+					type = steel
+					amount = 26
+				}
+				add_resource = {
+					type = aluminium
+					amount = 24
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2702,14 +4183,35 @@
 			factor = 10
 		}
 		available = {
-			
+			custom_trigger_tooltip = {
+				tooltip = POM_TT_no_other_griffonian_country
+			NOT = {
+				any_other_country = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					NOT = {
+						OR = {
+							tag = DED
+							tag = EWI
+							tag = HLR
+							tag = NCH
+							tag = EQC
+						}
+					}
+				}
+			}
+			}
 		}
 		prerequisite = { focus = POM_pacify_the_valley }
 		prerequisite = { focus = POM_red_sun_rises }
 		prerequisite = { focus = POM_establish_northern_workcamps }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			custom_effect_tooltip = POM_TT_plans_near_complete
+			hidden_effect = {
+				country_event = goy_pomovarra.32
+			}
 		}
 	}
 	#
@@ -2732,7 +4234,7 @@
 		prerequisite = { focus = POM_intercontinental_campaigns }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.36
 		}
 	}
 	shared_focus = {
@@ -2751,7 +4253,7 @@
 		prerequisite = { focus = POM_death_of_allard }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.36
 		}
 	}
 	shared_focus = {
@@ -2770,7 +4272,11 @@
 		prerequisite = { focus = POM_death_of_allard }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = -10000
+			every_owned_state = {
+				add_manpower = -1000
+			}
+			add_political_power = 100
 		}
 	}
 	shared_focus = {
@@ -2790,7 +4296,10 @@
 		prerequisite = { focus = POM_purge_allardists }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = 0.02
+			every_owned_state = {
+				add_manpower = 10000
+			}
 		}
 	}
 	shared_focus = {
@@ -2810,7 +4319,147 @@
 		prerequisite = { focus = POM_purge_allardists }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+					state = 624
+					state = 625
+					state = 626
+					state = 412
+					state = 579
+					state = 413
+					state = 558
+					state = 578
+					state = 680
+					state = 387
+					state = 499
+					state = 541
+					state = 550
+					state = 551
+					state = 560
+					state = 491
+					state = 543
+					state = 544
+					state = 586
+					state = 635
+					state = 637
+					state = 638
+					state = 647
+					state = 577
+					state = 619
+					state = 620
+					state = 646
+					state = 682
+					state = 438
+					state = 461
+					state = 648
+					state = 649
+					state = 616
+					state = 615
+					state = 614
+					state = 617
+					state = 628
+					state = 627
+					state = 629
+					state = 452
+					state = 587
+					state = 622
+					state = 645
+					state = 580
+					state = 618
+					state = 621
+					state = 681
+					}
+				}
+				add_core_of = RCT
+				transfer_state_to = RCT
+			}
+			RCT = {
+				set_cosmetic_tag = RCT_ALLARD
+			}
+			puppet = RCT
+			set_autonomy = { target = RCT autonomy_state = autonomy_satellite }
+			hidden_effect = {
+				GOY_POM_dialusides = {
+					set_nationality = RCT
+				}
+				RCT = {
+					add_country_leader_role = {
+						character = GOY_POM_dialusides
+						country_leader={
+							ideology=stalinism
+							traits={ ideological_crusader }
+							expire="1965.1.1.1"
+							id=-1
+							desc = NIM_dialusides_desc
+						}
+					}
+				    promote_character = {
+						character = GOY_POM_dialusides
+						ideology = stalinism
+					}
+					add_ideas = {
+						disarmed_nation_ara
+						POM_foreign_overlords
+					}
+					load_focus_tree = generic_focus
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 640
+						state = 641
+						state = 642
+						state = 643
+						state = 453
+						state = 454
+						state = 478
+						state = 604
+						state = 636
+						state = 644
+						state = 650
+						state = 455
+						state = 569
+						state = 571
+						state = 572
+						state = 603
+						state = 639
+					}
+				}
+				add_core_of = FBK
+				transfer_state_to = FBK
+			}
+			FBK = {
+				set_cosmetic_tag = FBK_ALLARD
+			}
+			puppet = FBK
+			set_autonomy = { target = FBK autonomy_state = autonomy_satellite }
+			hidden_effect = {
+				GOY_POM_comrade_applethorn = {
+					set_nationality = FBK
+				}
+				FBK = {
+					add_country_leader_role = {
+						character = GOY_POM_comrade_applethorn
+						country_leader={
+							ideology=stalinism
+							traits={  }
+							expire="1965.1.1.1"
+							id=-1
+						}
+					}
+				    promote_character = {
+						character = GOY_POM_comrade_applethorn
+						ideology = stalinism
+					}
+					add_ideas = {
+						disarmed_nation_ara
+						POM_foreign_overlords
+					}
+					load_focus_tree = generic_focus
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2830,7 +4479,12 @@
 		prerequisite = { focus = POM_purge_allardists }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = 0.03
+			add_war_support = -0.25
+			swap_ideas = {
+				remove_idea = POM_world_revolution_1
+				add_idea = POM_fortress_griffonia
+			}
 		}
 	}
 	shared_focus = {
@@ -2851,7 +4505,16 @@
 		prerequisite = { focus = POM_revolution_on_one_continent }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					is_on_continent = asia
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				remove_resistance_target = 20
+			}
+			remove_ideas = POM_strange_occurences_1
 		}
 	}
 	shared_focus = {
@@ -2872,7 +4535,10 @@
 		prerequisite = { focus = POM_revolution_on_one_continent }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_total_control
+				add_idea = POM_dual_pillars
+			}
 		}
 	}
 	#########################
@@ -2909,7 +4575,14 @@
 		}
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_war_support = 0.05
 		}
 	}
 	shared_focus = {
@@ -2928,7 +4601,18 @@
 		prerequisite = { focus = POM_liberation_army }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 200
+				producer = POM
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_arty_2
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_ideas = POM_lessons_of_cervys
 		}
 	}
 	shared_focus = {
@@ -2947,7 +4631,17 @@
 		prerequisite = { focus = POM_liberation_army }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = POM
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_mot_3
+				bonus = 0.5
+				uses = 1
+				category = motorized
+			}
 		}
 	}
 	shared_focus = {
@@ -2966,7 +4660,14 @@
 		prerequisite = { focus = POM_liberation_army }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			remove_ideas = POM_disorganised_military
+			country_event = goy_pomovarra.38
 		}
 	}
 	shared_focus = {
@@ -2985,7 +4686,18 @@
 		prerequisite = { focus = POM_liberation_army }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = POM
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_infy_eq_2
+				bonus = 0.5
+				uses = 2
+				category = infantry_equipment
+			}
+			country_event = goy_pomovarra.39
 		}
 	}
 	shared_focus = {
@@ -3004,7 +4716,12 @@
 		prerequisite = { focus = POM_liberation_army }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_race_his
+				bonus = 0.5
+				uses = 3
+				category = race_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -3024,11 +4741,18 @@
 		prerequisite = { focus = POM_military_motorisation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			672 = {
+				add_building_construction = {
+					type = arms_factory #industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			#todo enable material design company “K-Cannon” (+5% artillery hard attack, -10% artillery production cost, +15% artillery research speed), enable “Uthr Tank Factory” armor design company (-5% all types of armor production cost, +15% armor research speed),
 		}
 	}
 	shared_focus = {
-		id = POM_children_pomovarra_native
+		id = POM_children_pomovarra_native #todo change name
 		icon = GFX_goal_unknown
 		x = -1
 		y = 2
@@ -3043,7 +4767,7 @@
 		prerequisite = { focus = POM_formalise_our_doctrine }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_hardened_soldiers
 		}
 	}
 	shared_focus = {
@@ -3062,7 +4786,16 @@
 		prerequisite = { focus = POM_formalise_our_doctrine }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_race_his
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_ideas = POM_established_korps
+			every_unit_leader = {	
+				add_planning = 1
+			}
 		}
 	}
 	shared_focus = {
@@ -3082,7 +4815,18 @@
 		prerequisite = { focus = POM_learn_from_the_past }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = POM
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_supp_2
+				bonus = 0.5
+				uses = 2
+				category = support_equipment
+			}
+			add_ideas = POM_medical_corps
 		}
 	}
 	shared_focus = {
@@ -3102,7 +4846,13 @@
 		mutually_exclusive = { focus = POM_resist_any_damage }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_tank_2
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_ideas = POM_mobile_corps
 		}
 	}
 	shared_focus = {
@@ -3122,7 +4872,13 @@
 		prerequisite = { focus = POM_establish_the_mic }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_tank_2
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+			add_ideas = POM_steel_behemoths
 		}
 	}
 	shared_focus = {
@@ -3142,7 +4898,12 @@
 		prerequisite = { focus = POM_reform_officer_corps }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_research_slot = 1
+			army_experience = 50
+			swap_ideas = {
+				remove_idea = POM_established_korps
+				add_idea = POM_new_officer_gen
+			}
 		}
 	}
 	shared_focus = {
@@ -3162,7 +4923,8 @@
 		mutually_exclusive = { focus = POM_expand_elite_formations }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 25000
+			add_ideas = POM_reservist_system
 		}
 	}
 	shared_focus = {
@@ -3182,7 +4944,13 @@
 		mutually_exclusive = { focus = POM_mandatory_military_service }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_race_his
+				bonus = 1
+				uses = 2
+				category = knights_tech
+			}
+			add_ideas = POM_knights_of_pom
 		}
 	}
 	shared_focus = {
@@ -3190,7 +4958,7 @@
 		icon = GFX_goal_unknown
 		x = -3
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_liberation_army
 		ai_will_do = {
 			factor = 10
@@ -3201,7 +4969,19 @@
 		prerequisite = { focus = POM_outrun_our_enemies focus = POM_resist_any_damage }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_arty_2
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_tank_2
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_ideas = POM_efficient_mil_industry
 		}
 	}
 	shared_focus = {
@@ -3209,7 +4989,7 @@
 		icon = GFX_goal_unknown
 		x = -1
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_liberation_army
 		ai_will_do = {
 			factor = 10
@@ -3221,7 +5001,10 @@
 		mutually_exclusive = { focus = POM_champions_of_pomovarra }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_freedom_or_death
+				add_idea = POM_freedom_or_death_1
+			}
 		}
 	}
 	shared_focus = {
@@ -3229,7 +5012,7 @@
 		icon = GFX_goal_unknown
 		x = 1
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_liberation_army
 		ai_will_do = {
 			factor = 10
@@ -3241,7 +5024,10 @@
 		mutually_exclusive = { focus = POM_rather_death_than_dishonour }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_new_officer_gen
+				add_idea = POM_new_officer_gen_1
+			}
 		}
 	}
 	shared_focus = {
@@ -3249,7 +5035,7 @@
 		icon = GFX_goal_unknown
 		x = 3
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_liberation_army
 		ai_will_do = {
 			factor = 10
@@ -3260,7 +5046,13 @@
 		prerequisite = { focus = POM_mandatory_military_service focus = POM_expand_elite_formations }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_race_mag
+				bonus = 0.5
+				uses = 2
+				category = magical_tech
+			}
+			#todo unlock materiel design company “Direndall Arms” (Magical weapons +10% reliability, magical weapons +5% soft attack, Magical weapons +5% hard attack, +10% weapons and equipment research speed)
 		}
 	}
 	#
@@ -3299,7 +5091,16 @@
 		
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_industry_2
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			swap_ideas = {
+				remove_idea = POM_economic_devastation
+				add_idea = POM_economic_reconstruction
+			}
 		}
 	}
 	shared_focus = {
@@ -3318,7 +5119,20 @@
 		prerequisite = { focus = POM_rebuild_our_economy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			672 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			501 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3332,12 +5146,42 @@
 			factor = 10
 		}
 		available = {
-			
+			NOT = {
+				has_war_with = HEL
+			}
+		}
+		bypass = {
+			AND = {
+				NOT = {
+					owns_state = 493
+				}
+				NOT = {
+					HEL = { owns_state = 493 }
+				}
+			}
 		}
 		prerequisite = { focus = POM_country_roads }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					HEL = { owns_state = 493 }
+				}
+				HEL = {
+					country_event = goy_pomovarra.40
+				}
+			}
+			IF = {
+				limit = {
+					owns_state = 493
+				}
+				build_railway = {
+					level = 1
+					start_province = 8073
+					target_province = 1973
+				}
+				remove_ideas = POM_flowenian_chokepoint
+			}
 		}
 	}
 	shared_focus = {
@@ -3356,7 +5200,12 @@
 		prerequisite = { focus = POM_country_roads }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 25
+				producer = POM
+			}
+			#todo unlock decision set “Expand Transport Network”
 		}
 	}
 	shared_focus = {
@@ -3364,7 +5213,7 @@
 		icon = GFX_goal_unknown
 		x = -7
 		y = 3
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3376,7 +5225,24 @@
 		prerequisite = { focus = POM_infrastructure_investments }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_skyaluzzo_port
+			421 = {
+				add_building_construction = {
+				    type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3395,7 +5261,12 @@
 		prerequisite = { focus = POM_rebuild_our_economy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_extract_1
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -3414,7 +5285,16 @@
 		prerequisite = { focus = POM_riches_of_the_land }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			672 = {
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3433,7 +5313,18 @@
 		prerequisite = { focus = POM_riches_of_the_land }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			501 = {
+				add_resource = {
+					type = steel
+					amount = 13
+				}
+			}
+			672 = {
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3453,7 +5344,42 @@
 		prerequisite = { focus = POM_refurbish_steelworks }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = -50
+			501 = {
+				add_building_construction = {
+				    type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = fuel_silos
+					}
+				}
+				set_technology = {
+					fuel_silos = 1
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = synth_oil_experiments
+					}
+				}
+				set_technology = {
+					synth_oil_experiments = 1
+				}
+				ELSE = {
+					add_tech_bonus = {
+						name = GOY_bonus_industry_2
+						bonus = 0.5
+						uses = 2
+						category = synth_resources
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3473,7 +5399,12 @@
 		prerequisite = { focus = POM_refurbish_steelworks }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			672 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3481,7 +5412,7 @@
 		icon = GFX_goal_unknown
 		x = -6
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3492,7 +5423,11 @@
 		prerequisite = { focus = POM_rubber_substitutes }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = crystals
+				amount = 1
+			}
 		}
 	}
 	shared_focus = {
@@ -3500,7 +5435,7 @@
 		icon = GFX_goal_unknown
 		x = -4
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3511,7 +5446,7 @@
 		prerequisite = { focus = POM_rubber_substitutes }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Enable “Mines Expansion” decision set
 		}
 	}
 	shared_focus = {
@@ -3530,7 +5465,21 @@
 		prerequisite = { focus = POM_black_gold }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_completed_focus = POM_steady_ahead
+				}
+				remove_ideas = POM_economic_reconstruction_2
+				add_ideas = POM_raw_materials_surplus
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = POM_economic_reconstruction
+					add_idea = POM_economic_reconstruction_1
+				}
+				custom_effect_tooltip = POM_TT_autarky_first
+				show_ideas_tooltip = POM_booming_industry
+			}
 		}
 	}
 	shared_focus = {
@@ -3588,7 +5537,7 @@
 		prerequisite = { focus = POM_adult_literacy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			Improve_Science_Base = yes
 		}
 	}
 	shared_focus = {
@@ -3607,7 +5556,7 @@
 		prerequisite = { focus = POM_adult_literacy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -3615,7 +5564,7 @@
 		icon = GFX_goal_unknown
 		x = 0
 		y = 4
-		cost = 5.00
+		cost = 8.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3627,11 +5576,13 @@
 		prerequisite = { focus = POM_technical_research_institute }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = -50
+			add_stability = 0.03
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
-		id = POM_economy_reforged
+		id = POM_economy_reforged #attract investors
 		icon = GFX_goal_unknown
 		x = -1
 		y = 5
@@ -3649,11 +5600,41 @@
 		prerequisite = { focus = POM_steady_ahead }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_idea = POM_booming_industry
+				}
+				swap_ideas = {
+					remove_idea = POM_booming_industry
+					add_idea = POM_booming_economy
+				}
+			}
+			IF = {
+				limit = {
+					has_idea = POM_raw_materials_surplus
+				}
+				swap_ideas = {
+					remove_idea = POM_raw_materials_surplus
+					add_idea = POM_extraction_economy
+				}
+			}
+			IF = {
+				limit = {
+					AND = {
+						NOT = {
+							has_idea = POM_booming_industry
+						}
+						NOT = {
+							has_idea = POM_raw_materials_surplus
+						}
+					}
+				}
+				custom_effect_tooltip = POM_TT_better_economy_idea
+			}
 		}
 	}
 	shared_focus = {
-		id = POM_towards_the_future
+		id = POM_towards_the_future #Provide Free education
 		icon = GFX_goal_unknown
 		x = 1
 		y = 5
@@ -3671,7 +5652,7 @@
 		prerequisite = { focus = POM_steady_ahead }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_innovation_drive
 		}
 	}
 	shared_focus = {
@@ -3690,7 +5671,14 @@
 		prerequisite = { focus = POM_rebuild_our_economy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			501 = {
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			increase_society_development_with_tt = yes
 		}
 	}
 	shared_focus = {
@@ -3709,7 +5697,16 @@
 		prerequisite = { focus = POM_due_industrialisation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = -50
+			501 = {
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			decrease_poverty = yes
+			#todo enable industrial concern “Cam Constructions” (+10% industrial research speed, +10% construction speed)
 		}
 	}
 	shared_focus = {
@@ -3728,7 +5725,14 @@
 		prerequisite = { focus = POM_due_industrialisation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			501 = {
+				add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			#todo enable material design company “Fregneux Armory” (+5% infantry equipment reliability, +5% infantry equipment soft attack, -5% infantry equipment cost, +10% weapons and equipment research speed)
 		}
 	}
 	shared_focus = {
@@ -3748,7 +5752,22 @@
 		prerequisite = { focus = POM_modernise_fregneux_armory }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = -50
+			501 = {
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			672 = {
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			increase_society_development_with_tt = yes
 		}
 	}
 	shared_focus = {
@@ -3762,13 +5781,25 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_state = 442
 		}
 		prerequisite = { focus = POM_cervys_industrial_zone }
 		prerequisite = { focus = POM_modernise_fregneux_armory }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.43
+			442 = {
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3787,7 +5818,21 @@
 		prerequisite = { focus = POM_expand_heavy_industry }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_completed_focus = POM_strive_for_autarky
+				}
+				remove_ideas = POM_economic_reconstruction_1
+				add_ideas = POM_booming_industry
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = POM_economic_reconstruction
+					add_idea = POM_economic_reconstruction_2
+				}
+				custom_effect_tooltip = POM_TT_ahead_first
+				show_ideas_tooltip = POM_raw_materials_surplus
+			}
 		}
 	}
 	shared_focus = {
@@ -3795,7 +5840,7 @@
 		icon = GFX_goal_unknown
 		x = 4
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3806,7 +5851,7 @@
 		prerequisite = { focus = POM_integrate_flowenian_industry }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Enable decision set “Arcturius Plan”
 		}
 	}
 	shared_focus = {
@@ -3814,7 +5859,7 @@
 		icon = GFX_goal_unknown
 		x = 6
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3825,7 +5870,19 @@
 		prerequisite = { focus = POM_integrate_flowenian_industry }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_industry_1
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_electronics_1
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			Improve_Science_Base = yes
 		}
 	}
 	shared_focus = {
@@ -3844,7 +5901,15 @@
 		prerequisite = { focus = POM_rebuild_our_economy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 672
+						state = 501
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+			}
 		}
 	}
 	shared_focus = {
@@ -3863,7 +5928,7 @@
 		prerequisite = { focus = POM_clear_the_land }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.44
 		}
 	}
 	shared_focus = {
@@ -3882,7 +5947,8 @@
 		prerequisite = { focus = POM_clear_the_land }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = -50
+			decrease_poverty = yes
 		}
 	}
 	shared_focus = {
@@ -3890,7 +5956,7 @@
 		icon = GFX_goal_unknown
 		x = 7
 		y = 3
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_rebuild_our_economy
 		ai_will_do = {
 			factor = 10
@@ -3902,7 +5968,30 @@
 		prerequisite = { focus = POM_welfare_programs }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					501 = {
+						has_state_category = large_town
+					}
+				}
+				501 = {
+					set_state_category = large_city
+				}
+			}
+			ELSE = {
+				501 = {
+					set_state_category = large_town
+				}
+			}
+			501 = {
+				add_manpower = 200000	
+			}
+			672 = {
+				add_manpower = 150000
+				set_state_category = town
+			}
+			#add_ideas = POM_urban_dev_policies #MEEEH
+			decrease_poverty = yes
 		}
 	}
 	#
@@ -3923,7 +6012,15 @@
 		
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			air_experience = 25
+			
+			501 = {
+				add_building_construction = {
+				    type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3942,7 +6039,23 @@
 		prerequisite = { focus = POM_expand_pomazhon_airfield }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_medium_air_bonus
+				bonus = 0.5
+				uses = 2
+				category = medium_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_2
+					bonus = 1
+					uses = 1
+					category = cat_air_bombs
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3961,7 +6074,13 @@
 		prerequisite = { focus = POM_expand_pomazhon_airfield }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			air_experience = 25
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_staff_training
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 	shared_focus = {
@@ -3980,7 +6099,23 @@
 		prerequisite = { focus = POM_expand_pomazhon_airfield }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_fighter_bonus
+				bonus = 0.5
+				uses = 2
+				category = light_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_2
+					bonus = 1
+					uses = 2
+					category = plane_modules_tech
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3999,7 +6134,23 @@
 		prerequisite = { focus = POM_bring_the_bombers }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_heavy_air_bonus
+				bonus = 0.5
+				uses = 2
+				category = heavy_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_0
+					bonus = 0.75
+					uses = 1
+					category = cat_air_bombs
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4019,7 +6170,13 @@
 		prerequisite = { focus = POM_train_new_pilots }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_pom_aces
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_military_exercises
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 	shared_focus = {
@@ -4039,7 +6196,20 @@
 		prerequisite = { focus = POM_finance_new_fighters }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			501 = {
+				add_building_construction = {
+				    type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			672 = {
+				add_building_construction = {
+				    type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4059,7 +6229,25 @@
 		prerequisite = { focus = POM_finance_new_fighters }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_2
+					bonus = 0.75
+					uses = 3
+					category = plane_modules_tech
+				}
+			}
+			ELSE = {
+				add_tech_bonus = {
+					name = GOY_bonus_air_0
+					bonus = 1
+					uses = 1
+					category = jet_technology
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4079,7 +6267,12 @@
 		prerequisite = { focus = POM_aces_in_the_skies }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_nuclear_1
+				bonus = 1
+				uses = 1
+				category = nuclear
+			}
 		}
 	}
 	shared_focus = {
@@ -4099,7 +6292,31 @@
 		prerequisite = { focus = POM_expand_air_defences }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = radio_detection
+					}
+				}
+				set_technology = {
+					radio_detection = 1
+				}
+			}
+			ELSE = {
+				add_tech_bonus = {
+					name = GOY_bonus_radar_0
+					bonus = 1
+					uses = 1
+					category = radar_tech
+				}
+			}
+			501 = {
+				add_building_construction = {
+				    type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4119,7 +6336,12 @@
 		prerequisite = { focus = POM_continue_aircraft_development }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_rocketry_0
+				bonus = 0.5
+				uses = 2
+				category = rocketry
+			}
 		}
 	}
 	shared_focus = {
@@ -4140,7 +6362,24 @@
 		prerequisite = { focus = POM_radar_research }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_fighter_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_3
+					bonus = 0.75
+					uses = 1
+					category = plane_modules_tech
+				}
+			}
+			add_ideas = POM_nimble_and_deadly
 		}
 	}
 	shared_focus = {
@@ -4161,7 +6400,24 @@
 		prerequisite = { focus = POM_roaring_rockets }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_heavy_air_bonus
+				bonus = 0.5
+				uses = 1
+				category = heavy_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_air_3
+					bonus = 0.75
+					uses = 1
+					category = plane_modules_tech
+				}
+			}
+			add_ideas = POM_bombastic_bombs
 		}
 	}
 	#
@@ -4176,11 +6432,30 @@
 			factor = 10
 		}
 		available = {
-			
+			any_owned_state = {
+				is_coastal = yes
+			}
 		}
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			navy_experience = 25
+			add_tech_bonus = {
+				name = GOY_bonus_ship_0
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_0
+					bonus = 0.75
+					uses = 2
+					category = ship_modules_tech
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4199,7 +6474,13 @@
 		prerequisite = { focus = POM_call_of_the_ocean }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			navy_experience = 25
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_staff_training
+				cost_reduction = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
 		}
 	}
 	shared_focus = {
@@ -4218,7 +6499,16 @@
 		prerequisite = { focus = POM_call_of_the_ocean }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				navy_experience = 25
+			}
+			add_timed_idea = {
+				idea = POM_naval_expansion_programme
+				days = 360
+			}
 		}
 	}
 	shared_focus = {
@@ -4237,7 +6527,11 @@
 		prerequisite = { focus = POM_call_of_the_ocean }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = convoy_1
+				amount = 100
+				producer = POM
+			}
 		}
 	}
 	shared_focus = {
@@ -4257,7 +6551,23 @@
 		prerequisite = { focus = POM_ramp_up_production }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_smrn_2
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_1
+					bonus = 1
+					uses = 1
+					category = cat_torpedoes
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4278,7 +6588,23 @@
 		prerequisite = { focus = POM_procure_transport_vessels }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_crus_2
+				bonus = 0.5
+				uses = 2
+				category = cl_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_1
+					bonus = 1
+					uses = 1
+					category = cat_ship_medium_battery
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4298,7 +6624,29 @@
 		prerequisite = { focus = POM_procure_transport_vessels }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_tech_bonus = {
+				name = GOY_bonus_dstr_2
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_1
+					bonus = 0.5
+					uses = 1
+					category = naval_mines
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_1
+					bonus = 0.5
+					uses = 1
+					category = asw_tech
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4306,7 +6654,7 @@
 		icon = GFX_goal_unknown
 		x = -1
 		y = 3
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_call_of_the_ocean
 		ai_will_do = {
 			factor = 10
@@ -4319,7 +6667,24 @@
 		prerequisite = { focus = POM_crucial_cruisers }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_battleship_primacy
+			add_tech_bonus = {
+				name = GOY_bonus_bshi_2
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = GOY_bonus_ship_1
+					bonus = 1
+					uses = 1
+					category = cat_ship_heavy_battery
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4327,7 +6692,7 @@
 		icon = GFX_goal_unknown
 		x = 1
 		y = 3
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_call_of_the_ocean
 		ai_will_do = {
 			factor = 10
@@ -4340,7 +6705,19 @@
 		prerequisite = { focus = POM_diverse_destroyers }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_carrier_primacy
+			add_tech_bonus = {
+				name = GOY_bonus_carr_2
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = GOY_bonus_cv_air_bonus
+				bonus = 1
+				uses = 1
+				category = naval_air
+			}
 		}
 	}
 	shared_focus = {
@@ -4348,7 +6725,7 @@
 		icon = GFX_goal_unknown
 		x = 0
 		y = 4
-		cost = 5.00
+		cost = 7.00
 		relative_position_id = POM_call_of_the_ocean
 		ai_will_do = {
 			factor = 10
@@ -4360,7 +6737,34 @@
 		prerequisite = { focus = POM_commission_carriers }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				name = GOY_bonus_staff_training
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			IF = {
+				limit = {
+					has_idea = POM_battleship_primacy
+				}
+				swap_ideas = {
+					remove_idea = POM_battleship_primacy
+					add_idea = POM_conquest_of_the_seas_bb
+				}
+			}
+			IF_ELSE = {
+				limit = {
+					has_idea = POM_carrier_primacy
+				}
+				swap_ideas = {
+					remove_idea = POM_battleship_primacy
+					add_idea = POM_conquest_of_the_seas_cv
+				}
+			}
+			ELSE = {
+				add_ideas = POM_conquest_of_the_seas
+			}
 		}
 	}
 	#
@@ -4369,7 +6773,7 @@
 		icon = GFX_goal_GOY_pom_ar_chas
 		x = 13
 		y = 0
-		cost = 5.00
+		cost = 1.00
 		
 		ai_will_do = {
 			factor = 10
@@ -4383,7 +6787,7 @@
 		
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			
 		}
 	}
 	shared_focus = {
@@ -4402,7 +6806,11 @@
 		prerequisite = { focus = POM_ar_chas }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = POM_internal_divisions
+				add_idea = POM_internal_divisions_1
+			}
 		}
 	}
 	shared_focus = {
@@ -4421,7 +6829,13 @@
 		prerequisite = { focus = POM_ar_chas }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = 0.05
+			add_tech_bonus = {
+				name = GOY_bonus_race_his
+				bonus = 1
+				uses = 1
+				category = race_tech
+			}
 		}
 	}
 	shared_focus = {
@@ -4440,7 +6854,10 @@
 		prerequisite = { focus = POM_unify_the_movement }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_internal_divisions_1
+				add_idea = POM_internal_divisions_2
+			}
 		}
 	}
 	shared_focus = {
@@ -4460,7 +6877,18 @@
 		prerequisite = { focus = POM_cultural_recovery }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+			}
 		}
 	}
 	shared_focus = {
@@ -4479,7 +6907,8 @@
 		prerequisite = { focus = POM_cultural_recovery }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 5000
+			add_war_support = 0.05
 		}
 	}
 	shared_focus = {
@@ -4498,7 +6927,7 @@
 		prerequisite = { focus = POM_organise_civilian_gov }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.45
 		}
 	}
 	shared_focus = {
@@ -4518,7 +6947,35 @@
 		prerequisite = { focus = POM_galvanise_the_pop_native }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			division_template = {
+				name = "Volunteer Brigade"
+				
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"Westkeep Volunteers\" division_template = \"Volunteer Brigade\" start_experience_factor = 0.5 start_equipment_factor = 0.65"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Verenian Volunteers\" division_template = \"Volunteer Brigade\" start_experience_factor = 0.5 start_equipment_factor = 0.65"
+					owner = ROOT
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4534,11 +6991,18 @@
 		available = {
 			
 		}
+		bypass = {
+			FLO = { exists = no }
+		}
 		prerequisite = { focus = POM_empty_armories }
 		prerequisite = { focus = POM_galvanise_the_pop_native }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			FLO = {
+				add_stability = -0.1
+				add_war_support = -0.1
+			}
+			add_ideas = POM_flowenian_fifth_column
 		}
 	}
 	shared_focus = {
@@ -4557,7 +7021,11 @@
 		prerequisite = { focus = POM_cervys_trials }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_stability = 0.05
 		}
 	}
 	shared_focus = {
@@ -4568,16 +7036,26 @@
 		cost = 5.00
 		relative_position_id = POM_ar_chas
 		ai_will_do = {
-			factor = 10
+			base = 10
+			modifier = {
+				has_war = yes
+				add = -9
+			}
 		}
 		available = {
 			
+		}
+		bypass = {
+			FLO = { exists = no }
 		}
 		prerequisite = { focus = POM_gather_volunteer_brigades }
 		prerequisite = { focus = POM_fifth_column }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			declare_war_on = { 
+		        type = annex_everything
+	            target = FLO
+			}
 		}
 	}
 	shared_focus = {
@@ -4591,13 +7069,13 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_state = 442
 		}
 		prerequisite = { focus = POM_sideline_the_left }
 		prerequisite = { focus = POM_rip_off_the_petals }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.46
 		}
 	}
 	# Camriz focus tree
@@ -4606,7 +7084,7 @@
 		icon = GFX_goal_GOY_pom_camriz_guns
 		x = 14
 		y = 0
-		cost = 5.00
+		cost = 1.00
 		ai_will_do = {
 			factor = 10
 		}
@@ -4618,7 +7096,12 @@
 		}
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			hidden_effect = {
+			set_variable = {
+				var = var_goy_camrizdem
+				value = 0
+			}
+			}
 		}
 	}
 	shared_focus = {
@@ -4626,7 +7109,7 @@
 		icon = GFX_goal_unknown
 		x = -2
 		y = 1
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4637,7 +7120,7 @@
 		prerequisite = { focus = POM_our_past_and_future }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.67
 		}
 	}
 	shared_focus = {
@@ -4645,7 +7128,7 @@
 		icon = GFX_goal_unknown
 		x = 0
 		y = 1
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4656,7 +7139,7 @@
 		prerequisite = { focus = POM_our_past_and_future }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.68
 		}
 	}
 	shared_focus = {
@@ -4664,7 +7147,7 @@
 		icon = GFX_goal_unknown
 		x = 2
 		y = 1
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4675,7 +7158,7 @@
 		prerequisite = { focus = POM_our_past_and_future }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.69
 		}
 	}
 	shared_focus = {
@@ -4683,7 +7166,7 @@
 		icon = GFX_goal_unknown
 		x = -1
 		y = 2
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4695,7 +7178,7 @@
 		prerequisite = { focus = POM_our_flowenian_foes }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.70
 		}
 	}
 	shared_focus = {
@@ -4703,7 +7186,7 @@
 		icon = GFX_goal_unknown
 		x = 1
 		y = 2
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4715,7 +7198,7 @@
 		prerequisite = { focus = POM_of_ponies_and_war }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.71
 		}
 	}
 	shared_focus = {
@@ -4723,7 +7206,7 @@
 		icon = GFX_goal_GOY_pom_on_the_crossroads
 		x = 0
 		y = 3
-		cost = 5.00
+		cost = 1.00
 		relative_position_id = POM_our_past_and_future
 		ai_will_do = {
 			factor = 10
@@ -4735,7 +7218,22 @@
 		prerequisite = { focus = POM_legacy_of_the_revolution }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			custom_effect_tooltip = POM_TT_camriz_future
+			IF = {
+				limit = {
+					check_variable = { var_goy_camrizdem < 3 }
+				}
+				set_country_flag = POM_FLAG_camriz_won_NA
+				hidden_effect = {
+					country_event = goy_pomovarra.72
+				}
+			}
+			ELSE = {
+				set_country_flag = POM_FLAG_camriz_won_DEM
+				hidden_effect = {
+					country_event = goy_pomovarra.73
+				}
+			}
 		}
 	}
 	# Camriz neutrality
@@ -4744,7 +7242,7 @@
 		icon = GFX_goal_GOY_pom_fia_connection
 		x = -1
 		y = 1
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_on_the_crossroads
 		ai_will_do = {
 			factor = 10
@@ -4758,7 +7256,25 @@
 		prerequisite = { focus = POM_on_the_crossroads }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					OR  ={
+						FEA = {
+							has_government = fascism
+						}
+						FEA = {
+							has_country_leader = {
+								ruling_only = yes 
+								character = FEA_godfried_heeren
+							}
+						}
+					}
+				}
+				country_event = goy_pomovarra.74
+			}
+			ELSE = {
+				country_event = goy_pomovarra.75
+			}
 		}
 	}
 	shared_focus = {
@@ -4780,7 +7296,8 @@
 		prerequisite = { focus = POM_on_the_crossroads }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 50
+			add_war_support = 0.05
 		}
 	}
 	shared_focus = {
@@ -4799,7 +7316,10 @@
 		prerequisite = { focus = POM_feathisian_connection }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			JER = {
+				country_event = goy_pomovarra.78
+			}
+			add_ideas = POM_westkeep_infiltration
 		}
 	}
 	shared_focus = {
@@ -4815,10 +7335,33 @@
 		available = {
 			
 		}
+		bypass = {
+			HEL = { exists = no }
+			AET = { exists = no }
+		}
+		will_lead_to_war_with = HEL
+		will_lead_to_war_with = AET
 		prerequisite = { focus = POM_feathisian_connection }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					HEL = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = HEL
+				}
+			}
+			IF = {
+				limit = {
+					AET = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = AET
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4826,18 +7369,38 @@
 		icon = GFX_goal_unknown
 		x = -5
 		y = 3
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_on_the_crossroads
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
+			owns_state = 493
+			owns_state = 494
+			JER = {
+				exists = no
+				is_subject = no
+			}
+			FEA = {
+				exists = yes
+				has_government = fascism
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = FEA_godfried_heeren
+					}
+				}
+			}
+			NOT = {
+				has_completed_focus = POM_on_our_own
+			}
 		}
 		prerequisite = { focus = POM_our_friends_in_westkeep }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			FEA = {
+				country_event = goy_pomovarra.79
+			}
 		}
 	}
 	shared_focus = {
@@ -4856,7 +7419,9 @@
 		prerequisite = { focus = POM_bronze_age_of_pomovarra }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 50000
+			EAW_raise_conscription_law = yes
+			add_ideas = POM_mandatory_military_training
 		}
 	}
 	shared_focus = {
@@ -4875,7 +7440,11 @@
 		prerequisite = { focus = POM_bronze_age_of_pomovarra }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
 		}
 	}
 	shared_focus = {
@@ -4891,10 +7460,61 @@
 		available = {
 			
 		}
+		bypass = {
+			JER = { exists = no }
+			JEB = { exists = no }
+			JRR = { exists = no }
+			JFT = { exists = no }
+			VIN = { exists = no }
+		}
+		will_lead_to_war_with = JER
+		will_lead_to_war_with = JEB
+		will_lead_to_war_with = JRR
+		will_lead_to_war_with = JFT
+		will_lead_to_war_with = VIN
 		prerequisite = { focus = POM_our_friends_in_westkeep }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			declare_war_on = { 
+		        type = annex_everything
+	            target = JER
+			}
+			IF = {
+				limit = {
+					JEB = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JEB
+				}
+			}
+			IF = {
+				limit = {
+					JRR = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JRR
+				}
+			}
+			IF = {
+				limit = {
+					JFT = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JFT
+				}
+			}
+			IF = {
+				limit = {
+					VIN = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = VIN
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -4913,7 +7533,8 @@
 		prerequisite = { focus = POM_war_for_greifwald }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_state_core = 493
+			add_state_core = 494
 		}
 	}
 	shared_focus = {
@@ -4933,7 +7554,10 @@
 		prerequisite = { focus = POM_make_amends_to_rep }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = -0.05
+			add_ideas = POM_old_believers
+			custom_effect_tooltip = POM_TT_luca_advisor
+			show_ideas_tooltip = POM_luca_advisor
 		}
 	}
 	shared_focus = {
@@ -4953,7 +7577,7 @@
 		prerequisite = { focus = POM_make_amends_to_rep }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_councils_guidance
 		}
 	}
 	shared_focus = {
@@ -4973,7 +7597,7 @@
 		prerequisite = { focus = POM_make_amends_to_rep }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.83
 		}
 	}
 	shared_focus = {
@@ -4981,18 +7605,23 @@
 		icon = GFX_goal_unknown
 		x = -5
 		y = 4
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_on_the_crossroads
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
+			has_war_with = JER
+			surrender_progress > 0.2
 		}
 		prerequisite = { focus = POM_war_of_vengeance }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 50000
+			add_timed_idea = {
+				idea = POM_we_die_standing
+				days = 360
+			}
 		}
 	}
 	shared_focus = {
@@ -5006,13 +7635,28 @@
 			factor = 10
 		}
 		available = {
-			
+			377 = {	
+				owns_or_subject_of = yes
+			}
+		}
+		will_lead_to_war_with = ERI
+		will_lead_to_war_with = AVI
+		bypass = {
+			ERI = { exists = NO }
+			AVI = { exists = NO }
 		}
 		prerequisite = { focus = POM_war_of_vengeance }
 		prerequisite = { focus = POM_integrate_adelart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			create_wargoal = { 
+		        type = annex_everything
+	            target = ERI
+			}
+			create_wargoal = { 
+		        type = annex_everything
+	            target = AVI
+			}
 		}
 	}
 	shared_focus = {
@@ -5020,19 +7664,21 @@
 		icon = GFX_goal_unknown
 		x = -1
 		y = 4
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_on_the_crossroads
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
+			377 = {	
+				owns_or_subject_of = yes
+			}
 		}
 		prerequisite = { focus = POM_war_of_vengeance }
 		prerequisite = { focus = POM_integrate_adelart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.84
 		}
 	}
 	shared_focus = {
@@ -5052,7 +7698,7 @@
 		prerequisite = { focus = POM_the_grand_council }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_claws_in_the_dark
 		}
 	}
 	shared_focus = {
@@ -5073,7 +7719,7 @@
 		prerequisite = { focus = POM_the_grand_council }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_pomovarran_supremacy
 		}
 	}
 	shared_focus = {
@@ -5093,7 +7739,7 @@
 		prerequisite = { focus = POM_one_language_one_nation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_honour_guard
 		}
 	}
 	shared_focus = {
@@ -6142,7 +8788,7 @@
 	}
 	shared_focus = {
 		id = POM_all_griffons_can_dream
-		icon = GFX_goal_unknown
+		icon = GFX_goal_GOY_pom_griffons_dream
 		x = 0
 		y = 5
 		cost = 5.00
@@ -6172,14 +8818,14 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_state = 442
 		}
 		allow_branch = {
 			has_country_flag = POM_FLAG_morel_won
 		}
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.50
 		}
 	}
 	shared_focus = {
@@ -6200,7 +8846,10 @@
 		}
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			442 = {
+				add_core_of = POM
+			}
+			country_event = goy_pomovarra.51
 		}
 	}
 	shared_focus = {
@@ -6219,7 +8868,12 @@
 		prerequisite = { focus = POM_our_glorious_past }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_political_power = -50
+			add_ideas = POM_clan_system
 		}
 	}
 	shared_focus = {
@@ -6238,7 +8892,12 @@
 		prerequisite = { focus = POM_our_glorious_past }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_political_power = -50
+			add_ideas = POM_linguistic_reform
 		}
 	}
 	
@@ -6258,7 +8917,15 @@
 		prerequisite = { focus = POM_the_poisonous_flower }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
 		}
 	}
 	
@@ -6278,7 +8945,10 @@
 		prerequisite = { focus = POM_the_poisonous_flower }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			create_wargoal = { 
+		        type = annex_everything
+	            target = HEL
+			}
 		}
 	}
 	shared_focus = {
@@ -6297,7 +8967,11 @@
 		prerequisite = { focus = POM_reestablish_the_clan_system }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_ideas = POM_fascism_propaganda
 		}
 	}
 	shared_focus = {
@@ -6317,7 +8991,34 @@
 		prerequisite = { focus = POM_purify_the_language }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			division_template = {
+				name = "Boar Knights Division"
+				
+				regiments = {
+					knights = { x = 0 y = 0 }
+					knights = { x = 0 y = 1 }
+					knights = { x = 0 y = 2 }
+					knights = { x = 1 y = 0 }
+					knights = { x = 1 y = 1 }
+					knights = { x = 1 y = 2 }
+					knights = { x = 2 y = 0 }
+					knights = { x = 2 y = 1 }
+					knights = { x = 2 y = 2 }
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"Chosen of Arcturius\" division_template = \"Boar Knights Division\" start_experience_factor = 0.9 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6333,13 +9034,31 @@
 		available = {
 			
 		}
+		bypass = {
+			JER = { exists = no }
+		}
 		prerequisite = { focus = POM_reestablish_the_clan_system }
 		prerequisite = { focus = POM_purify_the_language }
 		prerequisite = { focus = POM_slander_the_PPP }
 		prerequisite = { focus = POM_reclaim_adelart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_owned_state = {
+				limit = {
+					any_neighbor_state = {
+						is_owned_by = JER
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6353,13 +9072,28 @@
 			factor = 10
 		}
 		available = {
-			
+			#AET
+			owns_state = 436
+			owns_state = 457
+			owns_state = 495
+			owns_state = 496
+			#GEL
+			owns_state = 493
+			owns_state = 494
+			#AVI
+			owns_state = 470
+			#ERI
+			owns_state = 500
+			owns_state = 401
+			owns_state = 673
 		}
 		prerequisite = { focus = POM_slander_the_PPP }
 		prerequisite = { focus = POM_reclaim_adelart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 100
+			add_stability = 0.03
+			#todo Unlock “Integrate Outer Provinces” decision set
 		}
 	}
 	shared_focus = {
@@ -6378,7 +9112,10 @@
 		prerequisite = { focus = POM_reclaim_adelart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			create_wargoal = { 
+		        type = annex_everything
+	            target = HEL
+			}
 		}
 	}
 	shared_focus = {
@@ -6398,7 +9135,7 @@
 		prerequisite = { focus = POM_boars_of_arcturius }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_way_of_warrior
 		}
 	}
 	shared_focus = {
@@ -6406,7 +9143,7 @@
 		icon = GFX_goal_unknown
 		x = 2
 		y = 3
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_glorious_past
 		ai_will_do = {
 			factor = 10
@@ -6414,10 +9151,61 @@
 		available = {
 			
 		}
+		bypass = {
+			JER = { exists = no }
+			JEB = { exists = no }
+			JRR = { exists = no }
+			JFT = { exists = no }
+			VIN = { exists = no }
+		}
+		will_lead_to_war_with = JER
+		will_lead_to_war_with = JEB
+		will_lead_to_war_with = JRR
+		will_lead_to_war_with = JFT
+		will_lead_to_war_with = VIN
 		prerequisite = { focus = POM_raise_the_bulwark }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			declare_war_on = { 
+		        type = annex_everything
+	            target = JER
+			}
+			IF = {
+				limit = {
+					JEB = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JEB
+				}
+			}
+			IF = {
+				limit = {
+					JRR = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JRR
+				}
+			}
+			IF = {
+				limit = {
+					JFT = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = JFT
+				}
+			}
+			IF = {
+				limit = {
+					VIN = { exists = yes }
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = VIN
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6431,13 +9219,22 @@
 			factor = 10
 		}
 		available = {
-			
+			377 = {	
+				owns_or_subject_of = yes
+			}
 		}
 		prerequisite = { focus = POM_reintegrate_old_pomovarra }
 		prerequisite = { focus = POM_reconquer_greifwald }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			create_wargoal = { 
+		        type = annex_everything
+	            target = ERI
+			}
+			create_wargoal = { 
+		        type = annex_everything
+	            target = AVI
+			}
 		}
 	}
 	shared_focus = {
@@ -6445,18 +9242,22 @@
 		icon = GFX_goal_unknown
 		x = 0
 		y = 4
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_glorious_past
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
+			has_war = yes
+		}
+		bypass = {
+			has_completed_focus = POM_city_of_darkness
 		}
 		prerequisite = { focus = POM_slay_the_great_maar }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_manpower = 50000
+			add_ideas = POM_final_war
 		}
 	}
 	shared_focus = {
@@ -6470,12 +9271,14 @@
 			factor = 10
 		}
 		available = {
-			
+			377 = {	
+				owns_or_subject_of = yes
+			}
 		}
 		prerequisite = { focus = POM_slay_the_great_maar }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.52
 		}
 	}
 	shared_focus = {
@@ -6483,18 +9286,21 @@
 		icon = GFX_goal_unknown
 		x = 4
 		y = 4
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_glorious_past
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
-			
+			has_war = yes
+		}
+		bypass = {
+			has_completed_focus = POM_city_of_darkness
 		}
 		prerequisite = { focus = POM_slay_the_great_maar }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_spoons_into_rifles
 		}
 	}
 	shared_focus = {
@@ -6502,7 +9308,7 @@
 		icon = GFX_goal_unknown
 		x = 2
 		y = 5
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_our_glorious_past
 		ai_will_do = {
 			factor = 10
@@ -6516,7 +9322,7 @@
 		prerequisite = { focus = POM_city_of_darkness }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			
 		}
 	}
 	shared_focus = {
@@ -6535,7 +9341,7 @@
 		prerequisite = { focus = POM_taking_the_mantle }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Release “Markh Realm” in provinces 435 and 502 and 472 using Rila tag for it. Make Eagleheart (aquileian general) its leader, name ruling party “Markh Administration”. Lock it into demilitarized nation and civilian economy laws.
 		}
 	}
 	shared_focus = {
@@ -6554,7 +9360,26 @@
 		prerequisite = { focus = POM_taking_the_mantle }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			every_state = {
+				limit = {
+					owns_or_subject_of = yes
+					OR = {
+						is_core_of = JER
+						is_core_of = JRR
+						is_core_of = JEB
+						is_core_of = JFT
+						is_core_of = VIN
+					}
+				}
+				add_manpower = -50000
+				damage_building = { type = industrial_complex damage = 1 }
+			}
+			add_stability = -0.05
+			add_political_power = 150
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
 		}
 	}
 	shared_focus = {
@@ -6573,7 +9398,9 @@
 		prerequisite = { focus = POM_taking_the_mantle }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 50
+			add_stability = 0.03
+			add_ideas = POM_new_nobles
 		}
 	}
 	shared_focus = {
@@ -6587,13 +9414,13 @@
 			factor = 10
 		}
 		available = {
-			
+			has_completed_focus = POM_expand_urban_centres
 		}
 		prerequisite = { focus = POM_land_of_equines }
 		prerequisite = { focus = POM_destroy_aquileian_legacy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.54
 		}
 	}
 	shared_focus = {
@@ -6613,7 +9440,10 @@
 		prerequisite = { focus = POM_destroy_aquileian_legacy }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			swap_ideas = {
+				remove_idea = POM_fascism_propaganda
+				add_idea = POM_fascism_remembrance
+			}
 		}
 	}
 	shared_focus = {
@@ -6633,7 +9463,7 @@
 		prerequisite = { focus = POM_born_to_rule }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Enable decision set “Pomovarrization of the New Territories”
 		}
 	}
 	shared_focus = {
@@ -6653,7 +9483,7 @@
 		prerequisite = { focus = POM_born_to_rule }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Enable decision set “Secrets of Old Pomovarra”
 		}
 	}
 	shared_focus = {
@@ -6672,7 +9502,37 @@
 		prerequisite = { focus = POM_eternal_epic }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					TRD = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TRD
+				}
+				else = {
+					hidden_effect = {
+					every_other_country = {
+						limit = {
+							owns_state = 381
+						}
+					}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			IF = {
+				limit = {
+					FEZ = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FEZ
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6692,7 +9552,71 @@
 		prerequisite = { focus = POM_pomovarrisation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					EYR = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = EYR
+				}
+				else = {
+					hidden_effect = {
+					every_other_country = {
+						limit = {
+							owns_state = 400
+						}
+					}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			IF = {
+				limit = {
+					BOI = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BOI
+				}
+				else = {
+					hidden_effect = {
+					every_other_country = {
+						limit = {
+							owns_state = 389
+						}
+					}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			IF = {
+				limit = {
+					LAK = { exists = yes is_subject = no }
+				}
+				LAK = {
+					country_event = goy_pomovarra.57
+				}
+				else = {
+					hidden_effect = {
+					every_other_country = {
+						limit = {
+							owns_state = 383
+						}
+					}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6711,7 +9635,37 @@
 		prerequisite = { focus = POM_pomovarrisation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				JES = {
+					exists = yes
+					is_subject = no
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = JES
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					JES = {
+						exists = yes
+					}
+				}
+				JES = {
+					overlord = {
+						country_event = goy_pomovarra.60
+					}
+				}
+			}
+			ELSE = {
+				every_other_country = {
+					limit = {
+						any_owned_state = {
+							is_core_of = JES
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6725,15 +9679,187 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_state = 381
+			owns_state = 389
+			owns_state = 383
+			owns_state = 487
 		}
 		prerequisite = { focus = POM_reaching_the_sky }
 		prerequisite = { focus = POM_eastern_kin }
 		prerequisite = { focus = POM_establish_tarrin_march }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
+		will_lead_to_war_with = FEA
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = YAL
+		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD #tag alias for event_target:griffonian_empire
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = ROU
 		completion_reward = {
-			#todo
-		}
+			IF = {
+			    limit = {
+				    GRI = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = GRI
+			    }
+			}
+			else_if = {
+				limit = {
+				    GRD = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+					type = annex_everything
+					target = GRD
+				}
+			}
+			else = {
+				every_other_country = {
+					limit = {
+						tag = global.griffonian_empire_var
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 382
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						owns_state = 674
+					}
+					NTR = {
+						declare_war_on = { 
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+			IF = {
+			    limit = {
+				    FEA = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = FEA
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    STW = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = STW
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    PYT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = PYT
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    YAL = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = YAL
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    BRZ = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = BRZ
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    KAT = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = KAT
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    ANG = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ANG
+			    }
+				else = {
+				}
+			}
+			IF = {
+			    limit = {
+				    ROU = {
+					    exists = yes
+					}
+				}
+				declare_war_on = { 
+		            type = annex_everything
+	                target = ROU
+			    }
+				else = {
+				}
+			}
 	}
 	shared_focus = {
 		id = POM_the_hermit_kingdom
@@ -6751,7 +9877,13 @@
 		prerequisite = { focus = POM_rip_out_the_heart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 100
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_ideas = POM_chained_kingdom
+			#todo bad relations
 		}
 	}
 	shared_focus = {
@@ -6770,7 +9902,7 @@
 		prerequisite = { focus = POM_rip_out_the_heart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			country_event = goy_pomovarra.63
 		}
 	}
 	shared_focus = {
@@ -6789,7 +9921,8 @@
 		prerequisite = { focus = POM_rip_out_the_heart }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_subordination_temples
+			#todo bad relations
 		}
 	}
 	shared_focus = {
@@ -6809,7 +9942,12 @@
 		prerequisite = { focus = POM_pomovarra_ascendant }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_political_power = 100
+			hidden_effect = {
+				country_event = goy_pomovarra.64
+			}
 		}
 	}
 	shared_focus = {
@@ -6830,7 +9968,8 @@
 		prerequisite = { focus = POM_the_claw_of_the_gods }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			#todo Enable decision set “Establishing Dominions”,
+			country_event = goy_pomovarra.65
 		}
 	}
 	shared_focus = {
@@ -6850,7 +9989,28 @@
 		prerequisite = { focus = POM_the_claw_of_the_gods }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			422 = {
+				add_manpower = -150000
+			}
+			506 = {
+				add_manpower = -150000
+			}
+			547 = {
+				add_manpower = -100000
+			}
+			411 = {
+				add_manpower = 300000
+			}
+			424 = {
+				set_state_category = pastoral
+			}
+			506 = {
+				set_state_category = pastoral
+			}
+			547 = {
+				set_state_category = rural
+			}
+			add_ideas = POM_nature_sanctuaries
 		}
 	}
 	shared_focus = {
@@ -6866,11 +10026,80 @@
 		available = {
 			
 		}
+		bypass = {
+			AND = {
+				BAN = { exists = no }
+				BRF = { exists = no }
+				GRW = { exists = no }
+				LUS = { exists = no }
+				GRY = { exists = no }
+				GRU = { exists = no }
+			}
+		}
+		will_lead_to_war_with = BAN
+		will_lead_to_war_with = BRF
+		will_lead_to_war_with = GRW
+		will_lead_to_war_with = LUS
+		will_lead_to_war_with = GRY
+		will_lead_to_war_with = GRU
 		prerequisite = { focus = POM_end_the_imperial_line }
 		prerequisite = { focus = POM_griffonian_dominions }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					BAN = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = BAN
+				}
+			}
+			IF = {
+				limit = {
+					BRF = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = BRF
+				}
+			}
+			IF = {
+				limit = {
+					GRW = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = GRW
+				}
+			}
+			IF = {
+				limit = {
+					LUS = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = LUS
+				}
+			}
+			IF = {
+				limit = {
+					GRY = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = GRY
+				}
+			}
+			IF = {
+				limit = {
+					GRU = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = GRU
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6886,11 +10115,91 @@
 		available = {
 			
 		}
+		bypass = {
+			AND = {
+				TAL = { exists = no }
+				ARA = { exists = no }
+				FRN = { exists = no }
+				WNG = { exists = no }
+				FAL = { exists = no }
+				SIC = { exists = no }
+				CYA = { exists = no }
+			}
+		}
+		will_lead_to_war_with = TAL
+		will_lead_to_war_with = ARA
+		will_lead_to_war_with = FRN
+		will_lead_to_war_with = WNG
+		will_lead_to_war_with = FAL
+		will_lead_to_war_with = SIC
+		will_lead_to_war_with = CYA
 		prerequisite = { focus = POM_end_the_imperial_line }
 		prerequisite = { focus = POM_griffonian_dominions }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					TAL = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = TAL
+				}
+			}
+			IF = {
+				limit = {
+					ARA = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = ARA
+				}
+			}
+			IF = {
+				limit = {
+					FRN = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = FRN
+				}
+			}
+			IF = {
+				limit = {
+					WNG = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = WNG
+				}
+			}
+			IF = {
+				limit = {
+					FAL = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = FAL
+				}
+			}
+			IF = {
+				limit = {
+					SIC = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = SIC
+				}
+			}
+			IF = {
+				limit = {
+					CYA = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = CYA
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6906,11 +10215,58 @@
 		available = {
 			
 		}
+		bypass = {
+			AND = {
+				HLQ = { exists = no }
+				LNS = { exists = no }
+				LSM = { exists = no }
+				LSC = { exists = no }
+			}
+		}
+		will_lead_to_war_with = HLQ
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = LSM
+		will_lead_to_war_with = LSC
 		prerequisite = { focus = POM_griffonian_dominions }
 		prerequisite = { focus = POM_old_forest_reservation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					HLQ = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = HLQ
+				}
+			}
+			IF = {
+				limit = {
+					LNS = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = LNS
+				}
+			}
+			IF = {
+				limit = {
+					LSM = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = LSM
+				}
+			}
+			IF = {
+				limit = {
+					LSC = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = LSC
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6926,11 +10282,58 @@
 		available = {
 			
 		}
+		bypass = {
+			AND = {
+				VED = { exists = no }
+				HAU = { exists = no }
+				FAT = { exists = no }
+				MNC = { exists = no }
+			}
+		}
+		will_lead_to_war_with = VED
+		will_lead_to_war_with = HAU
+		will_lead_to_war_with = FAT
+		will_lead_to_war_with = MNC
 		prerequisite = { focus = POM_griffonian_dominions }
 		prerequisite = { focus = POM_old_forest_reservation }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			IF = {
+				limit = {
+					VED = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = VED
+				}
+			}
+			IF = {
+				limit = {
+					HAU = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = HAU
+				}
+			}
+			IF = {
+				limit = {
+					FAT = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = FAT
+				}
+			}
+			IF = {
+				limit = {
+					MNC = { exists = yes }
+				}
+				create_wargoal = { 
+					type = annex_everything
+					target = MNC
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6944,13 +10347,16 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_or_subject_of = 485
+			owns_or_subject_of = 445
+			owns_or_subject_of = 512
+			owns_or_subject_of = 371
 		}
 		prerequisite = { focus = POM_tame_the_great_river }
 		prerequisite = { focus = POM_eclipse_the_south }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_tribute
 		}
 	}
 	shared_focus = {
@@ -6964,13 +10370,16 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_or_subject_of = 485
+			owns_or_subject_of = 445
+			owns_or_subject_of = 512
+			owns_or_subject_of = 371
 		}
 		prerequisite = { focus = POM_eclipse_the_south }
 		prerequisite = { focus = POM_bring_down_the_hellsword }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_ideas = POM_fortress_pomovarra
 		}
 	}
 	shared_focus = {
@@ -6984,13 +10393,62 @@
 			factor = 10
 		}
 		available = {
-			
+			owns_or_subject_of = 485
+			owns_or_subject_of = 445
+			owns_or_subject_of = 512
+			owns_or_subject_of = 371
 		}
 		prerequisite = { focus = POM_bring_down_the_hellsword }
 		prerequisite = { focus = POM_brave_northern_storms }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_stability = 0.05
+			add_ideas = POM_forced_resettlements
+			every_subject_country = {
+				add_ideas = POM_forced_resettlements
+			}
+			every_owned_state = {
+				limit = {
+					state = 377
+					state = 382
+					state = 674
+				}
+				add_manpower = -250000
+			}
+			every_owned_state = {
+				limit = {
+					state = 376
+					state = 435
+					state = 389
+					state = 520
+					state = 440
+					state = 443
+				}
+				add_manpower = -100000
+			}
+			every_owned_state = {
+				limit = {
+					state = 429
+					state = 404
+					state = 548
+					state = 485
+					state = 372
+					state = 370
+					state = 460
+					state = 444
+					state = 559
+					state = 600
+					state = 607
+					state = 591
+					state = 507
+					state = 483
+					state = 475
+					state = 534
+					state = 588
+					state = 414
+				}
+				add_manpower = 50000
+			}
 		}
 	}
 	shared_focus = {
@@ -6998,7 +10456,7 @@
 		icon = GFX_goal_GOY_pom_morels_book
 		x = 0
 		y = 9
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = POM_taking_the_mantle
 		ai_will_do = {
 			factor = 10
@@ -7011,6 +10469,7 @@
 		prerequisite = { focus = POM_resettlement_programme }
 		search_filters = { FOCUS_FILTER_UNDEFINED }
 		completion_reward = {
-			#todo
+			add_political_power = 200
+			country_event = goy_pomovarra.66
 		}
 	}
