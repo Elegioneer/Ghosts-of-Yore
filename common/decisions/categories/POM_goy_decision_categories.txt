@@ -1,3 +1,23 @@
+POM_arcturius_cat = {
+    icon = GFX_decision_caticon_princess
+	allowed = {
+        tag = POM
+    }
+	visible = {
+	    tag = POM
+		has_country_flag = POM_allowed_arcturius_flag
+	}
+}
+POM_mines_expansion_cat = {
+    icon = GFX_decision_caticon_princess
+	allowed = {
+        tag = POM
+    }
+	visible = {
+	    tag = POM
+		has_country_flag = POM_mine_expansion_allowed_flag
+	}
+}
 POM_blackmarket_cat = {
     icon = GFX_decision_caticon_princess
 	allowed = {

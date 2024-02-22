@@ -396,4 +396,32 @@ spriteTypes = {
 		name = "GFX_goal_GOY_pom_griffons_dream"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_griffons_dream.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_rip_out_petals"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_rip_out_petals.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_sideline_the_left"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_sideline_the_left.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_pony_magic"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_pony_magic.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_take_verenia"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_take_verenia.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_take_greifwald"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_take_greifwald.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_take_adelart"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_take_adelart.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_old_pomovarra"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_old_pomovarra.dds"
+	}
 }

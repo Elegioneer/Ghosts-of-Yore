@@ -4938,12 +4938,27 @@ country_event = { #Turned Down
 		ai_chance = {
 			base = 1
 		}
-		create_wargoal = {
-		    type = annex_everything
-			target = JER
+		effect_tooltip = {
+			create_wargoal = {
+				type = annex_everything
+				target = JER
+			}
 		}
 		hidden_effect = {
-		    complete_national_focus = ARA_march_west
+			set_country_flag = GOY_FLAG_vivienne_turned_down
+			uncomplete_national_focus = ARA_marriage_of_convience
+			IF = {
+				limit = {
+					is_ai = yes
+				}
+			}
+			ELSE = {
+				complete_national_focus = ARA_march_west
+				create_wargoal = {
+					type = annex_everything
+					target = JER
+				}
+			}
 		}
 	}
 }

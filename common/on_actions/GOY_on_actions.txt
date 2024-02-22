@@ -31,7 +31,6 @@ on_actions = {
 						#HRR set up in its initial event
 						#tag = POM
 					}
-					is_ai = yes
 				}
 				set_technology = {
 					GOY_longer_supply_chains = 1
@@ -368,6 +367,7 @@ on_actions = {
 					add_idea = lack_of_scientists1
 				}
 				load_focus_tree = Northern_tribes_nothing
+				set_country_flag = NTR_flag_spirit_magic_unlock
 			}
 			
 			if = {
