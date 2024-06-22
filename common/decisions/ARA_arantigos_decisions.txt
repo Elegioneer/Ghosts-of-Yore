@@ -587,10 +587,16 @@ ARA_canteribbienes_cat = {
 			}
 		}
 		highlight_states = {
-			state = 4
-			state = 1193
-			state = 1194
-			state = 1195
+			highlight_state_targets = {
+				state = 4
+				state = 1193
+				state = 1194
+				state = 1195
+			}
+			highlight_states_trigger = {
+				state = 241
+				is_controlled_by = ROOT
+			}
 		}
 		complete_effect = {
 			add_war_support = 0.05
@@ -615,6 +621,12 @@ ARA_canteribbienes_cat = {
 					}
 					transfer_state = 1194
 					transfer_state = 1193
+				}
+				IF = {				}
+					limit = {
+						controls_state = 241
+					}
+					transfer_state = 241
 				}
 			}
 		}
@@ -1222,6 +1234,11 @@ ARA_puppet_show_cat = {
 						    OR = {
 					            is_claimed_by = JER
 								is_core_of = JES
+								is_core_of = JFT
+								is_core_of = JEB
+								is_core_of = JES
+								is_core_of = JRR
+								is_core_of = VIN
 								is_core_of = POM
 								is_core_of = AET
 								is_core_of = HEL
@@ -1702,8 +1719,8 @@ ARA_northern_threat = {
 	#	}
 	#}
 	GOY_ARA_new_new_order = {
-		icon = generic_form_nation
-	    cost = 0
+		icon = GFX_decision_goy_plant_ara_flag
+	    cost = 25
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
@@ -1711,6 +1728,9 @@ ARA_northern_threat = {
 		visible = {
 		    HLR = {
 				is_puppet_of = ARA
+				NOT = {
+					has_cosmetic_tag = HLR_arantiga
+				}
 			}
 		}
 		complete_effect = {
@@ -1725,6 +1745,55 @@ ARA_northern_threat = {
 						desc = ""
 						expire = "1965.01.01.01"
 						traits = {  }
+					}
+				}
+				inherit_technology = ARA
+			}
+			ARA = {
+				set_autonomy = { target = HLR autonomy_state = autonomy_reichsprotectorate }
+			}
+			
+		}
+	}
+	GOY_ARA_new_new_order_2 = { 
+		icon = GFX_decision_goy_plant_ara_flag
+	    cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+		    HLR = {
+				is_puppet_of = ARA
+				NOT = {
+					has_cosmetic_tag = HLR_arantiga
+				}
+			}
+			any_army_leader = {
+				has_character_flag = GOY_haesperos
+			}
+		}
+		complete_effect = {
+			every_army_leader = {
+				limit = {
+					has_character_flag = GOY_haesperos
+				}
+				set_nationality = HLR
+			}
+			HLR = {
+				set_cosmetic_tag = HLR_arantiga
+				every_army_leader = {
+					limit = {
+						has_character_flag = GOY_haesperos
+					}
+					add_country_leader_role = {
+						Country_leader = {
+							ideology = holy_order_f
+							desc = ""
+							expire = "1965.01.01.01"
+							traits = { GOY_arantigos_loyalist }
+						}
+						Promote_leader = yes
 					}
 				}
 				inherit_technology = ARA
@@ -1754,13 +1823,13 @@ ARA_northern_threat = {
 					}
 				}
 			}
+			NOT = {
+				HLR = {
+					has_cosmetic_tag = HLR_arantiga
+				}
+			}
 			NTR = {
 				is_puppet_of = ARA
-			}
-			NOT = {
-				GOY_ARA_headmasterapesios = {
-					has_nationality = HLR
-				}
 			}
 		}
 		complete_effect = {
@@ -1966,6 +2035,7 @@ ARA_reorg_zebrican_lands_cat = {
 								traits = { captain_of_industry }
 							}
 						}
+						load_focus_tree = HIP_GNU_tree
 					}
 				}
 			}

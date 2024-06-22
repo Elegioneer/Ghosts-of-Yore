@@ -649,9 +649,8 @@ country = {
 			picture = strategic_bombing_focus
 			removal_cost = -1
 			modifier = {
-				air_strategic_bomber_attack_factor = 0.10
-				air_close_air_support_attack_factor = 0.10
-				air_strategic_bomber_bombing_factor = 0.05
+				air_cas_efficiency = 0.1
+				air_strategic_bomber_bombing_factor = 0.1
 			}
 		}
 	}
@@ -4141,9 +4140,52 @@ country = {
 			}
 			
 			allowed_to_remove = {
-				NOT = {
-				    has_government = fascism
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
+					}
 				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		exploited_economy_ara = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = GOY_exploited_economy
+			
+			modifier = {
+				cic_to_overlord_factor = 0.3
+				mic_to_overlord_factor = 0.3
+				consumer_goods_expected_value = 0.30
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				agency_upgrade_time = 1.0
+			}
+			
+			allowed_to_remove = {
+				is_puppet = no
 			}
 			
 			cancel_if_invalid = no
@@ -4166,22 +4208,18 @@ country = {
 			}
 
 			allowed_to_remove = {
-			    IF = {
-				    limit = {
-					    original_tag = ARA
-					}
-				    NOT = {
-				        has_government = fascism
-				    }
-				}
-				IF = {
-				    limit = {
-					    NOT = {
-						    original_tag = ARA
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
 						}
 					}
-					NOT = {
-					    is_subject_of = ARA
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
 					}
 				}
 			}
@@ -4201,22 +4239,18 @@ country = {
 			}
 			
 			allowed_to_remove = {
-			    IF = {
-				    limit = {
-					    original_tag = ARA
-					}
-				    NOT = {
-				        has_government = fascism
-				    }
-				}
-				IF = {
-				    limit = {
-					    NOT = {
-						    original_tag = ARA
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
 						}
 					}
-					NOT = {
-					    is_subject_of = ARA
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
 					}
 				}
 			}
@@ -4245,8 +4279,19 @@ country = {
 				navy_intel_to_others = 20.0
 			}		
 			allowed_to_remove = {
-				NOT = {
-				    has_government = fascism
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -4270,8 +4315,19 @@ country = {
 				navy_intel_to_others = 10.0
 			}
 			allowed_to_remove = {
-				NOT = {
-				    has_government = fascism
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -4295,8 +4351,19 @@ country = {
 				navy_intel_to_others = 5
 			}
 			allowed_to_remove = {
-				NOT = {
-				    has_government = fascism
+				OR = {
+					AND = {
+						original_tag = ARA
+						NOT = {
+							has_government = fascism
+						}
+					}
+					AND = {
+						NOT = {
+							original_tag = ARA
+						}
+						is_puppet = no
+					}
 				}
 			}
 			cancel_if_invalid = no

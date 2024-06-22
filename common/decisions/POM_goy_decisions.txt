@@ -1,3 +1,239 @@
+	POM_pegasus_upgrade_category = {
+		POM_tech_pegasi_upgrade = {
+			icon = GFX_decision_generic_research
+			ai_will_do = {
+				factor = 160
+			}
+
+			days_remove = 125
+			days_re_enable = 1
+
+			allowed = {
+				original_tag = POM
+			}
+			visible = {
+				has_completed_focus = POM_land_of_many_creatures
+			}
+			available = {
+				has_tech = tech_pegasi
+			}
+
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_gain = -0.15
+			}
+
+			remove_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = tech_pegasi2
+						}
+					}
+					set_technology = {
+						tech_pegasi2 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_pegasi3
+						}
+					}
+					set_technology = {
+						tech_pegasi3 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_pegasi_a
+						}
+					}
+					set_technology = {
+						tech_pegasi_a = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_pegasi_b
+						}
+					}
+					set_technology = {
+						tech_pegasi_b = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_pegasi_c
+						}
+					}
+					set_technology = {
+						tech_pegasi_c = 1
+					}
+				}
+				fix_weapon_techs = yes
+			}
+		}
+		POM_tech_unicorn_ms_upgrade = {
+			icon = GFX_decision_generic_research
+			ai_will_do = {
+				factor = 160
+			}
+
+			days_remove = 100
+			days_re_enable = 1
+
+			allowed = {
+				original_tag = POM
+			}
+			visible = {
+				has_completed_focus = POM_land_of_many_creatures
+			}
+			available = {
+				has_tech = tech_unicorn
+			}
+
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_gain = -0.1
+			}
+
+			remove_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_ms
+						}
+					}
+					set_technology = {
+						tech_unicorn_ms = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_ms2
+						}
+					}
+					set_technology = {
+						tech_unicorn_ms2 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_ms3
+						}
+					}
+					set_technology = {
+						tech_unicorn_ms3 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_ms4
+						}
+					}
+					set_technology = {
+						tech_unicorn_ms4 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_ms5
+						}
+					}
+					set_technology = {
+						tech_unicorn_ms5 = 1
+					}
+				}
+				fix_weapon_techs = yes
+			}
+		}
+		POM_tech_unicorn_th_upgrade = {
+			icon = GFX_decision_generic_research
+			ai_will_do = {
+				factor = 160
+			}
+
+			days_remove = 100
+			days_re_enable = 1
+
+			allowed = {
+				original_tag = POM
+			}
+			visible = {
+				has_completed_focus = POM_land_of_many_creatures
+			}
+			available = {
+				has_tech = tech_unicorn
+			}
+
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_gain = -0.15
+			}
+
+			remove_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_th
+						}
+					}
+					set_technology = {
+						tech_unicorn_th = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_th2
+						}
+					}
+					set_technology = {
+						tech_unicorn_th2 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_th3
+						}
+					}
+					set_technology = {
+						tech_unicorn_th3 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_th4
+						}
+					}
+					set_technology = {
+						tech_unicorn_th4 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_tech = tech_unicorn_th5
+						}
+					}
+					set_technology = {
+						tech_unicorn_th5 = 1
+					}
+				}
+				fix_weapon_techs = yes
+			}
+		}
+	}
 	POM_arcturius_cat = {
 		POM_develop_eagleton = {
 			icon = GFX_decision_statue
@@ -116,7 +352,7 @@
 				civilian_factory_use = 5
 			}
 			remove_effect = {
-				#todo improve industrial level
+				increase_society_development = yes
 				672 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -148,7 +384,7 @@
 				
 			}
 			remove_effect = {
-				#todo
+				add_ideas = POM_legacy_of_arctuirus
 				clr_country_flag = arcturius_plan_1
 				clr_country_flag = arcturius_plan_2
 				clr_country_flag = arcturius_plan_3
@@ -381,7 +617,7 @@
 		}
 		POM_flw_refinery = {
 			icon = GFX_decision_statue
-			cost = 50
+			cost = 75
 			fire_only_once = yes
 			days_remove = 90
 			ai_will_do = {
@@ -406,7 +642,9 @@
 						instant_build = yes
 					}
 				}
-				#todo raffinery de flw
+				custom_effect_tooltip = available_industrial_concern
+				show_ideas_tooltip = POM_flowena_raffinery
+				set_country_flag = POM_FLAG_flowena_raffinery_enabled
 				clr_country_flag = POM_devved_lissay_oil_flag
 			}
 		}
@@ -419,30 +657,33 @@
 				factor = 1
 			}
 			available = {
-				#todo
+				owns_state = 448
+				owns_state = 519
+				has_completed_focus = POM_strive_for_autarky
 			}
 			remove_effect = {
-				#todo
+				swap_ideas = {
+					remove_idea = POM_raw_materials_surplus
+					add_idea = POM_dd_expertise
+				}
 			}
 		}
 	}
-	POM_blackmarket_cat = {
+	
+	POM_goy_blackmarket_cat = {
 		POM_buy_rifles = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
 			}
 			visible = {
 				has_country_flag = POM_allowed_blackmarket_flag
-			}
-			available = {
-				
-			}
-			complete_effect = {
-				
+				NOT = {
+					has_country_flag = POM_expanded_blackmarket_flag
+				}
 			}
 			remove_effect = {
 				add_equipment_to_stockpile = {
@@ -454,13 +695,13 @@
 		POM_buy_rifles_better = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
 			}
 			visible = {
-				has_country_flag = POM_allowed_blackmarket_flag
+				has_country_flag = POM_expanded_blackmarket_flag
 			}
 			available = {
 				
@@ -478,13 +719,16 @@
 		POM_buy_supplies = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
 			}
 			visible = {
-				has_country_flag = POM_expanded_blackmarket_flag
+				has_country_flag = POM_allowed_blackmarket_flag
+				NOT = {
+					has_country_flag = POM_expanded_blackmarket_flag
+				}
 			}
 			available = {
 				
@@ -502,7 +746,7 @@
 		POM_buy_supplies_better = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
@@ -526,7 +770,7 @@
 		POM_buy_trucks = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
@@ -550,7 +794,7 @@
 		POM_buy_artillery = {
 			icon = GFX_decision_statue
 			cost = 50
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 1
@@ -574,7 +818,7 @@
 		POM_buy_manufactory = {
 			icon = GFX_decision_statue
 			cost = 75
-			fire_only_once = yes
+			fire_only_once = no
 			days_remove = 14
 			ai_will_do = {
 				factor = 5
@@ -604,6 +848,2709 @@
 				add_offsite_building = {
 					type = arms_factory
 					level = 1
+				}
+			}
+		}
+	}
+	POM_goy_mercs_cat = {
+		POM_mercs_floppens_finest = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				effect_tooltip = {
+					add_corps_commander_role = {
+						character = GOY_POM_floppen
+						traits = { cat_race_trait media_personality harsh_leader ranger }
+						skill = 3
+						attack_skill = 4
+						defense_skill = 3
+						planning_skill = 2
+						logistics_skill = 1
+						visible = {
+							has_character_flag = GOY_char_available_flag
+						}
+					}
+				}
+				custom_effect_tooltip = POM_TT_floppen_stats_tt
+				GOY_POM_floppen = {
+					set_character_flag = GOY_char_available_flag
+				}
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							artillery_brigade = { x = 2 y = 0 }
+						}
+
+						support = {
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Floppen's Finest"
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						artillery_brigade = { x = 2 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Floppen's Finest\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.7 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"ABY\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_neva_maskh
+							portraits = {
+								army = {
+									large = GFX_portrait_cat_generic_army_female_1
+									small = GFX_portrait_cat_generic_army_female_1_small
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Floppen's Finest" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_mercs_arcturian_guard = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 0 y = 2 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 1 y = 2 }
+						}
+
+						support = {
+							recon = { x = 0 y = 0 }
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Arcturian Guard"
+					
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 0 y = 2 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Arcturian Guard\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.9 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_0 = { creator = \"HLR\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_hilda_stern
+							portraits = {
+								army = {
+									large = GFX_GOY_pink_knight
+									small = GFX_idea_GOY_KAT_pink_knight
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Arcturian Guard" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_mercs_dauntless_knights = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 0 y = 2 }
+							knights = { x = 0 y = 3 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 1 y = 2 }
+							knights = { x = 1 y = 3 }
+							knights = { x = 2 y = 0 }
+							knights = { x = 2 y = 1 }
+						}
+
+						support = {
+							recon = { x = 0 y = 0 }
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Dauntless Knights"
+					
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 0 y = 2 }
+						knights = { x = 0 y = 3 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 1 y = 2 }
+						knights = { x = 1 y = 3 }
+						knights = { x = 2 y = 0 }
+						knights = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Dauntless Knights\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.5 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_0 = { creator = \"VED\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_himmel_zwirn
+							portraits = {
+								army = {
+									large = GFX_GOY_Gryphus_commander_2
+									small = GFX_idea_GOY_GRU_gryphus_commander_2
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Dauntless Knights" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_mercs_carmine_sash = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+
+						support = {
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Carmine Sash Banners"
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Crimson Banner\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.5 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"KIR\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_malevolent_fury
+							portraits = {
+								army = {
+									large = GFX_portrait_kirin_generic_leader_female_1
+									small = GFX_portrait_kirin_generic_leader_female_1_small
+								}
+							}
+						}
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Scarlet Banner\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.5 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"KIR\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_flaming_revenge
+							portraits = {
+								army = {
+									large = GFX_portrait_kirin_generic_army_female_3
+									small = GFX_portrait_kirin_generic_army_female_3_small
+								}
+							}
+						}
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Cinnabar Banner\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.5 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"KIR\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_eastern_gust
+							portraits = {
+								army = {
+									large = GFX_portrait_kirin_generic_navy_male_3
+									small = GFX_portrait_kirin_generic_navy_male_3_small
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					every_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Carmine Sash Banners" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_brass_bulls = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Brass Bulls"
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Brass Bulls\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.65 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"MIT\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_levteros_bradakis
+							portraits = {
+								army = {
+									large = GFX_portrait_minotaur_generic_operative_male_4
+									small = GFX_portrait_minotaur_generic_operative_male_4_small
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Brass Bulls" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_silver_shields = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 21
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				add_corps_commander_role = {
+					character = GOY_POM_ponysander
+					traits = { pony_race_trait trait_reckless trickster }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 1
+					logistics_skill = 3
+					visible = {
+						has_character_flag = GOY_char_available_flag
+					}
+				}
+				custom_effect_tooltip = POM_TT_ponysander_stats_tt
+				hidden_effect = {	
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+
+						support = {
+							recon = { x = 0 y = 0 }
+							field_hospital = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+					}
+				}
+				division_template = {
+					name = "Silver Shields"
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Silver Shields\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.6 start_equipment_factor = 1 force_equipment_variants = { infantry_equipment_1 = { creator = \"NIM\" } }"
+						allow_spawning_on_enemy_provs = yes
+						officer = {
+							name = POM_nikke
+							portraits = {
+								army = {
+									large = GFX_GOY_nim_gen_2
+									small = GFX_idea_GOY_NIM_nim_gen_2
+								}
+							}
+						}
+						owner = ROOT
+					}
+				}
+				hidden_effect = {
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 600
+						#add_history_entry = {
+						#	key = ARA_black_company_key
+						#	subject = ARA_black_company_subj
+						#	allow = no #(allow medal award)
+						#}
+						change_division_template = { division_template = "Silver Shields" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+			}
+		}
+		POM_mercs_veterans = {
+			icon = GFX_decision_statue
+			cost = 60
+			fire_only_once = no
+			days_remove = 30
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				add_manpower = 20000
+			}
+		}
+	}
+	POM_goy_growing_instability_cat = {
+		POM_goy_growing_instability = {
+			icon = GFX_decision_statue
+			#cost = 60
+			fire_only_once = no
+			days_remove = 1080
+			ai_will_do = {
+				factor = 1
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.98
+			}
+		}
+	}
+	POM_goy_expand_transport_cat = {
+		POM_goy_invest_in_verenia_inf = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 90
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 470
+				owns_state = 673
+				owns_state = 500
+				owns_state = 401
+			}
+			highlight_states = {
+				state = 470
+				state = 673
+				state = 500
+				state = 401
+			}
+			modifier = {
+				civilian_factory_use = 4
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 470
+							state = 673
+							state = 500
+							state = 401
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		POM_goy_invest_in_westkeep_inf = {
+			icon = GFX_decision_statue
+			cost = 25
+			fire_only_once = yes
+			days_remove = 60
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 448
+				owns_state = 519
+			}
+			highlight_states = {
+				state = 448
+				state = 519
+			}
+			modifier = {
+				civilian_factory_use = 2
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 448
+							state = 519
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		POM_goy_fregneux_junction = {
+			icon = GFX_decision_statue
+			cost = 60
+			fire_only_once = yes
+			days_remove = 90
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 517
+				owns_state = 519
+				owns_state = 501
+				owns_state = 448
+				owns_state = 672
+			}
+			highlight_states = {
+				state = 517
+				state = 519
+				state = 501
+				state = 448
+				state = 672
+			}
+			modifier = {
+				civilian_factory_use = 6
+			}
+			remove_effect = {
+				501 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 10290
+					}
+				}
+				effect_tooltip = {
+					build_railway = {
+						level = 1
+						start_province = 12385
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 13147
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 13197
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 2059
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 8073
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 4382
+						target_province = 10290
+						build_only_on_allied = yes
+					}
+				}
+				hidden_effect = {
+					build_railway = {
+						level = 2
+						start_province = 10290
+						target_province = 10550
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 10550
+						target_province = 7795
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 7795
+						target_province = 12385
+						build_only_on_allied = yes
+					}
+					
+					build_railway = {
+						level = 1
+						start_province = 10550
+						target_province = 10619
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 10619
+						target_province = 13147
+						build_only_on_allied = yes
+					}
+					
+					build_railway = {
+						level = 1
+						start_province = 10550
+						target_province = 13197
+						build_only_on_allied = yes
+					}
+					
+					build_railway = {
+						level = 1
+						start_province = 10290
+						target_province = 7405
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 7405
+						target_province = 7335
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 7335
+						target_province = 2059
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 10290
+						target_province = 8073
+						build_only_on_allied = yes
+					}
+					build_railway = {
+						level = 1
+						start_province = 10290
+						target_province = 4382
+						build_only_on_allied = yes
+					}
+				}
+			}
+		}
+	}
+	POM_goy_aet_dev_scheme_cat = {
+		POM_goy_aet_westkeep_expansion = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 448
+			}
+			highlight_states = {
+				state = 448
+			}
+			modifier = {
+				civilian_factory_use = 8
+			}
+			remove_effect = {
+				448 = {
+					add_manpower = 250000
+					add_building_construction = {
+						type = industrial_complex 
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure 
+						level = 2
+						instant_build = yes
+					}
+					set_state_category = large_town
+				}
+				set_country_flag = POM_FLAG_devscheme_1
+			}
+		}
+		POM_goy_aet_expand_rubber = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 472
+				owns_state = 516
+			}
+			highlight_states = {
+				state = 472
+				state = 516
+			}
+			modifier = {
+				civilian_factory_use = 6
+			}
+			remove_effect = {
+				472 = {
+					add_resource = {
+						type = rubber
+						amount = 12
+					}
+				}
+				516 = {
+					add_resource = {
+						type = rubber
+						amount = 10
+					}
+				}
+				set_country_flag = POM_FLAG_devscheme_2
+			}
+		}
+		POM_goy_aet_rebuild_fezara = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				owns_state = 390
+				owns_state = 208
+			}
+			highlight_states = {
+				state = 390
+			}
+			modifier = {
+				civilian_factory_use = 6
+			}
+			remove_effect = {
+				390 = {
+					add_manpower = 300000
+					add_building_construction = {
+						type = infrastructure 
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex 
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					set_state_category = large_city
+				}
+				set_country_flag = POM_FLAG_devscheme_3
+			}
+		}
+		POM_goy_aet_land_reclamation = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+				civilian_factory_use = 12
+			}
+			remove_effect = {
+				every_owned_state = {
+					add_extra_state_shared_building_slots = 1
+				}
+				set_country_flag = POM_FLAG_devscheme_4
+			}
+		}
+		POM_goy_aet_pegasii_weather_corps = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+				civilian_factory_use = 12
+			}
+			remove_effect = {
+				add_ideas = POM_pegasii_weather_corps_idea
+				set_country_flag = POM_FLAG_devscheme_5
+			}
+		}
+		POM_goy_aet_flowerino_magireactor = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 150
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_completed_focus = POM_synthetic_crystals
+			}
+			modifier = {
+				civilian_factory_use = 8
+			}
+			remove_effect = {
+				add_ideas = POM_peaceful_atom
+				set_country_flag = POM_FLAG_devscheme_6
+			}
+		}
+		POM_goy_aet_great_lighthouse = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 210
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+				civilian_factory_use = 12
+			}
+			remove_effect = {
+				add_ideas = POM_great_aetian_lighthouse
+				set_country_flag = POM_FLAG_devscheme_7
+			}
+		}
+		POM_goy_aet_complete_scheme = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_devscheme_1
+				has_country_flag = POM_FLAG_devscheme_2
+				has_country_flag = POM_FLAG_devscheme_3
+				has_country_flag = POM_FLAG_devscheme_4
+				has_country_flag = POM_FLAG_devscheme_5
+				has_country_flag = POM_FLAG_devscheme_6
+				has_country_flag = POM_FLAG_devscheme_7
+			}
+			complete_effect = {
+				swap_ideas = {
+					remove_idea = POM_legacy_of_arctuirus
+					add_idea = POM_economic_powerhouse
+				}
+				clr_country_flag = POM_FLAG_devscheme_1
+				clr_country_flag = POM_FLAG_devscheme_2
+				clr_country_flag = POM_FLAG_devscheme_3
+				clr_country_flag = POM_FLAG_devscheme_4
+				clr_country_flag = POM_FLAG_devscheme_5
+				clr_country_flag = POM_FLAG_devscheme_6
+				clr_country_flag = POM_FLAG_devscheme_7
+			}
+		}
+	}
+	POM_goy_expand_league_cat = {
+		POM_goy_league_invitation = {
+			icon = GFX_decision_statue
+			cost = 10
+			targets = { WNG BOI TRD FEA PYT ROU YAL ANG KAT GRD STW BRZ }
+			targets_dynamic = yes
+			target_trigger = {
+				FROM = {
+					has_government = democratic
+					is_puppet = no
+					OR = {
+						original_tag = WNG
+						is_in_faction = no
+					}
+				}
+			}
+			complete_effect = {
+				FROM = {
+					country_event = {
+						id = goy_pomovarra.100
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	POM_goy_pomovarrisation_cat = {
+		POM_goy_pomrise_vinovia = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 517
+			}
+			available = {
+				owns_state = 517
+			}
+			remove_effect = {
+				add_state_core = 517
+			}
+		}
+		POM_goy_pomrise_skyaluzzo = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 240
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 421
+			}
+			available = {
+				owns_state = 421
+				has_manpower > 50000
+			}
+			complete_effect = {
+				add_manpower = -50000
+			}
+			remove_effect = {
+				add_state_core = 421
+				421 = {
+					add_manpower = 50000
+				}
+			}
+		}
+		POM_goy_pomrise_hinterlands = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 210
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 407
+				state = 406
+			}
+			available = {
+				owns_state = 407
+				owns_state = 406
+				has_manpower > 200000
+			}
+			complete_effect = {
+				add_manpower = -200000
+			}
+			remove_effect = {
+				add_state_core = 407
+				407 = {
+					add_manpower = 100000
+				}
+				add_state_core = 406
+				406 = {
+					add_manpower = 100000
+				}
+			}
+		}
+		POM_goy_pomrise_flowerino = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 360
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 523
+				state = 524
+			}
+			available = {
+				owns_state = 523
+				owns_state = 524
+				has_manpower > 50000
+			}
+			complete_effect = {
+				add_manpower = -50000
+			}
+			remove_effect = {
+				add_state_core = 523
+				523 = {
+					add_manpower = 25000
+				}
+				add_state_core = 524
+				524 = {
+					add_manpower = 25000
+				}
+			}
+		}
+		POM_goy_pomrise_pridea = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 376
+			}
+			available = {
+				owns_state = 376
+				has_manpower > 25000
+			}
+			complete_effect = {
+				add_manpower = -25000
+			}
+			remove_effect = {
+				376 = {
+					add_manpower = 25000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_ker_gollou = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 270
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 376
+				state = 516
+				state = 473
+			}
+			available = {
+				owns_state = 377
+				owns_state = 516
+				owns_state = 473
+				has_manpower > 100000
+			}
+			complete_effect = {
+				add_manpower = -100000
+			}
+			remove_effect = {
+				377 = {
+					add_manpower = 40000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+				516 = {
+					add_manpower = 30000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+				473 = {
+					add_manpower = 30000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_greifwald = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 240
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 457
+				state = 436
+			}
+			available = {
+				owns_state = 457
+				owns_state = 436
+				has_manpower > 50000
+			}
+			complete_effect = {
+				add_manpower = -50000
+			}
+			remove_effect = {
+				457 = {
+					add_manpower = 25000
+					add_dynamic_modifier = { modifier = POM_pomovarran_province_dynmodifier }
+				}
+				436 = {
+					add_manpower = 25000
+					add_dynamic_modifier = { modifier = POM_pomovarran_province_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_eyrie = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 400
+				state = 391
+			}
+			available = {
+				owns_state = 400
+				owns_state = 391
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_state_core = 400
+				add_state_core = 391
+			}
+		}
+		POM_goy_pomrise_rumare = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 679
+				state = 384
+				state = 383
+			}
+			available = {
+				owns_state = 679
+				owns_state = 384
+				owns_state = 383
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				add_state_core = 679
+				add_state_core = 384
+				add_state_core = 383
+			}
+		}
+		POM_goy_pomrise_griffonstone = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 300
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 471
+				state = 389
+				state = 488
+				state = 531
+			}
+			available = {
+				all_owned_state = {
+					OR = {
+						state = 679
+						state = 384
+						state = 383
+					}
+					is_core_of = ROOT
+				}
+				all_state = {
+					OR = {
+						state = 471
+						state = 389
+						state = 488
+						state = 531
+					}
+					is_owned_by = ROOT
+				}
+			}
+			complete_effect = {
+				
+			}
+			remove_effect = {
+				679 = {
+					add_manpower = -100000
+				}
+				every_owned_state = {
+					limit = {
+						state = 384
+						state = 383
+					}
+					add_manpower = -50000
+				}
+				every_owned_state = {
+					limit = {
+						state = 471
+						state = 389
+						state = 488
+						state = 531
+					}
+					add_manpower = 50000
+					add_dynamic_modifier = { modifier = POM_pomovarran_province_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_norzhgeun = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 360
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 378
+				state = 447
+				state = 399
+			}
+			available = {
+				owns_state = 378
+				owns_state = 447
+				owns_state = 399
+			}
+			complete_effect = {
+				add_manpower = -150000
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						state = 378
+						state = 447
+						state = 399
+					}
+					add_manpower = 50000
+					add_dynamic_modifier = { modifier = POM_pomovarran_province_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_tarrin = {
+			icon = GFX_decision_statue
+			cost = 100
+			fire_only_once = yes
+			days_remove = 360
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 487
+				state = 652
+				state = 521
+			}
+			available = {
+				owns_state = 487
+				owns_state = 652
+				owns_state = 521
+			}
+			complete_effect = {
+				add_manpower = -50000
+			}
+			remove_effect = {
+				487 = {
+					add_manpower = 20000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+				652 = {
+					add_manpower = 15000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+				521 = {
+					add_manpower = 15000
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_skyfall = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 360
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 390
+				state = 208
+				state = 380
+				state = 396
+				state = 379
+			}
+			available = {
+				owns_state = 390
+				owns_state = 208
+				owns_state = 380
+				owns_state = 396
+				owns_state = 379
+			}
+			complete_effect = {
+				add_manpower = -25000
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.103
+				every_owned_state = {
+					limit = {
+						state = 390
+						state = 208
+						state = 380
+						state = 396
+						state = 379
+					}
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+			}
+		}
+		POM_goy_pomrise_feathisia = {
+			icon = GFX_decision_statue
+			cost = 150
+			fire_only_once = yes
+			days_remove = 360
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				state = 433
+				state = 434
+				state = 440
+				state = 441
+				state = 497
+				state = 498
+				state = 520
+				state = 538
+				state = 666
+			}
+			available = {
+				all_state = {
+					OR = {
+						state = 433
+						state = 434
+						state = 440
+						state = 441
+						state = 497
+						state = 498
+						state = 520
+						state = 538
+						state = 666
+					}
+					is_owned_by = ROOT
+				}
+				has_manpower > 75000
+			}
+			complete_effect = {
+				add_manpower = -75000
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.103
+				every_owned_state = {
+					limit = {
+						state = 433
+						state = 434
+						state = 440
+						state = 441
+						state = 497
+						state = 498
+						state = 520
+						state = 538
+						state = 666
+					}
+					add_manpower = 7500
+					add_dynamic_modifier = { modifier = POM_pomovarran_administration_dynmodifier }
+				}
+			}
+		}
+	}
+	POM_goy_secrets_of_old_cat = {
+		POM_goy_form_magic_college = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			modifier = {
+				civilian_factory_use = 10
+			}
+			remove_effect = {
+				add_ideas = POM_college_of_magic
+				set_country_flag = POM_FLAG_created_college_of_magic
+			}
+		}
+		POM_goy_study_direndall = {
+			icon = GFX_decision_statue
+			cost = 50
+			fire_only_once = yes
+			days_remove = 90
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_created_college_of_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.105
+			}
+		}
+		POM_goy_spirit_binding = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 150
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_created_college_of_magic
+				has_manpower > 1000
+			}
+			modifier = {
+				civilian_factory_use = 5
+			}
+			complete_effect = {
+				add_manpower = -1000
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.106
+			}
+		}
+		POM_goy_elixir_of_vigor = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_created_college_of_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.108
+			}
+		}
+		POM_goy_geomancy_secrets = {
+			icon = GFX_decision_statue
+			cost = 75
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_created_college_of_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+			}
+			remove_effect = {
+				country_event = goy_pomovarra.107
+			}
+		}
+	}
+	POM_goy_ritual_magic_cat = {
+		POM_goy_weather_manipulation = {
+			icon = GFX_decision_statue
+			#cost = 0
+			fire_only_once = no
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_uses_magic
+			}
+			complete_effect = {
+				set_country_flag = POM_FLAG_uses_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+				air_weather_penalty = -0.25
+				navy_weather_penalty = -0.25
+				winter_attrition = 0.5
+				winter_attrition_factor = 0.5
+			}
+			remove_effect = {
+				clr_country_flag = POM_FLAG_uses_magic
+			}
+		}
+		POM_goy_plant_growth = {
+			icon = GFX_decision_statue
+			#cost = 0
+			fire_only_once = no
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_uses_magic
+			}
+			complete_effect = {
+				set_country_flag = POM_FLAG_uses_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+				monthly_population = 0.2
+				consumer_goods_factor = -0.1
+			}
+			remove_effect = {
+				clr_country_flag = POM_FLAG_uses_magic
+			}
+		}
+		POM_goy_precognition = {
+			icon = GFX_decision_statue
+			#cost = 0
+			fire_only_once = no
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_uses_magic
+			}
+			complete_effect = {
+				set_country_flag = POM_FLAG_uses_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+				crypto_strength = 1
+				decryption_power_factor = 0.2
+				intel_network_gain_factor = 0.2
+				decryption_factor = 0.5
+				encryption_factor = 0.5
+			}
+			remove_effect = {
+				clr_country_flag = POM_FLAG_uses_magic
+			}
+		}
+		POM_goy_empower_enchantments = {
+			icon = GFX_decision_statue
+			#cost = 0
+			fire_only_once = no
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_uses_magic
+			}
+			complete_effect = {
+				set_country_flag = POM_FLAG_uses_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			remove_effect = {
+				clr_country_flag = POM_FLAG_uses_magic
+			}
+		}
+		POM_goy_study_magic = {
+			icon = GFX_decision_statue
+			#cost = 0
+			fire_only_once = no
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				has_country_flag = POM_FLAG_uses_magic
+			}
+			complete_effect = {
+				set_country_flag = POM_FLAG_uses_magic
+			}
+			modifier = {
+				civilian_factory_use = 4
+			}
+			research_bonus = {
+				race_tech = 0.1
+				magical_tech = 0.1
+			}
+			remove_effect = {
+				clr_country_flag = POM_FLAG_uses_magic
+			}
+		}
+	}
+	POM_goy_integrate_outer_provs_cat = {
+		POM_goy_integrate_adelart = {
+			icon = GFX_decision_goy_plant_pom_boar_flag
+			cost = 50
+			fire_only_once = yes
+			days_remove = 120
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					OR = {
+						state = 493
+						state = 494
+					}
+				}
+			}
+			available = {
+				owns_state = 493
+				owns_state = 494
+			}
+			remove_effect = {
+				add_state_core = 493
+				add_state_core = 494
+			}
+		}
+		POM_goy_integrate_verenia = {
+			icon = GFX_decision_goy_plant_pom_boar_flag
+			cost = 75
+			fire_only_once = yes
+			days_remove = 150
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					OR = {
+						state = 470
+						state = 500
+						state = 673
+						state = 401
+					}
+				}
+			}
+			available = {
+				owns_state = 470
+				owns_state = 500
+				owns_state = 673
+				owns_state = 401
+			}
+			remove_effect = {
+				add_state_core = 470
+				add_state_core = 500
+				add_state_core = 673
+				add_state_core = 401
+			}
+		}
+		POM_goy_integrate_falconia = {
+			icon = GFX_decision_goy_plant_pom_boar_flag
+			cost = 50
+			fire_only_once = yes
+			days_remove = 150
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					OR = {
+						state = 495
+						state = 496
+					}
+				}
+			}
+			available = {
+				owns_state = 495
+				owns_state = 496
+			}
+			remove_effect = {
+				add_state_core = 495
+				add_state_core = 496
+			}
+		}
+		POM_goy_integrate_westkeep = {
+			icon = GFX_decision_goy_plant_pom_boar_flag
+			cost = 50
+			fire_only_once = yes
+			days_remove = 180
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = {
+				highlight_states_trigger = {
+					OR = {
+						state = 448
+						state = 519
+					}
+				}
+			}
+			available = {
+				owns_state = 448
+				owns_state = 519
+			}
+			remove_effect = {
+				add_state_core = 448
+				add_state_core = 519
+			}
+		}
+	}
+	POM_goy_establishing_dominions_cat = {
+		POM_goy_dominion_north = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = VED
+						is_core_of = FAT
+						is_core_of = MNC
+						is_core_of = SRS
+						is_core_of = NTR
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = VED
+							is_core_of = FAT
+							is_core_of = MNC
+							is_core_of = SRS
+							is_core_of = NTR
+						}
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = VED
+							original_tag = FAT
+							original_tag = MNC
+							original_tag = SRS
+							original_tag = NTR
+						}
+						exists = yes
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#is_core_of = VED
+							is_core_of = FAT
+							is_core_of = MNC
+							is_core_of = SRS
+							is_core_of = NTR
+						}
+						NOT = {
+							is_core_of = ROOT
+							is_core_of = GRI
+						}
+					}
+					add_core_of = VED
+				}
+				release_puppet = VED
+				GOY_VED_king_ondska_i = {
+					set_nationality = VED
+				}
+				VED = {
+					hidden_effect = {
+						set_cosmetic_tag = VED_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+					}
+					add_country_leader_role = {
+						Character = GOY_VED_king_ondska_i
+						country_leader={
+							desc="ondska_desc"
+							ideology=nazism
+							traits={ warmonger }
+							expire="1965.1.1.1"
+							id=-1
+						}
+						Promote_leader = yes
+					}
+				}
+			}
+		}
+		POM_goy_dominion_piudmont = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = ARA
+						is_core_of = FRN
+						is_core_of = TAL
+						is_core_of = WNG
+						is_core_of = FAL
+						AND = {
+							is_core_of = EQC
+							is_owned_by = ROOT
+						}
+					}
+					NOT = {
+						is_core_of = ROOT
+						state = 487
+						state = 652
+						state = 521
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = ARA
+							is_core_of = FRN
+							is_core_of = TAL
+							is_core_of = WNG
+							is_core_of = FAL
+						}
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = ARA
+							original_tag = FRN
+							original_tag = TAL
+							original_tag = WNG
+							original_tag = FAL
+						}
+						exists = yes
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = ARA
+							#is_core_of = FRN
+							is_core_of = TAL
+							is_core_of = WNG
+							is_core_of = FAL
+							AND = {
+								is_core_of = EQC
+								is_owned_by = ROOT
+							}
+						}
+						NOT = {
+							is_core_of = ROOT
+							state = 487
+							state = 652
+							state = 521
+						}
+					}
+					add_core_of = FRN
+				}
+				release_puppet = FRN
+				GOY_POM_soter = {
+					set_nationality = FRN
+				}
+				FRN = {
+					hidden_effect = {
+						set_cosmetic_tag = FRN_POM_MOREL
+						remove_ideas = FRN_francis_ns
+						add_ideas = POM_FRN_francis_ns
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+					}
+					add_country_leader_role = {
+						Character = GOY_POM_soter
+						country_leader={
+							desc=""
+							ideology=fascism_ideology
+							traits={  }
+							expire="1965.1.1.1"
+							id=-1
+						}
+						Promote_leader = yes
+					}
+				}
+			}
+		}
+		POM_goy_dominion_minotauria = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = MIT
+						is_core_of = CYA
+						is_core_of = SIC
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = MIT
+							is_core_of = CYA
+							is_core_of = SIC
+						}
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = MIT
+							original_tag = CYA
+							original_tag = SIC
+						}
+						exists = yes
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#is_core_of = MIT
+							is_core_of = CYA
+							is_core_of = SIC
+						}
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = MIT
+				}
+				release_puppet = MIT
+				
+				MIT = {
+					hidden_effect = {
+						set_cosmetic_tag = MIT_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+					}
+				}
+			}
+		}
+		POM_goy_dominion_evi = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = LUS
+						is_core_of = GRY
+						is_core_of = GRU
+						is_core_of = BRF
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = LUS
+							is_core_of = GRY
+							is_core_of = GRU
+							is_core_of = BRF
+						}
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = LUS
+							original_tag = GRY
+							original_tag = GRU
+							original_tag = BRF
+						}
+						exists = yes
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LUS
+							is_core_of = GRY
+							#is_core_of = GRU
+							is_core_of = BRF
+						}
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = GRU
+				}
+				release_puppet = GRU
+				GOY_POM_matthias_felchen = {
+					set_nationality = GRU
+				}
+				GRU = {
+					hidden_effect = {
+						set_cosmetic_tag = GRU_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_soter
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = plutocracy
+								traits = { financial_expert }
+							}
+							Promote_leader = yes
+						}
+					}
+				}
+			}
+		}
+		POM_goy_dominion_hellsword = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = HLQ
+						is_core_of = LSM
+						is_core_of = LNS
+						is_core_of = LSC
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = HLQ
+							is_core_of = LSM
+							is_core_of = LNS
+							is_core_of = LSC
+						}
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = HLQ
+							original_tag = LSM
+							original_tag = LNS
+							original_tag = LSC
+						}
+						exists = yes
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#is_core_of = HLQ
+							is_core_of = LSM
+							is_core_of = LNS
+							is_core_of = LSC
+						}
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = HLQ
+				}
+				release_puppet = HLQ
+				GOY_POM_wilhelm_stackelberg = {
+					set_nationality = HLQ
+				}
+				HLQ = {
+					hidden_effect = {
+						set_cosmetic_tag = HLQ_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_wilhelm_stackelberg
+							country_leader = {
+								desc = "boreas_vult_infidel_ponies_desc"
+								expire = "1965.1.1"
+								ideology = neofeudalism
+								traits = { }
+							}
+							Promote_leader = yes
+						}
+					}
+				}
+			}
+		}
+		POM_goy_dominion_expand_hlq = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = LCT
+						is_core_of = DEP
+						is_core_of = DMT
+					}
+					is_owned_by = ROOT
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = LCT
+							original_tag = DEP
+							original_tag = DMT
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				owns_state = 387
+				owns_state = 544
+				owns_state = 637
+				has_subject = HLQ
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = LCT
+							is_core_of = DEP
+							is_core_of = DMT
+						}
+					}
+					add_claim_by = HLQ
+					transfer_state_to = HLQ
+					add_compliance = 30
+				}
+			}
+		}
+		POM_goy_dominion_austurland = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = OLV
+						is_core_of = FRE
+						is_core_of = BAR
+						is_core_of = ZES
+						state = 452
+						state = 617
+						state = 628
+						state = 629
+						state = 627
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = OLV
+							original_tag = FRE
+							original_tag = BAR
+							original_tag = ZES
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = OLV
+							is_core_of = FRE
+							is_core_of = BAR
+							is_core_of = ZES
+							state = 452
+							state = 617
+							state = 628
+							state = 629
+							state = 627
+						}
+						is_owned_by = ROOT
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							#is_core_of = OLV
+							is_core_of = FRE
+							is_core_of = BAR
+							is_core_of = ZES
+							state = 452
+							state = 617
+							state = 628
+							state = 629
+							state = 627
+						}
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = OLV
+				}
+				release_puppet = OLV
+				GOY_POM_hjarnar_ernstsson = {
+					set_nationality = OLV
+				}
+				OLV = {
+					hidden_effect = {
+						set_cosmetic_tag = OLV_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_hjarnar_ernstsson
+							country_leader = {
+								desc = ""
+								expire = "1965.1.1"
+								ideology = stratocracy
+								traits = { }
+							}
+							Promote_leader = yes
+						}
+					}
+				}
+			}
+		}
+		POM_goy_dominion_riverlands = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = BAK
+						is_core_of = RCT
+						is_core_of = WIT
+						is_core_of = NIM
+					}
+					NOT = {
+						is_core_of = ROOT
+						state = 452
+						state = 617
+						state = 628
+						state = 629
+						state = 627
+					}
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = BAK
+							original_tag = RCT
+							original_tag = WIT
+							original_tag = NIM
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = BAK
+							is_core_of = RCT
+							is_core_of = WIT
+							is_core_of = NIM
+						}
+						state = 452
+						state = 617
+						state = 628
+						state = 629
+						state = 627
+						is_owned_by = ROOT
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = BAK
+							is_core_of = RCT
+							#is_core_of = WIT
+							is_core_of = NIM
+						}
+						NOT = {
+							state = 452
+							state = 617
+							state = 628
+							state = 629
+							state = 627
+						}
+						is_owned_by = ROOT
+					}
+					add_core_of = WIT
+				}
+				release_puppet = WIT
+				GOY_POM_spirit_fire = {
+					set_nationality = WIT
+				}
+				WIT = {
+					hidden_effect = {
+						every_owned_state = {
+							limit = {
+								state = 452
+								state = 617
+								state = 628
+								state = 629
+								state = 627
+								state = 624
+								state = 626
+							}
+							transfer_state_to = ROOT
+						}
+						set_capital = { state = 619 }
+						set_cosmetic_tag = WIT_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_spirit_fire
+							country_leader = {
+								desc = ""
+								expire = "1965.1.1"
+								ideology = fascism_ideology
+								traits = { }
+							}
+							Promote_leader = yes
+						}
+					}
+				}
+			}
+		}
+		POM_goy_dominion_hillpony = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = FIR
+						is_core_of = FBK
+						is_core_of = WAT
+						AND = {
+							is_core_of = HLR
+							owns_or_subject_of = yes
+						}
+						AND = {
+							is_core_of = DED
+							owns_or_subject_of = yes
+						}
+						AND = {
+							is_core_of = NCH
+							owns_or_subject_of = yes
+						}
+					}
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = FIR
+							original_tag = FBK
+							original_tag = WAT
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				all_state = {
+					OR = {
+						NOT = {
+							is_core_of = FIR
+							is_core_of = FBK
+							is_core_of = WAT
+						}
+						is_owned_by = ROOT
+					}
+				}
+			}
+			remove_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = FIR
+							is_core_of = FBK
+							is_core_of = WAT
+							AND = {
+								is_core_of = HLR
+								owns_or_subject_of = yes
+							}
+							AND = {
+								is_core_of = DED
+								owns_or_subject_of = yes
+							}
+							AND = {
+								is_core_of = NCH
+								owns_or_subject_of = yes
+							}
+						}
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = FBK
+				}
+				release_puppet = FBK
+				GOY_POM_hermane_gering = {
+					set_nationality = FBK
+				}
+				FBK = {
+					hidden_effect = {
+						set_cosmetic_tag = FBK_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_hermane_gering
+							country_leader = {
+								desc = ""
+								expire = "1965.1.1"
+								ideology = kratokracy
+								traits = { }
+							}
+							Promote_leader = yes
+						}
+					}
 				}
 			}
 		}

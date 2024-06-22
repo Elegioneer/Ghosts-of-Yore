@@ -25,7 +25,11 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		ROOT = {
-			has_focus_tree = generic_focus
+			OR = {
+				has_focus_tree = generic_focus
+				has_focus_tree = generic_griffon_focus
+				has_focus_tree = generic_zebra_focus
+			}
 		}
 	}
 	fire_only_once = yes

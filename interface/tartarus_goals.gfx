@@ -393,6 +393,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_GOY_pom_le_patron.dds"
 	}
 	SpriteType = { 
+		name = "GFX_goal_GOY_pom_convene_the_committee"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_convene_the_committee.dds"
+	}
+	SpriteType = { 
 		name = "GFX_goal_GOY_pom_griffons_dream"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_griffons_dream.dds"
 	}
@@ -423,5 +427,73 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_goal_GOY_pom_old_pomovarra"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_old_pomovarra.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_suddenly_unretired"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_suddenly_unretired.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_check_up_on_old_contacts"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_check_up_on_old_contacts.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_fortify_the_islands"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_fortify_the_islands.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_attract_mercenaries"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_attract_mercenaries.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_rouse_the_locals"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_rouse_the_locals.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_train_up_new_officers"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_train_up_new_officers.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_second_retirement"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_second_retirement.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_develop_heavy_industry"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_develop_heavy_industry.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_scavenger_companies"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_scavenger_companies.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_bring_fight_to_them"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_bring_fight_to_them.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_eyes_and_ears_in_every_bush"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_eyes_and_ears_in_every_bush.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_improve_our_strategy"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_improve_our_strategy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_ara_dorocoup"
+		texturefile = "gfx/interface/goals/goal_GOY_ara_dorocoup.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_the_gamble"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_the_gamble.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_trap_is_set"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_trap_is_set.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_on_the_hunter"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_on_the_hunter.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_price_of_a_nation"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_price_of_a_nation.dds"
 	}
 }

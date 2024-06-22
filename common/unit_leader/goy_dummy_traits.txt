@@ -1,0 +1,241 @@
+leader_traits = {
+	Hespaeros = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Jean-Jacques = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Noir = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Neva = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Maskh = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Hildred = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Hrorikrsdottir = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Malevolent = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Fury = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Eastern = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Torrent = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Flaming = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Vengeance = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Eastern = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Torrent = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Bradakis = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Levteros = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Himmel = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Zwirn = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Nikke = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	
+	Gispen = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Fluffs = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Ziggus = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Zebrone = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Maleficar = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Maller = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Philipos = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Argead = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Nolwenn = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Iudicael = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Maximilian = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Stierlitz = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Róisín = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+	Stormshield = {
+		type = corps_commander
+		trait_type = personality_trait
+		new_commander_weight = {
+			base = 0
+		}
+	}
+}

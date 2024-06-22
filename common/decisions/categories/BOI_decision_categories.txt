@@ -92,3 +92,14 @@ BOI_search_for_alliance_category = {
 		is_subject = no
 	}
 }
+BOI_bailouts_cat = {
+    icon = gre_investment_decisions
+	
+	visible = {
+		original_tag = BOI
+		has_completed_focus = BOI_ask_for_loans
+		NOT = {
+			has_dlc = "Arms Against Tyranny"
+		}
+	}
+}

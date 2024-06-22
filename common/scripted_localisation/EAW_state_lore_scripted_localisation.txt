@@ -453,6 +453,10 @@ defined_text = {
 		trigger = { THIS = { state = 562.id } }
 		localization_key = state_lore_text_container_state_name_short_562
 	}
+	text = {
+		trigger = { THIS = { state = 574.id } }
+		localization_key = state_lore_text_container_state_name_short_574
+	}
 }
 
 defined_text = {
@@ -906,6 +910,10 @@ defined_text = {
 		trigger = { check_variable = { state_lore_text_state_id = 562.id } }
 		localization_key = state_lore_text_container_state_name_562
 	}
+	text = {
+		trigger = { check_variable = { state_lore_text_state_id = 574.id } }
+		localization_key = state_lore_text_container_state_name_574
+	}
 }
 
 defined_text = {
@@ -1358,6 +1366,10 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { state_lore_text_state_id = 562.id } }
 		localization_key = state_lore_text_container_state_description_562
+	}
+	text = {
+		trigger = { check_variable = { state_lore_text_state_id = 574.id } }
+		localization_key = state_lore_text_container_state_description_574
 	}
 }
 

@@ -152,6 +152,31 @@ FBK_ALLARD = {
 	color = rgb { 145 25 45 }
 	color_ui = rgb { 160 50 90 }
 }
+#
+POM_GOY_REP_JFT = {
+	color = rgb { 26 101 495 }
+	color_ui = rgb { 26 85 49 }
+}
+POM_GOY_REP_JER = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 101 34 }
+}
+POM_GOY_REP_JEB = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 11 101 49 }
+}
+GRI_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 85 49 }
+}
+BRZ_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 101 34 }
+}
+FEA_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 11 101 49 }
+}
 ################################
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
@@ -2800,4 +2825,8 @@ PLB_exuvia_changelingia = {
 PLB_exu_equus = {
 	color = rgb { 240 240 240 }
     color_ui = rgb { 240 240 240 }
+}
+Riseia_formable = {
+	color = rgb { 132 10 41 }
+    color_ui = rgb { 132 10 41 }
 }

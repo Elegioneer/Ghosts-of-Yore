@@ -41,4 +41,12 @@ spriteTypes = {
 		name = "GFX_event_goy_himss_barrad_end"
 		texturefile = "gfx/event_pictures/event_goy_himss_barrad_end.dds"
 	}
+	spriteType = {
+		name = "GFX_event_goy_reiher_lm_arrival"
+		texturefile = "gfx/event_pictures/event_goy_reiher_lm_arrival.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_reiher_located"
+		texturefile = "gfx/event_pictures/event_goy_reiher_located.dds"
+	}
 }

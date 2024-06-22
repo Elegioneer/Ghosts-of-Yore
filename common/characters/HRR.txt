@@ -13,7 +13,7 @@ characters = {
 		}
 		country_leader = {
 			desc = GOY_HRR_Ardenssonhector_desc
-			ideology = liberalism
+			ideology = liberation_front
 			expire = "1965.1.1.1"
 			id = -1
 		}

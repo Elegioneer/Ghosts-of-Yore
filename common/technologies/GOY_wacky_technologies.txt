@@ -21,13 +21,77 @@ technologies = {
 			magical_infantry
 		}
 	}
+	#Smiths
+	GOY_NTR_smiths_buff_1_tech = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		infantry = {
+			hardness = 10
+		}
+	}
+	GOY_NTR_smiths_buff_2_tech = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		infantry = {
+			armor_value = 5000
+		}
+	}
+	GOY_NTR_smiths_buff_3_tech = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		infantry = {
+			air_attack = 2500
+		}
+	}
+	GOY_NTR_smiths_buff_4_tech = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		infantry = {
+			hardness = 5
+		}
+	}
+	
+	#Steam Engines
+	GOY_steam_engines_tech = {
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = { 
+			GOY_light_ship_engine_0
+		}
+		enable_equipment_modules = { 
+			GOY_cruiser_ship_engine_0
+		}
+		enable_equipment_modules = { 
+			GOY_carrier_ship_engine_0
+		}
+		enable_equipment_modules = { 
+			GOY_heavy_ship_engine_0
+		}
+	}
+	GOY_steam_engines_no_mtg_tech = {
+		allow = {
+			always = no
+		}
+		industrial_capacity_dockyard = 0.1
+		navy_max_range_factor = -0.1
+	}
+	
 	#AI 'improvements'
 	GOY_longer_supply_chains = {
 		allow = {
 			always = no
 		}
 		supply_consumption_factor = -0.1
-		out_of_supply_factor = 0.1
+		out_of_supply_factor = -0.2
 		supply_node_range = 0.25
 	}
 	GOY_adaptive_camouflage = {

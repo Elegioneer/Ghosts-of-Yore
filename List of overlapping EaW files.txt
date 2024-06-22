@@ -4,8 +4,8 @@
 # common/bookmarks/z_scenariogriffonia.txt
 # common/countries/cosmetic.txt
 # common/decisions/categories/eaw_formable_category.txt
-# common/game_rules/EAW_game_rules.txt
-# common/scripted_localisation/EAW_state_lore_scripted_localisation.txt
+# common/game_rules/EAW_game_rules.txt -Arantiga removed
+# common/scripted_localisation/EAW_state_lore_scripted_localisation.txt -state 408
 # common/scripted_localisation/EAW_welcomescreen_scripted_localisation.txt
 # common/scripted_triggers/EAW_unit_medals_scripted_triggers.txt
 # common/scripted_triggers/GOY_triggers.txt — has replicas of some eaw triggers

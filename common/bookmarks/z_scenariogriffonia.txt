@@ -116,9 +116,9 @@ bookmarks = {
 			   
 			}
 			focuses = {
-				ARA_chaos
+				ARA_traitor
 				ARA_dorotheos_coup
-				ARA_die_is_cast
+				ARA_inheritor
 			}
 		}
 		"BOI"={

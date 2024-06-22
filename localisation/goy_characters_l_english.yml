@@ -13,7 +13,7 @@
  GOY_ARA_headmasterapesios:0 "Headmaster Apesios"
  GOY_ARA_arantigos:0 "Arantigos II"
  ARA_nicatorking:0 "Nicator I Whitebeak"
- ARA_hespaeros_name:0 "Hespaeros"
+ ARA_hespaeros_name:0 "Hespaeros" #DO NOT TRANSLATE. BREAKS BBA CODE
  # Margareth
  generic_neutral_leader_desc:0 "§YBorn§!: January 21, 973 ALB, Sparleto\n\n§YBiography§!: Baroness Margareth Featherin has been ruling Arantiga for the past decade with a just and fair claw, but even she cannot deny that under her reign, there has been a decisive lack of progress as Wingbardian capitalists seized most of the Arantigan industry. However, she believes that the pen is mightier than the sword, and that Arantiga's current woes can be resolved with a few careful words, something her more notable brother and general in the army, Dorotheos, disagrees with."
  # Dorotheos
@@ -37,7 +37,7 @@
  #
  GOY_ARA_gumi_name:0 "Gumi"
  GOY_ARA_gumi_desc:0 "§YBorn§!: ???, Macawia\n\n§YCatchphrase§!: 'Wuewuewuewue'\n\n§YPortrait By§!: §RGumi§!"
- GOY_ARA_benoam_gerza:0 "Benoam Gerza "
+ GOY_ARA_benoam_gerza:0 "Benoam Gerza " #Do not delete these weird spaces or the characters will not appear in-game
  GOY_ARA_zaron_zorrel:0 "Zaron Zorrel "
  GOY_ARA_vasile:0 "Vasile cel Tradat "
  GOY_ARA_moonfeather:0 "Plumage Moonfeather "
@@ -59,6 +59,7 @@ GOY_BOI_grandpagruff:0 "Grandpa Gruff"
  GOY_BOI_duchess:0 "Empress Gabriela Eagleclaw"
  GOY_BOI_duchess_desc:0 "§YBorn§!: February 12, 961 ALB, Readewetter\n\n§YBiography§!: Following the tragic death of the last scion of the imperial dynasty, Gabriela Eagleclaw, first cousin of Emperor Grover V, became the last claimant to his title. A rallying figure for griffonian royalists, her realm was nevertheless plunged into chaos alongside the rest of Herzland, following the Lord-Protector's coup. !\n\nHowever thanks to the intervention of griffonstonian loyalists, former Duchess of Strawberry was put on the imperial throne – and now to honor the legacy of Grovers, she strives to rebuild what was lost, and restore the Empire to its former glory.\n\nThough she is thought of as a staunch supporter of the nobility, she will try to uphold the present balance between the nobles, religion, and the populus.\n\n§YPortrait By§!: Scroup"
  GOY_BOI_grover:0 "Emperor Grover VI"
+ GOY_BOI_joseph_griffchard:0 "Joseph Griffchard"
  
 ### NTR ###
 NTR_GOY_stormshield:0 "Euan Stormshield"
@@ -97,8 +98,9 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  GOY_POM_morel_desc:0 "§YBorn§!: 968 ALB, Westkeep\n\n§YBiography§!: Despite his rabid nationalism, Olivier Morel does not have even a drop of Pomovarran blood in his veins. His father, a minor official within the Aquileian bureaucratic apparatus, was sent on an assignment to Pomazhon as punishment – and his family moved along as well. Olivier – then just a young kid – grew enamoured with Pomovarra’s history, studying the works of (also Aquileian) poets praising the ‘unshakable spirit of Pomovarran warriors’. In his teenage years, Olivier got involved with the Pomovarran revolutionary underground, becoming known for his highly radical ideas and natural charisma which helped him overcome the distrust of fellow Pomovarrans towards ‘the outsider’. During the Pomovarran uprising, he supported the rebel cause, and with the gradual demise of rebel commanders in the fighting, Morel’s power grew. With every pamphlet he wrote and every rally he led, his fame spread. Now, after becoming the sole leader of Pomovarrans, he is ready to lead them into a future of war and glory."
  GOY_POM_reiher:0 "Leopold Reiher"
  GOY_POM_reiher_desc:0 "§YBorn§!: 953 ALB, Griffenheim\n\n§YBiography§!: Coming from a military family, the path before Leopold Reiher was set from the start: a life of service in the Reichsarmee. Leopold proved himself to be a talented officer, quickly climbing through the ranks and becoming one of the youngest colonels within the imperial army by the time the revolution came about. When the Empire started falling apart, Reiher commanded a regiment in Verenia. As the region was plunged into complete chaos, Reiher went rogue, followed by his unit. Colonel’s forces quickly grew, his undeniable charisma attracting deserters from both imperial and republican forces. It was then that he got in contact with Flowenian patricians who needed an army to deal with a rebellion in Pomovarra. Reiher quickly crushed the uprising, but to the dismay of his clients, refused to return the region into their claws, instead proclaiming himself Prince of Pomovarra. His ‘princedom’ being little more than a warlord's fief, Reiher is well-respected by his subordinates, but hated by most of his subjects who deem Reiher one of the worst overlords in the long history of foreign rule over Pomovarra, making his reign one of endless struggle with the rebellious population.\n\n§YPortrait By§!: Leo the Pone"
+ GOY_POM_reiher_beach_ep_desc:0 "§YBorn§!: 953 ALB, Griffenheim\n\n§YBiography§!: Having fought against the Republicans, the Imperials, the Flowenans, the Aquileians, and after leading a country for over 20 years, Colonel Reiher thought he could finally enjoy retirement on the poor secluded island nation of Les Meridiennes. Alas, it seems that fate has no mercy for him, as war came even to such a forgotten place as this one. But Leopold was never the one to run from danger, choosing to strike a deal with the local authorities and fight off the inaders instead of hopping on his ship and running to some even more distant polity.\n\n§YPortrait By§!: Leo the Pone"
  GOY_POM_feuerstein:0 "Gustav Feuerstein"
- GOY_POM_falkenrath:0 "Erika Falkenrath"
+ GOY_POM_falkenrath:0 "Erik Falkenrath"
  GOY_POM_renan:0 "Morvan Renan"
  GOY_POM_silverwing:0 "Alienor Silverwing"
  GOY_POM_seznec:0 "Corentin Seznec"
@@ -106,5 +108,25 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  GOY_POM_schattenzahn:0 "Heinrich Schattenzahn"
  GOY_POM_nazi_chair:0 "Collapsed Government"
  GOY_POM_nazi_chair_desc:0 "After the escape of 'Prince-Colonel' Reiher and his goons, all hell broke loose."
+ GOY_POM_aetian_chair:0 "Provisional Government"
  GOY_POM_grijsbek:0 "Hendrik Grijsbek"
+ GOY_POM_ponysander:0 "Ponysander"
+ POM_jacques_noir_name:0 "Jean-Jacques Noir" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_neva_maskh:0 "Neva Maskh" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_hilda_stern:0 "Hildred Hrorikrsdottir" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_malevolent_fury:0 "Malevolent Fury" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_flaming_revenge:0 "Flaming Vengeance" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_eastern_gust:0 "Eastern Torrent" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_levteros_bradakis:0 "Levteros Bradakis" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_nikke:0 "Nikke" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_himmel_zwirn:0 "Himmel Zwirn" #DO NOT TRANSLATE. BREAKS BBA CODE
+ 
+ #beach
+ POM_gispen_name:0 "Gispen Fluffs" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_zebro_name:0 "Ziggus Zebrone" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_maller_name:0 "Maleficar Maller" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_philipos_name:0 "Philipos Argead" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_nolwenn_name:0 "Nolwenn Iudicael" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_stierlitz_name:0 "Maximilian Stierlitz" #DO NOT TRANSLATE. BREAKS BBA CODE
+ POM_roisin_name:0 "Róisín Stormshield" #DO NOT TRANSLATE. BREAKS BBA CODE
 

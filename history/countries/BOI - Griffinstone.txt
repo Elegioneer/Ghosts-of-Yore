@@ -129,6 +129,7 @@ recruit_character = GOY_BOI_oskar_silverfeather
 recruit_character = GOY_BOI_archon_proteus
 recruit_character = GOY_BOI_archon_hephaestus
 recruit_character = GOY_BOI_archon_lucinus
+recruit_character = GOY_BOI_joseph_griffchard
 
 #
 

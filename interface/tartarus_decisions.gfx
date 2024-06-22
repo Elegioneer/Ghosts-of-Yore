@@ -167,4 +167,12 @@ spriteTypes = {
 		name = "GFX_decision_goy_magic_hat"
 		texturefile = "gfx/interface/decisions/decision_goy_magic_hat.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_goy_plant_pom_boar_flag"
+		texturefile = "gfx/interface/decisions/decision_goy_plant_pom_boar_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_pom_boar"
+		texturefile = "gfx/interface/decisions/decision_goy_pom_boar.dds"
+	}
 }

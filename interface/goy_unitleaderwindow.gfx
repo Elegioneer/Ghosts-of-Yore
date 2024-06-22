@@ -8,4 +8,36 @@ spriteTypes = {
 		name = "GFX_trait_goy_exiled_bearlord"
 		texturefile = "gfx/interface/traits/personal/trait_goy_exiled_bearlord.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_goy_alcohol"
+		texturefile = "gfx/interface/traits/personal/trait_goy_alcohol.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_shady"
+		texturefile = "gfx/interface/traits/personal/trait_goy_shady.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_legionnaire"
+		texturefile = "gfx/interface/traits/personal/trait_goy_legionnaire.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_merc"
+		texturefile = "gfx/interface/traits/personal/trait_goy_merc.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_raider"
+		texturefile = "gfx/interface/traits/personal/trait_goy_raider.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_gdsg_hat_wearer"
+		texturefile = "gfx/interface/traits/personal/trait_GOY_gdsg_hat.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_gdsg_key_keeper"
+		texturefile = "gfx/interface/traits/personal/trait_GOY_gdsg_key.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_goy_gdsg_electrician"
+		texturefile = "gfx/interface/traits/personal/trait_GOY_gdsg_electrician.dds"
+	}
 }

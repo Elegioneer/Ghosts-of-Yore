@@ -16,3 +16,25 @@ technology_sharing_group = {
 		}
 	}
 }
+
+technology_sharing_group = {
+
+	id = POM_aetian_tech_sharing
+	name = POM_aetian_tech_sharing_name
+	desc = POM_aetian_tech_sharing_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.2
+
+	categories = { industry electronics }
+
+	available = {
+		NOT = {
+			is_puppet = yes
+		}
+	    OR = {
+		    original_tag = POM
+		    is_in_faction_with = POM
+		}
+	}
+}

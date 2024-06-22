@@ -1,0 +1,319 @@
+	GoY_LM_get_ships = {
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Glorieuse Class"
+						type = ship_hull_cruiser_2
+						name_group = JER_CL_MONARCHY
+						allow_without_tech = yes
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_medium_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+							fixed_ship_radar_slot = ship_radar_1
+							fixed_ship_engine_slot = cruiser_ship_engine_2
+							fixed_ship_armor_slot = ship_armor_cruiser_2
+							front_1_custom_slot = ship_anti_air_2
+							mid_1_custom_slot = ship_torpedo_2
+							mid_2_custom_slot = ship_light_medium_battery_2
+							rear_1_custom_slot = ship_light_medium_battery_2
+						}
+					}
+					create_equipment_variant = {
+						name = "Beauvais Class"				
+						type = ship_hull_light_2
+						name_group = JER_DD_MONARCHY
+						allow_without_tech = yes
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+							fixed_ship_radar_slot = ship_sonar_2
+							fixed_ship_engine_slot = light_ship_engine_2
+							fixed_ship_torpedo_slot = ship_torpedo_2
+							mid_1_custom_slot = ship_light_battery_2
+							rear_1_custom_slot = ship_mine_layer_1
+						}
+					}
+				}
+			}
+			ELSE = {
+				create_equipment_variant = {
+					name = "Glorieuse Class"
+					type = light_cruiser_2
+					allow_without_tech = yes
+					upgrades = {
+						ship_reliability_upgrade = 3
+						ship_engine_upgrade = 1
+						ship_gun_upgrade = 3
+						ship_anti_air_upgrade = 1
+					}
+					obsolete = no
+				}
+				create_equipment_variant = {
+					name = "Beauvais Class"
+					type = destroyer_2
+					allow_without_tech = yes
+					upgrades = {
+						ship_reliability_upgrade = 3
+						ship_engine_upgrade = 1
+						ship_gun_upgrade = 3
+						ship_anti_air_upgrade = 1
+					}
+					obsolete = no
+				}
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = ship_hull_light_2
+					equipment_variant = "Beauvais Class"
+				}
+				custom_effect_tooltip = POM_LM_add_ships_2
+			}
+			ELSE = {
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = light_cruiser_2
+					equipment_variant = "Glorieuse Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+				create_ship = {
+					type = destroyer_2
+					equipment_variant = "Beauvais Class"
+				}
+			}
+	}

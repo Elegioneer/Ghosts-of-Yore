@@ -1352,7 +1352,19 @@
 			
 		}
 		}
+		will_lead_to_war_with = VED
 		completion_reward = {
+			IF = {
+				limit = {
+					is_ai = yes
+					VED = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.006
+				}
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = VED
@@ -1564,7 +1576,19 @@
 		bypass = {
 		    owns_state = 522
 		}
+		will_lead_to_war_with = SRS
 		completion_reward = {
+			IF = {
+				limit = {
+					is_ai = yes
+					SRS = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.006
+				}
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = SRS
@@ -3070,7 +3094,19 @@
 		bypass = {
 			owns_state = 522
 		}
+		will_lead_to_war_with = SRS
 		completion_reward = {
+			IF = {
+				limit = {
+					is_ai = yes
+					SRS = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.007
+				}
+			}
 			create_wargoal = {
 				type = annex_everything
 				target = SRS
@@ -3674,6 +3710,17 @@
 		}
 		will_lead_to_war_with = VED
 		completion_reward = {
+			IF = {
+				limit = {
+					is_ai = yes
+					VED = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.007
+				}
+			}
 			effect_tooltip = {
 				create_wargoal = {
 					type = annex_everything
@@ -5936,7 +5983,19 @@
 		prerequisite = { focus = NTR_total_reparations }
 		prerequisite = { focus = NTR_slave_economy }
 		prerequisite = { focus = NTR_take_magic }
+		will_lead_to_war_with = VED
 		completion_reward = {
+			IF = {
+				limit = {
+					is_ai = yes
+					SRS = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.007
+				}
+			}
 			effect_tooltip = {
 				create_wargoal = {
 					type = annex_everything

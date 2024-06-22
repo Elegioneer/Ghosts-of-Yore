@@ -390,7 +390,7 @@ unit_medals = {
 			GOY_has_ntribes_medals_trigger = yes
 			has_country_leader = {
 				ruling_only = yes 
-				character = NTR_GOY_princessfiana
+				character = GOY_NTR_fiana
 			}
 		}
 		frame = 8

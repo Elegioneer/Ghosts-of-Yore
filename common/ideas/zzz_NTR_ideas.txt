@@ -1742,6 +1742,92 @@ ideas = {
 			targeted_modifier = { tag = NTR attack_bonus_against = 0.1 defense_bonus_against = 0.2 }
 		}
 	}
+	hidden_ideas = {
+		NTR_smiths_buff_1 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			on_add = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 1
+					popup = no
+				}
+			}
+			on_remove = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 0
+					popup = no
+				}
+			}
+		}
+		NTR_smiths_buff_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			on_add = {
+				set_technology = {
+					GOY_NTR_smiths_buff_2_tech = 1
+					popup = no
+				}
+			}
+			on_remove = {
+				set_technology = {
+					GOY_NTR_smiths_buff_2_tech = 0
+					popup = no
+				}
+			}
+		}
+		NTR_smiths_buff_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			on_add = {
+				set_technology = {
+					GOY_NTR_smiths_buff_3_tech = 1
+					popup = no
+				}
+			}
+			on_remove = {
+				set_technology = {
+					GOY_NTR_smiths_buff_3_tech = 0
+					popup = no
+				}
+			}
+		}
+		NTR_smiths_buff_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			on_add = {
+				set_technology = {
+					GOY_NTR_smiths_buff_4_tech = 1
+					popup = no
+				}
+			}
+			on_remove = {
+				set_technology = {
+					GOY_NTR_smiths_buff_4_tech = 0
+					popup = no
+				}
+			}
+		}
+	}
 
 	##################
 	###### LAWS ######
@@ -2749,9 +2835,25 @@ materiel_manufacturer = {
 		}
 		on_add = {
 			activate_decision = NTR_upgrade_smiths_2
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 1
+					popup = no
+				}
+				}
+			}
 		}
 		on_remove = {
 			remove_decision = NTR_upgrade_smiths_2
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 0
+					popup = no
+				}
+				}
+			}
 		}
 		equipment_bonus = {
 			
@@ -2760,10 +2862,13 @@ materiel_manufacturer = {
 				hard_attack = 1000 instant = yes
 				defense = 6 instant = yes
 				breakthrough = 7 instant = yes
-				hardness = 49 instant = yes
+				hardness = 4 instant = yes
 				build_cost_ic = 0.15 instant = yes
 			}
 		}
+		#doesn't work modifier = {
+		#	modifier_army_sub_unit_infantry_hardness_factor = 10
+		#}
 	}
 	NTR_northern_weaponsmiths_2 = {
 		allowed = {
@@ -2781,9 +2886,29 @@ materiel_manufacturer = {
 		}
 		on_add = {
 			activate_decision = NTR_upgrade_smiths_3
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 1
+					GOY_NTR_smiths_buff_2_tech = 1
+					GOY_NTR_smiths_buff_3_tech = 1
+					popup = no
+				}
+				}
+			}
 		}
 		on_remove = {
 			remove_decision = NTR_upgrade_smiths_3
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 0
+					GOY_NTR_smiths_buff_2_tech = 0
+					GOY_NTR_smiths_buff_3_tech = 0
+					popup = no
+				}
+				}
+			}
 		}
 		equipment_bonus = {
 			
@@ -2791,11 +2916,11 @@ materiel_manufacturer = {
 				soft_attack = 10 instant = yes
 				hard_attack = 3000 instant = yes
 				ap_attack = 5000 instant = yes
-				air_attack = 5000 instant = yes
+				air_attack = 1 instant = yes
 				defense = 8 instant = yes
 				breakthrough = 9 instant = yes
-				hardness = 99 instant = yes
-				armor_value = 10000 instant = yes
+				hardness = 7 instant = yes
+				armor_value = 1 instant = yes
 				reliability = -0.05 instant = yes
 				build_cost_ic = 0.45 instant = yes
 			}
@@ -2822,6 +2947,30 @@ materiel_manufacturer = {
 					popup = yes
 				}
 			}
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 1
+					GOY_NTR_smiths_buff_2_tech = 1
+					GOY_NTR_smiths_buff_3_tech = 1
+					GOY_NTR_smiths_buff_4_tech = 1
+					popup = no
+				}
+				}
+			}
+		}
+		on_remove = {
+			hidden_effect = {
+				owner = {
+				set_technology = {
+					GOY_NTR_smiths_buff_1_tech = 1
+					GOY_NTR_smiths_buff_2_tech = 1
+					GOY_NTR_smiths_buff_3_tech = 1
+					GOY_NTR_smiths_buff_4_tech = 1
+					popup = no
+				}
+				}
+			}
 		}
 		equipment_bonus = {
 			
@@ -2829,11 +2978,11 @@ materiel_manufacturer = {
 				soft_attack = 13 instant = yes
 				hard_attack = 7000 instant = yes
 				ap_attack = 15000 instant = yes
-				air_attack = 5000 instant = yes
+				air_attack = 1 instant = yes
 				defense = 13 instant = yes
 				breakthrough = 13 instant = yes
-				hardness = 199 instant = yes
-				armor_value = 10000 instant = yes
+				hardness = 7 instant = yes
+				armor_value = 1 instant = yes
 				maximum_speed = 0.25 instant = yes
 				reliability = -0.15 instant = yes
 				build_cost_ic = 0.85 instant = yes

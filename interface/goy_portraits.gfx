@@ -7,4 +7,49 @@ spriteTypes = {
 		name = "GFX_GOY_smiling_fiana"
 		textureFile = "gfx/leaders/NTR/goy_happy_pink_waifu.tga"
 	}
+	spriteType = {
+		name = "GFX_GOY_aetian_chair"
+		textureFile = "gfx/leaders/POM/GOY_aetian_chair.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_boar_chair"
+		textureFile = "gfx/leaders/POM/GOY_boar_chair.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_nazi_chair"
+		textureFile = "gfx/leaders/POM/GOY_nazi_chair.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_republican_chair"
+		textureFile = "gfx/leaders/POM/GOY_republican_chair.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_very_nice_chair"
+		textureFile = "gfx/leaders/POM/GOY_very_nice_chair.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_reiher_beach_episode"
+		textureFile = "gfx/leaders/POM/GOY_reiher_beach_episode.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_gispen"
+		textureFile = "gfx/leaders/POM/GOY_gispen.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_jacques_noir"
+		textureFile = "gfx/leaders/POM/GOY_jacques_noir.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_pink_knight"
+		textureFile = "gfx/leaders/KAT/pink_knight.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_nim_gen_2"
+		textureFile = "gfx/leaders/NIM/nim_gen_2.tga"
+	}
+	spriteType = {
+		name = "GFX_GOY_Gryphus_commander_2"
+		textureFile = "gfx/leaders/GRU/Gryphus_commander_2.tga"
+	}
+	
 }

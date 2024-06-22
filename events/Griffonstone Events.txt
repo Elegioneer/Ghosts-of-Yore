@@ -961,6 +961,18 @@ add_namespace = griffonstone_decision
 			     load_focus_tree = Griffonstone_gilda
 				 set_country_flag = BOI_deadlock_broken
 			}
+			add_advisor_role = {
+				character = GOY_BOI_gallus
+				activate = no
+				advisor = {
+					slot = political_advisor
+					cost = 50
+					idea_token = GOY_BOI_gallus_idea
+					traits = {
+						friendship_school_student
+					}
+				}
+			}
 		}
 	}
 	

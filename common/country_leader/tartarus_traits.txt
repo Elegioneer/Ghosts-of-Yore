@@ -287,14 +287,14 @@ leader_traits = {
 		war_support_factor = 0.05
 		opinion_gain_monthly_factor = -0.1
 	}
-	GOY_gallusfriendship = {
+	GOY_gallusfriendship = { #Dreams of a new griffonia
 		random = no
-		send_volunteer_size = 1
+		send_volunteer_factor = 0.5
 	}
 	GOY_imperialloyalist = {
 		random = no
 		stability_factor = -0.05
-		political_power_gain = +0.05
+		political_power_gain = 0.05
 	}
 	GOY_claimant = {
 		random = no
@@ -353,12 +353,14 @@ leader_traits = {
 	}
 	GOY_former_operative_trait = {
 		random = no
+		decryption_factor = 0.25
+		encryption_factor = 0.25
+	}
+	GOY_former_operative_lar_trait = {
+		random = no
 		operative_slot = 1
 		intel_network_gain_factor = 0.1
 		own_operative_detection_chance_factor = -0.1
-		decryption_power_factor = 0.2
-		decryption_factor = 0.25
-		encryption_factor = 0.25
 	}
 	GOY_le_patron_trait = {
 		random = no
@@ -390,5 +392,39 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 		fascism_drift = 0.01
+	}
+	GOY_talented_organiser_trait = {
+		random = no
+		army_org_factor = 0.05
+		consumer_goods_expected_value = -0.01
+	}
+	GOY_eccentric_trait = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = -0.05
+		communism_drift = 0.01
+	}
+	GOY_republican_general_trait = {
+		random = no
+		army_org_factor = 0.05
+		neutrality_drift = 0.01
+	}
+	GOY_trait_retired_colonel = {
+		random = no
+		political_power_gain = -0.2
+		army_org_factor = 0.1
+		army_morale_factor = 0.1
+	}
+	GOY_trait_harmonic_diplomacy = {
+		random = no
+		opinion_gain_monthly_factor = 0.25
+		faction_trade_opinion_factor = 0.5
+	}
+	BOI_steamboat_company_trait = {
+		random = no
+	}
+	GOY_trait_prince_colonel = {
+		random = no
+		political_power_cost = -0.5
 	}
 }

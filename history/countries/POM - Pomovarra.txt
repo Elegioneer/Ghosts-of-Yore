@@ -5,6 +5,7 @@ set_research_slots = 2
 set_technology = {
 	griffon_race = 1
 	tech_griffon_army = 1
+	tech_knights = 1
 	melee_weapons = 1
 	melee_weapons1 = 1
 	infantry_weapons = 1
@@ -74,6 +75,14 @@ add_ideas = {
 
 add_manpower = 25000
 
+672 = {
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+}
+
 load_focus_tree = Pomovarra_goy_init
 
 set_cosmetic_tag = POM_GOY
@@ -91,15 +100,34 @@ recruit_character = GOY_POM_reiher #GoY
 recruit_character = GOY_POM_feuerstein
 recruit_character = GOY_POM_falkenrath
 recruit_character = GOY_POM_schattenzahn
+recruit_character = GOY_POM_floppen
+recruit_character = GOY_POM_ponysander
 
 recruit_character = GOY_POM_liberation_commitee
 recruit_character = GOY_POM_charlotte_corneille
+recruit_character = GOY_POM_political_chair
+recruit_character = GOY_POM_allard_the_communard
 
 recruit_character = GOY_POM_camriz
 recruit_character = GOY_POM_renan
 recruit_character = GOY_POM_silverwing
 recruit_character = GOY_POM_morel
 recruit_character = GOY_POM_seznec
+
+recruit_character = GOY_POM_luca
+recruit_character = GOY_POM_grijsbek
+recruit_character = GOY_POM_michael_landreau
+recruit_character = GOY_POM_sugar_crepe
+recruit_character = GOY_POM_leonard_rodier
+
+recruit_character = GOY_VED_king_ondska_i
+recruit_character = GOY_POM_soter
+recruit_character = GOY_POM_matthias_felchen
+recruit_character = GOY_POM_wilhelm_stackelberg
+recruit_character = GOY_POM_hjarnar_ernstsson
+recruit_character = GOY_POM_spirit_fire
+recruit_character = GOY_POM_hermane_gering
+recruit_character = GOY_POM_eagleheart
 
 GOY_POM_reiher = {
 	set_character_flag = GOY_char_available_flag

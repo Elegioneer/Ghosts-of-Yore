@@ -1,9 +1,66 @@
+	POM_autonomous_dynmodifier = {
+		remove_trigger  = {
+			NOT = {
+				owner = {
+					original_tag = POM
+				}
+			}
+		}
+		icon = GFX_modifiers_goy_typicalgriff
+		local_manpower = -0.75
+	}
+	POM_sky_indzone_dynmodifier = {
+		remove_trigger  = {
+			NOT = {
+				owner = {
+					original_tag = POM
+				}
+			}
+		}
+		icon = GFX_modifiers_goy_pom_administration
+		local_building_slots_factor = 0.5
+		state_production_speed_buildings_factor = 0.1
+		local_factories = 0.25
+		local_resources_factor = 0.25
+	}
+	POM_pomovarran_province_dynmodifier = {
+		remove_trigger  = {
+			NOT = {
+				owner = {
+					original_tag = POM
+				}
+			}
+		}
+		icon = GFX_modifiers_goy_pom_administration
+		local_non_core_manpower = 0.5
+		local_factories = 0.25
+		local_resources_factor = 0.25
+		compliance_growth = 0.25
+		resistance_growth = -0.5
+	}
+	POM_pomovarran_administration_dynmodifier = {
+		remove_trigger  = {
+			NOT = {
+				owner = {
+					original_tag = POM
+				}
+			}
+		}
+		icon = GFX_modifiers_goy_pom_administration
+		local_non_core_manpower = 0.25
+		local_factories = 0.1
+		local_resources_factor = 0.1
+		compliance_growth = 0.1
+		resistance_growth = -0.25
+	}
 	NTR_holy_forge_dynmodifier = {
-		
+		enable = {
+			is_owned_by = NTR
+		}
 		icon = GFX_modifiers_goy_holy_forge
 		
-		local_building_slots = 2
-		state_production_speed_buildings_factor = 0.2
+		#local_building_slots = 2
+		state_production_speed_buildings_factor = 0.25
 		local_supplies = 0.25
 		
 	}
@@ -11,7 +68,13 @@
 		enable = {
 			is_owned_by = NTR
 		}
-		
+		remove_trigger  = {
+			NOT = {
+				owner = {
+					original_tag = NTR
+				}
+			}
+		}
 		icon = GFX_modifiers_goy_integrated_griffons
 		
 		local_building_slots_factor = 0.25
@@ -23,7 +86,9 @@
 		resistance_damage_to_garrison = -0.5
 	}
 	NTR_aurora_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_1
 
@@ -36,7 +101,9 @@
 		local_supplies = 0.25
 		}
 	NTR_iron_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_8
 
@@ -52,7 +119,9 @@
 		local_supplies = 0.25
 		}
 	NTR_black_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_2
 
@@ -68,7 +137,9 @@
 		local_supplies = 0.25
 		}
 	NTR_shadow_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_4
 
@@ -84,7 +155,9 @@
 		local_supplies = 0.25
 		}
 	NTR_blood_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_7
 
@@ -100,7 +173,9 @@
 		local_supplies = 0.25
 		}
 	NTR_obsidian_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_6
 
@@ -116,7 +191,9 @@
 		local_supplies = 0.25
 		}
 	NTR_storm_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_3
 
@@ -132,7 +209,9 @@
 		local_supplies = 0.25
 		}
 	NTR_amber_tower_constructed = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_modifiers_goy_dark_towers_5
 
@@ -148,7 +227,9 @@
 		local_supplies = 0.25
 		}
 	NTR_frost_auxilias_region = {
-		enable = { always = yes }
+		enable = {
+			is_owned_by = NTR
+		}
 		
 		icon = GFX_decision_rifles
 

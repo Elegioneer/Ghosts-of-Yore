@@ -11,7 +11,13 @@ GOY_mass_mobilisation_idea:0 "Mass Mobilisation"
 GOY_magical_melee_equipment:0 "Magical Pre-Gunpowder Equipment"
 GOY_magical_melee_equipment_short:0 "Magic Staves"
 GOY_magical_melee_equipment_tech:0 "Magic Staves"
+GOY_longer_supply_chains:0 "Extended Supply Chains"
+GOY_adaptive_camouflage:0 "Adaptive Camouflage"
+GOY_resource_smuggling:0 "Resource Smuggling"
 
 # Dynamic ideology
 GOY_EAW_esotericism:0 "Esotericism"
 GOY_NTR_esotericism:0 "Dark Lord"
+
+# Focus Filters
+FOCUS_FILTER_GOY_BEACH:0 "Beach Defence"

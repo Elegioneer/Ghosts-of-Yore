@@ -1,5 +1,13 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_modifiers_goy_pom_administration"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_pom_administration.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_goy_typicalgriff"
+		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_typicalgriff.dds"
+	}
+	spriteType = {
 		name = "GFX_modifiers_goy_holy_forge"
 		textureFile = "gfx/interface/dynamic_modifiers/modifiers_goy_holy_forge.dds"
 	}

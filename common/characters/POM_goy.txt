@@ -15,7 +15,8 @@ characters = {
 	GOY_POM_charlotte_corneille = {
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+				large = "GFX_portrait_griffon_generic_operative_female_1"
+				small = "GFX_portrait_griffon_generic_operative_female_1_small"
 			}
 		}
 		country_leader = {
@@ -26,7 +27,7 @@ characters = {
 		}
 	}
 	GOY_POM_allard_the_communard = {
-		name = GOY_POM_allard_the_communard
+		name = JER_char_allard
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/JER/Victor.tga"
@@ -53,7 +54,7 @@ characters = {
 		name=POM_karl_steelwing
 		portraits={
 			civilian={
-				#todo small="gfx/leaders/FBK/Applethorn.tga"
+				small="GFX_portrait_griffon_generic_operative_male_9_small"
 			}
 		}
 	}
@@ -62,11 +63,11 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/POM/GOY_reiher.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_reiher.dds"
 			}
 			army = {
 				large = "gfx/leaders/POM/GOY_reiher.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_reiher.dds"
 			}
 		}
 		country_leader = {
@@ -74,6 +75,7 @@ characters = {
 			ideology = stratocracy
 			expire = "1965.1.1.1"
 			id = -1
+			traits = { GOY_trait_prince_colonel }
 		}
 		field_marshal = {
 			desc = ""
@@ -88,7 +90,7 @@ characters = {
 			}
 		}
 	}
-	GOY_POM_nazi_chair = {
+	GOY_POM_political_chair = {
 		name = GOY_POM_nazi_chair
 		portraits = {
 			civilian = {
@@ -101,7 +103,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/POM/GOY_schattenzahn.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_schattenzahn.dds"
 			}
 		}
 		corps_commander = {
@@ -120,7 +122,10 @@ characters = {
 			slot = political_advisor
 			idea_token = POM_schattenzahn_advisor
 			allowed = {
-				original_tag = "POM"
+				OR = {
+					original_tag = "POM"
+					tag = "MER"
+				}
 			}		
 			ai_will_do = {
 				factor = 1
@@ -139,19 +144,28 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/POM/GOY_floppen.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_floppen.dds"
 			}
 		}
 		corps_commander = {
 			desc = ""
-			traits = { griffon_race_trait trait_reckless hill_fighter }
-			skill = 1 #TODO
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
+			traits = { cat_race_trait media_personality harsh_leader ranger }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
 			logistics_skill = 1
 			visible = {
 				has_character_flag = GOY_char_available_flag
+			}
+		}
+	}
+	GOY_POM_ponysander = {
+		name = GOY_POM_ponysander
+		portraits = {
+			army={
+				large="gfx/leaders/NIM/Rough_Rider.tga"
+				small=GFX_idea_NIM_harmony_army_chief
 			}
 		}
 	}
@@ -159,8 +173,8 @@ characters = {
 		name = GOY_POM_feuerstein
 		portraits = {
 			army = {
-				large = "gfx/leaders/Herzland/portrait_herzland_generic_male_3.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				large = "gfx/leaders/POM/GOY_reihers_steelbeak.tga"
+				small = "GFX_idea_GOY_POM_reihers_steelbeak"
 			}
 		}
 		corps_commander = {
@@ -180,8 +194,8 @@ characters = {
 		name = GOY_POM_falkenrath
 		portraits = {
 			army = {
-				large = "gfx/leaders/Aquileian_Generics/portrait_aquileian_generic_griffon_land_female_6.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				large = "gfx/leaders/POM/GOY_reihers_badass.tga"
+				small = "GFX_idea_GOY_POM_reihers_badass"
 			}
 		}
 		corps_commander = {
@@ -202,7 +216,7 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/POM/GOY_camriz.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_camriz.dds"
 			}
 		}
 		country_leader = {
@@ -254,8 +268,8 @@ characters = {
 		name = GOY_POM_grijsbek
 		portraits = {
 			army = {
-				large = "gfx/leaders/POM/GOY_camriz.tga" #todo
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				large = "gfx/leaders/POM/GOY_grijsbek.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_grijsbek.dds"
 			}
 		}
 	}
@@ -264,7 +278,7 @@ characters = {
 		portraits = {
 			army = {
 				large="gfx/leaders/POM/Horman_de_Camris.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_morel.dds"
 			}
 		}
 	}
@@ -273,12 +287,12 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/POM/GOY_renan.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_renan.dds"
 			}
 		}
 		corps_commander = {
 			desc = ""
-			traits = { griffon_race_trait trait_reckless ranger }
+			traits = { griffon_race_trait infantry_officer trait_reckless ranger }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -294,12 +308,12 @@ characters = {
 		portraits = {
 			army = {
 				large = "gfx/leaders/POM/GOY_silverwing.tga"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_silverwing.dds"
 			}
 		}
 		corps_commander = {
 			desc = ""
-			traits = { griffon_race_trait engineer_officer politically_connected }
+			traits = { griffon_race_trait engineer_officer media_personality }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
@@ -314,21 +328,137 @@ characters = {
 		name = GOY_POM_seznec
 		portraits = {
 			army = {
-				large = "gfx/leaders/Asia/portrait_griffon_generic_land_6.dds"
-				#todo small = "gfx/interface/ideas/Advisors/KAT/KAT_grandpa_owl_knight.tga"
+				large = "gfx/leaders/POM/GOY_faith_in_steel.tga"
+				small = "GFX_idea_GOY_POM_faith_in_steel"
 			}
 		}
 		corps_commander = {
 			desc = ""
-			traits = { griffon_race_trait trait_cautious infantry_officer }
+			traits = { griffon_race_trait armor_officer trait_cautious jaeger }
 			skill = 2
-			attack_skill = 1
+			attack_skill = 2
 			defense_skill = 2
-			planning_skill = 3
+			planning_skill = 2
 			logistics_skill = 1
 			visible = {
 				has_character_flag = GOY_char_available_flag
 			}
 		}
+	}
+	#
+	GOY_POM_michael_landreau={
+		name=FLO_michael_landreau
+		portraits={
+			civilian={
+				large="gfx/leaders/FLO/Loter.tga"
+			}
+		}
+		#country_leader={
+		#	desc="FLO_syndiescum_desc"
+		#	ideology=syndicalism
+		#	traits={ hero_of_the_revolution }
+		#	expire="1965.1.1.1"
+		#	id=-1
+		#}
+	}
+	GOY_POM_sugar_crepe={
+		name="JER_char_crepe"
+		portraits={
+			civilian={
+				large="gfx/leaders/JER/Sugar_Crepe.tga"
+			}
+		}
+	}
+	GOY_POM_leonard_rodier={
+		name="JER_char_rodier"
+		portraits={
+			army={
+				large="gfx/leaders/JER/Maxon.tga"
+				small="GFX_idea_JER_Leonard_Rodier"
+			}
+			civilian={
+				large="gfx/leaders/JER/Maxon.tga"
+				small="GFX_idea_JER_Leonard_Rodier"
+			}
+		}
+	}
+	
+	GOY_VED_king_ondska_i={
+		name=VED_prince_ondska
+		portraits={
+			civilian={
+				large="gfx/leaders/VED/Ondska.tga"
+			}
+		}
+	}
+	GOY_POM_soter = {
+		name = soter_advisor
+		portraits = {
+			army = {
+				large="gfx/leaders/ARA/soter.tga"
+				small="gfx/interface/ideas/idea_ARA_soter.dds"
+			}
+			civilian = {
+				large="gfx/leaders/ARA/soter.tga"
+			}
+		}
+	}
+	GOY_POM_matthias_felchen={
+		name=GRU_matthias_felchen
+		portraits={
+			army={
+				large="gfx/leaders/GRU/GRYH_non-aligned_knight_king.tga"
+				small="gfx/interface/ideas/Advisors/GRU/GRU_non_aligned_knight_king.tga"
+			}
+		}
+	}
+	GOY_POM_wilhelm_stackelberg={
+		name=HLQ_wilhelm_stackelberg
+		portraits={
+			army={
+				large="gfx/leaders/HLQ/Wilhelm_Stackelburg.tga"
+				small="gfx/interface/ideas/Advisors/HLQ/HLQ_wilhelm_stackelburg.tga"
+			}
+		}
+	}
+	GOY_POM_hjarnar_ernstsson={
+		name=OLV_hjarnar_ernstsson
+		portraits={
+			army={
+				large="gfx/leaders/OLV/Hjarnar_Ernstsson.tga"
+				small="gfx/interface/ideas/Advisors/OLV/OLV_hjarnar_ernstsson.tga"
+			}
+		}
+	}
+	GOY_POM_spirit_fire={
+		name=WIT_spirit_fire
+		portraits={
+			army={
+				large="gfx/leaders/WIT/Spirit_Fire.tga"
+				small="gfx/interface/ideas/Advisors/WIT/WIT_spirit_fire.tga"
+			}
+		}
+		gender = female
+	}
+	GOY_POM_hermane_gering={
+		name=FBK_grand_duke_hermane_i
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/FBK/FBK_hermane_gering.tga"
+			}
+			civilian={
+				large="gfx/leaders/FBK/HermaneGering.tga"
+			}
+		}
+	}
+	GOY_POM_eagleheart={
+		name="JER_char_eagleheart"
+		portraits={
+			army={
+				large="gfx/leaders/JER/Eagleheart.tga"
+				small="GFX_idea_JER_Eagleheart"
+			}
+		}
+		gender = female
 	}
 }

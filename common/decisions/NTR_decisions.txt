@@ -694,6 +694,17 @@ NTR_dark_magic_cat = {
 			    }
 				set_country_flag = NTR_flag_magick_active
 			}
+			IF = {
+				limit = {
+					is_ai = yes
+					SRS = {
+						is_ai = yes
+					}
+				}
+				hidden_effect = {
+					country_event = goy_ai_pain.006
+				}
+			}
 		}
 		remove_effect = {
 			hidden_effect = {

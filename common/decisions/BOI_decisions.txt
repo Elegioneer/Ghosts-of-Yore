@@ -1015,3 +1015,81 @@ BOI_search_for_alliance_category = {
 		}
 	}
 }
+BOI_bailouts_cat = {
+	BOI_bail_gdsg_out = {
+	    icon = gre_investment_decisions
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = available_ship_designer
+			show_ideas_tooltip = BOI_greiffenwerft
+			set_country_flag = BOI_FLAG_GDSG_enabled
+		}
+	}
+	BOI_nationalise_gdsg = {
+	    icon = generic_merge_plant_ship
+		custom_cost_trigger = {
+			command_power > 29
+		}
+		custom_cost_text = raid_cost_CP_30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		available = {
+			has_idea = BOI_greiffenwerft
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+			}
+			GOY_BOI_joseph_griffchard = {
+				add_naval_commander_role = {
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					maneuvering_skill = 3
+					coordination_skill = 2
+					traits = { goy_gdsg_hat_wearer goy_gdsg_key_keeper goy_gdsg_electrician }
+				}
+			}
+		}
+	}
+	BOI_redevelop_steam_engines = {
+	    icon = SOV_academy_of_sciences
+		cost = 50
+		fire_only_once = yes
+		days_remove = 140
+		ai_will_do = {
+			base = 1
+		}
+		visible = {
+			has_country_flag = BOI_FLAG_GDSG_enabled
+		}
+		available = {
+			has_idea = BOI_greiffenwerft
+		}
+		remove_effect = {
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				set_technology = {
+					GOY_steam_engines_tech = 1
+				}
+				custom_effect_tooltip = GOY_BOI_enable_steam_engines_tt
+			}
+			ELSE = {
+				clr_country_flag = BOI_FLAG_GDSG_enabled
+				set_country_flag = BOI_FLAG_GDSG_upgraded
+				swap_ideas = {
+					remove_idea = BOI_greiffenwerft
+					add_idea = BOI_greiffenwerft_1
+				}
+			}
+		}
+	}
+}

@@ -28,4 +28,17 @@ opinion_modifiers = {
 	POM_apostates = {
 		value = -20
 	}
+	POM_treason = {
+		value = -75
+	}
+	POM_isolationists = {
+		value = -20
+	}
+	POM_heretics = {
+		value = -20
+	}
+	
+	POM_barbaric_destroyers = {
+		value = -50
+	}
 }

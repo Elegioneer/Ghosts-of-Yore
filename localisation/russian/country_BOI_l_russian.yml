@@ -3,6 +3,28 @@
 ## Bookmark ##
 BOI_GATHERING_STORM_DESC1:0 "Griffonstone – the first griffon settlement – stands a shadow of its former self. With the loss of the Idol of Boreas and the death of the last Guto king, total collapse has befallen the Home of Griffons. Commoners live in poverty, the Republican Movement is slowly gaining traction among the hopeless masses, factions of the Regency Council are too busy fighting for power to do anything to alleviate the country's many issues, Grandpa Gruff, the Chancellor, seems to have fallen into complete apathy regarding the matters of the state. Who will be the one to bring hope to this sad place?"
 
+## Technologies ##
+GOY_steam_engines_tech:0 "Naval Steam Engines"
+BOI_motorized_equipment_1:0 "GMW-LKW G-01 'Käfer'"
+BOI_motorized_equipment_1_short:0 "G-01 'Käfer'"
+BOI_motorized_equipment_1_desc:0 "Greiffensteinische Motoren Werke was founded as an airplane factory, but its prototype failed to lift into air, and after a very long, convoluted, almost esoteric sequence of redesigns ended up as... a truck, and GMW – as an automotive company. Nicknamed 'Beetle' due to its absurd load capacity for such a small vehicle, it is (in)famous across Griffonia due to its poor quality and amazing ease of repair, requiring only simple tools, which made it a popular choice among farmers and all those who cannot afford a better or larger vehicle – in short, any other. The severely underfunded Griffonstonian Army, too, had no other choice, but the G-01."
+BOI_motorized_rocket_equipment:0 "GMW-LKW G-01.1 'Käfer-Raketenwerfer'"
+BOI_motorized_rocket_equipment_short:0 "G-01.1 'Käfer-Raketenwerfer'"
+BOI_motorized_rocket_equipment_desc:0 "In the style typical of the Griffonstonian military, when the high command put out an order for a self-propelled rocket artillery platform, most of the reserved funds disappeared almost instantly in a few very deep pockets. As a result, all that the military engineers could afford to build was this: the old unreliable "Käfer" with a few rocket rails welded to the flatbed."
+BOI_motorized_rocket_equipment_1:0 "GMW-LKW G-01.1 'Käfer-Raketenwerfer'"
+BOI_motorized_rocket_equipment_1_short:0 "G-01.1 'Käfer-Raketenwerfer'"
+BOI_motorized_rocket_equipment_1_desc:0 "In the style typical of the Griffonstonian military, when the high command put out an order for a self-propelled rocket artillery platform, most of the reserved funds disappeared almost instantly in a few very deep pockets. As a result, all that the military engineers could afford to build was this: the old unreliable "Käfer" with a few rocket rails welded to the flatbed."
+
+## Modules ##
+GOY_light_ship_engine_0:0 "Steam Engine"
+GOY_light_ship_engine_0_desc:0 "Good old coal-powered steam engine courtesy of GDSG."
+GOY_cruiser_ship_engine_0:0 "Steam Engine"
+GOY_cruiser_ship_engine_0_desc:0 "Good old coal-powered steam engine courtesy of GDSG."
+GOY_carrier_ship_engine_0:0 "Steam Engine"
+GOY_carrier_ship_engine_0_desc:0 "Good old coal-powered steam engine courtesy of GDSG."
+GOY_heavy_ship_engine_0:0 "Steam Engine"
+GOY_heavy_ship_engine_0_desc:0 "Good old coal-powered steam engine courtesy of GDSG."
+
 ## Traits ##
 GOY_tankbuilding_academy:0 "Tankbuilding Academy"
 GOY_mass_tank_manufacturer:0 "Mass Tank Manufacturer"
@@ -303,7 +325,7 @@ BOI_storch_werke:0 "Storch Werke"
 
 BOI_goldener_hof:0 "Godlener Hof"
 BOI_guto_werft:0 "Guto Werft"
-BOI_greiffenwerft:0 "Greiffenwerft"
+BOI_greiffenwerft:0 "Griffkingdampfschiffahrtsgesellschaft"
 
 BOI_kopferberg_waffen:0 "Kopferberg Waffen"
 BOI_wohnsitz_kanonenfabrik:0 "Wohnsitz Kannonenfabrik"
@@ -961,7 +983,7 @@ BOI_CETT_take_blackhollow:0 "We will get a §Rwargoal§! on the current owner of
 BOI_CETT_coring_skyfall:0 "Lands of §CSkyfall§! will be §Yintegrated§!"
 BOI_CETT_coring_herzland:0 "§CHerzland§! will be §Yintegrated§!"
 BOI_CETT_break_nobles:0 "Our problems with §Ynobles§! will be resolved"
-BOI_CETT_gestal_endgame:0 "Gestal's goal will be complete – Griffonstone will join the Empire. §RThis will end the game for you§!"
+BOI_CETT_gestal_endgame:0 "§8Gestal§!'s goal will be fulfilled, §1Griffonstone§! will join §9the Empire§!. §RYou will switch to playing§! §9the Empire§!."
 BOI_CETT_ready_for_reclamation:0 "We will begin preparations for the §YImperial Reclamation§! campaign"
 BOI_CETT_FRA_afraid:0 "People grow more afraid of the §YFRA§!"
 BOI_CETT_griffonsteel_2:0 "Modify §YGriffonsteel§! by\n§YTowed Artillery§!: Soft attack §G+10%§!"
@@ -979,9 +1001,9 @@ BOI_CETT_equestrian_elites:0 "§CPrince Blueblood§! will become available as a 
 BOI_CETT_drach:0 "§CErwin von Drach§! will become available as an §Yadvisor§!"
 BOI_CETT_bechard:0 "§CHippolyte Bechard§! will become available as a §Ynavy chief§!"
 CETT_BOI_ELF_support:0 "§YDecisions§! to assist the §REquestrian Liberation Front§! will become available."
-BOI_CTTT_not_president_greta:0 "§YGreta§! is not the country's §Ypresident§!."
-BOI_CTTT_not_president_gabby:0 "§YGabby§! is not the country's §Ypresident§!."
-BOI_CTTT_not_president_garner:0 "§YGarner§! is not the country's §Ypresident§!."
+BOI_CTTT_not_president_greta:0 "§YGreta§! is not the country's §YPresident§!."
+BOI_CTTT_not_president_gabby:0 "§YGabby§! is not the country's §YPresident§!."
+BOI_CTTT_not_president_garner:0 "§YGarner§! is not the country's §YPresident§!."
 BOI_CTTT_completed_legacy:0 "Has completed focus §YGuto's Legacy§!"
 BOI_CETT_seek_allies:0 "§YDecisions§! to join various factions of Griffonia will become available."
 BOI_CETT_rumareans:0 "Remove National Spirit §YRumarean Unrest§!."

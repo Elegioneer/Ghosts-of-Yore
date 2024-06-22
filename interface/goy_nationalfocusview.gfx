@@ -1,0 +1,7 @@
+spriteTypes = {
+	#### Focus crap ####
+	spriteType = {
+		name = "GFX_FOCUS_FILTER_GOY_BEACH"
+		texturefile = "gfx/interface/focusview/filter/GOY_beach_ep.dds"
+	}
+}

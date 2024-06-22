@@ -1821,6 +1821,7 @@ focus_tree = {
 				}
 				ELSE = {
 				    add_state_claim = 390
+					add_state_claim = 208
 				}
 			}
 			IF = {

@@ -287,11 +287,19 @@ NTR_northern_weaponsmiths_organization = {
 
 		equipment_bonus = {
 			defense = 3
-			hardness = 49
-			build_cost_ic = 0.05
+			hardness = 2
+			build_cost_ic = 0.05	
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.2
+		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_sturdier_shields
+			hidden_effect = {
+				FROM = {
+					add_ideas = NTR_smiths_buff_1
+				}
+			}
 		}
 	}
 	trait = {
@@ -314,6 +322,9 @@ NTR_northern_weaponsmiths_organization = {
 			soft_attack = 2
 			build_cost_ic = 0.05
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.2
+		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_sharper_swords
 		}
@@ -338,6 +349,9 @@ NTR_northern_weaponsmiths_organization = {
 			hard_attack = 1000
 			build_cost_ic = 0.05
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.2
+		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_stronger_bows
 		}
@@ -358,15 +372,23 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			hardness = 50
-			armor_value = 10000
+			hardness = 4
+			armor_value = 1 #+9999 to inf todo
 			build_cost_ic = 0.1
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.5
+		#}
 		#resources = {
 		#	tungsten = 1
 		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_tungsten_armour
+			hidden_effect = {
+				FROM = {
+					add_ideas = NTR_smiths_buff_2
+				}
+			}
 		}
 	}
 	trait = {
@@ -390,6 +412,9 @@ NTR_northern_weaponsmiths_organization = {
 			reliability = -0.05
 			build_cost_ic = 0.1
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.5
+		#}
 		#resources = {
 		#	crystals = 1
 		#}
@@ -415,14 +440,22 @@ NTR_northern_weaponsmiths_organization = {
 		equipment_bonus = {
 			hard_attack = 2000
 			ap_attack = 5000
-			air_attack = 5000
+			air_attack = 1 #4999 to inf todo
 			build_cost_ic = 0.1
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.5
+		#}
 		#resources = {
 		#	rubber = 1
 		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_rubber_bowstrings
+			hidden_effect = {
+				FROM = {
+					add_ideas = NTR_smiths_buff_3
+				}
+			}
 		}
 	}
 	trait = {
@@ -440,14 +473,22 @@ NTR_northern_weaponsmiths_organization = {
 
 		equipment_bonus = {
 			defense = 5
-			hardness = 100
+			hardness = 3 #+97 to inf todo
 			build_cost_ic = 0.1
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.2
+		#}
 		#resources = {
 		#	steel = 1
 		#}
 		on_complete = {
 			custom_effect_tooltip = GOY_NTR_TT_armor_supports
+			hidden_effect = {
+				FROM = {
+					add_ideas = NTR_smiths_buff_4
+				}
+			}
 		}
 	}
 	trait = {
@@ -468,6 +509,9 @@ NTR_northern_weaponsmiths_organization = {
 			ap_attack = 10000
 			build_cost_ic = 0.1
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 0.2
+		#}
 		#resources = {
 		#	steel = 1
 		#}
@@ -496,6 +540,9 @@ NTR_northern_weaponsmiths_organization = {
 			reliability = -0.1
 			build_cost_ic = 0.2
 		}
+		#production_bonus = {
+		#	production_resource_need_factor = 1
+		#}
 		on_complete = {
 			FROM = {
 				set_technology = {
@@ -921,6 +968,189 @@ NTR_moltenrock_guns_organization = {
 		}
 	}
 }
+#####################
+### POMOVARRA ###
+POM_princely_procurement_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	name = POM_princely_procurement
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_POM_reiher
+			}
+		}
+	}
+	
+	add_trait = {
+		token = POM_mio_trait_shady_contracts
+		name = POM_mio_trait_shady_contracts
+		icon = GFX_generic_mio_trait_icon_supply_consumption
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_private_scientists_program
+
+		on_complete = {
+			FROM = {
+				#hidden_effect = {
+					#country_event = goy_pomovarra.327
+				#}
+				custom_effect_tooltip = POM_TT_free_guns
+			}
+		}
+		
+		organization_modifier = {
+			military_industrial_organization_funds_gain = -0.1
+		}
+	}
+	
+	#todo override previous trait and make initial_trait = {
+	#	
+	#}
+}
+POM_direndall_arms_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
+	name = POM_direndall_arms
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_direndall_arms_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_establish_the_mic
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	equipment_type = {  
+        magical_equipment
+    }
+
+    research_categories = { 
+        magical_tech
+    }
+	initial_trait = {
+		name = generic_mio_initial_trait_magical_designer
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			reliability = 0.05
+		}
+	}
+}
+POM_k_cannon_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_generic_artillery_manufacturer_3
+	name = POM_k_cannon
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_k_cannon_and_uthr_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_establish_the_mic
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+		equipment_bonus = {
+			hard_attack = 0.1
+		}
+	}
+}
+POM_fregneux_armory_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_generic_infantry_equipment_manufacturer_3
+	name = POM_fregneux_armory
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_fregneux_armory_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_modernise_fregneux_armory
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	equipment_type = { infantry_equipment magical_equipment support_equipment }
+	research_categories = { infantry_weapons support_tech }
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		limit_to_equipment_type = { infantry_equipment }
+		equipment_bonus = {
+			soft_attack = 0.05
+			reliability = 0.05
+			build_cost_ic = -0.05
+		}
+	}
+}
 
 #######################
 #####################
@@ -1291,6 +1521,145 @@ NTR_holy_forge_tank_armory_organization = {
 		}
 	}
 }
+#####################
+### POMOVARRA ###
+POM_FLO_light_tank_manufacturer_organization = {
+	name = FLO_light_tank_manufacturer
+	include = generic_mobile_tank_organization
+	icon = GFX_idea_FLO_light_tank_manufacturer
+	allowed = {
+		original_tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_POM_reiher
+			}
+		}
+	}
+	available = {
+		owner = {
+			owns_state = 442
+		}
+	}
+}
+
+POM_uthr_tank_factory_organization = {
+	include = generic_main_battle_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+	name = POM_uthr_tank_factory
+
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_k_cannon_and_uthr_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_establish_the_mic
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.07
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+}
+POM_modoc_tank_factory_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_2
+	name = POM_modoc_tank_factory
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_modoc_tank_factory_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_outrun_our_enemies
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	initial_trait = {
+		equipment_bonus = {
+			defense = 0.1
+		}
+	}
+}
+POM_arzhur_tank_factory_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+	name = POM_arzhur_tank_factory
+
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_arzhur_tank_factory_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_resist_any_damage
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	initial_trait = {
+		equipment_bonus = {
+			maximum_speed = 0.1
+		}
+	}
+}
+
+
 #######################
 #####################
 ###### PLANES #######
@@ -1733,6 +2102,162 @@ NTR_stratus_manufactory_organization = {
 		}
 	}
 }
+#####################
+### POMOVARRA ###
+POM_FLO_light_aircraft_concern_organization = {
+	name = FLO_light_aircraft_concern
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_FLO_light_aircraft_concern
+	allowed = {
+		original_tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_leader = {
+				ruling_only = yes 
+				character = GOY_POM_reiher
+			}
+		}
+	}
+	available = {
+		owner = {
+			owns_state = 442
+		}
+	}
+}
+POM_aeronautical_institute_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_generic_tank_manufacturer_3
+	name = POM_aeronautical_institute
+	
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_aeronautical_institute_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_expand_pomazhon_airfield
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+		}
+	}
+}
+POM_gwennili_organization = {
+	include = generic_range_focused_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+	name = POM_gwennili
+
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_gwennili_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_finance_new_fighters
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+}
+POM_erer_aircraft_organization = {
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_2
+	name = POM_erer_aircraft
+
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_erer_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_bring_the_bombers
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+}
+POM_BRAN_organization = {
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_3
+	name = POM_BRAN
+
+	allowed = {	
+		tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_BRAN_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_even_bigger_bombers
+				}
+			}
+		}
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+}
 
 #######################
 #####################
@@ -1855,9 +2380,9 @@ BOI_goldener_hof_organization = {
 		}
 	}
 }
-BOI_greiffenwerft_organization = {
+BOI_greiffenwerft_organization = { #Griffkingdampfschiffahrtsgesellschaft
 	include = generic_escort_ship_organization
-	icon = GFX_idea_generic_naval_manufacturer_2
+	icon = GFX_idea_BOI_GDSG
 	
 	allowed = {	
 		OR = {
@@ -1868,18 +2393,70 @@ BOI_greiffenwerft_organization = {
 	}
 	available = {
 		owner = {
-			any_owned_state = { 
-			    is_coastal = yes
-			}
+			has_completed_focus = BOI_ask_for_loans
 		}
 	}
 
 	initial_trait = {
+		name = mio_initial_trait_GOY_steamboat_company
+	
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
 		}
+	}
+	add_trait = {
+		token = BOI_mio_trait_steam_engines
+		name = BOI_mio_trait_steam_engines
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_engine
+		special_trait_background = yes
+
+		position = { x=-2 y=0 }
+		relative_position_id = generic_mio_trait_fleet_escorts
+
+		on_complete = {
+			FROM = {
+				IF = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					set_technology = {
+						GOY_steam_engines_tech = 1
+					}
+					custom_effect_tooltip = GOY_BOI_enable_steam_engines_tt
+				}
+			}
+		}
 		equipment_bonus = {
-			build_cost_ic = -0.07
+			build_cost_ic = -0.1
+			naval_range = -0.1
+		}
+	}
+	add_trait = {
+		token = BOI_mio_trait_partial_nationalisation
+		name = BOI_mio_trait_partial_nationalisation
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		relative_position_id = BOI_mio_trait_steam_engines
+		any_parent = { BOI_mio_trait_steam_engines }
+
+		on_complete = {
+			FROM = {
+				GOY_BOI_joseph_griffchard = {
+					add_naval_commander_role = {
+						skill = 3
+						attack_skill = 2
+						defense_skill = 3
+						maneuvering_skill = 3
+						coordination_skill = 2
+						traits = { goy_gdsg_hat_wearer goy_gdsg_key_keeper goy_gdsg_electrician }
+					}
+				}
+			}
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = 0.1
 		}
 	}
 }
@@ -2010,6 +2587,123 @@ NTR_dinkau_shipyard_organization = {
 	visible = {
 		owner = {
 			has_completed_focus = NTR_refurbish_dinkau
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			armor_value = 0.05
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+	}
+}
+#####################
+### POMOVARRA ###
+POM_rinkin_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_1
+	name = POM_rinkin
+	
+	allowed = {	
+		original_tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_rinkin_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_diverse_destroyers
+				}
+			}
+		}
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			surface_visibility = -0.05
+			naval_speed = 0.05
+		}
+		
+	}
+}
+POM_glass_gwagenn_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	name = POM_glass_gwagenn
+	
+	allowed = {	
+		original_tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_glass_gwagenn_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_call_of_the_ocean
+				}
+			}
+		}
+	}
+}
+POM_baot_shipyard_organization = {
+	include = generic_battle_line_ship_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+	name = POM_baot_shipyard
+	
+	allowed = {	
+		original_tag = POM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = {
+			has_country_flag = POM_FLAG_rebel_companies
+		}
+	}
+	available = {
+		owner = {
+			IF = {
+				limit = {
+					NOT = {
+						owner = {
+							has_country_flag = POM_FLAG_baot_shipyard_enabled
+						}
+					}
+				}
+				owner = {
+					has_completed_focus = POM_sea_boars
+				}
+			}
 		}
 	}
 

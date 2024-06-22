@@ -201,6 +201,7 @@ country_with_custom_designers = {
 		original_tag = ZAR
 		original_tag = TBK
 		original_tag = ZAI
+		original_tag = ABY
 		##################
 		original_tag = ARA
 		original_tag = BOI

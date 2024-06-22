@@ -4946,7 +4946,11 @@ country_event = { #Turned Down
 		}
 		hidden_effect = {
 			set_country_flag = GOY_FLAG_vivienne_turned_down
-			uncomplete_national_focus = ARA_marriage_of_convience
+			uncomplete_national_focus = {
+				focus = ARA_marriage_of_convience
+				uncomplete_children = yes
+				refund_political_power = no
+			}
 			IF = {
 				limit = {
 					is_ai = yes
@@ -7846,6 +7850,31 @@ country_event = { #Hedonism
 				FROM = {
 					transfer_state = 1194
 					transfer_state = 1193
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 241
+					FROM = {
+						controls_state = 241
+					}
+				}
+				FROM = {
+					transfer_state = 241
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+				}
+				white_peace = FROM
+				set_truce = {
+					target = FROM
+					days = 365
 				}
 			}
 		}

@@ -1,0 +1,205 @@
+
+
+###### GOY Tech #######
+
+spriteTypes = {
+	
+	#BOI
+	
+	SpriteType = {
+		name = "GFX_BOI_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/BOI_motorized_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_BOI_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/BOI_motorized_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BOI_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/BOI_motorized_rocket_unit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GOY_steam_engines_tech_medium"
+		texturefile = "gfx/interface/equipmentdesigner/naval/modules/icons/GOY_steam_engine_icn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_GOY_necromancy_tech_medium"
+		texturefile = "gfx/interface/technologies/goy_necromancer_research.dds"
+	}
+	
+	#NTR
+	
+	SpriteType = {
+		name = "GFX_NTR_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons1.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/NTR_melee_weapons1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GOY_magical_melee_equipment_tech_medium"
+		texturefile = "gfx/interface/technologies/NTR_magical_melee_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_GOY_magical_melee_equipment_medium"
+		texturefile = "gfx/interface/technologies/NTR_magical_melee_weapons.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_NTR_2d_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/NTR_infantry_equipment_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_NTR_2d_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/NTR_mechanised_infantry.dds"
+	}
+	
+	#POM
+	
+	SpriteType = {
+		name = "GFX_POM_pre_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/POM_artillery_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_2d_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_2d_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_2d_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_2d_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_infantry_equipment_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/POM_magical_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/POM_magical_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_tech_trucks_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_motorized_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_motorized_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_motorized_equipment_3_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_equipment_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/POM_mechanised_infantry.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/POM_mechanised_infantry_2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_POM_motorized_rocket_unit_medium"
+		texturefile = "gfx/interface/technologies/POM_motorized_rocket_unit.dds"
+	}
+}

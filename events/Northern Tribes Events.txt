@@ -152,14 +152,20 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.323.a
-			mio:NTR_northern_weaponsmiths_organization = {
+			every_military_industrial_organization = {
 				add_mio_size = 10
 			}
 		}
 		option = {
 		    name = ntribes.323.b
-			mio:NTR_northern_weaponsmiths_organization = {
-				add_mio_funds = 1000
+			every_military_industrial_organization = {
+				add_mio_size = 1
+			}
+		}
+		option = {
+		    name = ntribes.323.c
+			every_country_division = {
+				add_divisional_commander_xp = 2000
 			}
 		}
 	}
@@ -359,6 +365,7 @@ add_namespace = ntribes_news
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
+				original_tag = NTR
 			}
 		}
 		option = {
@@ -2820,6 +2827,15 @@ add_namespace = ntribes_news
 					delete_unit_template_and_units = { division_template = "Necromancer Division" disband = no } #WHYYYY
 					set_oob = HRR_rebellion_OOB
 					load_oob = HRR_rebellion_OOB
+					every_country_division = { #todo check if works
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}	
+					}
+					delete_unit_template_and_units = {
+						division_template = PREV
+						disband = yes
+					}
 				}
 				if = {
 					limit = {

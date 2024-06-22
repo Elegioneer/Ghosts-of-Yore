@@ -51,7 +51,7 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "gfx/leaders/BOI/Gilda.dds"
-				small = "gfx/interface/ideas/BOI_idea_gilda.dds"
+				small = "GFX_idea_BOI_Gilda"
 			}
 		}
 		country_leader = {
@@ -936,11 +936,12 @@ characters = {
 		name = GOY_BOI_gallus
 		portraits = {
 			civilian = {
-				large="gfx/leaders/BOI/GAW_Gallus.tga"
+				large="gfx/leaders/BOI/Gallus.tga"
+				small="GFX_idea_BOI_Gallus"
 			}
 			army = {
-				large="gfx/leaders/BOI/GAW_Gallus.tga"
-				small="GFX_idea_gallus"
+				large="gfx/leaders/BOI/Gallus.tga"
+				small="GFX_idea_BOI_Gallus"
 			}
 		}
 	}
@@ -1088,5 +1089,14 @@ characters = {
 			}
 			traits = { archon_boreas }
 		}			
-	}	
+	}
+	GOY_BOI_joseph_griffchard = {
+		name = GOY_BOI_joseph_griffchard
+		portraits = {
+			army = {
+				large="GFX_portrait_FAT_generic_navy_male_7"			
+				small="GFX_portrait_FAT_generic_navy_male_7_small"
+			}
+		}		
+	}
 }

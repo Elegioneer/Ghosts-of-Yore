@@ -26,7 +26,11 @@ defined_text = { # Country
 	text = {
 		trigger = { original_tag = HRR }
 		localization_key = GOY_WS_HRR
-	}	
+	}
+	text = {
+		trigger = { original_tag = POM }
+		localization_key = GOY_WS_POM
+	}
 	#################
 	text = {
 		trigger = { original_tag = VED }
@@ -414,7 +418,11 @@ defined_text = {
 	text = {
 		trigger = { original_tag = HRR }
 		localization_key = GOY_WS_HRR_desc
-	}	
+	}
+	text = {
+		trigger = { original_tag = POM }
+		localization_key = GOY_WS_POM_desc
+	}
 	#################
 	text = {
 		trigger = { original_tag = VED }

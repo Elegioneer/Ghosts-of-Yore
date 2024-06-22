@@ -2099,7 +2099,7 @@ focus_tree = {
 			
 	focus = {
 		id = ARA_dorotheos_coup
-		icon = GFX_goal_ideology_monarchist
+		icon = GFX_goal_GOY_ara_dorocoup
 		x = 27
 		y = 0
 		cost = 1.00
@@ -2337,6 +2337,7 @@ focus_tree = {
 							original_tag = FRN
 							original_tag = TAL
 							original_tag = WNG
+							original_tag = BAN
 						}
 						any_owned_state = {
 							OR = {
@@ -8779,6 +8780,7 @@ focus_tree = {
 		}
 		available = {
 		    owns_state = 390
+			owns_state = 208
 			owns_state = 659
 		}
 		completion_reward = {
@@ -8789,6 +8791,9 @@ focus_tree = {
 			hidden_effect ={
 			#Fezara
 			390 = {
+			    add_core_of = ARA
+			}
+			208 = {
 			    add_core_of = ARA
 			}
 			#Skyfall
