@@ -622,7 +622,7 @@ ARA_canteribbienes_cat = {
 					transfer_state = 1194
 					transfer_state = 1193
 				}
-				IF = {				}
+				IF = {
 					limit = {
 						controls_state = 241
 					}
@@ -1132,7 +1132,9 @@ ARA_puppet_show_cat = {
 								is_core_of = SIC
 								is_core_of = FAL
 							}
-							is_core_of = ARA
+							NOT = {
+								is_core_of = ARA
+							}
 						}
 						remove_core_of = WNG
 						remove_core_of = TAL
@@ -1140,20 +1142,6 @@ ARA_puppet_show_cat = {
 						remove_core_of = SIC
 						remove_core_of = FAL
 						remove_claim_by = WNG
-					}
-				   	every_state = {
-					    limit = {
-						    OR = {
-					            is_claimed_by = WNG
-								is_core_of = TAL
-								is_core_of = FRN
-								is_core_of = SIC
-								is_core_of = FAL
-							}
-							NOT = {
-								is_core_of = ARA
-							}
-						}
 						add_core_of = WNG
 					}
 					release_puppet = WNG
@@ -1881,6 +1869,14 @@ ARA_reorg_zebrican_lands_cat = {
 				is_core_of = MCW
 			}
 		}
+		available = {
+			MCW = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+		}
 		days_remove = 7
 		remove_effect = {
 			release_puppet = MCW
@@ -1927,6 +1923,26 @@ ARA_reorg_zebrican_lands_cat = {
 				}
 			}
 		}
+		available = {
+			CTH = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			CDR = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			CVA = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+		}
 		days_remove = 7
 		remove_effect = {
 			country_event = arantiga.126
@@ -1947,6 +1963,38 @@ ARA_reorg_zebrican_lands_cat = {
 					is_core_of = BAT
 					is_core_of = ZUM
 					is_core_of = ZAR
+				}
+			}
+		}
+		available = {
+			TBK = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			WAR = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			BAT = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			ZUM = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			ZAR = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
 				}
 			}
 		}
@@ -1999,6 +2047,38 @@ ARA_reorg_zebrican_lands_cat = {
 		visible = {
 		    any_owned_state = {
 				is_core_of = HIP
+			}
+		}
+		available = {
+			HIP = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			TBK = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			WAR = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			BAT = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
+			}
+			ZUM = {
+				OR = {
+					exists = no
+					is_puppet_of = ROOT
+				}
 			}
 		}
 		days_remove = 7

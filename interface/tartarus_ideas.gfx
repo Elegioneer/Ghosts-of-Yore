@@ -386,4 +386,44 @@ spriteTypes = {
 		name = "GFX_idea_GOY_POM_faith_in_steel"
 		texturefile = "gfx/interface/ideas/idea_GOY_POM_faith_in_steel.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_goy_magic_potions"
+		texturefile = "gfx/interface/ideas/idea_goy_magic_potions.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_POM_lighthouse"
+		texturefile = "gfx/interface/ideas/idea_GOY_POM_lighthouse.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_allard_lack_of_scientists"
+		texturefile = "gfx/interface/ideas/idea_GOY_allard_lack_of_scientists.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_allard_science_base"
+		texturefile = "gfx/interface/ideas/idea_GOY_allard_science_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_allard_poverty"
+		texturefile = "gfx/interface/ideas/idea_GOY_allard_poverty.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_POM_gward_wagons"
+		texturefile = "gfx/interface/ideas/company_POM_gward_wagons.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_POM_cervys_transistors"
+		texturefile = "gfx/interface/ideas/company_POM_cervys_transistors.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_POM_direndall"
+		texturefile = "gfx/interface/ideas/company_POM_direndall.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_POM_princely_procurement"
+		texturefile = "gfx/interface/ideas/company_POM_princely_procurement.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GOY_POM_ponysander"
+		texturefile = "gfx/interface/ideas/idea_GOY_POM_ponysander.dds"
+	}
 }

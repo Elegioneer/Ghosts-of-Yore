@@ -2725,7 +2725,7 @@ country_event = { #Herzländers unite! (cap)
 				Promote_leader = yes
 				Country_leader = {
 				ideology = liberalism
-				desc = ""
+				desc = "GOY_BOI_garner_desc"
 				expire = "1965.01.01.01"
 				traits = { }
 				}
@@ -4053,12 +4053,25 @@ country_event = { #Herzländers unite! (cap)
 		
 	    option = {
 	        name = griffonstone.299.a
-			set_cosmetic_tag = BOI_BOIEMP
-			remove_ideas = BOI_GAW_kingdom_with_no_king
-			hidden_effect = {
-			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
-			    set_party_name = { ideology = fascism name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
+			#set_cosmetic_tag = BOI_BOIEMP
+			IF = {
+				limit = {
+					has_idea = BOI_cyrille_I
+				}
+				set_cosmetic_tag = BOI_GOL_cyrille
+				hidden_effect = {
+					set_party_name = { ideology = neutrality name = BOI_kaiserinpartei_party long_name = BOI_kaiserinpartei_party_long }
+					set_party_name = { ideology = fascism name = BOI_kaiserinpartei_party long_name = BOI_kaiserinpartei_party_long }
+				}
 			}
+			ELSE = {
+				set_cosmetic_tag = BOI_GOL_grover
+				hidden_effect = {
+					set_party_name = { ideology = neutrality name = BOI_kaiserpartei_party long_name = BOI_kaiserpartei_party_long }
+					set_party_name = { ideology = fascism name = BOI_kaiserpartei_party long_name = BOI_kaiserpartei_party_long }
+				}
+			}
+			remove_ideas = BOI_GAW_kingdom_with_no_king
 		}
 	}
 	country_event = { #Entente

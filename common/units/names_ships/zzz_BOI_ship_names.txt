@@ -1,0 +1,122 @@
+﻿##### BOI NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+BOI_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { BOI }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = "RGN "
+	fallback_name = "%d Zerstörer"					
+
+	unique = {	
+		"Reiher" "Falke" "Blaukehlche" "Kolibri" "Eisvogel" "Nachtschwärmer" "Kuckuck" "Albatros" "Specht" "Krähe" "Rabenschwarz" "Spatz" "Kondor" "Adler" "Phönix" "Hühnerhabicht" "Lämmergeier" "Weißfisch" "Felchen" "Singdrossel" "Kiebitz" "Löffler" "Turmfalke" "Amsel" "Nashorn" "Panther" "Tiger" "Hummel" "Kuguar" "Löwe"    "Fuchs" "Marder" "Hyäne" "Ozelot" "Zobel" "Bison" "Wiesel" "Jaguar" "Bär" "Kobra" "Viper" "Elch" "Steinbock" "Hermelin" "Nerz" "Dachs" "Hirsch" "Gepard" "Iltis" "Wolf" "Seeadler" "Greif" "Delphin" "Wal" "Wisent" "Natter" "Papageienfisch" "Makrele" "Manta" "Milchfisch" "Aal" "Trompetenfisch" "Katzenhai" "Schlammskipper" "Sawfish" "Muräne" "Eule" "Robin" "Schlucken" "Tanager" "Kardinal" "Pirol" "Curlew" "Fink" "Truthahn" "Waldschnepfe" "Wachtel" "Rebhuhn" "Eider" "Avocet" "Lerche" "Aquamarin" "Kormoran" "Stockente" "Warbler" "Rotflügel" "Kanarienvogel" "Rabe" "Kleiber" "Fasan" "Regenpfeifer" "Krokodil" "Hai" "Stachelschwein" "Schnabeltier" "Känguru" "Ameisenbär"
+	}
+}
+
+### LIGHT CRUISER / HEAVY CRUISER NAMES###
+BOI_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL_CA
+
+	for_countries = { BOI }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser heavy_cruiser }
+	
+	prefix = "RGN "
+	fallback_name = "%d Kreuzer"
+
+	unique = {
+		"Naniwich"
+		"Gale"
+		"Wohnsitz"
+		"Copperhill"
+		"Silverstone"
+		"Goldstone"
+		"Coalfall"
+		"Murkbeak"
+		"Calembourg"
+		"Grograaf"
+		"Eyrie"
+		"Angburg"
+		"Dierhoven"
+		"Erie"
+		"Laile"
+		"Nidneuf"
+		"Mittelfeld"
+	}
+}
+
+### BATTLESHIP / BATTLECRUISER NAMES ###
+BOI_BB_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB_BC
+
+	for_countries = { BOI }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship battle_cruiser}
+	
+	prefix = "RGN "
+	fallback_name = "%d Kriegsschiff"		
+
+	unique = {
+		"Birthplace"
+		"King Guto"
+		"Griffonstone"
+		"Kaiser"
+		"Grover"
+		"Kingsguard"
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+BOI_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { BOI }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = "RGN "
+	fallback_name = "%d Flugzeugträger"	
+
+	unique = {
+		"Griffonstone"
+		"Idol of Boreas"
+		"The Trinity"
+		"Archon"
+		"Triumph"
+	}
+}
+
+### SUBMARINES ###
+BOI_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { BOI }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "RGN "
+	fallback_name = "%d Unterseeboot"
+	
+	unique = {
+	}
+}
+
+# ### THEME: STATES CITIES REGIONS RIVERS ###
+# BOI_STATES = {
+	# name = NAME_THEME_PLACES
+	# fallback_name = "Ship No.%d"
+	# for_countries = { BOI }
+
+	# type = ship
+
+	# prefix = "RGN "
+	# unique = {
+	# }
+# }

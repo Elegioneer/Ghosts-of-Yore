@@ -55,6 +55,10 @@ BOI_neu_init:0 "Регентский Совет"
  BOI_nobles_party_long:0 "Грифонстоунская Аристократия"
  BOI_prov_mil_gov:0 "Временное Правительство"
  BOI_prov_mil_gov_long:0 "Временное Военное Правительство"
+ BOI_kaiserinpartei_party:0 "Императорская Партия"
+ BOI_kaiserinpartei_party_long:0 "Гриффонстоунская партия Императорши"
+ BOI_kaiserpartei_party:0 "Императорская Партия"
+ BOI_kaiserpartei_party_long:0 "Гриффонстоунская партия Императора"
  
 ### NTR ###
 NTR_snowflakes_party:0 "Династия Сноуфлейк"

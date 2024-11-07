@@ -1,0 +1,276 @@
+# Division template historical names system. Is a new method of naming the divisions based on the names-group assigned to it's template.
+# If we run out of all historical names, the names will be assigned in the old way.
+#
+# Each group has a made up tag. Use it if you want to append more, or replace existing names with the extra txt files (modding).
+#
+# for_countries - lists all countries that can use it. If empty, or entire tag is missing, all countries in the world can use it.
+#
+# can_use - is a trigger that locks/unlocks the group under specific circumstances. The trigger is in a country scope.
+#
+# division_types - is a list of tokens to corresponding unit types. A player can in fact use any group of names for a div.template
+#                  however this tag is a helper for an automated choice (for AI, or if the group must switch on it's own, because
+#                  for example the current one is no longer available due to the can_use trigger saying so).
+#                  In automated choice, the division template must have at least 1 of the following types for it to be chosen.
+#
+# fallback_name - Is going to be used if we run out of the scripted historical names. If you want to use the old division naming
+#                 mechanics to be used for fallbacks, then just skip this option.
+#
+# unordered - It's a list of historical division names that did not have a number. Regardless if such names happened in history or not
+#             this option is available here mainly for a mods.
+#
+# ordered - Is a list of all historical names.
+#           Numbers must start from 1 and up.
+#           Numbers can't repeat in one scope.
+#           If you script the name for this group, at the same number (for example in a mod in another file), the name will be override.
+#           All arguments between the brackets must be separated by spaces. Each argument is wrapped in "quotas".
+#           1st argument = The name. It must contain either:
+#                          %d (for decimal number placement)
+#                          %s (for string number placement - ROMAN numbers like XIV).
+#           2nd argument is optional = A localizable text describing this historical division. The text will be visible in the tooltip
+#                                      where you choose the historical division name.
+#           3rd argument is optional = An URL preferably pointing to the WIKI. It's a future feature that is not currently working in
+#                                      the current game version.
+
+### Generic JERch division and brigade names for JERch-speaking minors and releasable nations
+
+ARD_INF_01 = { 
+	name = "People's Infantry Division"
+
+	for_countries = { ARD }
+
+	division_types = { "infantry" "magical_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { JER_INF_01 }
+
+	fallback_name = "%dème Division d'Infanterie Populaire"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%dère Div. 'L'Etendard Sanglant' Populaire" }
+		2 = { "%dème Div. 'Contre la Tyrannie' Populaire" }
+		3 = { "%dème Div. 'Sang Impur' Populaire" }
+		4 = { "%dème Div. 'Fiers Guerriers' Populaire" }
+		5 = { "%dème Div. 'En Marche' Populaire" }
+		6 = { "%dème Div. 'Grandes Ailes' Populaire" }
+		7 = { "%dème Div. 'Espoir' Populaire" }
+		8 = { "%dème Div. 'Loyauté' Populaire" }
+		9 = { "%dème Div. 'Patrie' Populaire" }
+		10 = { "%dème Div. 'Les Fidèles' Populaire" }
+		11 = { "%dème Div. 'Les Vaillants' Populaire" }
+		12 = { "%dème Div. 'Les Justiciers' Populaire" }
+		13 = { "%dème Div. 'Sans Peur' Populaire" }
+		14 = { "%dème Div. 'Honneur' Populaire" }
+		15 = { "%dème Div. 'Valeur' Populaire" }
+		16 = { "%dème Div. 'Discipline' Populaire" }
+		17 = { "%dème Div. 'Vaillance' Populaire" }
+		18 = { "%dème Div. 'Egaux en Droits' Populaire" }
+		19 = { "%dème Div. 'Les Indivisibles' Populaire" }
+		20 = { "%dème Div. 'Audace' Populaire" }
+		21 = { "%dème Div. 'Détermination' Populaire" }
+		22 = { "%dème Div. 'Sans Limites' Populaire" }
+		23 = { "%dème Div. 'Ailes Résilientes' Populaire" }
+		24 = { "%dème Div. 'L'Humble'' Populaire" }
+		25 = { "%dème Div. 'Indulgence et Tolérance' Populaire" }
+	}
+}
+
+ARD_INF_02 = { 
+	name = "Brigado de Elaĉeto"
+
+	for_countries = { ARD }
+
+	division_types = { "infantry" "magical_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { JER_INF_01 }
+
+	fallback_name = "%da Brigado de Elaĉeto"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%due Brig. de Elaĉeto 'Revolucia Fervoro'" }
+		2 = { "%dua Brig. de Elaĉeto 'Brila Estonteco'" }
+		3 = { "%dia Brig. de Elaĉeto 'Le Patronoj Infanoj'" }
+		4 = { "%dra Brig. de Elaĉeto 'Pomazhon-6'" }
+		5 = { "%dna Brig. de Elaĉeto 'Naftistoj'" }
+		6 = { "%dsa Brig. de Elaĉeto 'Westkeep-4'" }
+		7 = { "%dpa Brig. de Elaĉeto 'Konstruistoj'" }
+		8 = { "%dka Brig. de Elaĉeto 'Vigovia-2'" }
+		9 = { "%dŭa Brig. de Elaĉeto 'Turnistoj'" }
+		10 = { "%dka Brig. de Elaĉeto 'Illeagle-3'" }
+		13 = { "%dia Brig. de Elaĉeto 'Infera Hundoj'" }
+	}
+}
+
+ARD_CAV_01 = { 
+	name = "Revolutionary Knights' Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "knights" }
+	
+	fallback_name = "%dème Division de Chevaliers"
+	
+	ordered = { 
+		1 = { "%dère Division 'Le Bonnet Phrygien'" }
+		2 = { "%dème Division 'Vielle Garde'" }
+		3 = { "%dème Division 'L'Etendard Fier'" }
+		4 = { "%dème Division 'Toujours d'Espoir'" }
+		5 = { "%dème Division 'Moyenne Garde'" }
+		6 = { "%dème Division 'Liberté'" }
+		7 = { "%dème Division 'Patrimoine'" }
+		8 = { "%dème Division 'Justice'" }
+		9 = { "%dème Division 'Tirailleurs'" }
+		10 = { "%dème Division 'Première Escadron'" }
+	}
+}
+
+ARD_MOT_01 = { 
+	name = "Motorized Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "motorized" }
+	
+	fallback_name = "%dème Div. d'Infanterie Motorisée"
+	
+	ordered = { 
+		1 = { "%dère Div. 'Cinq Etats' Motorisée" }
+		2 = { "%dème Div. 'Féroce' Motorisée" }
+		3 = { "%dème Div. 'Sauvage' Motorisée" }
+		4 = { "%dème Div. 'Les Vipères' Motorisée" }
+		5 = { "%dème Div. 'Dégâts' Motorisée" }
+	}
+}
+
+ARD_MEC_01 = { 
+	name = "Mechanized Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "light_armor" "medium_armor" "mechanized" }
+	
+	fallback_name = "%dème Div. d'Infanterie Mécanique"
+	
+	ordered = { 
+		1 = { "%dère Div. 'Rouget' Mécanique" }
+		2 = { "%dème Div. 'Aquileia' Mécanique" }
+		3 = { "%dème Div. 'Nuance' Mécanique" }
+		4 = { "%dème Div. 'Croyance' Mécanique" }
+		5 = { "%dème Div. 'Esprit Modèle' Mécanique" }
+		6 = { "%dème Div. 'Ceinturon' Mécanique" }
+		7 = { "%dème Div. 'Les Mousquetons' Mécanique" }
+	}
+}
+
+ARD_ARM_01 = { 
+	name = "Revolutionary Tank Division"
+
+	for_countries = { ARD }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%dème Division Blindée"
+	
+	ordered = { 
+		1 = { "%dère Div. 'Le Devoir' Blindée" }
+		2 = { "%dème Div. 'Le Maintien' Blindée" }
+		3 = { "%dème Div. 'La Responsabilité' Blindée" }
+		4 = { "%dème Div. 'La Défense' Blindée" }
+		5 = { "%dème Div. 'Le Venin' Blindée" }
+		6 = { "%dème Div. 'L'Engagement' Blindée" }
+		7 = { "%dème Div. 'Le Contrat' Blindée" }
+		8 = { "%dème Div. 'Le Château de Fer' Blindée" }
+		9 = { "%dème Div. 'La Muraille' Blindée" }
+		10 = { "%dème Div. 'La Vengeance' Blindée" }
+		11 = { "%dème Div. 'Le Courroux' Blindée" }
+		12 = { "%dème Div. 'La Furie' Blindée" }
+		13 = { "%dème Div. 'La Tempête Entrant' Blindée" }
+		14 = { "%dème Div. 'La Vengeance' Blindée" }
+	}
+}
+
+ARD_PAR_01 = { 
+	name = "Revolutionary Airborne Division"
+
+	for_countries = { ARD }
+
+	division_types = { "paratrooper" }
+	
+	fallback_name = "%dème Division Aéroportée"
+	
+	ordered = { 
+		1 = { "%dère Div. 'Les Pillards' Aéroportée" }
+		2 = { "%dème Div. 'La Lustre' Aéroportée" }
+		3 = { "%dème Div. 'La Citoyenneté' Aéroportée" }
+		4 = { "%dème Div. 'Le Prestige' Aéroportée" }
+		5 = { "%dème Div. 'La Volonté' Aéroportée" }
+		6 = { "%dème Div. 'Griffes Populaires' Aéroportée" }
+		7 = { "%dème Div. 'Concorde Commun' Aéroportée" }
+		8 = { "%dème Div. 'Amitié Collectif' Aéroportée" }
+		9 = { "%dème Div. 'Les Associés' Aéroportée" }
+		10 = { "%dème Div. 'Camaraderie' Aéroportée" }
+	}
+}
+
+ARD_MAR_01 = { 
+	name = "Revolutionary Marine Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "marine" "amphibious_armor" "amphibious_mechanized" }
+
+	fallback_name = "%dème Div. d'Infanterie de Marine"
+	
+	ordered = { 
+		1 = { "%dère Div. 'Cercle Rouge' Marine" }
+		2 = { "%dème Div. 'Faisceaux Populaires' Marine" }
+		3 = { "%dème Div. 'Objectif Commun' Marine" }
+		4 = { "%dème Div. 'Bras Tricolores' Marine" }
+		5 = { "%dème Div. 'Tranquilité Unie' Marine" }
+		6 = { "%dème Div. 'Vagabonds des Iles' Marine" }
+	}
+}
+
+ARD_MNT_01 = { 
+	name = "Mountain Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "mountaineers" }
+	
+	fallback_name = "%dème Division de Sommet"
+	
+	ordered = { 
+		1 = { "%dème Div. 'Spécialistes' de Sommet" }
+		2 = { "%dème Div. 'Débrouillard' de Sommet" }
+		3 = { "%dème Div. 'Survivant' de Sommet" }
+		4 = { "%dème Div. 'Gagnant Solitaire' de Sommet" }
+		5 = { "%dème Div. 'Personne Autour' de Sommet" }
+		6 = { "%dème Div. 'Sans Pertes' de Sommet" }
+		7 = { "%dème Div. 'Vainqueurs' de Sommet" }
+	}
+}
+
+ARD_GAR_01 = { 
+	name = "Revolutionary Guard Division"
+
+	for_countries = { ARD }
+	
+	division_types = { "infantry" }
+	
+	fallback_name = "%dème Division de Garde"
+
+	ordered = { 
+		1 = { "%dère Div. 'Forteresse Populaire' de Garde" }
+		2 = { "%dème Div. 'Secteur Phrygien' de Garde" }
+		3 = { "%dème Div. 'Lueur d'Espoir' de Garde" }
+		4 = { "%dème Div. 'L'Entretien' de Garde" }
+		5 = { "%dème Div. 'L'Edifice Blindée' de Garde" }
+		6 = { "%dème Div. 'Batterie Sanglante' de Garde" }
+		7 = { "%dème Div. 'Artilleur' de Garde" }
+	}
+}

@@ -1,6 +1,6 @@
 BOI_war_for_liberation_category = {
     BOI_start_war_for_liberation = {
-	    icon = crossed_swords
+	    icon = rifles_canterlot
 		cost = 200
 		fire_only_once = yes
 		available = {
@@ -17,6 +17,7 @@ BOI_war_for_liberation_category = {
 			factor = 10
 		}
 		complete_effect = {
+			set_country_flag = GOY_FLAG_falseflag_ach
 		    MAN = {
 		        country_event = {
 				    id = MAN_ELF.131
@@ -52,7 +53,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
     BOI_send_volunteers = {
-		icon = rifles_canterlot
+		icon = SWE_set_army_budget
 		cost = 10
 		fire_only_once = no
 		days_remove = 10
@@ -97,7 +98,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_provide_advisors = {
-		icon = rifles_canterlot
+		icon = generic_army_support
 		cost = 20
 		fire_only_once = no
 		days_remove = 20
@@ -121,7 +122,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_industrial_assistance = {
-		icon = rifles_canterlot
+		icon = generic_factory
 		cost = 100
 		fire_only_once = no
 		days_remove = 180
@@ -161,7 +162,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_provide_funds = {
-		icon = rifles_canterlot
+		icon = gre_investment_decisions
 		cost = 100
 		fire_only_once = no
 		days_remove = 10
@@ -188,7 +189,7 @@ BOI_support_liberation_front_category = {
 		}
 	}
 	BOI_send_guns = {
-		icon = rifles_canterlot
+		icon = generic_industry
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -207,13 +208,14 @@ BOI_support_liberation_front_category = {
 				type = infantry_equipment
 				amount = 5000
 			}
+			add_to_variable = { GOY_guns_for_elf_var = 1 }
 		}
 		remove_effect = {
 			
 		}
 	}
 	BOI_send_equipment = {
-		icon = rifles_canterlot
+		icon = goy_medpack
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -232,13 +234,14 @@ BOI_support_liberation_front_category = {
 				type = support_equipment
 				amount = 500
 			}
+			add_to_variable = { GOY_supt_for_elf_var = 1 }
 		}
 		remove_effect = {
 			
 		}
 	}
 	BOI_send_artillery = {
-		icon = rifles_canterlot
+		icon = generic_ignite_civil_war
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -257,13 +260,14 @@ BOI_support_liberation_front_category = {
 				type = artillery_equipment
 				amount = 500
 			}
+			add_to_variable = { GOY_arty_for_elf_var = 1 }
 		}
 		remove_effect = {
 			
 		}
 	}
 	BOI_send_tanks = {
-		icon = rifles_canterlot
+		icon = generic_tank
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -282,13 +286,14 @@ BOI_support_liberation_front_category = {
 				type = medium_tank_chassis
 				amount = 250
 			}
+			add_to_variable = { GOY_tank_for_elf_var = 1 }
 		}
 		remove_effect = {
 			
 		}
 	}
 	BOI_send_fighters = {
-		icon = rifles_canterlot
+		icon = generic_air
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -307,13 +312,14 @@ BOI_support_liberation_front_category = {
 				type = small_plane_airframe
 				amount = 100
 			}
+			add_to_variable = { GOY_figt_for_elf_var = 1 }
 		}
 		remove_effect = {
 			
 		}
 	}
 	BOI_send_cas = {
-		icon = rifles_canterlot
+		icon = SWE_set_air_budget
 		cost = 50
 		fire_only_once = no
 		days_remove = 10
@@ -332,6 +338,7 @@ BOI_support_liberation_front_category = {
 				type = small_plane_cas_airframe
 				amount = 100
 			}
+			add_to_variable = { GOY_cass_for_elf_var = 1 }
 		}
 		remove_effect = {
 			

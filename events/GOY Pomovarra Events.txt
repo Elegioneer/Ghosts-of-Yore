@@ -12,13 +12,13 @@
 	#
 	#### NEWS EVENTS
 	#
-	news_event = { #
+	news_event = { #Third Aquileian Revolution
 	    id = goy_pomovarra_news.1
 	    title = goy_pomovarra_news.1.t
 	    desc = goy_pomovarra_news.1.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_JER_western_griffonia_event_pic
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -28,7 +28,7 @@
 		    name = goy_pomovarra_news.1.a
 			trigger = {
 			    OR = {
-				    original_tag = POM
+				    original_tag = POM 
 					is_in_faction_with = POM
 				}
 			}
@@ -63,7 +63,7 @@
 	    desc = goy_pomovarra_news.2.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_talononte
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -97,7 +97,7 @@
 	    desc = goy_pomovarra_news.3.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    #picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_griffenheim
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -142,7 +142,7 @@
 	    desc = goy_pomovarra_news.4.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_griffon_soldier
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -198,13 +198,13 @@
 			}
 		}
 	}
-	news_event = { #Pomovarran revolt
+	news_event = { #Westkeep Conference
 	    id = goy_pomovarra_news.5
 	    title = goy_pomovarra_news.5.t
 	    desc = goy_pomovarra_news.5.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    #picture = 
+	    picture = GFX_news_griffon_diplomacy
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -229,11 +229,9 @@
 	        name = goy_pomovarra_news.5.b
 			trigger = {
 			    is_griffon_continent_griffon_country = yes
-				NOT = {
-				    OR = {
-					    is_in_faction_with = GRD
-						original_tag = GRI
-					}
+				OR = {
+					is_in_faction_with = GRD
+					original_tag = GRI
 				}
 			}
 	    }
@@ -243,15 +241,13 @@
 			    AND = {
 			        is_griffon_continent_griffon_country = yes
 					NOT = {
-						OR = {
-							is_in_faction_with = POM
-							is_in_faction_with = GRD
-							original_tag = POM
-							original_tag = JER
-							original_tag = HEL
-							original_tag = AET
-							original_tag = GRI
-						}
+						is_in_faction_with = POM
+						is_in_faction_with = GRD
+						original_tag = POM
+						original_tag = JER
+						original_tag = HEL
+						original_tag = AET
+						original_tag = GRI
 				    }
 				}
 			}
@@ -263,13 +259,13 @@
 			}
 		}
 	}
-	news_event = { #Aetia Confederacy
+	news_event = { #Aetian Confederacy
 	    id = goy_pomovarra_news.6
 	    title = goy_pomovarra_news.6.t
 	    desc = goy_pomovarra_news.6.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    #picture = 
+		picture = GFX_news_happy_aquileians
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -329,7 +325,7 @@
 	    desc = goy_pomovarra_news.7.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    #picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_griffonia_landscape
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -374,7 +370,7 @@
 	    desc = goy_pomovarra_news.8.d
 	    is_triggered_only = yes
 	    fire_only_once = yes
-	    #picture = GFX_news_bronclyn_bridge
+	    picture = GFX_news_griffonstone
 	    show_major = {
 		    NOT = {
 			    has_idea = detached_country
@@ -384,13 +380,58 @@
 		    name = goy_pomovarra_news.8.a
 			trigger = {
 			    OR = {
+				    original_tag = ARD
+					is_in_faction_with = ARD
+				}
+			}
+		}
+		option = {
+	        name = goy_pomovarra_news.8.b
+			trigger = {
+			    is_griffon_continent_griffon_country = yes
+				NOT = {
+				    OR = {
+					    is_in_faction_with = ARD
+						original_tag = ARD
+					}
+				}
+			}
+	    }
+		option = {
+	        name = goy_pomovarra_news.8.c
+			trigger = {
+			    AND = {
+			        is_griffon_continent_griffon_country = no
+					NOT = {
+					    is_in_faction_with = ARD
+				    }
+				}
+			}
+	    }
+	}
+	news_event = { #
+	    id = goy_pomovarra_news.9 #King of Pomovarra
+	    title = goy_pomovarra_news.9.t
+	    desc = goy_pomovarra_news.9.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_talononte
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = goy_pomovarra_news.9.a
+			trigger = {
+			    OR = {
 				    original_tag = POM
 					is_in_faction_with = POM
 				}
 			}
 		}
 		option = {
-	        name = goy_pomovarra_news.8.b
+	        name = goy_pomovarra_news.9.b
 			trigger = {
 			    is_griffon_continent_griffon_country = yes
 				NOT = {
@@ -402,7 +443,7 @@
 			}
 	    }
 		option = {
-	        name = goy_pomovarra_news.8.c
+	        name = goy_pomovarra_news.9.c
 			trigger = {
 			    AND = {
 			        is_griffon_continent_griffon_country = no
@@ -413,15 +454,43 @@
 			}
 	    }
 	}
+	news_event = { #
+	    id = goy_pomovarra_news.10 #Warlord's Return
+	    title = goy_pomovarra_news.10.t
+	    desc = goy_pomovarra_news.10.d
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    picture = GFX_news_griffon_soldier
+	    show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+		option = {
+		    name = goy_pomovarra_news.10.a
+			trigger = {
+			    OR = {
+				    original_tag = MER
+					is_in_faction_with = MER
+				}
+			}
+		}
+		option = {
+	        name = goy_pomovarra_news.10.b
+			trigger = {
+				NOT = {
+					is_in_faction_with = MER
+					original_tag = MER
+				}
+			}
+	    }
+	}
 	
 	#
 	#### COUNTRY EVENTS
 	#
 	country_event = { #debug treeload
 		id = goy_pomovarra.001
-		title = goy_pomovarra.001.t
-		desc = goy_pomovarra.001.d
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -450,9 +519,6 @@
 	}
 	country_event = { #debug native treeload
 		id = goy_pomovarra.322
-		title = goy_pomovarra.322.t
-		desc = goy_pomovarra.322.d
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -489,7 +555,7 @@
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	country_event = { #load GoY Beach Episode
+	country_event = { #Rogue Retiree
 		id = goy_pomovarra.323
 		title = goy_pomovarra.323.t
 		desc = goy_pomovarra.323.d
@@ -514,7 +580,7 @@
 				}
 			}
 			hidden_effect = {
-				POM = {
+				ARD = {
 					country_event = goy_pomovarra.325
 					#country_event = {
 					#	id = goy_pomovarra.325
@@ -614,8 +680,10 @@
 				}
 				IF = {
 					limit = {
-						any_army_leader = {
-							has_character_flag = GOY_neva_maskh
+						POM = {
+							any_army_leader = {
+								has_character_flag = GOY_neva_maskh
+							}
 						}
 					}
 					every_army_leader = {
@@ -634,13 +702,13 @@
 				GOY_POM_reiher = {
 					add_timed_unit_leader_trait = {
 						trait = goy_alcohol
-						days = 25
+						days = 60
 					}
 				}
 				GOY_POM_schattenzahn = {
 					add_timed_unit_leader_trait = {
 						trait = goy_alcohol
-						days = 90
+						days = 7
 					}
 				}
 				IF = {
@@ -650,7 +718,7 @@
 					GOY_POM_floppen = {
 						add_timed_unit_leader_trait = {
 							trait = goy_alcohol
-							days = 45
+							days = 30
 						}
 					}
 				}
@@ -663,7 +731,7 @@
 				GOY_POM_falkenrath = {
 					add_timed_unit_leader_trait = {
 						trait = goy_alcohol
-						days = 30
+						days = 25
 					}
 				}
 				load_focus_tree = Pomovarra_goy_LM_Reiher
@@ -769,7 +837,6 @@
 	country_event = { #Free mines for beach
 		id = goy_pomovarra.324
 		hidden = yes
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		immediate = {
@@ -806,7 +873,10 @@
 			ai_chance = {
 				base = 0
 			}
-			FROM = { change_tag_from = PREV }
+			custom_effect_tooltip = POM_TT_switch_to_reiher
+			hidden_effect = {
+				FROM = { change_tag_from = PREV }
+			}
 		}
 		option = {
 			name = goy_pomovarra.325.b
@@ -860,7 +930,6 @@
 	country_event = { #officer system gotta unretard
 		id = goy_pomovarra.326
 		hidden = yes
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		immediate = {
@@ -884,7 +953,6 @@
 	country_event = { #Free guns from reiher's procurement bureau
 		id = goy_pomovarra.327
 		hidden = yes
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		immediate = {
@@ -966,9 +1034,8 @@
 		}
 	}
 	country_event = { #Free guns from reiher's procurement bureau
-		id = goy_pomovarra.328 #on_weekly is less demanding. switchted to it
+		id = goy_pomovarra.328 #on_weekly is less demanding. switched to it
 		hidden = yes
-		#picture = 
 		is_triggered_only = yes
 		fire_only_once = no
 		immediate = {
@@ -1038,11 +1105,88 @@
 			}
 		}
 	}
+	country_event = { #All's Well That Ends Well
+		id = goy_pomovarra.329
+		title = goy_pomovarra.329.t
+		desc = goy_pomovarra.329.d
+		picture = GFX_event_goy_meridiennes_palace
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.329.a
+			custom_effect_tooltip = POM_TT_another_drink
+			news_event = goy_pomovarra_news.10
+			IF = {
+				limit = {
+					JER = {
+						is_puppet_of = ROOT
+					}
+				}
+				POM = {
+					GOY_POM_federal_assembly = {
+						set_nationality = JER
+					}
+				}
+				JER = {
+					set_cosmetic_tag = JER_REPUBLIC
+					add_country_leader_role = {
+						character = GOY_POM_federal_assembly
+						country_leader = {
+							ideology = liberalism
+							expire = "1965.1.1.1"
+							id = -1
+						}
+					}
+					GOY_POM_federal_assembly = {
+						promote_character = liberalism	
+					}
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+						election_frequency = 60
+						long_name = POM_goy_aquileia_mer_party_long
+						name = POM_goy_aquileia_mer_party
+					}
+				}
+			}
+			ELSE = {
+				IF = {
+					limit = {
+						has_dlc = "La Resistance"
+					}
+					set_temp_variable = { country_to_initiate = JER }
+					instantiate_collaboration_government = yes
+				}
+				ELSE = {
+					release_puppet = JER
+				}
+				JER = {
+					set_cosmetic_tag = JER_REPUBLIC
+					add_country_leader_role = {
+						character = GOY_POM_federal_assembly
+						country_leader = {
+							ideology = liberalism
+							expire = "1965.1.1.1"
+							id = -1
+						}
+					}
+					promote_character = GOY_POM_federal_assembly
+					set_politics = {
+						ruling_party = democratic
+						elections_allowed = yes
+						election_frequency = 60
+						long_name = POM_goy_aquileia_mer_party_long
+						name = POM_goy_aquileia_mer_party
+					}
+				}
+			}
+		}
+	}
 	country_event = { #The Party
 		id = goy_pomovarra.2
 		title = goy_pomovarra.2.t
 		desc = goy_pomovarra.2.d
-		#picture = 
+		picture = GFX_event_aquileian_toasts
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1058,7 +1202,7 @@
 		id = goy_pomovarra.3
 		title = goy_pomovarra.3.t
 		desc = goy_pomovarra.3.d
-		#picture = 
+		picture = GFX_event_river_city
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1070,7 +1214,7 @@
 		id = goy_pomovarra.4
 		title = goy_pomovarra.4.t
 		desc = goy_pomovarra.4.d
-		#picture = 
+		picture = GFX_event_goy_schattenzahn
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1101,7 +1245,7 @@
 		id = goy_pomovarra.5
 		title = goy_pomovarra.5.t
 		desc = goy_pomovarra.5.d
-		#picture = 
+		picture = GFX_event_medieval_city
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1116,7 +1260,7 @@
 		id = goy_pomovarra.6
 		title = goy_pomovarra.6.t
 		desc = goy_pomovarra.6.d
-		#picture = 
+		picture = GFX_event_lodge
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1128,7 +1272,7 @@
 		id = goy_pomovarra.7
 		title = goy_pomovarra.7.t
 		desc = goy_pomovarra.7.d
-		#picture = 
+		picture = GFX_event_griffon_shoot
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1150,12 +1294,15 @@
 		id = goy_pomovarra.8
 		title = goy_pomovarra.8.t
 		desc = goy_pomovarra.8.d
-		#picture = 
+		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.8.a
-			load_focus_tree = Pomovarra_goy_reiher
+			hidden_effect = {
+				load_focus_tree = Pomovarra_goy_reiher
+			}
+			custom_effect_tooltip = POM_TT_reiher_focus
 			swap_ideas = {
 				remove_idea = POM_pomovarran_uprising
 				add_idea = POM_hostile_population
@@ -1167,7 +1314,7 @@
 		id = goy_pomovarra.9
 		title = goy_pomovarra.9.t
 		desc = goy_pomovarra.9.d
-		#picture = 
+		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1202,6 +1349,12 @@
 				set_character_flag = GOY_char_available_flag
 			}
 			GOY_POM_seznec = {
+				set_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_bran_askelroz = {
+				set_character_flag = GOY_char_available_flag
+			}
+			GOY_POM_gaenaelle_pereire = {
 				set_character_flag = GOY_char_available_flag
 			}
 			remove_ideas = {
@@ -1241,6 +1394,8 @@
 				promote_character = ultranationalism
 			}
 			set_party_name = { ideology = fascism name = POM_goy_boar_party long_name = POM_goy_boar_party_long }
+			activate_advisor = POM_camriz_advisor
+			activate_advisor = POM_morel_advisor
 			hidden_effect = {
 				news_event = goy_pomovarra_news.4
 			}
@@ -1250,7 +1405,7 @@
 		id = goy_pomovarra.10
 		title = goy_pomovarra.10.t
 		desc = goy_pomovarra.10.d
-		#picture = 
+		picture = GFX_event_griffon_camp_2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1258,11 +1413,11 @@
 			
 		}
 	}
-	country_event = { #Breaking out the gates
+	country_event = { #Breaking Through the Gates
 		id = goy_pomovarra.11
 		title = goy_pomovarra.11.t
 		desc = goy_pomovarra.11.d
-		#picture = 
+		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1296,7 +1451,7 @@
 		id = goy_pomovarra.12
 		title = goy_pomovarra.12.t
 		desc = goy_pomovarra.12.d
-		#picture = 
+		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -1339,24 +1494,28 @@
 			}
 		}
 	}
-	country_event = { #traitor
+	country_event = { #the traitor
 		id = goy_pomovarra.13
 		title = goy_pomovarra.13.t
 		desc = goy_pomovarra.13.d
-		#picture = 
+		picture = GFX_event_gothic_interior
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.13.a
 			add_political_power = 50
-			#show_ideas_tooltip = todo “Antoine de Bleuetaille” (Flowenian Banker: -5% consumer goods, +0,1 daily political power, -5% stability)
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = POM_bleuetaille_advisor
+			GOY_POM_bleuetaille = {
+				set_character_flag = GOY_char_available_flag
+			}
 		}
 	}
 	country_event = { #artillery strike
 		id = goy_pomovarra.14
 		title = goy_pomovarra.14.t
 		desc = goy_pomovarra.14.d
-		#picture = 
+		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1374,7 +1533,7 @@
 		id = goy_pomovarra.15
 		title = goy_pomovarra.15.t
 		desc = goy_pomovarra.15.d
-		#picture = 
+		picture = GFX_event_palace_hall
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1386,7 +1545,7 @@
 		id = goy_pomovarra.16
 		title = goy_pomovarra.16.t
 		desc = goy_pomovarra.16.d
-		#picture = 
+		picture = GFX_event_goy_reiher_lm_arrival
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1431,17 +1590,6 @@
 					GOY_POM_floppen = {
 						clr_character_flag = GOY_char_available_flag
 						set_nationality = MER
-					}
-					IF = {
-						limit = {
-							any_army_leader = {
-								has_character_flag = GOY_neva_maskh
-							}
-						}
-						every_army_leader = {
-							limit = { has_character_flag = GOY_neva_maskh }
-							set_nationality = EWI
-						}
 					}
 				}
 				GOY_POM_feuerstein = {
@@ -1489,6 +1637,9 @@
 				}
 			}
 			custom_effect_tooltip = POM_TT_lose_battleship_bozo
+			MER = {
+				add_ideas = POM_LM_reihers_hideout
+			}
 			add_country_leader_role = {
 				character = GOY_POM_political_chair
 				country_leader = {
@@ -1506,22 +1657,34 @@
 		id = goy_pomovarra.17
 		title = goy_pomovarra.17.t
 		desc = goy_pomovarra.17.d
-		picture = GFX_event_goy_reiher_lm_arrival
+		picture = GFX_event_bank_vault
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.17.a
-			MER = {
-				add_ideas = POM_LM_reihers_hideout
-			}
+			country_event = goy_pomovarra.135
+		}
+	}
+	country_event = { #force majeure
+		id = goy_pomovarra.135
+		title = goy_pomovarra.135.t
+		desc = goy_pomovarra.135.d
+		picture = GFX_report_event_generic_truck
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.135.a
 			country_event = goy_pomovarra.18
+			GOY_POM_bleuetaille = {
+				retire = yes
+			}
 		}
 	}
 	country_event = { #a revolutionary rises
 		id = goy_pomovarra.18
 		title = goy_pomovarra.18.t
 		desc = goy_pomovarra.18.d
-		#picture = 
+		picture = GFX_event_goy_allard
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1535,34 +1698,15 @@
 					id = goy_pomovarra_news.1
 					hours = 8
 				}
-			}
-			add_country_leader_role = {
-				character = GOY_POM_allard_the_communard
-				country_leader = {
-					ideology = stalinism
-					expire = "1965.1.1.1"
+				377 = {
+					transfer_state_to = ARD
+					add_core_of = ARD
 				}
-				promote_leader = yes
-			}
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.3
-			}
-			set_cosmetic_tag = POM_goy_aquileia
-			every_unit_leader = {
-				limit = {
-					OR = {
-						has_character_flag = field_promotion_achievement
-					}
-					NOT = {
-						has_character_flag = GOY_jacques_noir
+				POM = {
+					transfer_navy = {
+						target = ARD
 					}
 				}
-				retire = yes
 			}
 			every_unit_leader = {
 				limit = {
@@ -1570,37 +1714,206 @@
 				}
 				remove_unit_leader_trait = goy_shady
 				add_unit_leader_trait = inspiring_commissar
+				set_nationality = ARD
 			}
-			GOY_POM_ponysander = {
+			every_unit_leader = {
+				limit = {
+					has_character_flag = field_promotion_achievement
+				}
 				retire = yes
 			}
-			set_capital = { state = 377 }
-			load_focus_tree = Pomovarra_goy_communists
-			create_faction = goy_pom_allard_faction
-			remove_ideas = {
-				#remove all reiher ideas
-				#goy_pom_criminal_economy
-				POM_pomovarran_uprising
-				POM_warlord_government
-				POM_economic_devastation
-				POM_military_legacy
+			JER = {
+				JER_simon_guilbert = { set_nationality = ARD }
+				JER_gabriel_duval = { set_nationality = ARD }
+				JER_cecilia_dutertre = { set_nationality = ARD }
+				JER_sophie_altiert = { set_nationality = ARD }
+				JER_seva_shako = { set_nationality = ARD }
+				JER_eagleheart = { set_nationality = ARD }
+				JER_josette_fierte = { set_nationality = ARD }
+				JER_gunnar_sable = { set_nationality = ARD }
 			}
-			add_ideas = {
-				POM_chaotic_revolution
-				POM_revolutionary_militias
-				POM_warlord_legacy
+			hidden_effect = {
+				GOY_POM_ponysander = {
+					retire = yes
+				}
+				ARD = { change_tag_from = ROOT }
 			}
-			set_party_name = { ideology = communism name = POM_goy_allard_party long_name = POM_goy_allard_party_long }
-			set_party_name = { ideology = fascism name = POM_goy_nationalist_party long_name = POM_goy_nationalist_party_long }
-			set_party_name = { ideology = democratic name = POM_goy_comdem_party long_name = POM_goy_comdem_party_long }
-			set_party_name = { ideology = neutrality name = POM_goy_comneu_party long_name = POM_goy_comneu_party_long }
+			custom_effect_tooltip = POM_TT_switch_to_allard
+			every_owned_state = {
+				transfer_state_to = ARD
+				add_core_of = ARD
+			}
+			ARD = {
+				set_country_flag = JER_formed
+				set_variable = { global.aquileia_var = ARD }
+				set_cosmetic_tag = ARD_GOY
+				inherit_technology = JER
+				load_focus_tree = Pomovarra_goy_communists
+				create_faction = goy_pom_allard_faction
+				add_ideas = {
+					POM_chaotic_revolution
+					POM_revolutionary_militias
+					POM_warlord_legacy
+				}
+				hidden_effect = {
+					set_party_name = { ideology = communism name = POM_goy_allard_party long_name = POM_goy_allard_party_long }
+					set_party_name = { ideology = fascism name = POM_goy_nationalist_party long_name = POM_goy_nationalist_party_long }
+					set_party_name = { ideology = democratic name = POM_goy_comdem_party long_name = POM_goy_comdem_party_long }
+					set_party_name = { ideology = neutrality name = POM_goy_comneu_party long_name = POM_goy_comneu_party_long }
+				
+					delete_unit_template_and_units = {
+						division_template = "Mercenary Division"
+						disband = yes
+					}
+					delete_unit_template_and_units = {
+						division_template = "Hired Knights"
+						disband = yes
+					}
+				}
+				division_template = {
+					name = "Guards of the Revolution"
+					
+					name_group = ARD_GAR_01
+					
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 6
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 6
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 2
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 2
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = PREV
+						is_core_of = PREV
+						NOT = {
+							state = 531
+						}
+					}
+					create_unit = {
+						division = "division_template = \"Guards of the Revolution\" start_experience_factor = 0.5 start_equipment_factor = 1"
+						owner = PREV
+						count = 1
+					}
+				}
+				hidden_effect = {
+					country_event = goy_pomovarra.134
+				}
+			}
 		}
 	}
 	country_event = { #people's justice
 		id = goy_pomovarra.19
 		title = goy_pomovarra.19.t
 		desc = goy_pomovarra.19.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1611,7 +1924,7 @@
 		id = goy_pomovarra.20
 		title = goy_pomovarra.20.t
 		desc = goy_pomovarra.20.d
-		#picture = 
+		picture = GFX_event_stg_pairlament2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1639,7 +1952,7 @@
 		id = goy_pomovarra.21
 		title = goy_pomovarra.21.t
 		desc = goy_pomovarra.21.d
-		#picture = 
+		picture = GFX_event_stg_pairlament
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1658,7 +1971,7 @@
 		id = goy_pomovarra.22
 		title = goy_pomovarra.22.t
 		desc = goy_pomovarra.22.d
-		#picture = 
+		picture = GFX_event_western_griffon_city
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1685,7 +1998,7 @@
 		id = goy_pomovarra.23
 		title = goy_pomovarra.23.t
 		desc = goy_pomovarra.23.d
-		#picture = 
+		picture = GFX_event_stg_pairlament2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1697,7 +2010,7 @@
 		id = goy_pomovarra.24
 		title = goy_pomovarra.24.t
 		desc = goy_pomovarra.24.d
-		#picture = 
+		picture = GFX_event_waste
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1724,7 +2037,7 @@
 			every_owned_state = {
 				add_manpower = -30000
 			}
-			add_ideas = POM_strange_occurences
+			add_ideas = POM_strange_occurences_1
 			country_event = {
 				id = goy_pomovarra.25
 				days = 30
@@ -1735,22 +2048,18 @@
 		id = goy_pomovarra.25
 		title = goy_pomovarra.25.t
 		desc = goy_pomovarra.25.d
-		#picture = 
+		picture = GFX_event_medieval_city
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.25.a
-			swap_ideas = {
-				remove_idea = POM_strange_occurences
-				add_idea = POM_strange_occurences_1
-			}
 		}
 	}
 	country_event = { #The great purge
 		id = goy_pomovarra.26
 		title = goy_pomovarra.26.t
 		desc = goy_pomovarra.26.d
-		#picture = 
+		picture = GFX_event_goy_bookburn
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1798,14 +2107,14 @@
 		id = goy_pomovarra.27
 		title = goy_pomovarra.27.t
 		desc = goy_pomovarra.27.d
-		#picture = 
+		picture = GFX_event_stg_pairlament
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.27.a
 			add_stability = -0.05
 			add_war_support = 0.05
-			set_cosmetic_tag = POM_ONE_COMMUNE
+			set_cosmetic_tag = ARD_ONE_COMMUNE
 			add_popularity = {
 				ideology = communism
 				popularity = 0.03
@@ -1814,13 +2123,16 @@
 				remove_idea = POM_past_vestiges
 				add_idea = POM_transformation_of_society
 			}
+			hidden_effect = {
+				country_event = { id = goy_pomovarra.124 days = 90 }
+			}
 		}
 	}
 	country_event = { #To Kill An Empire
 		id = goy_pomovarra.28
 		title = goy_pomovarra.28.t
 		desc = goy_pomovarra.28.d
-		#picture = 
+		picture = GFX_event_griffenheim
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1869,7 +2181,7 @@
 		id = goy_pomovarra.29
 		title = goy_pomovarra.29.t
 		desc = goy_pomovarra.29.d
-		#picture = 
+		picture = GFX_event_griffenheim
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1917,7 +2229,7 @@
 		id = goy_pomovarra.30
 		title = goy_pomovarra.30.t
 		desc = goy_pomovarra.30.d
-		#picture = 
+		picture = GFX_event_event_bronzhill_fighting
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -1940,11 +2252,11 @@
 			}
 		}
 	}
-	country_event = { #operation
+	country_event = { #Plan Tunneler 
 		id = goy_pomovarra.31
 		title = goy_pomovarra.31.t
 		desc = goy_pomovarra.31.d
-		#picture = 
+		picture = GFX_event_cave_fire
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -2016,7 +2328,7 @@
 		id = goy_pomovarra.32
 		title = goy_pomovarra.32.t
 		desc = goy_pomovarra.32.d
-		#picture = 
+		picture = GFX_event_stg_pairlament2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -2030,9 +2342,11 @@
 				}
 				add_resistance = 20
 				add_resistance_target = 10
+			}
+			hidden_effect = {
 				country_event = {
 					id = goy_pomovarra.33
-					days = 7
+					days = 5
 				}
 			}
 		}
@@ -2041,11 +2355,12 @@
 		id = goy_pomovarra.33
 		title = goy_pomovarra.33.t
 		desc = goy_pomovarra.33.d
-		#picture = 
+		picture = GFX_event_gothic_interior
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.33.a
+			custom_effect_tooltip = POM_TT_allard_dies
 			country_event = goy_pomovarra.34
 		}
 	}
@@ -2053,7 +2368,7 @@
 		id = goy_pomovarra.34
 		title = goy_pomovarra.34.t
 		desc = goy_pomovarra.34.d
-		#picture = 
+		picture = GFX_event_stg_pairlament2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -2065,11 +2380,17 @@
 		id = goy_pomovarra.35
 		title = goy_pomovarra.35.t
 		desc = goy_pomovarra.35.d
-		#picture = 
+		picture = GFX_event_stg_pairlament
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.35.a
+			effect_tooltip = {
+				kill_country_leader = yes
+			}
+			hidden_effect = {
+				retire_character = ARD_victor_allard
+			}
 			set_country_flag = POM_death_of_allard_FLAG
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = POM_TT_allard_dead_new_foci
@@ -2087,7 +2408,7 @@
 		id = goy_pomovarra.36
 		title = goy_pomovarra.36.t
 		desc = goy_pomovarra.36.d
-		#picture = 
+		picture = GFX_event_stalliongrad_tower
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -2097,7 +2418,7 @@
 			}
 			add_popularity = {
 				ideology = communism
-				popularity = 0.3
+				popularity = 0.03
 			}
 			swap_ideas = {
 				remove_idea = POM_voice_of_commune
@@ -2129,7 +2450,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_aquileia_organization = {
 					add_mio_size = 1
 				}
@@ -2144,7 +2465,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_aquileia_organization = {
 					add_mio_size = 2
 				}
@@ -2159,7 +2480,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_aquileia_organization = {
 					add_mio_size = 3
 				}
@@ -2174,7 +2495,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_aquileia_organization = {
 					add_mio_size = 4
 				}
@@ -2188,7 +2509,7 @@
 					}
 				}
 					}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_aquileia_organization = {
 					add_mio_size = 5
 				}
@@ -2215,7 +2536,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_rila_organization = {
 					add_mio_size = 1
 				}
@@ -2230,7 +2551,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_rila_organization = {
 					add_mio_size = 2
 				}
@@ -2245,7 +2566,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_rila_organization = {
 					add_mio_size = 3
 				}
@@ -2260,7 +2581,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_rila_organization = {
 					add_mio_size = 4
 				}
@@ -2274,7 +2595,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_rila_organization = {
 					add_mio_size = 5
 				}
@@ -2301,7 +2622,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_vin_organization = {
 					add_mio_size = 1
 				}
@@ -2316,7 +2637,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_vin_organization = {
 					add_mio_size = 2
 				}
@@ -2331,7 +2652,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_vin_organization = {
 					add_mio_size = 3
 				}
@@ -2346,7 +2667,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_vin_organization = {
 					add_mio_size = 4
 				}
@@ -2360,7 +2681,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_manufacture_vin_organization = {
 					add_mio_size = 5
 				}
@@ -2387,7 +2708,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_dassault_organization = {
 					add_mio_size = 1
 				}
@@ -2402,7 +2723,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_dassault_organization = {
 					add_mio_size = 2
 				}
@@ -2417,7 +2738,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_dassault_organization = {
 					add_mio_size = 3
 				}
@@ -2432,7 +2753,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_dassault_organization = {
 					add_mio_size = 4
 				}
@@ -2446,7 +2767,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_dassault_organization = {
 					add_mio_size = 5
 				}
@@ -2473,7 +2794,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_leopard_jer_organization = {
 					add_mio_size = 1
 				}
@@ -2488,7 +2809,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_leopard_jer_organization = {
 					add_mio_size = 2
 				}
@@ -2503,7 +2824,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_leopard_jer_organization = {
 					add_mio_size = 3
 				}
@@ -2518,7 +2839,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_leopard_jer_organization = {
 					add_mio_size = 4
 				}
@@ -2532,7 +2853,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_leopard_jer_organization = {
 					add_mio_size = 5
 				}
@@ -2559,7 +2880,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_safran_organization = {
 					add_mio_size = 1
 				}
@@ -2574,7 +2895,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_safran_organization = {
 					add_mio_size = 2
 				}
@@ -2589,7 +2910,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_safran_organization = {
 					add_mio_size = 3
 				}
@@ -2604,7 +2925,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_safran_organization = {
 					add_mio_size = 4
 				}
@@ -2618,7 +2939,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_safran_organization = {
 					add_mio_size = 5
 				}
@@ -2645,7 +2966,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_thales_organization = {
 					add_mio_size = 1
 				}
@@ -2660,7 +2981,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_thales_organization = {
 					add_mio_size = 2
 				}
@@ -2675,7 +2996,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_thales_organization = {
 					add_mio_size = 3
 				}
@@ -2690,7 +3011,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_thales_organization = {
 					add_mio_size = 4
 				}
@@ -2704,7 +3025,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_thales_organization = {
 					add_mio_size = 5
 				}
@@ -2731,7 +3052,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_astrium_organization = {
 					add_mio_size = 1
 				}
@@ -2746,7 +3067,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_astrium_organization = {
 					add_mio_size = 2
 				}
@@ -2761,7 +3082,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_astrium_organization = {
 					add_mio_size = 3
 				}
@@ -2776,7 +3097,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_astrium_organization = {
 					add_mio_size = 4
 				}
@@ -2790,7 +3111,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_astrium_organization = {
 					add_mio_size = 5
 				}
@@ -2817,7 +3138,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_mistral_organization = {
 					add_mio_size = 1
 				}
@@ -2832,7 +3153,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_mistral_organization = {
 					add_mio_size = 2
 				}
@@ -2847,7 +3168,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_mistral_organization = {
 					add_mio_size = 3
 				}
@@ -2862,7 +3183,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_mistral_organization = {
 					add_mio_size = 4
 				}
@@ -2876,7 +3197,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_mistral_organization = {
 					add_mio_size = 5
 				}
@@ -2903,7 +3224,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_loup_shipping_organization = {
 					add_mio_size = 1
 				}
@@ -2918,7 +3239,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_loup_shipping_organization = {
 					add_mio_size = 2
 				}
@@ -2933,7 +3254,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_loup_shipping_organization = {
 					add_mio_size = 3
 				}
@@ -2948,7 +3269,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_loup_shipping_organization = {
 					add_mio_size = 4
 				}
@@ -2962,7 +3283,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_loup_shipping_organization = {
 					add_mio_size = 5
 				}
@@ -2989,7 +3310,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_fer_de_lance_organization = {
 					add_mio_size = 1
 				}
@@ -3004,7 +3325,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_fer_de_lance_organization = {
 					add_mio_size = 2
 				}
@@ -3019,7 +3340,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_fer_de_lance_organization = {
 					add_mio_size = 3
 				}
@@ -3034,7 +3355,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_fer_de_lance_organization = {
 					add_mio_size = 4
 				}
@@ -3048,7 +3369,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_fer_de_lance_organization = {
 					add_mio_size = 5
 				}
@@ -3075,7 +3396,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_AVA_tanks_organization = {
 					add_mio_size = 1
 				}
@@ -3090,7 +3411,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_AVA_tanks_organization = {
 					add_mio_size = 2
 				}
@@ -3105,7 +3426,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_AVA_tanks_organization = {
 					add_mio_size = 3
 				}
@@ -3120,7 +3441,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_AVA_tanks_organization = {
 					add_mio_size = 4
 				}
@@ -3134,7 +3455,7 @@
 					}
 					}
 				}
-				POM = {
+				ROOT = {
 				mio:POM_JER_AVA_tanks_organization = {
 					add_mio_size = 5
 				}
@@ -3149,7 +3470,7 @@
 		id = goy_pomovarra.38
 		title = goy_pomovarra.38.t
 		desc = goy_pomovarra.38.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3180,7 +3501,7 @@
 		id = goy_pomovarra.39
 		title = goy_pomovarra.39.t
 		desc = goy_pomovarra.39.d
-		#picture = 
+		picture = GFX_event_griffon_with_gun
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3202,7 +3523,7 @@
 		id = goy_pomovarra.40
 		title = goy_pomovarra.40.t
 		desc = goy_pomovarra.40.d
-		#picture = 
+		picture = GFX_report_event_generic_train
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3225,7 +3546,7 @@
 					target_province = 1973
 				}
 			}
-			POM = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.41
 					days = 1
@@ -3237,7 +3558,7 @@
 			ai_chance = {
 				base = 1
 			}
-			POM = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.42
 					days = 1
@@ -3249,7 +3570,7 @@
 		id = goy_pomovarra.41
 		title = goy_pomovarra.41.t
 		desc = goy_pomovarra.41.d
-		#picture = 
+		picture = GFX_report_event_generic_train
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3259,6 +3580,7 @@
 			}
 			build_railway = {
 				level = 1
+				build_only_on_allied = no
 				start_province = 8073
 				target_province = 1973
 			}
@@ -3269,7 +3591,7 @@
 		id = goy_pomovarra.42
 		title = goy_pomovarra.42.t
 		desc = goy_pomovarra.42.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3283,7 +3605,7 @@
 		id = goy_pomovarra.43
 		title = goy_pomovarra.43.t
 		desc = goy_pomovarra.43.d
-		#picture = 
+		picture = GFX_event_medieval_city_in_mountains
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3332,7 +3654,7 @@
 		id = goy_pomovarra.44
 		title = goy_pomovarra.44.t
 		desc = goy_pomovarra.44.d
-		#picture = 
+		picture = GFX_event_hindia_field
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3354,11 +3676,19 @@
 		id = goy_pomovarra.45
 		title = goy_pomovarra.45.t
 		desc = goy_pomovarra.45.d
-		#picture = 
+		picture = GFX_event_fez
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.45.a #Justice
+			ai_chance = {
+				base = 1
+			}
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		option = {
+			name = goy_pomovarra.45.b #Shady deal
 			ai_chance = {
 				base = 1
 			}
@@ -3375,20 +3705,12 @@
 				}
 			}
 		}
-		option = {
-			name = goy_pomovarra.45.b #Shady deal
-			ai_chance = {
-				base = 1
-			}
-			add_stability = 0.05
-			add_political_power = 50
-		}
 	}
 	country_event = { #Never Spare on an Assassin
 		id = goy_pomovarra.46
 		title = goy_pomovarra.46.t
 		desc = goy_pomovarra.46.d
-		#picture = 
+		picture = GFX_event_griffon_with_gun
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3406,6 +3728,7 @@
 				clr_country_flag = POM_FLAG_revolt_won
 				set_country_flag = POM_FLAG_morel_won
 				mark_focus_tree_layout_dirty = yes
+				set_cosmetic_tag = POM_boar
 			}
 			custom_effect_tooltip = POM_TT_morel_focus_camriz_dies
 			set_party_name = {
@@ -3457,6 +3780,14 @@
 			}
 			add_stability = -0.05
 			remove_ideas = POM_internal_divisions_2
+			remove_advisor_role = {
+				character = "GOY_POM_morel"
+				slot = political_advisor
+			}
+			remove_advisor_role = {
+				character = "GOY_POM_camriz"
+				slot = political_advisor
+			}
 			country_event = {
 				id = goy_pomovarra.47
 				days = 1
@@ -3474,7 +3805,7 @@
 		id = goy_pomovarra.47
 		title = goy_pomovarra.47.t
 		desc = goy_pomovarra.47.d
-		#picture = 
+		picture = GFX_event_speech
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3488,7 +3819,7 @@
 		id = goy_pomovarra.48
 		title = goy_pomovarra.48.t
 		desc = goy_pomovarra.48.d
-		#picture = 
+		picture = GFX_event_gothic_interior
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3498,7 +3829,7 @@
 			}
 			country_event = {
 				id = goy_pomovarra.49
-				days = 7
+				days = 5
 			}
 		}
 	}
@@ -3506,7 +3837,7 @@
 		id = goy_pomovarra.49
 		title = goy_pomovarra.49.t
 		desc = goy_pomovarra.49.d
-		#picture = 
+		picture = GFX_event_evil_griffon_ghosts
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3524,6 +3855,7 @@
 				clr_country_flag = POM_FLAG_revolt_won
 				set_country_flag = POM_FLAG_camriz_won
 				mark_focus_tree_layout_dirty = yes
+				complete_national_focus = POM_our_past_and_future
 			}
 			custom_effect_tooltip = POM_TT_camriz_focus_morel_dies
 			set_party_name = {
@@ -3570,13 +3902,21 @@
 			}
 			remove_ideas = POM_internal_divisions_2
 			add_stability = -0.1
+			remove_advisor_role = {
+				character = "GOY_POM_morel"
+				slot = political_advisor
+			}
+			remove_advisor_role = {
+				character = "GOY_POM_camriz"
+				slot = political_advisor
+			}
 		}
 	}
 	country_event = { #restoration
 		id = goy_pomovarra.50
 		title = goy_pomovarra.50.t
 		desc = goy_pomovarra.50.d
-		#picture = 
+		picture = GFX_event_medieval_city_2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3598,7 +3938,7 @@
 		id = goy_pomovarra.51
 		title = goy_pomovarra.51.t
 		desc = goy_pomovarra.51.d
-		#picture = 
+		picture = GFX_event_bank_vault
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3617,7 +3957,7 @@
 		id = goy_pomovarra.52
 		title = goy_pomovarra.52.t
 		desc = goy_pomovarra.52.d
-		#picture = 
+		picture = GFX_event_eqc_new_manehattan
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3642,13 +3982,14 @@
 			set_country_flag = POM_FLAG_morel_won_2
 			mark_focus_tree_layout_dirty = yes
 			complete_national_focus = POM_taking_the_mantle
+			news_event = goy_pomovarra_news.9
 		}
 	}
 	country_event = { #purge of aquileia
 		id = goy_pomovarra.53
 		title = goy_pomovarra.53.t
 		desc = goy_pomovarra.53.d
-		#picture = 
+		picture = event_goy_bookburn
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3664,7 +4005,7 @@
 		id = goy_pomovarra.54
 		title = goy_pomovarra.54.t
 		desc = goy_pomovarra.54.d
-		#picture = 
+		picture = GFX_event_medieval_city_winter
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3732,7 +4073,7 @@
 		id = goy_pomovarra.55
 		title = goy_pomovarra.55.t
 		desc = goy_pomovarra.55.d
-		#picture = 
+		picture = GFX_event_medieval_city_2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3840,27 +4181,12 @@
 			}
 		}
 	}
-	country_event = { #purge of aquileia
-		id = goy_pomovarra.56
-		title = goy_pomovarra.56.t
-		desc = goy_pomovarra.56.d
-		#picture = 
-		is_triggered_only = yes
-		fire_only_once = yes
-		option = {
-			name = goy_pomovarra.56.a
-			ai_chance = {
-				base = 1
-			}
-			set_province_name = { id = 3164 name = GOY_vp_ker_gollou }
-			add_ideas = POM_erasing_the_past
-		}
-	}
+	#country_event goy_pomovarra.56 unused
 	country_event = { #Pomovarran Demands Rumare
 		id = goy_pomovarra.57
 		title = goy_pomovarra.57.t
 		desc = goy_pomovarra.57.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3887,9 +4213,11 @@
 					}
 				}
 			}
-			country_event = {
-				id = goy_pomovarra.58
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.58
+					days = 1
+				}
 			}
 		}
 		option = {
@@ -3897,9 +4225,11 @@
 			ai_chance = {
 				base = 1
 			}
-			country_event = {
-				id = goy_pomovarra.59
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.59
+					days = 1
+				}
 			}
 		}
 	}
@@ -3907,7 +4237,7 @@
 		id = goy_pomovarra.58
 		title = goy_pomovarra.58.t
 		desc = goy_pomovarra.58.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3920,17 +4250,15 @@
 					set_nationality = POM
 				}
 			}
-			POM = {
-				annex_country = {
-					target = LAK
-					transfer_troops = yes
+			annex_country = {
+				target = LAK
+				transfer_troops = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = LAK
 				}
-				every_state = {
-					limit = {
-						is_core_of = LAK
-					}
-					add_core_of = POM
-				}
+				add_core_of = POM
 			}
 		}
 	}
@@ -3938,7 +4266,7 @@
 		id = goy_pomovarra.59
 		title = goy_pomovarra.59.t
 		desc = goy_pomovarra.59.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -3956,7 +4284,7 @@
 		id = goy_pomovarra.60
 		title = goy_pomovarra.60.t
 		desc = goy_pomovarra.60.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -3976,11 +4304,13 @@
 					owns_or_subject_of = yes
 					is_core_of = JES
 				}
-				transfer_state_to = ROOT
+				transfer_state_to = FROM
 			}
-			country_event = {
-				id = goy_pomovarra.61
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.61
+					days = 1
+				}
 			}
 		}
 		option = {
@@ -4003,7 +4333,7 @@
 				}
 			}
 			effect_tooltip = {
-				ROOT = {
+				FROM = {
 					create_wargoal = {
 						type = take_state_focus
 						target = PREV
@@ -4012,9 +4342,11 @@
 					}
 				}
 			}
-			country_event = {
-				id = goy_pomovarra.62
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.62
+					days = 1
+				}
 			}
 		}
 	}
@@ -4022,7 +4354,7 @@
 		id = goy_pomovarra.61
 		title = goy_pomovarra.61.t
 		desc = goy_pomovarra.61.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4044,7 +4376,7 @@
 		id = goy_pomovarra.62
 		title = goy_pomovarra.62.t
 		desc = goy_pomovarra.62.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4064,7 +4396,7 @@
 		id = goy_pomovarra.63
 		title = goy_pomovarra.63.t
 		desc = goy_pomovarra.63.d
-		#picture = 
+		picture = GFX_event_griffenheim
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4082,7 +4414,7 @@
 		id = goy_pomovarra.64
 		title = goy_pomovarra.64.t
 		desc = goy_pomovarra.64.d
-		#picture = 
+		picture = GFX_event_event_bronzhill_fighting
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4141,7 +4473,7 @@
 		id = goy_pomovarra.65
 		title = goy_pomovarra.65.t
 		desc = goy_pomovarra.65.d
-		#picture = 
+		picture = GFX_event_night_and_fog
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4155,7 +4487,7 @@
 		id = goy_pomovarra.66
 		title = goy_pomovarra.66.t
 		desc = goy_pomovarra.66.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4169,7 +4501,7 @@
 		id = goy_pomovarra.67
 		title = goy_pomovarra.67.t
 		desc = goy_pomovarra.67.d
-		#picture = 
+		picture = GFX_event_forest_spritely
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4220,7 +4552,7 @@
 		id = goy_pomovarra.68
 		title = goy_pomovarra.68.t
 		desc = goy_pomovarra.68.d
-		#picture = 
+		picture = GFX_event_medieval_city_in_mountains
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4258,7 +4590,7 @@
 		id = goy_pomovarra.69
 		title = goy_pomovarra.69.t
 		desc = goy_pomovarra.69.d
-		#picture = 
+		picture = GFX_event_ponies_in_battle
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4305,7 +4637,7 @@
 		id = goy_pomovarra.70
 		title = goy_pomovarra.70.t
 		desc = goy_pomovarra.70.d
-		#picture = 
+		picture = GFX_event_griffon_autumn_medieval
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4342,7 +4674,7 @@
 		id = goy_pomovarra.71
 		title = goy_pomovarra.71.t
 		desc = goy_pomovarra.71.d
-		#picture = 
+		picture = GFX_event_republican_dream_book
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4378,7 +4710,7 @@
 		id = goy_pomovarra.72
 		title = goy_pomovarra.72.t
 		desc = goy_pomovarra.72.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4390,15 +4722,37 @@
 				ideology = neutrality
 				popularity = 0.1
 			}
-			add_war_support = 0.05
+			hidden_effect = {
+				remove_country_leader_role = {
+					character = GOY_POM_camriz
+					ideology = harmonic_libertarianism
+				}
+			}
+			add_country_leader_role = {
+				character = GOY_POM_camriz
+				country_leader = {
+					ideology = conservative_liberalism
+					desc = GOY_POM_camriz_desc
+					expire = "1965.1.1.1"
+					traits = {  }
+				}
+			}
+			GOY_POM_camriz = {
+				promote_character = conservative_liberalism
+			}
 			set_party_name = { ideology = neutrality name = POM_goy_camriz_party long_name = POM_goy_camriz_party_long }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_war_support = 0.05
 		}
 	}
 	country_event = { #The meeting in Flowena
 		id = goy_pomovarra.73
 		title = goy_pomovarra.73.t
 		desc = goy_pomovarra.73.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4414,13 +4768,14 @@
 			add_stability = 0.03
 			add_political_power = 50
 			create_faction = goy_pom_aetia_league
+			complete_national_focus = POM_leaving_the_past_behind
 		}
 	}
 	country_event = { #Friend in the north Supremacy
 		id = goy_pomovarra.74
 		title = goy_pomovarra.74.t
 		desc = goy_pomovarra.74.d
-		#picture = 
+		picture = GFX_event_forest_cabin
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4460,7 +4815,7 @@
 		id = goy_pomovarra.75
 		title = goy_pomovarra.75.t
 		desc = goy_pomovarra.75.d
-		#picture = 
+		picture = GFX_event_forest_cabin
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4494,7 +4849,7 @@
 		id = goy_pomovarra.76
 		title = goy_pomovarra.76.t
 		desc = goy_pomovarra.76.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4510,11 +4865,11 @@
 			add_political_power = -25
 		}
 	}
-	country_event = { #FEA strange occurences
+	country_event = { #FEA Weird Occurrences
 		id = goy_pomovarra.77
 		title = goy_pomovarra.77.t
 		desc = goy_pomovarra.77.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4537,7 +4892,7 @@
 		id = goy_pomovarra.78
 		title = goy_pomovarra.78.t
 		desc = goy_pomovarra.78.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4559,7 +4914,7 @@
 		id = goy_pomovarra.79
 		title = goy_pomovarra.79.t
 		desc = goy_pomovarra.79.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4626,7 +4981,7 @@
 		id = goy_pomovarra.80
 		title = goy_pomovarra.80.t
 		desc = goy_pomovarra.80.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4645,7 +5000,7 @@
 		id = goy_pomovarra.81
 		title = goy_pomovarra.81.t
 		desc = goy_pomovarra.81.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4669,7 +5024,7 @@
 		id = goy_pomovarra.82
 		title = goy_pomovarra.82.t
 		desc = goy_pomovarra.82.d
-		#picture = 
+		picture = GFX_event_griffon_with_gun
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4733,7 +5088,7 @@
 		id = goy_pomovarra.83
 		title = goy_pomovarra.83.t
 		desc = goy_pomovarra.83.d
-		#picture = 
+		picture = GFX_event_griffon_mountain
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4749,7 +5104,7 @@
 		id = goy_pomovarra.84
 		title = goy_pomovarra.84.t
 		desc = goy_pomovarra.84.d
-		#picture = 
+		picture = GFX_event_gothic_interior
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4770,7 +5125,7 @@
 		id = goy_pomovarra.85
 		title = goy_pomovarra.85.t
 		desc = goy_pomovarra.85.d
-		#picture = 
+		picture = GFX_event_western_griffon_city
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4780,10 +5135,12 @@
 			}
 			every_owned_state = {
 				limit = {
-					state = 380
-					state = 396
-					state = 379
-					state = 381
+					OR = {
+						state = 380
+						state = 396
+						state = 379
+						state = 381
+					}
 				}
 				add_core_of = POM
 				add_dynamic_modifier = { modifier = POM_autonomous_dynmodifier }
@@ -4803,10 +5160,12 @@
 			add_stability = -0.1
 			every_owned_state = {
 				limit = {
-					state = 380
-					state = 396
-					state = 379
-					state = 381
+					OR = {
+						state = 380
+						state = 396
+						state = 379
+						state = 381
+					}
 				}
 				add_core_of = POM
 			}
@@ -4819,17 +5178,21 @@
 			add_political_power = -50
 			every_owned_state = {
 				limit = {
-					state = 380
-					state = 396
-					state = 379
-					state = 381
+					OR = {
+						state = 380
+						state = 396
+						state = 379
+						state = 381
+					}
 				}
 				add_core_of = POM
 			}
 			every_owned_state = {
 				limit = {
-					state = 380
-					state = 381
+					OR = {
+						state = 380
+						state = 381
+					}
 				}
 				add_dynamic_modifier = { modifier = POM_autonomous_dynmodifier }
 			}
@@ -4840,7 +5203,7 @@
 		id = goy_pomovarra.86
 		title = goy_pomovarra.86.t
 		desc = goy_pomovarra.86.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4856,11 +5219,11 @@
 					}
 					add_claim_by = LAK
 				}
-				ROOT = {
+				FROM = {
 					add_to_faction = LAK
 				}
 			}
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.87
 					days = 4
@@ -4872,7 +5235,7 @@
 			ai_chance = {
 				base = 1
 			}
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.88
 					days = 4
@@ -4884,7 +5247,7 @@
 		id = goy_pomovarra.87
 		title = goy_pomovarra.87.t
 		desc = goy_pomovarra.87.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4910,9 +5273,8 @@
 				}
 				ROOT = {
 					create_wargoal = {
-						type = take_state
+						type = annex_everything
 						target = PREV
-						generator = annex_everything
 					}
 				}
 			}
@@ -4923,7 +5285,7 @@
 		id = goy_pomovarra.88
 		title = goy_pomovarra.88.t
 		desc = goy_pomovarra.88.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -4938,7 +5300,7 @@
 		id = goy_pomovarra.89
 		title = goy_pomovarra.89.t
 		desc = goy_pomovarra.89.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4975,7 +5337,7 @@
 		id = goy_pomovarra.90
 		title = goy_pomovarra.90.t
 		desc = goy_pomovarra.90.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -4990,7 +5352,7 @@
 		id = goy_pomovarra.91
 		title = goy_pomovarra.91.t
 		desc = goy_pomovarra.91.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -5008,16 +5370,16 @@
 		id = goy_pomovarra.92
 		title = goy_pomovarra.92.t
 		desc = goy_pomovarra.92.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.92.a #no
 			ai_chance = {
-				base = 1
+				base = 0
 			}
 			add_war_support = 0.05
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.94
 					days = 4
@@ -5027,7 +5389,13 @@
 		option = {
 			name = goy_pomovarra.92.b #yes
 			ai_chance = {
-				base = 9
+				base = 1
+			}
+			trigger = {
+				has_country_leader = {
+					character = JER_cecile_gaudreau
+					ruling_only = yes
+				}
 			}
 			add_stability = -0.1
 			add_political_power = -100
@@ -5038,7 +5406,7 @@
 				}
 			}
 			custom_effect_tooltip = POM_TT_aquileia_end
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.93
 					days = 4
@@ -5050,7 +5418,7 @@
 		id = goy_pomovarra.93
 		title = goy_pomovarra.93.t
 		desc = goy_pomovarra.93.d
-		#picture = 
+		picture = GFX_event_palace_hall
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5058,7 +5426,7 @@
 			ai_chance = {
 				base = 1
 			}
-			add_to_faction = PREV
+			add_to_faction = FROM
 			add_stability = -0.05
 			add_political_power = -100
 			add_popularity = {
@@ -5084,7 +5452,7 @@
 		id = goy_pomovarra.94
 		title = goy_pomovarra.94.t
 		desc = goy_pomovarra.94.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5106,7 +5474,7 @@
 		id = goy_pomovarra.95
 		title = goy_pomovarra.95.t
 		desc = goy_pomovarra.95.d
-		#picture = 
+		picture = GFX_event_medieval_city_2
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5116,21 +5484,22 @@
 			}
 			custom_effect_tooltip = POM_TT_aetia_tree_load
 			set_country_flag = POM_FLAG_camriz_won_DEM_2
-			mark_focus_tree_layout_dirty = yes
 			hidden_effect = {
 				news_event = goy_pomovarra_news.6
+				#complete_national_focus = POM_leave_no_one_behind
 			}
 			country_event = {
 				id = goy_pomovarra.96
 				days = 30
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	country_event = { #new blood
 		id = goy_pomovarra.96
 		title = goy_pomovarra.96.t
 		desc = goy_pomovarra.96.d
-		#picture = 
+		picture = GFX_event_medieval_city_2
 		is_triggered_only = yes
 		fire_only_once = yes
 		immediate = {
@@ -5183,7 +5552,7 @@
 		id = goy_pomovarra.97
 		title = goy_pomovarra.97.t
 		desc = goy_pomovarra.97.d
-		#picture = 
+		picture = GFX_event_vote_griffon
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5233,8 +5602,12 @@
 				GOY_POM_leonard_rodier = {
 					promote_character = ultranationalism
 				}
+				remove_country_leader_role = {
+					character = GOY_POM_political_chair
+					ideology = harmonic_libertarianism
+				}
 				add_country_leader_role = {
-					character = JER_sugar_crepe
+					character = GOY_POM_sugar_crepe
 					country_leader = {
 						ideology = socialism
 						expire = "1965.1.1.1"
@@ -5242,12 +5615,8 @@
 						#desc = 
 					}
 				}
-				remove_country_leader_role = {
-					character = GOY_POM_political_chair
-					ideology = harmonic_libertarianism
-				}
 			}
-			JER_sugar_crepe = {
+			GOY_POM_sugar_crepe = {
 				promote_character = socialism
 			}
 			complete_national_focus = POM_leave_no_one_behind
@@ -5324,7 +5693,7 @@
 		id = goy_pomovarra.98
 		title = goy_pomovarra.98.t
 		desc = goy_pomovarra.98.d
-		#picture = 
+		picture = GFX_event_foggy_forest
 		is_triggered_only = yes
 		fire_only_once = yes
 		immediate = {
@@ -5417,7 +5786,7 @@
 		id = goy_pomovarra.99
 		title = goy_pomovarra.99.t
 		desc = goy_pomovarra.99.d
-		#picture = 
+		picture = GFX_event_pony_soldiers_sunset
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5432,7 +5801,7 @@
 		id = goy_pomovarra.100
 		title = goy_pomovarra.100.t
 		desc = goy_pomovarra.100.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -5465,7 +5834,7 @@
 		id = goy_pomovarra.101
 		title = goy_pomovarra.101.t
 		desc = goy_pomovarra.101.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -5482,7 +5851,7 @@
 		id = goy_pomovarra.102
 		title = goy_pomovarra.102.t
 		desc = goy_pomovarra.102.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -5496,7 +5865,7 @@
 		id = goy_pomovarra.103
 		title = goy_pomovarra.103.t
 		desc = goy_pomovarra.103.d
-		#picture = 
+		picture = GFX_event_medieval_city_ugly_street
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
@@ -5537,19 +5906,22 @@
 			}
 			every_other_country = {
 				limit = {
-					OR = {
-						AND = {
-							owns_state = 75
-							owns_state = 12
-						}
-						AND = {
-							owns_state = 243
-							owns_state = 239
-							owns_state = 222
-						}
+					AND = {
+						owns_state = 75
+						owns_state = 12
 					}
 				}
 				country_event = goy_pomovarra.104
+			}
+			every_other_country = {
+				limit = {
+					AND = {
+						owns_state = 243
+						owns_state = 239
+						owns_state = 222
+					}
+				}
+				country_event = goy_pomovarra.129
 			}
 		}
 	}
@@ -5557,16 +5929,13 @@
 		id = goy_pomovarra.104
 		title = goy_pomovarra.104.t
 		desc = goy_pomovarra.104.d
-		#picture = 
+		picture = GFX_event_griffon_back
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
 			name = goy_pomovarra.104.a
 			ai_chance = {
 				base = 1
-			}
-			trigger = {
-				tag = EQS
 			}
 			add_stability = -0.02
 			add_political_power = -25
@@ -5577,34 +5946,12 @@
 				add_manpower = 100000
 			}
 		}
-		option = {
-			name = goy_pomovarra.104.b
-			ai_chance = {
-				base = 1
-			}
-			trigger = {
-				NOT = {
-					tag = EQS
-				}
-			}
-			add_stability = -0.05
-			add_political_power = -50
-			243 = {
-				add_manpower = 200000
-			}
-			239 = {
-				add_manpower = 200000
-			}
-			222 = {
-				add_manpower = 200000
-			}
-		}
 	}
 	country_event = { #Project Razor
 		id = goy_pomovarra.105
 		title = goy_pomovarra.105.t
 		desc = goy_pomovarra.105.d
-		#picture = 
+		picture = GFX_event_goy_direndall
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5621,7 +5968,7 @@
 		id = goy_pomovarra.106
 		title = goy_pomovarra.106.t
 		desc = goy_pomovarra.106.d
-		#picture = 
+		picture = GFX_event_af23_cultist
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5650,7 +5997,7 @@
 		id = goy_pomovarra.107
 		title = goy_pomovarra.107.t
 		desc = goy_pomovarra.107.d
-		#picture = 
+		picture = GFX_event_goy_megaliths
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5666,7 +6013,7 @@
 		id = goy_pomovarra.108
 		title = goy_pomovarra.108.t
 		desc = goy_pomovarra.108.d
-		#picture = 
+		picture = GFX_event_forest
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5695,7 +6042,7 @@
 		id = goy_pomovarra.109
 		title = goy_pomovarra.109.t
 		desc = goy_pomovarra.109.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5719,7 +6066,7 @@
 		id = goy_pomovarra.110
 		title = goy_pomovarra.110.t
 		desc = goy_pomovarra.110.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5768,7 +6115,7 @@
 		id = goy_pomovarra.111
 		title = goy_pomovarra.111.t
 		desc = goy_pomovarra.111.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5785,7 +6132,7 @@
 		id = goy_pomovarra.112
 		title = goy_pomovarra.112.t
 		desc = goy_pomovarra.112.d
-		#picture = 
+		picture = GFX_event_griffon_para
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5806,7 +6153,7 @@
 		id = goy_pomovarra.113
 		title = goy_pomovarra.113.t
 		desc = goy_pomovarra.113.d
-		#picture = 
+		picture = GFX_event_kiosk
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5820,7 +6167,7 @@
 		id = goy_pomovarra.114
 		title = goy_pomovarra.114.t
 		desc = goy_pomovarra.114.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5828,9 +6175,19 @@
 			ai_chance = {
 				base = 1
 			}
-			country_event = {
-				id = goy_pomovarra.115
-				days = 1
+			effect_tooltip = {
+				FROM = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.115
+					days = 1
+				}
 			}
 		}
 		option = {
@@ -5846,9 +6203,11 @@
 					}
 				}
 			}
-			country_event = {
-				id = goy_pomovarra.116
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.116
+					days = 1
+				}
 			}
 		}
 	}
@@ -5856,7 +6215,7 @@
 		id = goy_pomovarra.115
 		title = goy_pomovarra.115.t
 		desc = goy_pomovarra.115.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5864,13 +6223,17 @@
 			ai_chance = {
 				base = 1
 			}
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
 		}
 	}
 	country_event = { #Tarrin says no
 		id = goy_pomovarra.116
 		title = goy_pomovarra.116.t
 		desc = goy_pomovarra.116.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5888,7 +6251,7 @@
 		id = goy_pomovarra.117
 		title = goy_pomovarra.117.t
 		desc = goy_pomovarra.117.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5906,9 +6269,11 @@
 				}
 				transfer_state_to = FROM
 			}
-			country_event = {
-				id = goy_pomovarra.118
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.118
+					days = 1
+				}
 			}
 		}
 		option = {
@@ -5924,9 +6289,11 @@
 					}
 				}
 			}
-			country_event = {
-				id = goy_pomovarra.119
-				days = 1
+			FROM = {
+				country_event = {
+					id = goy_pomovarra.119
+					days = 1
+				}
 			}
 		}
 	}
@@ -5934,7 +6301,7 @@
 		id = goy_pomovarra.118
 		title = goy_pomovarra.118.t
 		desc = goy_pomovarra.118.d
-		#picture = 
+		picture = GFX_event_griffon_diplomacy
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5962,7 +6329,7 @@
 		id = goy_pomovarra.119
 		title = goy_pomovarra.119.t
 		desc = goy_pomovarra.119.d
-		#picture = 
+		picture = GFX_event_griffon_soldier
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -5980,7 +6347,7 @@
 		id = goy_pomovarra.120
 		title = goy_pomovarra.120.t
 		desc = goy_pomovarra.120.d
-		#picture = 
+		picture = GFX_event_griffinstone_sunset
 		is_triggered_only = yes
 		fire_only_once = yes
 		option = {
@@ -6023,5 +6390,761 @@
 			hidden_effect = {
 				news_event = goy_pomovarra_news.8
 			}
+		}
+	}
+	country_event = { #Impending doom
+		id = goy_pomovarra.121
+		title = goy_pomovarra.121.t
+		desc = goy_pomovarra.121.d
+		picture = GFX_event_griffons_machine_gun
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.121.a
+			custom_effect_tooltip = POM_TT_3_years_left_reiher
+		}
+	}
+	country_event = { #The clock is ticking!
+		id = goy_pomovarra.122
+		title = goy_pomovarra.122.t
+		desc = goy_pomovarra.122.d
+		picture = GFX_event_goy_schattenzahn_problems
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.122.a
+			custom_effect_tooltip = POM_TT_180_days_left_reiher
+		}
+	}
+	country_event = { #Deal with the Colonel
+		id = goy_pomovarra.123
+		title = goy_pomovarra.123.t
+		desc = goy_pomovarra.123.d
+		picture = GFX_event_exu_news
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.123.a
+			add_political_power = 50
+			390 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	country_event = { #The Rila Rebellion
+		id = goy_pomovarra.124
+		title = goy_pomovarra.124.t
+		desc = goy_pomovarra.124.d
+		picture = GFX_event_pony_soldiers
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.124.a
+			435 = {
+				add_manpower = -50000
+				damage_building = { type = industrial_complex damage = 1 }
+				damage_building = { type = infrastructure damage = 1 }
+			}
+			add_stability = -0.02
+			country_event = goy_pomovarra.125
+		}
+	}
+	country_event = { #Emergency Committee Session
+		id = goy_pomovarra.125
+		title = goy_pomovarra.125.t
+		desc = goy_pomovarra.125.d
+		picture = GFX_event_stg_pairlament2
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.125.a
+			country_event = { id = goy_pomovarra.127 days = 14 }
+		}
+	}
+	country_event = { #Saving the Past
+		id = goy_pomovarra.126
+		title = goy_pomovarra.126.t
+		desc = goy_pomovarra.126.d
+		picture = GFX_event_night_and_fog
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.126.a
+		}
+	}
+	country_event = { #Personal Assessment
+		id = goy_pomovarra.127
+		title = goy_pomovarra.127.t
+		desc = goy_pomovarra.127.d
+		picture = GFX_event_goy_bombed_city
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.127.a
+			country_event = goy_pomovarra.130
+		}
+	}
+	country_event = { #Playthings of Fate
+		id = goy_pomovarra.128
+		title = goy_pomovarra.128.t
+		desc = goy_pomovarra.128.d
+		picture = GFX_event_gothic_interior
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.128.a
+		}
+	}
+	country_event = { #Refugee Wave
+		id = goy_pomovarra.129
+		title = goy_pomovarra.129.t
+		desc = goy_pomovarra.129.d
+		picture = GFX_event_griffon_back
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_pomovarra.129.a
+			ai_chance = {
+				base = 1
+			}
+			add_stability = -0.05
+			add_political_power = -50
+			243 = {
+				add_manpower = 200000
+			}
+			239 = {
+				add_manpower = 200000
+			}
+			222 = {
+				add_manpower = 200000
+			}
+		}
+	}
+	country_event = { #In Vino Veritas
+		id = goy_pomovarra.130
+		title = goy_pomovarra.130.t
+		desc = goy_pomovarra.130.d
+		picture = GFX_event_goy_bombed_city
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.130.a
+			hidden_effect = {
+				set_country_flag = GOY_POM_FLAG_ic_campaigns
+			}
+		}
+	}
+	country_event = { #Clashing Destinies
+		id = goy_pomovarra.131
+		title = goy_pomovarra.131.t
+		desc = goy_pomovarra.131.d
+		picture = GFX_event_griffon_diplomacy
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.131.a
+		}
+	}
+	country_event = { #Plots and Plans
+		id = goy_pomovarra.132
+		title = goy_pomovarra.132.t
+		desc = goy_pomovarra.132.d
+		picture = GFX_event_medieval_city
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.132.a
+		}
+	}
+	country_event = { #Conquest of Souls
+		id = goy_pomovarra.133
+		title = goy_pomovarra.133.t
+		desc = goy_pomovarra.133.d
+		picture = GFX_event_palace_hall
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.133.a
+		}
+	}
+	country_event = { #Allard character system fix event
+		id = goy_pomovarra.134
+		title = goy_pomovarra.134.t
+		desc = goy_pomovarra.134.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		hidden = yes
+		immediate = {
+			JER_simon_guilbert = {
+				promote_leader = yes
+			}
+			remove_advisor_role = {
+				character = "JER_simon_guilbert"
+				slot = army_chief
+			}
+			remove_advisor_role = {
+				character = "JER_simon_guilbert"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_cecilia_dutertre"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_sophie_altiert"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_seva_shako"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_eagleheart"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_josette_fierte"
+				slot = high_command
+			}
+			remove_advisor_role = {
+				character = "JER_gunnar_sable"
+				slot = high_command
+			}
+			every_unit_leader = {
+				limit = {
+					has_trait = trait_critical_spirit
+				}
+				remove_advisor_role = {
+					#character = "JER_gabriel_duval"
+					slot = high_command
+				}
+				add_advisor_role = {
+					character = JER_gabriel_duval
+					activate = no
+					advisor = {
+						slot = high_command
+						cost = 50
+						idea_token = ARD_gabriel_duval_idea
+						traits = {
+							army_infantry_1
+						}
+					}
+				}
+			}
+			add_advisor_role = {
+				character = JER_simon_guilbert
+				activate = no
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = ARD_simon_guilbert_idea
+					traits = {
+						army_chief_drill_2
+					}
+				}
+			}
+			add_advisor_role = {
+				character = JER_cecilia_dutertre
+				activate = no
+				advisor = {
+					slot = army_chief
+					cost = 50
+					idea_token = ARD_cecilia_dutertre_idea
+					traits = {
+						army_chief_offensive_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = JER_sophie_altiert
+				activate = no
+				advisor = {
+					slot = high_command
+					cost = 100
+					idea_token = ARD_sophie_altiert_idea
+					traits = {
+						army_armored_2
+					}
+				}
+			}
+			add_advisor_role = {
+				character = JER_eagleheart
+				activate = no
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = ARD_eagleheart_idea
+					traits = {
+						army_commando_1
+					}
+				}
+			}
+			add_advisor_role = {
+				character = JER_gunnar_sable
+				activate = no
+				advisor = {
+					slot = high_command
+					cost = 100
+					idea_token = ARD_gunnar_sable_idea
+					traits = {
+						army_logistics_2
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Vorst tot Vorst Coup
+		id = goy_pomovarra.136
+		title = goy_pomovarra.136.t
+		desc = goy_pomovarra.136.d
+		picture = GFX_event_griffon_soldier
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.136.a
+			ai_chance = { base = 1 }
+			IF = {
+				limit = {
+					has_character = FEA_herman_of_vorst_tot_vorst
+				}
+				add_country_leader_role = {
+					character = FEA_herman_of_vorst_tot_vorst
+					promote_leader = yes
+						country_leader={
+						desc="FEA_vorst_desc"
+						ideology=stratocracy
+						traits={ }
+						expire="1965.1.1.1"
+						id=-1
+					}
+				}
+				hidden_effect = {
+					promote_character = FEA_herman_of_vorst_tot_vorst
+				}
+			}
+			ELSE = {
+				hidden_effect = {
+					POM = {
+						POM_GOY_herman_of_vorst_tot_vorst = {
+							set_nationality = FEA
+						}
+					}
+				}
+				add_country_leader_role = {
+					character = POM_GOY_herman_of_vorst_tot_vorst
+					promote_leader = yes
+						country_leader={
+						desc="FEA_vorst_desc"
+						ideology=stratocracy
+						traits={ }
+						expire="1965.1.1.1"
+						id=-1
+					}
+				}
+				hidden_effect = {
+					promote_character = POM_GOY_herman_of_vorst_tot_vorst
+				}
+			}
+			set_party_name = { ideology = fascism name = FEA_military_junta long_name = FEA_military_junta_long }
+			hidden_effect = {
+				IF = {
+					limit = {
+						NOT = {
+							has_focus_tree = feathisia_focus_fascist_country
+						}
+					}
+					load_focus_tree = feathisia_focus_fascist_country
+				}
+				ELSE = {
+					uncomplete_national_focus = {
+						focus = FEA_oh_god_why
+						uncomplete_children = yes
+						refund_political_power = no
+					}
+					uncomplete_national_focus = {
+						focus = FEA_moldernik_the_leader
+						uncomplete_children = yes
+						refund_political_power = no
+					}
+				}
+				complete_national_focus = FEA_hermans_stratocracy
+			}
+			POM = {
+				country_event = goy_pomovarra.139
+			}
+		}
+		option = {
+			name = goy_pomovarra.136.b
+			ai_chance = { base = 0 }
+			add_stability = -0.2
+			add_war_support = -0.2
+			add_political_power = -100
+			add_timed_idea = {
+				idea = POM_fea_vorst_coup_fallout
+				days = 180
+			}
+			POM = {
+				country_event = {
+					id = goy_pomovarra.140
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Feathisian Uprising
+		id = goy_pomovarra.137
+		title = goy_pomovarra.137.t
+		desc = goy_pomovarra.137.d
+		picture = GFX_event_griffon_soldier
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.137.a
+			ai_chance = { base = 1 }
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_puppet = FEA
+					}
+					annex_country = {
+						target = FEA
+						transfer_troops = no
+					}
+				}
+			}
+			effect_tooltip = {
+				release = FEA
+				POM = {
+					puppet = FEA
+				}
+			}
+			FEA = {
+				IF = {
+					limit = {
+						has_character = FEA_herman_of_vorst_tot_vorst
+					}
+					add_country_leader_role = {
+						character = FEA_herman_of_vorst_tot_vorst
+						promote_leader = yes
+							country_leader={
+							desc="FEA_vorst_desc"
+							ideology=stratocracy
+							traits={ }
+							expire="1965.1.1.1"
+							id=-1
+						}
+					}
+					hidden_effect = {
+						promote_character = FEA_herman_of_vorst_tot_vorst
+					}
+				}
+				ELSE = {
+					hidden_effect = {
+						POM = {
+							POM_GOY_herman_of_vorst_tot_vorst = {
+								set_nationality = FEA
+							}
+						}
+					}
+					add_country_leader_role = {
+						character = POM_GOY_herman_of_vorst_tot_vorst
+						promote_leader = yes
+							country_leader={
+							desc="FEA_vorst_desc"
+							ideology=stratocracy
+							traits={ }
+							expire="1965.1.1.1"
+							id=-1
+						}
+					}
+					hidden_effect = {
+						promote_character = POM_GOY_herman_of_vorst_tot_vorst
+					}
+				}
+				set_party_name = { ideology = fascism name = FEA_military_junta long_name = FEA_military_junta_long }
+				hidden_effect = {
+					IF = {
+						limit = {
+							NOT = {
+								has_focus_tree = feathisia_focus_fascist_country
+							}
+						}
+						load_focus_tree = feathisia_focus_fascist_country
+					}
+					ELSE = {
+						uncomplete_national_focus = {
+							focus = FEA_oh_god_why
+							uncomplete_children = yes
+							refund_political_power = no
+						}
+						uncomplete_national_focus = {
+							focus = FEA_moldernik_the_leader
+							uncomplete_children = yes
+							refund_political_power = no
+						}
+					}
+					unlock_national_focus = FEA_the_fate_of_feathisia
+					complete_national_focus = FEA_hermans_stratocracy
+				}
+			}
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						is_core_of = FEA
+					}
+					transfer_state_to = POM
+				}
+				POM = {
+					IF = {
+						limit = {
+							has_dlc = "La Resistance"
+						}
+						set_temp_variable = { country_to_initiate = FEA }
+						instantiate_collaboration_government = yes
+					}
+					ELSE = {
+						release_puppet = FEA
+					}
+				}
+				FEA = {
+					division_template = {
+						name = "Feathisian National Defence Force"
+						name_group = FEA_Inf_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							artillery_brigade = { x = 3 y = 0 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							recon = { x = 0 y = 2 }
+						}
+					}
+					division_template = {
+						name = "Feathisian National Militia"
+						name_group = FEA_GAR_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					division_template = {
+						name = "Vorst tot Vorst's Finest"
+						name_group = FEA_MONINF_01
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 0 y = 2 }
+							knights = { x = 0 y = 3 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 1 y = 2 }
+							knights = { x = 1 y = 3 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+							signal_company = { x = 0 y = 2 }
+						}
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								OR = {
+									state = 520
+									state = 434
+									state = 441
+									state = 440
+									state = 666
+								}
+							}
+						}
+						create_unit = {
+							division = "division_template = \"Feathisian National Defence Force\" start_experience_factor = 0.5 start_equipment_factor = 1"
+							owner = FEA
+							count = 3
+						}
+						create_unit = {
+							division = "division_template = \"Feathisian National Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+							owner = FEA
+							count = 5
+						}
+						create_unit = {
+							division = "division_template = \"Vorst tot Vorst's Finest\" start_experience_factor = 0.8 start_equipment_factor = 1"
+							owner = FEA
+							count = 1
+						}
+					}
+				}
+			}
+			declare_war_on = {
+				target = FEA
+				type = annex_everything
+			}
+			set_state_controller = 520
+			set_state_controller = 434
+			set_state_controller = 441
+			set_state_controller = 440
+			set_state_controller = 666
+			POM = {
+				country_event = goy_pomovarra.138
+			}
+			hidden_effect = {
+				FEA = {
+					set_politics = {
+						ruling_party = fascism
+						elections_allowed = no
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Feathisian Uprising Succeeded
+		id = goy_pomovarra.138
+		title = goy_pomovarra.138.t
+		desc = goy_pomovarra.138.d
+		picture = GFX_event_griffon_soldier
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.138.a
+			ai_chance = { base = 1 }
+			effect_tooltip = {
+				puppet = {
+					target = FEA
+					end_wars = no
+				}
+				set_autonomy = {
+					target = FEA
+					autonomous_state = autonomy_collaboration_government
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+	country_event = { #Feathisian Coup Succeeded
+		id = goy_pomovarra.139
+		title = goy_pomovarra.139.t
+		desc = goy_pomovarra.139.d
+		picture = GFX_event_griffon_soldier
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.139.a
+			ai_chance = { base = 1 }
+			add_to_faction = FEA
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GRD
+						tag = GRI
+						tag = STW
+						tag = BRZ
+						tag = PYT
+						tag = KAT
+						tag = YAL
+						tag = ANG
+						tag = ROU
+					}
+					exists = yes
+				}
+				FEA = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+				POM = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Feathisian Coup Failed
+		id = goy_pomovarra.140
+		title = goy_pomovarra.140.t
+		desc = goy_pomovarra.140.d
+		picture = GFX_event_griffon_soldier
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.140.a
+			ai_chance = { base = 1 }
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GRD
+						tag = GRI
+						tag = STW
+						tag = BRZ
+						tag = PYT
+						tag = KAT
+						tag = YAL
+						tag = ANG
+						tag = ROU
+					}
+					exists = yes
+				}
+				POM = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	country_event = { #A Simple Offer (Uprising)
+		id = goy_pomovarra.141
+		title = goy_pomovarra.141.t
+		desc = goy_pomovarra.141.d
+		picture = GFX_event_griffon_diplomacy
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.141.a
+			unlock_decision_category_tooltip = POM_riseup_feathisia_category
+		}
+	}
+	country_event = { #A Simple Offer (Coup)
+		id = goy_pomovarra.142
+		title = goy_pomovarra.142.t
+		desc = goy_pomovarra.142.d
+		picture = GFX_event_griffon_diplomacy
+		is_triggered_only = yes
+		fire_only_once = yes
+		option = {
+			name = goy_pomovarra.142.a
+			unlock_decision_category_tooltip = POM_coup_feathisia_category
 		}
 	}

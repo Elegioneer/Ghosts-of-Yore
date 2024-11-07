@@ -1,0 +1,198 @@
+﻿### Names generation for aces ###
+# Surnames can be male/female dependent or general. Fe. in Polish some surnames has different endings depending on the gender.
+# Names and Surnames are randomly picked and will sometimes repeat, but will never repeat in combinations for example there will never be generated another "John Smith".
+# Assigning the callsign is random - may be assigned or not. If we use the callsign, it will never be assigned to anyone again. Callsigns are not obligatory to script.
+# Picking up a gender is random, and is influenced by the amount of names scripted.
+### Operations
+# Operations will randomly pick from national pools until exhausted
+# You can specify a strategic region for which an order name will be drawn
+# if any enemy province along the frontline matches this strategic region, this sub-pool will be considered and used in preference to default. 
+# Whether this 'historical' name pool is exhausted is dependent on the define: HISTORICAL_ORDER_NAME_EXHAUSTION
+# Strategic region index '0' is the generic national pool.
+# You can specify the same name in several regions, though I would suggest not doing this too often, for performance reasons.
+# After this, a first and second will be randomly picked from the default pool
+# The prefix must be provided for all pools
+
+
+
+###############################################################
+# Ghostsofyorely Names
+###############################################################
+
+ARD = {
+	male = {
+		names = {
+			Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
+			Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
+			François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
+			Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
+			Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas
+
+		}
+	}
+	female = {
+		names = { Anne Marie Françoise Gisèle Marguerite Marianne Simone Anaïs Irène Nathalie Elsa }
+	}
+	surnames = {
+		Anthoine "Baraguey d'Hilliers" Bazaine Billot Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
+		Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Castellane" "de Castelnau"
+		"de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
+		Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
+		Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant
+	}
+	callsigns = { "Draco" "Fast" "Sparrow" "Ripper" "Sundance" "Twitch" "Farmer" "Weasel" "Target Practice" "Invisible" "The Mute" "Carpenter" }
+
+	operation = {
+		0 = {
+			o_Hirondelle
+			o_Faucon
+			o_Licorne
+			o_Condor
+			o_Aigle
+			o_Dechainement
+			o_Deferlement
+			o_Tempete
+			o_Lame
+			o_Estoc
+			o_Cannonade
+			o_Vagabon
+			o_Mousquetaire
+			o_Tirreur
+			o_Mercenaire
+			o_Ronce
+			o_Ortie
+			o_Cactus
+			o_Rose
+			o_Chrysantheme
+			o_Crepuscule
+			o_Penombre
+			o_Aurore
+			o_Aube
+		}
+		172 = {
+			o_Chevalier
+			o_Liberation
+		}
+		166 = {
+			o_Reclamation
+			o_Unification
+		}
+		173 = {
+			o_Reclamation
+			o_Unification
+		}
+		157 = {
+			o_Reclamation
+			o_Unification
+		}
+		155 = {
+			o_Reclamation
+			o_Unification
+		}
+		164 = {
+			o_Seconde
+			o_Destinee
+			o_Apogee
+		}
+	}
+}
+HRR = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl Chiron
+			Ancietus Reinhold August Elias Harald Eggert Konrad Fritz Cornelius Erhard Horstn Herbert Rolf
+			Wilhelm Erwin Wolfgang Kalus Friedrich Rikard Siegfried Gustav Heinrich Waldemar Theodor Ludwig 
+			Oskar Ferdinand Albrecht Reinhardt Strom
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie Iris Elsa Victoria Karin Ingrid Margarethe Edith Erna Mia Theresa
+		Pauline Louisa Luoise Clara Sara Karja Eva Sophie Carla Gretchen Kathrine Heidi Lorelei Regitze Ilsa Wilhelmina 
+		Ulrike Sieglinde Wanda Ulla Ingeborg Charlotte Hedwig Irene Rita Anne Elsbeth Elisabeth Rosa Sonja Barbara Brunhilde
+		}
+	}
+	surnames = {
+		Greytalon Mistfeather Stormfeather Raincrest Hellcrest Bronzetail Thundertail Mudbeak Helltalon Duskwing
+		Darkclaw Grimwing Grimclaw Hardbeak Silverplume Beamclaw Stormborn Goldplume Whitefeather Starbill
+		Sunclaw Rainfeather Rockbeak Bluebeak Silverwing Blackfeather Sterbenclaw Windwing Lighttalon Sunwing
+	}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Golden Knight Of Griffonia" "Dolfo" "Fighter of Griffenheim" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red Knight" "Reeste" }
+
+	prefix = o_unternehmen
+	operation = {
+		0 = {
+			o_ostwind
+            o_fuchsjagd
+            o_dorffest
+            o_freiherr
+            o_heimfahrt
+            o_hasenjagd
+            o_jahreswechsel
+            o_mondschein
+            o_neuland
+            o_ruckreise
+            o_vogelsang
+            o_winkel
+            o_nordpol
+            o_orkan
+            o_raubtier
+            o_storfang
+            o_taubenschlag
+            o_trappenjagd
+            o_wiesengrund
+            o_wintermarchen
+            o_eisbar
+            o_leopard
+            o_michael
+            o_poseidon
+            o_zwischenspiel
+            o_blume
+            o_fischfang
+            o_herbstnebel
+            o_ludwig
+            o_luttich
+            o_martin
+            o_morgenwind
+            o_sonnenaufgang
+            o_konrad
+            o_moorbrand 
+            o_bruckenschlag
+            o_schneeman
+            o_sonnenwende
+            o_haifisch
+            o_nordwind
+            o_sturmflut
+            o_Kaiserreich
+			o_Ruckkehr
+			o_Grover
+			o_Falke
+			o_Arcturius
+			o_Ubermacht
+			o_Donnerschlag
+			o_Eifrigkeit
+		}
+		159 = {
+			o_Kemerskai
+			o_Hochverrat
+		}
+		167 = {
+			o_Sudwind
+			o_Karthinien
+		}
+		154 = {
+			o_Aquileia
+			o_Discret
+		}
+	}
+}
+POM = {
+	male = {
+		names = { Kaourintin Erwan Ewen Herve Jodoc Judikael Loïc Mael Mikaël Morvan Rónán Serj Yann Yannick Gaël Armel Arzhel Deniel Elouan Frañsez Gwendal Gwilherm Hoel }
+	}
+	female = {
+		names = { Enora Gwen Maëlys Annaig Annick Frañseza Gaëlle Maiwenn Nolwenn Oanez Rozenn Yanna Katell }
+	}
+	surnames = { Abgrall Artus Auffray Brthou Botrel Bourgault Gallou Guégan Guillou Guiomar Hamon Himault Huon Kerbrat Kirouac "Le Pen" "Le Hénaff" Mahé Mervin Prima Quemener Rault Riou Rouault Savidan Tanguy Trahan }
+	callsigns = { "Ankou" "Bugul Noz" "Korrigan" "Morgen" "Pomazhonner" "Merour" "Boled" "Muenn" "Sibl" "Dube" "Kantreer" "Muntrer"}
+	use_geographical_default_operation_names = yes
+}

@@ -33,85 +33,195 @@
 POM_goy_INF_01 = { 
 	name = "Mercenary Infantry Division" 
 
-	for_countries = { ARA } 
+	for_countries = { POM } 
 
-	can_use = { always = yes } 
+	can_use = { NOT = { has_country_flag = POM_FLAG_rebel_companies } } #sorry for bad performance :P
 
 	division_types = { "infantry" } 
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ARA_INF_01 } 
 
-	fallback_name = "%d. Infantry Division" 
+	fallback_name = "%d. Infanterie-Division" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = { 
-		1 = { "%d. Infantry Division 'Pomazhon'" }
+		1 = { "%d. Division 'Reiher'" }
+		2 = { "%d. Division 'Prinz-Oberst'" }
+		3 = { "%d. Division 'Mutige'" }
+		4 = { "%d. Division 'Schreier'" }
+		5 = { "%d. Division 'Kralle'" }
+		6 = { "%d. Division 'Klaue'" }
+		7 = { "%d. Division 'Münzwerfer'" }
+		8 = { "%d. Division 'Glücklich'" }
+		9 = { "%d. Division 'Zahn'" }
+		10 = { "%d. Division 'Vorhut'" }
+		11 = { "%d. Division 'Witzbold'" }
+		12 = { "%d. Division 'Eulenspiegel'" }
+	} 
+}
+
+POM_goy_KNI_01 = { 
+	name = "Princely Knights Brigade" 
+
+	for_countries = { POM } 
+
+	can_use = { NOT = { has_country_flag = POM_FLAG_rebel_companies } } #sorry for bad performance :P
+
+	division_types = { "knights" } 
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { ARA_INF_01 } 
+
+	fallback_name = "%d. Flieger-Brigade" 
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "Princely Guard" }
+		2 = { "Errant Knights" }
+		3 = { "Raubittiers" }
+		4 = { "Black Knights" }
+		5 = { "Oathbreakers" }
+		6 = { "Stormknights" }
 	} 
 }
 
 POM_goy_INF_02 = { 
 	name = "Native Infantry Division" 
 
-	for_countries = { ARA } 
+	for_countries = { POM } 
 
-	can_use = { always = yes } 
+	can_use = { has_country_flag = POM_FLAG_rebel_companies } #sorry for bad performance :P
 
 	division_types = { "infantry" } 
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ARA_INF_01 } 
 
-	fallback_name = "%d. Infantry Division" 
+	fallback_name = "%d. Troadegiezh Divizion" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = { 
-		1 = { "%d. Infantry Division 'Pomazhon'" }
+		1 = { "%d. Divizion 'Pomazhon'" }
+		2 = { "%d. Divizion 'Cervys'" }
+		3 = { "%d. Divizion 'Cam'" }
+		4 = { "%d. Divizion 'Torzh'" }
+		5 = { "%d. Divizion 'Kleze'" }
+		6 = { "%d. Divizion 'Bloodied Lilly'" }
+		7 = { "%d. Divizion 'Reclaimers'" }
+		8 = { "%d. Divizion 'Uthr'" }
+		9 = { "%d. Divizion 'Arzhur'" }
+		10 = { "%d. Divizion 'Modoc'" }
+		11 = { "%d. Divizion 'Dent'" }
+		12 = { "%d. Divizion 'Painted Griffs'" }
+		13 = { "%d. Divizion 'Green and White'" }
+		14 = { "%d. Divizion 'Boars'" }
+		15 = { "%d. Divizion 'Wild Dogs'" }
+		16 = { "%d. Divizion 'Chainbreakers'" }
+		17 = { "%d. Divizion 'Liberators'" }
+		18 = { "%d. Divizion 'Alarc'h'" }
+		19 = { "%d. Divizion 'Villistel'" }
+		20 = { "%d. Divizion 'Nidneuf'" }
+		21 = { "%d. Divizion 'Touta'" }
+		22 = { "%d. Divizion 'Victors'" }
 	} 
 }
 
-POM_goy_KNI_01 = { 
-	name = "Knights Brigade" 
+POM_goy_KNI_02 = { 
+	name = "Knightly Order" 
 
-	for_countries = { ARA } 
+	for_countries = { POM } 
 
-	can_use = { always = yes } 
+	can_use = { has_country_flag = POM_FLAG_rebel_companies } #sorry for bad performance :P
 
-	division_types = { "infantry" } 
+	division_types = { "knights" } 
 
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { ARA_INF_01 } 
 
-	fallback_name = "%d. Knights Brigade" 
+	fallback_name = "%d. Urzh an Marc'hegien" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	unordered = { 
-		1 = { "The Endless March" }
+		1 = { "Urzh an Arktur" }
+		2 = { "Marc'hegien an Pomazhon" }
+		3 = { "Clan Guard" }
+		4 = { "Silver Order of Pomovarra" }
+		5 = { "Knights of the Reborn Realm" }
+		6 = { "Order of the Broken Blade" }
+		7 = { "Knights of Eternal Vigil" }
+		8 = { "Sworn Brothers of Cam" }
+		9 = { "Kindred Knights" }
+		10 = { "Clan Greatswords" }
+		11 = { "Order of the Ashen Banner" }
+		12 = { "Order of the Swan" }
 	} 
 }
 
 POM_goy_GAR_01 = { 
 	name = "Garrison Brigade" 
 
-	for_countries = { ARA } 
-
-	can_use = { has_completed_focus = ARA_work_camps } 
+	for_countries = { POM } 
 
 	division_types = { "infantry" } 
 
 	# Number reservation system will tie to another group.
-	link_numbering_with = { ARA_INF_01 } 
+	#link_numbering_with = { ARA_INF_01 } 
 
-	fallback_name = "%d. Cohort Poenalis" 
+	fallback_name = "%d. Regional Garrison" 
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = { 
-		1 = { "%d. Garrison Brigade" }
-		2 = { "%d. Garrison Brigade" }
-		3 = { "%d. Garrison Brigade" }
+		1 = { "%d. Regional Garrison" }
 	} 
+}
+
+POM_ARM_01 = { 
+	name = "Tank Division"
+
+	for_countries = { POM }
+
+	can_use = { NOT = { has_country_flag = POM_FLAG_rebel_companies } } #sorry for bad performance :P
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Panzer-Division"
+
+	# Names with numbers (only one number per entry)
+	ordered = { 
+		1 = { "%d. Panzer-Division 'Lachender Totenkopf'" }
+		2 = { "%d. Panzer-Division 'Räder und Bajonette'" }
+		3 = { "%d. Panzer-Division 'Höllenreiter'" }
+		4 = { "%d. Panzer-Division 'Kriegsbringer'" }
+		5 = { "%d. Panzer-Division 'Aderlass'" }
+		6 = { "%d. Panzer-Division 'Feuerspucker'" }
+	}
+}
+
+POM_ARM_02 = { 
+	name = "Native Tank Division"
+
+	for_countries = { POM }
+
+	can_use = { has_country_flag = POM_FLAG_rebel_companies } #sorry for bad performance :P
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Tankoù Divizion"
+
+	# Names with numbers (only one number per entry)
+	ordered = { 
+		1 = { "%d. Tankoù Divizion 'Direndall'" }
+		2 = { "%d. Tankoù Divizion 'Broken Sword'" }
+		3 = { "%d. Tankoù Divizion 'Charred'" }
+		4 = { "%d. Tankoù Divizion 'Toranos'" }
+		5 = { "%d. Tankoù Divizion 'Unbroken'" }
+		6 = { "%d. Tankoù Divizion 'Greatshield'" }
+		7 = { "%d. Tankoù Divizion 'Claymore'" }
+	}
 }

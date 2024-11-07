@@ -1,5 +1,39 @@
+POM_coup_feathisia_category = {
+    icon = GFX_decision_category_usa_intervention_mandate
+	allowed = {
+		original_tag = POM
+	}
+	visible = {
+		hidden_trigger = {
+			has_completed_focus = POM_honour_the_deal
+			FEA = {
+				NOT = {
+					has_government = fascism
+				}
+				exists = yes
+			}
+		}
+	}
+}
+POM_riseup_feathisia_category = {
+    icon = GFX_decision_helmet2
+	allowed = {
+		original_tag = POM
+	}
+	visible = {
+		hidden_trigger = {
+			has_completed_focus = POM_honour_the_deal
+			FEA = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+		}
+	}
+}
 POM_pegasus_upgrade_category = {
-    icon = GFX_decision_category_generic_propaganda
+    icon = GFX_decision_pegasus_wing
 	allowed = {
 		original_tag = POM
 	}
@@ -10,7 +44,7 @@ POM_pegasus_upgrade_category = {
 	}
 }
 POM_arcturius_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_generic_industry
 	allowed = {
         tag = POM
     }
@@ -20,7 +54,7 @@ POM_arcturius_cat = {
 	}
 }
 POM_mines_expansion_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_generic_prospect_for_resources
 	allowed = {
         tag = POM
     }
@@ -30,7 +64,7 @@ POM_mines_expansion_cat = {
 	}
 }
 POM_goy_blackmarket_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_generic_arms_trade
 	allowed = {
         tag = POM
     }
@@ -41,18 +75,18 @@ POM_goy_blackmarket_cat = {
 	}
 }
 POM_goy_industrial_plans_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_SOV_merge_designers
 	allowed = {
-        tag = POM
+        tag = ARD
     }
 	visible = {
-	    tag = POM
+	    tag = ARD
 		has_government = communism
 		has_country_flag = POM_allowed_indplans_flag
 	}
 }
 POM_goy_mercs_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_army_reform
 	allowed = {
         tag = POM
     }
@@ -62,7 +96,7 @@ POM_goy_mercs_cat = {
 	}
 }
 POM_goy_growing_instability_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_clock_decision
 	allowed = {
         tag = POM
     }
@@ -73,7 +107,7 @@ POM_goy_growing_instability_cat = {
 	}
 }
 POM_goy_expand_transport_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_railroad
 	allowed = {
         tag = POM
     }
@@ -83,7 +117,7 @@ POM_goy_expand_transport_cat = {
 	}
 }
 POM_goy_aet_dev_scheme_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_SWI_imperial_council
 	allowed = {
         tag = POM
     }
@@ -93,7 +127,7 @@ POM_goy_aet_dev_scheme_cat = {
 	}
 }
 POM_goy_expand_league_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_generic_democracy
 	allowed = {
         tag = POM
     }
@@ -113,7 +147,7 @@ POM_goy_pomovarrisation_cat = {
 	}
 }
 POM_goy_secrets_of_old_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_hyperborea
 	allowed = {
         tag = POM
     }
@@ -123,7 +157,7 @@ POM_goy_secrets_of_old_cat = {
 	}
 }
 POM_goy_ritual_magic_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_generic_magic
 	allowed = {
         tag = POM
     }
@@ -143,12 +177,30 @@ POM_goy_integrate_outer_provs_cat = {
 	}
 }
 POM_goy_establishing_dominions_cat = {
-    icon = GFX_decision_caticon_princess
+    icon = GFX_decision_category_form_griffon_empire
 	allowed = {
         tag = POM
     }
 	visible = {
 	    tag = POM
 		has_completed_focus = POM_griffonian_dominions
+	}
+}
+POM_goy_reclaim_the_colony_cat = {
+	icon = GFX_decision_category_generic_communism
+	allowed = {
+        tag = ARD
+    }
+	visible = {
+	    tag = ARD
+		has_government = communism
+		has_completed_focus = POM_liberators_of_the_world
+		MER = {
+			any_core_state = {
+				NOT = {
+					is_owned_by = ROOT
+				}
+			}
+		}
 	}
 }

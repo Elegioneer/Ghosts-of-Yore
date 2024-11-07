@@ -62,20 +62,20 @@ bookmarks = {
 		#		FAT_the_iron_marshal
 		#	}
 		#}
-		"RCT"={
-			history = "RCT_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				RCT_city_of_three_rivers
-				RCT_unstable_government
-				RIV_member_state
-			}
-			focuses = {
-				RCT_equestria_of_the_east
-				RCT_phoenix_programme
-				RCT_fabian_strategy
-			}
-		}
+		#"RCT"={
+		#	history = "RCT_GATHERING_STORM_DESC"
+		#	ideology = democratic
+		#	ideas = {
+		#		RCT_city_of_three_rivers
+		#		RCT_unstable_government
+		#		RIV_member_state
+		#	}
+		#	focuses = {
+		#		RCT_equestria_of_the_east
+		#		RCT_phoenix_programme
+		#		RCT_fabian_strategy
+		#	}
+		#}
 		#"TRD"={
 		#	history = "TRD_GATHERING_STORM_DESC"
 		#	ideology = neutrality
@@ -141,9 +141,9 @@ bookmarks = {
 			history = "NTR_GATHERING_STORM_DESC1"
 			ideology = democratic
 			ideas = {
-			NTR_war_north	
-			NTR_divided_clans	
-			NTR_warriors_of_blizzard	
+				NTR_war_north	
+				NTR_divided_clans	
+				NTR_warriors_of_blizzard	
 			}
 			focuses = {
 				NTR_times_changing
@@ -151,6 +151,21 @@ bookmarks = {
 				NTR_follow_old
 			}
 		}
+		"POM"={
+		 	#minor = yes		
+			history = "POM_GATHERING_STORM_DESC1"
+			ideology = fascism
+			ideas = {
+				POM_pomovarran_uprising
+				POM_warlord_government
+				POM_flowenian_chokepoint
+			}
+			focuses = {
+				POM_rogue_prince
+				POM_our_glorious_past
+				POM_our_past_and_future
+			}
+		}		
 
 
 		# minors ####

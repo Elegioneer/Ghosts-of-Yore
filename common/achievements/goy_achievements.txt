@@ -159,6 +159,181 @@ goy_ach_gigantomachy = {
 		has_war_with = WNG
     }    
 }
+goy_ach_bahwere = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = POM
+    }
+    
+    happened = {
+		has_country_flag = FLAG_GOY_bahwere_ach
+    }    
+}
+goy_ach_dream_of_a_better_griffonia = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = POM
+    }
+    
+    happened = {
+		has_completed_focus = POM_all_griffons_can_dream
+		all_state = {
+			OR = {
+				NOT = {
+					is_on_continent = asia
+				}
+				is_owned_by = ROOT
+			}
+		}
+    }    
+}
+goy_ach_hyperfocused_warlord = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = POM
+    }
+    
+    happened = {
+		has_completed_focus = POM_price_of_a_nation
+		NOT = {
+			has_completed_focus = POM_raid_westkeep
+			has_completed_focus = POM_collect_scraps
+			has_completed_focus = POM_expand_black_market
+			has_completed_focus = POM_keep_bureaucracy
+			has_completed_focus = POM_flowenian_recruits
+			has_completed_focus = POM_hostile_takeover
+			has_completed_focus = POM_bounty_of_greifwald
+			has_completed_focus = POM_friends_in_fezara
+		}
+    }    
+}
+goy_ach_o_captain = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = POM
+    }
+    
+    happened = {
+		has_completed_focus = POM_death_of_allard
+    }    
+}
+goy_ach_beach_episode = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = POM
+    }
+    
+    happened = {
+		has_completed_focus = POM_LM_retired_for_good
+    }    
+}
+goy_ach_false_flag_operation = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = BOI
+    }
+    
+    happened = {
+		has_country_flag = GOY_FLAG_falseflag_ach
+		custom_trigger_tooltip = {
+			tooltip = GOY_BOI_TT_donations_ach
+			check_variable = {
+				GOY_guns_for_elf_var > 4
+			}
+			check_variable = {
+				GOY_supt_for_elf_var > 4
+			}
+			check_variable = {
+				GOY_arty_for_elf_var > 4
+			}
+			check_variable = {
+				GOY_tank_for_elf_var > 4
+			}
+			check_variable = {
+				GOY_figt_for_elf_var > 4
+			}
+			check_variable = {
+				GOY_cass_for_elf_var > 4
+			}
+		}
+    }    
+}
+goy_ach_trail_of_destruction = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = ARA
+    }
+    
+    happened = {
+		all_other_country = {
+			OR = {
+				is_major = no
+				NOT = {
+					is_on_continent = asia
+				}
+			}
+		}
+		has_completed_focus = ARA_exile_minotaurs
+		has_completed_focus = ARA_cleanse_our_lands
+		has_completed_focus = ARA_shackle_sicameon
+    }    
+}
+goy_ach_queenmaker = {
+    possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		#
+		original_tag = BOI
+    }
+    
+    happened = {
+		#todo validate if works
+		has_idea = BOI_cyrille_I
+		has_completed_focus = BOI_claim_the_borderlands
+		custom_trigger_tooltip = {
+			tooltip = GOY_BOI_TT_no_cores_ach
+			check_variable = { BOI_potential_cores^0 = 0 }
+		}
+    }    
+}
 #goy_ach_maars_mind_tricks = { #semi-impossible because Gallus has to defeat Doro to get his (real) idol
 #    possible = {
 #        # classic triggers used in all vanilla achievements

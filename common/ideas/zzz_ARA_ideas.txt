@@ -4135,8 +4135,14 @@ country = {
 				production_speed_arms_factory_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_infrastructure_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.05
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+			}
+			research_bonus = {
+				industry = 0.03
+				electronics = 0.025
 			}
 			
 			allowed_to_remove = {

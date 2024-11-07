@@ -124,7 +124,9 @@ leader_traits = {
 			factor = 2
 
 			modifier = {
-				FROM = NOT = {{ tag = NTR }}
+				FROM = {
+					NOT = { tag = NTR }
+				}
 				factor = 0
 			}
 		}

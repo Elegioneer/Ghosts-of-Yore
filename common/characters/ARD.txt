@@ -1,0 +1,894 @@
+characters={
+	#	Leaders
+	ARD_leonard_rodier={
+		name="JER_char_rodier"
+		portraits={
+			army={
+				small="GFX_idea_JER_Leonard_Rodier"
+			}
+			civilian={
+				large="gfx/leaders/JER/Maxon.tga"
+			}
+		}
+		country_leader={
+			desc="JER_POLITICS_RODIER_DESC"
+			ideology=ultranationalism
+			traits={ JER_marshal }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ARD_theodore_verany={
+		name="JER_char_verany"
+		portraits={
+			civilian={
+				large="gfx/leaders/JER/DemocraticLeader.tga"
+			}
+		}
+		country_leader={
+			desc="JER_POLITICS_VERANY_DESC"
+			ideology=liberalism
+			traits={ JER_verany_trait }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ARD_victor_allard={
+		name="JER_char_allard"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/GOY_allard.tga"
+			}
+		}
+		country_leader={
+			desc="ARD_allard_desc"
+			ideology=stalinism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ARD_comite_de_salut={
+		name="ARD_comite_de_salut"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/GOY_comite_de_salut.tga"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=stalinism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ARD_gabriel_duval = {
+		name="JER_char_duval"
+		portraits={
+			civilian={
+				large="gfx/leaders/JER/Gabriel_Ostwind.tga"
+				small="GFX_idea_JER_Gabriel_Duval"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=khakistocracy
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ARD_the_peoples_assemblee={
+		name="ARD_char_assemblee"
+		portraits={
+			civilian={
+				large="gfx/leaders/JER/PeoplesAssemble.tga"
+			}
+		}
+	}
+	#Military
+	
+	### Harmonist Advisors ###
+	ARD_advisor_7 = {
+		name = "JER_advisor_7"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_pony_land_male_2_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_7
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				captain_of_industry
+			}
+		}
+	}
+	ARD_advisor_8 = {
+		name = "JER_advisor_8"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_pony_female_C" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_8
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				friendly_priest
+			}
+		}
+		gender = female
+	}
+	ARD_advisor_9 = {
+		name = "JER_advisor_9"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_D" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_9
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				linchpin_of_infrastructure
+			}
+		}
+	}
+	ARD_advisor_10 = {
+		name = "JER_advisor_10"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_B" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_10
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				dealbroker
+			}
+		}
+	}
+	ARD_advisor_11 = {
+		name = "JER_advisor_11"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_griffon_land_male_3_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_11
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				welfare_reformer
+			}
+		}
+	}
+	ARD_advisor_12 = {
+		name = "JER_advisor_12"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_A" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_12
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = democratic
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				revolutionary_intellectual
+			}
+		}
+	}
+	### Socialist Advisors ###
+	ARD_advisor_lambert = {
+		name = "ARD_advisor_lambert"
+		portraits={
+			civilian = { small = "GFX_idea_FEA_advisor_8" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_lambert
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				GOY_chairgriffon_gb
+			}
+		}
+	}
+	ARD_advisor_13 = {
+		name = "JER_advisor_13"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_pony_female_B" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_13
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = fascism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				backroom_backstabber
+			}
+		}
+		gender = female
+	}
+	ARD_advisor_14 = {
+		name = "JER_advisor_14"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_griffon_land_male_1_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_14
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				ambitious_union_boss_2
+			}
+		}
+	}
+	ARD_advisor_15 = {
+		name = "JER_advisor_15"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_A" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_15
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				technocrat
+			}
+		}
+	}
+	ARD_advisor_16 = {
+		name = "JER_advisor_16"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_D" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_16
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				financial_expert
+			}
+		}
+	}
+	#ARD_advisor_17 = {
+	#	name = "JER_advisor_17"
+	#	portraits={
+	#		civilian = { small = "GFX_portrait_aquileian_generic_griffon_land_male_3_small" }
+	#	}
+	#	advisor = {
+	#		slot = political_advisor 
+	#		idea_token = ARD_advisor_idea_17
+	#		cost = 150
+	#		allowed = {
+	#			original_tag = ARD
+	#		}
+	#		visible = {
+	#			has_government = communism
+	#		}
+	#		ai_will_do = {
+	#			factor = 1
+	#		}
+	#		traits = { 
+	#			silent_workgriffon1
+	#		}
+	#	}
+	#}
+	ARD_advisor_18 = {
+		name = "JER_advisor_18"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_pony_female_B" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_18
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				rural_populist
+			}
+		}
+		gender = female
+	}
+	### Supremacist Advisors ###
+	ARD_advisor_25 = {
+		name = "JER_advisor_25"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_pony_land_male_1_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_25
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				prince_of_terror
+			}
+		}
+	}
+	ARD_advisor_26 = {
+		name = "JER_advisor_26"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_griffon_land_male_2_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_26
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				silent_workgriffon1
+			}
+		}
+	}
+	ARD_advisor_27 = {
+		name = "JER_advisor_27"
+		portraits={
+			civilian = { small = "GFX_portrait_aquileian_generic_griffon_land_male_1_small" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_27
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				war_industrialist
+			}
+		}
+	}
+	ARD_advisor_28 = {
+		name = "JER_advisor_28"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_pony_female_B" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_28
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				propaganda_master
+			}
+		}
+		gender = female
+	}
+	ARD_advisor_29 = {
+		name = "JER_advisor_29"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_C" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_29
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				occultist
+			}
+		}
+	}
+	ARD_advisor_30 = {
+		name = "JER_advisor_30"
+		portraits={
+			civilian = { small = "GFX_idea_JER_generic_advisor_griffon_male_A" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_30
+			cost = 125
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				controversial_writer
+			}
+		}
+	}
+	### Generic ###
+	ARD_jeanne = {
+		name = "JER_jeanne"
+		portraits={
+			civilian = { small = "GFX_idea_JER_Jeanne" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = JER_jeanne
+			cost = 125
+			allowed = {
+				original_tag = ARD
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				JER_kindly_enigma 
+			}
+		}
+		gender = female
+	}
+	ARD_jeanne_lar = {
+		name = "JER_jeanne_lar"
+		portraits={
+			civilian = { small = "GFX_idea_JER_Jeanne" }
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = JER_jeanne_lar
+			cost = 125
+			allowed = {
+				original_tag = ARD
+				has_dlc = "La Resistance"
+			}
+			traits = { 
+				JER_kindly_enigma_lar 
+			}
+		}
+		gender = female
+	}
+	### Air Chiefs ###
+	ARD_renaud = {
+		name = "renaud"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_Renaud"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = renaud
+			cost = 50
+			allowed = {
+				original_tag = ARD
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { air_chief_old_guard air_air_superiority_1 }
+		}
+	}
+	ARD_severine = {
+		name = "severine"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_generic_advisor_pony_female_C"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = severine
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { air_chief_ground_support_2 }
+		}
+		gender = female
+	}
+	ARD_elric = {
+		name = "elric"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_generic_advisor_griffon_male_A"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = elric
+			cost = 50
+			allowed = {
+				original_tag = ARD
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { alt_air_strategic_bombing_1 }
+		}
+	}
+	### Navy Chiefs ###
+	ARD_albert_navy = {
+		name = "albert"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_Albert"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = albert
+			cost = 50
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { navy_chief_commerce_raiding_1 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ARD_gunther = {
+		name = "gunther"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_Gunther"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = gunther
+			cost = 50
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { navy_chief_naval_aviation_1 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ARD_edmond = {
+		name = "edmond"
+		portraits = {
+			army = {
+				small = "GFX_portrait_aquileian_generic_pony_land_male_1_small"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = edmond
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { alt_navy_submarine_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	ARD_xavier={
+		name=xavier
+		portraits={
+			civilian={
+				small="GFX_idea_JER_Xavier"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = xavier
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { navy_chief_decisive_battle_2 }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	### Theorists ###
+	ARD_adrian = {
+		name = "adrian"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_Adrian"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = army
+			idea_token = adrian
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { military_theorist }
+		}
+	}
+	ARD_axel = {
+		name = "axel"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_chill"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = air
+			idea_token = axel
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { air_warfare_theorist }
+		}
+	}
+	ARD_herwing = {
+		name = "herwing"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_grey"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = navy 
+			idea_token = herwing
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			traits = { naval_theorist }
+		}
+	}
+	ARD_nuke_boi = {
+		name = "nuke_boi"
+		portraits = {
+			army = {
+				small = "GFX_idea_generic_griffon_nuclear_scientist"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = army
+			idea_token = nuke_boi
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			research_bonus = {
+				nuclear = 0.15
+			}
+			traits = { nuclear_scientist }
+		}
+	}
+	ARD_rocket_boi = {
+		name = "rocket_boi"
+		portraits = {
+			army = {
+				small = "GFX_idea_JER_Emilie_Robineau"
+			}
+		}
+		advisor = {
+			slot = theorist
+			ledger = air
+			idea_token = rocket_boi
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			research_bonus = {
+				rocketry = 0.15
+			}
+			traits = { rocket_scientist }
+		}
+		gender = female
+	}
+	### Archons ###
+	ARD_archon_boreas = {
+		name = "JER_archon_boreas"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JER_archon_boreas
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				archon_boreas 
+			}
+		}
+	}
+	ARD_archon_arcturius = {
+		name = "JER_archon_arcturius"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor_griffon"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = JER_archon_arcturius
+			cost = 150
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				archon_arcturius 
+			}
+		}
+	}
+}

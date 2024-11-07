@@ -5166,7 +5166,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
-		    custom_effect_tooltip = ARA_CETT_puppet_show
+		    unlock_decision_category_tooltip = ARA_puppet_show_cat
 		}
 	}
 	shared_focus = {

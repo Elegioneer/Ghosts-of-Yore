@@ -20,6 +20,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/BOI_motorized_rocket_unit.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_BOI_armored_car1_medium"
+		texturefile = "gfx/interface/technologies/BOI_armored_car_equipment_1.dds"
+	}
+	
 	spriteType = {
 		name = "GFX_GOY_steam_engines_tech_medium"
 		texturefile = "gfx/interface/equipmentdesigner/naval/modules/icons/GOY_steam_engine_icn.dds"
@@ -201,5 +206,85 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_POM_motorized_rocket_unit_medium"
 		texturefile = "gfx/interface/technologies/POM_motorized_rocket_unit.dds"
+	}
+	
+	#POM - ALLARD
+	
+	SpriteType = {
+		name = "GFX_ARD_pre_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/artillery_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_goy_aquileia_2d_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_2d_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_2d_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_2d_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/JER_magical_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/JER_magical_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_tech_trucks_medium"
+		texturefile = "gfx/interface/technologies/FRA_motorized_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_motorized_equipment_0_medium"
+		texturefile = "gfx/interface/technologies/FRA_motorized_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/JER_moto_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_motorized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/JER_moto_equipment.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ARD_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/JER_mech_inf.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARD_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/JER_mech_inf.dds"
 	}
 }

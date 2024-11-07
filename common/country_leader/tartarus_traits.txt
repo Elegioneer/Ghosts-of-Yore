@@ -391,7 +391,8 @@ leader_traits = {
 	GOY_old_believer_trait = {
 		random = no
 		stability_factor = 0.1
-		fascism_drift = 0.01
+		monthly_population = 0.1
+		weekly_manpower = 200
 	}
 	GOY_talented_organiser_trait = {
 		random = no
@@ -426,5 +427,110 @@ leader_traits = {
 	GOY_trait_prince_colonel = {
 		random = no
 		political_power_cost = -0.5
+	}
+	GOY_flowenian_banker_trait = {
+		random = no
+		consumer_goods_factor = -0.1
+		political_power_gain = 0.1
+		stability_factor = -0.05
+	}
+	GOY_chairgriffon_gb = {
+		random = no
+		political_power_factor = 0.1
+		resistance_damage_to_garrison = -0.25
+		drift_defence_factor = 0.5
+	}
+	GOY_industrial_consortium_trait = {
+	    random = no
+	}
+	GOY_extraction_monopolist_trait = {
+	    random = no
+	}
+	GOY_merc_liason_trait = {
+	    random = no
+		weekly_manpower = 500
+	}
+	GOY_tax_collector_trait = {
+	    random = no
+		industrial_capacity_factory = 0.1
+		consumer_goods_factor = -0.1
+		stability_weekly = -0.001
+	}
+	GOY_garrison_inspector_trait = {
+	    random = no
+		production_speed_bunker_factor = 0.2
+		land_bunker_effectiveness_factor = 0.1
+	}
+	GOY_acquisitioner_trait = {
+	    random = no
+		equipment_capture_factor = 0.25
+		equipment_conversion_speed = 0.2
+		base_fuel_gain = 200
+	}
+	GOY_nat_firebrand_trait = {
+	    random = no
+		conscription_factor = 0.1
+		offensive_war_stability_factor = 0.2
+		war_support_factor = 0.1
+	}
+	GOY_partisan_commander_trait = {
+	    random = no
+		resistance_growth_on_our_occupied_states = 0.2
+		army_core_defence_factor = 0.05
+		army_intel_Factor = 0.1
+	}
+	
+	GOY_clan_elder_trait = {
+	    random = no
+		war_support_factor = 0.1
+		stability_factor = 0.05
+		party_popularity_stability_factor = 0.25
+	}
+	GOY_pom_entrepreneur_trait = {
+	    random = no
+		consumer_goods_factor = -0.05
+		industrial_capacity_factory = 0.1
+		min_export = 0.1
+	}
+	GOY_stern_judge_trait = {
+	    random = no
+		political_power_factor = 0.1
+		stability_factor = -0.05
+		compliance_growth = 0.1
+	}
+	GOY_dd_engineer_trait = {
+	    random = no
+		production_speed_buildings_factor = 0.1
+		local_resources_factor = 0.1
+	}
+	GOY_amateur_druid_trait = {
+	    random = no
+		research_speed_factor = 0.03
+	}
+	GOY_war_theorist_trait = {
+	    random = no
+		land_doctrine_cost_factor = -0.1
+		air_doctrine_cost_factor = -0.1
+		naval_doctrine_cost_factor = -0.1
+	}
+	GOY_drunken_genius_trait = {
+	    random = no
+		experience_gain_army = 0.1
+		army_attack_factor = 0.15
+		planning_speed = 0.1
+		max_planning = -0.1
+		political_power_factor = -0.1
+		ai_focus_war_production_factor = 0.2
+		
+		command_cap = 10
+	}
+	GOY_kaboom_theorist = {
+		random = no
+	}
+	GOY_steam_carriage_manufacturer = {
+		random = no
+	}
+	GOY_procurement_bureau = {
+		random = no
 	}
 }

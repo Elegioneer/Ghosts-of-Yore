@@ -1,1 +1,2 @@
 HRR = "countries/HerzlandLiberationArmy.txt"
+ARD = "countries/AquileianCommune.txt"

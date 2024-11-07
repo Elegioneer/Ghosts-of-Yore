@@ -31,6 +31,10 @@ defined_text = { # Country
 		trigger = { original_tag = POM }
 		localization_key = GOY_WS_POM
 	}
+	text = {
+		trigger = { original_tag = ARD }
+		localization_key = GOY_WS_ARD
+	}
 	#################
 	text = {
 		trigger = { original_tag = VED }
@@ -120,12 +124,15 @@ defined_text = { # Country
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = YAK
-				original_tag = JAK
-			}
+			original_tag = YAK
 		}
 		localization_key = EAW_WS_YAK
+	}
+	text = {
+		trigger = {
+			original_tag = JAK
+		}
+		localization_key = EAW_WS_JAK
 	}
 	text = {
 		trigger = {
@@ -423,6 +430,10 @@ defined_text = {
 		trigger = { original_tag = POM }
 		localization_key = GOY_WS_POM_desc
 	}
+	text = {
+		trigger = { original_tag = ARD }
+		localization_key = GOY_WS_ARD_desc
+	}
 	#################
 	text = {
 		trigger = { original_tag = VED }
@@ -528,12 +539,15 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = YAK
-				original_tag = JAK
-			}
+			original_tag = YAK
 		}
 		localization_key = EAW_WS_YAK_desc
+	}
+	text = {
+		trigger = {
+			original_tag = JAK
+		}
+		localization_key = EAW_WS_JAK_desc
 	}
 	text = {
 		trigger = {

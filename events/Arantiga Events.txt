@@ -54,17 +54,13 @@ add_namespace = arantiga_decision
 	picture = GFX_event_griffon_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
-    immediate = {
-	    hidden_effect = {
-	        ARA = {
-    			country_event = { id = arantiga.004 hours = 4 }
-			}
+	timeout_days = 5
+	
+	option = {
+		name = arantiga.003.a
+			country_event = arantiga.004
 		}
 	}
-	option = {
-		name = arantiga.003.a	
-		}
-		}
 	
 	country_event = { #finality
 	id = arantiga.004
@@ -3797,7 +3793,6 @@ country_event = { #Detente
 					    }
 					    FBK = {
 							add_ideas = FBK_king_north
-			                set_cosmetic_tag = FBK_kingdom
 				            create_country_leader = {
 					            name = "King Hermane I"
 					            desc = ""
@@ -4733,9 +4728,11 @@ country_event = { #Old Foes
 		}
 		add_political_power = -100
 		add_war_support = -0.1
-		WNG = {
-		    every_unit_leader = {
-		     	limit = { has_id = 304 }
+		every_other_country = {
+			limit = {
+				original_tag = WNG
+			}
+		    WNG_giovanni_gesse = {
 		    	set_nationality = ARA
 		    }
 		}
@@ -5349,6 +5346,7 @@ country_event = { #BBEG Dies
 	id = arantiga.098
 	title = arantiga.098.t
 	desc = arantiga.098.d
+	picture = GFX_event_griffenheim_night
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -5361,6 +5359,7 @@ country_event = { #Child Dies
 	id = arantiga.099
 	title = arantiga.099.t
 	desc = arantiga.099.d
+	picture = GFX_event_griffenheim_night
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -5383,6 +5382,7 @@ country_event = { #Triumph in Griffenheim
 	id = arantiga.100
 	title = arantiga.100.t
 	desc = arantiga.100.d
+	picture = GFX_event_griffenheim
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {

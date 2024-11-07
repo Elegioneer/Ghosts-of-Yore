@@ -35,7 +35,7 @@ NTR_INF_01 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -96,7 +96,7 @@ NTR_INF_03 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -127,7 +127,7 @@ NTR_MOT_01 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "motorized" } 
 
@@ -154,7 +154,7 @@ NTR_MEC_01 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "mechanized" } 
 
@@ -179,7 +179,7 @@ NTR_ARM_01 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" } 
 
@@ -210,7 +210,7 @@ NTR_MAR_01 = {
 
 	for_countries = { NTR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "marine" } 
 

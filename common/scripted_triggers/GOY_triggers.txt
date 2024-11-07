@@ -114,7 +114,9 @@ country_with_custom_advisors = {
 		original_tag = ARA
 		original_tag = BOI
 		original_tag = NTR
-		original_tag = HRR		
+		original_tag = HRR
+		original_tag = POM
+		original_tag = ARD
 	}
 }
 country_with_custom_designers = {
@@ -206,7 +208,9 @@ country_with_custom_designers = {
 		original_tag = ARA
 		original_tag = BOI
 		original_tag = NTR
-		original_tag = HRR		
+		original_tag = HRR
+		original_tag = POM
+		original_tag = ARD
 	}
 }
 country_with_custom_spymaster = {
@@ -227,6 +231,7 @@ country_with_custom_spymaster = {
 		original_tag = WNG
 		original_tag = JER
 		original_tag = ARA
+		original_tag = LAK
 		original_tag = ELF
 		original_tag = NCR
 		original_tag = CTL
@@ -235,11 +240,14 @@ country_with_custom_spymaster = {
 		original_tag = BLT
 		original_tag = CZR
 		original_tag = HEL
+		original_tag = FAT
 		##################
 		original_tag = ARA
 		original_tag = BOI
 		original_tag = NTR
-		original_tag = HRR		
+		original_tag = HRR
+		original_tag = POM
+		original_tag = ARD
 	}
 }
 
@@ -387,7 +395,9 @@ check_has_focus_tree_to_switch_to_fascism = {
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }
 	NOT = { original_tag = NTR }
-	NOT = { original_tag = HRR }	
+	NOT = { original_tag = HRR }
+	NOT = { original_tag = POM }
+	NOT = { original_tag = ARD }
 }
 
 check_has_focus_tree_to_switch_to_democratic = {
@@ -473,7 +483,9 @@ check_has_focus_tree_to_switch_to_democratic = {
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }
 	NOT = { original_tag = NTR }
-	NOT = { original_tag = HRR }	
+	NOT = { original_tag = HRR }
+	NOT = { original_tag = POM }
+	NOT = { original_tag = ARD }
 }
 
 check_has_focus_tree_to_switch_to_communism = {
@@ -558,5 +570,7 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = { original_tag = ARA }
 	NOT = { original_tag = BOI }
 	NOT = { original_tag = NTR }
-	NOT = { original_tag = HRR }		
+	NOT = { original_tag = HRR }
+	NOT = { original_tag = POM }
+	NOT = { original_tag = ARD }	
 }

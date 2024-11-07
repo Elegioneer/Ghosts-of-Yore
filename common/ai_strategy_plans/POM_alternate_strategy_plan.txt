@@ -1,0 +1,140 @@
+POM_reiher = {
+	name = "Reiher's reign continues"
+	desc = ""
+
+	enable = {
+		original_tag = POM
+		OR = {
+			has_game_rule = {
+				rule = POM_ai_behavior
+				option = POM_REI
+			}
+			has_completed_focus = POM_rogue_prince
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+POM_camriz_dem = {
+	name = "Camriz takes over and readjusts his attitude"
+	desc = ""
+
+	enable = {
+		original_tag = POM
+		OR = {
+			has_game_rule = {
+				rule = POM_ai_behavior
+				option = POM_CAD
+			}
+			has_completed_focus = POM_leaving_the_past_behind
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+
+POM_morel = {
+	name = "Morel takes over"
+	desc = ""
+
+	enable = {
+		original_tag = POM
+		OR = {
+			has_game_rule = {
+				rule = POM_ai_behavior
+				option = POM_MOR
+			}
+			has_completed_focus = POM_our_glorious_past
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+	    
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

@@ -49,4 +49,32 @@ spriteTypes = {
 		name = "GFX_event_goy_reiher_located"
 		texturefile = "gfx/event_pictures/event_goy_reiher_located.dds"
 	}
+	spriteType = {
+		name = "GFX_event_goy_schattenzahn"
+		texturefile = "gfx/event_pictures/event_goy_schattenzahn.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_megaliths"
+		texturefile = "gfx/event_pictures/event_goy_megaliths.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_direndall"
+		texturefile = "gfx/event_pictures/event_goy_direndall.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_allard"
+		texturefile = "gfx/event_pictures/event_goy_allard.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_bombed_city"
+		texturefile = "gfx/event_pictures/event_goy_bombed_city.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_schattenzahn_problems"
+		texturefile = "gfx/event_pictures/event_goy_schattenzahn_problems.dds"
+	}
+	spriteType = {
+		name = "GFX_event_goy_meridiennes_palace"
+		texturefile = "gfx/event_pictures/event_goy_meridiennes_palace.dds"
+	}
 }

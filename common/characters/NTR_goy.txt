@@ -192,7 +192,7 @@ characters = {
 		name = NTR_federick_birch
 		portraits = {
 			army = {
-				large = "gfx/leaders/NTR/Dumb_griffon.tga"
+				large = "gfx/leaders/NTR/GOY_fred_birch.tga"
 				small = "GFX_idea_GOY_NTR_dumb_griffon"
 			}
 		}

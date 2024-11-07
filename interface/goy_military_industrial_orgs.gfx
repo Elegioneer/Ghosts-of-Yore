@@ -4,4 +4,16 @@ spriteTypes = {
 		name = "GFX_GOY_mio_trait_icon_magical_sword"
 		texturefile = "gfx/interface/military_industrial_organization/trait_icons/GOY_mio_trait_icon_magical_sword.dds"
 	}
+	spriteType = {
+		name = "GFX_GOY_mio_trait_icon_cash"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/GOY_mio_trait_icon_cash.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_mio_trait_icon_clawshake"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/GOY_mio_trait_icon_clawshake.dds"
+	}
+	spriteType = {
+		name = "GFX_GOY_mio_trait_icon_steal_research"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/GOY_mio_trait_icon_steal_research.dds"
+	}
 }

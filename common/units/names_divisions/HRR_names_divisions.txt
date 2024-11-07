@@ -35,7 +35,7 @@ HRR_INF_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -94,7 +94,7 @@ HRR_INF_02 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -124,7 +124,7 @@ HRR_MOT_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "motorized" } 
 
@@ -159,7 +159,7 @@ HRR_MEC_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "mechanized" } 
 
@@ -195,7 +195,7 @@ HRR_MAR_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "marine" } 
 
@@ -221,7 +221,7 @@ HRR_MNT_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "mountaineers" } 
 
@@ -251,7 +251,7 @@ HRR_PAR_01 = {
 
 	for_countries = { HRR } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "paratrooper" } 
 

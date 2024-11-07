@@ -144,6 +144,54 @@ NTR_ai_behavior = {
 	}
 }
 
+POM_ai_behavior = {
+	name = "POM_AI_BEHAVIOR"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI"
+	icon = "GFX_goy_game_rule_ghostofyore"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POM_REI
+		text = "RULE_OPTION_POM_REI"
+		desc = "RULE_OPTION_POM_REI_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POM_CAN
+		text = "RULE_OPTION_POM_CAN"
+		desc = "RULE_OPTION_POM_CAN_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POM_CAD
+		text = "RULE_OPTION_POM_CAD"
+		desc = "RULE_OPTION_POM_CAD_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POM_MOR
+		text = "RULE_OPTION_POM_MOR"
+		desc = "RULE_OPTION_POM_MOR_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = POM_ISOLATION
+		text = "RULE_OPTION_POM_ISOLATION"
+		desc = "RULE_OPTION_POM_ISOLATION_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
 GOY_ARA_ai_help = {
 	name = "GOY_ARA_AI_HELP"
 	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
@@ -197,6 +245,23 @@ GOY_NTR_ai_help = {
 }
 GOY_HRR_ai_help = {
 	name = "GOY_HRR_AI_HELP"
+	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
+	icon = "GFX_goy_game_rule_ghostofyore_helm"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_HELP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GOY_ai_help_yes
+		text = "GOY_AI_HELP_YES"
+		desc = "GOY_AI_HELP_YES_desc"
+		allow_achievements = yes
+	}
+}
+GOY_POM_ai_help = {
+	name = "GOY_POM_AI_HELP"
 	group = "RULE_GROUP_EXTRA_CONTENT_GOY_AI_HELP"
 	icon = "GFX_goy_game_rule_ghostofyore_helm"
 	default = {

@@ -10,6 +10,7 @@ set_technology = {
 	melee_weapons1 = 1
 	infantry_weapons = 1
 	pre_gw_artillery = 1
+	gw_artillery = 1	
 	tech_support = 1
 	tech_recon = 1
 	tech_trucks = 1
@@ -102,17 +103,25 @@ recruit_character = GOY_POM_falkenrath
 recruit_character = GOY_POM_schattenzahn
 recruit_character = GOY_POM_floppen
 recruit_character = GOY_POM_ponysander
+recruit_character = GOY_POM_bleuetaille
+recruit_character = GOY_POM_merc_liason
+recruit_character = GOY_POM_terror_prince
+recruit_character = GOY_POM_tax_collector
+recruit_character = GOY_POM_garr_inspector
+recruit_character = GOY_POM_acquisitioner
 
 recruit_character = GOY_POM_liberation_commitee
 recruit_character = GOY_POM_charlotte_corneille
 recruit_character = GOY_POM_political_chair
-recruit_character = GOY_POM_allard_the_communard
 
 recruit_character = GOY_POM_camriz
 recruit_character = GOY_POM_renan
 recruit_character = GOY_POM_silverwing
 recruit_character = GOY_POM_morel
 recruit_character = GOY_POM_seznec
+recruit_character = POM_karl_steelwing
+recruit_character = GOY_POM_bran_askelroz
+recruit_character = GOY_POM_gaenaelle_pereire
 
 recruit_character = GOY_POM_luca
 recruit_character = GOY_POM_grijsbek
@@ -120,6 +129,7 @@ recruit_character = GOY_POM_michael_landreau
 recruit_character = GOY_POM_sugar_crepe
 recruit_character = GOY_POM_leonard_rodier
 
+recruit_character = POM_GOY_herman_of_vorst_tot_vorst
 recruit_character = GOY_VED_king_ondska_i
 recruit_character = GOY_POM_soter
 recruit_character = GOY_POM_matthias_felchen
@@ -128,6 +138,40 @@ recruit_character = GOY_POM_hjarnar_ernstsson
 recruit_character = GOY_POM_spirit_fire
 recruit_character = GOY_POM_hermane_gering
 recruit_character = GOY_POM_eagleheart
+
+recruit_character = GOY_POM_maiwenn_bosser
+recruit_character = GOY_POM_yann_armel
+recruit_character = GOY_POM_mael_guillou
+recruit_character = GOY_POM_judikael_bihan
+recruit_character = GOY_POM_roparzh_tallec
+recruit_character = GOY_POM_malo_artus
+recruit_character = GOY_POM_arzhou_carriou
+recruit_character = GOY_POM_beau
+recruit_character = GOY_POM_griffomix
+recruit_character = GOY_POM_mai_lagadec
+recruit_character = GOY_POM_jodoc_meur
+recruit_character = GOY_POM_gweltaz_hir
+recruit_character = GOY_POM_corentin_pennec
+recruit_character = GOY_POM_gael_houerff
+recruit_character = GOY_POM_ruvon_boiteux
+recruit_character = GOY_POM_meurzh_garrec
+
+recruit_character = GOY_POM_argan_leduc 
+recruit_character = GOY_POM_jorj_corre
+recruit_character = GOY_POM_steeltalon
+recruit_character = GOY_POM_grauhimmel
+recruit_character = GOY_POM_adlerague
+recruit_character = GOY_POM_sonnflugel
+recruit_character = GOY_POM_verlorn
+recruit_character = GOY_POM_gudwal_besco
+recruit_character = GOY_POM_johann_wagner
+recruit_character = GOY_POM_karl_wundergriff
+recruit_character = GOY_POM_konan_renan
+recruit_character = GOY_POM_fransez_mezec
+recruit_character = GOY_POM_erwann_tallec
+recruit_character = GOY_POM_gwenn_jezequel
+
+recruit_character = GOY_POM_federal_assembly
 
 GOY_POM_reiher = {
 	set_character_flag = GOY_char_available_flag

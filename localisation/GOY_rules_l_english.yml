@@ -10,4 +10,5 @@
  GOY_BOI_AI_HELP:0 "Buff @BOI Griffonstone"
  GOY_NTR_AI_HELP:0 "Buff @NTR Tir Deighe"
  GOY_HRR_AI_HELP:0 "Buff @HRR Herzland Liberation Front"
+ GOY_POM_AI_HELP:0 "Buff @POM Pomovarra"
  RULE_OPTION_DEFAULT_AI_HELP_DESC:0 "This nation is receiving no special buffs."

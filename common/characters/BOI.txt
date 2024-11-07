@@ -554,8 +554,8 @@ characters = {
 		name = BOI_silver_storm_advisor
 		portraits = {
 			army = {
-				large = "gfx/leaders/CES/Stemis.tga"
-				small = "gfx/interface/ideas//idea_BOI_silverstorm.dds"
+				large = "gfx/leaders/BOI/GOY_silverstorm.tga"
+				small = "gfx/interface/ideas/idea_BOI_silverstorm.dds"
 			}
 		}
 		advisor = {
@@ -936,11 +936,11 @@ characters = {
 		name = GOY_BOI_gallus
 		portraits = {
 			civilian = {
-				large="gfx/leaders/BOI/Gallus.tga"
+				large="gfx/leaders/BOI/GAW_Gallus.tga"
 				small="GFX_idea_BOI_Gallus"
 			}
 			army = {
-				large="gfx/leaders/BOI/Gallus.tga"
+				large="gfx/leaders/BOI/GAW_Gallus.tga"
 				small="GFX_idea_BOI_Gallus"
 			}
 		}

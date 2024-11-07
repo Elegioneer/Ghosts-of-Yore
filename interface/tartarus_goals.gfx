@@ -496,4 +496,76 @@ spriteTypes = {
 		name = "GFX_goal_GOY_pom_price_of_a_nation"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_price_of_a_nation.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_socialist_austerity"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_socialist_austerity.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_steal_blueprints"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_steal_blueprints.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_choose_gun"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_choose_gun.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_pomchamps"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_pomchamps.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_expand_centres"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_expand_centres.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_grand_council"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_grand_council.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_griffonstone_empire"
+		texturefile = "gfx/interface/goals/goal_GOY_griffonstone_empire.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_dream_of_aetia"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_dream_of_aetia.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_lib_army"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_lib_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_rebuilding"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_rebuilding.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_arcturius_plan"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_arcturius_plan.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_fast_tank"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_fast_tank.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_strong_tank"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_strong_tank.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_direndall"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_direndall.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_reforged_economy"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_reforged_economy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_red_sun"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_red_sun.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_steel_vanguard"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_steel_vanguard.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_pom_socialist_welfare"
+		texturefile = "gfx/interface/goals/goal_GOY_pom_socialist_welfare.dds"
+	}
 }

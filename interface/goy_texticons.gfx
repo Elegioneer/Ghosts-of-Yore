@@ -5,4 +5,14 @@ spriteTypes = {
 		texturefile = "gfx/texticons/goy_ghostofyore_texticon.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_goy_art_eq_texticon"
+		texturefile = "gfx/texticons/goy_art_eq_texticon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_goy_gri_inf_eq_texticon"
+		texturefile = "gfx/texticons/goy_gri_inf_eq_texticon.dds"
+		legacy_lazy_load = no
+	}
 }

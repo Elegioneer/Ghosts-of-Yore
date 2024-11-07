@@ -53,6 +53,15 @@
 		compliance_growth = 0.1
 		resistance_growth = -0.25
 	}
+	POM_angaz_barak_dynmodifier = {
+		enable = {
+			is_owned_by = NTR
+		}
+		icon = GFX_modifiers_goy_holy_forge
+		local_supplies = 0.25
+		local_factories = 0.5
+		local_resources_factor = 0.1
+	}
 	NTR_holy_forge_dynmodifier = {
 		enable = {
 			is_owned_by = NTR

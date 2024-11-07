@@ -27,4 +27,11 @@ difficulty_settings = {
 		countries = { HRR }
 		multiplier = 2.0
 	}
+	difficulty_setting = {
+		key = "custom_diff_strong_POM"
+		icon = "GFX_goy_game_rule_ghostofyore"
+		modifier = diff_strong_ai_generic
+		countries = { POM }
+		multiplier = 2.0
+	}
 }

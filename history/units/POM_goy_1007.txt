@@ -48,7 +48,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "1. Infantry Division"
+		name = "Alte Kameraden"
 		location = 8073
 		division_template = "Mercenary Division"
 		start_experience_factor = 0.5
@@ -56,7 +56,6 @@ units = {
 		#start_manpower_factor = 1
 	}
 	division = {
-		name = "2. Infantry Division"
 		location = 10290
 		division_template = "Mercenary Division"
 		start_experience_factor = 0.5
@@ -64,7 +63,6 @@ units = {
 		#start_manpower_factor = 1
 	}
 	division = {
-		name = "3. Infantry Division"
 		location = 4932
 		division_template = "Mercenary Division"
 		start_experience_factor = 0.5
@@ -72,7 +70,6 @@ units = {
 		#start_manpower_factor = 1
 	}
 	division = {
-		name = "1. Knights Chapter"
 		location = 4382
 		division_template = "Hired Knights"
 		start_experience_factor = 0.5

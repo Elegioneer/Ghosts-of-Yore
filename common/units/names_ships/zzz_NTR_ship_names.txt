@@ -1,0 +1,133 @@
+﻿##### NTR NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+NTR_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { NTR }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = ""
+	fallback_name = "Milltear %d"					
+
+	unique = {
+		"Iceshard"
+		"White Night"
+		"Polar Hunter"
+		"Ironside"
+		"Seagull"
+		"Thunderstorm"
+		"Raven"
+		"Nimble"
+		"Otter"
+		"Trout"
+		"Lone Light"
+		"Ursa"
+		"Lightning"
+		"Direwolf"
+		"Beaver"
+		"Old Oak"
+		"Prancer"
+		"Tempest"
+	}
+}
+
+### LIGHT CRUISER / HEAVY CRUISER NAMES###
+NTR_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL_CA
+
+	for_countries = { NTR }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser heavy_cruiser }
+	
+	prefix = ""
+	fallback_name = "Crùsair %d"
+
+	unique = {
+		"Wavebreaker"
+		"Stormrider"
+		"Black Reaver"
+		"Red Reaver"
+		"Laughing Skull"
+		"Cormorant"
+		"Northern Star"
+		"Iceblade"
+		"Endurance"
+		"Frozen Death"
+		"Snowstorm"
+	}
+}
+
+### BATTLESHIP / BATTLECRUISER NAMES ###
+NTR_BB_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB_BC
+
+	for_countries = { NTR }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship battle_cruiser}
+	
+	prefix = ""
+	fallback_name = "Long-chogaidh %d"		
+
+	unique = {
+		"Icebreker"
+		"Aurora"
+		"Krakenslayer"
+		"Pride of the North"
+		"The Stranded Prince"
+		"Snowflake"
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+NTR_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { NTR }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = ""
+	fallback_name = "Giùlanair %d"	
+
+	unique = {
+		"Everfrost"
+		"Borealis"
+		"Pride of the Clans"
+	}
+}
+
+### SUBMARINES ###
+NTR_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { NTR }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = ""
+	fallback_name = "Bàta-tumaidh %d"
+	
+	unique = {
+		"Rainbow"
+		"Gale"
+	}
+}
+
+# ### THEME: STATES CITIES REGIONS RIVERS ###
+# NTR_STATES = {
+	# name = NAME_THEME_PLACES
+	# fallback_name = "Ship No.%d"
+	# for_countries = { NTR }
+
+	# type = ship
+
+	# prefix = ""
+	# unique = {
+	# }
+# }

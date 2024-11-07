@@ -3,7 +3,7 @@ POM_JER_manufacture_aquileia_organization = {
 	include = generic_infantry_equipment_organization
 	icon = GFX_idea_JER_manufacture_aquileia
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -27,7 +27,7 @@ POM_JER_manufacture_rila_organization = {
 	include = generic_infantry_equipment_organization
 	icon = GFX_idea_JER_manufacture_rila
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -51,7 +51,7 @@ POM_JER_manufacture_vin_organization = {
 	include = generic_support_equipment_organization
 	icon = GFX_idea_JER_manufacture_vin
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -75,7 +75,7 @@ POM_JER_dassault_organization = {
 	include = generic_artillery_organization
 	icon = GFX_idea_JER_dassault
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -94,7 +94,7 @@ POM_JER_leopard_jer_organization = {
 	include = generic_motorized_mechanized_organization
 	icon = GFX_idea_JER_leopard
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -118,7 +118,7 @@ POM_JER_safran_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_JER_safran
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -132,7 +132,7 @@ POM_JER_thales_organization = {
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_JER_thales
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -146,7 +146,7 @@ POM_JER_astrium_organization = {
 	include = generic_cas_aircraft_organization
 	icon = GFX_idea_JER_astrium
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -165,7 +165,7 @@ POM_JER_mistral_organization = {
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_JER_mistral
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -192,7 +192,7 @@ POM_JER_loup_shipping_organization = {
 	name = loup_shipping
 	icon = GFX_idea_JER_loup_shipping
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -217,7 +217,7 @@ POM_JER_fer_de_lance_organization = {
 	include = generic_mobile_tank_organization
 	icon = GFX_idea_JER_fer_de_lance
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
@@ -253,7 +253,7 @@ POM_JER_AVA_tanks_organization = {
 	name = AVA_tanks
 	icon = GFX_idea_JER_ava_tanks
 	allowed = {
-		original_tag = POM
+		original_tag = ARD
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {

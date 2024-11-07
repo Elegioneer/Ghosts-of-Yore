@@ -35,7 +35,7 @@ ARA_INF_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -75,7 +75,7 @@ ARA_INF_02 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "infantry" } 
 
@@ -128,7 +128,7 @@ ARA_MOT_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "motorized" } 
 
@@ -149,7 +149,7 @@ ARA_MEC_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "mechanized" } 
 
@@ -170,7 +170,7 @@ ARA_ARM_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" } 
 
@@ -193,7 +193,7 @@ ARA_MAR_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "marine" } 
 
@@ -214,7 +214,7 @@ ARA_MNT_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "mountaineers" } 
 
@@ -235,7 +235,7 @@ ARA_PAR_01 = {
 
 	for_countries = { ARA } 
 
-	can_use = { always = yes } 
+	#can_use = { always = yes } 
 
 	division_types = { "paratrooper" } 
 

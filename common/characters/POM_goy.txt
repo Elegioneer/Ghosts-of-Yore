@@ -26,14 +26,6 @@ characters = {
 			id = -1
 		}
 	}
-	GOY_POM_allard_the_communard = {
-		name = JER_char_allard
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/JER/Victor.tga"
-			}
-		}
-	}
 	GOY_POM_dialusides={
 		name=NIM_dialusides
 		portraits={
@@ -79,7 +71,7 @@ characters = {
 		}
 		field_marshal = {
 			desc = ""
-			traits = { griffon_race_trait brilliant_strategist career_officer trickster inspirational_leader }
+			traits = { griffon_race_trait brilliant_strategist career_officer substance_abuser trickster inspirational_leader }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -88,6 +80,27 @@ characters = {
 			visible = {
 				has_character_flag = GOY_char_available_flag
 			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POM_reiher_advisor
+			allowed = {
+				OR = {
+					original_tag = "POM"
+					tag = "MER"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			cost = 150
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { GOY_drunken_genius_trait }
 		}
 	}
 	GOY_POM_political_chair = {
@@ -138,6 +151,26 @@ characters = {
 			}
 			traits = { GOY_former_operative_trait }
 		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_schattenzahn_advisor_hc
+			allowed = {
+				OR = {
+					original_tag = "POM"
+					tag = "MER"
+				}
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_logistics_3 }
+		}
 	}
 	GOY_POM_floppen = {
 		name = GOY_POM_floppen
@@ -159,13 +192,173 @@ characters = {
 				has_character_flag = GOY_char_available_flag
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_floppen_advisor
+			allowed = {
+				original_tag = "POM"
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_infantry_2 }
+		}
+	}
+	GOY_POM_bleuetaille = {
+		name = GOY_POM_bleuetaille
+		portraits = {
+			civilian={
+				small=GFX_idea_ROU_garold_the_blue #todo maybe change
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_bleuetaille_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			available = {
+				
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { GOY_flowenian_banker_trait }
+		}
+	}
+	GOY_POM_merc_liason = {
+		name = GOY_POM_merc_liason
+		portraits = {
+			civilian={
+				small=GFX_portrait_griffon_generic_land_8_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_merc_liason_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { GOY_merc_liason_trait }
+		}
+	}
+	GOY_POM_terror_prince = {
+		name = GOY_POM_terror_prince
+		portraits = {
+			civilian={
+				small=GFX_portrait_aquileian_generic_pony_land_male_1_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_terror_prince_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	GOY_POM_tax_collector = {
+		name = GOY_POM_tax_collector
+		portraits = {
+			civilian={
+				small=GFX_portrait_herzland_generic_7_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_tax_collector_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { GOY_tax_collector_trait }
+		}
+	}
+	GOY_POM_acquisitioner = {
+		name = GOY_POM_acquisitioner
+		portraits = {
+			civilian={
+				small=GFX_idea_WNG_generic_navy_1
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_merc_liason_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { GOY_acquisitioner_trait }
+		}
+	}
+	GOY_POM_garr_inspector = {
+		name = GOY_POM_garr_inspector
+		portraits = {
+			civilian={
+				small=GFX_portrait_FAT_generic_land_male_17_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_garr_inspector_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { GOY_garrison_inspector_trait }
+		}
 	}
 	GOY_POM_ponysander = {
 		name = GOY_POM_ponysander
 		portraits = {
 			army={
-				large="gfx/leaders/NIM/Rough_Rider.tga"
-				small=GFX_idea_NIM_harmony_army_chief
+				large="gfx/leaders/POM/GOY_ponysander.tga"
+				small="GFX_idea_GOY_POM_ponysander"
 			}
 		}
 	}
@@ -189,6 +382,21 @@ characters = {
 				has_character_flag = GOY_char_available_flag
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_feuerstein_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_commando_2 }
+		}
 	}
 	GOY_POM_falkenrath = {
 		name = GOY_POM_falkenrath
@@ -210,6 +418,218 @@ characters = {
 				has_character_flag = GOY_char_available_flag
 			}
 		}
+		advisor = {
+			slot = army_chief
+			idea_token = POM_falkenrath_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_chief_defensive_2 }
+		}
+	}
+	GOY_POM_steeltalon = {
+		name = GOY_POM_steeltalon
+		portraits = {
+			civilian={
+				small=GFX_idea_VED_army_chief_off
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_steeltalon_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { army_armored_2 }
+		}
+	}
+	GOY_POM_grauhimmel = {
+		name = GOY_POM_grauhimmel
+		portraits = {
+			civilian={
+				small=GFX_idea_HLQ_T_air
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_grauhimmel_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { air_close_air_support_2 }
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = POM_grauhimmel_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { air_chief_ground_support_2 }
+		}
+	}
+	GOY_POM_adlerague = {
+		name = GOY_POM_adlerague
+		portraits = {
+			civilian={
+				small=GFX_idea_TRD_Silvain_Giraud
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_adlerague_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 50
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { air_air_superiority_1 }
+		}
+	}
+	GOY_POM_sonnflugel = {
+		name = GOY_POM_sonnflugel
+		portraits = {
+			civilian={
+				small=GFX_idea_GRF_Edwin
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = POM_sonnflugel_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { air_chief_all_weather_2 }
+		}
+	}
+	GOY_POM_verlorn = {
+		name = GOY_POM_verlorn
+		portraits = {
+			civilian={
+				small=GFX_idea_GRI_harald
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POM_verlorn_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 50
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { navy_chief_old_guard }
+		}
+	}
+	GOY_POM_johann_wagner = {
+		name = GOY_POM_johann_wagner
+		portraits = {
+			civilian={
+				small=GFX_idea_WNG_advisor_3
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POM_johann_wagner_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 150
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { military_theorist }
+		}
+	}
+	GOY_POM_karl_wundergriff = {
+		name = GOY_POM_karl_wundergriff
+		portraits = {
+			civilian={
+				small=GFX_idea_LUS_scar_blackkryl
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POM_karl_wundergriff_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 150
+			visible = {
+				NOT = {
+					has_country_flag = POM_FLAG_rebel_companies
+				}
+			}
+			traits = { GOY_kaboom_theorist }
+			research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+				knights_tech = 0.1
+			}
+		}
 	}
 	GOY_POM_camriz = {
 		name = GOY_POM_camriz
@@ -221,7 +641,7 @@ characters = {
 		}
 		country_leader = {
 			desc = GOY_POM_camriz_desc
-			ideology = harmonic_libertarianism
+			ideology = liberalism
 			expire = "1965.1.1.1"
 			id = -1
 		}
@@ -236,6 +656,36 @@ characters = {
 			visible = {
 				has_character_flag = GOY_char_available_flag
 			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_camriz_advisor
+			allowed = {
+				original_tag = "POM"
+			}
+			can_be_fired = no
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { GOY_partisan_commander_trait }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POM_camriz_advisor_ac
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			cost = 100
+			traits = { army_chief_planning_2 }
 		}
 	}
 	GOY_POM_luca = {
@@ -256,7 +706,7 @@ characters = {
 				factor = 1
 			}
 			available = {
-				
+				owns_state = 494
 			}
 			visible = {
 				has_idea = POM_old_believers
@@ -281,6 +731,21 @@ characters = {
 				small = "gfx/interface/ideas/idea_GOY_POM_morel.dds"
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_morel_advisor
+			allowed = {
+				original_tag = "POM"
+			}
+			can_be_fired = no		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { GOY_nat_firebrand_trait }
+		}
 	}
 	GOY_POM_renan = {
 		name = GOY_POM_renan
@@ -301,6 +766,21 @@ characters = {
 			visible = {
 				has_character_flag = GOY_char_available_flag
 			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = POM_renan_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_chief_defensive_2 }
 		}
 	}
 	GOY_POM_silverwing = {
@@ -323,6 +803,21 @@ characters = {
 				has_character_flag = GOY_char_available_flag
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_silverwing_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_entrenchment_2 }
+		}
 	}
 	GOY_POM_seznec = {
 		name = GOY_POM_seznec
@@ -343,6 +838,636 @@ characters = {
 			visible = {
 				has_character_flag = GOY_char_available_flag
 			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_seznec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_armored_1 }
+		}
+	}
+	GOY_POM_bran_askelroz = {
+		name = GOY_POM_bran_askelroz
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_rebel_pirate.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_rebel_pirate.dds"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait war_hero ranger }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_bran_askelroz_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 150
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_commando_3 }
+		}
+	}
+	GOY_POM_gaenaelle_pereire = {
+		name = GOY_POM_gaenaelle_pereire
+		portraits = {
+			army = {
+				large = "gfx/leaders/POM/GOY_rebel_tattoo.tga"
+				small = "gfx/interface/ideas/idea_GOY_POM_rebel_tattoo.dds"
+			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { griffon_race_trait trait_reckless commando }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_gaenaelle_pereire_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_regrouping_2 }
+		}
+	}
+	GOY_POM_argan_leduc = {
+		name = GOY_POM_argan_leduc
+		portraits = {
+			civilian={
+				small=GFX_idea_HLQ_PA_WarInd
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_argan_leduc_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_logistics_2 }
+		}
+	}
+	GOY_POM_jorj_corre = {
+		name = GOY_POM_jorj_corre
+		portraits = {
+			civilian={
+				small=GFX_idea_HLQ_HC_commando
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_jorj_corre_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			cost = 100
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_infantry_2 }
+		}
+	}
+	GOY_POM_maiwenn_bosser = {
+		name = GOY_POM_maiwenn_bosser
+		portraits = {
+			civilian={
+				small=GFX_idea_SIC_Leila_Ordona
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_maiwenn_bosser_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			available = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			traits = { prince_of_terror }
+		}
+	}
+	GOY_POM_yann_armel = {
+		name = GOY_POM_yann_armel
+		portraits = {
+			civilian={
+				small=GFX_idea_VED_captain_of_industry
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_yann_armel_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { captain_of_industry }
+		}
+	}
+	GOY_POM_mael_guillou = {
+		name = GOY_POM_mael_guillou
+		portraits = {
+			civilian={
+				small=GFX_idea_BAN_raintail_schutz
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_mael_guillou_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { head_of_intelligence }
+		}
+	}
+	GOY_POM_judikael_bihan = {
+		name = GOY_POM_judikael_bihan
+		portraits = {
+			civilian={
+				small=GFX_idea_TRD_Claudine
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_judikael_bihan_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { war_industrialist }
+		}
+	}
+	GOY_POM_roparzh_tallec = {
+		name = GOY_POM_roparzh_tallec
+		portraits = {
+			civilian={
+				small=GFX_idea_WNG_advisor_2
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_roparzh_tallec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			available = {
+				has_country_leader = {
+					character = GOY_POM_morel
+					ruling_only = yes
+				}
+			}
+			traits = { GOY_clan_elder_trait }
+		}
+	}
+	GOY_POM_malo_artus = {
+		name = GOY_POM_malo_artus
+		portraits = {
+			civilian={
+				small=GFX_idea_FAT_political_8
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_malo_artus_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { GOY_pom_entrepreneur_trait }
+		}
+	}
+	GOY_POM_arzhou_carriou = {
+		name = GOY_POM_arzhou_carriou
+		portraits = {
+			civilian={
+				small=GFX_idea_VED_fortification_engineer
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_arzhou_carriou_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			available = {
+				has_country_leader = {
+					character = GOY_POM_camriz
+					ruling_only = yes
+				}
+			}
+			traits = { GOY_stern_judge_trait }
+		}
+	}
+	GOY_POM_beau = {
+		name = GOY_POM_beau
+		portraits = {
+			civilian={
+				small=GFX_idea_BRZ_laika_barker
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = POM_beau_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { GOY_dd_engineer_trait }
+		}
+	}
+	GOY_POM_griffomix = {
+		name = GOY_POM_griffomix
+		portraits = {
+			civilian={
+				small=GFX_idea_MNC_advisor_19
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = POM_griffomix_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { GOY_amateur_druid_trait }
+			research_bonus = {
+				race_tech = 0.1
+			}
+		}
+	}
+	GOY_POM_mai_lagadec = {
+		name = GOY_POM_mai_lagadec
+		portraits = {
+			civilian={
+				small=GFX_idea_WIT_Derby_Advisor
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 100
+			idea_token = POM_mai_lagadec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { nuclear_scientist }
+			research_bonus = {
+				nuclear = 0.15
+			}
+		}
+	}
+	GOY_POM_jodoc_meur = {
+		name = GOY_POM_jodoc_meur
+		portraits = {
+			civilian={
+				small=GFX_idea_TRD_Philip_van_Sosen
+			}
+		}
+		advisor = {
+			slot = theorist
+			cost = 150
+			idea_token = POM_jodoc_meur_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { GOY_war_theorist_trait }
+		}
+	}
+	GOY_POM_gweltaz_hir = {
+		name = GOY_POM_gweltaz_hir
+		portraits = {
+			civilian={
+				small=GFX_idea_GRW_Sailor_Pirate
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			cost = 100
+			idea_token = POM_gweltaz_hir_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { navy_chief_commerce_raiding_2 }
+		}
+	}
+	GOY_POM_corentin_pennec = {
+		name = GOY_POM_corentin_pennec
+		portraits = {
+			civilian={
+				small=GFX_idea_SRS_generico_1
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			cost = 50
+			idea_token = POM_corentin_pennec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { navy_chief_decisive_battle_1 }
+		}
+	}
+	GOY_POM_gael_houerff = {
+		name = GOY_POM_gael_houerff
+		portraits = {
+			civilian={
+				small=GFX_idea_GRW_Ludochka
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 100
+			idea_token = POM_gael_houerff_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_chief_reform_2 }
+		}
+	}
+	GOY_POM_ruvon_boiteux = {
+		name = GOY_POM_ruvon_boiteux
+		portraits = {
+			civilian={
+				small=GFX_idea_GRW_Andor
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 150
+			idea_token = POM_ruvon_boiteux_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_chief_safety_3 }
+		}
+	}
+	GOY_POM_meurzh_garrec = {
+		name = GOY_POM_meurzh_garrec
+		portraits = {
+			civilian={
+				small=GFX_idea_SRS_air_close_air_sup
+			}
+		}
+		advisor = {
+			slot = air_chief
+			cost = 50
+			idea_token = POM_meurzh_garrec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_chief_ground_support_1 }
+		}
+	}
+	GOY_POM_gudwal_besco = {
+		name = GOY_POM_gudwal_besco
+		portraits = {
+			civilian={
+				small=GFX_idea_GRI_theodor
+			}
+		}
+		advisor = {
+			slot = army_chief
+			cost = 50
+			idea_token = POM_gudwal_besco_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { army_chief_offensive_1 }
+		}
+	}
+	GOY_POM_konan_renan = {
+		name = GOY_POM_konan_renan
+		portraits = {
+			civilian={
+				small=GFX_idea_HLQ_NC_sub_dest
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 100
+			idea_token = POM_konan_renan_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_tactical_bombing_2 }
+		}
+	}
+	GOY_POM_fransez_mezec = {
+		name = GOY_POM_fransez_mezec
+		portraits = {
+			civilian={
+				small=GFX_idea_HLQ_T_land
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 100
+			idea_token = POM_fransez_mezec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_air_superiority_2 }
+		}
+	}
+	GOY_POM_erwann_tallec = {
+		name = GOY_POM_erwann_tallec
+		portraits = {
+			civilian={
+				small=GFX_idea_JER_generic_advisor_griffon_male_D
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 100
+			idea_token = POM_erwann_tallec_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { air_naval_strike_2 }
+		}
+	}
+	GOY_POM_gwenn_jezequel = {
+		name = GOY_POM_gwenn_jezequel
+		portraits = {
+			civilian={
+				small=GFX_idea_GRY_advisor1
+			}
+		}
+		advisor = {
+			slot = high_command
+			cost = 50
+			idea_token = POM_gwenn_jezequel_advisor
+			allowed = {
+				original_tag = "POM"
+			}		
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_country_flag = POM_FLAG_rebel_companies
+			}
+			traits = { navy_screen_1 }
 		}
 	}
 	#
@@ -383,6 +1508,15 @@ characters = {
 		}
 	}
 	
+	POM_GOY_herman_of_vorst_tot_vorst={
+		name="FEA_herman_of_vorst_tot_vorst"
+		portraits={
+			army={
+				large="gfx/leaders/FEA/Herman_Vorst_tot_Vorst.tga"
+				small="GFX_idea_FEA_herman_fuck_your_name"
+			}
+		}
+	}
 	GOY_VED_king_ondska_i={
 		name=VED_prince_ondska
 		portraits={
@@ -460,5 +1594,13 @@ characters = {
 			}
 		}
 		gender = female
+	}
+	GOY_POM_federal_assembly={
+		name=GOY_POM_federal_assembly
+		portraits={
+			civilian={
+				large="gfx/leaders/WNG/WNG_fallen_parlement.tga"
+			}
+		}
 	}
 }

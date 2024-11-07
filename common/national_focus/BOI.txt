@@ -9046,6 +9046,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			set_country_leader_ideology = neofeudalism
 			custom_effect_tooltip = BOI_CETT_drach
 			show_ideas_tooltip = BOI_erwin_von_drach
 			swap_ideas = {
@@ -9180,7 +9181,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_declare_griffonstone_empire
-		icon = GFX_goal_boi 
+		icon = GFX_goal_GOY_griffonstone_empire 
 		x = 0
 		y = 3
 		cost = 5.00
