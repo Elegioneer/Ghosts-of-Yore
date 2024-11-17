@@ -116,6 +116,12 @@ recruit_character = GOY_ARA_vasile
 recruit_character = GOY_ARA_moonfeather
 recruit_character = GOY_ARA_benoam_gerza
 recruit_character = GOY_ARA_zaron_zorrel
+recruit_character = GOY_ARA_nuclear_scientist_1
+recruit_character = GOY_ARA_land_scientist_1
+recruit_character = GOY_ARA_land_scientist_2
+recruit_character = GOY_ARA_naval_scientist_1
+recruit_character = GOY_ARA_air_scientist_1
+recruit_character = GOY_ARA_magic_scientist_1
 
 set_rule = {
 	can_generate_female_aces = yes

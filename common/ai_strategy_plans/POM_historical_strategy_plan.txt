@@ -8,16 +8,16 @@ POM_camriz_na = {
 			AND = {
 				is_historical_focus_on = yes
 				has_game_rule = {
-					rule = BOI_ai_behavior
+					rule = POM_ai_behavior
 					option = DEFAULT
 				}
 			}
 			has_game_rule = {
-				rule = BOI_ai_behavior
+				rule = POM_ai_behavior
 				option = POM_CAN
 			}
 			has_game_rule = {
-				rule = BOI_ai_behavior
+				rule = POM_ai_behavior
 				option = DEFAULT
 			}
 			has_completed_focus = POM_feathisian_connection

@@ -42,6 +42,14 @@
  GOY_ARA_vasile:0 "Vasile cel Tradat "
  GOY_ARA_moonfeather:0 "Plumage Moonfeather "
  GOY_charlesguillame_name:0 "Charles-Guillaume de Greifenwald"
+ 
+### Scientists ###
+ GOY_ARA_nuclear_scientist_1:0 "Adrastea"
+ GOY_ARA_land_scientist_1:0 "Iulia Automotiva"
+ GOY_ARA_land_scientist_2:0 "Caligula Minus"
+ GOY_ARA_naval_scientist_1:0 "Okeanos"
+ GOY_ARA_air_scientist_1:0 "Giulio Cumulinimbi"
+ GOY_ARA_magic_scientist_1:0 "Etienne Ponezac"
 
 ## BOI ##
 GOY_BOI_grandpagruff:0 "Grandpa Gruff"
@@ -64,6 +72,13 @@ GOY_BOI_grandpagruff:0 "Grandpa Gruff"
  BOI_gabby:0 "Gabby"
  BOI_garner:0 "Garner"
  GOY_BOI_garner_desc:0 "§YPortrait By§!: BlakaSmoko"
+### Scientists ###
+ GOY_BOI_nuclear_scientist_1:0 "Galena"
+ GOY_BOI_land_scientist_1:0 "Graff"
+ GOY_BOI_land_scientist_2:0 "Griffgor"
+ GOY_BOI_naval_scientist_1:0 "Gambino"
+ GOY_BOI_air_scientist_1:0 "Giancarlo"
+ GOY_BOI_magic_scientist_1:0 "Galina"
  
 ### NTR ###
 NTR_GOY_stormshield:0 "Euan Stormshield"
@@ -77,6 +92,11 @@ NTR_GOY_stormshield:0 "Euan Stormshield"
  NTR_GOY_gordonthearcher:0 "Gordon the Archer"
  NTR_GOY_gordonthearcher_desc:0 "§YBorn§!: January 31, 944 ALB, Morker\n\n§YBiography§!: Gordon the Archer is the oldest and most experienced warrior in the lands of Northern ponies. Joining a lodge at a young age as an archer, he earned his nickname and fame of the most accurate shot in the land by killing a Vedinian knight with an arrow straight to the eye – causing his chapter brethren to flee in fear – later leading to him forming his own warband. At the start of the Skynavian invasion, he was selected by Prince Fothad III to serve as his Right Hoof. Since then, he'd been alongside the prince, assisting him in army leadership and teaching his sons military strategy. It goes without saying then that over the years Gordon formed a deep personal connection to the princely dynasty. This perfect life he'd grown so attached to would end abruptly on one dreadful day when a Skynavian artillery shell landed right by the prince's tent, killing Fothad with his sons and almost gravely wounding Gordon. His body shredded and both his eyes destroyed by debris from the explosion, he had to be forcefully dragged away to safety, despite him kicking and screaming curses at griffons, having entered a state of berserk-like rage. Following these events, with only underage Fiana left to lead the tribes, Gordon became the de-facto supreme commander of the military, as he was the only pony left that all warchiefs listened to and obeyed.\n\n§YPortrait By§!: Leo the Pone"
  NTR_GOY_greyfox:0 "Grey Fox"
+### Scientists ###
+ GOY_NTR_land_scientist_1:0 "Naoise Stormshield"
+ GOY_NTR_naval_scientist_1:0 "Bran Barkcoat"
+ GOY_NTR_air_scientist_1:0 "Conall Stormshield"
+ GOY_NTR_magic_scientist_1:0 "Irial Moltenrock"
  
 ### HRR ###
 GOY_HRR_Ardenssonhector:0 "Hector Ardennson"
@@ -90,6 +110,13 @@ GOY_HRR_Ardenssonhector:0 "Hector Ardennson"
  HRR_GOY_dietrich_mach:0 "Dietrich Mach"
  HRR_GOY_winston_copperhill:0 "Winston Copperhill"
  HRR_GOY_regina_eagleclaw:0 "Regina Eagleclaw"
+### Scientists ###
+ GOY_HRR_nuclear_scientist_1:0 "Helga Griffengram"
+ GOY_HRR_land_scientist_1:0 "Heinz Kurtz"
+ GOY_HRR_land_scientist_2:0 "Gregor Totenkopf"
+ GOY_HRR_naval_scientist_1:0 "Aart Geelvleugel"
+ GOY_HRR_air_scientist_1:0 "Siegfried von Griffelung"
+ GOY_HRR_magic_scientist_1:0 "Ernst Groffinger"
 
 ### POM ###
 GOY_POM_liberation_commitee:0 "Reconstruction Committee"
@@ -169,6 +196,18 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  GOY_POM_gwenn_jezequel:0 "Gwenn Jezequel"
  ARD_comite_de_salut:0 "Comité de Salut Public"
  GOY_POM_federal_assembly:0 "Federal Assembly"
+### Scientists ###
+ GOY_POM_nuclear_scientist_1:0 "Enora Mahe"
+ GOY_POM_land_scientist_1:0 "Gael Huon"
+ GOY_POM_naval_scientist_1:0 "Mael Marhic"
+ GOY_POM_air_scientist_1:0 "Winoc Riou"
+ GOY_POM_magic_scientist_1:0 "Yannic Leroux"
+ GOY_ARD_nuclear_scientist_1:0 "Plaisance Morel"
+ GOY_ARD_land_scientist_1:0 "Chandler Belrose"
+ GOY_ARD_land_scientist_2:0 "Gustave Dupond"
+ GOY_ARD_naval_scientist_1:0 "Godard Fabron"
+ GOY_ARD_air_scientist_1:0 "Swift Sky"
+ GOY_ARD_magic_scientist_1:0 "Pauline Travers"
  
  #beach
  POM_gispen_name:0 "Gispen Fluffs" #DO NOT TRANSLATE. BREAKS BBA CODE

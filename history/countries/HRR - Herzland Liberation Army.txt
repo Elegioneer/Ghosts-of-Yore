@@ -135,6 +135,12 @@ recruit_character = HRR_GOY_advisor_16
 recruit_character = HRR_GOY_advisor_17
 recruit_character = HRR_GOY_advisor_18
 recruit_character = HRR_GOY_advisor_19
+recruit_character = GOY_HRR_nuclear_scientist_1
+recruit_character = GOY_HRR_land_scientist_1
+recruit_character = GOY_HRR_land_scientist_2
+recruit_character = GOY_HRR_naval_scientist_1
+recruit_character = GOY_HRR_air_scientist_1
+recruit_character = GOY_HRR_magic_scientist_1
 
 add_ideas = {
 	HRR_war_winter

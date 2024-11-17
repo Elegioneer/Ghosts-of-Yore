@@ -6,3 +6,11 @@ intelligence_agency = {
 	default = { tag = ARA }
 	available = { original_tag = ARA }
 }
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_pom
+	names = { "Kleze Skeud" }
+	
+	default = { tag = POM }
+	available = { original_tag = POM }
+}

@@ -1197,7 +1197,7 @@ ideas = {
 			picture = EQS_nuclear_power
 			removal_cost = -1
 			modifier = {
-				nuclear_production_factor = 0.25
+				sp_nuclear_bomb_speed_factor = 0.25
 			}
 		}
 		POM_red_officer_corps = {
@@ -3401,7 +3401,7 @@ ideas = {
 				custom_modifier_tooltip = POM_TT_free_guns
 			}
 			equipment_bonus = {
-				infantry_weapons = {
+				infantry_equipment = {
 					build_cost_ic = -0.1
 				}
 			}
@@ -3652,7 +3652,7 @@ ideas = {
 
 	aircraft_manufacturer = {
 		designer = yes
-		FLO_light_aircraft_concern = {
+		POM_FLO_light_aircraft_concern = {
 			allowed = {
 				original_tag = POM
 			}
@@ -3917,7 +3917,7 @@ ideas = {
 			}
 			equipment_bonus = {
 				medium_tank_chassis = {
-					max_speed = -0.05
+					maximum_speed = -0.05
 					soft_attack = 0.1
 					defense = 0.1
 					entrenchment = 0.5

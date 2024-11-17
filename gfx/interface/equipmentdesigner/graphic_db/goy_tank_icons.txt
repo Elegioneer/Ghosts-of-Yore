@@ -1,0 +1,47 @@
+POM = {
+	light_tank_chassis_0 = {
+		pool = {
+			weight = 4
+			icons = { 
+				GFX_POM_gw_light_tank_medium
+				GFX_POM_gw_light_tank_var_1_medium
+				GFX_POM_gw_light_tank_var_2_medium
+				GFX_POM_gw_light_tank_var_3_medium
+			}
+		}
+	}
+	light_tank_destroyer_chassis_0 = {
+		pool = {
+			weight = 5
+			icons = {
+				GFX_POM_gw_light_td_medium
+				GFX_POM_gw_light_td_var_1_medium
+				GFX_POM_gw_light_td_var_2_medium
+				GFX_POM_gw_light_td_var_3_medium
+			}
+		}
+	}
+	light_tank_artillery_chassis_0 = {
+		pool = {
+			weight = 5
+			icons = { 
+				GFX_POM_gw_light_art_medium
+				GFX_POM_gw_light_art_var_1_medium
+				GFX_POM_gw_light_art_var_2_medium
+				GFX_POM_gw_light_art_var_3_medium
+			}
+		}
+	}
+	light_tank_aa_chassis_0 = {
+		pool = {
+			weight = 5
+			icons = { 
+				GFX_POM_gw_light_spaa_medium
+				GFX_POM_gw_light_spaa_var_1_medium
+				GFX_POM_gw_light_spaa_var_2_medium
+				GFX_POM_gw_light_spaa_var_3_medium
+			}
+		}
+	}
+}
+

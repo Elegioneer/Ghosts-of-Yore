@@ -48,6 +48,14 @@ add_ideas = {
 set_stability = 0.65
 set_war_support = 0.34
 
+574 = {
+    add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+	}	
+}
+
 set_cosmetic_tag = NTR_GOY
 set_party_name = { ideology = democratic name = NTR_snowflakes_party long_name = NTR_snowflakes_party_long }
 set_party_name = { ideology = neutrality name = NTR_stormshields_party long_name = NTR_stormshields_party_long }
@@ -96,6 +104,10 @@ recruit_character = GOY_NTR_erik_grimclaw
 recruit_character = GOY_NTR_redsquall
 recruit_character = GOY_NTR_clown_grover_vi
 recruit_character = GOY_NTR_kingfeather
+recruit_character = GOY_NTR_land_scientist_1
+recruit_character = GOY_NTR_naval_scientist_1
+recruit_character = GOY_NTR_air_scientist_1
+recruit_character = GOY_NTR_magic_scientist_1
 
 set_rule = {
 	can_generate_female_aces = yes

@@ -433,7 +433,7 @@ CES_VINDICTIVE_GOD = {
 CES_END_OF_SHADOW = {
 	color = rgb { 31 71 8 }
 	color_ui = rgb { 31 71 8 }
-}					 
+}
 CRY_COM = {
 	color = rgb { 237 185 203 }
 	color_ui = rgb { 193 75 148 }

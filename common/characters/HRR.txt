@@ -858,5 +858,127 @@ characters = {
 			}
 			traits = { fortification_engineer }
 		}
+	}
+	# NUCLEAR SCIENTISTS
+	GOY_HRR_nuclear_scientist_1 = {
+		name = GOY_HRR_nuclear_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = HRR_military_research
+				}
+			}			
+		}		
+	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_HRR_land_scientist_1 = {
+		name = GOY_HRR_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_gifted_engineer }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+			}			
+		}
+	}
+
+	GOY_HRR_land_scientist_2 = {
+		name = GOY_HRR_land_scientist_2
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_8.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+			}			
+		}
+	}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_HRR_naval_scientist_1 = {
+		name = GOY_HRR_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_navy_5.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_bright }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+			}
+		}
+	}
+	
+	# AIR SCIENTISTS
+	
+	GOY_HRR_air_scientist_1 = {
+		name = GOY_HRR_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_11.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+			}			
+		}
+	}
+	
+	# MAGIC SCIENTISTS
+	
+	GOY_HRR_magic_scientist_1 = {
+		name = GOY_HRR_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_race_expert }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = HRR_support_uni
+				}
+			}			
+		}		
 	}	
 }

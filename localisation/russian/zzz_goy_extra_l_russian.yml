@@ -11,7 +11,13 @@ GOY_mass_mobilisation_idea:0 "Массовая Мобилизация"
 GOY_magical_melee_equipment:0 "Магическое примитивное оружие"
 GOY_magical_melee_equipment_short:0 "Магические посохи"
 GOY_magical_melee_equipment_tech:0 "Магические посохи"
+GOY_longer_supply_chains:0 "Растянутые пути снабжения"
+GOY_adaptive_camouflage:0 "Адаптивный камуфляж"
+GOY_resource_smuggling:0 "Ресурсы с черного рынка"
 
 # Dynamic ideology
 GOY_EAW_esotericism:0 "Эзотеризм"
 GOY_NTR_esotericism:0 "Тёмный властелин"
+
+# Focus Filters
+FOCUS_FILTER_GOY_BEACH:0 "Оборона пляжей"

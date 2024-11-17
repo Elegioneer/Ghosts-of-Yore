@@ -4,4 +4,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_ARA.dds"
 		noOfFrames = 2
 	}
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_pom"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_POM.dds"
+		noOfFrames = 2
+	}
 }

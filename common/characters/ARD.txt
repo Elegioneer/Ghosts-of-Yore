@@ -891,4 +891,120 @@ characters={
 			}
 		}
 	}
+	# NUCLEAR SCIENTISTS
+	GOY_ARD_nuclear_scientist_1 = {
+		name = GOY_ARD_nuclear_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_4.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 3
+			}
+			visible = {
+			}			
+		}		
+	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_ARD_land_scientist_1 = {
+		name = GOY_ARD_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_7.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+			}			
+		}
+	}
+
+	GOY_ARD_land_scientist_2 = {
+		name = GOY_ARD_land_scientist_2
+		portraits = {
+			army = {
+				large = "gfx/leaders/Aquileian_Generics/portrait_aquileian_generic_griffon_land_male_4.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist scientist_trait_bright }
+			skills = {
+				specialization_land = 3
+			}
+			visible = {
+			}			
+		}
+	}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_ARD_naval_scientist_1 = {
+		name = GOY_ARD_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_navy_1.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_submarine_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+			}
+		}
+	}
+	
+	# AIR SCIENTISTS
+	
+	GOY_ARD_air_scientist_1 = {
+		name = GOY_ARD_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Aquileian_Generics/portrait_aquileian_generic_pony_land_female_8.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_genius }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+			}			
+		}
+	}
+	
+	# MAGIC SCIENTISTS
+	
+	GOY_ARD_magic_scientist_1 = {
+		name = GOY_ARD_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Aquileian_Generics/portrait_aquileian_generic_griffon_land_female_7.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_resourceful }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+			}			
+		}		
+	}	
 }

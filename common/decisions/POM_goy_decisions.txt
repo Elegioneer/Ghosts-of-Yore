@@ -1,3 +1,39 @@
+	POM_herzland_claims_category = {
+		POM_attack_herzland = {
+		icon = GFX_decision_generic_intelligence_operation
+			custom_cost_trigger = {
+				command_power > 49
+			}
+			custom_cost_text = decision_cost_CP_50			
+			fire_only_once = yes
+			days_remove = 21	
+			remove_effect = {
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GRD
+						tag = GRI
+						tag = FEA
+						tag = STW
+						tag = BRZ
+						tag = PYT
+						tag = KAT
+						tag = YAL
+						tag = ANG
+						tag = ROU
+					}
+					exists = yes
+				}
+				POM = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+			}			
+		}
+}
 	POM_riseup_feathisia_category = {
 		POM_fea_arm_pretenders = {
 			icon = GFX_decision_generic_industry
@@ -79,7 +115,7 @@
 				ELSE = {
 					every_other_country = {
 						limit = {
-							has_puppet = FEA
+							has_subject = FEA
 						}
 						country_event = goy_pomovarra.137
 					}
@@ -1272,9 +1308,6 @@
 						defense_skill = 3
 						planning_skill = 2
 						logistics_skill = 1
-						visible = {
-							has_character_flag = GOY_char_available_flag
-						}
 					}
 					add_advisor_role = {
 						character = GOY_POM_floppen
@@ -1287,9 +1320,6 @@
 							cost = 100
 							ai_will_do = {
 								factor = 1
-							}
-							visible = {
-								has_character_flag = GOY_char_available_flag
 							}
 							traits = { army_infantry_2 }
 						}
@@ -1740,35 +1770,34 @@
 				factor = 1
 			}
 			remove_effect = {
-				add_corps_commander_role = {
-					character = GOY_POM_ponysander
-					traits = { pony_race_trait trait_reckless trickster }
-					skill = 3
-					attack_skill = 2
-					defense_skill = 4
-					planning_skill = 1
-					logistics_skill = 3
-					visible = {
-						has_character_flag = GOY_char_available_flag
+				effect_tooltip = {
+					add_corps_commander_role = {
+						character = GOY_POM_ponysander
+						traits = { pony_race_trait trait_reckless trickster }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 4
+						planning_skill = 1
+						logistics_skill = 3
+					}
+					add_advisor_role = {
+						character = GOY_POM_ponysander
+						advisor = {
+							slot = high_command
+							idea_token = POM_ponysander_advisor
+							allowed = {
+								original_tag = "POM"
+							}
+							cost = 100
+							ai_will_do = {
+								factor = 1
+							}
+							traits = { army_concealment_2 }
+						}
 					}
 				}
-				add_advisor_role = {
-					character = GOY_POM_ponysander
-					advisor = {
-						slot = high_command
-						idea_token = POM_ponysander_advisor
-						allowed = {
-							original_tag = "POM"
-						}
-						cost = 100
-						ai_will_do = {
-							factor = 1
-						}
-						visible = {
-							has_character_flag = GOY_char_available_flag
-						}
-						traits = { army_concealment_2 }
-					}
+				GOY_POM_ponysander = {
+					set_character_flag = GOY_char_available_flag
 				}
 				custom_effect_tooltip = POM_TT_ponysander_stats_tt
 				hidden_effect = {	
@@ -2265,6 +2294,29 @@
 			remove_effect = {
 				add_ideas = POM_peaceful_atom
 				set_country_flag = POM_FLAG_devscheme_6
+			custom_effect_tooltip = {
+				localization_key = nuclear_facility_construction_tt
+				temp_facility_state_loc = "[523.GetName]"
+				temp_facility_province_loc = "[523.GetCapitalVictoryPointName]"
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						523 = {
+							is_fully_controlled_by = ROOT
+							can_construct_building = nuclear_facility
+						}
+					}
+					262 = {
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							instant_build = yes
+							province = 1036
+						}
+					}
+				}
+			}				
 			}
 		}
 		POM_goy_aet_great_lighthouse = {
@@ -2319,32 +2371,24 @@
 		POM_goy_league_invitation = {
 			icon = GFX_decision_scroll
 			cost = 10
-			targets = { WNG BOI TRD FEA PYT ROU YAL ANG KAT STW BRZ }
-			targets_dynamic = yes
-			target_trigger = {
-				FROM = {
-					has_government = democratic
-					is_puppet = no
-					OR = {
-						original_tag = WNG
-						is_in_faction = no
-					}
-					OR = {
-						has_global_flag = GRI_empire_rising_flag
-						tag = WNG
-						tag = BOI
-						tag = TRD
-					}
-				}
-			}
-			complete_effect = {
-				FROM = {
-					country_event = {
-						id = goy_pomovarra.100
-						days = 1
+	targets = { WNG BOI TRD FEA PYT ROU YAL ANG KAT STW BRZ }
+				targets_dynamic = yes
+				target_trigger = {
+					FROM = {
+						has_government = democratic
+						is_puppet = no
+						OR = {
+							original_tag = WNG
+							is_in_faction = no
+						}
+						OR = {
+							has_global_flag = GRI_empire_rising_flag
+							tag = WNG
+							tag = BOI
+							tag = TRD
+						}
 					}
 				}
-			}
 		}
 	}
 	POM_goy_pomovarrisation_cat = {
@@ -2352,12 +2396,16 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 50
 			fire_only_once = yes
-			days_remove = 180
+			days_remove = 120
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 517
+				highlight_states_trigger = {
+					OR = {
+						state = 517
+					}
+				}
 			}
 			available = {
 				owns_state = 517
@@ -2370,12 +2418,16 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 50
 			fire_only_once = yes
-			days_remove = 240
+			days_remove = 160
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 421
+				highlight_states_trigger = {
+					OR = {
+						state = 421
+					}
+				}
 			}
 			available = {
 				owns_state = 421
@@ -2395,13 +2447,17 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 75
 			fire_only_once = yes
-			days_remove = 210
+			days_remove = 180
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 407
-				state = 406
+				highlight_states_trigger = {
+					OR = {
+						state = 407
+						state = 406
+					}
+				}
 			}
 			available = {
 				owns_state = 407
@@ -2426,13 +2482,17 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 75
 			fire_only_once = yes
-			days_remove = 360
+			days_remove = 220
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 523
-				state = 524
+				highlight_states_trigger = {
+					OR = {
+						state = 523
+						state = 524
+					}
+				}
 			}
 			available = {
 				owns_state = 523
@@ -2457,12 +2517,16 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 50
 			fire_only_once = yes
-			days_remove = 180
+			days_remove = 120
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 376
+				highlight_states_trigger = {
+					OR = {
+						state = 376
+					}
+				}
 			}
 			available = {
 				owns_state = 376
@@ -2482,14 +2546,18 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 100
 			fire_only_once = yes
-			days_remove = 270
+			days_remove = 160
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 376
-				state = 516
-				state = 473
+				highlight_states_trigger = {
+					OR = {
+						state = 377
+						state = 516
+						state = 473
+					}
+				}
 			}
 			available = {
 				owns_state = 377
@@ -2519,13 +2587,17 @@
 			icon = GFX_decision_goy_plant_pom_boar_flag
 			cost = 50
 			fire_only_once = yes
-			days_remove = 240
+			days_remove = 160
 			ai_will_do = {
 				factor = 1
 			}
 			highlight_states = {
-				state = 457
-				state = 436
+				highlight_states_trigger = {
+					OR = {
+						state = 457
+						state = 436
+					}
+				}
 			}
 			available = {
 				owns_state = 457
@@ -2555,8 +2627,12 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 400
-				state = 391
+				highlight_states_trigger = {
+					OR = {
+						state = 400
+						state = 391
+					}
+				}
 			}
 			available = {
 				owns_state = 400
@@ -2579,9 +2655,13 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 679
-				state = 384
-				state = 383
+				highlight_states_trigger = {
+					OR = {
+						state = 679
+						state = 384
+						state = 383
+					}
+				}
 			}
 			available = {
 				owns_state = 679
@@ -2606,10 +2686,14 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 471
-				state = 389
-				state = 488
-				state = 531
+				highlight_states_trigger = {
+					OR = {
+						state = 471
+						state = 389
+						state = 488
+						state = 531
+					}
+				}
 			}
 			available = {
 				679 = {
@@ -2665,9 +2749,13 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 378
-				state = 447
-				state = 399
+				highlight_states_trigger = {
+					OR = {
+						state = 378
+						state = 447
+						state = 399
+					}
+				}
 			}
 			available = {
 				owns_state = 378
@@ -2700,9 +2788,13 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 487
-				state = 652
-				state = 521
+				highlight_states_trigger = {
+					OR = {
+						state = 487
+						state = 652
+						state = 521
+					}
+				}
 			}
 			available = {
 				owns_state = 487
@@ -2736,11 +2828,15 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 390
-				state = 208
-				state = 380
-				state = 396
-				state = 379
+				highlight_states_trigger = {
+					OR = {
+						state = 390
+						state = 208
+						state = 380
+						state = 396
+						state = 379
+					}
+				}
 			}
 			available = {
 				owns_state = 390
@@ -2777,15 +2873,19 @@
 				factor = 1
 			}
 			highlight_states = {
-				state = 433
-				state = 434
-				state = 440
-				state = 441
-				state = 497
-				state = 498
-				state = 520
-				state = 538
-				state = 666
+				highlight_states_trigger = {
+					OR = {
+						state = 433
+						state = 434
+						state = 440
+						state = 441
+						state = 497
+						state = 498
+						state = 520
+						state = 538
+						state = 666
+					}
+				}
 			}
 			available = {
 				owns_state = 433
@@ -2803,7 +2903,6 @@
 				add_manpower = -75000
 			}
 			remove_effect = {
-				country_event = goy_pomovarra.103
 				every_owned_state = {
 					limit = {
 						OR = {
@@ -4069,7 +4168,6 @@
 						declare_war_on = {
 							type = take_state_focus
 							target = PREV
-							expire = 0
 							generator = MER.core_states
 						}
 					}

@@ -980,4 +980,136 @@ characters = {
 		}
 		gender = male
 	}
+	
+	# NUCLEAR SCIENTISTS
+	GOY_ARA_nuclear_scientist_1 = {
+		name = GOY_ARA_nuclear_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/scientists/GRI/adrastea.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 1
+			}
+			visible = {
+				owner = {				
+				has_completed_focus = ARA_hire_foreigners
+				}
+			}			
+		}
+	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_ARA_land_scientist_1 = {
+		name = GOY_ARA_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_16.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_fast_learner }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+			}			
+		}
+	}
+
+	GOY_ARA_land_scientist_2 = {
+		name = GOY_ARA_land_scientist_2
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_male_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = ARA_establish_imperial_army
+				}
+			}			
+		}
+	}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_ARA_naval_scientist_1 = {
+		name = GOY_ARA_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_navy_6.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist scientist_trait_resourceful }
+			skills = {
+				specialization_naval = 1
+			}
+			visible = {
+				owner = {
+				has_completed_focus = ARA_rumare_exercises
+				}
+			}
+		}
+	}
+	
+	# AIR SCIENTISTS
+	
+	GOY_ARA_air_scientist_1 = {
+		name = GOY_ARA_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_male_1.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_jet_expert scientist_trait_gifted_engineer }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = ARA_further_development
+				}
+			}			
+		}		
+	}
+
+	# MAGIC SCIENTISTS
+	
+	GOY_ARA_magic_scientist_1 = {
+		name = GOY_ARA_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/scientists/generic_scientists/pony/pony_scientist_male5.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+				owner = {				
+				has_completed_focus = ARA_ponies_of_aquileia
+				}
+			}			
+		}		
+	}		
 }

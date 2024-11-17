@@ -1219,6 +1219,15 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.4.a
+			IF = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				create_intelligence_agency = {
+					name = "Kleze Skeud"
+					icon = GFX_intelligence_agency_logo_pom
+				}
+			}
 			effect_tooltip = {
 				add_corps_commander_role = {
 					character = GOY_POM_schattenzahn
@@ -1277,6 +1286,16 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.7.a
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_REI
+					}
+				}
+			}
 			country_event = {
 				id = goy_pomovarra.10
 				hours = 2
@@ -1286,6 +1305,33 @@
 		}
 		option = {
 			name = goy_pomovarra.7.b
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAD
+						}
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_MOR
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
+			}
 			set_country_flag = POM_FLAG_no_shot
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -1317,10 +1363,14 @@
 		picture = GFX_event_attacked_convoy
 		is_triggered_only = yes
 		fire_only_once = yes
+		immediate = {
+			hidden_effect = {
+				set_country_flag = POM_FLAG_rebel_companies
+			}
+		}
 		option = {
 			name = goy_pomovarra.9.a
 			load_focus_tree = Pomovarra_goy_natives
-			set_country_flag = POM_FLAG_rebel_companies
 			set_country_flag = POM_FLAG_revolt_won
 			unlock_national_focus = POM_ar_chas
 			GOY_POM_reiher = {
@@ -1773,7 +1823,7 @@
 				division_template = {
 					name = "Guards of the Revolution"
 					
-					name_group = ARD_GAR_01
+					division_names_group = ARD_GAR_01
 					
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -3717,6 +3767,26 @@
 			name = goy_pomovarra.46.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAD
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			hidden_effect = {
 				GOY_POM_liberation_commitee = {
@@ -3797,6 +3867,14 @@
 			name = goy_pomovarra.46.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_MOR
+					}
+				}
 			}
 			country_event = goy_pomovarra.48
 		}
@@ -4508,6 +4586,13 @@
 			name = goy_pomovarra.67.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_CAD
+					}
+				}
 			}
 			add_popularity = {
 				ideology = fascism
@@ -4526,6 +4611,22 @@
 			name = goy_pomovarra.67.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			add_popularity = {
 				ideology = fascism
@@ -4559,6 +4660,13 @@
 			name = goy_pomovarra.68.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_CAD
+					}
+				}
 			}
 			add_political_power = 50
 			add_popularity = {
@@ -4571,6 +4679,22 @@
 			name = goy_pomovarra.68.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			add_stability = 0.02
 			add_popularity = {
@@ -4597,6 +4721,13 @@
 			name = goy_pomovarra.69.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_CAD
+					}
+				}
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -4614,6 +4745,22 @@
 			name = goy_pomovarra.69.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			add_popularity = {
 				ideology = democratic
@@ -4644,6 +4791,13 @@
 			name = goy_pomovarra.70.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_CAD
+					}
+				}
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -4655,6 +4809,22 @@
 			name = goy_pomovarra.70.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			add_popularity = {
 				ideology = democratic
@@ -4681,6 +4851,13 @@
 			name = goy_pomovarra.71.a
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					has_game_rule = {
+						rule = POM_ai_behavior
+						option = POM_CAD
+					}
+				}
 			}
 			add_popularity = {
 				ideology = neutrality
@@ -4692,6 +4869,22 @@
 			name = goy_pomovarra.71.b
 			ai_chance = {
 				base = 1
+				modifier = {
+					factor = 0
+					OR = {
+						has_game_rule = {
+							rule = POM_ai_behavior
+							option = POM_CAN
+						}
+						AND = {
+							is_historical_focus_on = yes
+							has_game_rule = {
+								rule = POM_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+				}
 			}
 			add_popularity = {
 				ideology = democratic
@@ -5309,11 +5502,11 @@
 				base = 1
 			}
 			effect_tooltip = {
-				ROOT = {
-					add_to_faction = LAK
+				FROM = {
+					add_to_faction = PREV
 				}
 			}
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.90
 					days = 4
@@ -5325,7 +5518,7 @@
 			ai_chance = {
 				base = 1
 			}
-			ROOT = {
+			FROM = {
 				country_event = {
 					id = goy_pomovarra.91
 					days = 4
@@ -5345,7 +5538,7 @@
 			ai_chance = {
 				base = 1
 			}
-			add_to_faction = LAK
+			add_to_faction = FROM
 		}
 	}
 	country_event = { #AET or HEL refused
@@ -6074,12 +6267,7 @@
 			ai_chance = {
 				base = 1
 			}
-			effect_tooltip = {
-				POM = {
-					create_faction = GOY_pact_of_bronze
-					add_to_faction = ROOT
-				}
-			}
+		POM	 = { add_to_faction = FEA }		
 			every_other_country = {
 				limit = {
 					OR = {
@@ -6123,9 +6311,35 @@
 			ai_chance = {
 				base = 1
 			}
-			create_faction = GOY_pact_of_bronze
-			add_to_faction = FROM
 			add_political_power = 50
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = GRD
+						tag = GRI
+						tag = STW
+						tag = BRZ
+						tag = PYT
+						tag = KAT
+						tag = YAL
+						tag = ANG
+						tag = ROU
+					}
+					exists = yes
+				}
+				FEA = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+				POM = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}			
 		}
 	}
 	country_event = { #Feathisia refuses
@@ -6708,6 +6922,10 @@
 		option = {
 			name = goy_pomovarra.136.a
 			ai_chance = { base = 1 }
+			set_politics = {
+			    ruling_party = fascism
+				elections_allowed = no
+			}			
 			IF = {
 				limit = {
 					has_character = FEA_herman_of_vorst_tot_vorst
@@ -6809,7 +7027,7 @@
 			hidden_effect = {
 				IF = {
 					limit = {
-						has_puppet = FEA
+						has_subject = FEA
 					}
 					annex_country = {
 						target = FEA
@@ -6914,7 +7132,7 @@
 				FEA = {
 					division_template = {
 						name = "Feathisian National Defence Force"
-						name_group = FEA_Inf_01
+						division_names_group = FEA_Inf_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -6935,7 +7153,7 @@
 					}
 					division_template = {
 						name = "Feathisian National Militia"
-						name_group = FEA_GAR_01
+						division_names_group = FEA_GAR_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -6952,7 +7170,7 @@
 					}
 					division_template = {
 						name = "Vorst tot Vorst's Finest"
-						name_group = FEA_MONINF_01
+						division_names_group = FEA_MONINF_01
 						regiments = {
 							knights = { x = 0 y = 0 }
 							knights = { x = 0 y = 1 }

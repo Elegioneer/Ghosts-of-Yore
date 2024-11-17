@@ -208,6 +208,88 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/POM_motorized_rocket_unit.dds"
 	}
 	
+	SpriteType = {
+		name = "GFX_POM_self_propelled_super_heavy_artillery_equipment_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_POM_self_propelled_super_heavy_artillery.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_gwtank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_chassis.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_light_tank_chassis_0_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_chassis.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_spaa_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_aa.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_td_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_ap.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_art_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_he.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_var_1_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_desert.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_aa_var_1_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_aa_desert.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_destroyer_var_1_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_ap_desert.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_artillery_var_1_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_he_desert.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_var_2_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_winter.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_aa_var_2_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_aa_winter.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_destroyer_var_2_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_ap_winter.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_artillery_var_2_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_he_winter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_var_3_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_wood.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_aa_var_3_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_aa_wood.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_destroyer_var_3_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_ap_wood.dds"
+	}
+	SpriteType = {
+		name = "GFX_POM_gw_light_tank_artillery_var_3_medium"
+		texturefile = "gfx/interface/technologies/armour/goy_leichttraktor_he_wood.dds"
+	}
+	
+	
 	#POM - ALLARD
 	
 	SpriteType = {
@@ -217,74 +299,74 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_ARD_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_goy_aquileia_2d_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_2d_infantry_weapons1_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_2.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_2d_improved_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_2.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_3.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_2d_advanced_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_infantry_equipment_3.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_infantry_equipment_3.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/JER_magical_equipment_1.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_magical_equipment_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/JER_magical_equipment_2.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_magical_equipment_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_tech_trucks_medium"
-		texturefile = "gfx/interface/technologies/FRA_motorized_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/FRA_motorized_equipment_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_motorized_equipment_0_medium"
-		texturefile = "gfx/interface/technologies/FRA_motorized_equipment_0.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/FRA_motorized_equipment_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/JER_moto_equipment.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_moto_equipment.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_motorized_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/JER_moto_equipment.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_moto_equipment.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_ARD_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/JER_mech_inf.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/JER_mech_inf.dds"
 	}
 	SpriteType = {
 		name = "GFX_ARD_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/JER_mech_inf.dds"
+		texturefile = "gfx/interface/technologies/infantry_folder/aquileia_2d/infantry_folder/aquileia_2d/JER_mech_inf.dds"
 	}
 }

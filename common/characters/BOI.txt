@@ -1099,4 +1099,136 @@ characters = {
 			}
 		}		
 	}
+	
+	# NUCLEAR SCIENTISTS
+	GOY_BOI_nuclear_scientist_1 = {
+		name = GOY_BOI_nuclear_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_2.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 1
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = BOI_guto_institute
+				}
+			}			
+		}		
+	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_BOI_land_scientist_1 = {
+		name = GOY_BOI_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_bright }
+			skills = {
+				specialization_land = 1
+			}
+			visible = {
+			}			
+		}
+	}
+
+	GOY_BOI_land_scientist_2 = {
+		name = GOY_BOI_land_scientist_2
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_8.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_artillery_specialist }
+			skills = {
+				specialization_land = 3
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = BOI_new_doctrine
+				}
+			}			
+		}
+	}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_BOI_naval_scientist_1 = {
+		name = GOY_BOI_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_navy_8.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = BOI_birth_navy
+				}
+			}
+		}
+	}
+	
+	# AIR SCIENTISTS
+	
+	GOY_BOI_air_scientist_1 = {
+		name = GOY_BOI_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_16.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_helicopter_expert scientist_trait_genius }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = BOI_found_air_academy
+				}
+			}			
+		}
+	}
+	
+	# MAGIC SCIENTISTS
+	
+	GOY_BOI_magic_scientist_1 = {
+		name = GOY_BOI_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_magical = 1
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = BOI_educate_engineers
+				}
+			}			
+		}		
+	}
 }

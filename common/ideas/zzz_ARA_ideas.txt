@@ -4023,7 +4023,7 @@ country = {
 			picture = EQS_nuclear_power
 			removal_cost = -1
 			modifier = {
-				nuclear_production_factor = 0.1
+				sp_nuclear_bomb_speed_factor = 0.1
 				production_speed_nuclear_reactor_factor = 0.1
 			}
 		}

@@ -108,7 +108,8 @@ HRR_dem_party:0 "Liberation Front"
  HRR_GOY_rep_fas_long:0 "Herzlander Unity Party"
  HRR_GOY_rep_com:0 "HSP"
  HRR_GOY_rep_com_long:0 "Herzlander Socialist Party"
- ### POM ###
+ 
+### POM ###
 POM_goy_rebel_party:0 "Rebel Alliance"
  POM_goy_rebel_party_long:0 "Rebel Alliance"
  POM_goy_reiher_party:0 "Reiher's Clique"

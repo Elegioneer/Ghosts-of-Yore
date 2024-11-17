@@ -314,7 +314,7 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = POM_merc_liason_advisor
+			idea_token = POM_acquisitioner_advisor
 			allowed = {
 				original_tag = "POM"
 			}		
@@ -360,6 +360,33 @@ characters = {
 				large="gfx/leaders/POM/GOY_ponysander.tga"
 				small="GFX_idea_GOY_POM_ponysander"
 			}
+		}
+		corps_commander = {
+			desc = ""
+			traits = { pony_race_trait trait_reckless trickster }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POM_ponysander_advisor
+			allowed = {
+				original_tag = "POM"
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1
+			}
+			visible = {
+				has_character_flag = GOY_char_available_flag
+			}
+			traits = { army_concealment_2 }
 		}
 	}
 	GOY_POM_feuerstein = {
@@ -1603,4 +1630,111 @@ characters = {
 			}
 		}
 	}
+	# NUCLEAR SCIENTISTS
+	GOY_POM_nuclear_scientist_1 = {
+		name = GOY_POM_nuclear_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_3.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert }
+			skills = {
+				specialization_nuclear = 1
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = POM_engineering_courses
+				}
+			}			
+		}		
+	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_POM_land_scientist_1 = {
+		name = GOY_POM_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_5.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_bright }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+			}			
+		}
+	}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_POM_naval_scientist_1 = {
+		name = GOY_POM_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_navy_2.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 1
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = POM_call_of_the_ocean
+				}
+			}
+		}
+	}
+	
+	# AIR SCIENTISTS
+	
+	GOY_POM_air_scientist_1 = {
+		name = GOY_POM_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_land_10.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_helicopter_expert scientist_trait_genius }
+			skills = {
+				specialization_air = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = POM_continue_aircraft_development
+				}
+			}			
+		}
+	}
+	
+	# MAGIC SCIENTISTS
+	
+	GOY_POM_magic_scientist_1 = {
+		name = GOY_POM_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Asia/portrait_griffon_generic_operative_female_1.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+			}			
+		}		
+	}	
 }

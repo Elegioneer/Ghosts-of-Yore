@@ -177,7 +177,7 @@ recruit_character = ARD_advisor_13
 recruit_character = ARD_advisor_14
 recruit_character = ARD_advisor_15
 recruit_character = ARD_advisor_16
-recruit_character = ARD_advisor_17
+#recruit_character = ARD_advisor_17
 recruit_character = ARD_advisor_18
 recruit_character = ARD_advisor_25
 recruit_character = ARD_advisor_26
@@ -208,6 +208,14 @@ recruit_character = ARD_herwing
 recruit_character = ARD_nuke_boi
 recruit_character = ARD_rocket_boi
 
+### Scientists ###
+recruit_character = GOY_ARD_nuclear_scientist_1
+recruit_character = GOY_ARD_land_scientist_1
+recruit_character = GOY_ARD_land_scientist_2
+recruit_character = GOY_ARD_naval_scientist_1
+recruit_character = GOY_ARD_air_scientist_1
+recruit_character = GOY_ARD_magic_scientist_1
+
 ### Archons ###
 
 ### Trubach ###
@@ -232,7 +240,7 @@ if = {
 			tank_nsb_armor_upgrade = 2
 		}
 		obsolete = yes
-		icon = "gfx/interface/technologies/JER_gw_tank.dds"
+		icon = "gfx/interface/technologies/armour_folder/aquileia_2d/JER_gw_tank.dds"
 	}
 	create_equipment_variant = {
 		name = "Dassault Prot. Cannon"
@@ -249,7 +257,7 @@ if = {
 			tank_nsb_engine_upgrade = 1
 			tank_nsb_armor_upgrade = 2
 		}
-		icon = "gfx/interface/technologies/JER_gw_tank.dds"
+		icon = "gfx/interface/technologies/armour_folder/aquileia_2d/JER_gw_tank.dds"
 	}
 	create_equipment_variant = {
 		name = "Dassault M.1"
@@ -266,7 +274,7 @@ if = {
 			tank_nsb_engine_upgrade = 4
 			tank_nsb_armor_upgrade = 9
 		}
-		icon = "gfx/interface/technologies/JER_basic_light_tank.dds"
+		icon = "gfx/interface/technologies/armour_folder/aquileia_2d/JER_basic_light_tank.dds"
 	}
 	create_equipment_variant = {
 		name = "Dassault Gros" 
@@ -286,7 +294,7 @@ if = {
 			tank_nsb_engine_upgrade = 10
 			tank_nsb_armor_upgrade = 5
 		}
-		icon = "gfx/interface/technologies/JER_basic_heavy_tank.dds"
+		icon = "gfx/interface/technologies/armour_folder/aquileia_2d/JER_basic_heavy_tank.dds"
 	}
 }
 

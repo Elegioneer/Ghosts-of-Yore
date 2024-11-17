@@ -130,6 +130,12 @@ recruit_character = GOY_BOI_archon_proteus
 recruit_character = GOY_BOI_archon_hephaestus
 recruit_character = GOY_BOI_archon_lucinus
 recruit_character = GOY_BOI_joseph_griffchard
+recruit_character = GOY_BOI_nuclear_scientist_1
+recruit_character = GOY_BOI_land_scientist_1
+recruit_character = GOY_BOI_land_scientist_2
+recruit_character = GOY_BOI_naval_scientist_1
+recruit_character = GOY_BOI_air_scientist_1
+recruit_character = GOY_BOI_magic_scientist_1
 
 #
 

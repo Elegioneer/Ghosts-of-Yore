@@ -6631,6 +6631,10 @@ country_event = { #Tendering His Resignation
 		    uses = 1
 		    category = nuclear
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 0.1
+		}		
 		custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 	}
 }
@@ -6650,9 +6654,13 @@ country_event = { #The Death of a Dream
 		add_tech_bonus = {
 			name = GOY_bonus_nuclear
 		    bonus = 0.25
-		    uses = 2
+		    uses = 1
 		    category = nuclear
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 0.25
+		}		
 		custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 	}
 }
@@ -6780,9 +6788,13 @@ country_event = { #Destruction of Temple Prime
 		add_political_power = -75
 		add_tech_bonus = {
 		    bonus = 0.75
-		    uses = 2
+		    uses = 1
 		    category = nuclear
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 1.0
+		}		
 		422 = { #replace with state id of schiesswald
 			add_manpower = -12000
 			add_resource = {
@@ -6825,6 +6837,10 @@ country_event = { #The Investigation
 			uses = 5
 			category = race_tech
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 0.5
+		}	
 		custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 	}
 }
@@ -6957,6 +6973,10 @@ country_event = { #The Universal Cure Safe
 			uses = 5
 			category = race_tech
 		}
+		add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 1.0
+		}		
 		custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 	}
 }
@@ -7082,6 +7102,7 @@ country_event = { #The Chosen
 		name = 	arantiga_decision.36.a
 		clr_country_flag = IRI_project_ongoing
 		add_ideas = ARA_project_legionary
+		complete_special_project = sp:sp_heavy_knight_armor	
 		custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 	}
 }
@@ -7481,6 +7502,10 @@ country_event = { #Hedonism
 				uses = 2
 				category = magical_tech
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 1.0
+			}		
 			clr_country_flag = IRI_project_ongoing
 			custom_effect_tooltip = GOY_ARA_CETT_IRI_conclusion
 		}

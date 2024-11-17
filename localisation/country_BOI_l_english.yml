@@ -1001,7 +1001,7 @@ BOI_CETT_griffonsteel_3:0 "Modify §YGriffonsteel§! by\n§YTowed Artillery§!: 
 BOI_CETT_gilda_herzland:0 "§YRepublic of Griffonstone§! will be known as §YThe Central Griffonian Confederacy§!.\nAll owned regions of §YHerzland§! will be cored, other regions will be claimed."
 BOI_CETT_gilda_herzland_BRZ:0 "§YBronzehill§! will be released as a puppet."
 BOI_CTTT_gilda_herzland:0 "Owns all starting land of §YThe Griffonian Empire§!, §YKaterin Principality§!, §YBarony of Angriver§!, and §YYale Rectorate§!."
-BOI_CETT_herzlandism:0 "We will claim all territories with significant §YHerzlandish§! population as our own."
+BOI_CETT_herzlandism:0 "Grants §Yclaims§! and §Ywargoals§! for all §Ystarting states§! of the following nations:\n@HLQ [HLQ.GetName]\n@LSM [LSM.GetName]\n@EYR [EYR.GetName]\n@ERI [ERI.GetName]\n@AVI [AVI.GetName]\n@HEL [HEL.GetName]\n@AET [AET.GetName]\n@TRD [TRD.GetName]\n@FEZ [FEZ.GetName]\n@MNC [MNC.GetName]\nThese states can be cored by @BOI [BOI.GetName] using the §YIntegration§! Occupation Law if average §YCompliance§! of occupied states reaches §Y40%§!."
 BOI_CETT_druglord:0 "We will become §Runiversally hated§! for distributing opium."
 BOI_CETT_gestal_focus_tree:0 "§YGriffonstone§! will get §CGestal§!'s §YFocus Tree§!."
 BOI_CETT_gallus_focus_tree:0 "§YGriffonstone§! will get §CGallus§!'s §YFocus Tree§!."
@@ -1027,7 +1027,7 @@ BOI_CETT_archons:0 "Archons are now available as advisors"
 BOI_TT_add_100_planes:0 "§Y100§! units of §YBasic Fighter§! are added to the antional stockpile."
 GOY_BOI_enable_steam_engines_tt:0 "Enables §YSteam Engines§! for ships."
 GOY_BOI_enable_steam_engines_no_mtg_tt:0 "Which grants:\nDockyard output: §G+10%§!\nMaximum naval range: §R-10%§!"
-GOY_BOI_TT_no_cores_ach:0 "Has no §GPotential Cores§!."
+GOY_BOI_TT_owns_all_claims:0 "Owns all §YClaimed States§!."
 GOY_BOI_TT_donations_ach:0 "Has donated §G5§! batches of each equipment type available via decisions to @ELF§Y[ELF.GetName]§!."
 
 ## Decisions ##

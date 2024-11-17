@@ -192,7 +192,10 @@ goy_ach_dream_of_a_better_griffonia = {
 				NOT = {
 					is_on_continent = asia
 				}
-				is_owned_by = ROOT
+				AND = {
+					is_owned_by = ROOT
+					is_core_of = ROOT
+				}
 			}
 		}
     }    
@@ -300,10 +303,10 @@ goy_ach_trail_of_destruction = {
     }
     
     happened = {
-		all_other_country = {
-			OR = {
-				is_major = no
-				NOT = {
+		NOT = {
+			any_other_country = {
+				is_major = yes
+				any_owned_state = {
 					is_on_continent = asia
 				}
 			}
@@ -328,9 +331,15 @@ goy_ach_queenmaker = {
 		#todo validate if works
 		has_idea = BOI_cyrille_I
 		has_completed_focus = BOI_claim_the_borderlands
+		has_completed_focus = BOI_dominate_black_market
 		custom_trigger_tooltip = {
 			tooltip = GOY_BOI_TT_no_cores_ach
 			check_variable = { BOI_potential_cores^0 = 0 }
+		}
+		all_of_scopes = {
+			array = BOI.claimed_states
+			tooltip = GOY_BOI_TT_owns_all_claims
+			is_owned_by = BOI
 		}
     }    
 }

@@ -1021,4 +1021,93 @@ characters = {
 			}
 		}
 	}
+	
+	# LAND SCIENTISTS
+	
+	GOY_NTR_land_scientist_1 = {
+		name = GOY_NTR_land_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Pony/portrait_pony_generic_operative_female_2.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_bright }
+			skills = {
+				specialization_land = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = NTR_foreign_instructors 
+				}
+				}
+			}			
+		}
+	
+	# NAVAL SCIENTIST
+	
+	GOY_NTR_naval_scientist_1 = {
+		name = GOY_NTR_naval_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/Pony/portrait_pony_generic_navy_5.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_surface_ship_specialist }
+			skills = {
+				specialization_naval = 2
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = NTR_educate_shipwrights
+				}
+				}
+			}
+		}
+	
+	# AIR SCIENTISTS
+	
+	GOY_NTR_air_scientist_1 = {
+		name = GOY_NTR_air_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/scientists/generic_scientists/pony_scientist_male1.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist }
+			skills = {
+				specialization_air = 1
+			}
+			visible = {
+				owner = {			
+				has_completed_focus = NTR_through_skies
+				}
+			}			
+		}
+	}
+
+	# MAGIC SCIENTISTS
+	
+	GOY_NTR_magic_scientist_1 = {
+		name = GOY_NTR_magic_scientist_1
+		portraits = {
+			army = {
+				large = "gfx/leaders/scientists/generic_scientists/pony_scientist_male4.tga"
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_race_specialist scientist_trait_bright }
+			skills = {
+				specialization_magical = 2
+			}
+			visible = {
+			}			
+		}		
+	}	
 }

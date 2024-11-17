@@ -991,7 +991,7 @@ POM_princely_procurement_organization = {
 		}
 	}
 	
-	research_categories = { infantry_equipment support_equipment }
+	research_categories = { infantry_weapons support_tech }
 	
 	tree_header_text = {
 		text = mio_header_GOY_PL_logistics
@@ -2605,7 +2605,7 @@ ARA_karthin_shipyards_organization = {
 
 	initial_trait = {
 		production_bonus = {
-			refit_speed = 0.25
+			production_capacity_factor = 0.1
 		}
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05

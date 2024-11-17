@@ -5,7 +5,14 @@
  GOY_reichspakt:0 "Рейхспакт"
  NTR_northern_league:0 "Северная Лига"
  GOY_boreal_alliance:0 "Северный Альянс"
+ goy_pom_allard_faction:0 "Революционный Авангард"
+ goy_pom_aetia_league:0 "Аэтская Лига"
+ goy_pom_pom_pact:0 "Пакт Помоварры"
+ GOY_POM_dominion:0 "Помоваррский Доминион"
+ GOY_pact_of_bronze:0 "Бронзовый Пакт"
  
  ## Tech Sharing ##
  BOI_griffonstone_tech_sharing_name:0 "Исследовательский Кооператив Грифонского Союза"
  BOI_griffonstone_tech_sharing_desc:0 ""
+ POM_aetian_tech_sharing_name:0 "Панаэтская Академия"
+ POM_aetian_tech_sharing_desc:0 ""

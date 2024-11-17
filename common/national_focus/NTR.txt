@@ -89,6 +89,14 @@
 				}
 				add_extra_state_shared_building_slots = 1
 			}
+			574 = {
+				add_building_construction = {
+				type = magical_facility
+				level = 1
+				instant_build = yes
+				province = 1517
+						}
+					}			
 			country_event = ntribes.9
 		}
 	}
@@ -212,6 +220,10 @@
 				uses = 2
 				category = land_doctrine
 			}
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = GOY_NTR_land_scientist_1
+			}			
 		}
 	}
 	shared_focus = {
@@ -419,6 +431,10 @@
 				uses = 2
 				category = armor
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}			
 		}
 	}
 	shared_focus = {
@@ -475,6 +491,10 @@
 				category = magical_tech
 			}
 			add_ideas = NTR_heroes_weapons
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}			
 		}
 	}
 	shared_focus = {
@@ -629,6 +649,14 @@
 				uses = 4
 				category = naval_equipment
 			}
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = GOY_NTR_naval_scientist_1
+			}
+			custom_effect_tooltip = {
+				localization_key = available_scientist_one_line_tt
+				CHARACTER = GOY_NTR_air_scientist_1
+			}			
 		}
 	}
 	shared_focus = {
@@ -1004,6 +1032,10 @@
 				category = naval_doctrine
 			}
 			add_ideas = NTR_modern_navy
+		add_breakthrough_progress = {
+			specialization = specialization_naval
+			value = 1.0
+		}			
 		}
 	}
 	shared_focus = {
@@ -1055,6 +1087,10 @@
 				category = air_doctrine
 			}
 			add_ideas = NTR_riders_storm_idea
+		add_breakthrough_progress = {
+			specialization = specialization_air
+			value = 1.0
+		}			
 		}
 	}
 	shared_focus = {
@@ -1078,6 +1114,10 @@
 				uses = 1
 				category = nuclear
 			}
+		add_breakthrough_progress = {
+			specialization = specialization_nuclear
+			value = 0.5
+		}			
 		}
 	}
 	###
@@ -2599,8 +2639,9 @@
 		relative_position_id = NTR_clan_stormshield
 		prerequisite = { focus = NTR_limited_contacts }
 		prerequisite = { focus = NTR_foreign_tech }
-		completion_reward = {
+		completion_reward = {	
 			decrease_illiteracy = yes
+			country_event = ntribes.120			
 		}
 	}
 	shared_focus = {
@@ -4372,6 +4413,10 @@
 		prerequisite = { focus = NTR_clan_moltenrock }
 		completion_reward = {
 			add_research_slot = 1
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 0.5
+			}			
 		}
 	}
 	shared_focus = {
@@ -4449,6 +4494,10 @@
 				uses = 1
 				category = magical_tech
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 0.5
+			}			
 		}
 	}
 	shared_focus = {
@@ -4766,6 +4815,30 @@
 				custom_effect_tooltip = NTR_icecarvers_enabled
 				add_ideas = NTR_ice_fleet
 			}
+			custom_effect_tooltip = {
+				localization_key = naval_facility_construction_tt
+				temp_facility_state_loc = "[562.GetName]"
+				temp_facility_province_loc = "[562.GetCapitalVictoryPointName]"
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						562 = {
+							is_fully_controlled_by = ROOT
+							can_construct_building = naval_facility
+						}
+					}
+					562 = {
+						add_building_construction = {
+							type = naval_facility
+							level = 1
+							instant_build = yes
+							province = 10200
+						}
+					}
+				}
+			}
+					complete_special_project = sp:sp_naval_ice_carrier			
 		}
 	}
 	#
@@ -4851,7 +4924,7 @@
 				building = industrial_complex
 				resource = crystals
 				amount = 1
-			}
+			}			
 		}
 	}
 	shared_focus = {
@@ -4869,6 +4942,10 @@
 		prerequisite = { focus = NTR_crystal_architecture }
 		completion_reward = {
 			add_research_slot = 1
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 1.0
+			}			
 		}
 	}
 	shared_focus = {
@@ -5871,6 +5948,10 @@
 			    remove_idea = NTR_broken_ties
 				add_idea = NTR_broken_ties_1
 			}
+		add_breakthrough_progress = {
+			specialization = specialization_magical
+			value = 1.0
+		}			
 		}
 	}
 	shared_focus = {
@@ -6310,6 +6391,29 @@
 		prerequisite = { focus = NTR_twist_model focus = NTR_blood_iron }
 		completion_reward = {
 			add_research_slot = 1
+			custom_effect_tooltip = {
+				localization_key = air_facility_construction_tt
+				temp_facility_state_loc = "[562.GetName]"
+				temp_facility_province_loc = "[562.GetCapitalVictoryPointName]"
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						562 = {
+							is_fully_controlled_by = ROOT
+							can_construct_building = air_facility
+						}
+					}
+					562 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 88
+						}
+					}
+				}
+			}			
 		}
 	}
 	shared_focus = {
