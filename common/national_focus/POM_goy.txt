@@ -5869,7 +5869,7 @@
 			Improve_Science_Base = yes
 			custom_effect_tooltip = {
 				localization_key = available_scientist_one_line_tt
-				CHARACTER = GGOY_POM_nuclear_scientist_1
+				CHARACTER = GOY_POM_nuclear_scientist_1
 			}			
 		}
 	}
@@ -9697,6 +9697,14 @@
 					HEL = { exists = no }
 					AET = { exists = no }
 				}
+				AND = {
+					HEL = { is_in_faction_with = ROOT }
+					AET = { exists = no }
+				}
+				AND = {
+					HEL = { exists = no }
+					AET = { is_in_faction_with = ROOT }
+				}				
 			}
 		}
 		will_lead_to_war_with = JER
@@ -9898,6 +9906,7 @@
 			add_ideas = free_trade
 			add_ideas = POM_laissez_faire
 			set_country_flag = trade_laws_blocked
+			decrease_poverty = yes			
 		}
 	}
 	shared_focus = {
@@ -9999,6 +10008,7 @@
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_ideas = POM_social_capitalism
+			decrease_poverty = yes
 		}
 	}
 	shared_focus = {
