@@ -7,13 +7,12 @@ POM_JER_manufacture_aquileia_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 377
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -31,13 +30,12 @@ POM_JER_manufacture_rila_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 435
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -55,13 +53,12 @@ POM_JER_manufacture_vin_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 435
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -79,8 +76,11 @@ POM_JER_dassault_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		
+	}
+	available = {
 		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -98,13 +98,11 @@ POM_JER_leopard_jer_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
-			has_completed_focus = JER_support_automobile_industry
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -122,8 +120,11 @@ POM_JER_safran_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		
+	}
+	available = {
 		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 }
@@ -136,8 +137,11 @@ POM_JER_thales_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		
+	}
+	available = {
 		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 }
@@ -150,13 +154,12 @@ POM_JER_astrium_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 377
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 }
@@ -169,13 +172,12 @@ POM_JER_mistral_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 377
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -196,13 +198,12 @@ POM_JER_loup_shipping_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
-		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
-		}
+		
 	}
 	available = {
 		owner = {
 			owns_state = 377
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -221,8 +222,11 @@ POM_JER_fer_de_lance_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		
+	}
+	available = {
 		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 	initial_trait = {
@@ -257,8 +261,11 @@ POM_JER_AVA_tanks_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	visible = {
+		
+	}
+	available = {
 		owner = {
-			has_country_flag = POM_FLAG_aquiuleian_companies
+			has_completed_focus = POM_restore_production_lines
 		}
 	}
 }

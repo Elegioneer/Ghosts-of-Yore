@@ -441,11 +441,11 @@ on_actions = {
 			}
 		}
 	}
-	on_peaceconference_started = {
+	on_capitulation = {
 		effect = {
 			if = {
 				limit = {
-					FROM = { tag = ARD }
+					ROOT = { tag = ARD }
 				}
 				ARD = {
 					every_unit_leader = {
@@ -462,13 +462,21 @@ on_actions = {
 					JER_eagleheart = { set_nationality = JER }
 					JER_josette_fierte = { set_nationality = JER }
 					JER_gunnar_sable = { set_nationality = JER }
+					JER_victor_moreau = { set_nationality = JER }
+					JER_felix_murat = { set_nationality = JER }
+					JER_jean_lafitte = { set_nationality = JER }
+					JER_claire_lacolombe = { set_nationality = JER }
+					JER_krayt_de_belanger = { set_nationality = JER }
+					JER_jean_chevalier_bargette = { set_nationality = JER }
+					JER_gilbert_la_fauvette = { set_nationality = JER }
+					JER_fier_chouquette = { set_nationality = JER }
 				}
 				every_state = {
 					remove_core_of = ARD
 				}
 				if = {
 					limit = {
-						ROOT = { tag = MER }
+						FROM = { tag = MER }
 					}
 					POM = {
 						GOY_POM_federal_assembly = { set_nationality = JER }

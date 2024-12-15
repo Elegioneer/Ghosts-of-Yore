@@ -10936,7 +10936,6 @@ focus_tree = {
 					level = 1
 				}
 			}
-		}
 			custom_effect_tooltip = {
 				localization_key = nuclear_facility_construction_tt
 				temp_facility_state_loc = "[281.GetName]"
@@ -10959,7 +10958,8 @@ focus_tree = {
 						}
 					}
 				}
-			}		
+			}
+		}
 	}
 	focus = {
 	    id = ARA_western_mess

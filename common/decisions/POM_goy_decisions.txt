@@ -293,6 +293,9 @@
 			}
 			visible = {
 				has_completed_focus = POM_land_of_many_creatures
+				NOT = {
+					has_tech = tech_pegasi_c
+				}
 			}
 			available = {
 				has_tech = tech_pegasi
@@ -371,14 +374,24 @@
 			}
 			visible = {
 				has_completed_focus = POM_land_of_many_creatures
+				NOT = {
+					has_tech = tech_unicorn_ms5
+				}
 			}
 			available = {
 				has_tech = tech_unicorn
+				NOT = {
+					set_country_flag = POM_FLAG_unicorn_th
+				}
 			}
 
 			modifier = {
 				research_speed_factor = -0.05
 				political_power_gain = -0.1
+			}
+			
+			complete_effect = {
+				set_country_flag = POM_FLAG_unicorn_ms
 			}
 
 			remove_effect = {
@@ -449,14 +462,24 @@
 			}
 			visible = {
 				has_completed_focus = POM_land_of_many_creatures
+				NOT = {
+					has_tech = tech_unicorn_th5
+				}
 			}
 			available = {
 				has_tech = tech_unicorn
+				NOT = {
+					set_country_flag = POM_FLAG_unicorn_ms
+				}
 			}
 
 			modifier = {
 				research_speed_factor = -0.05
 				political_power_gain = -0.15
+			}
+			
+			complete_effect = {
+				set_country_flag = POM_FLAG_unicorn_th
 			}
 
 			remove_effect = {

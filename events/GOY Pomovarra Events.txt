@@ -1769,18 +1769,64 @@
 			every_unit_leader = {
 				limit = {
 					has_character_flag = field_promotion_achievement
+					NOT = {
+						has_character_flag = GOY_jacques_noir
+					}
 				}
 				retire = yes
 			}
+			IF = {
+				limit = {
+					JER = {
+						JER_gabriel_duval = {
+							is_unit_leader = yes
+						}
+					}
+				}
+				JER = {
+					JER_gabriel_duval = { set_nationality = ARD }
+				}
+			}
+			ELSE = {
+				add_corps_commander_role = {
+					Character = ARD_gabriel_duval
+					traits={ trait_critical_spirit trait_talented_coordinator griffon_race_trait }
+					skill=3
+					attack_skill=3
+					defense_skill=2
+					planning_skill=2
+					logistics_skill=3
+				}
+				add_advisor_role = {
+					character = ARD_gabriel_duval
+					activate = no
+					advisor = {
+						slot = high_command
+						cost = 50
+						idea_token = ARD_gabriel_duval_idea
+						traits = {
+							army_infantry_1
+						}
+					}
+				}
+			}
 			JER = {
 				JER_simon_guilbert = { set_nationality = ARD }
-				JER_gabriel_duval = { set_nationality = ARD }
 				JER_cecilia_dutertre = { set_nationality = ARD }
 				JER_sophie_altiert = { set_nationality = ARD }
 				JER_seva_shako = { set_nationality = ARD }
 				JER_eagleheart = { set_nationality = ARD }
 				JER_josette_fierte = { set_nationality = ARD }
 				JER_gunnar_sable = { set_nationality = ARD }
+				
+				JER_victor_moreau = { set_nationality = ARD }
+				JER_felix_murat = { set_nationality = ARD }
+				JER_jean_lafitte = { set_nationality = ARD }
+				JER_claire_lacolombe = { set_nationality = ARD }
+				JER_krayt_de_belanger = { set_nationality = ARD }
+				JER_jean_chevalier_bargette = { set_nationality = ARD }
+				JER_gilbert_la_fauvette = { set_nationality = ARD }
+				JER_fier_chouquette = { set_nationality = ARD }
 			}
 			hidden_effect = {
 				GOY_POM_ponysander = {
@@ -6907,6 +6953,42 @@
 					idea_token = ARD_gunnar_sable_idea
 					traits = {
 						army_logistics_2
+					}
+				}
+			}
+			remove_advisor_role = {
+				character = "JER_victor_moreau"
+				slot = army_chief
+			}
+			remove_advisor_role = {
+				character = "JER_victor_moreau"
+				slot = high_command
+			}
+			add_advisor_role = {
+				character = JER_victor_moreau
+				activate = no
+				advisor = {
+					slot = army_chief
+					cost = 100
+					idea_token = ARD_victor_moreau_idea
+					traits = {
+						army_chief_defensive_2
+					}
+				}
+			}
+			remove_advisor_role = {
+				character = "JER_felix_murat"
+				slot = high_command
+			}
+			add_advisor_role = {
+				character = JER_felix_murat
+				activate = no
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = ARD_felix_murat_idea
+					traits = {
+						army_artillery_1
 					}
 				}
 			}

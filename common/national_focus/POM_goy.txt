@@ -1534,10 +1534,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_research_slot = 1
-			swap_ideas = {
-				remove_idea = lack_of_scientists3
-				add_idea = GOY_pom_revolutionary_academia
-			}
+			add_ideas = GOY_pom_revolutionary_academia
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.05
@@ -1629,7 +1626,10 @@
 		prerequisite = { focus = POM_socialist_austerity }
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_ideas = GOY_pom_education_propaganda
+			swap_ideas = {
+				remove_idea = lack_of_scientists3
+				add_idea = GOY_pom_education_propaganda
+			}
 			add_tech_bonus = {
 				name = GOY_bonus_industry_2
 				bonus = 0.5
@@ -3237,9 +3237,9 @@
 					has_global_flag =  GRI_grover_vi_dead
 				}
 				country_event = goy_pomovarra.28
-				else = {
-					country_event = goy_pomovarra.29
-				}
+			}
+			ELSE = {
+				country_event = goy_pomovarra.29
 			}
 		}
 	}

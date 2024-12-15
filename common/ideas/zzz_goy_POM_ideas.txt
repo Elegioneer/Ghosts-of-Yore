@@ -3973,11 +3973,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 377
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -3998,14 +3995,11 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
 			available = {
-				owns_state = 435
+				has_completed_focus = POM_restore_production_lines
 			}
 			traits = { infantry_equipment_manufacturer }
 			equipment_bonus = {
@@ -4022,11 +4016,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 517
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -4047,8 +4038,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				artillery = 0.15
@@ -4068,8 +4059,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -4098,8 +4089,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				industry = 0.15
@@ -4113,8 +4104,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				electronics = 0.15
@@ -4128,11 +4119,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 376
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -4150,11 +4138,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 377
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			traits = { agricultural_concern }
@@ -4169,8 +4154,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -4193,11 +4178,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 377
+				has_completed_focus = POM_restore_production_lines
 			}
 
 			research_bonus = {
@@ -4212,8 +4194,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				air_equipment = 0.08
@@ -4227,8 +4209,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				air_equipment = 0.08
@@ -4246,11 +4228,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
-			}
 			available = {
-				owns_state = 377
+				has_completed_focus = POM_restore_production_lines
 				any_controlled_state_is_coastal = yes
 			}
 
@@ -4284,7 +4263,7 @@ ideas = {
 				has_country_flag = POM_FLAG_aquiuleian_companies
 			}
 			available = {
-				owns_state = 377
+				has_completed_focus = POM_restore_production_lines
 				any_controlled_state_is_coastal = yes
 			}
 
@@ -4314,8 +4293,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				armor = 0.18
@@ -4329,8 +4308,8 @@ ideas = {
 			allowed = {
 				original_tag = ARD
 			}
-			visible = {
-				has_country_flag = POM_FLAG_aquiuleian_companies
+			available = {
+				has_completed_focus = POM_restore_production_lines
 			}
 			research_bonus = {
 				armor = 0.15
