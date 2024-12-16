@@ -3969,6 +3969,7 @@ ideas = {
 
 		POM_manufacture_aquileia = {
 			picture = JER_manufacture_aquileia
+			name = manufacture_aquileia
 
 			allowed = {
 				original_tag = ARD
@@ -3991,6 +3992,7 @@ ideas = {
 
 		POM_manufacture_rila = {
 			picture = JER_manufacture_rila
+			name = manufacture_rila
 
 			allowed = {
 				original_tag = ARD
@@ -4012,6 +4014,7 @@ ideas = {
 
 		POM_manufacture_vin = {
 			picture = JER_manufacture_vin
+			name = manufacture_vin
 
 			allowed = {
 				original_tag = ARD
@@ -4034,6 +4037,7 @@ ideas = {
 
 		POM_dassault = {
 			picture = JER_dassault
+			name = dassault
 
 			allowed = {
 				original_tag = ARD
@@ -4055,6 +4059,7 @@ ideas = {
 
 		POM_leopard_jer = {
 			picture = JER_leopard
+			name = leopard_jer
 
 			allowed = {
 				original_tag = ARD
@@ -4085,7 +4090,8 @@ ideas = {
 
 		POM_societe = {
 			picture = JER_societe
-
+			name = societe
+			
 			allowed = {
 				original_tag = ARD
 			}
@@ -4100,6 +4106,7 @@ ideas = {
 
 		POM_radiola_jer = {
 			picture = JER_radiola
+			name = radiola_jer
 
 			allowed = {
 				original_tag = ARD
@@ -4115,6 +4122,7 @@ ideas = {
 
 		POM_hippogriffe = {
 			picture = JER_hippogriffe
+			name = hippogriffe
 
 			allowed = {
 				original_tag = ARD
@@ -4134,6 +4142,7 @@ ideas = {
 		
 		POM_evil_croissant = {
 			picture = JER_evil_croissant
+			name = evil_croissant
 
 			allowed = {
 				original_tag = ARD
@@ -4150,6 +4159,7 @@ ideas = {
 
 		POM_apa = {
 		    picture = JER_wine_company
+			name = aoa
 
 			allowed = {
 				original_tag = ARD
@@ -4174,6 +4184,7 @@ ideas = {
 
 		POM_astrium = {
 			picture = JER_astrium
+			name = astrium
 
 			allowed = {
 				original_tag = ARD
@@ -4190,6 +4201,7 @@ ideas = {
 
 		POM_safran = {
 			picture = JER_safran
+			name = safran
 
 			allowed = {
 				original_tag = ARD
@@ -4205,6 +4217,7 @@ ideas = {
 
 		POM_thales = {
 			picture = JER_thales
+			name = thales
 
 			allowed = {
 				original_tag = ARD
@@ -4224,6 +4237,7 @@ ideas = {
 
 		POM_mistral = {
 			picture = JER_mistral
+			name = mistral
 
 			allowed = {
 				original_tag = ARD
@@ -4255,6 +4269,7 @@ ideas = {
 
 		POM_loup_shipping = {
 			picture = JER_loup_shipping
+			name = loup_shipping
 
 			allowed = {
 				original_tag = ARD
@@ -4289,6 +4304,7 @@ ideas = {
 
 		POM_fer_de_lance = {
 			picture = JER_fer_de_lance
+			name = fer_de_lance
 
 			allowed = {
 				original_tag = ARD
@@ -4304,6 +4320,7 @@ ideas = {
 
 		POM_AVA_tanks = {
 			picture = JER_ava_tanks
+			name = AVA_tanks
 
 			allowed = {
 				original_tag = ARD
