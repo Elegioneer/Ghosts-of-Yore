@@ -381,7 +381,7 @@
 			available = {
 				has_tech = tech_unicorn
 				NOT = {
-					set_country_flag = POM_FLAG_unicorn_th
+					has_country_flag = POM_FLAG_unicorn_th
 				}
 			}
 
@@ -469,7 +469,7 @@
 			available = {
 				has_tech = tech_unicorn
 				NOT = {
-					set_country_flag = POM_FLAG_unicorn_ms
+					has_country_flag = POM_FLAG_unicorn_ms
 				}
 			}
 
@@ -562,6 +562,7 @@
 				civilian_factory_use = 3
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				493 = {
 					add_extra_state_shared_building_slots = 2
 					add_manpower = 50000
@@ -576,6 +577,7 @@
 						instant_build = yes
 					}
 				}
+				restore_previous_manpower = yes
 				set_country_flag = GOY_FLAG_arcturius_plan_1
 			}
 		}
@@ -605,6 +607,7 @@
 				civilian_factory_use = 6
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				448 = {
 					add_extra_state_shared_building_slots = 2
 					add_manpower = 100000
@@ -628,6 +631,7 @@
 						instant_build = yes
 					}
 				}
+				restore_previous_manpower = yes
 				set_country_flag = GOY_FLAG_arcturius_plan_2
 			}
 		}
@@ -657,6 +661,7 @@
 				civilian_factory_use = 2
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				519 = {
 					increase_state_category = yes
 					add_manpower = 50000
@@ -666,6 +671,7 @@
 					province = 7405
 					value = 1
 				}
+				restore_previous_manpower = yes
 				set_province_name = { id = 7405 name = GOY_vp_angaz_barak }
 				set_country_flag = GOY_FLAG_arcturius_plan_2
 			}
@@ -760,6 +766,7 @@
 				civilian_factory_use = 8
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				500 = {
 					add_extra_state_shared_building_slots = 2
 					add_manpower = 75000
@@ -792,6 +799,7 @@
 						instant_build = yes
 					}
 				}
+				restore_previous_manpower = yes
 			}
 		}
 	}
@@ -2176,6 +2184,7 @@
 				civilian_factory_use = 8
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				448 = {
 					add_manpower = 250000
 					add_building_construction = {
@@ -2191,6 +2200,7 @@
 					}
 					set_state_category = large_town
 				}
+				restore_previous_manpower = yes
 				set_country_flag = POM_FLAG_devscheme_1
 			}
 		}
@@ -2248,6 +2258,7 @@
 				civilian_factory_use = 6
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				390 = {
 					add_manpower = 300000
 					add_building_construction = {
@@ -2263,6 +2274,7 @@
 					add_extra_state_shared_building_slots = 1
 					set_state_category = large_city
 				}
+				restore_previous_manpower = yes
 				set_country_flag = POM_FLAG_devscheme_3
 			}
 		}
@@ -2461,9 +2473,11 @@
 			}
 			remove_effect = {
 				add_state_core = 421
+				save_current_manpower = yes
 				421 = {
 					add_manpower = 50000
 				}
+				restore_previous_manpower = yes
 			}
 		}
 		POM_goy_pomrise_hinterlands = {
@@ -2492,13 +2506,17 @@
 			}
 			remove_effect = {
 				add_state_core = 407
+				save_current_manpower = yes
 				407 = {
 					add_manpower = 100000
 				}
+				restore_previous_manpower = yes
 				add_state_core = 406
+				save_current_manpower = yes
 				406 = {
 					add_manpower = 100000
 				}
+				restore_previous_manpower = yes
 			}
 		}
 		POM_goy_pomrise_flowerino = {
@@ -2737,6 +2755,7 @@
 				
 			}
 			remove_effect = {
+				save_current_manpower = yes
 				679 = {
 					add_manpower = -100000
 				}
@@ -2749,6 +2768,7 @@
 					}
 					add_manpower = -50000
 				}
+				restore_previous_manpower = yes
 				every_owned_state = {
 					limit = {
 						OR = {

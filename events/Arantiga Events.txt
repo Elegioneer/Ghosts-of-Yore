@@ -7928,7 +7928,11 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 10
 				modifier = {
-				    strength_ratio = { tag = ARA ratio < 2.0 }
+					OR = {
+						has_government = fascism
+						has_government = communism
+						strength_ratio = { tag = ARA ratio > 0.5 }
+					}
 					add = -10
 				}
 			}
@@ -7945,7 +7949,13 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1
 				modifier = {
-				    strength_ratio = { tag = ARA ratio > 5.0 }
+					AND = {
+						strength_ratio = { tag = ARA ratio < 0.5 }
+						NOT = {
+							has_government = fascism
+							has_government = communism
+						}
+					}
 					add = -1
 				}
 			}

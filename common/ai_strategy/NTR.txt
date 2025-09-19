@@ -1,3 +1,223 @@
+GOY_NTR_first_factories_strat = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+	}
+	ai_strategy = {
+		type = build_building
+		id = industrial_complex
+		target = 574
+		value = 1
+	}
+	abort = {
+		num_of_civilian_factories > 6
+	}
+}
+GOY_NTR_mil_factories_strat = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+		num_of_civilian_factories > 6
+	}
+	ai_strategy = {
+		type = build_building
+		id = arms_factory
+		target = 574
+		value = 2
+	}
+	abort = {
+		num_of_military_factories > 10
+	}
+}
+GOY_NTR_kill_second_vedina = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+		has_war_with = VED
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = declare_war
+		id = D01
+		value = 100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = D02
+		value = 100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = D03
+		value = 100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = D04
+		value = 100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = D05
+		value = 100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = D06
+		value = 100
+	}
+}
+GOY_NTR_FK_hate_griffs = {
+	enable = {
+		NOT = { tag = NTR }
+		has_idea = griffon_race
+	}
+	allowed = {
+		tag = NTR
+	}
+	abort = {
+		NTR = {
+			has_capitulated = yes
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = antagonize
+		id = NTR
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = NTR
+		value = 100
+	}
+}
+GOY_NTR_FK_careful_when_fighting_GRI = {
+	enable = {
+		NOT = { tag = NTR }
+		OR = {
+			has_war_with = GRI
+			has_war_with = GRD
+		}
+	}
+	allowed = {
+		tag = NTR
+	}
+	abort = {
+		NTR = {
+			OR = {
+				has_capitulated = yes
+				has_war = No
+			}
+		}
+	}
+	reversed = yes
+	ai_strategy = {
+		type = declare_war
+		id = NTR
+		value = -300
+	}
+}
+GOY_NTR_not_ready_to_kill_FAT = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+		OR = {
+			has_wargoal_against = FAT
+			has_wargoal_against = FAW
+		}
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FAW
+		value = -100
+	}
+	ai_strategy = {
+		type = declare_war
+		id = FAT
+		value = -100
+	}
+	abort = {
+		OR = {
+			fighting_army_strength_ratio = {
+				tag = FAT
+				ratio > 1.2
+			}
+			fighting_army_strength_ratio = {
+				tag = FAW
+				ratio > 1.2
+			}
+			has_war_with = FAT
+			has_war_with = FAW
+		}
+	}
+}
+#GOY_NTR_not_ready_to_kill_GRI = { #Relocated to NTR_the_heart focus because it declares immedate war instead of creating a wargoal
+#	allowed = {
+#		original_tag = NTR
+#	}
+#	enable = {
+#		original_tag = NTR
+#		OR = {
+#			has_wargoal_against = GRI
+#			has_wargoal_against = GRD
+#		}
+#	}
+#	ai_strategy = {
+#		type = declare_war
+#		id = GRI
+#		value = -100
+#	}
+#	ai_strategy = {
+#		type = declare_war
+#		id = GRD
+#		value = 100
+#	}
+#	abort = {
+#		OR = {
+#			fighting_army_strength_ratio = {
+#				tag = GRI
+#				ratio > 1
+#			}
+#			fighting_army_strength_ratio = {
+#				tag = GRD
+#				ratio > 1
+#			}
+#			has_war_with = GRI
+#			has_war_with = GRD
+#		}
+#	}
+#}
+GOY_NTR_get_ready_to_kill_GRI = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		original_tag = NTR
+		has_shine_effect_on_focus = NTR_the_heart
+	}
+	abort = {
+		has_war = yes
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GRD
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GRI
+		value = 100
+	}
+}
 GOY_NTR_Frost_King_strat = {
 	allowed = {
 		original_tag = NTR
@@ -21,12 +241,10 @@ GOY_NTR_Frost_King_strat = {
 		}
 	}
 	ai_strategy = {
-		type = land_xp_spend_priority
-		value = 100
-	}
-	ai_strategy = {
-		type = production_upgrade_desire_offset
-		value = -100
+		type = diplo_action_desire
+		id = NTR
+		value = -500
+		target = nonaggressionpact
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories
@@ -36,22 +254,12 @@ GOY_NTR_Frost_King_strat = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 50
-	}
-	ai_strategy = {
-		type = equipment_stockpile_surplus_ratio
-		id = infantry
-		value = 50
+		value = 55
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = support
-		value = 25
-	}
-	ai_strategy = {
-		type = equipment_stockpile_surplus_ratio
-		id = support
-		value = 50
+		value = 15
 	}
 	ai_strategy = {
 		type = equipment_production_factor
@@ -59,81 +267,237 @@ GOY_NTR_Frost_King_strat = {
 		value = 15
 	}
 	ai_strategy = {
-		type = equipment_stockpile_surplus_ratio
-		id = artillery
-		value = 50
-	}
-	ai_strategy = {
 		type = equipment_production_factor
 		id = anti_tank
-		value = 5
+		value = 3
 	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = anti_air
 		value = 5
 	}
-	ai_strategy = {
-		type = template_prio
-		id = paratroopers
-		value = -100
-	}
 	#Army Composition
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
-		value = -100
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = mountaineers
-		value = -100
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = marines
-		value = -100
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = supression
+		value = -10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = motorized
-		value = -100
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = mechanized
-		value = -100
+		value = -10
 	}
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = -100
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = pegasi
-		value = 10
-	}
-	ai_strategy = {
-		type = role_ratio
-		id = infantry
-		value = 90
-	}
-	ai_strategy = {
-        type = force_build_armies
-        value = 1000
-    }
-	ai_strategy = {
-		type = template_prio
-		id = infantry
-		value = 100
-	}
-	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 60
+		value = -20
 	}
 	ai_strategy = {
 		type = dockyard_to_military_factory_ratio
-		value = -30
+		value = -10
 	}
 }
+
+NTR_FK_army_buildup_SRS = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		has_completed_focus = NTR_cold_hearted
+	}
+	abort = {
+		has_war = yes
+	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 36
+	}
+}
+NTR_FK_army_buildup_NORTH = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		has_completed_focus = NTR_north_awakens
+	}
+	abort = {
+		has_war = yes
+	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 120
+	}
+}
+NTR_FK_VED_war_strat = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		has_war_with = VED
+		NOT = {
+			has_war_with = FAT
+			has_war_with = FAW
+			has_war_with = MNC
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = VED
+		value = 150
+	}
+	ai_strategy = {
+		type = garrison
+		value = -10
+	}
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			is_coastal = yes
+		}
+		ratio = 0.1
+		ordertype = front
+		execution_type = rush
+		manual_attack = yes
+	}
+}
+NTR_FK_FAT_war_strat = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		has_war_with = FAW
+		has_war_with = FAT
+		NOT = {
+			has_war_with = MNC
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = FAT
+		value = 100
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = FAW
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = -20
+	}
+	ai_strategy = {
+		type = front_control
+		state_trigger = {
+			OR = {
+				is_coastal = yes
+				state = 485
+				state = 557
+				state = 556
+				state = 449
+				state = 450
+			}
+		}
+		ratio = 0.25
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+		manual_attack = yes
+	}
+}
+NTR_FK_army_buildup_GRI = {
+	allowed = {
+		original_tag = NTR
+	}
+	enable = {
+		has_completed_focus = NTR_ascension
+	}
+	abort = {
+		has_war = yes
+	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 300
+	}
+}
+
+
+
+
+
+#GOY_NTR_we_like_poking_sticks = {
+#	allowed = {
+#		original_tag = NTR
+#	}
+#	enable = { #AI refuses to upgrade equipment via MIO. No way to make this work without major handholding
+#		has_dlc = "Arms Against Tyranny"
+#		OR = {
+#			has_completed_focus = NTR_cold_hearted
+#			has_completed_focus = NTR_follow_old
+#		}
+#	}
+#
+#	abort = { always = no }
+#
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = melee_equipment_1
+#		value = -1000
+#	}
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = infantry_equipment_0
+#		value = -1000
+#	}
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = infantry_equipment_1
+#		value = -1000
+#	}
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = infantry_equipment_2
+#		value = -1000
+#	}
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = infantry_equipment_3
+#		value = -1000
+#	}
+#	ai_strategy = {
+#		type = production_upgrade_desire_offset
+#		id = infantry_equipment_x
+#		value = -1000
+#	}
+#	ai_strategy = { #I hope this improves spears
+#		type = land_xp_spend_priority
+#		id = equipment_variant
+#		value = 100
+#	}
+#}

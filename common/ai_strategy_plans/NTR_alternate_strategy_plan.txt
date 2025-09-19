@@ -33,10 +33,7 @@ BOI_stormshield = {
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.0
-		modifier = {
-			factor = 1.0
-		}
+		factor = 1
 	}
 
 	focus_factors = {
@@ -75,41 +72,41 @@ BOI_iceking = {
 		NTR_convince_them
 		NTR_deal_with_stormshields
 		NTR_solidify_control
+		NTR_dark_magic
 		NTR_demand_more
+		NTR_prepare_defensive
+		NTR_unleash_blizzard
 		NTR_wisdom_of_circle
 		NTR_support_weaponsmiths
+		NTR_return_to_homeland
 		NTR_scavange_ruins
 		NTR_total_reparations
 		NTR_slave_economy
 		NTR_undead_hordes
-		NTR_break_knights
-		NTR_revenge_sunstriker
-		NTR_crush_dream
 	}
 
 	research = {
-		infantry_weapons = 50.0
-		infantry_tech = 15.0
-		cat_production = 15.0
-		dispersed_industry_category = 15.0
-		artillery = 5.0
-		support_tech = 5.0
+		superior_firepower = 10
+		infantry_weapons = 2
+		infantry_tech = 2
+		cat_production = 2
+		dispersed_industry_category = 2
+		artillery = 1.5
+		support_tech = 1.5
+		tech_pegasi = 2
+		tech_unicorn = 2
+		tech_unicorn_ms = 2
+		fuel_silos = 0.001
 	}
-
 	ideas = {
-		
-	}
-
-	traits = {
+		partial_economic_mobilisation = 3.5
+		war_economy = 4
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)
 	# Recommended around 1.0. Useful for relation between plans
 	weight = {
-		factor = 1.5
-		modifier = {
-			factor = 1.0
-		}
+		factor = 1
 	}
 
 	focus_factors = {

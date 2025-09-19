@@ -21,3 +21,9 @@ GOY_NTR_esotericism:0 "Dark Lord"
 
 # Focus Filters
 FOCUS_FILTER_GOY_BEACH:0 "Beach Defence"
+
+#Combat Tactics
+tactic_attacker_GOY_undead_assault:0 "Undead Assault"
+tactic_attacker_GOY_undead_monsters:0 "Unleash Undead Abberations"
+tactic_defender_GOY_meat_wall:0 "Meat Wall Defence"
+tactic_defender_tw_GOY_meat_wall:0 "Leave the Undead Behind"

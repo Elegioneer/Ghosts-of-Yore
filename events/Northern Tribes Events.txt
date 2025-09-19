@@ -699,7 +699,7 @@ add_namespace = ntribes_news
 		option = {
 		    name = ntribes.02.b
 			ai_chance = {
-			    base = 1
+			    base = 3
 			    modifier = {
 				    factor = 0
 				        has_game_rule = {
@@ -852,22 +852,23 @@ add_namespace = ntribes_news
 			add_popularity = { ideology = fascism popularity = 0.5 }
 		    set_party_name = {ideology = fascism name = NTR_druids_party long_name = NTR_druids_party_long }
 			hidden_effect = {
-				remove_country_leader_role = {
-					character = GOY_NTR_Gordon
-					ideology = stratocracy
-				}
+				#remove_country_leader_role = {
+				#	character = GOY_NTR_Gordon
+				#	ideology = stratocracy
+				#}
+				# # kill_character = NTR_relentless_valour
 				load_focus_tree = Northern_tribes_ice
 				load_oob = NTR_gavin_undead_OOB
 			}
 			add_country_leader_role = {
 				Character = GOY_NTR_gavin
-				Promote_leader = yes
-				Country_leader = {
-				ideology = falangism
-				desc = "NTR_gavin_desc"
-				expire = "1965.01.01.01"
-				traits = { GOY_harbinger }
-			}
+					Promote_leader = yes
+					Country_leader = {
+					ideology = falangism
+					desc = "NTR_gavin_desc"
+					expire = "1965.01.01.01"
+					traits = { GOY_harbinger }
+				}
 			}			
 			custom_effect_tooltip = NTR_blizzard_divisions
 			swap_ideas = {
@@ -1818,7 +1819,7 @@ add_namespace = ntribes_news
             }
 			every_other_country = {
 				limit = {
-					OR = {
+					NOT = {
 						AND = {
 							tag = PLB
 							has_cosmetic_tag = PLB_wastes
@@ -1840,10 +1841,12 @@ add_namespace = ntribes_news
 						has_cosmetic_tag = ZAR_worm_nz
 					}
 				}
-				add_opinion_modifier = {
-                    target = NTR
-                    modifier = NTR_dangerous_maniacs_inv
-		    	}
+				ZAR = {
+					add_opinion_modifier = {
+						target = NTR
+						modifier = NTR_dangerous_maniacs_inv
+					}
+				}
 			}
 			IF = {
 				limit = {
@@ -1851,10 +1854,12 @@ add_namespace = ntribes_news
 						has_cosmetic_tag = PLB_wastes
 					}
 				}
-				add_opinion_modifier = {
-                    target = NTR
-                    modifier = NTR_dangerous_maniacs_inv
-		    	}
+				PLB = {
+					add_opinion_modifier = {
+						target = NTR
+						modifier = NTR_dangerous_maniacs_inv
+					}
+				}
 			}
 		}
 	}
@@ -3080,7 +3085,7 @@ add_namespace = ntribes_news
 			
 			set_victory_points = {
 				province = 6502
-				value = 5
+				value = 3
 			}
 			hidden_effect = {
 				set_global_flag = GOY_flag_skynavia_ruined #loc in ara's files
@@ -3817,6 +3822,7 @@ add_namespace = ntribes_news
 				limit = {
 					is_ai = yes
 				}
+				army_experience = 50
 				random_owned_controlled_state = {
 					create_unit = {
 						division = "name = \"The Firstborn\" division_template = \"Necromancer Division\" start_experience_factor = 0.5 start_equipment_factor = 0.8" 

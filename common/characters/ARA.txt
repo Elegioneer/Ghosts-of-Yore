@@ -63,7 +63,7 @@ characters = {
 				small="GFX_idea_aranazbol"
 			}
 			civilian={
-				large="gfx/leaders/ARA/aranazbol.tga"
+				large="gfx/leaders/ARA/Ciriaco.tga"
 			}
 		}
 		country_leader = {
@@ -81,7 +81,7 @@ characters = {
 				original_tag = "ARA"
 			}		
 			ai_will_do = {
-				factor = 1
+				factor = 4
 			}
 			available = {
 				has_country_flag = ARA_new_academy_flag
@@ -186,7 +186,7 @@ characters = {
 				original_tag = "ARA"
 			}		
 			ai_will_do = {
-				factor = 1
+				factor = 6
 			}
 			available = {
 				has_country_flag = ARA_new_academy_flag
@@ -385,7 +385,7 @@ characters = {
 				}
 			}		
 			ai_will_do = {
-				factor = 1
+				factor = 2
 			}
 			available = {
 				controls_state = 389

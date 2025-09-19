@@ -14,3 +14,11 @@ intelligence_agency = {
 	default = { tag = POM }
 	available = { original_tag = POM }
 }
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_ntr
+	names = { "Order of the Seal" }
+	
+	default = { tag = NTR }
+	available = { original_tag = NTR }
+}

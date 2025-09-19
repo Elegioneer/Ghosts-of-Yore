@@ -25,7 +25,7 @@ GoY_kill_rumare_hopefully = {
 	ai_strategy = {
 		type = front_armor_score
 		id = "LAK"
-		value = -200
+		value = -100
 	}
 	ai_strategy = {
 		type = front_control

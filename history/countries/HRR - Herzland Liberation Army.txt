@@ -151,6 +151,7 @@ add_ideas = {
     service_by_requirement
 	closed_economy
 	tot_economic_mobilisation
+	proper_science_base
 }
 
 set_rule = {

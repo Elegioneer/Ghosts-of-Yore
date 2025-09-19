@@ -2640,7 +2640,7 @@ industrial_concern = {
 		traits = { GOY_ntr_artistans }
 		picture = WAT_Council_of_Keepers
 		ai_will_do = {
-			factor = 5
+			base = 1.5
 		}
 		available = {
 		}
@@ -2813,9 +2813,9 @@ materiel_manufacturer = {
 				build_cost_ic = -0.1 instant = yes
 			}
 			melee_equipment_0 = {
-				soft_attack = 3 instant = yes
-				defense = 4 instant = yes
-				breakthrough = 3 instant = yes
+				soft_attack = 1 instant = yes
+				defense = 1.5 instant = yes
+				breakthrough = 1 instant = yes
 			}
 		}
 	}
@@ -2858,11 +2858,12 @@ materiel_manufacturer = {
 		equipment_bonus = {
 			
 			melee_equipment_0 = {
-				soft_attack = 7 instant = yes
+				soft_attack = 3.5 instant = yes
 				hard_attack = 1000 instant = yes
-				defense = 6 instant = yes
-				breakthrough = 7 instant = yes
+				defense = 3 instant = yes
+				breakthrough = 3.5 instant = yes
 				hardness = 4 instant = yes
+				reliability = -0.05 instant = yes
 				build_cost_ic = 0.15 instant = yes
 			}
 		}
@@ -2913,15 +2914,15 @@ materiel_manufacturer = {
 		equipment_bonus = {
 			
 			melee_equipment_0 = {
-				soft_attack = 10 instant = yes
+				soft_attack = 5 instant = yes
 				hard_attack = 3000 instant = yes
 				ap_attack = 5000 instant = yes
 				air_attack = 1 instant = yes
-				defense = 8 instant = yes
-				breakthrough = 9 instant = yes
+				defense = 4 instant = yes
+				breakthrough = 4.5 instant = yes
 				hardness = 7 instant = yes
 				armor_value = 1 instant = yes
-				reliability = -0.05 instant = yes
+				reliability = -0.15 instant = yes
 				build_cost_ic = 0.45 instant = yes
 			}
 		}
@@ -2975,16 +2976,16 @@ materiel_manufacturer = {
 		equipment_bonus = {
 			
 			melee_equipment_0 = {
-				soft_attack = 13 instant = yes
+				soft_attack = 6.5 instant = yes
 				hard_attack = 7000 instant = yes
 				ap_attack = 15000 instant = yes
 				air_attack = 1 instant = yes
-				defense = 13 instant = yes
-				breakthrough = 13 instant = yes
+				defense = 6.5 instant = yes
+				breakthrough = 6.5 instant = yes
 				hardness = 7 instant = yes
 				armor_value = 1 instant = yes
 				maximum_speed = 0.25 instant = yes
-				reliability = -0.15 instant = yes
+				reliability = -0.25 instant = yes
 				build_cost_ic = 0.85 instant = yes
 			}
 		}

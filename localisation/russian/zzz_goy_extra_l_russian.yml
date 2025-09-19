@@ -21,3 +21,9 @@ GOY_NTR_esotericism:0 "Тёмный властелин"
 
 # Focus Filters
 FOCUS_FILTER_GOY_BEACH:0 "Оборона пляжей"
+
+#Combat Tactics
+tactic_attacker_GOY_undead_assault:0 "Наступление Восставших Мертвецов"
+tactic_attacker_GOY_undead_monsters:0 "Натиск Восставших Монстров"
+tactic_defender_GOY_meat_wall:0 "Стена Мяса"
+tactic_defender_tw_GOY_meat_wall:0 "Бросить Мертвецов Позади"

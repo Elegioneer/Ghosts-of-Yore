@@ -291,12 +291,14 @@
 		prerequisite = { focus = POM_rogue_prince }
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
+			save_current_manpower = yes
 			672 = {
 				add_manpower = -5000
 			}
 			501 = {
 				add_manpower = -5000
 			}
+			restore_previous_manpower = yes
 			swap_ideas = {
 				remove_idea = POM_hostile_population
 				add_idea = POM_hostile_population_hunted
@@ -2729,6 +2731,7 @@
 		prerequisite = { focus = POM_enemies_within }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			set_country_leader_ideology = juche
 			add_country_leader_trait = GOY_le_patron_trait
 		}
 	}
@@ -3549,6 +3552,7 @@
 		prerequisite = { focus = POM_red_rumare }
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 		completion_reward = {
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -3563,6 +3567,7 @@
 				add_resistance_target = 20
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			custom_effect_tooltip = POM_TT_core_rumare
 			hidden_effect = {
 				BOI = { add_to_ROOT_potential_cores = yes }
@@ -3897,6 +3902,7 @@
 		prerequisite = { focus = POM_strike_karthinia }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -3914,6 +3920,7 @@
 				add_resistance_target = 20
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			custom_effect_tooltip = POM_TT_core_karthinia
 			hidden_effect = {
 			WNG = { add_to_ROOT_potential_cores = yes }
@@ -4028,6 +4035,7 @@
 		prerequisite = { focus = POM_into_evi_valley }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -4046,6 +4054,7 @@
 				add_resistance_target = 20
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			custom_effect_tooltip = POM_TT_core_evivalley
 			hidden_effect = {
 				every_state = {
@@ -4352,6 +4361,7 @@
 		prerequisite = { focus = POM_humble_the_south }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -4368,6 +4378,7 @@
 				add_resistance_target = 20
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			custom_effect_tooltip = POM_TT_core_north
 			hidden_effect = {
 			FAT = { add_to_ROOT_potential_cores = yes }
@@ -4534,9 +4545,11 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_manpower = -10000
+			save_current_manpower = yes
 			every_owned_state = {
 				add_manpower = -1000
 			}
+			restore_previous_manpower = yes
 			add_political_power = 100
 		}
 	}
@@ -11258,6 +11271,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			country_event = goy_pomovarra.53
+			save_current_manpower = yes
 			every_state = {
 				limit = {
 					owns_or_subject_of = yes
@@ -11272,6 +11286,7 @@
 				add_manpower = -50000
 				damage_building = { type = industrial_complex damage = 1 }
 			}
+			restore_previous_manpower = yes
 			add_stability = -0.05
 			add_political_power = 150
 			add_popularity = {
@@ -11952,6 +11967,7 @@
 		prerequisite = { focus = POM_the_claw_of_the_gods }
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS }
 		completion_reward = {
+			save_current_manpower = yes
 			422 = {
 				add_manpower = -150000
 			}
@@ -11973,6 +11989,7 @@
 			547 = {
 				set_state_category = rural
 			}
+			restore_previous_manpower = yes
 			add_ideas = POM_nature_sanctuaries
 		}
 	}
@@ -12392,6 +12409,7 @@
 			every_subject_country = {
 				add_ideas = POM_forced_resettlements
 			}
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					state = 377
@@ -12434,6 +12452,7 @@
 				}
 				add_manpower = 50000
 			}
+			restore_previous_manpower = yes
 		}
 	}
 	shared_focus = {

@@ -1571,10 +1571,12 @@
 		option = {
 			name = goy_pomovarra.14.a
 			add_manpower = -500
+			save_current_manpower = yes
 			442 = {
 				add_manpower = -5000
 				damage_building = { type = arms_factory damage = 1 }
 			}
+			restore_previous_manpower = yes
 			add_stability = -0.05
 			add_war_support = -0.03
 		}
@@ -1870,6 +1872,7 @@
 					name = "Guards of the Revolution"
 					
 					division_names_group = ARD_GAR_01
+					template_counter = 104
 					
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -2072,9 +2075,11 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.22.a
+			save_current_manpower = yes
 			every_owned_state = {
 				add_manpower = -20000
 			}
+			restore_previous_manpower = yes
 			add_ideas = POM_paranoia_fear
 			add_popularity = {
 				ideology = democratic
@@ -2130,9 +2135,11 @@
 				damage_building = { type = arms_factory damage = 1 }
 				damage_building = { type = infrastructure damage = 2 }
 			}
+			save_current_manpower = yes
 			every_owned_state = {
 				add_manpower = -30000
 			}
+			restore_previous_manpower = yes
 			add_ideas = POM_strange_occurences_1
 			country_event = {
 				id = goy_pomovarra.25
@@ -2166,9 +2173,11 @@
 				ideology = communism
 				popularity = 0.03
 			}
+			save_current_manpower = yes
 			every_owned_state = {
 				add_manpower = -2000
 			}
+			restore_previous_manpower = yes
 			every_owned_state = {
 				limit = {
 					state = 377
@@ -2233,6 +2242,7 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.28.a
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -2253,6 +2263,7 @@
 				add_resistance_target = 30
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			custom_effect_tooltip = POM_TT_core_herzland
 			hidden_effect = {
 			GRI = { add_to_ROOT_potential_cores = yes }
@@ -2282,6 +2293,7 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.29.a
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -2302,6 +2314,7 @@
 				add_resistance_target = 30
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			GRI = { add_to_ROOT_potential_cores = yes }
 		    ANG = { add_to_ROOT_potential_cores = yes }
 		    STW = { add_to_ROOT_potential_cores = yes }
@@ -2330,6 +2343,7 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.30.a
+			save_current_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -2342,6 +2356,7 @@
 				add_resistance_target = 20
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			country_event = {
 				id = goy_pomovarra.31
 				days = 21
@@ -2357,6 +2372,7 @@
 		fire_only_once = yes
 		option = {
 			name = goy_pomovarra.31.a
+			save_current_manpower = yes
 			IF = {
 				limit = {
 					owns_state = 492
@@ -2397,6 +2413,7 @@
 					add_manpower = -50000
 				}
 			}
+			restore_previous_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -4070,9 +4087,11 @@
 			ai_chance = {
 				base = 1
 			}
+			save_current_manpower = yes
 			442 = {
 				add_manpower = -50000
 			}
+			restore_previous_manpower = yes
 			add_political_power = 50
 			add_war_support = 0.03
 		}
@@ -4548,6 +4567,7 @@
 				type = infantry_equipment
 				amount = -20000
 			}
+			save_current_manpower = yes
 			492 = {
 				add_manpower = -500000
 				set_state_category = town
@@ -4565,6 +4585,7 @@
 			479 = {
 				add_manpower = -100000
 			}
+			restore_previous_manpower = yes
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -6114,6 +6135,7 @@
 			}
 			add_political_power = 100
 			add_stability = -0.05
+			save_current_manpower = yes
 			381 = {
 				add_manpower = -1000000
 				add_building_construction = {
@@ -6143,6 +6165,7 @@
 			208 = {
 				add_manpower = -75000
 			}
+			restore_previous_manpower = yes
 			every_other_country = {
 				limit = {
 					AND = {
@@ -6615,6 +6638,7 @@
 			ai_chance = {
 				base = 1
 			}
+			save_current_manpower = yes
 			389 = {
 				add_manpower = -250000
 				remove_building = {
@@ -6626,6 +6650,7 @@
 					level = 2
 				}
 			}
+			restore_previous_manpower = yes
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
 				amount = -5000

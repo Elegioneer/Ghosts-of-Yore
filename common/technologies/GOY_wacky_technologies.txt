@@ -8,6 +8,10 @@ technologies = {
 		enable_subunits = {
 			goy_necromancer_company #YO
 		}
+		enable_tactic = tactic_attacker_GOY_undead_assault
+		enable_tactic = tactic_attacker_GOY_undead_monsters
+		enable_tactic = tactic_defender_GOY_meat_wall
+		enable_tactic = tactic_defender_tw_GOY_meat_wall
 	}
 	GOY_magical_melee_equipment_tech = {
 		research_cost = 1

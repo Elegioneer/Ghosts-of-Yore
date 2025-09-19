@@ -61,6 +61,7 @@
 		local_supplies = 0.25
 		local_factories = 0.5
 		local_resources_factor = 0.1
+		max_dig_in_factor = 0.25
 	}
 	NTR_holy_forge_dynmodifier = {
 		enable = {

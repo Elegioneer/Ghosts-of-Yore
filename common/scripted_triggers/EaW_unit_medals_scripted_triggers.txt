@@ -161,4 +161,3 @@ GOY_has_ntribes_medals_trigger = {
 GOY_has_griffonstonian_medals_trigger = {
 	original_tag = BOI
 }
-

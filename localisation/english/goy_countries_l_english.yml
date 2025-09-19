@@ -127,6 +127,11 @@ ARA_REP_neutrality:0 "Arantigan Republic"
  NCH_arantiga_fascism_DEF:0 "Protectorate Greneclyf"
  NCH_arantiga_fascism_ADJ:0 "Greneclyfian"
  #
+ ARA_CRIM_communism:0 "Empire of Arantigans"
+ ARA_CRIM_communism_DEF:0 "Empire of Arantigans"
+ ARA_CRIM_fascism:0 "Arantigan State"
+ ARA_CRIM_fascism_DEF:0 "State of Arantigans"
+ #
  EQS_ARA_fascism_subject:0 "Protectorate Equus"
  EQS_ARA_fascism_subject_DEF:0 "Arantigan Protectorate Equus"
 

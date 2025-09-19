@@ -340,7 +340,10 @@ on_actions = {
 					remove_idea = ARA_work_camp1
 					add_idea = ARA_work_camp
 				}
-				load_focus_tree = Arantiga_nothing
+				load_focus_tree = {
+					tree = Arantiga_nothing
+					keep_completed = yes
+				}
 			}
 			
 			if = {
@@ -350,20 +353,21 @@ on_actions = {
 					}
 				}
 				drop_cosmetic_tag = yes
-				
+				retire_character = GOY_NTR_gavin
+				retire_character = GOY_NTR_frostking
 				add_country_leader_role = {
-					Character = NTR_GOY_gordonthearcher
-					Promote_leader = yes
-					Country_leader = {
+					character = NTR_GOY_gordonthearcher
+					promote_leader = yes
+					country_leader = {
 						ideology = stratocracy
 						expire = "1965.01.01.01"
 						desc = NTR_GOY_gordonthearcher_desc
 						traits = {  }
 					}
 				}
-				retire_character = GOY_NTR_gavin
-				retire_character = GOY_NTR_frostking
+				promote_character = NTR_GOY_gordonthearcher
 				set_party_name = { ideology = fascism name = NTR_warrior_lodges_party long_name = NTR_warrior_lodges_party_long }
+				
 				set_technology = {
 					GOY_necromancy_tech = 0
 					popup = no
@@ -413,7 +417,10 @@ on_actions = {
 					remove_idea = GOY_druid_wisdom
 					add_idea = lack_of_scientists1
 				}
-				load_focus_tree = Northern_tribes_nothing
+				load_focus_tree = {
+					tree = Northern_tribes_nothing
+					keep_completed = yes
+				}
 				set_country_flag = NTR_flag_spirit_magic_unlock
 			}
 			
@@ -438,6 +445,22 @@ on_actions = {
 				set_party_name = { ideology = fascism name = BOI_prov_mil_gov long_name = BOI_prov_mil_gov_long }
 				set_party_name = { ideology = neutrality name = BOI_nobles_party long_name = BOI_nobles_party_long }
 				set_party_name = { ideology = democratic name = BOI_dem_init long_name = BOI_dem_init_long }
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						tag = POM
+					}
+				}
+				POM = {
+					drop_cosmetic_tag = yes
+					retire_character = GOY_POM_political_chair
+					retire_character = GOY_POM_reiher
+					retire_character = GOY_POM_schattenzahn
+					retire_character = GOY_POM_camriz
+					retire_character = GOY_POM_morel
+				}
 			}
 		}
 	}
@@ -483,6 +506,83 @@ on_actions = {
 					}
 					JER = {
 						drop_cosmetic_tag = yes
+					}
+				}
+			}
+		}
+	}
+	on_civil_war_end_before_annexation = { #I hate Vedina
+		effect = {
+			if = {
+				limit = {
+					FROM = { #Real Vedina
+						original_tag = VED
+					}
+					NTR = {
+						OR = {
+							has_wargoal_against = VED
+							has_war_with = VED
+						}
+						NOT = {
+							has_wargoal_against = ROOT
+							has_war_with = ROOT
+						}
+					}
+				}
+				NTR = {
+					create_wargoal = {
+						type = annex_everything
+						target = ROOT #Krigfoerande asshole
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+	on_peaceconference_ended = { #if NTR failed to take Romau and Griffenheim
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = NTR }
+					OR = {
+						FROM = { tag = GRD }
+						FROM = { tag = global.griffonian_empire_var }
+					}
+					NOT = {
+						FROM = { original_tag = HRR }
+					}
+					ROOT = {
+						OR = {
+							has_completed_focus = NTR_the_heart
+							has_completed_focus = NTR_queen_of_hearts
+						}
+					}
+					NOT = {
+						ROOT = {
+							owns_state = 382
+							owns_state = 674
+							owns_state = 423
+							owns_state = 520
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						OR = {
+							owns_state = 382
+							owns_state = 674
+							owns_state = 423
+							owns_state = 520
+						}
+						NOT = {
+							tag = ROOT
+						}
+					}
+					ROOT = {
+						create_wargoal = { 
+							type = annex_everything
+							target = PREV
+						}
 					}
 				}
 			}

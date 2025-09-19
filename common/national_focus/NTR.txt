@@ -4335,6 +4335,13 @@
 		icon = GFX_goal_GOY_moltenrock
 		x = 28
 		y = 0
+		offset = { 
+			x = -8
+			y = 0
+			trigger = {
+				is_subject = yes
+			}
+		}
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
@@ -4562,6 +4569,13 @@
 		icon = GFX_goal_GOY_barkcoat
 		x = 33
 		y = 0
+		offset = { 
+			x = -8
+			y = 0
+			trigger = {
+				is_subject = yes
+			}
+		}
 		cost = 5.00
 		ai_will_do = {
 			factor = 10
@@ -5504,7 +5518,7 @@
 		y = 7
 		cost = 1.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		bypass = {
 			
@@ -5528,7 +5542,7 @@
 		y = 1
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5565,7 +5579,7 @@
 		y = 1
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5596,7 +5610,7 @@
 		y = 1
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5613,7 +5627,7 @@
 		y = 1
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5636,7 +5650,7 @@
 		y = 1
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5664,7 +5678,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5683,7 +5697,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5703,7 +5717,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 25
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5724,7 +5738,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5740,7 +5754,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5759,7 +5773,7 @@
 		y = 2
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5775,7 +5789,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 3
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5802,7 +5816,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 15
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5834,7 +5848,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 25
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5920,7 +5934,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 10
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5938,7 +5952,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 15
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5961,7 +5975,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 25
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -5981,7 +5995,7 @@
 		y = 3
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 1
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6001,7 +6015,7 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 3
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6037,7 +6051,7 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 3
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6057,7 +6071,11 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 100
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6069,7 +6087,7 @@
 			IF = {
 				limit = {
 					is_ai = yes
-					SRS = {
+					VED = {
 						is_ai = yes
 					}
 				}
@@ -6084,7 +6102,7 @@
 				}
 			}
 			hidden_effect = {
-			every_other_country = { #Best wargoal ever
+			every_other_country = {
 				limit = {
 					original_tag = VED
 				}
@@ -6116,7 +6134,20 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 30
+			modifier = {
+				OR = {
+					has_war = yes
+					NOT = {
+						has_completed_focus = NTR_break_knights
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				VED = { exists = yes }
+				factor = 0.1
+			}
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6177,7 +6208,16 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 20
+			modifier = {
+				OR = {
+				has_war = yes
+					NOT = {
+						has_completed_focus = NTR_break_knights
+					}
+				}
+				factor = 0
+			}
 		}
 		bypass = {
 			MNC = { exists = no }
@@ -6201,7 +6241,7 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6226,7 +6266,7 @@
 		y = 4
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 5
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6242,7 +6282,7 @@
 		y = 5
 		cost = 5.00
 		ai_will_do = {
-			factor = 10
+			base = 100
 		}
 		search_filters = {}
 		relative_position_id = NTR_north_awakens
@@ -6581,7 +6621,17 @@
 		y = 3
 		cost = 8.00
 		ai_will_do = {
-			factor = 10
+			base = 100
+			modifier = {
+				AND = {
+					fighting_army_strength_ratio = {
+						tag = GRD
+						ratio < 1
+					}
+					num_divisions < 100
+				}
+				factor = 0
+			}
 		}
 		search_filters = {}
 		relative_position_id = NTR_the_undead
@@ -6656,7 +6706,45 @@
 					}
 				}
 			}
-			IF = {
+			every_other_country = {
+				limit = {
+					OR = {
+						has_war_with = GRD
+						has_war_with = GRI
+						has_war_with = global.griffonian_empire_var
+					}
+				}
+				NTR = {
+					create_wargoal = { 
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					AND = {
+						OR = {
+							tag = FEA
+							tag = STW
+							tag = PYT
+							tag = YAL
+							tag = BRZ
+							tag = KAT
+							tag = ANG
+							tag = ROU
+						}
+						exists = yes
+					}
+				}
+				NTR = {
+					declare_war_on = { 
+						type = annex_everything
+						target = PREV
+					}
+				}
+			}
+			IF = { #ugly in code, but looks better in the game than every_other_country
 			    limit = {
 				    FEA = {
 					    exists = yes

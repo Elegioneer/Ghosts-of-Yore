@@ -1,3 +1,77 @@
+is_exempt_from_division_limit = {
+	OR = {
+		has_game_rule = {
+			rule = ai_division_limiter
+			option = no
+		}
+		has_idea = detached_country
+		AND = {
+			has_country_flag = FIR_is_necromancer
+			has_country_leader = { ruling_only = yes character = FIR_shinespark }
+		}
+		#AND = {
+		#	tag = ARA
+		#	has_government = fascism
+		#}
+		AND = {
+			tag = NIM
+			has_government = fascism
+		}
+		AND = {
+			tag = AET
+			has_country_leader = { ruling_only = yes character = AET_prelate_ludwig_ebonwing }
+		}
+		AND = {
+			tag = MNC
+			has_completed_focus = MNC_chosen_of_maar
+			has_country_leader = { ruling_only = yes character = MNC_eriviar_sunstriker }
+		}
+		AND = {
+			tag = BAR
+			NOT = {
+				has_country_flag = BAR_end_of_pentarchy
+			}
+		}
+		# GHOSTS OF YORE
+		AND = {
+			tag = ARA
+			NOT = {
+				has_game_rule = {
+					rule = ARA_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+		AND = {
+			tag = BOI
+			NOT = {
+				has_game_rule = {
+					rule = BOI_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+		AND = {
+			tag = NTR
+			NOT = {
+				has_game_rule = {
+					rule = NTR_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+		AND = {
+			tag = POM
+			NOT = {
+				has_game_rule = {
+					rule = POM_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+		# GHOSTS OF YORE
+	}
+}
 country_with_custom_designers = {
 	OR = {
 		original_tag = FEA
@@ -63,7 +137,7 @@ country_with_custom_designers = {
 		original_tag = BAK
 		original_tag = BAT
 		original_tag = OLV
-	    original_tag = KIR
+		original_tag = KIR
 		original_tag = KIS
 		original_tag = KIC
 		original_tag = WIN
@@ -83,6 +157,8 @@ country_with_custom_designers = {
 		original_tag = TBK
 		original_tag = ZAI
 		original_tag = ABY
+		original_tag = CNT
+		original_tag = KTZ
 		##################
 		original_tag = ARA
 		original_tag = BOI
@@ -231,6 +307,7 @@ check_has_focus_tree_to_switch_to_fascism = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = ABY }
 	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }
@@ -319,6 +396,7 @@ check_has_focus_tree_to_switch_to_democratic = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = ABY }
 	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }
@@ -406,6 +484,7 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = { original_tag = HIE }
 	NOT = { original_tag = TRO }
 	NOT = { original_tag = CTL }
+	NOT = { original_tag = ABY }
 	NOT = { original_tag = HEL }
 	############################
 	NOT = { original_tag = ARA }

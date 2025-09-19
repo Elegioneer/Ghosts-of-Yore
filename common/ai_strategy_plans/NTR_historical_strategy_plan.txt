@@ -21,6 +21,7 @@ NTR_historical = {
 	}
 
 	research = {
+		
 	}
 
 	ideas = {

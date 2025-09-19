@@ -6139,14 +6139,24 @@ focus_tree = {
 					owns_state = 382
 				    has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
 				}
+				FEA = {
+					exists = yes
+					is_subject = no
+					is_neighbor_of = BOI
+					owns_state = 382
+					has_country_leader = { character = FEA_grand_duke_gerlach_iv ruling_only = yes }
+					has_country_flag = FEA_STW_marriage
+				}
 				BRZ = {
 				    exists = yes
 					is_subject = no
 					is_neighbor_of = BOI
 					owns_state = 382
 				    OR = {
-					    has_country_leader = { character = BRZ_winston_copperhill ruling_only = yes }
-					    has_country_leader = { character = BRZ_count_ignatius_bronzetail ruling_only = yes }
+						has_country_leader = { character = BRZ_winston_copperhill ruling_only = yes }
+						has_country_leader = { character = BRZ_count_ignatius_bronzetail ruling_only = yes }
+						has_country_leader = { character = BRZ_rufus_loudbark ruling_only = yes }
+						has_country_leader = { character = BRZ_barnaby_bronzetail ruling_only = yes }
 					}
 				}
 				YAL = {
@@ -6210,6 +6220,27 @@ focus_tree = {
 					}
 				}
 				STW = { change_tag_from = ROOT }
+			}
+			ELSE_IF = {
+			    limit = {
+			        FEA = {
+				        exists = yes
+						is_subject = no
+						is_neighbor_of = BOI
+						owns_state = 382
+					    has_country_leader = { character = FEA_grand_duke_gerlach_iv ruling_only = yes }
+						has_country_flag = FEA_STW_marriage
+				    }
+				}
+				custom_effect_tooltip = BOI_CETT_gestal_endgame
+				FEA = {
+				    country_event = griffonstone.214
+					annex_country = {
+					    target = BOI
+						transfer_troops = yes
+					}
+				}
+				FEA = { change_tag_from = ROOT }
 			}
 		    ELSE_IF = {
 			    limit = {

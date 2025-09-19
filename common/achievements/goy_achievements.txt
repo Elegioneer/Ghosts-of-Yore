@@ -210,16 +210,18 @@ goy_ach_hyperfocused_warlord = {
     }
     
     happened = {
-		has_completed_focus = POM_price_of_a_nation
-		NOT = {
-			has_completed_focus = POM_raid_westkeep
-			has_completed_focus = POM_collect_scraps
-			has_completed_focus = POM_expand_black_market
-			has_completed_focus = POM_keep_bureaucracy
-			has_completed_focus = POM_flowenian_recruits
-			has_completed_focus = POM_hostile_takeover
-			has_completed_focus = POM_bounty_of_greifwald
-			has_completed_focus = POM_friends_in_fezara
+		POM = {
+			has_completed_focus = POM_price_of_a_nation
+			NOT = {
+				has_completed_focus = POM_raid_westkeep
+				has_completed_focus = POM_collect_scraps
+				has_completed_focus = POM_expand_black_market
+				has_completed_focus = POM_keep_bureaucracy
+				has_completed_focus = POM_flowenian_recruits
+				has_completed_focus = POM_hostile_takeover
+				has_completed_focus = POM_bounty_of_greifwald
+				has_completed_focus = POM_friends_in_fezara
+			}
 		}
     }    
 }
@@ -285,6 +287,11 @@ goy_ach_false_flag_operation = {
 			}
 			check_variable = {
 				GOY_cass_for_elf_var > 4
+			}
+		}
+		ELF = {
+			NOT = {
+				has_war_with = CHN
 			}
 		}
     }    

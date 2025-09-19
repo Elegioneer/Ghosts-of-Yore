@@ -352,7 +352,7 @@ HRR_rottendendam_development = {
 			civilian_factory_use = 6
 	}
 	remove_effect = {
-	433 = {
+		433 = {
 			add_extra_state_shared_building_slots = 4
 			add_manpower = 400000
 			add_building_construction = {
@@ -374,7 +374,7 @@ HRR_rottendendam_development = {
 			add_extra_state_shared_building_slots = 4				
 			}
 			add_ideas = HRR_rottendendam_port
-	}
+		}
 	days_remove = 270
 	}
 HRR_low_griffking_zone = {

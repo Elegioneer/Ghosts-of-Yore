@@ -1,396 +1,361 @@
-infantry_NTR = {
+GOY_infantry_NTR_undead = {
 
 	available_for = {
 		NTR
 	}
-	roles = {
-		infantry
-	}
+	
+	role = infantry
+	
 	upgrade_prio = {
-		factor = 10
-	}
-
-	match_to_count = 1
-
-	infantry_default_GOY_NTR = {
-
-		upgrade_prio = {
-			factor = 20
-			modifier = {
-				factor = 0
-				num_of_military_factories < 6
-			}
-		}
-		production_prio = {
-			factor = 10
-			modifier = {
-				factor = 0
-				num_of_military_factories < 6
-			}
-		}
-		
-		replace_at_match = 0.6
-		replace_with = infantry_default_GOY_NTR_2
-		target_min_match = 0.5
-		
-		target_width = 6
-		width_weight = 1
-		column_swap_factor = 0.01
-		reinforce_prio = 0
-
-		can_upgrade_in_field = {
-			num_of_military_factories < 6
-		}
-
-		target_template = {
-			weight = 1
-			match_value = 10000
-
-			regiments = {
-				infantry = 3
-			}
-		}
-
-		allowed_types = {
-			# REGIMENTS
-			goy_necromancer_company
-			infantry
-		}
-	}
-	infantry_default_GOY_NTR_2 = {
-
-		upgrade_prio = {
-			factor = 20
-			modifier = {
-				factor = 5
-				num_of_military_factories > 6
-				num_of_military_factories < 20
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories > 20
-			}
-		}
-		production_prio = {
-			factor = 10
-			modifier = {
-				factor = 3
-				num_of_military_factories > 6
-				num_of_military_factories < 20
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories > 20
-			}
-		}
-		
-		replace_at_match = 0.6
-		replace_with = infantry_default_GOY_NTR_4
-		target_min_match = 0.5
-		
-		target_width = 12
-		width_weight = 1
-		column_swap_factor = 0.01
-		reinforce_prio = 1
-
-		can_upgrade_in_field = {
-			num_of_military_factories > 8
-		}
-
-		target_template = {
-			weight = 1
-			match_value = 10000
-
-			regiments = {
-				infantry = 6
-			}
-			support = {
-				engineer = 1
-			}
-		}
-
-		allowed_types = {
-			# REGIMENTS
-			infantry
-			
-			# SUPPORT
-			goy_necromancer_company
-			engineer
-		}
-	}
-	infantry_default_GOY_NTR_3 = {
-
-		upgrade_prio = {
-			factor = 50
-			modifier = {
-				factor = 5
-				num_of_military_factories > 15
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = GOY_necromancy_tech
-				}
-			}
-		}
-		production_prio = {
-			factor = 50
-			modifier = {
-				factor = 5
-				num_of_military_factories > 15
-			}
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = GOY_necromancy_tech
-				}
-			}
-		}
-		
-		target_width = 24
-		width_weight = 1
-		column_swap_factor = 0.01
-		reinforce_prio = 1
-
-		can_upgrade_in_field = {
-			num_of_military_factories > 15
-		}
-
-		target_template = {
-			weight = 10
-			match_value = 10000
-
-			regiments = {
-				infantry = 8
-				artillery_brigade = 2
-				anti_air_brigade = 1
-				anti_tank_brigade = 1
-			}
-			support = {
-				goy_necromancer_company = 1
-				engineer = 1
-				recon = 1
-				artillery = 1
-				unicorn_company = 1
-			}
-		}
-
-		allowed_types = {
-			# REGIMENTS
-			infantry
-			artillery_brigade
-			anti_air_brigade
-			anti_tank_brigade
-			
-			# SUPPORT
-			goy_necromancer_company
-			engineer
-			recon
-			artillery
-			unicorn_company
-		}
-	}
-	infantry_default_GOY_NTR_4 = {
-
-		upgrade_prio = {
-			factor = 20
-			modifier = {
-				factor = 4
-				num_of_military_factories > 15
-			}
-			modifier = {
-				factor = 0
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
 				has_tech = GOY_necromancy_tech
 			}
 		}
-		production_prio = {
-			factor = 20
+	}
+
+	GOY_infantry_early_undead = {
+
+		upgrade_prio = {
+			factor = 5
 			modifier = {
-				factor = 4
-				num_of_military_factories > 15
-			}
-			modifier = {
-				factor = 0
-				has_tech = GOY_necromancy_tech
+				factor = 0.01
+				num_of_military_factories > 30
 			}
 		}
-		
-		replace_at_match = 0.1
-		replace_with = infantry_default_GOY_NTR_3
-		target_min_match = 0.1
-		
-		target_width = 24
-		width_weight = 1
-		column_swap_factor = 0.01
+
 		reinforce_prio = 1
 
 		can_upgrade_in_field = {
-			num_of_military_factories > 10
+			num_of_military_factories > 30
 		}
 
 		target_template = {
-			weight = 1
-			match_value = 10000
-
+			
 			regiments = {
 				infantry = 8
-				artillery_brigade = 2
-				anti_air_brigade = 1
-				anti_tank_brigade = 1
 			}
+
 			support = {
 				goy_necromancer_company = 1
 				engineer = 1
-				recon = 1
 				artillery = 1
-				unicorn_company = 1
 			}
 		}
 
-		allowed_types = {
-			# REGIMENTS
-			infantry
-			artillery_brigade
-			anti_air_brigade
-			anti_tank_brigade
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = GOY_infantry_mid_undead
+		target_min_match = 0.401
+	}
+	
+	GOY_infantry_mid_undead = {
+
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 0.01
+				num_of_military_factories > 60
+			}
+		}
+
+		reinforce_prio = 1
+
+		can_upgrade_in_field = {
+			num_of_military_factories > 60
+		}
+
+		target_template = {
 			
-			# SUPPORT
-			goy_necromancer_company
-			engineer
-			recon
-			artillery
-			unicorn_company
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+
+			support = {
+				goy_necromancer_company = 1
+				engineer = 1
+				artillery = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = GOY_infantry_late_undead
+		target_min_match = 0.401
+	}
+	
+	GOY_infantry_late_undead = {
+
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 0.01
+				num_of_military_factories > 60
+			}
+		}
+
+		reinforce_prio = 1
+
+		can_upgrade_in_field = {
+			num_of_military_factories > 60
+		}
+
+		target_template = {
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+				anti_air_brigade = 1
+			}
+
+			support = {
+				goy_necromancer_company = 1
+				engineer = 1
+				artillery = 1
+				unicorn_company = 1
+				recon = 1
+			}
 		}
 	}
 }
 
-pegasi_shock_GOY_NTR = {
+GOY_pegasi_undead_NTR = {
 
-	roles = {
-		pegasi
-	}
-
+	role = pegasi
 	upgrade_prio = {
-		factor = 3
+		base = 5
+
 		modifier = {
 			factor = 0
 			NOT = {
 				has_tech = tech_pegasi
+				has_tech = GOY_necromancy_tech
 			}
 		}
 	}
 
-	match_to_count = 0.4
+	###match_to_count = 0.4
 
-	pegasi_default_GOY_NTR = {
+	GOY_pegasi_undead_NTR = {
 
 		upgrade_prio = {
-			factor = 20
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = GOY_necromancy_tech
-				}
-			}
+			factor = 5
 		}
 
-		production_prio = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = {
-					has_tech = GOY_necromancy_tech
-				}
-			}
-		}
-
-		target_width = 20
-		width_weight = 1
-		column_swap_factor = 0.01
-		reinforce_prio = 1
-
-		# workaround for a PDX bug https://forum.paradoxplaza.com/forum/threads/hoi-4-incremental-division-upgrade-does-not-work-in-most-cases.1414193/
-		can_upgrade_in_field = { always = no }
-
+		reinforce_prio = 2
 		target_template = {
-			weight = 0.9
-			match_value = 4000.0
-
-			support = {
-				goy_necromancer_company = 1
-				engineer = 1
-				artillery = 1
-				anti_tank = 1
-				unicorn_company = 1
-				recon = 1
-			}
 
 			regiments = {
 				pegasi = 10
 			}
-		}
-
-		allowed_types = {
-			pegasi
-			goy_necromancer_company
-			unicorn_company
-			engineer
-			recon
-			anti_tank
-			artillery
-			anti_air
-		}
-	}
-	pegasi_default_GOY_NTR_2 = {
-
-		upgrade_prio = {
-			factor = 20
-		}
-
-		production_prio = {
-			factor = 10
-		}
-
-		target_width = 20
-		width_weight = 1
-		column_swap_factor = 0.01
-		reinforce_prio = 1
-
-		replace_at_match = 0.6
-		replace_with = pegasi_shock_GOY_NTR
-		target_min_match = 0.5
-		can_upgrade_in_field = { always = yes }
-
-		target_template = {
-			weight = 0.9
-			match_value = 4000.0
-
 			support = {
 				goy_necromancer_company = 1
 				engineer = 1
 				artillery = 1
-				anti_tank = 1
 				unicorn_company = 1
 				recon = 1
 			}
-
-			regiments = {
-				pegasi = 10
-			}
-		}
-
-		allowed_types = {
-			goy_necromancer_company
-			pegasi
-			unicorn_company
-			engineer
-			recon
-			anti_tank
-			artillery
-			anti_air
 		}
 	}
 }
+
+GOY_infantry_NTR_ursa = {
+
+	available_for = {
+		NTR
+	}
+	
+	role = infantry
+	
+	upgrade_prio = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = TEM_ursas
+			}
+		}
+	}
+
+	GOY_infantry_early_ursa = {
+
+		upgrade_prio = {
+			factor = 5
+			modifier = {
+				factor = 0.01
+				num_of_military_factories > 30
+			}
+		}
+
+		reinforce_prio = 1
+
+		can_upgrade_in_field = {
+			num_of_military_factories > 30
+		}
+
+		target_template = {
+			
+			regiments = {
+				infantry = 8
+			}
+
+			support = {
+				ursas = 1
+				engineer = 1
+				artillery = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = GOY_infantry_mid_undead
+		target_min_match = 0.401
+	}
+	
+	GOY_infantry_mid_ursa = {
+
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 0.01
+				num_of_military_factories > 60
+			}
+		}
+
+		reinforce_prio = 1
+
+		can_upgrade_in_field = {
+			num_of_military_factories > 60
+		}
+
+		target_template = {
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+
+			support = {
+				ursas = 1
+				engineer = 1
+				artillery = 1
+			}
+		}
+
+		replace_at_match = 1.5  # value higher than 1.0 means it will only upgrade/replace when upgrade_prio takes over
+		replace_with = GOY_infantry_late_undead
+		target_min_match = 0.401
+	}
+	
+	GOY_infantry_late_ursa = {
+
+		upgrade_prio = {
+			factor = 2
+			modifier = {
+				factor = 0.01
+				num_of_military_factories > 60
+			}
+		}
+
+		reinforce_prio = 1
+
+		can_upgrade_in_field = {
+			num_of_military_factories > 60
+		}
+
+		target_template = {
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+				anti_air_brigade = 1
+			}
+
+			support = {
+				ursas = 1
+				engineer = 1
+				artillery = 1
+				unicorn_company = 1
+				recon = 1
+			}
+		}
+	}
+}
+
+GOY_pegasi_NTR_ursa = {
+
+	role = pegasi
+	upgrade_prio = {
+		base = 5
+
+		modifier = {
+			factor = 0
+			NOT = {
+				has_tech = tech_pegasi
+				has_tech = TEM_ursas
+			}
+		}
+	}
+
+	###match_to_count = 0.4
+
+	GOY_pegasi_NTR_ursa_1 = {
+
+		upgrade_prio = {
+			factor = 5
+		}
+
+		reinforce_prio = 2
+		target_template = {
+
+			regiments = {
+				pegasi = 10
+			}
+			support = {
+				ursas = 1
+				engineer = 1
+				artillery = 1
+				unicorn_company = 1
+				recon = 1
+			}
+		}
+	}
+}
+
+# REGIMENTS:
+#infantry
+#light_armor
+#super_heavy_armor
+#modern_armor
+#heavy_armor
+#medium_armor
+#light_armor
+#anti_tank
+#cavalry
+#motorized
+#mechanized
+#marine
+#mountaineers
+#paratrooper
+#rocket_artillery
+#light_tank_destroyer
+#anti_air
+#artillery
+
+# SUPPORT:
+#goy_necromancer_company
+#engineer
+#recon
+#signal_company
+#maintenance_company
+#anti_tank_brigade
+#anti_air_brigade
+#artillery_brigade
+#field_hospital
+#logistics_company
+#military_police
+#light_sp_anti_air_brigade
+#light_sp_artillery_brigade
 
 # REGIMENTS:
 #infantry

@@ -216,11 +216,18 @@ BOI_wohnsitz_kanonenfabrik_organization = {
 NTR_northern_weaponsmiths_organization = {
 	icon = GFX_idea_GOY_NTR_northern_smiths
 	
+	#pre-2.4.0.5 melee eq values: defense = 3 breakthrough = 0.5 reliability = 0.8 soft attack = 1 build_cost_ic = 0.25
+	#post-2.4.0.5 melee eq values: defense = 6 breakthrough = 1 reliability = 0.9 soft attack = 2 build_cost_ic = 0.25
+	
 	allowed = {	
 		tag = NTR
 		has_dlc = "Arms Against Tyranny"
 	}
 	available = {
+	}
+	
+	ai_will_do = {
+		base = 10
 	}
 	
 	equipment_type = {
@@ -245,9 +252,8 @@ NTR_northern_weaponsmiths_organization = {
 		limit_to_equipment_type = { melee_equipment_0 }
 		
 		equipment_bonus = {
-			soft_attack = 1
-			defense = 1
-			breakthrough = 1
+			reliability = 0.1
+			build_cost_ic = -0.1
 		}
 	}
 	
@@ -258,7 +264,14 @@ NTR_northern_weaponsmiths_organization = {
 		special_trait_background = yes
 		
 		ai_will_do = {
-			factor = 0 #I ain't teaching the AI to use this crap
+			base = 0 #AI refuses to upgrade spears via MIO
+			modifier = {
+				factor = 10
+				OR = {
+					has_completed_focus = NTR_cold_hearted
+					has_completed_focus = NTR_follow_old
+				}
+			}
 		}
 		
 		mutually_exclusive = { mio_trait_GOY_NTR_move_on }
@@ -278,6 +291,10 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_defense
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 10
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_stay }
 		
 		limit_to_equipment_type = { melee_equipment_0 }
@@ -286,9 +303,9 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			defense = 3
+			defense = 1
 			hardness = 2
-			build_cost_ic = 0.05	
+			build_cost_ic = 0.05
 		}
 		#production_bonus = {
 		#	production_resource_need_factor = 0.2
@@ -297,7 +314,7 @@ NTR_northern_weaponsmiths_organization = {
 			custom_effect_tooltip = GOY_NTR_TT_sturdier_shields
 			hidden_effect = {
 				FROM = {
-					add_ideas = NTR_smiths_buff_1
+					add_ideas = NTR_smiths_buff_1 #inf hardness x10
 				}
 			}
 		}
@@ -308,9 +325,11 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_breakthrough
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 5
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_stay }
-		
-		
 		
 		limit_to_equipment_type = { melee_equipment_0 }
 		
@@ -318,8 +337,8 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			breakthrough = 6
-			soft_attack = 2
+			breakthrough = 3
+			soft_attack = 1
 			build_cost_ic = 0.05
 		}
 		#production_bonus = {
@@ -335,17 +354,18 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_soft_attack
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 2
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_stay }
-		
-		
-		
 		limit_to_equipment_type = { melee_equipment_0 }
 		
 		position = { x=1 y=1 }
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			soft_attack = 4
+			soft_attack = 2
 			hard_attack = 1000
 			build_cost_ic = 0.05
 		}
@@ -361,10 +381,11 @@ NTR_northern_weaponsmiths_organization = {
 		name = mio_trait_GOY_NTR_tungsten_armour
 		icon = GFX_generic_mio_trait_icon_armor_value
 		special_trait_background = yes
+		ai_will_do = {
+			base = 10
+		}
 		
 		all_parents = { mio_trait_GOY_NTR_sturdier_shields mio_trait_GOY_NTR_sharper_swords }
-		
-		
 		
 		limit_to_equipment_type = { melee_equipment_0 }
 		
@@ -374,6 +395,7 @@ NTR_northern_weaponsmiths_organization = {
 		equipment_bonus = {
 			hardness = 4
 			armor_value = 1 #+9999 to inf
+			reliability = -0.05
 			build_cost_ic = 0.1
 		}
 		#production_bonus = {
@@ -386,7 +408,7 @@ NTR_northern_weaponsmiths_organization = {
 			custom_effect_tooltip = GOY_NTR_TT_tungsten_armour
 			hidden_effect = {
 				FROM = {
-					add_ideas = NTR_smiths_buff_2
+					add_ideas = NTR_smiths_buff_2 #inf armour x5000
 				}
 			}
 		}
@@ -397,9 +419,11 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_hardness
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 10
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_sharper_swords }
-		
-		
 		
 		limit_to_equipment_type = { melee_equipment_0 }
 		
@@ -407,9 +431,9 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			soft_attack = 3
-			breakthrough = 2
-			reliability = -0.05
+			soft_attack = 1.5
+			breakthrough = 1
+			reliability = -0.1
 			build_cost_ic = 0.1
 		}
 		#production_bonus = {
@@ -428,9 +452,11 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_ap_attack
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 3
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_sharper_swords mio_trait_GOY_NTR_stronger_bows }
-		
-		
 		
 		limit_to_equipment_type = { melee_equipment_0 }
 		
@@ -441,6 +467,7 @@ NTR_northern_weaponsmiths_organization = {
 			hard_attack = 2000
 			ap_attack = 5000
 			air_attack = 1 #4999 to inf
+			reliability = -0.05
 			build_cost_ic = 0.1
 		}
 		#production_bonus = {
@@ -453,7 +480,7 @@ NTR_northern_weaponsmiths_organization = {
 			custom_effect_tooltip = GOY_NTR_TT_rubber_bowstrings
 			hidden_effect = {
 				FROM = {
-					add_ideas = NTR_smiths_buff_3
+					add_ideas = NTR_smiths_buff_3 #inf air_attack x2500
 				}
 			}
 		}
@@ -464,6 +491,10 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_generic_mio_trait_icon_max_strength
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 7
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_tungsten_armour }
 		
 		limit_to_equipment_type = { melee_equipment_0 }
@@ -472,7 +503,7 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 
 		equipment_bonus = {
-			defense = 5
+			defense = 2.5
 			hardness = 3 #+97 to inf
 			build_cost_ic = 0.1
 		}
@@ -486,7 +517,7 @@ NTR_northern_weaponsmiths_organization = {
 			custom_effect_tooltip = GOY_NTR_TT_armor_supports
 			hidden_effect = {
 				FROM = {
-					add_ideas = NTR_smiths_buff_4
+					add_ideas = NTR_smiths_buff_4 #inf hardness x5
 				}
 			}
 		}
@@ -496,6 +527,10 @@ NTR_northern_weaponsmiths_organization = {
 		name = mio_trait_GOY_NTR_anti_tank_crossbows
 		icon = GFX_generic_mio_trait_icon_hard_attack
 		special_trait_background = yes
+		
+		ai_will_do = {
+			base = 3
+		}
 		
 		all_parents = { mio_trait_GOY_NTR_rubber_bowstrings }
 		
@@ -507,6 +542,7 @@ NTR_northern_weaponsmiths_organization = {
 		equipment_bonus = {
 			hard_attack = 4000
 			ap_attack = 10000
+			reliability = -0.05
 			build_cost_ic = 0.1
 		}
 		#production_bonus = {
@@ -525,6 +561,10 @@ NTR_northern_weaponsmiths_organization = {
 		icon = GFX_GOY_mio_trait_icon_magical_sword
 		special_trait_background = yes
 		
+		ai_will_do = {
+			base = 10
+		}
+		
 		all_parents = { mio_trait_GOY_NTR_armor_supports mio_trait_GOY_NTR_adamantine_blades mio_trait_GOY_NTR_anti_tank_crossbows }
 		
 		limit_to_equipment_type = { melee_equipment_0 }
@@ -533,9 +573,9 @@ NTR_northern_weaponsmiths_organization = {
 		relative_position_id = mio_trait_GOY_NTR_stay
 		
 		equipment_bonus = {
-			soft_attack = 4
-			breakthrough = 4
-			defense = 4
+			soft_attack = 2
+			breakthrough = 2
+			defense = 2
 			maximum_speed = 0.25
 			reliability = -0.1
 			build_cost_ic = 0.2
@@ -564,6 +604,9 @@ NTR_northern_weaponsmiths_organization = {
 		mutually_exclusive = { mio_trait_GOY_NTR_stay }
 
 		position = { x=6 y=0 }
+		ai_will_do = {
+			base = 5
+		}
 		
 		organization_modifier = {
 			

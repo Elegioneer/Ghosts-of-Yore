@@ -1025,10 +1025,12 @@ BOI_CETT_archons:0 "Archons are now available as advisors"
  GOY_BOI_thundertail_stats_tt:0 "§RAttack Skill§!: §g4§!\n§ODefence Skill§!: §g2§!\n§GPlanning Skill§!: §g2§!\n§CLogistics Skill§!: §g2§!\n"
  GOY_BOI_silverfeather_stats_tt:0 "§RAttack Skill§!: §g2§!\n§ODefence Skill§!: §g3§!\n§GPlanning Skill§!: §g5§!\n§CLogistics Skill§!: §g3§!\n"
 BOI_TT_add_100_planes:0 "§Y100§! units of §YBasic Fighter§! are added to the antional stockpile."
+GOY_BOI_TT_no_cores_ach:0 "Has no §YPotential Core States§!."
 GOY_BOI_enable_steam_engines_tt:0 "Enables §YSteam Engines§! for ships."
 GOY_BOI_enable_steam_engines_no_mtg_tt:0 "Which grants:\nDockyard output: §G+10%§!\nMaximum naval range: §R-10%§!"
 GOY_BOI_TT_owns_all_claims:0 "Owns all §YClaimed States§!."
 GOY_BOI_TT_donations_ach:0 "Has donated §G5§! batches of each equipment type available via decisions to @ELF§Y[ELF.GetName]§!."
+BOI_CETT_load_second_gallus_tree:0 "§YGriffonstone§! unlocks a new branch of §CGallus§!'s §YFocus Tree§!."
 
 ## Decisions ##
 BOI_war_for_liberation_category:0 "Launch the ELF's Insurrection"
