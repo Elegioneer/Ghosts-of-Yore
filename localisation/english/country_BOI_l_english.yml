@@ -16,7 +16,7 @@ BOI_motorized_rocket_equipment_1_short:0 "G-01.1 'Käfer-Raketenwerfer'"
 BOI_motorized_rocket_equipment_1_desc:0 "In the style typical of the Griffonstonian military, when the high command put out an order for a self-propelled rocket artillery platform, most of the reserved funds disappeared almost instantly in a few very deep pockets. As a result, all that the military engineers could afford to build was this: the old unreliable "Käfer" with a few rocket rails welded to the flatbed."
 BOI_gw_armored_car_equipment:0 "GMW M-1 'Heißrute'"
 BOI_gw_armored_car_equipment_short:0 "M-1 'Heißrute'"
-BOI_gw_armored_car_equipment_desc:0 "Finding itself in need of a recon vehicle, the Griffonstonian army turned to Greiffenstein Motor Werke. Whose employees promptly turned up at Kessler Motors in Skyfall, purchased their ‘Model G’, and reverse-engineered it, further simplifying the already crude design. As of now, the civil lawsuit by Kessler languishes in limbo due to the unstable political situation in Griffonia."
+BOI_gw_armored_car_equipment_desc:0 "Finding itself in need of a recon vehicle, the Griffonstonian army turned to GMW. Whose employees promptly turned up at Kessler Motors in Skyfall, purchased their ‘Model G’, and reverse-engineered it, further simplifying the already crude design. As of now, the civil lawsuit by Kessler languishes in limbo due to the unstable political situation in Griffonia."
 
 ## Modules ##
 GOY_light_ship_engine_0:0 "Steam Engine"
@@ -340,7 +340,7 @@ BOI_greiffenwerft_1:0 "Griffkingdampfschiffahrtsgesellschaft"
 
 BOI_kopferberg_waffen:0 "Kopferberg Waffen"
 BOI_wohnsitz_kanonenfabrik:0 "Wohnsitz Kannonenfabrik"
-BOI_GMW:0 "Greiffenstein Motor Werke"
+BOI_GMW:0 "Greiffensteinische Motoren Werke"
 
 BOI_coalfall_industries:0 "Coalfall Industries"
 BOI_greiffensteinisches_elektroinstitut:0 "Greiffensteinisches Elektroinstitut"

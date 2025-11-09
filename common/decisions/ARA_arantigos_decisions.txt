@@ -704,10 +704,10 @@ ARA_dev_islands_cat = {
 			civilian_factory_use = 20
 		}
 		remove_effect = {
-			set_province_name = { id = 20694 name = GOY_vp_port_featherin }
+			set_province_name = { id = 2379 name = GOY_vp_port_featherin }
 			1196 = {
 				add_victory_points = {
-					province = 20694
+					province = 2379
 					value = 10
 				}
 				add_manpower = 200000

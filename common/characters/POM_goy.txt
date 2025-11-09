@@ -1536,7 +1536,7 @@ characters = {
 	}
 	
 	POM_GOY_herman_of_vorst_tot_vorst={
-		name="FEA_herman_of_vorst_tot_vorst"
+		name="POM_GOY_herman_of_vorst_tot_vorst"
 		portraits={
 			army={
 				large="gfx/leaders/FEA/Herman_Vorst_tot_Vorst.tga"
@@ -1545,7 +1545,7 @@ characters = {
 		}
 	}
 	GOY_VED_king_ondska_i={
-		name=VED_prince_ondska
+		name=GOY_VED_king_ondska_i
 		portraits={
 			civilian={
 				large="gfx/leaders/VED/Ondska.tga"
@@ -1553,7 +1553,7 @@ characters = {
 		}
 	}
 	GOY_POM_soter = {
-		name = soter_advisor
+		name = GOY_POM_soter
 		portraits = {
 			army = {
 				large="gfx/leaders/ARA/soter.tga"
@@ -1565,7 +1565,7 @@ characters = {
 		}
 	}
 	GOY_POM_matthias_felchen={
-		name=GRU_matthias_felchen
+		name=GOY_POM_matthias_felchen
 		portraits={
 			army={
 				large="gfx/leaders/GRU/GRYH_non-aligned_knight_king.tga"
@@ -1573,17 +1573,20 @@ characters = {
 			}
 		}
 	}
-	GOY_POM_wilhelm_stackelberg={
-		name=HLQ_wilhelm_stackelberg
-		portraits={
-			army={
+	GOY_POM_wilhelm_stackelberg = {
+		name = GOY_POM_wilhelm_stackelberg
+		portraits = {
+			army = {
 				large="gfx/leaders/HLQ/Wilhelm_Stackelburg.tga"
 				small="gfx/interface/ideas/Advisors/HLQ/HLQ_wilhelm_stackelburg.tga"
 			}
+			civilian = {
+				large="gfx/leaders/HLQ/Wilhelm_Stackelburg.tga"
+			}			
 		}
 	}
 	GOY_POM_hjarnar_ernstsson={
-		name=OLV_hjarnar_ernstsson
+		name=GOY_POM_hjarnar_ernstsson
 		portraits={
 			army={
 				large="gfx/leaders/OLV/Hjarnar_Ernstsson.tga"
@@ -1592,7 +1595,7 @@ characters = {
 		}
 	}
 	GOY_POM_spirit_fire={
-		name=WIT_spirit_fire
+		name=GOY_POM_spirit_fire
 		portraits={
 			army={
 				large="gfx/leaders/WIT/Spirit_Fire.tga"
@@ -1602,7 +1605,7 @@ characters = {
 		gender = female
 	}
 	GOY_POM_hermane_gering={
-		name=FBK_grand_duke_hermane_i
+		name=GOY_POM_hermane_gering
 		portraits={
 			army={
 				small="gfx/interface/ideas/Advisors/FBK/FBK_hermane_gering.tga"

@@ -1,0 +1,13 @@
+﻿l_english:
+
+ # Added During Game
+ raid_type_goy_arantigos_grand_temple_bombing: "Grand Temple of Arantigos Bombing Raid"
+ raid_type_goy_arantigos_grand_temple_bombing_desc: "By sending a group of bombers to attack the enemy's main headquarter, and the symbolic place of the Arantigan power, we can boost our people's morale, while inflicting a blow to our enemy's morale at the same time."
+ raid_type_goy_great_aetian_lighthouse_bombing: "Great Aetian Lighthouse Bombing Raid"
+ raid_type_goy_great_aetian_lighthouse_bombing_desc: "By sending a group of bombers to attack the enemy's main headquarter, and the symbolic place of the Aetian power, we can boost our people's morale, while inflicting a blow to our enemy's morale at the same time."
+ raid_type_goy_allard_mausoleum_bombing: "Allard's Mausoleum Bombing Raid"
+ raid_type_goy_allard_mausoleum_bombing_desc: "By sending a group of bombers to attack the enemy's main headquarter, and the symbolic place of the Communard power, we can boost our people's morale, while inflicting a blow to our enemy's morale at the same time."
+ 
+ # Present at Start
+raid_type_goy_snowflake_palace_bombing: "Snowflake Palace Bombing Raid"
+raid_type_goy_snowflake_palace_bombing_desc: "By sending a group of bombers to attack the enemy's main headquarter, and the symbolic place of the Northern Ponies' power, we can boost our people's morale, while inflicting a blow to our enemy's morale at the same time."

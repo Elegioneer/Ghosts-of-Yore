@@ -666,13 +666,13 @@
 					increase_state_category = yes
 					add_manpower = 50000
 					add_dynamic_modifier = { modifier = POM_angaz_barak_dynmodifier }
-				}
-				add_victory_points = {
-					province = 7405
-					value = 1
+						add_victory_points = {
+						province = 1402
+						value = 1
+					}
 				}
 				restore_previous_manpower = yes
-				set_province_name = { id = 7405 name = GOY_vp_angaz_barak }
+				set_province_name = { id = 1402 name = GOY_vp_angaz_barak }
 				set_country_flag = GOY_FLAG_arcturius_plan_2
 			}
 		}
@@ -2366,7 +2366,15 @@
 				civilian_factory_use = 12
 			}
 			remove_effect = {
-				add_ideas = POM_great_aetian_lighthouse
+			516 = {
+				add_building_construction = {
+					type = landmark_goy_great_aetian_lighthouse
+					level = 1
+					instant_build = yes
+					province = 6091
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 				set_country_flag = POM_FLAG_devscheme_7
 			}
 		}
@@ -3320,28 +3328,13 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = VED
-						is_core_of = FAT
-						is_core_of = MNC
-						is_core_of = SRS
-						is_core_of = NTR
-					}
-					NOT = {
-						is_core_of = ROOT
-					}
+					goy_morel_dominion_VED_states = yes
 				}
 			}
 			available = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = VED
-							is_core_of = FAT
-							is_core_of = MNC
-							is_core_of = SRS
-							is_core_of = NTR
-						}
+						goy_morel_dominion_VED_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3361,13 +3354,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							#is_core_of = VED
-							is_core_of = FAT
-							is_core_of = MNC
-							is_core_of = SRS
-							is_core_of = NTR
-						}
+						goy_morel_dominion_VED_states = yes
 						NOT = {
 							is_core_of = ROOT
 							is_core_of = GRI
@@ -3422,35 +3409,19 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = ARA
-						is_core_of = FRN
-						is_core_of = TAL
-						is_core_of = WNG
-						is_core_of = FAL
-						AND = {
-							is_core_of = EQC
-							is_owned_by = ROOT
-						}
-					}
+					goy_morel_dominion_FRN_states = yes
 					NOT = {
 						is_core_of = ROOT
-						state = 487
-						state = 652
-						state = 521
+						#state = 487
+						#state = 652
+						#state = 521
 					}
 				}
 			}
 			available = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = ARA
-							is_core_of = FRN
-							is_core_of = TAL
-							is_core_of = WNG
-							is_core_of = FAL
-						}
+						goy_morel_dominion_FRN_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3471,21 +3442,17 @@
 				every_state = {
 					limit = {
 						OR = {
-							is_core_of = ARA
-							#is_core_of = FRN
-							is_core_of = TAL
-							is_core_of = WNG
-							is_core_of = FAL
+							goy_morel_dominion_FRN_states = yes
 							AND = {
-								is_core_of = EQC
+								goy_morel_dominion_FRN_EQC_states = yes
 								is_owned_by = ROOT
 							}
 						}
 						NOT = {
 							is_core_of = ROOT
-							state = 487
-							state = 652
-							state = 521
+							#state = 487
+							#state = 652
+							#state = 521
 						}
 					}
 					add_core_of = FRN
@@ -3537,11 +3504,7 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = MIT
-						is_core_of = CYA
-						is_core_of = SIC
-					}
+					goy_morel_dominion_MIT_states = yes
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3550,11 +3513,7 @@
 			available = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = MIT
-							is_core_of = CYA
-							is_core_of = SIC
-						}
+						goy_morel_dominion_MIT_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3572,11 +3531,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							#is_core_of = MIT
-							is_core_of = CYA
-							is_core_of = SIC
-						}
+						goy_morel_dominion_MIT_states = yes
 						NOT = {
 							is_core_of = ROOT
 						}
@@ -3611,12 +3566,7 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = LUS
-						is_core_of = GRY
-						is_core_of = GRU
-						is_core_of = BRF
-					}
+					goy_morel_dominion_GRU_states = yes
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3625,12 +3575,7 @@
 			available = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = LUS
-							is_core_of = GRY
-							is_core_of = GRU
-							is_core_of = BRF
-						}
+						goy_morel_dominion_GRU_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3649,12 +3594,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							is_core_of = LUS
-							is_core_of = GRY
-							#is_core_of = GRU
-							is_core_of = BRF
-						}
+						goy_morel_dominion_GRU_states = yes
 						NOT = {
 							is_core_of = ROOT
 						}
@@ -3704,12 +3644,7 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = HLQ
-						is_core_of = LSM
-						is_core_of = LNS
-						is_core_of = LSC
-					}
+					goy_morel_dominion_HLQ_states = yes
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3718,12 +3653,7 @@
 			available = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = HLQ
-							is_core_of = LSM
-							is_core_of = LNS
-							is_core_of = LSC
-						}
+						goy_morel_dominion_HLQ_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3742,12 +3672,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							#is_core_of = HLQ
-							is_core_of = LSM
-							is_core_of = LNS
-							is_core_of = LSC
-						}
+						goy_morel_dominion_HLQ_states = yes
 						NOT = {
 							is_core_of = ROOT
 						}
@@ -3776,6 +3701,7 @@
 								expire = "1965.1.1"
 								ideology = neofeudalism
 								traits = { }
+								id=-1
 							}
 							Promote_leader = yes
 						}
@@ -3850,17 +3776,7 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = OLV
-						is_core_of = FRE
-						is_core_of = BAR
-						is_core_of = ZES
-						state = 452
-						state = 617
-						state = 628
-						state = 629
-						state = 627
-					}
+					goy_morel_dominion_OLV_states = yes
 					NOT = {
 						is_core_of = ROOT
 					}
@@ -3882,17 +3798,7 @@
 			visible = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = OLV
-							is_core_of = FRE
-							is_core_of = BAR
-							is_core_of = ZES
-							state = 452
-							state = 617
-							state = 628
-							state = 629
-							state = 627
-						}
+						goy_morel_dominion_OLV_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -3900,17 +3806,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							#is_core_of = OLV
-							is_core_of = FRE
-							is_core_of = BAR
-							is_core_of = ZES
-							state = 452
-							state = 617
-							state = 628
-							state = 629
-							state = 627
-						}
+						goy_morel_dominion_OLV_states = yes
 						NOT = {
 							is_core_of = ROOT
 						}
@@ -3961,19 +3857,12 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = BAK
-						is_core_of = RCT
-						is_core_of = WIT
-						is_core_of = NIM
+					AND = {
+						goy_morel_dominion_WIT_states = yes
+						owns_or_subject_of = yes
 					}
 					NOT = {
 						is_core_of = ROOT
-						state = 452
-						state = 617
-						state = 628
-						state = 629
-						state = 627
 					}
 				}
 			}
@@ -3993,17 +3882,7 @@
 			visible = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = BAK
-							is_core_of = RCT
-							is_core_of = WIT
-							is_core_of = NIM
-						}
-						state = 452
-						state = 617
-						state = 628
-						state = 629
-						state = 627
+						goy_morel_dominion_WIT_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -4011,19 +3890,7 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							is_core_of = BAK
-							is_core_of = RCT
-							#is_core_of = WIT
-							is_core_of = NIM
-						}
-						NOT = {
-							state = 452
-							state = 617
-							state = 628
-							state = 629
-							state = 627
-						}
+						goy_morel_dominion_WIT_states = yes
 						is_owned_by = ROOT
 					}
 					add_core_of = WIT
@@ -4085,22 +3952,9 @@
 			highlight_states = { #todo fix all highlights, see how they look in-game
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
-					OR = {
-						is_core_of = FIR
-						is_core_of = FBK
-						is_core_of = WAT
-						AND = {
-							is_core_of = HLR
-							owns_or_subject_of = yes
-						}
-						AND = {
-							is_core_of = DED
-							owns_or_subject_of = yes
-						}
-						AND = {
-							is_core_of = NCH
-							owns_or_subject_of = yes
-						}
+					AND = {
+						goy_morel_dominion_FBK_states = yes
+						owns_or_subject_of = yes
 					}
 					NOT = {
 						is_core_of = ROOT
@@ -4122,11 +3976,7 @@
 			visible = {
 				all_state = {
 					OR = {
-						NOT = {
-							is_core_of = FIR
-							is_core_of = FBK
-							is_core_of = WAT
-						}
+						goy_morel_dominion_FBK_states = no
 						is_owned_by = ROOT
 					}
 				}
@@ -4134,22 +3984,9 @@
 			remove_effect = {
 				every_state = {
 					limit = {
-						OR = {
-							is_core_of = FIR
-							is_core_of = FBK
-							is_core_of = WAT
-							AND = {
-								is_core_of = HLR
-								owns_or_subject_of = yes
-							}
-							AND = {
-								is_core_of = DED
-								owns_or_subject_of = yes
-							}
-							AND = {
-								is_core_of = NCH
-								owns_or_subject_of = yes
-							}
+						AND = {
+							goy_morel_dominion_FBK_states = yes
+							owns_or_subject_of = yes
 						}
 						NOT = {
 							is_core_of = ROOT
@@ -4190,6 +4027,189 @@
 				}
 			}
 		}
+		POM_goy_dominion_expand_fbk_nch = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = NCH
+					}
+					is_owned_by = ROOT
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = NCH
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				owns_state = 668
+				owns_state = 669
+				owns_state = 670
+				has_subject = FBK
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = NCH
+						}
+					}
+					add_core_of_by = FBK
+					transfer_state_to = FBK
+				}
+			}
+		}	
+		POM_goy_dominion_expand_fbk_ded = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					OR = {
+						is_core_of = DED
+						is_core_of = HLR						
+					}
+					is_owned_by = ROOT
+				}
+			}
+			available = {
+				NOT = {
+					any_other_country = {
+						OR = {
+							original_tag = NCH
+						}
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				all_state = {
+					OR = {
+						goy_morel_dominion_DED_states = no
+						is_owned_by = ROOT
+					}
+				}
+				has_subject = FBK
+			}
+			remove_effect = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = DED
+							is_core_of = HLR							
+						}
+					}
+					add_core_of_by = FBK
+					transfer_state_to = FBK
+				}
+			}
+		}		
+		POM_goy_dominion_mareland = {
+			icon = GFX_decision_goy_pom_boar
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 1
+			}
+			highlight_states = { #todo fix all highlights, see how they look in-game
+				#highlight_color_before_active = 2
+				highlight_states_trigger = {
+					goy_morel_dominion_FRN_EQC_states = yes
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+			}
+			available = {
+				all_state = {
+					OR = {
+						goy_morel_dominion_FRN_EQC_states = no
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = EQC
+						exists = yes
+					}
+				}
+			}
+			visible = {
+				all_state = {
+					OR = {
+						goy_morel_dominion_FRN_EQC_states = no
+						is_owned_by = ROOT
+					}
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = EQC
+						exists = yes
+					}
+				}
+			}			
+			remove_effect = {
+				every_state = {
+					limit = {
+						goy_morel_dominion_FRN_EQC_states = yes
+						NOT = {
+							is_core_of = ROOT
+						}
+					}
+					add_core_of = EQC
+				}
+				release_puppet = EQC
+				GOY_POM_gaenaelle_pereire = {
+					set_nationality = EQC
+				}
+				EQC = {
+					hidden_effect = {
+						set_cosmetic_tag = EQC_POM_MOREL
+						load_focus_tree = generic_griffon_focus
+						#set_party_name = {
+							#ideology = fascism
+							#name = ARA_colony_party
+							#long_name = ARA_colony_party_long
+						#}
+						add_ideas = disarmed_nation_ara
+						add_ideas = exploited_economy_ara
+						add_country_leader_role = {
+							Character = GOY_POM_gaenaelle_pereire
+							country_leader = {
+								desc = ""
+								expire = "1965.1.1"
+								ideology = kratokracy
+								traits = { }
+							}
+							Promote_leader = yes
+						}
+						promote_character = {
+							character = GOY_POM_gaenaelle_pereire
+							ideology = kratokracy
+						}
+					}
+				}
+			}
+		}
 	}
 	POM_goy_reclaim_the_colony_cat = {
 		POM_goy_reclaim_the_colony = {
@@ -4218,3 +4238,52 @@
 			}
 		}
 	}
+	POM_goy_revolution_in_mareland_cat = {
+		POM_goy_revolution_in_mareland= {
+			icon = GFX_decision_red_star
+			#cost = 0
+			fire_only_once = yes
+			days_remove = 7
+			ai_will_do = {
+				factor = 0
+			}
+			available = {
+				EQC = {
+					all_core_state = {
+					is_owned_by = ARD
+					}
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = EQC
+						exists = yes
+					}
+				}
+			}			
+			remove_effect = {
+			save_current_manpower = yes
+			every_owned_state = {
+				limit = {
+				is_core_of = EQC
+				}
+				add_resistance = 20
+				add_resistance_target = 20
+				add_manpower = -50000
+			}
+			hidden_effect = {
+				361 = {
+					add_manpower = 10000
+				}
+				675 = {
+					add_manpower = 2000
+				}
+				676 = {
+					add_manpower = 1000
+				}					
+			restore_previous_manpower = yes
+			EQC = { add_to_ROOT_potential_cores = yes }
+			set_province_name = { id = 10005 name = GOY_vp_reddawn }			
+			}
+	}
+	}
+	

@@ -208,6 +208,15 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  GOY_ARD_naval_scientist_1:0 "Godard Fabron"
  GOY_ARD_air_scientist_1:0 "Swift Sky"
  GOY_ARD_magic_scientist_1:0 "Pauline Travers"
+ #Dominions
+ POM_GOY_herman_of_vorst_tot_vorst:0 "Baron Herman of Vorst tot Vorst " #Do not delete these weird spaces or the characters will not appear in-game
+ GOY_VED_king_ondska_i:0 "Prince Ondska I"
+ GOY_POM_soter:0 "Soter Litori"
+ GOY_POM_matthias_felchen:0 "Matthias Felchen "
+ GOY_POM_wilhelm_stackelberg:0 "Wilhelm Stackelberg "
+ GOY_POM_hjarnar_ernstsson:0 "Hjarnar Ernstsson "
+ GOY_POM_spirit_fire:0 "Spirit Fire "
+ GOY_POM_hermane_gering:0 "Grand Duke Hermane I "
  
  #beach
  POM_gispen_name:0 "Gispen Fluffs" #DO NOT TRANSLATE. BREAKS BBA CODE

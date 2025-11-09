@@ -4005,6 +4005,11 @@ add_namespace = ntribes_news
                     type = infrastructure
                     level = 4
                 }
+				remove_building = {
+					type = landmark_home_of_griffons
+					level = 1
+					province = 7192				
+				}				
 				set_state_category = rural
 				set_province_name = { id = 7192 name = GOY_vp_stone_ruins }
 			}

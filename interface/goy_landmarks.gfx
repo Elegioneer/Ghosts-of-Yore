@@ -1,0 +1,127 @@
+### BUILDING ICONS FOR RAIDS ###
+
+
+# Big Icons in Raid Window #
+spriteTypes = {
+   	spriteType = {
+		name = "GFX_goy_arantigos_grand_temple_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_abtemple_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_shadow_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_aquilatower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_aurora_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_auroratower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_black_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_blacktower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_blood_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_bloodtower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_iron_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_irontower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_obsidian_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_karthintower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_great_aetian_lighthouse_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_lighthouse_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_storm_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_lightningtower_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_allard_mausoleum_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_mausoleum_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_snowflake_palace_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_snowflakepalace_Large.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_amber_tower_icon"
+		texturefile = "gfx/interface/buildings/historical_buildings/large/goy_landmark_suntower_Large.dds"
+		noOfFrames = 2
+	}
+	# Small Icons in Province Window #
+	spriteType = {
+		name = "GFX_goy_arantigos_grand_temple_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_abtemple_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_shadow_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_aurora_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_auroratower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_black_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_blood_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_iron_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_obsidian_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_storm_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_lighthouse_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_great_aetian_lighthouse_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_allard_mausoleum_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_mausoleum_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_snowflake_palace_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_snowflakepalace_Small.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_goy_amber_tower_icon_small"
+		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
+		noOfFrames = 2
+	}
+}

@@ -217,6 +217,10 @@ JEB_POM_MOREL = {
 	color = rgb { 26 101 49 }
 	color_ui = rgb { 26 101 59 }
 }
+EQC_POM_MOREL = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 101 59 }
+}
 POM_aetia = {
 	color = rgb { 45 153 108 }
 	color_ui = rgb { 45 153 108 }

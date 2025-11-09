@@ -367,7 +367,7 @@
 	}
 	shared_focus = {
 		id = POM_soldiers_of_fortune
-		icon = GFX_goal_AF24_every_kat_must_do_their_duty
+		icon = GFX_goal_KTZ_every_kat_must_do_their_duty
 		x = 0
 		y = 2
 		cost = 5.00
@@ -1535,7 +1535,12 @@
 		prerequisite = { focus = POM_nationalise_the_industry }
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 		completion_reward = {
-			add_research_slot = 1
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
 			add_ideas = GOY_pom_revolutionary_academia
 			add_popularity = {
 				ideology = democratic
@@ -4551,6 +4556,7 @@
 			}
 			restore_previous_manpower = yes
 			add_political_power = 100
+			retire_character = ARD_advisor_descieux
 		}
 	}
 	shared_focus = {
@@ -5765,7 +5771,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			modify_building_resources = {
-				building = synthetic_refinery
+				building = synthetic_crystal_refinery
 				resource = crystals
 				amount = 1
 			}

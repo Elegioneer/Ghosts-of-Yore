@@ -1,0 +1,359 @@
+@landmark_repair_speed_factor = 0.15
+
+buildings = {
+	landmark_goy_snowflake_palace = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_snowflake_palace_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { NTR }
+			modifiers = {
+				research_speed_factor = 0.025
+			}
+		}
+	}
+	landmark_goy_arantigos_grand_temple = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_arantigos_grand_temple_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { ARA }
+			modifiers = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+	}	
+	landmark_goy_great_aetian_lighthouse = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_great_aetian_lighthouse_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { HLR ANG ARA JFT LAK BAN FLO CYA FRN AET LNS JEB TAL VIN FAL YAN SIC ROU HEL GRU FEA PYT GFF GRI GRW GRY HAU AVI ERI EYR KAT JER BRF BOI VED WNG MER JRR GRF HLQ POM LUS TRD SRS STW MNC FEZ YAL JEV JGF JHZ JKR FAW JNG JOS LSM JES }
+			modifiers = {
+			    navy_max_range_factor = 0.25
+				air_range_factor = 0.25
+				trade_opinion_factor = 0.1
+			}
+		}
+	}
+	landmark_goy_allard_mausoleum = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_allard_mausoleum_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { ARD }
+			modifiers = {
+				stability_factor = 0.05
+				war_support_factor = 0.05				
+			}
+		}
+	}
+	landmark_goy_aurora_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_aurora_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { NTR }
+			modifiers = {
+				research_speed_factor = 0.03
+			}			
+		}
+		state_modifiers = {	
+			local_building_slots = 2
+			local_manpower = 0.25
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_iron_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_iron_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {	
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_black_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_black_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_shadow_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_shadow_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_blood_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_blood_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_obsidian_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_obsidian_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_storm_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_storm_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}
+	landmark_goy_amber_tower = {
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 22
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_goy_amber_tower_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		state_modifiers = {		
+			local_building_slots = 2
+			local_non_core_manpower = 0.1
+			resistance_decay = 0.25
+			resistance_target = -0.25
+			resistance_damage_to_garrison = -0.5
+			local_intel_to_enemies = -0.3
+			max_dig_in_factor = 0.5
+			static_anti_air_damage_factor = 0.25
+			static_anti_air_hit_chance_factor = 0.25
+			local_supplies = 0.25	
+		}
+	}	
+}

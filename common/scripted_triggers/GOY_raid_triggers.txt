@@ -1,0 +1,221 @@
+### Checks for wars
+
+can_raid_goy_arantigos_grand_temple = {
+	has_war_with = 371.owner
+	var:371.owner = {
+		OR = {
+			original_tag = ARA
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = ARA
+	}
+}
+
+can_raid_goy_great_aetian_lighthouse = {
+	has_war_with = 516.owner
+	var:516.owner = {
+		OR = {
+			original_tag = POM
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = POM
+	}
+}
+
+can_raid_goy_allard_mausoleum = {
+	has_war_with = 377.owner
+	var:377.owner = {
+		OR = {
+			original_tag = ARD
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = ARD
+		original_tag = POM	
+	}
+}
+
+can_raid_goy_snowflake_palace = {
+	has_war_with = 562.owner
+	var:562.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_aurora_tower = {
+	has_war_with = 562.owner
+	var:562.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_iron_tower = {
+	has_war_with = 485.owner
+	var:485.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_black_tower = {
+	has_war_with = 382.owner
+	var:382.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_shadow_tower = {
+	has_war_with = 377.owner
+	var:377.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_blood_tower = {
+	has_war_with = 383.owner
+	var:383.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_obsidian_tower = {
+	has_war_with = 371.owner
+	var:371.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_storm_tower = {
+	has_war_with = 659.owner
+	var:659.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+can_raid_goy_amber_tower = {
+	has_war_with = 508.owner
+	var:508.owner = {
+		OR = {
+			original_tag = NTR
+		}
+	}
+	NOT = { # we want it - we don't want to destroy it!
+		original_tag = NTR
+	}
+}
+
+### Checks for ownership and control
+
+is_owned_and_controlled_by_goy_arantigos_grand_temple_user = {
+	OR = {
+		is_owned_and_controlled_by = ARA
+	}
+}
+
+is_owned_and_controlled_by_goy_snowflake_palace_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_great_aetian_lighthouse_user = {
+	OR = {
+		is_owned_and_controlled_by = POM
+	}
+}
+
+is_owned_and_controlled_by_goy_allard_mausoleum_user = {
+	OR = {
+		is_owned_and_controlled_by = POM
+		is_owned_and_controlled_by = ARD		
+	}
+}
+
+is_owned_and_controlled_by_goy_aurora_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_iron_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_black_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_shadow_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_blood_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_obsidian_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_storm_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}
+
+is_owned_and_controlled_by_goy_amber_tower_user = {
+	OR = {
+		is_owned_and_controlled_by = NTR
+	}
+}

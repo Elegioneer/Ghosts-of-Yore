@@ -253,6 +253,31 @@ characters={
 			}
 		}
 	}
+	ARD_advisor_descieux = {
+		name = HEL_alexandra_descieux
+		portraits = {
+			civilian={
+				small="gfx/interface/ideas/Advisors/HEL/HEL_alexandra.tga"
+			}
+		}
+		advisor = {
+			slot = political_advisor 
+			idea_token = ARD_advisor_idea_descieux
+			cost = 100
+			allowed = {
+				original_tag = ARD
+			}
+			visible = {
+				has_government = communism
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			traits = { 
+				GOY_puritycommissar_gb
+			}
+		}
+	}	
 	ARD_advisor_13 = {
 		name = "JER_advisor_13"
 		portraits={
@@ -296,7 +321,7 @@ characters={
 				factor = 1
 			}
 			traits = { 
-				ambitious_union_boss_2
+				GOY_commissar_procurement
 			}
 		}
 	}
@@ -319,7 +344,7 @@ characters={
 				factor = 1
 			}
 			traits = { 
-				technocrat
+				GOY_commissar_planning
 			}
 		}
 	}
@@ -342,7 +367,7 @@ characters={
 				factor = 1
 			}
 			traits = { 
-				financial_expert
+				GoY_commissar_arnament
 			}
 		}
 	}
@@ -388,7 +413,7 @@ characters={
 				factor = 1
 			}
 			traits = { 
-				rural_populist
+				GoY_commissar_education
 			}
 		}
 		gender = female
@@ -590,7 +615,7 @@ characters={
 				has_dlc = "La Resistance"
 			}
 			traits = { 
-				JER_kindly_enigma_lar 
+				GoY_commissar_internal
 			}
 		}
 		gender = female

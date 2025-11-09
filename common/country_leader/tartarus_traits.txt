@@ -534,4 +534,46 @@ leader_traits = {
 	GOY_procurement_bureau = {
 		random = no
 	}
+	GOY_puritycommissar_gb = {
+		random = no
+		political_power_factor = -0.1
+		required_garrison_factor = -0.1
+		root_out_resistance_effectiveness_factor = 0.25
+		foreign_subversive_activites = -0.25	
+		resistance_activity = -0.1
+		research_speed_factor = -0.05
+	}
+	GOY_commissar_procurement = {
+		random = no
+		consumer_goods_factor = -0.1
+		local_resources_factor = 0.1
+		monthly_population = -0.1		
+	}
+	GOY_commissar_planning = {
+		random = no
+		production_speed_buildings_factor = 0.2
+		research_speed_factor = 0.05		
+		conscription_factor = -0.1		
+	}
+	GoY_commissar_arnament = {
+		random = no
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		consumer_goods_factor = 0.1		
+	}
+	GoY_commissar_education = {
+		random = no
+		war_support_factor = 0.1
+		conscription_factor = 0.1	
+		research_speed_factor = -0.1	
+	}	
+	GoY_commissar_internal = {
+		random = no
+		enemy_operative_detection_chance_factor = 0.10
+		own_operative_detection_chance_factor = -0.10
+		operative_slot = 1
+		resistance_target = -0.05
+		agency_upgrade_time = -0.05
+		stability_factor = -0.1
+	}	
 }

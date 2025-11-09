@@ -215,3 +215,13 @@ POM_goy_reclaim_the_colony_cat = {
 		}
 	}
 }
+POM_goy_revolution_in_mareland_cat = {
+    icon = GFX_decision_hammer_and_horseshoe_decision
+	allowed = {
+        tag = ARD	
+    }
+	visible = {
+	    tag = ARD
+		owns_state = 356
+		}		
+	}

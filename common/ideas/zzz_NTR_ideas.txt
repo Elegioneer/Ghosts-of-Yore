@@ -1877,6 +1877,10 @@ ideas = {
 				}
 			}
 			
+			on_add = {
+				unlock_project_facilities = yes
+			}
+			
 			cancel_if_invalid = yes
 		}
 		
@@ -1928,6 +1932,10 @@ ideas = {
 				NOT = {
 				    has_government = fascism
 				}
+			}
+			
+			on_add = {
+				unlock_project_facilities = yes
 			}
 			
 			cancel_if_invalid = yes

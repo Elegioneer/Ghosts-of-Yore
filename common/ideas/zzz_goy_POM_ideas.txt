@@ -2311,6 +2311,7 @@ ideas = {
 			available = {
 				
 			}
+			picture = FRN_francis_ns
 			modifier = {
 				political_power_gain = 0.05
 			}

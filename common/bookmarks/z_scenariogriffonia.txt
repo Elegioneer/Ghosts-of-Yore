@@ -113,7 +113,7 @@ bookmarks = {
 			ideas = {
 				ARA_legacy
 				ARA_economic_dependance
-			   
+			    ARA_benevolence
 			}
 			focuses = {
 				ARA_traitor

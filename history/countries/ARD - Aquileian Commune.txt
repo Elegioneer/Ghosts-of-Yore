@@ -189,6 +189,7 @@ recruit_character = ARD_advisor_27
 recruit_character = ARD_advisor_28
 recruit_character = ARD_advisor_29
 recruit_character = ARD_advisor_30
+recruit_character = ARD_advisor_descieux
 
 ### Generic Advisors ###
 recruit_character = ARD_jeanne

@@ -1,3 +1,4 @@
+# MODIFIED EAW TRIGGERS
 is_exempt_from_division_limit = {
 	OR = {
 		has_game_rule = {
@@ -168,65 +169,6 @@ country_with_custom_designers = {
 		original_tag = ARD
 	}
 }
-is_griffon_core = {
-	OR = {
-		is_core_of = MNC
-		is_core_of = LUS
-		is_core_of = SRS
-		is_core_of = VED
-		is_core_of = FAT
-		is_core_of = STW
-		is_core_of = BRZ
-		is_core_of = FEA
-		is_core_of = GRI
-		is_core_of = HLQ
-		is_core_of = LNS
-		is_core_of = LSM
-		is_core_of = KAT
-		is_core_of = ANG
-		is_core_of = YAL
-		is_core_of = ROU
-		is_core_of = PYT
-		is_core_of = HEL
-		is_core_of = AET
-		is_core_of = TRD
-		is_core_of = FEZ
-		is_core_of = JEB
-		is_core_of = JES
-		is_core_of = JRR
-		is_core_of = JER
-		is_core_of = JFT
-		is_core_of = VIN
-		is_core_of = POM
-		is_core_of = FLO
-		is_core_of = AVI
-		is_core_of = ERI
-		is_core_of = EYR
-		is_core_of = BOI
-		is_core_of = BAN
-		is_core_of = LAK
-		is_core_of = FAL
-		is_core_of = ARA
-		is_core_of = FRN
-		is_core_of = TAL
-		is_core_of = WNG
-		is_core_of = SIC
-		is_core_of = CYA
-		is_core_of = GRW
-		is_core_of = BRF
-		is_core_of = GRY
-		is_core_of = GRU
-		is_core_of = FAW
-		is_core_of = HAU
-		is_core_of = JHZ
-		is_core_of = JNG
-		is_core_of = JGF
-		is_core_of = JKR
-		is_core_of = JOS
-		is_core_of = JEV
-	}
-}
-
 check_has_focus_tree_to_switch_to_fascism = {
 	NOT = { has_idea = detached_country }
 	NOT = { original_tag = CHN }
@@ -493,4 +435,333 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = { original_tag = HRR }
 	NOT = { original_tag = POM }
 	NOT = { original_tag = ARD }	
+}
+
+
+# GOY TRIGGERS
+is_griffon_core = {
+	OR = {
+		is_core_of = MNC
+		is_core_of = LUS
+		is_core_of = SRS
+		is_core_of = VED
+		is_core_of = FAT
+		is_core_of = STW
+		is_core_of = BRZ
+		is_core_of = FEA
+		is_core_of = GRI
+		is_core_of = HLQ
+		is_core_of = LNS
+		is_core_of = LSM
+		is_core_of = KAT
+		is_core_of = ANG
+		is_core_of = YAL
+		is_core_of = ROU
+		is_core_of = PYT
+		is_core_of = HEL
+		is_core_of = AET
+		is_core_of = TRD
+		is_core_of = FEZ
+		is_core_of = JEB
+		is_core_of = JES
+		is_core_of = JRR
+		is_core_of = JER
+		is_core_of = JFT
+		is_core_of = VIN
+		is_core_of = POM
+		is_core_of = FLO
+		is_core_of = AVI
+		is_core_of = ERI
+		is_core_of = EYR
+		is_core_of = BOI
+		is_core_of = BAN
+		is_core_of = LAK
+		is_core_of = FAL
+		is_core_of = ARA
+		is_core_of = FRN
+		is_core_of = TAL
+		is_core_of = WNG
+		is_core_of = SIC
+		is_core_of = CYA
+		is_core_of = GRW
+		is_core_of = BRF
+		is_core_of = GRY
+		is_core_of = GRU
+		is_core_of = FAW
+		is_core_of = HAU
+		is_core_of = JHZ
+		is_core_of = JNG
+		is_core_of = JGF
+		is_core_of = JKR
+		is_core_of = JOS
+		is_core_of = JEV
+	}
+}
+goy_morel_dominion_MIT_states = {
+	OR = {
+		state = 386
+		state = 462
+		state = 463
+		state = 464
+		state = 465
+		state = 466
+		state = 467
+		state = 468
+		state = 469
+		state = 513
+		state = 654
+		state = 655
+		state = 656
+		state = 657
+		state = 664
+		state = 667
+		state = 394
+		state = 395
+		state = 444
+		state = 445
+		state = 460
+		state = 507
+		state = 509
+		state = 510
+		state = 511
+		state = 518
+		state = 527
+		state = 528
+		#state = 535 #jojo islands
+		state = 570
+		state = 671
+	}
+}
+goy_morel_dominion_VED_states = {
+	OR = {
+		state = 403
+		state = 404
+		state = 429
+		state = 430
+		state = 431
+		state = 482
+		state = 483
+		state = 484
+		state = 575
+		state = 576
+		state = 584
+		state = 432
+		state = 449
+		state = 450
+		state = 459
+		state = 474
+		state = 475
+		state = 476
+		state = 477
+		state = 480
+		state = 485
+		state = 522
+		state = 542
+		state = 548
+		state = 556
+		state = 557
+		state = 561
+		state = 562
+		state = 563
+		state = 567
+		state = 573
+		state = 574
+		state = 581
+		state = 582
+		state = 583
+		state = 585
+		state = 601
+		state = 602
+		state = 677
+	}
+}
+goy_morel_dominion_FRN_states = {
+	OR = {
+		state = 410
+		state = 481
+		state = 515
+		state = 526
+		state = 366
+		state = 367
+		state = 368
+		state = 369
+		state = 370
+		state = 371
+		state = 372
+		state = 373
+		state = 374
+		state = 375
+		state = 388
+		state = 392
+		state = 393
+		state = 408
+		state = 409
+		state = 503
+		state = 504
+		state = 529
+		state = 530
+		state = 533
+		state = 534
+		state = 535
+		state = 536
+		state = 549
+	}
+}
+goy_morel_dominion_FRN_EQC_states = {
+	OR = {
+		state = 354
+		state = 355
+		state = 356
+		state = 357
+		state = 358
+		state = 359
+		state = 360
+		state = 361
+		state = 362
+		state = 363
+		state = 364
+		state = 365
+		state = 675
+		state = 676
+	}
+}
+goy_morel_dominion_OLV_states = {
+	OR = {
+		state = 412
+		state = 579
+		state = 413
+		state = 452 #
+		state = 558
+		state = 578
+		state = 580
+		state = 617 #
+		state = 618
+		state = 621
+		state = 624 #
+		state = 625
+		state = 626 #
+		state = 627 #
+		state = 628 #
+		state = 629 #
+		state = 680
+		state = 681
+	}
+}
+goy_morel_dominion_HLQ_states = {
+	OR = {
+		state = 537
+		state = 553
+		state = 633
+		state = 634
+		state = 505
+		state = 540
+		state = 552
+	}
+}
+goy_morel_dominion_FBK_states = {
+	OR = {
+		state = 455
+		state = 569
+		state = 571
+		state = 572
+		state = 603
+		state = 639
+		state = 453
+		state = 454
+		state = 478
+		state = 604
+		state = 636
+		state = 640
+		state = 641
+		state = 642
+		state = 643
+		state = 644
+		state = 650
+	}
+}
+goy_morel_dominion_NCH_states = {
+	OR = {
+		state = 668
+		state = 669
+		state = 670
+	}
+}
+goy_morel_dominion_DED_states = {
+	OR = {
+		state = 425
+		state = 426
+		state = 427
+		state = 428
+		state = 451
+		state = 456
+		state = 564
+		state = 565
+		state = 566
+		state = 415
+		state = 416
+		state = 417
+		state = 418
+		state = 419
+		state = 420
+	}
+}
+goy_morel_dominion_GRU_states = {
+	OR = {
+		state = 512
+		state = 514
+		state = 559
+		state = 594
+		state = 595
+		state = 599
+		state = 600
+		state = 623
+		state = 630
+		state = 385
+		state = 414
+		state = 508
+		state = 588
+		state = 589
+		state = 590
+		state = 591
+		state = 592
+		state = 593
+		state = 596
+		state = 597
+		state = 598
+		state = 605
+		state = 607
+		state = 608
+		state = 609
+		state = 610
+		state = 611
+		state = 612
+		state = 613
+		state = 631
+		state = 632
+		state = 651
+		state = 663
+	}
+}
+goy_morel_dominion_WIT_states = {
+	OR = {
+		state = 614
+		state = 615
+		state = 616
+		#state = 617
+		#state = 627
+		#state = 628
+		#state = 629
+		state = 438
+		state = 461
+		state = 577
+		state = 587
+		state = 619
+		state = 620
+		state = 622
+		state = 645
+		state = 646
+		state = 648
+		state = 649
+		state = 682
+	}
 }

@@ -3016,19 +3016,19 @@ focus_tree = {
 		}
 		bypass = {
 		    OR = {
-			any_other_country = {
-				NOT = {
-				    original_tag = ARA
+				any_other_country = {
+					NOT = {
+						original_tag = ARA
+					}
+					NOT = {
+						original_tag = BOI
+					}
+					owns_state = 408
 				}
-				NOT = {
-				    original_tag = BOI
+				any_other_country = {
+					original_tag = ARA
+					is_puppet = yes
 				}
-				owns_state = 408
-			}
-			any_other_country = {
-			    original_tag = ARA
-				is_puppet = yes
-			}
 		    }
 		}
 
@@ -3037,9 +3037,8 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			408 = {
-			    add_compliance = 20
-			}
+			add_political_power = -50
+			ARA = { add_to_ROOT_potential_cores = yes }
 		}
 	}
 	focus = {

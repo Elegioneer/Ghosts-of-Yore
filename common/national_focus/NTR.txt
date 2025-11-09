@@ -7266,6 +7266,11 @@ shared_focus = {
                     type = infrastructure
                     level = 4
                 }
+				remove_building = {
+					type = landmark_grand_temple_eyr
+					level = 1
+					province = 1027				
+				}				
 				set_state_category = town
 			}
 			add_victory_points = {
@@ -7311,6 +7316,16 @@ shared_focus = {
                     type = infrastructure
                     level = 4
                 }
+				remove_building = {
+					type = landmark_griffenheim_palace
+					level = 1
+					province = 10537				
+				}
+				remove_building = {
+					type = landmark_grand_temple_boreas
+					level = 1
+					province = 10537				
+				}			
 				set_state_category = town
 			}
 			add_victory_points = {

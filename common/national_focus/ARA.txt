@@ -667,12 +667,12 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_GOY_new_academy"
 			army_experience = 20
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 			hidden_effect = {
 			    set_country_flag = ARA_new_academy_flag
 			}
@@ -708,12 +708,12 @@
 				uses = 1
 				category = armor
 			}
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -856,17 +856,17 @@
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_GOY_superior_warfare_doctrine"
 			add_tech_bonus = {
-				name = cat_superior_firepower
+				#name = cat_superior_firepower
 				bonus = 1.0
 				uses = 1
 				category = artillery
 			}
-		add_doctrine_cost_reduction = {
-			name = land_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -1516,7 +1516,7 @@
 	shared_focus = {
 		id = ARA_industrial_warmachine
 		icon = GFX_arantigan_medium_industry
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = ARA_self_strength
 		cost = 8.00
@@ -1540,7 +1540,7 @@
 	shared_focus = {
 		id = ARA_military_research_institute
 		icon = GFX_focus_research
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ARA_industrial_warmachine
 		cost = 10.00
@@ -1561,7 +1561,7 @@
 	shared_focus = {
 		id = ARA_heavy_industry
 		icon = GFX_arantigan_heavy_industry
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = ARA_self_strength
 		cost = 8.00
@@ -1585,7 +1585,7 @@
 	shared_focus = {
 		id = ARA_dig_deeper
 		icon = GFX_focus_generic_steel
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ARA_heavy_industry
 		cost = 8.00
@@ -1627,8 +1627,8 @@
 	shared_focus = {
 		id = ARA_exploit_conquered
 		icon = GFX_focus_indy_excavations
-		x = -3
-		y = 2
+		x = -4
+		y = 1
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
@@ -1679,7 +1679,7 @@
 	shared_focus = {
 		id = ARA_riches_of_griffonstone
 		icon = GFX_Goal_YUN_The_Mountain_Economy
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ARA_exploit_conquered
 		cost = 8.00
@@ -1729,7 +1729,7 @@
 	shared_focus = {
 		id = ARA_northern_industry
 		icon = GFX_goal_improve_industry
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = ARA_exploit_conquered
 		cost = 8.00
@@ -1822,8 +1822,8 @@
 	shared_focus = {
 		id = ARA_industrial_front
 		icon = GFX_goal_generic_propaganda
-		x = 3
-		y = 2
+		x = 4
+		y = 1
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
@@ -1856,7 +1856,7 @@
 	shared_focus = {
 		id = ARA_work_camps
 		icon = GFX_goal_slavery
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ARA_industrial_front
 		bypass = {
@@ -1885,7 +1885,7 @@
 	shared_focus = {
 		id = ARA_modern_solutions
 		icon = GFX_goal_generic_railroad
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = ARA_industrial_front
 		cost = 8.00
@@ -1987,7 +1987,7 @@
 		id = ARA_military_complex
 		icon = GFX_goal_generic_dangerous_deal
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
@@ -2014,7 +2014,7 @@
 		id = ARA_afterkeia
 		icon = GFX_goal_basic_oil
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = ARA_kickstart_my_heart
 		cost = 8.00
 		prerequisite = { focus = ARA_kickstart_my_heart }
@@ -2127,7 +2127,7 @@ focus_tree = {
 	focus = {
 		id = ARA_dorotheos_coup
 		icon = GFX_goal_GOY_ara_dorocoup
-		x = 27
+		x = 29
 		y = 0
 		cost = 1.00
 		available = { always = no }
@@ -2301,7 +2301,7 @@ focus_tree = {
 	Focus = {
 		id = ARA_right_to_rule
 		icon = GFX_goal_crown_and_swords
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = ARA_arantiga_rises
 		cost = 3.00
@@ -2658,7 +2658,7 @@ focus_tree = {
 	focus = {
 		id = ARA_sparleos_legacy
 		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
-		x = 5
+		x = 3
 		y = 1
 		relative_position_id = ARA_arantiga_rises
 		cost = 8.00
@@ -2730,17 +2730,30 @@ focus_tree = {
 		add_research_slot = 1
 		}
 		}
+
+	focus = {
+		id = ARA_shadow_claws
+		icon = GFX_zebra_spy
+		x = -2
+		y = 1
+		relative_position_id = ARA_sparleto_university
+		cost = 5.00
+		prerequisite = { focus = ARA_sparleto_university }
+		prerequisite = { focus = ARA_mandatory_education }		
+		completion_reward = {
+		add_ideas = ARA_know_enemy
+		}
+		}		
 	
 	
 	focus = {
 		id = ARA_cult_of_personality
 		icon = GFX_goal_national_populism
-		x = -3
+		x = -4
 		y = 4
 		relative_position_id = ARA_arantigos_boreas
 		cost = 8.00
-		prerequisite = { focus = ARA_mandatory_education }
-		prerequisite = { focus = ARA_sparleto_university }
+		prerequisite = { focus = ARA_shadow_claws }
 		prerequisite = { focus = ARA_new_arantigos }
 		completion_reward = {
 	        swap_ideas = {
@@ -2765,7 +2778,7 @@ focus_tree = {
 	focus = { 
 		id = ARA_legacy_of_grover
 		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
-		x = 3
+		x = 2
 		y = 2
 		relative_position_id = ARA_new_arantigos 
 		cost = 1.00
@@ -9933,7 +9946,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_establish_himss"
-			add_ideas = ARA_himss_idea
+			swap_ideas = {
+			remove_idea = ARA_know_enemy
+			add_idea = ARA_himss_idea
+		}
 		}
 	}
 	focus = {
@@ -9986,7 +10002,7 @@ focus_tree = {
 		prerequisite = { focus = ARA_integrate_infrastructure }
 		prerequisite = { focus = ARA_establish_himss }
 		available = {
-		    has_completed_focus = ARA_work_camps
+		    #has_completed_focus = ARA_work_camps
 		}
 		bypass = {
 			
@@ -9996,10 +10012,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_fate_of_traitors"
-			country_event = { id = arantiga_govern.016 }
-			delete_unit_template_and_units = {
-				division_template = "Penal Brigade"
-				disband = yes
+			if = {
+				limit = {
+					has_completed_focus = ARA_work_camps
+				}
+				country_event = { id = arantiga_govern.016 }
+				delete_unit_template_and_units = {
+					division_template = "Penal Brigade"
+					disband = yes
+				}
+			}
+			else = {
+				add_popularity = { ideology = democratic popularity = 0.02 }
+				add_popularity = { ideology = communism popularity = 0.02 }
+				add_stability = 0.03
+				unlock_national_focus = ARA_work_camps
 			}
 		}
 	}

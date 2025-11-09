@@ -695,6 +695,24 @@ country = {
 	}
 	###################  NEW IDEAS ##################
 	country = {
+		ARA_benevolence = {
+			allowed = {
+				always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = LIT_crown_4
+				modifier = {
+					political_power_factor = 0.05
+					stability_factor = 0.05
+					neutrality_drift = 0.01
+				}
+			}
+		}
+
+	country = {
 		ARA_militarized_economy = {
 			allowed = {
 				always = no 
@@ -766,6 +784,24 @@ country = {
 			}
 			}
 			}
+			
+	country = {
+		ARA_know_enemy = {
+			allowed = {
+			always = no 
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = JAK_secret_police_agency
+			modifier = {	
+			recon_factor = 0.1
+			resistance_damage_to_garrison = -0.1
+			intel_network_gain_factor = 0.1	
+			}
+			}
+			}			
 	country = {
 		ARA_industrial_fatigue = {
 			allowed = {
@@ -2977,9 +3013,12 @@ country = {
 			picture = ARA_HIM-ss
 			removal_cost = -1
 			modifier = {
+				recon_factor = 0.1
+				resistance_damage_to_garrison = -0.25
+				intel_network_gain_factor = 0.1				
 				decryption_factor = 0.10
 				encryption_factor = 0.10
-				resistance_damage_to_garrison = -0.25
+				operative_slot = 1		
 			}
 		}
 	}
@@ -3197,7 +3236,7 @@ country = {
 			picture = slavery
 			modifier = {
 			production_speed_buildings_factor = 0.05
-			stability_factor = -0.1
+			stability_factor = -0.05
 			}
 			}
 			}

@@ -4,6 +4,14 @@ on_actions = {
 			POM = {
 				country_lock_all_division_template = yes
 			}
+			every_country = { #For POM Morel's dominions
+				limit = {
+					any_core_state = {
+						is_on_continent = asia
+					}
+				}
+				store_core_states_on_game_start = yes
+			}
 			every_country = {
 				limit = {
 					OR = {

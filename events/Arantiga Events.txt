@@ -72,6 +72,7 @@ add_namespace = arantiga_decision
 	option = {
 		name = arantiga.004.a
 		add_manpower = -1
+		remove_ideas = ARA_benevolence
 		retire_character = GOY_ARA_margareth_featherin
 		add_country_leader_role = {
 		character = GOY_ARA_nicator
@@ -1318,7 +1319,6 @@ country_event = { #Griffonstone Archives
 			    idea = ARA_crippling_spending
 				days = 360
 			}
-			add_ideas = ARA_great_temple
 			save_current_manpower = yes
 			371 = {
 			    add_manpower = 500000
@@ -1328,6 +1328,12 @@ country_event = { #Griffonstone Archives
 					level = 1
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = landmark_goy_arantigos_grand_temple
+					level = 1
+					instant_build = yes
+					province = 3144
+				}				
 			}
 			restore_previous_manpower = yes
 	    }
@@ -3385,8 +3391,8 @@ country_event = { #Griffonstone Archives
 		picture = GFX_event_medieval_tower
 		option = {
 			name = arantiga_govern.016.a
-			add_popularity = { ideology = democratic popularity = 0.01 }
-			add_popularity = { ideology = communism popularity = 0.01 }
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = { ideology = communism popularity = 0.03 }
 			remove_ideas = ARA_work_camp
 		}
 		option = {
