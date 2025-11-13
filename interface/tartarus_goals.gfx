@@ -568,4 +568,8 @@ spriteTypes = {
 		name = "GFX_goal_GOY_pom_socialist_welfare"
 		texturefile = "gfx/interface/goals/goal_GOY_pom_socialist_welfare.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_goy_generic_spycraft"
+		texturefile = "gfx/interface/goals/goal_goy_generic_spycraft.dds"
+	}
 }

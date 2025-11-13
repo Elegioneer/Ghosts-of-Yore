@@ -2733,7 +2733,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_shadow_claws
-		icon = GFX_zebra_spy
+		icon = GFX_goal_goy_generic_spycraft
 		x = -2
 		y = 1
 		relative_position_id = ARA_sparleto_university
