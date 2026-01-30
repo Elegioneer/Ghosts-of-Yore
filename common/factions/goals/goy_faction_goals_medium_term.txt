@@ -1,0 +1,544 @@
+#category = short_term medium_term or long_term
+# ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
+
+# ARA
+faction_goal_goy_destroy_old_empire = {
+	name = faction_goal_goy_destroy_old_empire_name
+	description = faction_goal_goy_destroy_old_empire_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		#FROM = {
+		#	has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		#}
+		always = no
+	}
+	available = {
+		
+	}
+	completed = {
+		382 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	complete_effect = {
+		add_faction_power_projection = 250
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 100
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+faction_goal_goy_reclaim_arantigan_homelands = {
+	name = faction_goal_goy_reclaim_arantigan_homelands_name
+	description = faction_goal_goy_reclaim_arantigan_homelands_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		371 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	complete_effect = {
+		add_faction_power_projection = 250
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			army_experience = 50
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			army_experience = 20
+		}
+	}
+}
+faction_goal_goy_crush_aquileia = {
+	name = faction_goal_goy_crush_aquileia_name
+	description = faction_goal_goy_crush_aquileia_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		377 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	complete_effect = {
+		add_faction_power_projection = 250
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = 0.03
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_stability = 0.02
+		}
+	}
+}
+# BOI Gallus
+faction_goal_goy_burying_the_hatchet = {
+	name = faction_goal_goy_burying_the_hatchet_name
+	description = faction_goal_goy_burying_the_hatchet_desc
+	category = medium_term
+	group = FOCUS_FILTER_POLITICAL_CHARACTER
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_griffonian_union_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		371 = { is_controlled_by_ROOT_or_ally = yes }
+		377 = { is_controlled_by_ROOT_or_ally = yes }
+		382 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	complete_effect = {
+		add_faction_power_projection = 250
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		every_faction_member = { 
+			tooltip = GOY_INFLUENCE_TOP_FIVE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 6
+			}
+			add_political_power = 100
+			add_stability = 0.03
+		}
+	}
+}
+# NTR
+faction_goal_goy_red_sunset = {
+	name = faction_goal_goy_red_sunset_name
+	description = faction_goal_goy_red_sunset_desc
+	category = medium_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	visible = {
+		FROM = {
+			OR = {
+				has_faction_template = faction_template_goy_northern_league_faction
+				has_faction_template = faction_template_goy_boreal_alliance_faction
+			}
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		NOT = {
+			any_country = {
+				OR = {
+					original_tag = NTR
+					original_tag = FAT
+					original_tag = MNC
+					original_tag = SRS
+					original_tag = VED
+				}
+				has_government = communism
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 150
+			add_war_support = 0.03
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+# ARD
+faction_goal_goy_triumph_over_imperialism = {
+	name = faction_goal_goy_triumph_over_imperialism_name
+	description = faction_goal_goy_triumph_over_imperialism_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		#FROM = {
+		#	has_faction_template = faction_template_goy_revolucia_avangardo_faction
+		#}
+		always = no
+	}
+	available = {
+		
+	}
+	completed = {
+		owns_state = 382
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 100
+			add_stability = 0.03
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+# BOI Gestal
+# POM Bronze
+faction_goal_goy_reforged_blade = {
+	name = faction_goal_goy_reforged_blade_name
+	description = faction_goal_goy_reforged_blade_desc
+	category = medium_term
+	group = FOCUS_FILTER_INDUSTRY
+	visible = {
+		FROM = {
+			OR = {
+				has_faction_template = faction_template_goy_pact_of_bronze_faction
+				has_faction_template = faction_template_goy_pomovarran_pact_faction
+			}
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { arms_factory }
+			size > 99
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = faction_goal_goy_reforged_blade_name
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_tech_bonus = {
+				name = faction_goal_goy_reforged_blade_name
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+}
+faction_goal_goy_griffonian_hegemon = {
+	name = faction_goal_goy_griffonian_hegemon_name
+	description = faction_goal_goy_griffonian_hegemon_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			OR = {
+				has_faction_template = faction_template_goy_pact_of_bronze_faction
+				has_faction_template = faction_template_goy_pomovarran_pact_faction
+			}
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			manpower = yes
+			size > 1000000
+		}
+		count_in_collection = {
+			collection = {
+			    input = game:scope
+			    operators = { faction_members }
+			    name = FACTION
+			}
+			unit = armor
+			equipment_ratio = 0.9
+			size > 49
+		}
+		count_in_collection = {
+			collection = {
+			    input = game:scope
+			    operators = { faction_members }
+			    name = FACTION
+			}
+			unit = motorized
+			equipment_ratio = 0.9
+			size > 49
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = INFLUENCE_TOP_TWO
+		every_faction_member = {
+			limit = { faction_influence_rank < 3}
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_unit_leader = {
+				add_defense = 1
+			}
+			army_experience = 50
+		}
+	}
+}
+# POM Morel
+faction_goal_goy_gather_our_kin = {
+	name = faction_goal_goy_gather_our_kin_name
+	description = faction_goal_goy_gather_our_kin_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_pomovarran_dominion_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		POM = {
+			has_decision = POM_goy_pomrise_vinovia
+			has_decision = POM_goy_pomrise_skyaluzzo
+			has_decision = POM_goy_pomrise_hinterlands
+			has_decision = POM_goy_pomrise_flowerino
+			has_decision = POM_goy_pomrise_pridea
+			has_decision = POM_goy_pomrise_ker_gollou
+			has_decision = POM_goy_pomrise_greifwald
+			has_decision = POM_goy_pomrise_eyrie
+			has_decision = POM_goy_pomrise_rumare
+			has_decision = POM_goy_pomrise_griffonstone
+			has_decision = POM_goy_pomrise_norzhgeun
+			has_decision = POM_goy_pomrise_tarrin
+			has_decision = POM_goy_pomrise_skyfall
+			has_decision = POM_goy_pomrise_feathisia
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_manpower = 50000
+			add_stability = 0.03
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_manpower = 10000
+		}
+	}
+}
+# POM Aetia
+faction_goal_goy_workshop_of_griffonia = {
+	name = faction_goal_goy_workshop_of_griffonia_name
+	description = faction_goal_goy_workshop_of_griffonia_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_aetian_league_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { industrial_complex }
+			size > 99
+		}
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { industrial_infrastructure }
+			size > 9
+		}
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { energy_infrastructure }
+			size > 4
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = 0.05
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+}
+faction_goal_goy_light_in_the_west = {
+	name = faction_goal_goy_light_in_the_west_name
+	description = faction_goal_goy_light_in_the_west_desc
+	category = medium_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		#FROM = {
+		#	has_faction_template = faction_template_goy_aetian_league_faction
+		#}
+		always = no
+	}
+	available = {
+		
+	}
+	completed = {
+		count_triggers = {
+			amount = 9
+			JER = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			TRD = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			FEZ = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			AET = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			HEL = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			AVI = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			POM = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			FLO = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+			ERI = {
+				all_core_state = {
+					is_controlled_by_ROOT_or_ally = yes
+				}
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = { 
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_war_support = 0.05
+			add_popularity = { ideology = democratic popularity = 0.05 }
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_war_support = 0.03
+			add_popularity = { ideology = democratic popularity = 0.03 }
+		}
+	}
+}

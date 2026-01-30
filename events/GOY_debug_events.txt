@@ -1,0 +1,49 @@
+#
+	
+	add_namespace = goy_debug
+	
+	country_event = { #FACTION DEBUG
+		id = goy_debug.001
+		title = goy_debug.001.t
+		desc = goy_debug.001.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.001.a
+			create_faction_from_template = faction_template_goy_arantigan_hegemony_faction
+		}
+		option = {
+			name = goy_debug.001.b
+			create_faction_from_template = faction_template_goy_griffonian_union_faction
+		}
+		option = {
+			name = goy_debug.001.c
+			create_faction_from_template = faction_template_goy_northern_league_faction
+		}
+		option = {
+			name = goy_debug.001.e
+			create_faction_from_template = {
+				template = faction_template_reichspakt
+				name = goy_kaiserliche_vorhut_faction
+			}
+		}
+	}
+	country_event = { #FACTION DEBUG 2
+		id = goy_debug.002
+		title = goy_debug.002.t
+		desc = goy_debug.002.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.002.a
+			create_faction_from_template = faction_template_goy_pomovarran_pact_faction
+		}
+		option = {
+			name = goy_debug.002.b
+			create_faction_from_template = faction_template_goy_pomovarran_dominion_faction
+		}
+		option = {
+			name = goy_debug.002.c
+			create_faction_from_template = faction_template_goy_aetian_league_faction
+		}
+	}

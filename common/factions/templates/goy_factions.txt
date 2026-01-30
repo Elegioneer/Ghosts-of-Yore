@@ -1,0 +1,283 @@
+# Arantigan Hegemony
+faction_template_goy_arantigan_hegemony_faction = {
+	name = goy_arantigan_hegemony_faction
+	manifest = faction_manifest_goy_first_and_final_empire
+	icon = GFX_faction_icon_goy_arantigan_hegemony
+
+	goals = {
+		# Short term
+		#faction_goal_goy_expand_legions
+		faction_goal_goy_titanomachy
+
+		# Medium term
+		#faction_goal_goy_destroy_old_empire
+		#faction_goal_goy_reclaim_arantigan_homelands
+		#faction_goal_goy_crush_aquileia
+		
+		# Long term
+		#faction_goal_goy_tame_riverlands
+		#faction_goal_goy_colthago_delenda_est
+		#faction_goal_goy_humiliate_equestria
+	}
+
+	default_rules = {
+		joining_rule_non_communist
+		dismissal_rule_ideology_not_fascist
+		dismissal_rule_offensive_war
+		change_leader_rule_never
+		faction_peace_rule_conquest_focus
+		war_declaration_rule_faction_leader_only
+		call_to_war_rule_faction_leader_only
+		goals_only_faction_leader
+	}
+}
+# Griffonian Union
+faction_template_goy_griffonian_union_faction = {
+	name = goy_griffonian_union_faction
+	manifest = faction_manifest_goy_griffonian_hegemony
+	icon = GFX_faction_icon_goy_griffonian_union
+
+	goals = {
+		# Short term
+		faction_goal_growing_the_faction
+		#faction_goal_goy_beacons_of_progress
+
+		# Medium term
+		#faction_goal_goy_burying_the_hatchet
+		
+		# Long term
+		#faction_goal_goy_save_pony_friends
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_fascist
+		joining_rule_non_fascist
+		joining_rule_same_continent_only
+		faction_peace_rule_liberation_focus
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		government_in_exile_allowed
+	}
+}
+# Boreal Alliance/Northern League
+faction_template_goy_northern_league_faction = {
+	name = goy_northern_league_faction
+	manifest = faction_manifest_goy_protect_the_north
+	icon = GFX_faction_icon_goy_boreal_alliance
+
+	goals = {
+		#faction_goal_goy_southern_detente
+		#faction_goal_goy_northern_triangle
+		
+		faction_goal_goy_red_sunset
+		
+		#faction_goal_goy_north_endures
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_extremist
+		joining_rule_neighbors_only
+		joining_rule_democratic_non_aligned
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		faction_peace_rule_puppeting_focus
+		government_in_exile_allowed
+	}
+}
+faction_template_goy_boreal_alliance_faction = {
+	name = goy_boreal_alliance_faction
+	manifest = faction_manifest_goy_protect_the_north
+	icon = GFX_faction_icon_goy_boreal_alliance
+
+	goals = {
+		#faction_goal_goy_southern_detente
+		#faction_goal_goy_northern_triangle
+		
+		faction_goal_goy_red_sunset
+		
+		#faction_goal_goy_north_endures
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_extremist
+		joining_rule_neighbors_only
+		joining_rule_democratic_non_aligned
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		faction_peace_rule_puppeting_focus
+		government_in_exile_allowed
+	}
+}
+# Revolucia Avangardo 
+faction_template_goy_revolucia_avangardo_faction = {
+	name = goy_revolucia_avangardo_faction
+	manifest = faction_manifest_goy_triumph_of_the_revolution
+	icon = GFX_faction_icon_goy_revolucia_avangardo
+
+	goals = {
+		# Short term
+		#faction_goal_goy_swords_of_the_revolution
+		faction_goal_goy_expand_revolutionary_guard
+
+		# Medium term
+		
+		
+		# Long term
+		faction_goal_defeat_the_empire
+		faction_goal_goy_red_tide_rising
+	}
+
+	default_rules = {
+		change_leader_rule_never
+		dismissal_rule_offensive_war
+		joining_rule_communist_only
+		dismissal_rule_ideology_not_communism
+		war_declaration_rule_faction_leader_only
+		call_to_war_rule_faction_leader_only
+		faction_peace_rule_conquest_focus
+		goals_only_faction_leader
+	}
+}
+# Kaiserliche Vorhut #unused
+faction_template_goy_kaiserliche_vorhut_faction = {
+	name = goy_kaiserliche_vorhut_faction
+	manifest = faction_manifest_unite_the_griffons
+	icon = GFX_faction_icon_reichspakt
+
+	goals = {
+		faction_goal_unite_the_herzland # short
+		faction_goal_avenge_978 # medium
+		faction_goal_resource_control # long
+	}
+
+	default_rules = {
+		faction_peace_take_claimed_focus
+		dismissal_rule_ideology_communist
+		joining_rule_non_communist
+		government_in_exile_allowed
+	}
+}
+# Pact of Bronze/Pomovarran Pact
+faction_template_goy_pomovarran_pact_faction = {
+	name = goy_pomovarran_pact_faction
+	manifest = faction_manifest_goy_safe_future
+	icon = GFX_faction_icon_goy_pomovarran_pact
+
+	goals = {
+		# Short term
+		#faction_goal_goy_shield_of_bronze
+		faction_goal_goy_bronze_citadel
+
+		# Medium term
+		#faction_goal_goy_reforged_blade
+		faction_goal_goy_griffonian_hegemon
+		
+		# Long term
+		#faction_goal_goy_sea_boars
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_communist
+		joining_rule_same_ideology
+		joining_rule_same_continent_only
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		faction_peace_take_claimed_focus
+		government_in_exile_allowed
+	}
+}
+faction_template_goy_pact_of_bronze_faction = {
+	name = goy_pact_of_bronze_faction
+	manifest = faction_manifest_goy_eternal_vigil
+	icon = GFX_faction_icon_goy_pact_of_bronze
+
+	goals = {
+		# Short term
+		#faction_goal_goy_shield_of_bronze
+		faction_goal_goy_bronze_citadel
+
+		# Medium term
+		#faction_goal_goy_reforged_blade
+		faction_goal_goy_griffonian_hegemon
+		
+		# Long term
+		#faction_goal_goy_sea_boars
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_communist
+		joining_rule_same_ideology
+		joining_rule_same_continent_only
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		faction_peace_take_claimed_focus
+		government_in_exile_allowed
+	}
+}
+# Pomovarran Dominion
+faction_template_goy_pomovarran_dominion_faction = {
+	name = goy_pomovarran_dominion_faction
+	manifest = faction_manifest_goy_continent_domination
+	icon = GFX_faction_icon_goy_pomovarran_dominion
+
+	goals = {
+		# Short term
+		faction_goal_goy_slay_great_maar
+		#faction_goal_goy_reclaim_our_past
+
+		# Medium term
+		faction_goal_goy_gather_our_kin
+		
+		# Long term
+		#faction_goal_goy_dominion_over_griffonia
+	}
+
+	default_rules = {
+		joining_rule_fascist_non_aligned
+		dismissal_rule_ideology_not_fascist
+		dismissal_rule_offensive_war
+		change_leader_rule_never
+		faction_peace_rule_puppeting_focus
+		war_declaration_rule_faction_leader_only
+		call_to_war_rule_faction_leader_only
+		goals_only_faction_leader
+	}
+}
+# Aetian League
+faction_template_goy_aetian_league_faction = {
+	name = goy_aetian_league_faction
+	manifest = faction_manifest_goy_new_griffonia
+	icon = GFX_faction_icon_goy_aetian_league
+
+	goals = {
+		# Short term
+		#faction_goal_goy_ploughs_into_swords
+		#faction_goal_goy_city_of_desire
+		#faction_goal_goy_beacons_of_progress
+
+		# Medium term
+		#faction_goal_goy_workshop_of_griffonia
+		#faction_goal_goy_light_in_the_west
+		faction_goal_unite_the_peripherie
+		
+		# Long term
+		
+	}
+
+	default_rules = {
+		change_leader_rule_influence
+		dismissal_rule_ideology_fascist
+		joining_rule_democratic_non_aligned
+		joining_rule_same_continent_only
+		faction_peace_rule_liberation_focus
+		war_declaration_rule_independent_countries_only
+		call_to_war_rule_independent_only
+		government_in_exile_allowed
+	}
+}
+

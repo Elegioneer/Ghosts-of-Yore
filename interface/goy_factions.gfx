@@ -1,0 +1,85 @@
+### FACTION ICONS ###
+
+
+# Big Icon followed by Miniature #
+spriteTypes = {
+   	spriteType = {
+		name = "GFX_faction_icon_goy_aetian_league"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_aetian_league.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_aetian_league_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_aetian_league_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_arantigan_hegemony"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_arantigan_hegemony.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_arantigan_hegemony_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_arantigan_hegemony_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_boreal_alliance"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_boreal_alliance.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_boreal_alliance_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_boreal_alliance_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_griffonian_union"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_griffonian_union.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_griffonian_union_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_griffonian_union_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_pact_of_bronze"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pact_of_bronze.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_pact_of_bronze_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pact_of_bronze_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_pomovarran_dominion"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pomovarran_dominion.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_pomovarran_dominion_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pomovarran_dominion_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_pomovarran_pact"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pomovarran_pact.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_pomovarran_pact_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_pomovarran_pact_miniature.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_goy_revolucia_avangardo"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_revolucia_avangardo.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_faction_icon_goy_revolucia_avangardo_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_icon_goy_revolucia_avangardo_miniature.dds"
+	}
+}

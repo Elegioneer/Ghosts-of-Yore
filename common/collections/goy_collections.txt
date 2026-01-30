@@ -1,0 +1,49 @@
+goy_harmonic_griffonian_harmonic_or_friendly_states = {
+	input = game:all_states
+	operators = {
+		limit = {
+			is_on_continent = asia
+			controller = {
+				OR = {
+					has_government = democratic
+					tag = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	name = collection_goy_harmonic_griffonian_harmonic_or_friendly_states
+}
+goy_north_griffonian_states = {
+	input = constant:goy_state_groups.goy_griffonian_north
+	name = collection_goy_north_griffonian_states
+}
+goy_north_griffonian_states_in_faction = {
+	input = constant:goy_state_groups.goy_griffonian_north
+	operators = {
+		limit = {
+			controller = {
+				OR = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+	}
+	name = collection_goy_north_griffonian_states_in_faction
+}
+goy_10_buildings_states = { #TODO change to actually count 10 instances of any building
+	input = game:scope
+	operators = {
+		faction_members
+		owned_states
+		limit = {
+			free_building_slots = {
+				building = industrial_complex
+				size < 16
+				include_locked = yes
+			}
+		}
+	}
+	name = collection_goy_10_buildings_states
+}

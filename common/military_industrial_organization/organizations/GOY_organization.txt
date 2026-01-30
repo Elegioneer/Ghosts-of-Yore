@@ -268,8 +268,10 @@ NTR_northern_weaponsmiths_organization = {
 			modifier = {
 				factor = 10
 				OR = {
-					has_completed_focus = NTR_cold_hearted
-					has_completed_focus = NTR_follow_old
+					FROM = {
+						has_completed_focus = NTR_cold_hearted
+						has_completed_focus = NTR_follow_old
+					}
 				}
 			}
 		}

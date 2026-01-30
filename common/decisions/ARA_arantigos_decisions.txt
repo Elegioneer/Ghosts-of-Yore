@@ -865,6 +865,16 @@ ARA_dev_islands_cat = {
 						limit_to_naval_base = yes
 					}
 				}
+				add_building_construction = {
+					type = naval_supply_hub
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_headquarters
+					level = 1
+					instant_build = yes
+				}				
 			}
 		}
 	}
@@ -1030,6 +1040,12 @@ ARA_dev_islands_cat = {
 					amount = 20
 				}
 			}
+			777 = {
+				add_resource = {
+					type = coal
+					amount = 25
+				}
+			}			
 			782 = {
 				add_resource = {
 					type = steel

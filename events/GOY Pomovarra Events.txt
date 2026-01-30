@@ -1879,7 +1879,7 @@
 				set_cosmetic_tag = ARD_GOY
 				inherit_technology = JER
 				load_focus_tree = Pomovarra_goy_communists
-				create_faction = goy_pom_allard_faction
+				create_faction_from_template = faction_template_goy_revolucia_avangardo_faction
 				add_ideas = {
 					POM_chaotic_revolution
 					POM_revolutionary_militias
@@ -4125,7 +4125,7 @@
 			}
 			add_war_support = 0.05
 			set_cosmetic_tag = POM_GOY_kingdom_tag
-			create_faction = GOY_POM_dominion
+			create_faction_from_template = faction_template_goy_pomovarran_dominion_faction
 			add_country_leader_trait = GOY_POM_poms_regent
 		}
 	}
@@ -5081,8 +5081,19 @@
 			}
 			add_stability = 0.03
 			add_political_power = 50
-			create_faction = goy_pom_aetia_league
+			create_faction_from_template = faction_template_goy_aetian_league_faction
 			complete_national_focus = POM_leaving_the_past_behind
+			hidden_effect = {
+				set_global_flag = goy_count_max_factories_flag
+				set_variable = {
+					var = goy_most_civilian_factories_of_majors_var
+					value = 60
+				}
+				set_variable = {
+					var = goy_pomovarran_civilian_factories_var
+					value = ROOT.num_of_civilian_factories
+				}
+			}
 		}
 	}
 	country_event = { #Friend in the north Supremacy

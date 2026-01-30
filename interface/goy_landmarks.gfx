@@ -100,12 +100,12 @@ spriteTypes = {
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_goy_storm_tower_icon_small"
+		name = "GFX_goy_great_aetian_lighthouse_icon_small"
 		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_lighthouse_Small.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_goy_great_aetian_lighthouse_icon_small"
+		name = "GFX_goy_storm_tower_icon_small"
 		texturefile = "gfx/interface/buildings/historical_buildings/small/goy_landmark_fktower_Small.dds"
 		noOfFrames = 2
 	}

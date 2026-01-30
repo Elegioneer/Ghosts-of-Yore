@@ -1,18 +1,131 @@
 ﻿l_russian:
- Arantigan_hegemony:0 "Арантигская Гегемония"
- BOI_Griffonian_Union:0 "грифонский Союз"
- GOY_kaiserliche_vorhut:0 "Императорский Авангард"
- GOY_reichspakt:0 "Рейхспакт"
- NTR_northern_league:0 "Северная Лига"
- GOY_boreal_alliance:0 "Северный Альянс"
- goy_pom_allard_faction:0 "Революционный Авангард"
- goy_pom_aetia_league:0 "Аэтская Лига"
- goy_pom_pom_pact:0 "Пакт Помоварры"
- GOY_POM_dominion:0 "Помоваррский Доминион"
- GOY_pact_of_bronze:0 "Бронзовый Пакт"
+ goy_arantigan_hegemony_faction:0 "Арантийская Гегемония"
+ goy_griffonian_union_faction:0 "Грифонский Союз"
+ goy_kaiserliche_vorhut_faction:0 "Императорский Авангард"
+ #GOY_reichspakt:0 "Рейхспакт"
+ goy_northern_league_faction:0 "Северная Лига"
+ goy_boreal_alliance_faction:0 "Северный Альянс"
+ goy_revolucia_avangardo_faction:0 "Революционный Авангард"
+ goy_aetian_league_faction:0 "Аэтская Лига"
+ goy_pomovarran_pact_faction:0 "Пакт Помоварры"
+ goy_pomovarran_dominion_faction:0 "Помоваррский Доминион"
+ goy_pact_of_bronze_faction:0 "Бронзовый Пакт"
  
  ## Tech Sharing ##
  BOI_griffonstone_tech_sharing_name:0 "Исследовательский Кооператив Грифонского Союза"
  BOI_griffonstone_tech_sharing_desc:0 ""
  POM_aetian_tech_sharing_name:0 "Панаэтская Академия"
  POM_aetian_tech_sharing_desc:0 ""
+ 
+ ## EXTRA ##
+ GOY_INFLUENCE_TOP_FIVE:0 "§Y5 участников альянса§! с наибольшим влиянием:"
+ GOY_10_BUILDINGS_STATES_NAME:0 "территорий альянса с 10 постройками"
+ COLLECTION_GOY_ARA_OWNS_RIVERLANDS:0 "территорий Речноземья под контролем альянса"
+ 
+ ## Collections ##
+ collection_goy_harmonic_griffonian_harmonic_or_friendly_states:0 "Гармонические страны или участники альянса в Грифонии"
+ collection_goy_north_griffonian_states:0 "Территории Северной Грифонии"
+ collection_goy_north_griffonian_states_in_faction:0 "Территории Северной Грифонии под контролем альянса"
+ collection_goy_10_buildings_states:0 "Территории альянса с 10 постройками"
+ 
+ ## Manifests ##
+ goy_first_and_final_empire_goal_name:0 "Первая и Последняя Империя"
+ goy_first_and_final_empire_goal_desc:0 "Наше наследие – это наследие великого Арантигоса. Наше будущее – это славные завоевания и господство над Грифонией. Где флаг Арантиги был поднят однажды - там он не должен пасть никогда!"
+ goy_griffonian_hegemony_goal_name:0 "Гармония по всей Грифонии"
+ goy_griffonian_hegemony_goal_desc:0 "Грифоны не должны больше объединяться лишь благодаря мечу и грубой силе. Для Грифонии есть лучшее будущее: будущее, полное дружбы и гармонии, которое мы должны принести!"
+ goy_protect_the_north_goal_name:0 "Защитники Севера"
+ goy_protect_the_north_goal_desc:0 "Грифоний Север — наш дом по праву рождения, и мы будем защищать наш дом от любого, кто попытается отнять его у нас."
+ goy_triumph_of_the_revolution_goal_name:0 "Триумф Революции"
+ goy_triumph_of_the_revolution_goal_desc:0 "Чтобы революция преуспела, реакционеры по всей планете должны быть сокрушены – но пока что начнем с Грифонии."
+ goy_eternal_vigil_goal_name:0 "Вечная Бдительность"
+ goy_eternal_vigil_goal_desc:0 "Мы живем в эпоху войн и раздоров, и только сохраняя бдительность, мы можем обеспечить нам достойное будущее."
+ goy_safe_future_name:0 "Защита нашего Дома"
+ goy_safe_future_desc:0 "Помоварра никогда больше не будет потеряна. Мы будем бороться с любым, кто посмеет посягать на нашу свободу."
+ goy_continent_domination_goal_name:0 "Доминация на Континенте"
+ goy_continent_domination_goal_desc:0 "Пришло время Помоварре утвердиться в качестве величайшей (и единственной) силы в Грифонии. Мы победим, или умрём пытаясь!"
+ goy_new_griffonia_goal_name:0 "Новая Грифония"
+ goy_new_griffonia_goal_desc:0 "Аэтская мечта — это мечта, которую могут разделить все грифоны: мечта о единстве, мире и процветании, где все грифоны (и все остальные) равны и работают вместе, чтобы построить новый, лучший мир."
+ 
+ ## Goals ##
+ 
+ # Arantigan Hegemony
+ faction_goal_goy_expand_legions_name:0 "Расширить Легионы"
+ faction_goal_goy_expand_legions_desc:0 "To conquer Griffonia we must create an army greater than any ever seen on the continent."
+ faction_goal_goy_titanomachy_name:0 "Гигантомахия"
+ faction_goal_goy_titanomachy_desc:0 "Three giants – Wingbardy, Aquileia, and the Empire – stand between us and rule over Griffonia. Conflict is inevitable."
+ faction_goal_goy_destroy_old_empire_name:0 "Уничтожение Старой Империи"
+ faction_goal_goy_destroy_old_empire_desc:0 ""
+ faction_goal_goy_reclaim_arantigan_homelands_name:0 "Вернуть Карфин"
+ faction_goal_goy_reclaim_arantigan_homelands_desc:0 "Seat of the Karthinian Empire, the Eternal City: Karthin is the jewel of the South, and its conquest will serve as a powerful symbol of our return to prominence."
+ faction_goal_goy_crush_aquileia_name:0 "Сокрушить Аквелийские Амбиции"
+ faction_goal_goy_crush_aquileia_desc:0 "Aquileians always tried to become a new hegemon of Griffonia – and each time they failed. This time, we will be the ones to crush their hopes and dreams."
+ faction_goal_goy_tame_riverlands_name:0 "Укротить Речные Земли"
+ faction_goal_goy_tame_riverlands_desc:0 "Even the great conqueror Grover II couldn't manage to subjugate the Riverlands. One way or another, if we want to secure our dominion over the continent, ponies of the East must bow to us."
+ faction_goal_goy_colthago_delenda_est_name:0 "Colthago Delenda Est"
+ faction_goal_goy_colthago_delenda_est_desc:0 "Just by existing, Colthage taunts us, reminding about the failure of our ancestors in destroying it. Conquering it now will both let us establish control of the southern seas and let us fix the mistake of our Karthinian ancestors."
+ faction_goal_goy_humiliate_equestria_name:0 "Унизить Эквестрию"
+ faction_goal_goy_humiliate_equestria_desc:0 "Equestria stands as the most powerful nation in the world, a continental hegemon and the beacon of harmony. By defeating it, we will prove once and for all that we are one and only superpower."
+
+ # Griffonian Union
+ faction_goal_goy_expand_union_name:0 "Расширить Союз"
+ faction_goal_goy_expand_union_desc:0 ""
+ faction_goal_goy_burying_the_hatchet_name:0 "Закопать Топор Войны"
+ faction_goal_goy_burying_the_hatchet_desc:0 "For too long have wars between the great powers of Griffonia been tearing the continent apart. Only by working together can we create a better future - one based on cooperation, not dominion of one of claimants to the accursed imperial throne. "
+ faction_goal_goy_save_pony_friends_name:0 "Спасти Наших Друзей-Пони"
+ faction_goal_goy_save_pony_friends_desc:0 "Equestria has fallen! Vile changelings managed to overcome it, despite brave resistance, and now ponies suffer under the bugs' yoke. It is our moral duty to help our friends beyond the sea reclaim their freedom."
+ 
+ # Northern League/Boreal Alliance
+ faction_goal_goy_southern_detente_name:0 "Разрядка с Югом"
+ faction_goal_goy_southern_detente_desc:0 "To the south looms the ever-growing danger of the Griffonian Empire's resurgence. We can’t fight them head-on – at least for now. So it seems that we should try to achieve some sort of a deal with griffons – even if only to delay their invasion."
+ faction_goal_goy_northern_triangle_name:0 "Северный Треугольник"
+ faction_goal_goy_northern_triangle_desc:0 "Nations of the North must stand together if they want to remain free!"
+ faction_goal_goy_red_sunset_name:0 "Заход Красного Солнца"
+ faction_goal_goy_red_sunset_desc:0 "Communism is a threat to our freedom and way of life! We must eradicate this taint before it has had the chance to set roots in the North."
+ faction_goal_goy_north_endures_name:0 "Север Выстоит!"
+ faction_goal_goy_north_endures_desc:0 "Through hardship and struggle we will persist! The road ahead is long and rocky, but we must push on and secure a future for all of the North."
+ 
+ # Revolucia Avangardo
+ faction_goal_goy_swords_of_the_revolution_name:0 "Мечи Революции"
+ faction_goal_goy_swords_of_the_revolution_desc:0 "Political power grows out of the barrel of a gun!"
+ faction_goal_goy_expand_revolutionary_guard_name:0 "Расширение Революционной Гвардии"
+ faction_goal_goy_expand_revolutionary_guard_desc:0 "Many will die for the Revolution. Yet, even more will rise to fight for its inevitable triumph!"
+ faction_goal_goy_triumph_over_imperialism_name:0 "Победа над Империализмом"
+ faction_goal_goy_triumph_over_imperialism_desc:0 ""
+ faction_goal_goy_red_tide_rising_name:0 "Красный Вал"
+ faction_goal_goy_red_tide_rising_desc:0 "Every day we are closer to the triumph of the Revolution. Every day reactionary regimes of Griffonia fall. Yet, there is still much to be done! Onwards, comrades! To the next conquest – and to the next victory! "
+ 
+ # Pact of Bronze/Pomovarran Pact
+ faction_goal_goy_shield_of_bronze_name:0 "Бронзовый Щит"
+ faction_goal_goy_shield_of_bronze_desc:0 "We must expand our armed forces if we want to safeguard our freedom."
+ faction_goal_goy_bronze_citadel_name:0 "Бронзовая Цитадель"
+ faction_goal_goy_bronze_citadel_desc:0 "There is no such thing as too many fortifications! We must build even more!"
+ faction_goal_goy_reforged_blade_name:0 "Перекованный Клинок"
+ faction_goal_goy_reforged_blade_desc:0 "Weapons! This is what we need. More weapons equals more security. Get me more weapons!"
+ faction_goal_goy_griffonian_hegemon_name:0 "Гегемония в Грифонии"
+ faction_goal_goy_griffonian_hegemon_desc:0 "Establishing ourselves as the clear leading power of the continent will allow us to safeguard our interests and intimidate our foes."
+ faction_goal_goy_sea_boars_name:0 "Морские Вепри"
+ faction_goal_goy_sea_boars_desc:0 "A large navy will both allow us to protect our shores and safeguard our commercial and political interests beyond the seas."
+ 
+ # Pomovarran Dominion
+ faction_goal_goy_slay_great_maar_name:0 "Сразить Великого Маара"
+ faction_goal_goy_slay_great_maar_desc:0 "Aquileia must fall for Pomovarra to rise! "
+ faction_goal_goy_reclaim_our_past_name:0 "Вернуть Наше Прошлое"
+ faction_goal_goy_reclaim_our_past_desc:0 "Much was lost to time... But we shall reclaim all secrets of Old Pomovarra and use them to vanquish our foes."
+ faction_goal_goy_gather_our_kin_name:0 "Собрать Наш Род"
+ faction_goal_goy_gather_our_kin_desc:0 "It is our duty to liberate all old territories of Pomovarra – and griffons living there."
+ faction_goal_goy_dominion_over_griffonia_name:0 "Доминирование над Грифонией"
+ faction_goal_goy_dominion_over_griffonia_desc:0 "Pomovarra will be an empire, or will cease to exist. Only the mighty can decide the fate of Griffonia – and we shall be the mightiest empire of all."
+ 
+ # Aetian League
+ faction_goal_goy_ploughs_into_swords_name:0 "Перековать Мечи в Плуги"
+ faction_goal_goy_ploughs_into_swords_desc:0 "Time has come to bring an age of peace and prosperity to our people. To turn foundries of war into factories which will produce goods that make lives of griffons easier."
+ faction_goal_goy_city_of_desire_name:0 "Город Грифонской Мечты"
+ faction_goal_goy_city_of_desire_desc:0 "We need a powerful symbol to show all griffons that our way is the only correct one. We need a city that will be a beacon of hope and prosperity, a showcase of the future we dream of."
+ faction_goal_goy_workshop_of_griffonia_name:0 "Фабрика Грифонии"
+ faction_goal_goy_workshop_of_griffonia_desc:0 "We live in an era of industry – as well as the Aetian era, of course. We must fit the concept of highly efficient and modern industry into the Aetian dream."
+ faction_goal_goy_light_in_the_west_name:0 "Огни Запада"
+ faction_goal_goy_light_in_the_west_desc:0 ""
+ 
+ # Griffonian Union + Aetian League
+ faction_goal_goy_beacons_of_progress_name:0 "Маяки Прогресса"
+ faction_goal_goy_beacons_of_progress_desc:0 "Much remains to be done? but a good start would be to continue expanding our industrial regions to ensure economic growth for a bright future for the next generation of griffons."

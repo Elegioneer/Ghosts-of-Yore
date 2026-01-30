@@ -727,7 +727,10 @@ add_namespace = griffonstone_decision
 				}
 				set_country_flag = BOI_deadlock_broken
 			}
-			create_faction = GOY_kaiserliche_vorhut
+			#create_faction_from_template = {
+			#	template = faction_template_reichspakt
+			#	name = goy_kaiserliche_vorhut_faction
+			#}
 		}
 	}
 	
@@ -2070,7 +2073,7 @@ country_event = { #Herzländers unite! (cap)
 			}
 			add_ideas = GRI_grover_vi
 			remove_ideas = BOI_GAW_kingdom_with_no_king
-			set_faction_name = GOY_reichspakt
+			create_faction_from_template = faction_template_reichspakt
 			hidden_effect = {
 			    set_party_name = { ideology = neutrality name = GRI_neutrality_party long_name = GRI_neutrality_party_long }
 			    set_party_name = { ideology = fascism name = GRI_fascism_party long_name = GRI_fascism_party_long }

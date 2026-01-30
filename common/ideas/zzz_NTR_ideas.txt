@@ -1741,6 +1741,19 @@ ideas = {
 			}
 			targeted_modifier = { tag = NTR attack_bonus_against = 0.1 defense_bonus_against = 0.2 }
 		}
+		NTR_steam_power = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = PLB_great_furnace
+			removal_cost = -1
+			modifier = {
+				factory_energy_consumption = -0.1
+			}
+		}		
 	}
 	hidden_ideas = {
 		NTR_smiths_buff_1 = {

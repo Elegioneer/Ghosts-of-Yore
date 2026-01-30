@@ -113,7 +113,7 @@ GOY_NTR_FK_careful_when_fighting_GRI = {
 		NTR = {
 			OR = {
 				has_capitulated = yes
-				has_war = No
+				has_war = no
 			}
 		}
 	}
@@ -244,7 +244,7 @@ GOY_NTR_Frost_King_strat = {
 		type = diplo_action_desire
 		id = NTR
 		value = -500
-		target = nonaggressionpact
+		target = befriend
 	}
 	ai_strategy = {
 		type = equipment_production_min_factories

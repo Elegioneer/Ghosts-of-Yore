@@ -290,9 +290,7 @@ goy_ach_false_flag_operation = {
 			}
 		}
 		ELF = {
-			NOT = {
-				has_war_with = CHN
-			}
+			has_country_flag = EQS_or_ELF_has_capitulated_CHN
 		}
     }    
 }

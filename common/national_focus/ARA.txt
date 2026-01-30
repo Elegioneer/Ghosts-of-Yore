@@ -494,7 +494,7 @@
 				name = ARA_cruisers
 				bonus = 0.5
 				uses = 2
-				category = naval_doctrine
+				category = ca_tech
 			}
 		}
 	}
@@ -1579,6 +1579,11 @@
 					instant_build = yes
 				}
 			}
+			add_resource = {
+				type = coal
+				amount = 6
+				state = 408
+			}			
 			}
 			}
 			
@@ -1604,6 +1609,11 @@
 				amount = 10
 				state = 408
 			}
+			add_resource = {
+				type = coal
+				amount = 12
+				state = 408
+			}			
 			}
 			}
 	
@@ -1673,6 +1683,11 @@
 				amount = 6
 				state = 391
 			}
+		add_resource = {
+				type = coal
+				amount = 8
+				state = 401
+			}			
 		}
 		}
 		
@@ -1709,6 +1724,11 @@
 				state = 488
 			}
 		add_resource = {
+				type = coal
+				amount = 30
+				state = 488
+			}			
+		add_resource = {
 				type = aluminium
 				amount = 4
 				state = 531
@@ -1722,7 +1742,7 @@
 				type = chromium
 				amount = 14
 				state = 531
-			}
+			}			
 		}
 		}
 		
@@ -1844,7 +1864,7 @@
 				}
 				add_to_variable = {
 					var = var_goy_aranateffdate
-					value = 8.76
+					value = 0.0876
 				}
 				country_event = {
 					id = arantiga.174
@@ -2865,7 +2885,7 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05	
 			add_political_power = 50
-			create_faction = Arantigan_hegemony
+			create_faction_from_template = faction_template_goy_arantigan_hegemony_faction
 		}
 	}
 
@@ -3112,6 +3132,11 @@ focus_tree = {
 				state = 539
 			}
 			add_resource = {
+				type = coal
+				amount = 20
+				state = 539
+			}			
+			add_resource = {
 				type = steel
 				amount = 20
 				state = 545
@@ -3121,6 +3146,11 @@ focus_tree = {
 				amount = 20
 				state = 545
 			}
+			add_resource = {
+				type = coal
+				amount = 20
+				state = 545
+			}			
 			add_stability = -0.1
 		}
 	}
@@ -4157,7 +4187,7 @@ focus_tree = {
 		
 	shared_focus = { #Restore the cult of Boreas
 		id = ARA_restore_the_cult
-		icon = GFX_Valknut_Focus_3
+		icon = GFX_goal_generic_temple_archon
 		x = -2
 		y = 1
 		cost = 2.00
@@ -5237,6 +5267,11 @@ focus_tree = {
 				amount = 18
 				state = 545
 			}
+			add_resource = {
+				type = coal
+				amount = 20
+				state = 545
+			}			
 			add_resource = {
 				type = steel
 				amount = 21
@@ -7728,6 +7763,27 @@ focus_tree = {
 			custom_effect_tooltip = ARA_erich_tp
             #Get spirit The Imperial Admiralty (Naval Doctrine research speed +10%, Naval experience gain: +0,05 daily)
 			add_ideas = ARA_imperial_admiralty
+			371 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+				add_building_construction = {
+					type = naval_supply_hub
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_headquarters
+					level = 1
+					instant_build = yes
+				}				
+			}			
 		}
 	}
 	
@@ -7902,6 +7958,11 @@ focus_tree = {
 				state = 411
 			}
 			add_resource = {
+				type = coal
+				amount = 9
+				state = 411
+			}			
+			add_resource = {
 				type = steel
 				amount = 11
 				state = 422
@@ -7912,6 +7973,11 @@ focus_tree = {
 				state = 422
 			}
 			add_resource = {
+				type = coal
+				amount = 6
+				state = 422
+			}			
+			add_resource = {
 				type = steel
 				amount = 12
 				state = 547
@@ -7921,6 +7987,11 @@ focus_tree = {
 				amount = 9
 				state = 547
 			}
+			add_resource = {
+				type = coal
+				amount = 15
+				state = 547
+			}			
 		}
 	}
 	
@@ -10299,6 +10370,12 @@ focus_tree = {
 			}	
 		}
 		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_goal = faction_goal_goy_tame_riverlands
+			}
 		    IF = {
 			    limit = {
 				    RCT = {
@@ -10399,6 +10476,12 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_faction_goal = faction_goal_goy_tame_riverlands
+			}
 			log = "[GetDateText]: [Root.GetName]: Focus ARA_the_last_crusade"
 			IF = {
 			    limit = { LCT = { exists = yes } }

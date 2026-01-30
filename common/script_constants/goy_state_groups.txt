@@ -1,0 +1,49 @@
+### ASSUMING SEVERAL MENTIONS OF "STATE_GROUPS" WILL OVERRIDE EACH-OTHER
+
+goy_state_groups = {
+    schema = {
+        any_key = yes
+        array = state
+    }
+    goy_griffonian_north = {
+		562
+		563
+		567
+		573
+		574
+		602
+		677
+		432
+		449
+		450
+		474
+		480
+		485
+		548
+		556
+		557
+		582
+		583
+		459
+		475
+		476
+		477
+		581
+		522
+		542
+		561
+		585
+		601
+		403
+		404
+		429
+		430
+		431
+		482
+		483
+		484
+		575
+		576
+		584
+    }
+}

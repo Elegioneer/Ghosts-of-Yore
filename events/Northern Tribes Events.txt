@@ -4436,7 +4436,7 @@ add_namespace = ntribes_news
 		    name = ntribes.116.a
 			effect_tooltip = {
 				NTR = {
-					create_faction = GOY_boreal_alliance
+					create_faction_from_template = faction_template_goy_boreal_alliance_faction
 					add_to_faction = VED
 				}
 			}
@@ -4464,7 +4464,7 @@ add_namespace = ntribes_news
 		
 	    option = {
 		    name = ntribes.117.a
-			create_faction = GOY_boreal_alliance
+			create_faction_from_template = faction_template_goy_boreal_alliance_faction
 			add_to_faction = FROM
 		}
 	}

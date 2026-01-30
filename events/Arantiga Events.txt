@@ -7868,6 +7868,7 @@ country_event = { #Hedonism
 			}
 			FROM = {
 				clr_country_flag = ARA_yukka_enable
+				set_country_flag = ARA_flag_yukka_enforced
 			}
 			add_political_power = -50
 			add_war_support = -0.05

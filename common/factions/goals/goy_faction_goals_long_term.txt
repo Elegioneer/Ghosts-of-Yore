@@ -1,0 +1,376 @@
+#category = short_term medium_term or long_term
+# ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
+
+# ARA
+faction_goal_goy_tame_riverlands = {
+	name = faction_goal_goy_tame_riverlands_name
+	description = faction_goal_goy_tame_riverlands_desc
+	category = long_term
+	group = FOCUS_FILTER_POLITICAL
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		OR = {
+			FROM = {
+				has_country_flag = ARA_trade_treaty_signed
+			}
+			collection_size = {
+				input = {
+					input = collection:riverlands_controllable_states
+					operators = {
+						limit = {
+							is_controlled_by_ROOT_or_ally = yes
+						}
+					}
+					name = COLLECTION_GOY_ARA_OWNS_RIVERLANDS
+				}
+				value > 46
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+faction_goal_goy_colthago_delenda_est = {
+	name = faction_goal_goy_colthago_delenda_est_name
+	description = faction_goal_goy_colthago_delenda_est_desc
+	category = long_term
+	group = FOCUS_FILTER_NAVY_XP
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		875 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				category = naval_equipment
+			}
+			navy_experience = 100
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			navy_experience = 25
+		}
+	}
+}
+faction_goal_goy_humiliate_equestria = {
+	name = faction_goal_goy_humiliate_equestria_name
+	description = faction_goal_goy_humiliate_equestria_desc
+	category = long_term
+	group = FOCUS_FILTER_ARMY_XP
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_arantigan_hegemony_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		OR = {
+			ARA = {
+				has_country_flag = ARA_flag_yukka_enforced
+			}
+			221 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_unit_leader = {
+				add_attack = 1
+			}
+			add_political_power = 100
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+# BOI Gallus
+faction_goal_goy_save_pony_friends = {
+	name = faction_goal_goy_save_pony_friends_name
+	description = faction_goal_goy_save_pony_friends_desc
+	category = long_term
+	group = FOCUS_FILTER_ARMY_XP
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_griffonian_union_faction
+		}
+		BOI = {
+			has_completed_focus = BOI_support_war_of_liberation
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		BOI = {
+			has_country_flag = GOY_FLAG_falseflag_ach
+		}
+		ELF = {
+			has_country_flag = EQS_or_ELF_has_capitulated_CHN
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+# NTR
+faction_goal_goy_north_endures = {
+	name = faction_goal_goy_north_endures_name
+	description = faction_goal_goy_north_endures_desc
+	category = long_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	visible = {
+		FROM = {
+			OR = {
+				has_faction_template = faction_template_goy_northern_league_faction
+				has_faction_template = faction_template_goy_boreal_alliance_faction
+			}
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		date > "1014.1.1"
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_unit_leader = {
+				add_defense = 1
+			}
+			add_political_power = 100
+			add_stability = 0.05
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+}
+# ARD
+faction_goal_goy_red_tide_rising = {
+	name = faction_goal_goy_red_tide_rising_name
+	description = faction_goal_goy_red_tide_rising_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_revolucia_avangardo_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		#own half of Griffonia
+		collection_size = {
+			input = collection:faction_states_in_asia
+			value > 150
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_unit_leader = {
+				add_attack = 1
+			}
+			add_stability = 0.03
+			add_popularity = { ideology = communism popularity = 0.05 }
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_stability = 0.02
+			add_popularity = { ideology = communism popularity = 0.03 }
+		}
+	}
+}
+# BOI Gestal
+# POM Bronze
+faction_goal_goy_sea_boars = {
+	name = faction_goal_goy_sea_boars_name
+	description = faction_goal_goy_sea_boars_desc
+	category = long_term
+	group = FOCUS_FILTER_NAVY_XP
+	visible = {
+		FROM = {
+			OR = {
+				has_faction_template = faction_template_goy_pact_of_bronze_faction
+				has_faction_template = faction_template_goy_pomovarran_pact_faction
+			}
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+		    }
+			unit = carrier
+			size > 3
+		}
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+		    }
+			unit = capital_ship
+			size > 19
+		}
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION
+		    }
+			unit = screen_ship
+			size > 199
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = INFLUENCE_TOP_TWO
+		every_faction_member = {
+			limit = { faction_influence_rank < 3}
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_navy_leader = {
+				add_coordination = 1
+			}
+			navy_experience = 50
+			add_mastery = {
+				amount = 50
+				track = capital_ships
+			}
+			add_mastery = {
+				amount = 50
+				track = carriers
+			}
+			add_mastery = {
+				amount = 50
+				track = screens
+			}
+		}
+	}
+}
+# POM Morel
+faction_goal_goy_dominion_over_griffonia = {
+	name = faction_goal_goy_dominion_over_griffonia_name
+	description = faction_goal_goy_dominion_over_griffonia_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	visible = {
+		FROM = {
+			has_faction_template = faction_template_goy_pomovarran_dominion_faction
+		}
+	}
+	available = {
+		
+	}
+	completed = {
+		#own half of Griffonia
+		collection_size = {
+			input = collection:faction_states_in_asia
+			value > 150
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		faction_leader = {
+			add_faction_initiative = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+		every_faction_member = {
+			limit = {
+				is_faction_leader = no
+			}
+			visible_when_empty = no
+			add_political_power = 50
+		}
+	}
+}
+# POM Aetia

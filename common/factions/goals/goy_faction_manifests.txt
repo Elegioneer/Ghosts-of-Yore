@@ -1,0 +1,197 @@
+@manifest_fulfilled_value = 0.75
+
+# Arantigan Hegemony
+faction_manifest_goy_first_and_final_empire = {
+	name = goy_first_and_final_empire_goal_name
+	description = goy_first_and_final_empire_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:faction_states_on_my_continent
+		
+		scale = {
+			political_power_factor = 0.1	
+		}
+		progress_sections = {
+			manifest_fulfilled = {
+				min = 0.6
+	
+				modifier = {
+					compliance_growth = 0.1
+				}			
+			}
+		}
+	}
+}
+# Griffonian Union
+faction_manifest_goy_griffonian_hegemony = {
+	name = goy_griffonian_hegemony_goal_name
+	description = goy_griffonian_hegemony_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:goy_harmonic_griffonian_harmonic_or_friendly_states
+		
+		scale = {
+			opinion_gain_monthly_same_ideology_factor = 0.1
+			consumer_goods_factor = -0.05
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					stability_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+# Boreal Alliance/Northern League
+faction_manifest_goy_protect_the_north = {
+	name = goy_protect_the_north_goal_name
+	description = goy_protect_the_north_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:goy_north_griffonian_states
+		completed_amount_collection = collection:goy_north_griffonian_states_in_faction
+		
+		scale = {
+			army_core_defence_factor = 0.05
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					monthly_population = 0.1
+				}			
+			}
+		}
+	}
+}
+# Revolucia Avangardo 
+faction_manifest_goy_triumph_of_the_revolution = {
+	name = goy_triumph_of_the_revolution_goal_name
+	description = goy_triumph_of_the_revolution_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:faction_states_on_my_continent
+		
+		scale = {
+			army_attack_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					political_power_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+# Pact of Bronze/Pomovarran Pact
+faction_manifest_goy_eternal_vigil = {
+	name = goy_eternal_vigil_goal_name
+	description = goy_eternal_vigil_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:faction_states_on_my_continent
+		
+		scale = {
+			army_core_defence_factor = 0.05
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					stability_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+faction_manifest_goy_safe_future = {
+	name = goy_safe_future_name
+	description = goy_safe_future_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:faction_states_on_my_continent
+		
+		scale = {
+			army_core_defence_factor = 0.05
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					stability_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+# Pomovarran Dominion
+faction_manifest_goy_continent_domination = {
+	name = goy_continent_domination_goal_name
+	description = goy_continent_domination_goal_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:states_on_my_continent
+		completed_amount_collection = collection:faction_states_on_my_continent
+		
+		scale = {
+			war_support_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					political_power_factor = 0.1
+				}			
+			}
+		}
+	}
+}
+# Aetian League
+faction_manifest_goy_new_griffonia = {
+	name = goy_new_griffonia_goal_name
+	description = goy_new_griffonia_goal_desc
+	is_manifest = yes
+	
+	ratio_progress = {
+		completed_amount_custom_tooltip = goy_pomovarran_civilian_factories_var
+		total_amount_custom_tooltip = goy_most_civilian_factories_of_majors_var
+		
+		total_amount = var:goy_most_civilian_factories_of_majors_var
+		completed_amount = FROM.num_of_civilian_factories
+		
+		scale = {
+			production_speed_buildings_factor = 0.1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = {
+					consumer_goods_factor = -0.05
+				}			
+			}
+		}
+	}
+}

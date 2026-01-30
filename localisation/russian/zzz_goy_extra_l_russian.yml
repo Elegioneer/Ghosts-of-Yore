@@ -27,3 +27,21 @@ tactic_attacker_GOY_undead_assault:0 "Наступление Восставши�
 tactic_attacker_GOY_undead_monsters:0 "Натиск Восставших Монстров"
 tactic_defender_GOY_meat_wall:0 "Стена Мяса"
 tactic_defender_tw_GOY_meat_wall:0 "Бросить Мертвецов Позади"
+
+#Debug events
+goy_debug.001.t:0 "Choose faction"
+goy_debug.001.d:0 "Factions to form:"
+goy_debug.001.a:0 "Arantigan Hegemony"
+goy_debug.001.b:0 "Griffonian Union"
+goy_debug.001.c:0 "Northern League"
+goy_debug.001.e:0 "Kaiserliche Vorhut (Reichspakt)"
+goy_debug.002.t:0 "Choose faction 2"
+goy_debug.002.d:0 "Factions to form:"
+goy_debug.002.a:0 "Pomovarran Pact (Bronze Pact)"
+goy_debug.002.b:0 "Pomovarran Dominion"
+goy_debug.002.c:0 "Aetian League"
+
+#Faction-related variables
+goy_most_civilian_factories_of_majors_var:0 "Наибольшее количество фабрик в крупной державе"
+goy_pomovarran_civilian_factories_var:0 "[FROM.GetAdjective]ие $industrial_complex_plural$"
+EQS_or_ELF_has_capitulated_CHN:0 "Победа над [CHN.GetName] достигнута"

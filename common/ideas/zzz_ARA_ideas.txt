@@ -12,7 +12,7 @@ ideas = {
 			modifier = {
 				conscription = 0.015
 				army_core_defence_factor = 0.10
-				army_morale_factor = 0.05
+				army_morale_factor = 0.05		
 			}
 		}
 	}
@@ -163,7 +163,7 @@ ideas = {
 				conscription = 0.02
 				army_core_defence_factor = 0.10
 				army_core_attack_factor = 0.05
-				army_morale_factor = 0.05
+				army_morale_factor = 0.05				
 			}
 		}
 	}
@@ -2618,6 +2618,7 @@ country = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				monthly_population = 0.1
+				factory_energy_consumption = -0.05				
 			}
 		}
 	}

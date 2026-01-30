@@ -89,7 +89,18 @@ on_actions = {
 			574 = {
 				add_dynamic_modifier = { modifier = NTR_holy_forge_dynmodifier }
 				set_state_category = city
+				add_resource = { type = coal amount = 9 }	
+				add_resource = { type = steel amount = 5 }					
 			}
+			488 = {
+				add_resource = { type = coal amount = 10 }					
+			}
+			672 = {
+				add_resource = { type = coal amount = 6 }					
+			}
+			408 = {
+				add_resource = { type = coal amount = 5 }					
+			}			
 			add_victory_points = {
 			    province = 1517
 				value = 5
@@ -1083,6 +1094,32 @@ on_actions = {
 							producer = RCT
 						}
 					}
+				}
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = goy_count_max_factories_flag
+				}
+				for_each_scope_loop = {
+					array = global.majors
+					if = {
+						limit = {
+							check_variable = {
+								goy_most_civilian_factories_of_majors_var < PREV.num_of_civilian_factories
+							}
+						}
+						set_variable = {
+							goy_most_civilian_factories_of_majors_var = PREV.num_of_civilian_factories
+						}
+					}
+				}
+				set_variable = {
+					var = goy_pomovarran_civilian_factories_var
+					value = POM.num_of_civilian_factories
 				}
 			}
 		}

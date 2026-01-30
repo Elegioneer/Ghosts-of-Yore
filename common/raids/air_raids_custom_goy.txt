@@ -59,7 +59,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -356,7 +356,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -653,7 +653,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -950,7 +950,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -1248,7 +1248,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -1546,7 +1546,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -1844,7 +1844,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -2142,7 +2142,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -2440,7 +2440,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -2738,7 +2738,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -3036,7 +3036,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {
@@ -3333,7 +3333,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            scale = 1
         }
 
 		unit_requirements = {

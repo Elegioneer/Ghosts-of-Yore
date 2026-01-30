@@ -862,7 +862,7 @@
 				name = GOY_bonus_crus_2
 				bonus = 0.5
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}
@@ -1189,7 +1189,7 @@
 		mutually_exclusive = { focus = NTR_look_beyond_sea }
 		mutually_exclusive = { focus = NTR_bend_the_knee }
 		completion_reward = {
-			create_faction = NTR_northern_league
+			create_faction_from_template = faction_template_goy_northern_league_faction
 			hidden_effect = {
 			    set_rule = {
 				    can_create_factions = yes
@@ -2016,6 +2016,12 @@
 				}
 				add_extra_state_shared_building_slots = 2
 			}
+			add_resource = {
+				type = coal
+				amount = 12
+				state = 562
+			}			
+			add_ideas = NTR_steam_power
 			Improve_Science_Base = yes
 		}
 	}
@@ -2316,6 +2322,11 @@
 				amount = 4
 				state = 574
 			}
+			add_resource = {
+				type = coal
+				amount = 8
+				state = 574
+			}			
 		}
 	}
 	shared_focus = {
@@ -3444,6 +3455,11 @@
 				amount = 4
 				state = 585
 			}
+			add_resource = {
+				type = coal
+				amount = 10
+				state = 585
+			}			
 		}
 	}
 	shared_focus = {
@@ -4404,6 +4420,11 @@
 				amount = 5
 				state = 574
 			}
+			add_resource = {
+				type = coal
+				amount = 5
+				state = 574
+			}			
 		}
 	}
 	shared_focus = {
@@ -6034,7 +6055,7 @@
 				name = GOY_bonus_crus_2
 				bonus = 0.25
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 			}
 			add_tech_bonus = {
 				name = GOY_bonus_dstr_2

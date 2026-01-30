@@ -238,6 +238,8 @@ NTR_war_north:0 "The War in the North"
  NTR_smiths_buff_2:0 "Smithing Armour Improvements"
  NTR_smiths_buff_3:0 "Smithing Anti-Air Improvements"
  NTR_smiths_buff_4:0 "Smithing Extra Hardness Improvements"
+ NTR_steam_power:0 "Geothermal Energy"
+ NTR_steam_power_desc:0 "What once was just nice hot springs has been harnessed to provide energy for our growing industry."
 ### Laws ###
 GOY_magical_society:0 "Magical Society"
  GOY_magical_society_desc:0 "Magic flows through our lands and affects every single aspect of our citizens’ lives. We live in communion with our deities, the Six Spirits of the North, and benefit from their blessings. While we may lack proper industry, we are able to raise our buildings from crystal using magic, and our artisans create items of unsurpassed beauty and wondrous qualities."
@@ -1516,6 +1518,8 @@ NTR_spirits_blessings_cat:0 "Magic of the Spirits"
  NTR_get_upgrade_smiths_2:0 "Implement New Equipment"
  NTR_upgrade_smiths_3:0 "Uncovering Ancient Wisdom..."
  NTR_get_upgrade_smiths_3:0 "Enchant Our Weapons"
+ NTR_firefly_coal:0 "Firefly Forest Coal Field"
+ 
 ### Opinion Modifiers ###
 NTR_dangerous_maniacs:0 "Dangerous maniacs"
 NTR_dangerous_maniacs_inv:0 "Dangerous maniacs"

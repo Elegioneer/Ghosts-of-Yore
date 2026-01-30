@@ -212,7 +212,7 @@ NTR_frost_king_superhighway_cat = {
 			}
 			build_railway = {
 				level = 2
-				start_province = 1307
+				start_province = 10200
 				target_province = 13235
 				build_only_on_allied = yes
 			}
@@ -1439,6 +1439,35 @@ NTR_holy_forge_smeltery = {
 	}
 	days_remove = 60
 	}
+NTR_firefly_coal = {
+		icon = GFX_decision_coal
+		cost = 75
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+		}
+	available = {
+            has_political_power > 75
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 677
+			}
+	visible = {
+	    tag = NTR
+		has_country_flag = NTR_flag_mining_unlock
+	}
+	modifier = {
+			civilian_factory_use = 2
+	}
+	remove_effect = {
+	677 = {
+				add_resource = {
+					type = coal
+					amount = 15
+				}
+			}
+	}
+	days_remove = 60
+	}	
 NTR_reopen_ostfloy_oil = {
 		icon = GFX_decision_oil
 		cost = 75
@@ -1503,6 +1532,10 @@ NTR_reclaim_littlegriff_mines = {
 					type = aluminium
 					amount = 10
 				}
+				add_resource = {
+					type = coal
+					amount = 8
+				}				
 			}
 	}
 	days_remove = 60
@@ -1540,6 +1573,10 @@ NTR_expand_braunles_mines = {
 					type = aluminium
 					amount = 5
 				}
+				add_resource = {
+					type = coal
+					amount = 5
+				}				
 			}
 	}
 	days_remove = 60
@@ -1623,7 +1660,7 @@ NTR_first_railroad = {
 		  }
 			build_railway = {
                 level = 1
-				start_province = 1307
+				start_province = 10200
                 target_province = 4553
                 build_only_on_allied = yes
             }
@@ -1773,7 +1810,7 @@ NTR_connect_skynavia = {
 		  }
 	build_railway = {
         level = 1
-		start_province = 1307
+		start_province = 10200
         target_province = 6502
         build_only_on_allied = yes
     }
@@ -1862,7 +1899,7 @@ NTR_cloudbury_railroad = {
 		  }
 			build_railway = {
                 level = 1
-				start_province = 1307
+				start_province = 10200
                 target_province = 7146
                 build_only_on_allied = yes
             }
@@ -2744,6 +2781,12 @@ NTR_coalfall_slave_mine = {
 				}
 			}
 	488 = {
+				add_resource = {
+					type = coal
+					amount = 40
+				}
+			}			
+	488 = {
 				add_manpower = -100000
 
 			}
@@ -2790,6 +2833,12 @@ NTR_vleugeland_slave_mine = {
 				}
 			}
 	396 = {
+				add_resource = {
+					type = coal
+					amount = 20
+				}
+			}			
+	396 = {
 				add_manpower = -100000
 
 			}
@@ -2835,6 +2884,12 @@ NTR_westkeep_slave_mine = {
 					amount = 10
 				}
 			}
+	448 = {
+				add_resource = {
+					type = coal
+					amount = 40
+				}
+			}			
 	448 = {
 				add_manpower = -100000
 

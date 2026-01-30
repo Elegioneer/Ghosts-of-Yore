@@ -709,6 +709,11 @@
 						instant_build = yes
 					}
 				}
+				add_resource = {
+					type = coal
+					amount = 8
+					state = 672
+				}				
 				set_country_flag = GOY_FLAG_arcturius_plan_3
 			}
 		}
@@ -846,6 +851,11 @@
 					state = 448
 				}
 				add_resource = {
+					type = coal
+					amount = 20
+					state = 448
+				}				
+				add_resource = {
 					type = steel
 					amount = 6
 					state = 519
@@ -855,6 +865,11 @@
 					amount = 4
 					state = 519
 				}
+				add_resource = {
+					type = coal
+					amount = 24
+					state = 519
+				}				
 			}
 		}
 		POM_comrick_chromium = {
@@ -1311,6 +1326,7 @@
 			modifier = {
 				consumer_goods_factor = -0.1
 				local_resources_factor = 0.2
+				factory_energy_consumption = -0.1				
 			}
 			complete_effect = {
 				set_country_flag = POM_goy_TT_indplan_active
@@ -4067,7 +4083,7 @@
 							is_core_of = NCH
 						}
 					}
-					add_core_of_by = FBK
+					add_core_of = FBK
 					transfer_state_to = FBK
 				}
 			}
@@ -4117,7 +4133,7 @@
 							is_core_of = HLR							
 						}
 					}
-					add_core_of_by = FBK
+					add_core_of = FBK
 					transfer_state_to = FBK
 				}
 			}
