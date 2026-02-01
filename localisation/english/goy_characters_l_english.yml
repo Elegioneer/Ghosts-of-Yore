@@ -35,8 +35,8 @@
  # Charles-Guillaume-Ferdinand de Greifenwald-Strawberry
  JER_POLITICS_Charles_DESC:0 "Charles-Guillaume-Ferdinand de Greifenwald-Strawberry, a distinguished marechal of the Aquileian army and a devout monarchist, found himself in a peculiar position: Queen Vivienne has clearly betrayed her country by allowing Arantigan agents to infiltrate the government and the army command, and now, feeling threatened by the coup, fled to her husband in Arantiga. Now Charles is the head of the Discret Regency Committee and de-facto leader of Aquileia. Despite his inexperience in politics, he is determined to not let the actions of the former queen go unpunished and to find a worthy successor to be placed upon the Aquileian throne."
  #
- GOY_ARA_gumi_name:0 "Gumi"
- GOY_ARA_gumi_desc:0 "§YBorn§!: ???, Macawia\n\n§YCatchphrase§!: 'Wuewuewuewue'\n\n§YPortrait By§!: §RGumi§!"
+ GOY_ARA_gumi_name:0 "Alexios Gumi"
+ GOY_ARA_gumi_desc:0 "§YBorn§!: May 18, 976 ALB, Sao Penario\n\n§YБиография§!: A self-proclaimed descendant of old Karthinian aristocracy exiled to Macawian islands centuries ago, Alexios Gumi was a moderately successful scholar, journalist, restaurant reviewer, conspiracy theorist, and a local oddity. That is, until the Arantigan invasion, when as a macawian griffon of some renown, he managed to endear himself to the new occupational administration enough to be appointed Protector of Macawia.\n\n§YPortrait By§!: morphedCat"
  GOY_ARA_benoam_gerza:0 "Benoam Gerza " #Do not delete these weird spaces or the characters will not appear in-game
  GOY_ARA_zaron_zorrel:0 "Zaron Zorrel "
  GOY_ARA_vasile:0 "Vasile cel Tradat "
@@ -92,6 +92,7 @@ NTR_GOY_stormshield:0 "Euan Stormshield"
  NTR_GOY_gordonthearcher:0 "Gordon the Archer"
  NTR_GOY_gordonthearcher_desc:0 "§YBorn§!: January 31, 944 ALB, Morker\n\n§YBiography§!: Gordon the Archer is the oldest and most experienced warrior in the lands of Northern ponies. Joining a lodge at a young age as an archer, he earned his nickname and fame of the most accurate shot in the land by killing a Vedinian knight with an arrow straight to the eye – causing his chapter brethren to flee in fear – later leading to him forming his own warband. At the start of the Skynavian invasion, he was selected by Prince Fothad III to serve as his Right Hoof. Since then, he'd been alongside the prince, assisting him in army leadership and teaching his sons military strategy. It goes without saying then that over the years Gordon formed a deep personal connection to the princely dynasty. This perfect life he'd grown so attached to would end abruptly on one dreadful day when a Skynavian artillery shell landed right by the prince's tent, killing Fothad with his sons and almost gravely wounding Gordon. His body shredded and both his eyes destroyed by debris from the explosion, he had to be forcefully dragged away to safety, despite him kicking and screaming curses at griffons, having entered a state of berserk-like rage. Following these events, with only underage Fiana left to lead the tribes, Gordon became the de-facto supreme commander of the military, as he was the only pony left that all warchiefs listened to and obeyed.\n\n§YPortrait By§!: Leo the Pone"
  NTR_GOY_greyfox:0 "Grey Fox"
+ GOY_NTR_clown_grover_vi:0 "Count Grover I"
 ### Scientists ###
  GOY_NTR_land_scientist_1:0 "Naoise Stormshield"
  GOY_NTR_naval_scientist_1:0 "Bran Barkcoat"

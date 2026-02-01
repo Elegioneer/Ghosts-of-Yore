@@ -2843,6 +2843,29 @@ country_event = { #Griffonstone Archives
 						set_cosmetic_tag = MIT_arantiga
 						add_ideas = limited_conscription_ara
 						load_focus_tree = generic_griffon_focus
+						generate_character = {
+							token_base = GOY_MIT_puppet_leader
+							name = MIT_puppet_leader
+						}
+						if = {
+							limit = {
+								has_character = GOY_MIT_puppet_leader
+							}
+							set_portraits = {
+								character = GOY_MIT_puppet_leader
+								civilian = { large ="gfx/leaders/MIT/agamemnon_iv.tga" }
+							}
+							add_country_leader_role = {
+								character = GOY_MIT_puppet_leader
+								country_leader = {
+									expire = "1965.1.1"
+									ideology = nazism
+									traits={ unpopular_monarch }
+									#desc = MIT_puppet_leader_desc
+								}
+								promote_leader = yes
+							}
+						}
 				    }
 				}
 			}

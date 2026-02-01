@@ -23,6 +23,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = -0.2
 				political_power_gain = -0.20
+				factory_energy_consumption = 0.25
 			}
 			
 			default = no

@@ -4179,6 +4179,7 @@ country = {
 				production_speed_synthetic_refinery_factor = 0.05
 				max_fuel_factor = -0.25
 				fuel_gain_factor = -0.4
+				factory_energy_consumption = -0.3
 			}
 			research_bonus = {
 				industry = 0.03
@@ -4228,6 +4229,7 @@ country = {
 				max_fuel_factor = -0.45
 				fuel_gain_factor = -0.6
 				agency_upgrade_time = 1.0
+				factory_energy_consumption = -0.1
 			}
 			
 			allowed_to_remove = {
@@ -4321,8 +4323,10 @@ country = {
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
 				research_speed_factor = 0.10
+				trade_opinion_factor = 0.3
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
+				cic_construction_boost_factor = 0.05
 			}		
 			allowed_to_remove = {
 				OR = {
@@ -4359,6 +4363,7 @@ country = {
 				research_speed_factor = 0.05
 				civilian_intel_to_others = 20.0
 				navy_intel_to_others = 10.0
+				cic_construction_boost_factor = 0.1
 			}
 			allowed_to_remove = {
 				OR = {
@@ -4393,8 +4398,11 @@ country = {
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = 0.01
+				trade_opinion_factor = -0.30
 				civilian_intel_to_others = 10.0
 				navy_intel_to_others = 5
+				lend_lease_tension = 0.20
+				cic_construction_boost = -0.05
 			}
 			allowed_to_remove = {
 				OR = {

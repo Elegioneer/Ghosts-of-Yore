@@ -4351,6 +4351,20 @@ add_namespace = ntribes_news
 			}
 			add_political_power = 50
 			add_stability = 0.05
+			every_state = {
+				limit = {
+					NOT = {
+						OR = {
+							state = 424
+							state = 479
+							state = 492
+							state = 539
+							state = 568
+						}
+					}
+				}
+				remove_core_of = BRZ
+			}
 			release_puppet = BRZ
 			if = {
 				limit = {
