@@ -2129,6 +2129,7 @@ GOY_ARA_CETT_expect_investment:0 "§RThey're expecting our investments to come i
 GOY_ARA_CETT_IRI_conclusion:0 "§RThat concludes this§! §YIRI project§!."
 GOY_ARA_CETT_after365days:0 "\n§Y365 days later§!:"
 ARA_TT_used_puppet_show:0 "Was established via Soter's Amazing Puppet Show decision."
+GOY_ARA_too_weak_for_JER_marriage_TT:0 "Success is unlikely if §1Aquileians§! consider us §Rweaker than them§!."
 
 ### Traits ###
 arantigos_reborn:0 "Arantigos Reborn"

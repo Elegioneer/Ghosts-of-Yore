@@ -522,6 +522,18 @@
 				custom_effect_tooltip = NTR_holyforgetank_enabled
 			}
 			add_ideas = NTR_streamlined_tank
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = armor
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -549,6 +561,18 @@
 				custom_effect_tooltip = NTR_holyforgearty_enabled
 			}
 			add_ideas = NTR_forged_artillery
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = combat_support
+					NOT = {
+						has_completed_track = combat_support
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = combat_support
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -589,6 +613,18 @@
 		mutually_exclusive = { focus = NTR_revive_traditions }
 		completion_reward = {
 			add_ideas = NTR_increased_conscription
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+					NOT = {
+						has_completed_track = infantry
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = infantry
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -612,6 +648,18 @@
 				category = pegasi_tech
 			}
 			add_ideas = NTR_north_shield
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = operations
+					NOT = {
+						has_completed_track = operations
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = operations
+				}
+			}
 		}
 	}
 	###
@@ -2686,6 +2734,30 @@
 				category = medium_air
 				}
 			add_ideas = NTR_bomber_focus
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = strike_aircraft
+					NOT = {
+						has_completed_track = strike_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = strike_aircraft
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = medium_aircraft
+					NOT = {
+						has_completed_track = medium_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = medium_aircraft
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -2719,6 +2791,18 @@
 				category = light_air
 			}
 			add_ideas = NTR_fighter_focus
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = fighter_aircraft
+					NOT = {
+						has_completed_track = fighter_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = fighter_aircraft
+				}
+			}
 		}
 	}
 	###
@@ -3232,6 +3316,54 @@
 				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+					NOT = {
+						has_completed_track = infantry
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = infantry
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = combat_support
+					NOT = {
+						has_completed_track = combat_support
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = combat_support
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = armor
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = operations
+					NOT = {
+						has_completed_track = operations
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = operations
+				}
 			}
 		}
 	}

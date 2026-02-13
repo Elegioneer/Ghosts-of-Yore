@@ -1475,6 +1475,18 @@
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_reformed_infantry_1
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+					NOT = {
+						has_completed_track = infantry
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = infantry
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -1607,6 +1619,18 @@
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonsteel_1
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = combat_support
+					NOT = {
+						has_completed_track = combat_support
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = combat_support
+				}
+			}
 		}
 	}
 	shared_focus = {

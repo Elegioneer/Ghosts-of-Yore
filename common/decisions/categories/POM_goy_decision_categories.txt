@@ -223,5 +223,5 @@ POM_goy_revolution_in_mareland_cat = {
 	visible = {
 	    tag = ARD
 		owns_state = 356
-		}		
-	}
+	}		
+}

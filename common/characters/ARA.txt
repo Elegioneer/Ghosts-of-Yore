@@ -368,6 +368,35 @@ characters = {
 			traits = { smooth_talking_charmer }
 		}
 	}
+	GOY_ARA_giuseppe_garbarelli = {
+		name = GOY_ARA_giuseppe_garbarelli
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARA/GOY_garbarelli.tga"
+				small = "gfx/interface/ideas/idea_GOY_ARA_garbarelli.dds"
+			}
+		}
+		navy_leader={
+			traits = { griffon_race_trait ironside }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+			desc=GOY_ARA_giuseppe_garbarelli_desc
+		}
+		advisor = {
+			cost = 50
+			slot = navy_chief
+			idea_token = GOY_ARA_giuseppe_garbarelli
+			allowed = {
+				original_tag = ARA
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+		}
+	}
 	GOY_ARA_glenda = {
 		name = ARA_glenda
 		portraits = {

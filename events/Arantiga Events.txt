@@ -4747,16 +4747,15 @@ country_event = { #Old Foes
 		ai_chance = {
 			base = 50
 		}
-		add_political_power = 50
-		add_war_support = 0.05
+		add_political_power = 100
 	}
 	option = {
 		name = 	arantiga.084.b
 		ai_chance = {
 			base = 50
 		}
-		add_political_power = -100
-		add_war_support = -0.1
+		add_political_power = -50
+		add_war_support = -0.05
 		every_other_country = {
 			limit = {
 				original_tag = WNG
@@ -4766,7 +4765,6 @@ country_event = { #Old Foes
 		    }
 		}
 		add_manpower = 20000
-		
 	}
 }
 
@@ -4928,6 +4926,12 @@ country_event = { #Marriage
 	option = {
 	    ai_chance = {
 			base = 6
+			modifier = {
+			    AND = {
+			        strength_ratio = { tag = ARA ratio < 1 }
+				}
+				add = -6
+			}
 		}
 		name = 	arantiga.089.a
 		ARA = {

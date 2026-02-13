@@ -23,14 +23,13 @@ faction_goal_goy_expand_legions = {
 				name = FACTION_NAME
 			}
 			manpower = yes
-			size > 1000000
+			size > 300000
 		}
 	}
 	complete_effect = {
-		add_faction_power_projection = 100
+		add_faction_power_projection = 25
 		custom_effect_tooltip = generic_skip_one_line_tt
 		faction_leader = {
-			army_experience = 100
 			every_unit_leader = {
 				gain_xp = 100
 			}
@@ -40,7 +39,7 @@ faction_goal_goy_expand_legions = {
 				is_faction_leader = no
 			}
 			visible_when_empty = no
-			army_experience = 50
+			army_experience = 25
 		}
 	}
 }

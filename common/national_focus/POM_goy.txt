@@ -2174,6 +2174,18 @@
 			set_technology = {
 				JER_magical_tanks_tech = 1
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = armor
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -5108,12 +5120,24 @@
 			add_doctrine_cost_reduction = {
 				name = GOY_bonus_race_his
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = land_doctrine
 			}
 			add_ideas = POM_established_korps
 			every_unit_leader = {	
 				add_planning = 1
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = operations
+					NOT = {
+						has_completed_track = operations
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = operations
+				}
 			}
 		}
 	}
@@ -5184,6 +5208,18 @@
 				custom_effect_tooltip = available_materiel_manufacturer
 				show_ideas_tooltip = POM_modoc_tank_factory
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = armor
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -5221,6 +5257,18 @@
 			ELSE = {
 				custom_effect_tooltip = available_materiel_manufacturer
 				show_ideas_tooltip = POM_arzhur_tank_factory
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = armor
+				}
 			}
 		}
 	}
@@ -6615,7 +6663,7 @@
 			add_doctrine_cost_reduction = {
 				name = GOY_bonus_military_exercises
 				cost_reduction = 0.5
-				uses = 2
+				uses = 1
 				category = air_doctrine
 			}
 		}
@@ -6833,6 +6881,30 @@
 				}
 			}
 			add_ideas = POM_nimble_and_deadly
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = fighter_aircraft
+					NOT = {
+						has_completed_track = fighter_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = fighter_aircraft
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = strike_aircraft
+					NOT = {
+						has_completed_track = strike_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = strike_aircraft
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -6871,6 +6943,30 @@
 				}
 			}
 			add_ideas = POM_bombastic_bombs
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = medium_aircraft
+					NOT = {
+						has_completed_track = medium_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = medium_aircraft
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = heavy_aircraft
+					NOT = {
+						has_completed_track = heavy_aircraft
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = heavy_aircraft
+				}
+			}
 		}
 	}
 	#
@@ -7166,6 +7262,18 @@
 					category = cat_ship_heavy_battery
 				}
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = capital_ships
+					NOT = {
+						has_completed_track = capital_ships
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = capital_ships
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -7198,6 +7306,18 @@
 				bonus = 1
 				uses = 1
 				category = naval_air
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = carriers
+					NOT = {
+						has_completed_track = carriers
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = carriers
+				}
 			}
 		}
 	}

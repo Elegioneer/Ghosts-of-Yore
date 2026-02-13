@@ -126,6 +126,11 @@
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
 					level = 1
 					instant_build = yes
 				}
@@ -512,12 +517,60 @@
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-		add_doctrine_cost_reduction = {
-			name = naval_doc_bonus
-			cost_reduction = 0.5
-			uses = 2
-			category = naval_doctrine
-		}
+			add_doctrine_cost_reduction = {
+				name = naval_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = screens
+					NOT = {
+						has_completed_track = screens
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = screens
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = submarines
+					NOT = {
+						has_completed_track = submarines
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = submarines
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = carriers
+					NOT = {
+						has_completed_track = carriers
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = carriers
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = capital_ships
+					NOT = {
+						has_completed_track = capital_ships
+					}
+				}
+				add_mastery = {
+					amount = 50
+					track = capital_ships
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -557,7 +610,7 @@
 		search_filters = {FOCUS_FILTER_NAVY_BONUS}
 		completion_reward = {
 			add_ideas = {
-			    ARA_trained_marines #-25 invasion prep
+			    ARA_trained_marines
 		    }
 		}
 	}
@@ -714,6 +767,18 @@
 				uses = 1
 				category = land_doctrine
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = armor
+				}
+			}
 		}
 	}
 
@@ -867,6 +932,18 @@
 				uses = 1
 				category = land_doctrine
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = combat_support
+					NOT = {
+						has_completed_track = combat_support
+					}
+				}
+				add_mastery = {
+					amount = 100
+					track = combat_support
+				}
+			}
 		}
 	}
 
@@ -954,7 +1031,7 @@
 				uses = 1
 				category = infantry_weapons
 			}
-			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = GRF }
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3000 producer = GRF }
 		}
 	}
 
@@ -2228,7 +2305,7 @@ focus_tree = {
 		
 			completion_reward = {
 				add_stability = 0.1
-				add_political_power = -50
+				add_political_power = -25
 				add_ideas = ARA_absolute_reign
 			}
 		}
@@ -2310,11 +2387,11 @@ focus_tree = {
 		prerequisite = { focus = ARA_army_with_a_state }
 
 		completion_reward = {
-		custom_effect_tooltip = ARA_CETT_rise_of_arantiga
-		add_stability = 0.05
-		add_political_power = 50
-		add_popularity = { ideology = fascism popularity = 0.1 }
-		set_country_flag = ARA_FLAG_rise_of_arantiga
+			custom_effect_tooltip = ARA_CETT_rise_of_arantiga
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			set_country_flag = ARA_FLAG_rise_of_arantiga
 		}
 		}	
 
@@ -2821,16 +2898,16 @@ focus_tree = {
 	
 			country_event = { 
 		id = arantiga.013
-		days = 8
+		days = 5
 		}
 		hidden_effect = { 
 		country_event = { 
 		id = arantiga.998
-		days = 3
+		days = 1
 		}
 		country_event = { 
 		id = arantiga.997
-		days = 5
+		days = 3
 		}
 		}
 		}
@@ -2907,6 +2984,7 @@ focus_tree = {
 				add = -50
 			}
 		}
+		will_lead_to_war_with = GRD
 		completion_reward = {
 			effect_tooltip = {
 			IF = { 
@@ -3203,6 +3281,7 @@ focus_tree = {
 			}						
 	    }
 		completion_reward = {
+			custom_effect_tooltip = GOY_ARA_too_weak_for_JER_marriage_TT
 			JER = {
 			    country_event = { id = arantiga.089 days = 1 }
 			}
@@ -3272,14 +3351,62 @@ focus_tree = {
 				uses = 1
 				category = cat_medium_armor
 			}
-			custom_effect_tooltip = ARA_one_aquileian_joins
-			hidden_effect = {
-			JER = {
-			    every_unit_leader = {
-					limit = { has_id = 75656 }
-					set_nationality = ARA
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = infantry
+					NOT = {
+						has_completed_track = infantry
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = infantry
 				}
 			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = combat_support
+					NOT = {
+						has_completed_track = combat_support
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = combat_support
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = armor
+					NOT = {
+						has_completed_track = armor
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = armor
+				}
+			}
+			IF = {
+				limit = {
+					has_subdoctrine_in_track = operations
+					NOT = {
+						has_completed_track = operations
+					}
+				}
+				add_mastery = {
+					amount = 25
+					track = operations
+				}
+			}
+			custom_effect_tooltip = ARA_one_aquileian_joins
+			hidden_effect = {
+				JER = {
+					every_unit_leader = {
+						limit = { has_id = 75656 }
+						set_nationality = ARA
+					}
+				}
 			}
 		}
 	}
@@ -3449,6 +3576,7 @@ focus_tree = {
 			}
 		}
 		mutually_exclusive = { focus = ARA_marriage_of_convience }
+		will_lead_to_war_with = JER
 		completion_reward = {
 			IF = { 
 				limit = {
@@ -3509,9 +3637,15 @@ focus_tree = {
 		    focus = ARA_march_west
 			focus = ARA_marriage_of_convience 
 		}
+		bypass = {
+			HEL = { exists = no }
+			AET = { exists = no }
+		}
 		ai_will_do = {
 			base = 75
 		}
+		will_lead_to_war_with = HEL
+		will_lead_to_war_with = AET
 		completion_reward = {
 			IF = { 
 				limit = {
@@ -3574,9 +3708,15 @@ focus_tree = {
 		    focus = ARA_march_west
 			focus = ARA_marriage_of_convience
 		}
+		bypass = {
+			POM = { exists = no }
+			FLO = { exists = no }
+		}
 		ai_will_do = {
 			base = 75
 		}
+		will_lead_to_war_with = POM
+		will_lead_to_war_with = FLO
 		completion_reward = {
 			IF = { 
 				limit = {
@@ -3664,6 +3804,10 @@ focus_tree = {
 				add = -75
 			}
 		}
+		will_lead_to_war_with = WNG
+		will_lead_to_war_with = FRN
+		will_lead_to_war_with = TAL
+		will_lead_to_war_with = JES
 		completion_reward = {
 			IF = { 
 				limit = {
@@ -3742,43 +3886,53 @@ focus_tree = {
 			base = 75
 		}
 		bypass = {
-		    OR = {
-			    TAL = { exists = no }
-				AND = {
-				    has_country_flag = ARA_FLAG_feti_refused
-				    NOT = {
-				        TAL = {
-				            is_puppet_of = ARA
-					    }
-				    }
-				}
-				NOT = {
-				    TAL = {
-					    has_government = fascism
-					}
-				}
-			}
+			
 		}
 		available = {
-			TAL = {
-			    is_puppet_of = ARA
-			}
-			371 = {
-				is_owned_by = ARA
+			OR = {
+				TAL = {
+					is_puppet_of = ARA
+				}
+				AND = {
+					controls_state = 366
+					controls_state = 367
+					controls_state = 368
+					controls_state = 388
+				}
 			}
 		}
 		completion_reward = {
-			annex_country = { target = TAL transfer_troops = yes }
-			every_state = {
-			    limit = {
-				    is_core_of = TAL
+			IF = {
+				limit = {
+					TAL = {
+						is_puppet_of = ARA
+					}
 				}
-				add_core_of = ARA
+				annex_country = { target = TAL transfer_troops = yes }
+				every_state = {
+					limit = {
+						is_core_of = TAL
+					}
+					add_core_of = ARA
+				}
+				custom_effect_tooltip = ARA_CETT_fetivola 
+				hidden_effect = {
+					set_country_flag = ARA_FLAG_fetivola
+				}
 			}
-			custom_effect_tooltip = ARA_CETT_fetivola 
-		    hidden_effect = {
-		        set_country_flag = ARA_FLAG_fetivola
-		    }
+			ELSE = {
+				every_controlled_state = {
+					limit = {
+						OR = {
+							state = 366
+							state = 367
+							state = 368
+							state = 388
+						}
+					}
+					add_compliance = 60
+				}
+			}
 		}
 	}
 
@@ -3850,8 +4004,21 @@ focus_tree = {
 			base = 75
 		}
 		completion_reward = {
-			add_war_support = 0.05	
-			add_stability = 0.05
+			every_controlled_state = {
+				limit = {
+					state = 369
+					state = 370
+					state = 371
+					state = 372
+					state = 373
+					state = 374
+					state = 375
+					state = 530
+					state = 534
+					state = 536
+				}
+				add_compliance = 25
+			}
 			country_event = { id = arantiga.084 days = 0 }
 		}
 	}
