@@ -1518,6 +1518,9 @@ NTR_spirits_blessings_cat:0 "Magic of the Spirits"
  NTR_upgrade_smiths_3:0 "Uncovering Ancient Wisdom..."
  NTR_get_upgrade_smiths_3:0 "Enchant Our Weapons"
  NTR_firefly_coal:0 "Firefly Forest Coal Field"
+ NTR_knights_upgrade_category:0 "Modernization of the Knight Chapters"
+ NTR_knights_upgrade_category_desc:0 "For centuries, Griffon Knights were the undisputed greatest force in all of Griffonia. Their armor, discipline and valour made them fearsome on the battlefield, and their charges made entire armies tremble in fear. Those ages have passed - but the Knights remain, and they have to adapt to the modern age. With the most modern technology available and the full dedication of our army research corps, we can turn the Rosewood Knights into titans of war yet again, feared by all."
+ NTR_research_knights_tech:0 "Knights Improvement"
  
 ### Opinion Modifiers ###
 NTR_dangerous_maniacs:0 "Dangerous maniacs"

@@ -3083,3 +3083,36 @@ NTR_last_griffon_alliance_cat = {
 		}
 	}
 }
+NTR_knights_upgrade_category = {
+	NTR_research_knights_tech = {
+		icon = griffon
+
+		cost = 50
+		days_remove = 125
+		days_re_enable = 1
+		modifier = {
+			research_speed_factor = -0.1
+			consumer_goods_factor = 0.1
+		}
+		available = {
+			
+		}
+		visible = {
+			NOT = {
+				has_tech = tech_knights_c
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		complete_effect = {
+			log = "[GetDateText] [Root.GetName]: Decision LNS_research_knights_tech" 
+        }
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove LNS_research_knights_tech"
+			LSC_upgrade_knights_technology = yes
+		}
+	}
+}

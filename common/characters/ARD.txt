@@ -41,7 +41,7 @@ characters={
 			}
 		}
 		country_leader={
-			desc="ARD_allard_desc"
+			desc=ARD_allard_desc
 			ideology=stalinism
 			traits={  }
 			expire="1965.1.1.1"

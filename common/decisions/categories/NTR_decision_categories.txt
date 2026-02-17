@@ -174,3 +174,17 @@ NTR_last_griffon_alliance_cat = {
 		has_completed_focus = NTR_purge_herz
 	}
 }
+NTR_knights_upgrade_category = {
+    icon = generic_research
+	allowed = {
+		original_tag = NTR
+	}
+	visible = {
+		hidden_trigger = {
+			OR = {
+				has_completed_focus = NTR_griffon_volunteers
+				has_completed_focus = NTR_northern_knights
+			}
+		}
+	}
+}
