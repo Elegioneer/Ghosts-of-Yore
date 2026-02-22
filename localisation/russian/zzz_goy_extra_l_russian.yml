@@ -45,3 +45,12 @@ goy_debug.002.c:0 "Aetian League"
 goy_most_civilian_factories_of_majors_var:0 "Наибольшее количество фабрик в крупной державе"
 goy_pomovarran_civilian_factories_var:0 "[FROM.GetAdjective]ие $industrial_complex_plural$"
 EQS_or_ELF_has_capitulated_CHN:0 "Победа над [CHN.GetName] достигнута"
+
+#Doctrines
+subdoctrine_goy_undead_hordes:0 "Орды Мертвецов"
+subdoctrine_goy_undead_hordes_desc:0 "Бездумная волна разорения, нежить идеально вписывается в философию современной войны, где солдаты — это лишь числа в отчётах. Однако, только сильнейшие некроманты способны поднимать армии живых трупов."
+goy_undead_hordes_goy_doc_march_of_the_dead:0 "Марш Мёртвых"
+goy_undead_hordes_goy_doc_unnatural_vitality:0 "Сверхъестественная Сила"
+goy_undead_hordes_goy_doc_flesh_puppets:0 "Марионетки из Плоти"
+goy_undead_hordes_goy_doc_evergrowing_horde:0 "Вечно Растущая Орда"
+goy_undead_hordes_goy_doc_dark_magic_warfare:0 "Тёмная Боевая Магия"

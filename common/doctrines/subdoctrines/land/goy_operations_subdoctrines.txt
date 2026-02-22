@@ -1,0 +1,68 @@
+goy_undead_hordes = {
+    track = operations
+    name = subdoctrine_goy_undead_hordes
+    description = subdoctrine_goy_undead_hordes_desc
+    icon = GFX_doctrine_goy_undead_hordes_medium
+
+    xp_cost = 50
+    xp_type = army
+
+    ai_will_do = {
+        base = 10
+    }
+
+    available = {
+        original_tag = NTR
+		has_completed_focus = NTR_north_awakens
+    }
+    # EFFECTS
+    no_supply_grace = 72
+	supply_consumption_factor = -0.25
+	out_of_supply_factor = -0.25
+
+
+
+    rewards = {
+        goy_doc_march_of_the_dead ={
+        #1
+            org_loss_when_moving = -0.25
+			army_speed_factor = 0.1
+			category_army = {
+                breakthrough = 0.05
+            }
+			enable_tactic = tactic_attacker_GOY_undead_assault
+        }
+        goy_doc_unnatural_vitality = {
+        #2
+            category_army = {
+				experience_loss_factor = -0.05
+			}
+			category_all_infantry = {
+				max_strength = 0.1
+				defense = 0.1
+			}
+        }
+        goy_doc_flesh_puppets = {
+        #3
+			coordination_bonus = 0.05
+			max_command_power = 20
+            army_intel_to_others  = -25
+			enable_tactic = tactic_defender_GOY_meat_wall
+			enable_tactic = tactic_defender_tw_GOY_meat_wall
+        }
+        goy_doc_evergrowing_horde = {
+        #4
+			army_morale_factor = 0.05
+			training_time_army_factor = -0.1
+			minimum_training_level = -0.2
+        }
+        goy_doc_dark_magic_warfare = {
+        #5
+			category_army = {
+				soft_attack = 0.05
+				hard_attack = 0.05
+			}
+			enable_tactic = tactic_attacker_GOY_undead_monsters
+        }
+    }
+}

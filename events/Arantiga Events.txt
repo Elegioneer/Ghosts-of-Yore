@@ -7072,13 +7072,13 @@ country_event = { #Test Subjects Required
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = 	arantiga_decision.32.a
+		name = 	arantiga_decision.33.a
 		country_event = { id = arantiga_decision.34 days = 45 }
 		add_manpower = -1242
 		add_political_power = -45
 	}
 	option = {
-		name = 	arantiga_decision.32.b
+		name = 	arantiga_decision.33.b
 		clr_country_flag = IRI_project_ongoing
 		custom_effect_tooltip = ARA_allenstein_rejection_tt
 		hidden_effect = {
@@ -7096,12 +7096,12 @@ country_event = { #New Equipment Required
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = 	arantiga_decision.32.a
+		name = 	arantiga_decision.34.a
 		country_event = { id = arantiga_decision.35 days = 100 }
 		add_political_power = -75
 	}
 	option = {
-		name = 	arantiga_decision.32.b
+		name = 	arantiga_decision.34.b
 		clr_country_flag = IRI_project_ongoing
 		custom_effect_tooltip = ARA_allenstein_rejection_tt
 		hidden_effect = {

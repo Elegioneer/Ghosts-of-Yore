@@ -24,7 +24,7 @@ FOCUS_FILTER_GOY_BEACH:0 "Beach Defence"
 
 #Combat Tactics
 tactic_attacker_GOY_undead_assault:0 "Undead Assault"
-tactic_attacker_GOY_undead_monsters:0 "Unleash Undead Abberations"
+tactic_attacker_GOY_undead_monsters:0 "Unleash Undead Aberrations"
 tactic_defender_GOY_meat_wall:0 "Meat Wall Defence"
 tactic_defender_tw_GOY_meat_wall:0 "Leave the Undead Behind"
 
@@ -45,3 +45,12 @@ goy_debug.002.c:0 "Aetian League"
 goy_most_civilian_factories_of_majors_var:0 "Highest number of civilian factories out of all major countries"
 goy_pomovarran_civilian_factories_var:0 "[FROM.GetName]'s civilian factories"
 EQS_or_ELF_has_capitulated_CHN:0 "[CHN.GetName] has been defeated"
+
+#Doctrines
+subdoctrine_goy_undead_hordes:0 "Undead Hordes"
+subdoctrine_goy_undead_hordes_desc:0 "A mindless wave of desolation, the undead perfectly fit into the philosophy of modern warfare where soldiers are nothing more than numbers in reports. Though only a few mages wield enough power to sustain armies of living corpses."
+goy_undead_hordes_goy_doc_march_of_the_dead:0 "March of the Dead"
+goy_undead_hordes_goy_doc_unnatural_vitality:0 "Unnatural Vitality"
+goy_undead_hordes_goy_doc_flesh_puppets:0 "Flesh Puppets"
+goy_undead_hordes_goy_doc_evergrowing_horde:0 "Evergrowing Horde"
+goy_undead_hordes_goy_doc_dark_magic_warfare:0 "Dark Magic Warfare"
