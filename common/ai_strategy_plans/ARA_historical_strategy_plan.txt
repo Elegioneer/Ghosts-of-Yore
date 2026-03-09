@@ -87,6 +87,7 @@ ARA_historical = {
 		ARA_mandatory_education
 		ARA_arantigos_boreas
 		ARA_sparleto_university
+		ARA_shadow_claws
 		ARA_new_arantigos
 		ARA_cult_of_personality
 		ARA_legacy_of_grover

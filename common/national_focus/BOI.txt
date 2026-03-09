@@ -3289,6 +3289,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_parliament
+			set_country_leader_ideology = harmonic_constitutionalism
 		}
 	}
 	focus = {

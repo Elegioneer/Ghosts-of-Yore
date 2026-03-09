@@ -12,8 +12,17 @@ goy_undead_hordes = {
     }
 
     available = {
-        original_tag = NTR
-		has_completed_focus = NTR_north_awakens
+		OR = {
+			AND = {
+				original_tag = NTR
+				has_completed_focus = NTR_north_awakens
+			}
+			AND = {
+				original_tag = FIR
+				has_completed_focus = FIR_skeleton_armies
+			}
+			has_country_leader_ideology = undead_horde
+		}
     }
     # EFFECTS
     no_supply_grace = 72
