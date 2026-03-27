@@ -665,8 +665,10 @@
 				if = {
 					limit = { 
 						389 = {
-							is_fully_controlled_by = ROOT
-							can_construct_building = magical_facility
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
 						}
 					}
 					389 = {

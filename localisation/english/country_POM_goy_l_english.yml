@@ -340,7 +340,7 @@ POM_eternal_epic_desc:0 "A good story can change the way one thinks, can shape n
 POM_pomovarrisation:0 "Pomovarrisation"
 POM_pomovarrisation_desc:0 "If we want the Reborn Kingdom to last, we need to conquer not only the lands of our enemies, but also their souls and minds. By moving some of our loyal Pomovarrans into new territories and strictly controlling education and the media we will start the process of integrating foreigners into our great nation."
 POM_dwell_on_the_past:0 "Explore the Past"
-POM_dwell_on_the_past_desc:0 "When Aquileians destroyed the Old Kingdom, they stole many of it legendary treasures, tried to erase our tradition and eradicated the magical arts of ancient Pomovarra. However, they could not make use of what they had stolen, treating it as mere trophies. Now that we’ve reclaimed these artifacts, we can relearn much of our past."
+POM_dwell_on_the_past_desc:0 "When Aquileians destroyed the Old Kingdom, they stole many of its legendary treasures, tried to erase our tradition and eradicated the magical arts of ancient Pomovarra. However, they could not make use of what they had stolen, treating it as mere trophies. Now that we’ve reclaimed these artifacts, we can relearn much of our past."
 POM_reaching_the_sky:0 "Reaching For the Sky"
 POM_reaching_the_sky_desc:0 "City of Skyfall is for Herzland what Flowena was for us – a despicable parasite. We will do all griffons a favor by getting rid of its greedy oligarchs and using the city’s riches for the greater good."
 POM_eastern_kin:0 "Eastern Kin"
@@ -2059,6 +2059,7 @@ POM_TT_allard_dies:0 "§YVictor Allard§! §Rdies§!?"
 POM_TT_study_magic_research_boost:0 "Race Magic Research Speed: §G+10%§!\nMagic Research Speed: §G+10%§!"
 POM_TT_add_50_planes:0 "Add §G50§! §YFukker D.19-type fighters§! to reserves."
 POM_TT_only_five_free_factories:0 "Purchased §Y[?POM_free_factories_var]§! out of §Y5§! available manufactories."
+GOY_rename_angaz_barak:0 "§YAngaz-Barak§! becomes a named victory point in §YIlleagle§!."
 
 ### Country Flags ###
 POM_FLAG_flowena_raffinery_enabled:0 "Has completed §YCreate the Flowenian Refinery§!."
@@ -2081,6 +2082,7 @@ POM_FLAG_armed_fea_pretenders:0 "Completed decision §YArm Feathisian Pretenders
 POM_FLAG_stoked_sentiment:0 "Completed decision §YStoke Nationalist Sentiment§!."
 POM_FLAG_unicorn_th:0 "§YMagical Harmony§! upgrade branch chosen."
 POM_FLAG_unicorn_ms:0 "§YMagical Supremacy§! upgrade branch chosen."
+POM_FLAG_created_college_of_magic:0 "Completed decision §YForm the College of Magic§!."
 
 ### Beach Episode ###
 POM_LM_suddenly_unretired:0 "Suddenly Unretired"

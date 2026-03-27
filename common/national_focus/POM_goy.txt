@@ -2366,8 +2366,10 @@
 				if = {
 					limit = { 
 						407 = {
-							is_fully_controlled_by = ROOT
-							can_construct_building = nuclear_facility
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
 						}
 					}
 					407 = {
@@ -11555,8 +11557,10 @@
 				if = {
 					limit = { 
 						672 = {
-							is_fully_controlled_by = ROOT
-							can_construct_building = magical_facility
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
 						}
 					}
 					672 = {
