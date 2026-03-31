@@ -3064,7 +3064,7 @@ country = {
 		}
 	}
 	country = {
-		ARA_arantigan_parliament = {
+		ARA_arantigan_parliament_idea = {
 			allowed = {
 				always = no
 			}

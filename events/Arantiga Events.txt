@@ -3322,7 +3322,7 @@ country_event = { #Griffonstone Archives
 		    name = 	arantiga_govern.012.b #let them bicker
 			swap_ideas = {
 			    remove_idea = ARA_voices_of_dissent
-		        add_idea = ARA_arantigan_parliament
+		        add_idea = ARA_arantigan_parliament_idea
 			}
 	    }
     }

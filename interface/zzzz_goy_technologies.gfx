@@ -4,6 +4,56 @@
 
 spriteTypes = {
 	
+	# ARA
+	SpriteType = {
+		name = "GFX_ARA_2d_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_2d_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_2d_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_2d_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_2d_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_2d_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_ARA_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/ARA_infantry_equipment_5.dds"
+	}
+	
 	#BOI
 	
 	SpriteType = {

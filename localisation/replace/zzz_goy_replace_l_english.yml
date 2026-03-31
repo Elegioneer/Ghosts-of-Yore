@@ -2,3 +2,23 @@
 
 # Dynamic ideology
 esotericism:0 "[GOY_esotericism_loc]"
+
+# ARA guns
+ARA_infantry_equipment_0:0 "Garcano Modello 91 (Arantigan)"
+ARA_infantry_equipment_0_short:0 "Garcano Mod. 91 (A)"
+ARA_infantry_equipment_0_desc:0 "The now-venerable Garcano rifle was pushed into premature service during the Falcor War – and proved to be innovative, if not very reliable. After the war ended, an improved version of the rifle ended up as the default weapon of Karthinian Pact members thanks to very favorable licensing agreements. As a result, every producing state quickly created its own modified version meant to overcome issues of first Garcano models and better suit the needs of their militaries."
+ARA_infantry_equipment_1:0 "Garcano Modello 07 (Arantigan)"
+ARA_infantry_equipment_1_short:0 "Garcano Mod. 07 (A)"
+ARA_infantry_equipment_1_desc:0 "Unlike the previous model, M07 underwent long trials, with lessons of the Falcor War used to alleviate the issues of its predecessor. More importantly, it was designed from the start to be used by all militaries of the Karthinian Pact, and as such was easily modifiable to suit their needs. By the time of the political crises of 1007 only Wingbardy mass-produced the M07, but prototypes and production documentation had already been delivered to other southern nations, allowing even those who would break ties with Wingbardy to put it into service."
+ARA_infantry_equipment_2:0 "Moschetto Automatico Xiphos 10"
+ARA_infantry_equipment_2_short:0 "MAX-10"
+ARA_infantry_equipment_2_desc:0 "Xiphos Arms began its existence producing licensed Wingbardian rifles. Its first fully independent design was a machine pistol intended for urban warfare environments, where Garcano rifles proved unwieldy. Xiphos' history of adapting foreign weapons proved to be a blessing, as by the time of their debut company designers had already learned a lot from the mistakes of others and managed to avoid most of the deficiencies of contemporary submachine guns."
+ARA_infantry_equipment_3:0 "Mitragliatrice Leggera Xiphos 13"
+ARA_infantry_equipment_3_short:0 "MLX-13"
+ARA_infantry_equipment_3_desc:0 "Originally intended and designed as a support weapon, MLX-13 was born out of urgent demands of Legions' commanders for 'more punch' – and as a result Xiphos simply downsized a heavy machine gun into a more handy form. The resulting firearm still kicked like an angry mule and weighed a lot, but quickly became a favoured weapon of knights, whose intense physical training allowed them to handle it with ease and bring devastating firepower into combat."
+ARA_infantry_equipment_x:0 "Fucile de Battaglia 19 "Victoria""
+ARA_infantry_equipment_x_short:0 "FB-19 "Victoria""
+ARA_infantry_equipment_x_desc:0 "While first versions of Victoria were designed and tested during the later stages of Griffonian Unification Wars, its mass production and subsequent rearming of the Legions only began in peacetime. As a result, Victoria would be used mostly during colonial conflicts outside of Griffonia, where its hardy design would be heavily tested in the harshest environments – and pass all these tests with distinction. An overall solid, yet relatively simple rifle would be a favorite of many, even as more modern weapons would enter service."
+ARA_infantry_equipment_x_2:0 "Fucile de Battaglia 25 "Harpe""
+ARA_infantry_equipment_x_2_short:0 "FB-25 "Harpe""
+ARA_infantry_equipment_x_2_desc:0 "Named after the mythical sword of Sparlos, Harpe was at the time of its introduction considered the peak of conventional small arms design. Its improved performance parameters and more compact frame however came at the cost of increased production costs, which due to scaling-down of the Legions at the time would make it coexist with Victoria, until it was fully phased out in the 1030s."
