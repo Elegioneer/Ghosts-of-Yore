@@ -6282,7 +6282,7 @@
 	}
 	shared_focus = {
 		id = NTR_crush_dream
-		icon = GFX_goal_abandon_the_republican_dream
+		icon = GFX_focus_FAT_abandon_the_republican_dream
 		x = 0
 		y = 4
 		cost = 5.00
@@ -7391,7 +7391,7 @@ shared_focus = {
 	}
 	shared_focus = {
 		id = NTR_destroy_city
-		icon = GFX_goal_rou
+		icon = GFX_goal_Attack_Romau
 		x = -1
 		y = 1
 		cost = 3.00

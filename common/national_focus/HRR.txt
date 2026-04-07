@@ -1628,7 +1628,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HRR_adopt_principles
-		icon = GFX_goal_kemerskai
+		icon = GFX_focus_FAT_kemerskai
 		x = -1
 		y = 7
 		cost = 5.00

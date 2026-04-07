@@ -1,4 +1,32 @@
-	### Airforce ###
+# Navigation. Ctrl+F and copy to go to corresponding focus tree.
+# Airforce-tree
+# Navy-tree
+# Army-tree
+# Arantigos-economy-tree
+# Arantigos-political-trees
+# Arantigos-coup-tree
+# Arantigos-threegiants-tree
+# Arantigos-death-tree
+# Arantigos-empire-tree
+# Arantigos-spoilsofwar-tree
+# Nazbol-economy-tree
+
+#Splendid isolation tree
+focus_tree = {
+	id = Arantiga_nothing
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	continuous_focus_position = { x = 130 y = 1100 }
+	
+	shared_focus = ARA_the_new_airforce
+	shared_focus = ARA_self_strength
+	shared_focus = ARA_GOY_new_age_new_army
+	shared_focus = ARA_rumare_exercises
+}
+	### Airforce-tree ###
 	shared_focus = {
 		id = ARA_the_new_airforce
 		icon = GFX_goal_generic_air_fighter2
@@ -362,8 +390,8 @@
 				}			
 		}
 	}
-	        ### Navy ###
-		shared_focus = {
+	### Navy-tree ###
+	shared_focus = {
 		id = ARA_rumare_exercises
 		icon = GFX_goal_naval_effort
 		x = -20
@@ -685,7 +713,7 @@
 		}
 	}
 
-		### Army Focuses ###
+	### Army-tree ###
 	shared_focus = {
 		id = ARA_GOY_new_age_new_army
 		icon = GFX_goal_goy_military
@@ -1559,7 +1587,7 @@
 		}
 	}
 
-	###################### ECONOMY AND INDUSTRY ####################
+	### Arantigos-economy-tree ###
 	
 	shared_focus = {
 		id = ARA_self_strength
@@ -2198,10 +2226,10 @@
 			}
 	
 	#####################
-	## Political Trees ##
+	## Arantigos-political-trees ##
 	#####################
 	
-	## COUP INITIAL TREE ##
+	## Arantigos-coup-tree ##
 	
 focus_tree = {
 	id = Arantiga_coup
@@ -2930,7 +2958,8 @@ focus_tree = {
 	#	}		
 }
 	
-	## DIE IS CAST TREE ##
+	## DIE IS CAST TREE
+	## Arantigos-threegiants-tree
 	
 focus_tree = {
 	id = Arantiga_arantigos
@@ -4047,7 +4076,8 @@ focus_tree = {
 	}
 }
 
-    ## CHAOS TREE ##
+    ## CHAOS TREE
+	## Arantigos-death-tree
 
 focus_tree = {
 	id = Arantiga_chaos
@@ -7122,10 +7152,10 @@ focus_tree = {
 		}
 	}
 
-		##########################################
-		## ARANTIGAN EMPIRE TREE, IMPERIAL TREE ##
-		##########################################
-		
+	###################################################################
+	## ARANTIGAN EMPIRE TREE, IMPERIAL TREE ## Arantigos-empire-tree ##
+	###################################################################
+
 focus_tree = {
 	id = Arantiga_empire
 	
@@ -7954,7 +7984,8 @@ focus_tree = {
 		}
 	}
 	
-	##  SPOILS OF WAR  ##
+	##  SPOILS OF WAR
+	## Arantigos-spoilsofwar-tree
 	
 	focus = {
 	    id = ARA_spoils_of_war
@@ -11339,8 +11370,9 @@ focus_tree = {
 	}
 }
 
+### FUNNY NAZBOL TREE ###
 focus_tree = {
-	id = Arantiga_nothing
+	id = Arantiga_nazbol
 	country = {
 		factor = 0
 	}
@@ -11348,9 +11380,412 @@ focus_tree = {
 	
 	continuous_focus_position = { x = 130 y = 1100 }
 	
-		shared_focus = ARA_the_new_airforce
-		shared_focus = ARA_self_strength
-		shared_focus = ARA_GOY_new_age_new_army
-		shared_focus = ARA_rumare_exercises
+	shared_focus = ARA_the_new_airforce
+	shared_focus = ARA_com_nazionalize_capital
+	shared_focus = ARA_GOY_new_age_new_army
+	shared_focus = ARA_rumare_exercises
+	#shared_focus = 
 }
+
+
+# Nazbol-economy-tree #
+	
+	shared_focus = {
+		id = ARA_com_nazionalize_capital
+		icon = GFX_focus_generic_self_management
+		x = 17
+		y = 0
+
+		cost = 5.00
+		available = {
+			has_country_flag = ARA_FLAG_rise_of_commies
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {	#todo idea
+				remove_idea = ARA_com_wingbardian_ties
+				add_idea = ARA_com_wingbardian_ties2
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_state_education
+		icon = GFX_focus_generic_self_management
+		x = -2
+		y = 1
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = { focus = ARA_com_nazionalize_capital }
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			decrease_illiteracy = yes
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_revolt_industry
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = { focus = ARA_com_nazionalize_capital }
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_ager_publicus
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 1
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		prerequisite = { focus = ARA_com_nazionalize_capital }
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_ideas = {
+				ARA_com_min_public_land       #todo idea
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_hammers
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 2
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_state_education }
+		prerequisite = { focus = ARA_com_revolt_industry }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_swords
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 2
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_revolt_industry }
+		prerequisite = { focus = ARA_com_ager_publicus }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_scientific_self
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 3
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_hammers }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			increase_science_base = yes
+		}
+	}
+	shared_focus = {
+		id = ARA_com_aftarkeia
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 3
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_hammers }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_ideas = {
+				ARA_autarky_idea
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_command_economy
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 3
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_swords }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			swap_ideas = {	#todo idea
+				remove_idea = ARA_com_wingbardian_ties2
+				add_idea = ARA_com_directed_economy
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_gulags
+		icon = GFX_focus_generic_self_management
+		x = 3
+		y = 3
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_swords }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_ideas = { ARA_work_camp }
+			set_country_flag = work_camps_flag
+			custom_effect_tooltip = GOY_CETT_ARA_penbats
+			hidden_effect = {
+				#set_technology = {
+				#	penal_infantry = 1
+				#	popup = no
+				#}
+				load_oob = ARA_penbat_temp_OOB
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_fund_research
+		icon = GFX_focus_generic_self_management
+		x = -4
+		y = 4
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scientific_self }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+			    name = ara_electronics_bonus
+				bonus = 1
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+			    name = ara_race_tech_bonus
+			    bonus = 1
+			    uses = 1
+			    category = race_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_central_institute
+		icon = GFX_focus_generic_self_management
+		x = -2
+		y = 4
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scientific_self }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	shared_focus = {
+		id = ARA_com_march_modernity
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 4
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_aftarkeia }
+		prerequisite = { focus = ARA_com_command_economy }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			increase_society_development_with_tt = yes
+		}
+	}
+	shared_focus = {
+		id = ARA_com_industrial_projects
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 4
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_gulags }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_redemption_mines
+		icon = GFX_focus_generic_self_management
+		x = 4
+		y = 4
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_gulags }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 408
+			}
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 408
+			}
+			add_resource = {
+				type = coal
+				amount = 5
+				state = 408
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_com_outline_plans
+		icon = GFX_focus_generic_self_management
+		x = -1
+		y = 5
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_central_institute }
+		prerequisite = { focus = ARA_com_march_modernity }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+		    unlock_decision_category_tooltip = ARA_com_econom_plan   #todo decisions
+		}
+	}
+	shared_focus = {
+		id = ARA_com_focused_development
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 5
+		relative_position_id = ARA_com_nazionalize_capital
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_march_modernity }
+		prerequisite = { focus = ARA_com_industrial_projects }
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			swap_ideas = {                               #todo idea
+				remove_idea = ARA_com_directed_economy
+				add_idea = ARA_com_directed_economy2
+			}
+		}
+	}	
+
 	
