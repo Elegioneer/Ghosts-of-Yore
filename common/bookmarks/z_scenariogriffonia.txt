@@ -48,20 +48,20 @@ bookmarks = {
 				WNG_the_communists_take_power
 			}
 		}
-		#"FAT"={
-		#	history = "FAT_GATHERING_STORM_DESC"
-		#	ideology = neutrality
-		#	ideas = {
-		#		FAT_republican_struggle
-		#		FAT_The_Cloudburian_Minority_idea
-		#		FAT_unruly_army_idea
-		#    }
-		#	focuses = {
-		#		FST_new_dawn_for_the_republic
-		#	    FAT_radicalize_the_party
-		#		FAT_the_iron_marshal
-		#	}
-		#}
+		"FAT"={
+			history = "FAT_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FAT_republican_struggle
+				FAT_The_Cloudburian_Minority_idea
+				FAT_unruly_army_idea
+		    }
+			focuses = {
+				FST_new_dawn_for_the_republic
+			    FAT_radicalize_the_party
+				FAT_the_iron_marshal
+			}
+		}
 		#"RCT"={
 		#	history = "RCT_GATHERING_STORM_DESC"
 		#	ideology = democratic

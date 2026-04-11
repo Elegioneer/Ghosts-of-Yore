@@ -1,5 +1,10 @@
 ﻿l_russian:
 
+# Paragraph breaks #
+GOY_newline_parabreak_5: "\n     "
+GOY_newline_parabreak_10: "\n          "
+GOY_newline_parabreak_15: "\n               "
+
 # RELIGIONS FOR TOG
 GOY_arantigos_boreas_religion:0 "Культ Арантигоса-Борея"
 GOY_arantigos_boreas_religion_desc:0 ""

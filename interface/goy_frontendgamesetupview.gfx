@@ -1,0 +1,25 @@
+spriteTypes = {
+
+	# GoY Griffonia Map entries
+	spriteType = {
+		name = "GFX_texticon_CSSc_GOY_ARA_map"
+		textureFile = "gfx/interface/country_selection_screen/country_map/Griffonia/goy_ARA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticon_CSSc_GOY_BOI_map"
+		textureFile = "gfx/interface/country_selection_screen/country_map/Griffonia/goy_BOI.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticon_CSSc_GOY_NTR_map"
+		textureFile = "gfx/interface/country_selection_screen/country_map/Griffonia/goy_NTR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_texticon_CSSc_GOY_POM_map"
+		textureFile = "gfx/interface/country_selection_screen/country_map/Griffonia/goy_POM.tga"
+		legacy_lazy_load = no
+	}
+	
+}

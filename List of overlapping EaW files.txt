@@ -7,6 +7,7 @@
 # common/game_rules/EAW_game_rules.txt -Arantiga removed
 # common/scripted_localisation/EAW_state_lore_scripted_localisation.txt -deprecated
 # common/scripted_localisation/EAW_welcomescreen_scripted_localisation.txt
+# common/scripted_triggers/EAW_MIO_triggers.txt
 # common/scripted_triggers/EAW_unit_medals_scripted_triggers.txt
 # common/scripted_triggers/GOY_triggers.txt — has replicas of some eaw triggers
 # common/combat_tactics – has new undead tactics
