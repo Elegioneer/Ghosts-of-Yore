@@ -572,4 +572,20 @@ spriteTypes = {
 		name = "GFX_goal_goy_generic_spycraft"
 		texturefile = "gfx/interface/goals/goal_goy_generic_spycraft.dds"
 	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_arantiga_rises_planet"
+		texturefile = "gfx/interface/goals/goal_GOY_arantiga_rises_planet.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_arimaspi_idol"
+		texturefile = "gfx/interface/goals/goal_GOY_arimaspi_idol.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_grover_statue"
+		texturefile = "gfx/interface/goals/goal_GOY_grover_statue.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_GOY_grover_statue_gates"
+		texturefile = "gfx/interface/goals/goal_GOY_grover_statue_gates.dds"
+	}
 }

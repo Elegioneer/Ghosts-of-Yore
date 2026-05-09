@@ -9,7 +9,11 @@
 # Arantigos-death-tree
 # Arantigos-empire-tree
 # Arantigos-spoilsofwar-tree
+# Baroness-economy-tree
+# Baroness-political-tree
+# Baroness-foreign-tree
 # Nazbol-economy-tree
+# Nazbol-politicalforeign-tree
 
 #Splendid isolation tree
 focus_tree = {
@@ -2151,7 +2155,7 @@ focus_tree = {
 		add_ideas = { ARA_afterkeia }
 		###### SHOULD ADD THE TECH INSTEAD BUT I FEEL THIS IS MORE BALANCED #####
 		add_tech_bonus = {
-			name = synth_bonus
+			name = ARA_afterkeia
 			bonus = 1.0
 			uses = 2
 			category = synth_resources
@@ -2264,7 +2268,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_reorganise_high_command
-		icon = GFX_goal_authoritarian
+		icon = GFX_goal_zebra_army_reform
 		x = -2
 		y = 1
 		relative_position_id = ARA_dorotheos_coup
@@ -2291,7 +2295,7 @@ focus_tree = {
 
 	focus = {
 		id = ARA_army_with_a_state
-		icon = GFX_goal_griffon_levy
+		icon = GFX_goal_generic_griffon_soldier_active
 		x = 0
 		y = 1
 		relative_position_id = ARA_reorganise_high_command
@@ -2307,7 +2311,7 @@ focus_tree = {
 		
 	focus = {
 		id = ARA_purge_loyalists
-		icon = GFX_focus_indy_bound_by_blood
+		icon = GFX_goal_generic_griffon_skull_shot
 		x = 0
 		y = 1
 		relative_position_id = ARA_dorotheos_coup
@@ -2324,7 +2328,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARA_reorganise_government
-		icon = GFX_goal_authority
+		icon = GFX_goal_reaffirm_royal_sovereignty
 		x = 0
 		y = 1
 		relative_position_id = ARA_purge_loyalists
@@ -2405,7 +2409,7 @@ focus_tree = {
 	
 	Focus = {
 		id = ARA_arantiga_rises
-		icon = GFX_focus_indy_champagne_repression
+		icon = GFX_goal_GOY_arantiga_rises_planet
 		x = -2
 		y = 2
 		relative_position_id = ARA_nationalization
@@ -2425,7 +2429,7 @@ focus_tree = {
 
 	Focus = {
 		id = ARA_right_to_rule
-		icon = GFX_goal_crown_and_swords
+		icon = GFX_goal_zebra_war_assembly
 		x = -2
 		y = 1
 		relative_position_id = ARA_arantiga_rises
@@ -2821,7 +2825,7 @@ focus_tree = {
 		}
 	focus = {
 		id = ARA_arantigos_boreas
-		icon = GFX_goal_new_temple
+		icon = GFX_goal_generic_temple_archon
 		x = 1
 		y = 1
 		relative_position_id = ARA_sparleos_legacy
@@ -2873,7 +2877,7 @@ focus_tree = {
 	
 	focus = {
 		id = ARA_cult_of_personality
-		icon = GFX_goal_national_populism
+		icon = GFX_zebra_monarch
 		x = -4
 		y = 4
 		relative_position_id = ARA_arantigos_boreas
@@ -2902,7 +2906,7 @@ focus_tree = {
 	
 	focus = { 
 		id = ARA_legacy_of_grover
-		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		icon = GFX_goal_GOY_grover_statue
 		x = 2
 		y = 2
 		relative_position_id = ARA_new_arantigos 
@@ -2915,7 +2919,7 @@ focus_tree = {
 	
 		focus = {
 		id = ARA_es_oblivion
-		icon = GFX_goal_fire
+		icon = GFX_goal_GOY_arimaspi_idol
 		x = 0
 		y = 1
 		cost = 1.00
@@ -11370,6 +11374,1387 @@ focus_tree = {
 	}
 }
 
+### BARONESS MARGARETH TREE ###
+focus_tree = {
+	id = Arantiga_baroness
+	country = {
+		factor = 0
+	}
+	default = no
+	
+	continuous_focus_position = { x = 130 y = 1100 }
+	
+	shared_focus = ARA_the_new_airforce
+	shared_focus = ARA_GOY_new_age_new_army
+	shared_focus = ARA_rumare_exercises
+	shared_focus = ARA_marge_making_much_out_of_little
+	shared_focus = ARA_marge_destiny_denied
+	shared_focus = ARA_marge_reaffirm_pact_ties
+}
+
+# Baroness-economy-tree
+	shared_focus = {
+		id = ARA_marge_making_much_out_of_little #making the most out of little
+		icon = GFX_goal_unknown
+		x = 0
+		y = 0
+		
+		available = {
+			#TODO Does not have national spirit “Doubts and Shock” or “Demand for Reforms”
+		}
+
+		cost = 3.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ARA_marge_making_much_out_of_little
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_sparletan_industrial_zone
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_making_much_out_of_little }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_political_power = -25
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			increase_society_development_with_tt = yes
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_connect_the_hinterlands
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_making_much_out_of_little }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_bridge_the_education_gap
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_making_much_out_of_little }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			decrease_illiteracy = yes
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_scour_the_hills
+		icon = GFX_goal_unknown
+		x = -3
+		y = 2
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_sparletan_industrial_zone }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = chromium
+					amount = 14
+				}
+				add_resource = {
+					type = coal
+					amount = 9
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_coinvest_in_zone
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_sparletan_industrial_zone }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_featherin_technical_institute
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_bridge_the_education_gap }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			increase_science_base = yes
+			add_tech_bonus = {
+				name = ARA_marge_featherin_technical_institute
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = ARA_marge_featherin_technical_institute
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_fund_griffonstone_studies #fund griffonites studies
+		icon = GFX_goal_unknown
+		x = 3
+		y = 2
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_bridge_the_education_gap }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ARA_marge_fund_griffonstone_studies
+				bonus = 1
+				uses = 2
+				category = race_tech
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 0.5
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_revive_the_farmlands
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_scour_the_hills }
+		prerequisite = { focus = ARA_marge_coinvest_in_zone }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_ideas = ARA_marge_modernised_farms
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_experimental_expansion
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		relative_position_id = ARA_marge_making_much_out_of_little
+		bypass = {
+			amount_research_slots > 4
+		}
+
+		cost = 8.00
+		prerequisite = { focus = ARA_marge_featherin_technical_institute }
+		prerequisite = { focus = ARA_marge_fund_griffonstone_studies }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_arantigan_industrial_revolution
+		icon = GFX_goal_unknown
+		x = -2
+		y = 4
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 8.00
+		prerequisite = { focus = ARA_marge_revive_the_farmlands }
+		prerequisite = { focus = ARA_marge_experimental_expansion }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			increase_society_development_with_tt = yes
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_three_industrial_zones
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_revive_the_farmlands }
+		prerequisite = { focus = ARA_marge_experimental_expansion }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARA_marge_booming_industry
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_magic_in_industry
+		icon = GFX_goal_unknown
+		x = 2
+		y = 4
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_revive_the_farmlands }
+		prerequisite = { focus = ARA_marge_experimental_expansion }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ARA_marge_magic_in_industry
+				bonus = 2
+				uses = 1
+				category = construction
+			}
+			add_tech_bonus = {
+				name = ARA_marge_magic_in_industry
+				bonus = 1
+				uses = 1
+				category = race_tech
+			}
+			increase_science_base = yes
+			add_ideas = ARA_marge_magical_construction_tech
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_sunny_spot
+		icon = GFX_goal_unknown
+		x = -3
+		y = 5
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_arantigan_industrial_revolution }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARA_marge_arantigan_crossroads
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_ponteles_foundries
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_three_industrial_zones }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = steel
+					amount = 5
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_albuvira_refinery
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_three_industrial_zones }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ARA_marge_albuvira_refinery
+				bonus = 1
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_prospect_for_shoal_oil
+		icon = GFX_goal_unknown
+		x = 3
+		y = 5
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_magic_in_industry }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_resource = {
+					type = oil
+					amount = 9
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_migrant_magnet
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_sunny_spot }
+		prerequisite = { focus = ARA_marge_ponteles_foundries }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			408 = {
+				add_manpower = 200000
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_arantigan_wonder
+		icon = GFX_goal_unknown
+		x = 0
+		y = 6
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 8.00
+		prerequisite = { focus = ARA_marge_ponteles_foundries }
+		prerequisite = { focus = ARA_marge_albuvira_refinery }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARA_marge_booming_industry
+				add_idea = ARA_marge_economic_marvel
+			}
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_venture_into_crystal_age
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_albuvira_refinery }
+		prerequisite = { focus = ARA_marge_prospect_for_shoal_oil }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_crystal_refinery
+				resource = crystals
+				amount = 1
+			}
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_crystal_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARA_marge_crystal_revolution
+		}
+	}
+	
+# Baroness-political-tree
+	
+	shared_focus = {
+		id = ARA_marge_destiny_denied
+		icon = GFX_goal_unknown
+		x = 7
+		y = 0
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_hunt_the_remnants
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_destiny_denied }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_reward_loyalty
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_destiny_denied }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_reassure_population
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_destiny_denied }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_restore_command
+		icon = GFX_goal_unknown
+		x = -1
+		y = 2
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_hunt_the_remnants }
+		prerequisite = { focus = ARA_marge_reward_loyalty }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_review_the_administration
+		icon = GFX_goal_unknown
+		x = 1
+		y = 2
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_reward_loyalty }
+		prerequisite = { focus = ARA_marge_reassure_population }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_back_from_the_brink
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_restore_command }
+		prerequisite = { focus = ARA_marge_review_the_administration }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_faith_in_featherins
+		icon = GFX_goal_unknown
+		x = -1
+		y = 4
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_back_from_the_brink }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_meet_with_reformers
+		icon = GFX_goal_unknown
+		x = 1
+		y = 4
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_back_from_the_brink }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_codify_wingbardo_sparletan_language
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_faith_in_featherins }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_guarantee_liberties
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_faith_in_featherins }
+		prerequisite = { focus = ARA_marge_meet_with_reformers }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_agitation_in_the_army
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_meet_with_reformers }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_revive_the_sparleto_academy
+		icon = GFX_goal_unknown
+		x = -3
+		y = 6
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_codify_wingbardo_sparletan_language }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_foundations_of_a_welfare_state
+		icon = GFX_goal_unknown
+		x = -1
+		y = 6
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_codify_wingbardo_sparletan_language }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_harmonic_foundations
+		icon = GFX_goal_unknown
+		x = 1
+		y = 6
+		relative_position_id = ARA_marge_destiny_denied
+		mutually_exclusive = { focus = ARA_marge_socialism_with_monarchist_characteristics }
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_guarantee_liberties }
+		prerequisite = { focus = ARA_marge_agitation_in_the_army }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_socialism_with_monarchist_characteristics
+		icon = GFX_goal_unknown
+		x = 3
+		y = 6
+		relative_position_id = ARA_marge_destiny_denied
+		mutually_exclusive = { focus = ARA_marge_harmonic_foundations }
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_guarantee_liberties }
+		prerequisite = { focus = ARA_marge_agitation_in_the_army }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_appoint_a_prime_minister
+		icon = GFX_goal_unknown
+		x = 0
+		y = 7
+		relative_position_id = ARA_marge_destiny_denied
+		
+		allow_branch = {
+			has_completed_focus = ARA_marge_harmonic_foundations
+		}
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_harmonic_foundations }
+		#prerequisite = { focus = ARA_marge_foundations_of_a_welfare_state }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_enshrine_parliaments_role
+		icon = GFX_goal_unknown
+		x = -1
+		y = 8
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_appoint_a_prime_minister }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_featherin_patronage
+		icon = GFX_goal_unknown
+		x = 1
+		y = 8
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_appoint_a_prime_minister }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_citizens_protectors
+		icon = GFX_goal_unknown
+		x = -2
+		y = 9
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_enshrine_parliaments_role }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_open_doors_to_business
+		icon = GFX_goal_unknown
+		x = 0
+		y = 9
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_enshrine_parliaments_role }
+		prerequisite = { focus = ARA_marge_featherin_patronage }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_safe_haven_of_griffonia
+		icon = GFX_goal_unknown
+		x = 2
+		y = 9
+		relative_position_id = ARA_marge_destiny_denied
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_featherin_patronage }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+
+# Baroness-foreign-tree
+
+	shared_focus = {
+		id = ARA_marge_reaffirm_pact_ties
+		icon = GFX_goal_unknown
+		x = 15
+		y = 0
+		relative_position_id = ARA_marge_making_much_out_of_little
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_arantiga_alone
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_pact_military_manoeuvres
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_reaffirm_pact_ties }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_acds
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_reaffirm_pact_ties focus = ARA_marge_acds }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_cut_the_strings
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_arantiga_alone }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_northern_bulwark_of_karthinia
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_pact_military_manoeuvres }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_more_equal_deal
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_pact_military_manoeuvres }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_form_karthinian_league
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_cut_the_strings }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_friends_in_the_south
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_cut_the_strings }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_free_francistria
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_form_karthinian_league }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_save_wingbardy_from_itself
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_form_karthinian_league }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_liberate_talouse
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_form_karthinian_league }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_end_falcorii_revanchism
+		icon = GFX_goal_unknown
+		x = 4
+		y = 3
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_form_karthinian_league }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_protect_the_south
+		icon = GFX_goal_unknown
+		x = 0
+		y = 4
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_free_francistria }
+		prerequisite = { focus = ARA_marge_save_wingbardy_from_itself }
+		prerequisite = { focus = ARA_marge_liberate_talouse }
+		prerequisite = { focus = ARA_marge_end_falcorii_revanchism }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_new_political_landscape
+		icon = GFX_goal_unknown
+		x = -2
+		y = 5
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_protect_the_south }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_new_capital_of_a_new_realm
+		icon = GFX_goal_unknown
+		x = 0
+		y = 5
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_protect_the_south }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_diplomatic_offensive
+		icon = GFX_goal_unknown
+		x = 2
+		y = 5
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_protect_the_south }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_federal_realm
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_new_political_landscape }
+		prerequisite = { focus = ARA_marge_new_capital_of_a_new_realm }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_multifaceted_jewel
+		icon = GFX_goal_unknown
+		x = 0
+		y = 6
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_new_political_landscape }
+		prerequisite = { focus = ARA_marge_new_capital_of_a_new_realm }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_sixth_karthinian_nation
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_diplomatic_offensive }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_stray_colony
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_diplomatic_offensive }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_light_of_griffonia
+		icon = GFX_goal_unknown
+		x = -3
+		y = 7
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_federal_realm }
+		prerequisite = { focus = ARA_marge_multifaceted_jewel }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_era_of_prosperity
+		icon = GFX_goal_unknown
+		x = -1
+		y = 7
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_federal_realm }
+		prerequisite = { focus = ARA_marge_multifaceted_jewel }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_order_of_twin_swords
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_multifaceted_jewel }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_doctrine_of_vigilance
+		icon = GFX_goal_unknown
+		x = 3
+		y = 7
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_sixth_karthinian_nation focus = ARA_marge_stray_colony }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_our_new_pony_friends
+		icon = GFX_goal_unknown
+		x = 5
+		y = 7
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_stray_colony }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_marge_pax_karthinia
+		icon = GFX_goal_unknown
+		x = 1
+		y = 8
+		relative_position_id = ARA_marge_reaffirm_pact_ties
+
+		cost = 5.00
+		prerequisite = { focus = ARA_marge_era_of_prosperity }
+		prerequisite = { focus = ARA_marge_doctrine_of_vigilance }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+
 ### FUNNY NAZBOL TREE ###
 focus_tree = {
 	id = Arantiga_nazbol
@@ -11381,18 +12766,17 @@ focus_tree = {
 	continuous_focus_position = { x = 130 y = 1100 }
 	
 	shared_focus = ARA_the_new_airforce
-	shared_focus = ARA_com_nazionalize_capital
 	shared_focus = ARA_GOY_new_age_new_army
 	shared_focus = ARA_rumare_exercises
-	#shared_focus = 
+	shared_focus = ARA_com_nazionalize_capital
+	shared_focus = ARA_com_continue_democrats_purge
 }
-
 
 # Nazbol-economy-tree #
 	
 	shared_focus = {
 		id = ARA_com_nazionalize_capital
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 17
 		y = 0
 
@@ -11429,7 +12813,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_state_education
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -2
 		y = 1
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11450,7 +12834,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_revolt_industry
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 0
 		y = 1
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11472,7 +12856,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_ager_publicus
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 2
 		y = 1
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11494,7 +12878,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_hammers
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -1
 		y = 2
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11519,7 +12903,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_swords
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 1
 		y = 2
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11544,7 +12928,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_scientific_self
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -3
 		y = 3
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11561,7 +12945,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_aftarkeia
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -1
 		y = 3
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11580,7 +12964,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_command_economy
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 1
 		y = 3
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11600,7 +12984,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_gulags
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 3
 		y = 3
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11626,7 +13010,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_fund_research
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -4
 		y = 4
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11660,7 +13044,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_central_institute
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -2
 		y = 4
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11677,7 +13061,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_march_modernity
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 0
 		y = 4
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11695,7 +13079,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_industrial_projects
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 2
 		y = 4
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11719,7 +13103,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_redemption_mines
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 4
 		y = 4
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11733,24 +13117,24 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 15
+				amount = 16
 				state = 408
 			}
 			add_resource = {
 				type = chromium
-				amount = 10
+				amount = 11
 				state = 408
 			}
 			add_resource = {
 				type = coal
-				amount = 5
+				amount = 6
 				state = 408
 			}
 		}
 	}
 	shared_focus = {
 		id = ARA_com_outline_plans
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = -1
 		y = 5
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11768,7 +13152,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = ARA_com_focused_development
-		icon = GFX_focus_generic_self_management
+		icon = GFX_goal_unknown
 		x = 1
 		y = 5
 		relative_position_id = ARA_com_nazionalize_capital
@@ -11786,6 +13170,1082 @@ focus_tree = {
 				add_idea = ARA_com_directed_economy2
 			}
 		}
-	}	
+	}
+	# Nazbol-politicalforeign-tree #
+	shared_focus = {
+		id = ARA_com_continue_democrats_purge
+		icon = GFX_goal_unknown
+		x = 25
+		y = 0
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_get_rid_of_loyalists
+		icon = GFX_goal_unknown
+		x = 2
+		y = 0
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_sparletan_cultural_purity
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_continue_democrats_purge }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_reestablish_leadership
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_continue_democrats_purge }
+		prerequisite = { focus = ARA_com_get_rid_of_loyalists }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_new_griffons_in_military
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_get_rid_of_loyalists }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_subsume_the_temple
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_sparletan_cultural_purity }
+		prerequisite = { focus = ARA_com_reestablish_leadership }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_cultural_reeducation
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_sparletan_cultural_purity }
+		prerequisite = { focus = ARA_com_reestablish_leadership }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_stratification_of_society
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_new_griffons_in_military }
+		prerequisite = { focus = ARA_com_reestablish_leadership }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_merge_army_and_the_state
+		icon = GFX_goal_unknown
+		x = 4
+		y = 2
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_new_griffons_in_military }
+		prerequisite = { focus = ARA_com_reestablish_leadership }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_apotheosis_of_national_spirit
+		icon = GFX_goal_unknown
+		x = -3
+		y = 3
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_subsume_the_temple }
+		prerequisite = { focus = ARA_com_cultural_reeducation }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_study_our_past
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_subsume_the_temple }
+		prerequisite = { focus = ARA_com_cultural_reeducation }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_citizenship_through_service
+		icon = GFX_goal_unknown
+		x = 3
+		y = 3
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_stratification_of_society }
+		prerequisite = { focus = ARA_com_merge_army_and_the_state }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_father_of_the_nation
+		icon = GFX_goal_unknown
+		x = 5
+		y = 3
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_stratification_of_society }
+		prerequisite = { focus = ARA_com_merge_army_and_the_state }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	#
+	shared_focus = {
+		id = ARA_com_crimson_tide_rises
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_formulate_southern_strategy
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_crimson_tide_rises }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_outline_war_plan
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_crimson_tide_rises }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_reconquest_of_talonsia
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_formulate_southern_strategy }
+		prerequisite = { focus = ARA_com_outline_war_plan }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_liberation_of_piudmont
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_formulate_southern_strategy }
+		prerequisite = { focus = ARA_com_outline_war_plan }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_march_on_karthin
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_formulate_southern_strategy }
+		prerequisite = { focus = ARA_com_outline_war_plan }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_crush_the_falcorii
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_reconquest_of_talonsia }
+		prerequisite = { focus = ARA_com_liberation_of_piudmont }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_slay_sicameon
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		relative_position_id = ARA_com_crimson_tide_rises
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_liberation_of_piudmont }
+		prerequisite = { focus = ARA_com_march_on_karthin }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	#
+	shared_focus = {
+		id = ARA_com_arantigan_virtues
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_temperantia
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_arantigan_virtues
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_arantigan_virtues }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_pietas
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_com_arantigan_virtues
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_arantigan_virtues }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_disciplina
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = ARA_com_arantigan_virtues
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_temperantia }
+		prerequisite = { focus = ARA_com_pietas }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_prudentia
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_com_arantigan_virtues
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_temperantia }
+		prerequisite = { focus = ARA_com_pietas }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_compile_the_book
+		icon = GFX_goal_unknown
+		x = -1
+		y = 3
+		relative_position_id = ARA_com_arantigan_virtues
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_disciplina }
+		prerequisite = { focus = ARA_com_prudentia }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	#
+	shared_focus = {
+		id = ARA_com_karthinian_development_plan
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_transform_folino_valley
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_karthinian_development_plan
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_karthinian_development_plan }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_workshop_of_karthinia
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_karthinian_development_plan
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_karthinian_development_plan }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_black_gold_of_the_south
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_com_karthinian_development_plan
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_transform_folino_valley }
+		prerequisite = { focus = ARA_com_workshop_of_karthinia }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_mine_eastern_mountains
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = ARA_com_karthinian_development_plan
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_transform_folino_valley }
+		prerequisite = { focus = ARA_com_workshop_of_karthinia }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_glory_of_karthinian_cities
+		icon = GFX_goal_unknown
+		x = 1
+		y = 3
+		relative_position_id = ARA_com_karthinian_development_plan
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_black_gold_of_the_south }
+		prerequisite = { focus = ARA_com_mine_eastern_mountains }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	#
+	shared_focus = {
+		id = ARA_com_karthin_proclamation
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		relative_position_id = ARA_com_continue_democrats_purge
+
+		cost = 5.00
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_scour_karthinia
+		icon = GFX_goal_unknown
+		x = -1
+		y = 1
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_karthin_proclamation }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_imperator_arantigae #Empire of Arantigans - latinize
+		icon = GFX_goal_unknown
+		x = 1
+		y = 1
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_karthin_proclamation }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_scientific_supremacy
+		icon = GFX_goal_unknown
+		x = -2
+		y = 2
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scour_karthinia }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_aeterna_victrix
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scour_karthinia }
+		prerequisite = { focus = ARA_com_imperator_arantigae }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_redeem_our_enemies
+		icon = GFX_goal_unknown
+		x = 2
+		y = 2
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_imperator_arantigae }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_conquer_the_colony
+		icon = GFX_goal_unknown
+		x = -2
+		y = 3
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scientific_supremacy }
+		prerequisite = { focus = ARA_com_aeterna_victrix }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_purge_equestrian_influence
+		icon = GFX_goal_unknown
+		x = -3
+		y = 4
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_conquer_the_colony }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_claim_the_cradle
+		icon = GFX_goal_unknown
+		x = 0
+		y = 3
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_scientific_supremacy }
+		prerequisite = { focus = ARA_com_aeterna_victrix }
+		prerequisite = { focus = ARA_com_redeem_our_enemies }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_deal_with_bulls
+		icon = GFX_goal_unknown
+		x = 2
+		y = 3
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_redeem_our_enemies }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_administration_of_asterion
+		icon = GFX_goal_unknown
+		x = 3
+		y = 4
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_deal_with_bulls }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_enlighten_the_west
+		icon = GFX_goal_unknown
+		x = -1
+		y = 5
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_claim_the_cradle }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_destroy_the_second_empire
+		icon = GFX_goal_unknown
+		x = 1
+		y = 5
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_claim_the_cradle }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_administration_of_aquileia
+		icon = GFX_goal_unknown
+		x = -4
+		y = 6
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_enlighten_the_west }
+		prerequisite = { focus = ARA_com_destroy_the_second_empire }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_finish_lowland_conquest
+		icon = GFX_goal_unknown
+		x = -2
+		y = 6
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_enlighten_the_west }
+		prerequisite = { focus = ARA_com_destroy_the_second_empire }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_ancestral_homeland
+		icon = GFX_goal_unknown
+		x = 0
+		y = 6
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_enlighten_the_west }
+		prerequisite = { focus = ARA_com_destroy_the_second_empire }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_conquest_of_the_marches
+		icon = GFX_goal_unknown
+		x = 2
+		y = 6
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_enlighten_the_west }
+		prerequisite = { focus = ARA_com_destroy_the_second_empire }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_arantiga_borealis
+		icon = GFX_goal_unknown
+		x = 4
+		y = 6
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_enlighten_the_west }
+		prerequisite = { focus = ARA_com_destroy_the_second_empire }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_new_order_in_herzland
+		icon = GFX_goal_unknown
+		x = -3
+		y = 7
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_administration_of_aquileia }
+		prerequisite = { focus = ARA_com_finish_lowland_conquest }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_conquer_grifonia_ultima
+		icon = GFX_goal_unknown
+		x = -1
+		y = 7
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_finish_lowland_conquest }
+		prerequisite = { focus = ARA_com_ancestral_homeland }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_in_steps_of_sydios
+		icon = GFX_goal_unknown
+		x = 1
+		y = 7
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_ancestral_homeland }
+		prerequisite = { focus = ARA_com_conquest_of_the_marches }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_vartai_march
+		icon = GFX_goal_unknown
+		x = 3
+		y = 7
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_conquest_of_the_marches }
+		prerequisite = { focus = ARA_com_arantiga_borealis }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_divide_the_north
+		icon = GFX_goal_unknown
+		x = -2
+		y = 8
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_new_order_in_herzland }
+		prerequisite = { focus = ARA_com_conquer_grifonia_ultima }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_fourth_great_temple
+		icon = GFX_goal_unknown
+		x = 0
+		y = 8
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_conquer_grifonia_ultima }
+		prerequisite = { focus = ARA_com_in_steps_of_sydios }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_karthinia_nova
+		icon = GFX_goal_unknown
+		x = 2
+		y = 8
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_in_steps_of_sydios }
+		prerequisite = { focus = ARA_com_vartai_march }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_foederati_et_amici
+		icon = GFX_goal_unknown
+		x = 0
+		y = 9
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_divide_the_north }
+		prerequisite = { focus = ARA_com_fourth_great_temple }
+		prerequisite = { focus = ARA_com_karthinia_nova }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_might_of_the_arantigan_sun
+		icon = GFX_goal_unknown
+		x = 0
+		y = 9
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_divide_the_north }
+		prerequisite = { focus = ARA_com_fourth_great_temple }
+		prerequisite = { focus = ARA_com_karthinia_nova }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
+	shared_focus = {
+		id = ARA_com_sol_invictus
+		icon = GFX_goal_unknown
+		x = 0
+		y = 10
+		relative_position_id = ARA_com_karthin_proclamation
+
+		cost = 5.00
+		prerequisite = { focus = ARA_com_foederati_et_amici }
+		prerequisite = { focus = ARA_com_might_of_the_arantigan_sun }
+		search_filters = {}
+		ai_will_do = {
+			base = 50
+		}
+		completion_reward = {
+			
+		}
+	}
 
 	

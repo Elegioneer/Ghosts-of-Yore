@@ -1143,7 +1143,7 @@
 	}
 	shared_focus = {
 		id = NTR_unleash_crystal
-		icon = GFX_goal_magical_nukes
+		icon = GFX_focus_generic_nuclear_development
 		x = 4
 		y = 3
 		cost = 5.00
@@ -1351,7 +1351,7 @@
 	}
 	shared_focus = {
 		id = NTR_reclamation_of_cloudbury
-		icon = GFX_goal_griffonian_republic
+		icon = GFX_focus_FAT_griffonian_republic
 		x = 3
 		y = 2
 		cost = 5.00
@@ -1807,7 +1807,7 @@
 	}
 	shared_focus = {
 		id = NTR_griffon_volunteers
-		icon = GFX_goal_griffon_harmony_char
+		icon = GFX_goal_generic_griffon_soldier_active
 		x = 1
 		y = 3
 		cost = 5.00
@@ -1846,7 +1846,7 @@
 	}
 	shared_focus = {
 		id = NTR_progress_through_education
-		icon = GFX_goal_eqs_public_schools
+		icon = GFX_BRZ_goal_red_book
 		x = -2
 		y = 1
 		cost = 5.00
@@ -2138,7 +2138,7 @@
 	}
 	shared_focus = {
 		id = NTR_greenhouse_agriculture
-		icon = GFX_goal_communist_potatoes
+		icon = GFX_goal_GRY_agriculture
 		x = 0
 		y = 4
 		cost = 8.00
@@ -2379,7 +2379,7 @@
 	}
 	shared_focus = {
 		id = NTR_plant_ironwood
-		icon = GFX_goal_agriculture
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
 		x = -2
 		y = 2
 		cost = 5.00
@@ -3486,7 +3486,7 @@
 	}
 	shared_focus = {
 		id = NTR_princess_of_all
-		icon = GFX_goal_pink_waifu
+		icon = GFX_focus_pink_waifu
 		x = -1
 		y = 5
 		cost = 5.00
@@ -4626,7 +4626,7 @@
 	}
 	shared_focus = {
 		id = NTR_weaponised_magic
-		icon = GFX_goal_magical_weapon_focus
+		icon = GFX_goal_fre_staffs
 		x = -2
 		y = 3
 		cost = 5.00
@@ -4679,7 +4679,7 @@
 	}
 	shared_focus = {
 		id = NTR_blessed_guns
-		icon = GFX_goal_fre_muskets
+		icon = GFX_goal_magical_weapon_focus
 		x = -3
 		y = 4
 		cost = 5.00

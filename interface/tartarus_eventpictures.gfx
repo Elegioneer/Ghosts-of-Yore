@@ -77,4 +77,8 @@ spriteTypes = {
 		name = "GFX_event_goy_meridiennes_palace"
 		texturefile = "gfx/event_pictures/event_goy_meridiennes_palace.dds"
 	}
+	spriteType = {
+		name = "GFX_event_goy_griffonstone"
+		texturefile = "gfx/event_pictures/event_goy_griffonstone.dds"
+	}
 }

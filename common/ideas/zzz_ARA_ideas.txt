@@ -4137,6 +4137,7 @@ country = {
 			}
 		}
 	}
+	
 	trade_laws = {
 	    law = yes
 		use_list_view = no
@@ -4160,6 +4161,77 @@ country = {
 			}
 			
 			cancel_if_invalid = no
+		}
+	}
+	
+	country = { #Baroness and Nazbol expansion
+		ARA_marge_modernised_farms = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		ARA_marge_booming_industry = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_civilian_complex_factor = 0.05
+			}
+		}
+		ARA_marge_magical_construction_tech = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				global_building_slots_factor = 0.2
+				industry_air_damage_factor = -0.25
+			}
+		}
+		ARA_marge_arantigan_crossroads = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.1
+				min_export = -0.05
+			}
+		}
+		ARA_marge_economic_marvel = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.2
+				production_factory_max_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.25
+				consumer_goods_factor = -0.15
+				production_speed_civilian_complex_factor = 0.1
+			}
+		}
+		ARA_marge_crystal_revolution = {
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes	}
+			picture = GFX_goal_unknown
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				magical_tech = 0.1
+			}
 		}
 	}
 	##########################

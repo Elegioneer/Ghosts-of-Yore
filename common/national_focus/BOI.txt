@@ -2435,7 +2435,7 @@ focus_tree = {
 		
 	focus = {
 		id = BOI_fallen_kingdom
-		icon = GFX_focus_strike_griffonstone 
+		icon = GFX_goal_GOY_grover_statue_gates 
 		x = 27
 		y = 0
 		cost = 2.00
@@ -2445,6 +2445,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = BOI_CETT_breaking_point
+			country_event = griffonstone.305
 		}
 	}
 	focus = {
@@ -6758,7 +6759,7 @@ focus_tree = {
 	################
 	shared_focus = {
 		id = BOI_imperial_reclamation
-		icon = GFX_PAP_roman_senate 
+		icon = GFX_goal_BRZ_eternal_empire 
 		x = 20
 		y = 6
 		cost = 8.00
