@@ -2760,7 +2760,7 @@ BOI_greiffenwerft_organization = { #Griffkingdampfschiffahrtsgesellschaft
 	}
 	available = {
 		owner = {
-			has_completed_focus = BOI_ask_for_loans
+			has_completed_focus = BOI_rumare_ferry
 		}
 	}
 

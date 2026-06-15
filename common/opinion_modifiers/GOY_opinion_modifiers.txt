@@ -41,4 +41,10 @@ opinion_modifiers = {
 	POM_barbaric_destroyers = {
 		value = -50
 	}
+	BOI_imperial_loyalists = {
+		value = 25
+	}
+	BOI_idol_custodians = {
+		value = 25
+	}
 }

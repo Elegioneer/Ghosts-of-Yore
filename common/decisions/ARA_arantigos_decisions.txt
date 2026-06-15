@@ -1898,8 +1898,36 @@ ARA_reorg_zebrican_lands_cat = {
 			release_puppet = MCW
 			MCW = {
 				set_cosmetic_tag = MCW_arantiga
-				transfer_state = 726
-				transfer_state = 727
+			}
+			if = {
+				limit = {
+					726 = {
+						owns_or_subject_of = yes
+					}
+				}
+				726 = {
+					transfer_state_to = MCW
+				}
+			}
+			else = {
+				726 = {
+					add_claim_by = MCW
+				}
+			}
+			if = {
+				limit = {
+					727 = {
+						owns_or_subject_of = yes
+					}
+				}
+				727 = {
+					transfer_state_to = MCW
+				}
+			}
+			else = {
+				727 = {
+					add_claim_by = MCW
+				}
 			}
 			hidden_effect = {
 				ARA = {

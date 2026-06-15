@@ -1318,7 +1318,7 @@ WNG_ai_behavior = {
 }
 #ARA_ai_behavior = {
 #	name = "ARA_AI_BEHAVIOR"
-#	group = "RULE_GROUP_AI_BEHAVIOR"
+#	group = "RULE_GROUP_AI_BEHAVIOR_GRIFFONIA"
 #	default = {
 #		name = DEFAULT
 #		text = "RULE_OPTION_DEFAULT"

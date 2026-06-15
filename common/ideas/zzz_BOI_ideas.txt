@@ -158,8 +158,8 @@ ideas = {
 			picture = IRE_medium_industry
 			removal_cost = -1
 			modifier = {
-			    production_speed_industrial_complex_factor = 0.1
-			    production_speed_arms_factory_factor = 0.1
+			    production_speed_industrial_complex_factor = 0.2
+			    production_speed_arms_factory_factor = 0.2
 			}
 		}
 		BOI_archives_of_griffonstone = {
@@ -1598,8 +1598,8 @@ ideas = {
 			picture = SPR_relocate_the_gold_reserves
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = -0.1
-				industrial_capacity_factory = 0.1
+				custom_modifier_tooltip = BOI_goy_reduce_time_for_industry_dynmod_tt
+			    consumer_goods_factor = 0.2
 				min_export = 0.1
 			}
 		}
@@ -1613,7 +1613,7 @@ ideas = {
 			picture = Generic_bank_idea_icon
 			removal_cost = -1
 			modifier = {
-			    consumer_goods_factor = 0.2
+			    consumer_goods_factor = -0.2
 			}
 		}
 		BOI_griffonstone_reconstruction = {
@@ -1986,7 +1986,36 @@ ideas = {
 				democratic_drift = 0.01
 				democratic_acceptance = 25
 			}
-		}		
+		}
+		BOI_imperial_economic_advisors = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = JAK_modernized_industry
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			    production_speed_buildings_factor = 0.1
+			}
+		}
+		BOI_imperial_military_mission = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = GRI_hat
+			removal_cost = -1
+			modifier = {
+			    planning_speed = 0.1
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
 	}
 	
 	########################

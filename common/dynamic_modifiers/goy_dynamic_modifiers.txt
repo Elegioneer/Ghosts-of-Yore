@@ -1,3 +1,10 @@
+	BOI_development_loans_dynmod = {
+		enable = { always = yes }
+		icon = GFX_idea_SPR_relocate_the_gold_reserves
+		consumer_goods_factor = var_goy_boi_devloan_consumer_goods
+		min_export = var_goy_boi_devloan_export
+		custom_modifier_tooltip = BOI_goy_reduce_time_for_industry_dynmod_tt
+	}
 	POM_autonomous_dynmodifier = {
 		remove_trigger  = {
 			NOT = {

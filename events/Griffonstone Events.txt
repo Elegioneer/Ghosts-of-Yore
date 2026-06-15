@@ -3296,14 +3296,7 @@ country_event = { #Herzländers unite! (cap)
 	    option = {
 	        name = griffonstone.269.a
 			ai_chance = {
-			    base = 2
-				modifier = {
-				    factor = 10
-				    has_game_rule = {
-				        rule = BOI_ai_behavior
-				        option = BOI_GES
-			        }
-			    }
+			    base = 1
 		    }
 			add_political_power = -25
 			add_manpower = -1000
@@ -3317,7 +3310,7 @@ country_event = { #Herzländers unite! (cap)
 		option = {
 	        name = griffonstone.269.b
 			ai_chance = {
-			    base = 1
+			    base = 0
 		    }
 			BOI = {
 			    country_event = {
@@ -4396,6 +4389,184 @@ country_event = { #Gestal Ending
 		option = {
 			name = griffonstone.305.a
 			add_political_power = -1
+		}
+	}
+	country_event = { #Griffonstone Requests Assistance
+		id = griffonstone.306
+		title = griffonstone.306.t
+		desc = griffonstone.306.d
+		picture = GFX_event_goy_griffonstone
+		fire_only_once = yes
+		is_triggered_only = yes		
+		
+		option = {
+			name = griffonstone.306.a
+			ai_chance = {
+			    base = 1
+				modifier = {
+				    BOI = { has_war = yes }
+					add = -1
+				}
+			}
+			add_stability = 0.03
+			add_political_power = -50
+			FROM = {
+				country_event = {
+					id = griffonstone.307
+					days = 7
+				}
+			}
+		}
+		option = {
+			name = griffonstone.306.b
+			ai_chance = {
+			    base = 1
+			}
+			add_stability = 0.03
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			army_experience = -10
+			FROM = {
+				country_event = {
+					id = griffonstone.308
+					days = 7
+				}
+			}
+		}
+		option = {
+			name = griffonstone.306.c
+			ai_chance = {
+			    base = 0
+				modifier = {
+				    has_war = yes
+					add = 10
+				}
+				modifier = {
+				    has_opinion = {
+						target = BOI
+						value > 100
+					}
+					add = -10
+				}
+			}
+			add_stability = 0.01
+			FROM = {
+				country_event = {
+					id = griffonstone.309
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = { #Send economic aid
+		id = griffonstone.307
+		title = griffonstone.307.t
+		desc = griffonstone.307.d
+		picture = GFX_event_griffenheim
+		fire_only_once = yes
+		is_triggered_only = yes		
+		
+		option = {
+			name = griffonstone.307.a
+			add_political_power = 50
+			389 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+			    name = BOI_reaffirm_our_allegiance
+			    bonus = 1
+			    uses = 1
+			    category = industry
+		    }
+			add_timed_idea = {
+			    idea = BOI_goldmines
+				days = 720
+			}
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	country_event = { #send military mission
+		id = griffonstone.308
+		title = griffonstone.308.t
+		desc = griffonstone.308.d
+		picture = GFX_event_griffenheim
+		fire_only_once = yes
+		is_triggered_only = yes		
+		
+		option = {
+			name = griffonstone.308.a
+			army_experience = 20
+			hidden_effect = {
+				division_template = {
+					name = "Griffenheimer Guard"
+					
+					is_locked = no
+				
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 0 y = 2 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					is_core_of = PREV
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"Griffenheimer Guard\" division_template = \"Griffenheimer Guard\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = PREV
+					count = 1
+				}
+			}
+			add_timed_idea = {
+			    idea = BOI_goldmines
+				days = 720
+			}
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	country_event = { #send words of support
+		id = griffonstone.309
+		title = griffonstone.309.t
+		desc = griffonstone.309.d
+		picture = GFX_event_griffon_back
+		fire_only_once = yes
+		is_triggered_only = yes		
+		
+		option = {
+			name = griffonstone.309.a
+			add_political_power = 25
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
 		}
 	}
 	

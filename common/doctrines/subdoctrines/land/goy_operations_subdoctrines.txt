@@ -11,7 +11,7 @@ goy_undead_hordes = {
         base = 10
     }
 
-    available = {
+    visible = {
 		OR = {
 			AND = {
 				original_tag = NTR

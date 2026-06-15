@@ -15,7 +15,7 @@
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			    name = industrial_bonus
+			    name = BOI_from_ashes
 			    bonus = 1
 			    uses = 1
 			    category = industry
@@ -47,8 +47,8 @@
 	}
 	shared_focus = {
 		id = BOI_gather_scraps
-		icon = GFX_goal_griffon_rusty_coin 
-		x = 0
+		icon = GFX_goal_griffon_rusty_coin
+		x = 2
 		y = 1
 		cost = 5.00
 		relative_position_id = BOI_from_ashes
@@ -67,32 +67,80 @@
 	}
 	shared_focus = {
 		id = BOI_ask_for_loans
-		icon = GFX_goal_tax_slave 
-		x = 2
+		icon = GFX_goal_tax_slave
+		overlay = GFX_focus_fast_overlay_generic_clock
+		x = 0
 		y = 1
-		cost = 5.00
+		cost = 2.00
 		relative_position_id = BOI_from_ashes
 		prerequisite = { focus = BOI_from_ashes }
+		available = {
+			has_political_power > 99
+		}
 
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_timed_idea = { 
-			    idea = BOI_development_loans  
-				days = 360 
-			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
+			add_political_power = -100
+			hidden_effect = {
+				reduce_focus_completion_cost = {
+					focus = {
+						BOI_literacy_campaign
+						BOI_educate_engineers
+						BOI_temple_schools
+						BOI_griffonstone_uni
+						BOI_guto_institute
+						BOI_north_west
+						BOI_gold_silver
+						BOI_solar_rail
+						BOI_rumare_ferry
+						BOI_connect_blackhollow
+						BOI_trade_hub
+						BOI_tax_breaks
+						BOI_guns_wohnsitz
+						BOI_coal_coalfall
+						BOI_gale_park
+						BOI_flame_industry
+						BOI_modern_age
+						BOI_great_archive
+						BOI_griffon_home
+						BOI_beyond_old_glory
+						BOI_demolish_slums
+						BOI_expand_terrace
+						BOI_promote_urban
+						BOI_farm_mecha
+						BOI_rebuild_griffonstone
+						BOI_mining_tech
+						BOI_lakeshore_oil
+						BOI_solarspike_mines
+						BOI_creeper_riches
+						BOI_rumare_refinery
+						BOI_mine_chamber
+					}
+					cost = 7
 				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = BOI_greiffenwerft_organization
 			}
-			ELSE = {
-				unlock_decision_tooltip = BOI_bail_gdsg_out
+			hidden_effect = {
+				set_variable = {
+					var = var_goy_boi_devloan_consumer_goods
+					value = 0.2
+				}
+				set_variable = {
+					var = var_goy_boi_devloan_export
+					value = 0.1
+				}
+				add_dynamic_modifier = {
+					modifier = BOI_development_loans_dynmod
+				}
 			}
+			effect_tooltip = {
+				add_ideas = BOI_development_loans
+			}
+			activate_mission = BOI_loan_repayment
+			unlock_decision_category_tooltip = BOI_loan_management_category
+			#custom_effect_tooltip = BOI_goy_reduce_time_for_industry_tt
 		}
 	}
 	shared_focus = {
@@ -103,6 +151,14 @@
 		cost = 5.00
 		relative_position_id = BOI_restore_roads
 		prerequisite = { focus = BOI_restore_roads }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -110,6 +166,19 @@
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			decrease_illiteracy = yes
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
+			#if = { #GoY_BOI_add_5_consumer_goods_factor_to_loan does this
+			#	limit = {
+			#		has_dynamic_modifier = {
+			#			modifier = BOI_development_loans_dynmod
+			#		}
+			#	}
+			#	add_to_variable = {
+			#		var = var_goy_boi_devloan_consumer_goods
+			#		value = 0.05
+			#		tooltip = consumer_goods_factor_tt
+			#	}
+			#}
 		}
 	}
 	shared_focus = {
@@ -120,6 +189,14 @@
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
 		prerequisite = { focus = BOI_literacy_campaign }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -127,15 +204,16 @@
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_tech_bonus = {
-			name = industrial_bonus_2
-			bonus = 1
-			uses = 2
-			category = industry
-		}
+				name = industrial_bonus_2
+				bonus = 1
+				uses = 2
+				category = industry
+			}
 			custom_effect_tooltip = {
 				localization_key = available_scientist_one_line_tt
 				CHARACTER = GOY_BOI_magic_scientist_1
-			}		
+			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -146,6 +224,14 @@
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
 		prerequisite = { focus = BOI_literacy_campaign }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -159,6 +245,7 @@
 			    category = race_tech
 		    }
 			decrease_illiteracy = yes
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -170,6 +257,14 @@
 		relative_position_id = BOI_literacy_campaign
 		prerequisite = { focus = BOI_educate_engineers }
 		prerequisite = { focus = BOI_temple_schools }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -178,6 +273,7 @@
 		completion_reward = {
 		    add_research_slot = 1
 			decrease_illiteracy = yes
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -188,6 +284,14 @@
 		cost = 5.00
 		relative_position_id = BOI_literacy_campaign
 		prerequisite = { focus = BOI_griffonstone_uni }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -221,7 +325,8 @@
 			custom_effect_tooltip = {
 				localization_key = available_scientist_one_line_tt
 				CHARACTER = GOY_BOI_nuclear_scientist_1
-			}			
+			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -233,10 +338,17 @@
 		relative_position_id = BOI_restore_roads
 		prerequisite = { focus = BOI_restore_roads }
 		available = {
-		    #owns_state =
-			#owns_state =
-			#owns_state =
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+			471 = { is_fully_controlled_by = ROOT }
+			679 = { is_fully_controlled_by = ROOT }
+			384 = { is_fully_controlled_by = ROOT }
 		}
+		cancel_if_invalid = yes
 
 		ai_will_do = {
 			factor = 3
@@ -275,7 +387,8 @@
 				start_province = 7192
                 target_province = 753
                 build_only_on_allied = yes
-            }			
+            }
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes			
 		}
 	}
 	shared_focus = {
@@ -287,6 +400,17 @@
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_north_west }
 
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+			389 = { is_fully_controlled_by = ROOT }
+		}
+		cancel_if_invalid = yes
+		
 		ai_will_do = {
 			factor = 3
 		}
@@ -304,6 +428,7 @@
                 target_province = 7192
                 build_only_on_allied = yes
             }
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -314,10 +439,18 @@
 		cost = 5.00
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_north_west }
+		
 		available = {
-		    owns_state = 531
-			owns_state = 488
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+			531 = { is_fully_controlled_by = ROOT }
+			488 = { is_fully_controlled_by = ROOT }
 		}
+		cancel_if_invalid = yes
 
 		ai_will_do = {
 			factor = 3
@@ -355,7 +488,8 @@
 				start_province = 10525
                 target_province = 4584
                 build_only_on_allied = yes
-            }			
+            }
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -367,8 +501,15 @@
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_gold_silver }
 		available = {
-		    owns_state = 383
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+			383 = { is_fully_controlled_by = ROOT }
 		}
+		cancel_if_invalid = yes
 
 		ai_will_do = {
 			factor = 3
@@ -381,7 +522,18 @@
 					level = 1
 					instant_build = yes
 				}
-			}	
+			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BOI_greiffenwerft_organization
+			}
+			ELSE = {
+				unlock_decision_tooltip = BOI_bail_gdsg_out
+			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -393,11 +545,19 @@
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_solar_rail }
 		available = {
-		    owns_state = 532
-			owns_state = 490
-			owns_state = 606
-			owns_state = 489
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+			532 = { is_fully_controlled_by = ROOT }
+			490 = { is_fully_controlled_by = ROOT }
+			606 = { is_fully_controlled_by = ROOT }
+			446 = { is_fully_controlled_by = ROOT }
+			489 = { is_fully_controlled_by = ROOT }
 		}
+		cancel_if_invalid = yes
 
 		ai_will_do = {
 			factor = 3
@@ -456,7 +616,8 @@
 				start_province = 10025
                 target_province = 4528
                 build_only_on_allied = yes
-            }			
+            }
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -468,6 +629,14 @@
 		relative_position_id = BOI_north_west
 		prerequisite = { focus = BOI_rumare_ferry }
 		prerequisite = { focus = BOI_connect_blackhollow }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -483,21 +652,27 @@
 		x = 0
 		y = 1
 		cost = 5.00
-		relative_position_id = BOI_gather_scraps
+		relative_position_id = BOI_ask_for_loans
 		prerequisite = { focus = BOI_gather_scraps }
 		prerequisite = { focus = BOI_restore_roads }
 		prerequisite = { focus = BOI_ask_for_loans }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 		
 		#available = {
 		#    has_political_power > 75
 		#}
-
 		ai_will_do = {
 			factor = 10
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = -75
 			add_timed_idea = {
 			    idea = BOI_tax_breaks_idea
 				days = 240
@@ -509,6 +684,7 @@
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = BOI_GMW_organization
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -519,6 +695,14 @@
 		cost = 5.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_tax_breaks }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -545,6 +729,7 @@
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = BOI_wohnsitz_kanonenfabrik_organization
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -555,6 +740,14 @@
 		cost = 5.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_tax_breaks }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -575,6 +768,7 @@
 				state = 488
 			}			
 		    increase_society_development_with_tt = yes
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -585,6 +779,14 @@
 		cost = 5.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_guns_wohnsitz focus = BOI_coal_coalfall }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -599,6 +801,7 @@
 					instant_build = yes
 				}
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -609,6 +812,14 @@
 		cost = 5.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_guns_wohnsitz focus = BOI_coal_coalfall }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -619,6 +830,7 @@
 			    idea = BOI_industrial_expansion
 				days = 360
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -630,6 +842,14 @@
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_gale_park }
 		prerequisite = { focus = BOI_flame_industry }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -649,6 +869,14 @@
 		prerequisite = { focus = BOI_guto_institute }
 		prerequisite = { focus = BOI_modern_age }
 		mutually_exclusive = { focus = BOI_griffon_home }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 3
@@ -695,6 +923,12 @@
 		mutually_exclusive = { focus = BOI_great_archive }
 		
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
 			NOT = {
 				has_idea = BOI_griffonstone_reconstruction
 			}
@@ -740,6 +974,14 @@
 		cost = 10.00
 		relative_position_id = BOI_tax_breaks
 		prerequisite = { focus = BOI_great_archive focus = BOI_griffon_home }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -755,8 +997,16 @@
 		x = 2
 		y = 1
 		cost = 5.00
-		relative_position_id = BOI_ask_for_loans
-		prerequisite = { focus = BOI_ask_for_loans }
+		relative_position_id = BOI_gather_scraps
+		prerequisite = { focus = BOI_gather_scraps }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -765,6 +1015,7 @@
 		completion_reward = {
 			add_stability = 0.05
 			decrease_poverty = yes
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -775,6 +1026,14 @@
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
 		prerequisite = { focus = BOI_demolish_slums }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -783,6 +1042,7 @@
 		completion_reward = {
 			decrease_poverty = yes
 			add_ideas = BOI_terrace_farms
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -793,6 +1053,14 @@
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
 		prerequisite = { focus = BOI_demolish_slums }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -812,6 +1080,7 @@
 			471 = { 
 			    add_manpower = 50000
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -823,6 +1092,14 @@
 		relative_position_id = BOI_demolish_slums
 		prerequisite = { focus = BOI_expand_terrace }
 		prerequisite = { focus = BOI_promote_urban }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 3
@@ -841,6 +1118,7 @@
 			471 = { 
 			    add_extra_state_shared_building_slots = 1
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -851,6 +1129,14 @@
 		cost = 5.00
 		relative_position_id = BOI_demolish_slums
 		prerequisite = { focus = BOI_farm_mecha }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -878,6 +1164,7 @@
 			    idea = BOI_griffonstone_reconstruction
 				days = 180
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -886,8 +1173,16 @@
 		x = 5
 		y = 1
 		cost = 5.00
-		relative_position_id = BOI_ask_for_loans
-		prerequisite = { focus = BOI_ask_for_loans }
+		relative_position_id = BOI_gather_scraps
+		prerequisite = { focus = BOI_gather_scraps }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 3
@@ -900,6 +1195,7 @@
 			    uses = 2
 			    category = excavation_tech
 		    }
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -910,6 +1206,14 @@
 		cost = 5.00
 		relative_position_id = BOI_mining_tech
 		prerequisite = { focus = BOI_mining_tech }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -926,6 +1230,7 @@
 				amount = 5
 				state = 679
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -936,6 +1241,14 @@
 		cost = 5.00
 		relative_position_id = BOI_mining_tech
 		prerequisite = { focus = BOI_mining_tech }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 5
@@ -943,6 +1256,7 @@
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			country_event = griffonstone.200
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -955,6 +1269,12 @@
 		prerequisite = { focus = BOI_lakeshore_oil focus = BOI_solarspike_mines }
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
 		    owns_state = 489
 			owns_state = 606
 		}
@@ -1018,6 +1338,7 @@
 				amount = 2
 				state = 446
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
@@ -1030,6 +1351,12 @@
 		prerequisite = { focus = BOI_lakeshore_oil focus = BOI_solarspike_mines }
 
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
 		    owns_state = 383
 		}
 		ai_will_do = {
@@ -1050,17 +1377,26 @@
 					instant_build = yes
 				}
 			}
+			GoY_BOI_add_5_consumer_goods_factor_to_loan = yes
 		}
 	}
 	shared_focus = {
 		id = BOI_mine_chamber
-		icon = GFX_goal_generic_coal_mining 
+		icon = GFX_goal_generic_coal_mining
 		x = 1
 		y = 3
 		cost = 8.00
 		relative_position_id = BOI_mining_tech
 		prerequisite = { focus = BOI_rumare_refinery }
 		prerequisite = { focus = BOI_creeper_riches }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = BOI_goy_under_100_consgoods_tt
+				check_variable = {
+					var_goy_boi_devloan_consumer_goods < 1
+				}
+			}
+		}
 
 		ai_will_do = {
 			factor = 10
@@ -1154,11 +1490,11 @@
 			add_political_power = -50
 			add_equipment_to_stockpile = {
 			    type = infantry_equipment_1
-				amount = 500
+				amount = 2000
 				producer = GRI
 			}
 			add_tech_bonus = {
-			    name = purchased_firearms_bonus
+			    name = BOI_modern_firearms
 			    bonus = 1
 			    uses = 1
 			    category = infantry_weapons
@@ -1195,6 +1531,43 @@
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_griffonstone_army_1
+			hidden_effect = {
+				division_template = {
+					name = "Volunteer Guard"
+					
+					is_locked = no
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+					}
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					is_core_of = PREV
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"First Volunteer Guard\" division_template = \"Volunteer Guard\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = PREV
+					count = 1
+				}
+				create_unit = {
+					division = "name = \"Second Volunteer Guard\" division_template = \"Volunteer Guard\" start_experience_factor = 0.5 start_equipment_factor = 1"
+					owner = PREV
+					count = 1
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -1283,6 +1656,36 @@
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_lords_army_1
+			hidden_effect = {
+				division_template = {
+					name = "Scions of Griffonstone"
+					
+					is_locked = no
+				
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 0 y = 2 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 1 y = 2 }
+					}
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					is_core_of = PREV
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"Scions of Griffonstone\" division_template = \"Scions of Griffonstone\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = PREV
+					count = 1
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -1395,6 +1798,10 @@
 			    uses = 2
 			    category = support_tech
 		    }
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+				amount = 250
+			}
 		}
 	}
 	shared_focus = {
@@ -1488,6 +1895,10 @@
 					amount = 100
 					track = infantry
 				}
+			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				amount = 1500
 			}
 		}
 	}
@@ -1632,6 +2043,10 @@
 					amount = 100
 					track = combat_support
 				}
+			}
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+				amount = 200
 			}
 		}
 	}
@@ -2666,10 +3081,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			389 = {
-               add_extra_state_shared_building_slots = 1			
-			   add_building_construction = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3202,6 +3617,40 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_BONUS}
 		completion_reward = {
 			add_ideas = BOI_royal_guard
+			hidden_effect = {
+				division_template = {
+					name = "The Royal Guard"
+					
+					is_locked = no
+				
+					regiments = {
+						knights = { x = 0 y = 0 }
+						knights = { x = 0 y = 1 }
+						knights = { x = 0 y = 2 }
+						knights = { x = 1 y = 0 }
+						knights = { x = 1 y = 1 }
+						knights = { x = 1 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = PREV
+					is_core_of = PREV
+					NOT = {
+						state = 531
+					}
+				}
+				create_unit = {
+					division = "name = \"The Royal Guard\" division_template = \"The Royal Guard\" start_experience_factor = 0.9 start_equipment_factor = 1"
+					owner = PREV
+					count = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -3506,7 +3955,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BOI_commemoration
-		icon = GFX_goal_ideology_harmonist 
+		icon = GFX_goal_imperial_tomb 
 		x = 1
 		y = 1
 		cost = 2.00
@@ -3856,6 +4305,30 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BOI_custodians_of_the_idol
+		icon = GFX_goal_DOM_The_Phoenix 
+		x = -2
+		y = 5
+		cost = 5.00
+		relative_position_id = BOI_war_of_unification
+		prerequisite = { focus = BOI_common_hope }
+
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+		    every_other_country = {
+				limit = {
+					has_idea = griffon_race
+				}
+				add_opinion_modifier = {
+					target = BOI
+					modifier = BOI_idol_custodians
+				}
+			}
+		}
+	}
+	focus = {
 		id = BOI_great_union
 		icon = GFX_focus_generic_diplomatic_treaty_pony_griffon 
 		x = 0
@@ -3872,6 +4345,95 @@ focus_tree = {
 		    set_rule = { can_create_factions = yes }
 			create_faction_from_template = faction_template_goy_griffonian_union_faction
 			unlock_decision_category_tooltip = BOI_griffonian_union_category
+		}
+	}
+	focus = {
+		id = BOI_prodigal_sons_of_herzland
+		icon = GFX_goal_BOI_herzlandism 
+		x = 2
+		y = 5
+		cost = 5.00
+		relative_position_id = BOI_war_of_unification
+		prerequisite = { focus = BOI_integrate_skyfall }
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			    has_war = yes
+				factor = 0
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+		completion_reward = {
+			custom_effect_tooltip = BOI_CETT_herzlandism_nogoals
+			hidden_effect = {
+			    HLQ = { add_to_ROOT_potential_cores = yes }
+				EYR = { add_to_ROOT_potential_cores = yes }
+				ERI = { add_to_ROOT_potential_cores = yes }
+				AVI = { add_to_ROOT_potential_cores = yes }
+				HEL = { add_to_ROOT_potential_cores = yes }
+				AET = { add_to_ROOT_potential_cores = yes }
+				TRD = { add_to_ROOT_potential_cores = yes }
+				FEZ = { add_to_ROOT_potential_cores = yes }
+			}
+			
+			IF = {
+			    limit = { LSM = { exists = yes } }
+				hidden_effect = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+				}
+				ELSE_IF = {
+				    limit = { LNS = { exists = yes } }
+					hidden_effect = {
+					    LNS = { add_to_ROOT_potential_cores = yes }
+					}
+				}
+				ELSE_IF = {
+				    limit = { LSC = { exists = yes } }
+					hidden_effect = {
+					    LSC = { add_to_ROOT_potential_cores = yes }
+					}
+				}
+				ELSE = {
+				    LSM = { add_to_ROOT_potential_cores = yes }
+				}
+			}
+			hidden_effect = {
+				add_state_claim = 633
+				add_state_claim = 634	
+				add_state_claim = 553
+				add_state_claim = 537
+				
+				add_state_claim = 540
+				add_state_claim = 552
+				add_state_claim = 505
+				
+				add_state_claim = 400
+				add_state_claim = 391
+				
+				add_state_claim = 401
+				add_state_claim = 500
+				add_state_claim = 673
+				
+				add_state_claim = 470
+				
+				add_state_claim = 493
+				add_state_claim = 494
+				
+				add_state_claim = 496
+				add_state_claim = 495
+				add_state_claim = 457
+				add_state_claim = 436
+				
+				add_state_claim = 380
+				add_state_claim = 396
+				add_state_claim = 379
+				add_state_claim = 381
+				
+				add_state_claim = 390
+				add_state_claim = 208
+			}
 		}
 	}
 	focus = {
@@ -5664,10 +6226,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			389 = {
-			    add_extra_state_shared_building_slots = 1
+			    add_extra_state_shared_building_slots = 2
 			    add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5689,6 +6251,48 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
 			add_ideas = BOI_noble_cause
+		}
+	}
+	shared_focus = {
+		id = BOI_reaffirm_our_allegiance
+		icon = GFX_goal_BRZ_eternal_empire
+		x = 0
+		y = 2
+		cost = 5.00
+		relative_position_id = BOI_loyalty_reward
+		prerequisite = { focus = BOI_loyalty_reward }
+		
+		available = {
+			GRD = { exists = yes }
+			GRD = {
+				OR = {
+					has_country_leader = { character = GRI_archon_eros_vii ruling_only = yes }
+					has_country_leader = { character = STW_gabriela_eagleclaw ruling_only = yes }
+					has_country_leader = { character = GRI_emperor_grover_vi ruling_only = yes }
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				GRD = { exists = no }
+				GRD = {
+					has_country_leader = { character = GRI_ferdinand_dawnclaw ruling_only = yes }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 15
+		}
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		completion_reward = {
+			GRD = {
+				country_event = griffonstone.306
+				add_opinion_modifier = {
+					target = BOI
+					modifier = BOI_imperial_loyalists
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -5717,6 +6321,7 @@ focus_tree = {
 		cost = 5.00
 		relative_position_id = BOI_loyalty_reward
 		prerequisite = { focus = BOI_noble_ties }
+		prerequisite = { focus = BOI_reaffirm_our_allegiance }
 		prerequisite = { focus = BOI_end_serfdom }
 
 		ai_will_do = {

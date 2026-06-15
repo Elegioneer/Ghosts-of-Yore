@@ -1,3 +1,12 @@
+BOI_loan_management_category = {
+	icon = GFX_decision_cat_goy_generic_money_fez
+
+	visible = {
+		original_tag = BOI
+		has_completed_focus = BOI_ask_for_loans
+		has_dynamic_modifier = BOI_development_loans_dynmod
+	}
+}
 BOI_war_for_liberation_category = {
 	icon = EQS_militias_cat
 
@@ -97,7 +106,7 @@ BOI_bailouts_cat = {
 	
 	visible = {
 		original_tag = BOI
-		has_completed_focus = BOI_ask_for_loans
+		has_completed_focus = BOI_rumare_ferry
 		NOT = {
 			has_dlc = "Arms Against Tyranny"
 		}

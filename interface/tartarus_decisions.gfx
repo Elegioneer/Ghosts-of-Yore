@@ -183,4 +183,32 @@ spriteTypes = {
 		name = "GFX_decision_goy_pom_contact_vorst"
 		texturefile = "gfx/interface/decisions/decision_goy_pom_contact_vorst.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_goy_1000_bit_bills_color"
+		texturefile = "gfx/interface/decisions/decision_goy_1000_bit_bills_color.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_1000_bit_bills_color_cancel"
+		texturefile = "gfx/interface/decisions/decision_goy_1000_bit_bills_color_cancel.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_generic_fundraising_color"
+		texturefile = "gfx/interface/decisions/decision_goy_generic_fundraising_color.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_goy_generic_economy_color"
+		texturefile = "gfx/interface/decisions/decision_cat_goy_generic_economy_color.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_goy_generic_money_fez"
+		texturefile = "gfx/interface/decisions/decision_cat_goy_generic_money_fez.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_mining"
+		texturefile = "gfx/interface/decisions/decision_goy_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_goy_phone"
+		texturefile = "gfx/interface/decisions/decision_goy_phone.dds"
+	}
 }

@@ -1,3 +1,26 @@
+	GoY_BOI_add_5_consumer_goods_factor_to_loan = {
+		if = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = BOI_development_loans_dynmod
+				}
+				not = {
+					has_country_flag = BOI_goy_no_loans_flag
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = BOI_goy_modify_loans_dynmod_tt
+			add_to_variable = {
+				var = var_goy_boi_devloan_consumer_goods
+				value = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_days_mission_timeout = {
+				mission = BOI_loan_repayment
+				days = 28
+			}
+		}
+	}
 	GoY_LM_get_ships = {
 			IF = {
 				limit = {

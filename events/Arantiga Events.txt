@@ -6544,8 +6544,12 @@ country_event = { #rein in colthage
 		every_owned_state = {
 			limit = {
 				OR = {
-					is_core_of = CVA
+					is_core_of = CTH
 					is_core_of = CDR
+					is_core_of = CVA
+					is_core_of = CGI
+					is_core_of = BKH
+					is_core_of = LMB
 				}
 			}
 			add_core_of = CTH
@@ -6580,8 +6584,12 @@ country_event = { #rein in colthage
 		every_owned_state = {
 			limit = {
 				OR = {
-					is_core_of = CVA
+					is_core_of = CTH
 					is_core_of = CDR
+					is_core_of = CVA
+					is_core_of = CGI
+					is_core_of = BKH
+					is_core_of = LMB
 				}
 			}
 			add_core_of = CTH

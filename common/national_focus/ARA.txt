@@ -876,6 +876,10 @@ focus_tree = {
 				uses = 2
 				category = motorized_equipment
 			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+			}
 		}
 	}
 
@@ -1127,6 +1131,10 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+				amount = 1000
+			}
 		}
 	}
 
@@ -1151,6 +1159,10 @@ focus_tree = {
 				uses = 1
 				category = artillery
 			}
+			add_equipment_to_stockpile = {
+			    type = artillery_equipment
+				amount = 100
+			}
 		}
 	}
 
@@ -1174,6 +1186,10 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = support_tech
+			}
+			add_equipment_to_stockpile = {
+			    type = support_equipment
+				amount = 250
 			}
 		}
 	}
@@ -11708,7 +11724,7 @@ focus_tree = {
 				name = ARA_marge_magic_in_industry
 				bonus = 2
 				uses = 1
-				category = construction
+				category = construction_tech
 			}
 			add_tech_bonus = {
 				name = ARA_marge_magic_in_industry

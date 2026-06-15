@@ -7,9 +7,12 @@ bookmarks = {
 		default_country = "GRI"
 		default = yes
 		
+		filters = { label } ### One per race <trigger>_filter e.g pony_race_filter
+		
 		"GRI"={
 			history = "GRI_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				GRI_bureaucracy
 				GRI_land_thougth
@@ -24,6 +27,7 @@ bookmarks = {
 		"JER"={
 			history = "JER_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				JER_memories
 				JER_legacy_of_coltbert
@@ -37,6 +41,7 @@ bookmarks = {
 		"WNG"={
 			history = "WNG_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter}
 			ideas = {
 				WNG_political_deadlock
 				WNG_economic_crisis
@@ -51,20 +56,22 @@ bookmarks = {
 		"FAT"={
 			history = "FAT_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				FAT_republican_struggle
 				FAT_The_Cloudburian_Minority_idea
 				FAT_unruly_army_idea
-		    }
+			}
 			focuses = {
+				FAT_tricolor_over_griffenheim
+				FAT_my_work_here_is_done
 				FST_new_dawn_for_the_republic
-			    FAT_radicalize_the_party
-				FAT_the_iron_marshal
 			}
 		}
 		#"RCT"={
 		#	history = "RCT_GATHERING_STORM_DESC"
 		#	ideology = democratic
+		#	label = { pony_race_filter }
 		#	ideas = {
 		#		RCT_city_of_three_rivers
 		#		RCT_unstable_government
@@ -79,6 +86,7 @@ bookmarks = {
 		#"TRD"={
 		#	history = "TRD_GATHERING_STORM_DESC"
 		#	ideology = neutrality
+		#	label = { griffon_race_filter }
 		#	ideas = {
 		#		TRD_the_iron_chancellor
 		#		TRD_the_riches_of_skyfall
@@ -89,10 +97,11 @@ bookmarks = {
 		#		TRD_bow_to_the_empire
 		#		TRD_the_death_of_guichard_2
 		#	}
-		#}
+		# }
 		#"EQC"={
 		#	history = "EQC_GATHERING_STORM_DESC"
 		#	ideology = democratic
+		#	label = { pony_race_filter }
 		#	ideas = {
 		#		EQC_great_depression_1
 		#		EQC_griffon_minorities1
@@ -110,6 +119,7 @@ bookmarks = {
 		 	#minor = yes		
 			history = "ARA_GATHERING_STORM_DESC1"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				ARA_legacy
 				ARA_economic_dependance
@@ -125,6 +135,7 @@ bookmarks = {
 		 	#minor = yes		
 			history = "BOI_GATHERING_STORM_DESC1"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				BOI_GAW_home_of_griffons
 				BOI_GAW_kingdom_with_no_king
@@ -140,6 +151,7 @@ bookmarks = {
 		 	#minor = yes		
 			history = "NTR_GATHERING_STORM_DESC1"
 			ideology = democratic
+			label = { pony_race_filter }
 			ideas = {
 				NTR_war_north	
 				NTR_divided_clans	
@@ -155,6 +167,7 @@ bookmarks = {
 		 	#minor = yes		
 			history = "POM_GATHERING_STORM_DESC1"
 			ideology = fascism
+			label = { griffon_race_filter }
 			ideas = {
 				POM_pomovarran_uprising
 				POM_warlord_government
@@ -165,7 +178,10 @@ bookmarks = {
 				POM_our_glorious_past
 				POM_our_past_and_future
 			}
-		}		
+		}
+		#"---"={
+		#	history = "OTHER_GATHERING_STORM_DESC"
+		#}
 
 
 		# minors ####
@@ -174,6 +190,7 @@ bookmarks = {
 			minor = yes
 			history = "BRZ_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { diamond_dog_race_filter }
 			ideas = {
 				BRZ_imperial_industry
 				BRZ_pacifism1
@@ -184,12 +201,13 @@ bookmarks = {
 				BRZ_a_change_of_course
 				BRZ_march_on_griffenheim
 			}
-			}
+		 }
 		#Bears and Bandits 2.1
 		 "HEL"={
 			minor = yes
 			history = "HEL_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { griffon_race_filter }
 			ideas = {
 				HEL_legacy_of_the_revolution
 				HEL_chaotic_government
@@ -201,11 +219,12 @@ bookmarks = {
 				HEL_de_conards_republic
 			}
 		 }
-		#Two Eagles 1.9				 
+		#Two Eagles 1.9
 		"FRN"={
 			minor = yes
 			history = "FRN_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				FRN_fascists_1
 				FRN_baguettes_1
@@ -221,6 +240,7 @@ bookmarks = {
 			minor = yes
 			history = "TAL_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { }
 			ideas = {
 				TAL_duchess_ginerva
 				TAL_coal_clause
@@ -232,11 +252,12 @@ bookmarks = {
 				TAL_restore_cult
 			}
 		}
-		#In the Shadow of the Mountains 1.8									 
+		#In the Shadow of the Mountains 1.8
 		"HLQ"={
 			minor = yes
 			history = "HLQ_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				HLQ_knights_1
 				HLQ_reformists
@@ -252,6 +273,7 @@ bookmarks = {
 			minor = yes
 			history = "LNS_GATHERING_STORM_DESC"
 			ideology = fascism
+			label = { griffon_race_filter }
 			ideas = {
 				LNS_race_war
 			}
@@ -265,6 +287,7 @@ bookmarks = {
 			minor = yes
 			history = "WIT_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { pony_race_filter }
 			ideas = {
 				WIT_unicorn_parties
 				RIV_member_state
@@ -279,6 +302,7 @@ bookmarks = {
 			minor = yes
 			history = "BAR_GATHERING_STORM_DESC"
 			ideology = fascism
+			label = { pony_race_filter }
 			ideas = {
 				BAR_pentarchy
 				BAR_wittenland_witchhunters
@@ -293,6 +317,7 @@ bookmarks = {
 			minor = yes
 			history = "OLV_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { deer_race_filter }
 			ideas = {
 				primitive_economy
 			}
@@ -306,6 +331,7 @@ bookmarks = {
 			minor = yes
 			history = "BAK_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { pony_race_filter }
 			ideas = {
 				BAK_shipbuilding
 				BAK_bastion_of_democracy
@@ -321,6 +347,7 @@ bookmarks = {
 			minor = yes
 			history = "ZES_GATHERING_STORM_DESC"
 			ideology = democratic
+			label = { zebra_race_filter }
 			ideas = {
 				ZES_ideals_of_freedom_idea
 				ZES_xatisa
@@ -337,6 +364,7 @@ bookmarks = {
 			minor = yes
 			history = "YAL_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				YAL_societal_divide1
 			}
@@ -350,6 +378,7 @@ bookmarks = {
 			minor = yes
 			history = "ANG_GATHERING_STORM_DESC"
 			ideology = fascism
+			label = { griffon_race_filter }
 			ideas = {
 				ANG_anarchists
 				ANG_cults
@@ -365,6 +394,7 @@ bookmarks = {
 			minor = yes
 			history = "PYT_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				PYT_the_peasant_republic
 				PYT_the_peasant_army
@@ -380,6 +410,7 @@ bookmarks = {
 			minor = yes
 			history = "ROU_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				ROU_eyr_archonate
 				ROU_free_city
@@ -395,6 +426,7 @@ bookmarks = {
 			minor = yes
 			history = "HAU_GATHERING_STORM_DESC"
 			ideology = neutrality
+			label = { griffon_race_filter }
 			ideas = {
 				HAU_trading_crossroads
 				HAU_airforce_with_a_state
