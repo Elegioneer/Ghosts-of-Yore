@@ -1,7 +1,7 @@
 ### List of changed EaW files
 # Everything Arantiga-related
 # common/bookmarks/the_gathering_storm.txt -deleted, deprecated
-# common/bookmarks/z_scenariogriffonia.txt
+# common/bookmarks/z_scenariogriffonia.txt - deprecated
 # common/countries/cosmetic.txt
 # common/decisions/categories/eaw_formable_category.txt
 # common/game_rules/EAW_game_rules.txt -Arantiga removed
@@ -12,10 +12,11 @@
 # common/scripted_triggers/GOY_triggers.txt — has replicas of some eaw triggers
 # common/combat_tactics – has new undead tactics
 # events/EAW_Starting_Warning_Events.txt
-# interface/frontendmainview.gui
+# interface/frontendmainview.gui - deprecated?
+# interface/goy_frontendgamesetupview 
 # localisation/eaw_bookmarks_l_english.yml -removed
-# 
-# 
+# common/bookmarks/z_scenario_main
+# interface/ingamemenu.gui
 # 
 # 
 # 

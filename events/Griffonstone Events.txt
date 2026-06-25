@@ -2710,6 +2710,7 @@ country_event = { #Herzländers unite! (cap)
 				}
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
+				set_country_flag = BOI_FLAG_gilda_advisor_available
 			}
 		}
 		option = {
@@ -2735,6 +2736,7 @@ country_event = { #Herzländers unite! (cap)
 				}			
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
+				set_country_flag = BOI_FLAG_gilda_advisor_available
 			}
 		}
 		option = {
@@ -2760,6 +2762,7 @@ country_event = { #Herzländers unite! (cap)
 				}			
 			hidden_effect = {
 			    set_country_flag = BOI_FLAG_second_elections
+				set_country_flag = BOI_FLAG_gilda_advisor_available
 			}
 		}
 	}
