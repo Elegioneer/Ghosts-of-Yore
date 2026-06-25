@@ -25,6 +25,8 @@ sub_units = {
 			category_divisional_support_battalions
 			category_army
 		}
+		
+		regimental = no
 
 		
 		battalion_mult = {
