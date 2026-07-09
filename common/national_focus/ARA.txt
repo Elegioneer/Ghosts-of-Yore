@@ -505,6 +505,7 @@ focus_tree = {
 		
 		completion_reward = {
 			371 = {
+				add_extra_state_shared_building_slots = 3
 			    add_building_construction = {
 			        type = dockyard
 				    level = 3
@@ -11416,7 +11417,10 @@ focus_tree = {
 		y = 0
 		
 		available = {
-			#TODO Does not have national spirit “Doubts and Shock” or “Demand for Reforms”
+			NOT = {
+				has_idea = ARA_marge_doubts_and_shock
+				has_idea = ARA_marge_demand_for_reforms
+			}
 		}
 
 		cost = 3.00
@@ -11921,8 +11925,9 @@ focus_tree = {
 		x = 7
 		y = 0
 		relative_position_id = ARA_marge_making_much_out_of_little
+		#TODO Bypassed if coup failed
 
-		cost = 5.00
+		cost = 1.00
 		search_filters = {}
 		ai_will_do = {
 			base = 50
@@ -11938,14 +11943,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 1.00
 		prerequisite = { focus = ARA_marge_destiny_denied }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_marge_doubts_and_shock
+				add_idea = ARA_marge_doubts_and_shock_1
+			}
 		}
 	}
 	shared_focus = {
@@ -11955,7 +11963,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 1.00
 		prerequisite = { focus = ARA_marge_destiny_denied }
 		search_filters = {}
 		ai_will_do = {
@@ -11972,7 +11980,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 1.00
 		prerequisite = { focus = ARA_marge_destiny_denied }
 		search_filters = {}
 		ai_will_do = {
@@ -11989,7 +11997,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_marge_hunt_the_remnants }
 		prerequisite = { focus = ARA_marge_reward_loyalty }
 		search_filters = {}
@@ -11997,7 +12005,14 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_marge_doubts_and_shock_1
+				add_idea = ARA_marge_doubts_and_shock_2_1
+			}
+			swap_ideas = {
+				remove_idea = ARA_marge_doubts_and_shock_2_2
+				add_idea = ARA_marge_doubts_and_shock_3
+			}
 		}
 	}
 	shared_focus = {
@@ -12007,7 +12022,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_marge_reward_loyalty }
 		prerequisite = { focus = ARA_marge_reassure_population }
 		search_filters = {}
@@ -12015,7 +12030,14 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_marge_doubts_and_shock_1
+				add_idea = ARA_marge_doubts_and_shock_2_2
+			}
+			swap_ideas = {
+				remove_idea = ARA_marge_doubts_and_shock_2_1
+				add_idea = ARA_marge_doubts_and_shock_3
+			}
 		}
 	}
 	shared_focus = {
@@ -12025,7 +12047,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_marge_restore_command }
 		prerequisite = { focus = ARA_marge_review_the_administration }
 		search_filters = {}
@@ -12033,7 +12055,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			remove_ideas = ARA_marge_doubts_and_shock_3
 		}
 	}
 	shared_focus = {
@@ -12043,14 +12065,15 @@ focus_tree = {
 		y = 4
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_back_from_the_brink }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_political_power = 50
 		}
 	}
 	shared_focus = {
@@ -12060,14 +12083,16 @@ focus_tree = {
 		y = 4
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_back_from_the_brink }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_political_power = 50
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			#TODO get event “Meeting with Moro”
 		}
 	}
 	shared_focus = {
@@ -12076,6 +12101,11 @@ focus_tree = {
 		x = -1
 		y = 5
 		relative_position_id = ARA_marge_destiny_denied
+		available = {
+			NOT = {
+				has_idea = ARA_marge_demand_for_reforms
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_marge_faith_in_featherins }
@@ -12084,7 +12114,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			decrease_illiteracy = yes
 		}
 	}
 	shared_focus = {
@@ -12094,7 +12124,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_faith_in_featherins }
 		prerequisite = { focus = ARA_marge_meet_with_reformers }
 		search_filters = {}
@@ -12102,7 +12132,8 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_popularity = { ideology = democratic popularity = 0.05 }
 		}
 	}
 	shared_focus = {
@@ -12112,14 +12143,15 @@ focus_tree = {
 		y = 5
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_meet_with_reformers }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_popularity = { ideology = communism popularity = 0.05 }
+			#TODO get event “Arantigan Crimson”
 		}
 	}
 	shared_focus = {
@@ -12129,14 +12161,14 @@ focus_tree = {
 		y = 6
 		relative_position_id = ARA_marge_destiny_denied
 
-		cost = 5.00
+		cost = 7.00
 		prerequisite = { focus = ARA_marge_codify_wingbardo_sparletan_language }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -12153,7 +12185,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_ideas = ARA_marge_welfare_policies
 		}
 	}
 	shared_focus = {
@@ -12164,7 +12196,7 @@ focus_tree = {
 		relative_position_id = ARA_marge_destiny_denied
 		mutually_exclusive = { focus = ARA_marge_socialism_with_monarchist_characteristics }
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_guarantee_liberties }
 		prerequisite = { focus = ARA_marge_agitation_in_the_army }
 		search_filters = {}
@@ -12172,7 +12204,9 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Effect: Get event “Overplaying One’s Hand”
+			#Note: Hide effect behind getting event info “Addressing the Nation”
+			#Requirement: Option B was taken in event “Arantigan Crimson”
 		}
 	}
 	shared_focus = {
@@ -12183,7 +12217,7 @@ focus_tree = {
 		relative_position_id = ARA_marge_destiny_denied
 		mutually_exclusive = { focus = ARA_marge_harmonic_foundations }
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_guarantee_liberties }
 		prerequisite = { focus = ARA_marge_agitation_in_the_army }
 		search_filters = {}
@@ -12191,7 +12225,9 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Effect: Get event “Plans within plans”
+			#Note: Hide effect behind fake getting event info “Working with Left”
+			#Requirement: Option A was taken in event “Arantigan Crimson”
 		}
 	}
 	shared_focus = {
@@ -12213,7 +12249,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Add and appoint political adviser Antioco Moro (Harmonic Businessgriff - +10% daily political power, -8% consumer goods factor)
 		}
 	}
 	shared_focus = {
@@ -12230,7 +12266,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_benevolence
+				add_idea = ARA_marge_parliamentary_monarchy
+			}
 		}
 	}
 	shared_focus = {
@@ -12247,7 +12286,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_ideas = ARA_marge_arantigan_renaissance
 		}
 	}
 	shared_focus = {
@@ -12264,7 +12303,8 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = 25000
+			add_ideas = ARA_marge_defenders_of_arantiga
 		}
 	}
 	shared_focus = {
@@ -12282,7 +12322,15 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			408 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = ARA_marge_cooperation_with_businesses
 		}
 	}
 	shared_focus = {
@@ -12299,7 +12347,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			408 = {
+				add_manpower = 100000
+			}
+			add_ideas = ARA_marge_beacon_of_peace
 		}
 	}
 
@@ -12311,6 +12362,19 @@ focus_tree = {
 		x = 15
 		y = 0
 		relative_position_id = ARA_marge_making_much_out_of_little
+		
+		available = {
+			any_other_country = {
+				original_tag = WNG
+				ROOT = {
+					is_in_faction_with = PREV
+				}
+			}
+			NOT = {
+				has_idea = ARA_marge_doubts_and_shock
+				has_idea = ARA_marge_demand_for_reforms
+			}
+		}
 
 		cost = 5.00
 		search_filters = {}
@@ -12318,7 +12382,17 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					OR = {
+						original_tag = WNG
+						original_tag = TAL
+						original_tag = FRN
+					}
+				}
+				#TODO add opinion "loyal allies" +25
+			}
 		}
 	}
 	shared_focus = {
@@ -12327,14 +12401,54 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		
+		available = {
+			any_other_country = { #TODO check if works
+				original_tag = WNG
+			}
+			OR = {
+				ROOT = {
+					NOT = {
+						is_in_faction_with = PREV
+					}
+				}
+				AND = {
+					ROOT = {
+						is_in_faction_with = PREV.PREV
+					}
+					PREV.PREV = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+					}
+				}
+			}
+			NOT = {
+				has_idea = ARA_marge_doubts_and_shock
+				has_idea = ARA_marge_demand_for_reforms
+			}
+		}
 
-		cost = 5.00
+		cost = 2.00
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			IF = {
+				limit = {
+					any_other_country = {
+						original_tag = WNG
+						ROOT = {
+							is_in_faction_with = PREV
+						}
+					}
+				}
+				leave_faction = yes
+				#TODO Wingbardy gets -25 opinion malus (Traitors) to Arantiga
+			}
+			add_war_support = 0.05
 		}
 	}
 	shared_focus = {
@@ -12351,7 +12465,14 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ARA_marge_pact_military_manoeuvres
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_ideas = ARA_marge_pact_manoeuvres_idea
 		}
 	}
 	shared_focus = {
@@ -12368,7 +12489,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO enable ACDS decisions
 		}
 	}
 	shared_focus = {
@@ -12385,7 +12506,11 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			remove_ideas = ARA_economic_dependance
+			add_timed_idea = {
+				idea = ARA_cut_ties_with_wingbardy
+				days = 360
+			}
 		}
 	}
 	shared_focus = {
@@ -12402,7 +12527,36 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = BOI
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = ERI
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border_country = AVI
+					}
+				}
+			}
+			add_ideas = ARA_marge_shield_of_karthinia
 		}
 	}
 	shared_focus = {
@@ -12419,7 +12573,17 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			408 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = ARA_economic_dependance
+				add_idea = ARA_marge_wingbardian_influence
+			}
 		}
 	}
 	shared_focus = {
@@ -12436,7 +12600,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Create faction “Karthinian League”; Following nations get event “Karthinian League” under following requirements:
+			#All: Independent, not at war with Arantiga;
+			#Francistria: Harmonic or non-alligned (and taken focus Allies not Subjects)
+			#Talouse: Harmonic or Non-alligned 
+			#Falcor: Harmonic or non-alligned and is not faction member;
+			#Note: Non-alligned Francistria if in faction with Wingbardy will not join League;
 		}
 	}
 	shared_focus = {
@@ -12453,7 +12622,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#Get two divisions “Wingbardian Volunteers” (6 infantry divisions, regular experience), +20.000 ponypower, Add 2 levels of civilian intel and 2 levels of army intel towards Wingbardy, add national spirit “Know Your Enemy” (+10% attack bonus against Wingbardy, +10% defense bonus against Wingbardy) for 360 days
 		}
 	}
 	shared_focus = {
@@ -12462,15 +12631,41 @@ focus_tree = {
 		x = -2
 		y = 3
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		bypass = {
+			OR = {
+				any_other_country = {
+					original_tag = FRN
+					is_in_faction_with = ROOT
+				}
+				all_country_with_original_tag = {
+					original_tag_to_check = FRN
+					exists = no
+				}
+			}
+		}
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_form_karthinian_league }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					original_tag = FRN
+				}
+				every_core_state = {
+					NOT = {
+						is_claimed_by = ROOT
+					}
+					add_claim_by = ROOT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
 		}
 	}
 	shared_focus = {
@@ -12479,15 +12674,37 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		available = {
+			any_other_country = {
+				is_in_faction_with = ROOT
+				any_neighbor_country = {
+					original_tag = WNG
+				}
+			}
+		}
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_form_karthinian_league }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					original_tag = FRN
+				}
+				every_core_state = {
+					NOT = {
+						is_claimed_by = ROOT
+					}
+					add_claim_by = ROOT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
 		}
 	}
 	shared_focus = {
@@ -12496,15 +12713,38 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		bypass = {
+			OR = {
+				any_other_country = {
+					original_tag = TAL
+					is_in_faction_with = ROOT
+				}
+				all_country_with_original_tag = {
+					original_tag_to_check = TAL
+					exists = no
+				}
+			}
+		}
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_form_karthinian_league }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					original_tag = TAL
+				}
+				every_core_state = {
+					add_claim_by = ROOT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
 		}
 	}
 	shared_focus = {
@@ -12513,15 +12753,38 @@ focus_tree = {
 		x = 4
 		y = 3
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		bypass = {
+			OR = {
+				any_other_country = {
+					original_tag = FAL
+					is_in_faction_with = ROOT
+				} #TODO add direct ownership of karthinian countries to such checks
+				all_country_with_original_tag = {
+					original_tag_to_check = FAL
+					exists = no
+				}
+			}
+		}
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_marge_form_karthinian_league }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = {
+				limit = {
+					original_tag = FAL
+				}
+				every_core_state = {
+					add_claim_by = ROOT
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PREV
+			}
 		}
 	}
 	shared_focus = {
@@ -12530,6 +12793,22 @@ focus_tree = {
 		x = 0
 		y = 4
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		
+		available = {
+			every_other_country = {
+				OR = {
+					original_tag = WNG
+					original_tag = TAL
+					original_tag = FAL
+					original_tag = FRN
+					original_tag = JES
+					original_tag = SIC
+				}
+				OR = {
+					#TODO Own Karthin or have it under your puppet; own or have in faction Wingbardy Francistria Talouse and Falcor
+				}
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_marge_free_francistria }
@@ -12541,7 +12820,13 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			WNG = { add_to_ROOT_potential_cores = yes } #TODO maybe make a better tooltip
+			TAL = { add_to_ROOT_potential_cores = yes }
+			FAL = { add_to_ROOT_potential_cores = yes }
+			FRN = { add_to_ROOT_potential_cores = yes }
+			JES = { add_to_ROOT_potential_cores = yes }
+			SIC = { add_to_ROOT_potential_cores = yes }
+			#TODO If in faction Francistria, Talouse and Falcor get event “Union with Arantiga?”, if corable nations are puppeted, they are annexed by Arantiga; get event “Bitter Triumph”, load second part of foreign policy focus tree
 		}
 	}
 	shared_focus = {
