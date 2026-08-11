@@ -98,10 +98,10 @@ focus_tree = {
 				uses = 1
 				category = jet_technology
 			}
-		add_breakthrough_progress = {
-			specialization = specialization_air
-			value = 1.0
-		}			
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1.0
+			}			
 			custom_effect_tooltip = {
 				localization_key = available_scientist_one_line_tt
 				CHARACTER = GOY_ARA_air_scientist_1
@@ -1979,7 +1979,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_timed_idea = { idea = ARA_national_effort days = 365 }
-			custom_effect_tooltip = GOY_ARA_CETT_after365days
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "365"
+			}
 			effect_tooltip = {
 				add_timed_idea = { idea = ARA_industrial_fatigue days = 180 }
 			}
@@ -8042,25 +8045,40 @@ focus_tree = {
             #+20 rubber in Warthog Forest
             #+20 rubber in Bloodtalon
             #+20 rubber in Karthin
-			#TODO move to event
+			#TODO change to "in x days" -needs testing
 			add_timed_idea = {
 			    idea = ARA_small_spending
 			    days = 60
 			}
-			add_resource = {
-				type = rubber
-				amount = 20
-				state = 373
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "60"
 			}
-			add_resource = {
-				type = rubber
-				amount = 20
-				state = 536
-			}
-			add_resource = {
-				type = rubber
-				amount = 20
-				state = 371
+			set_country_flag = ARA_wingbardian_rubber_flag
+			effect_tooltip = {
+				add_resource = {
+					type = rubber
+					amount = 22
+					state = 373
+				}
+				add_resource = {
+					type = rubber
+					amount = 24
+					state = 536
+				}
+				add_resource = {
+					type = rubber
+					amount = 12
+					state = 371
+				}
+				371 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -8112,10 +8130,10 @@ focus_tree = {
 			    idea = ARA_sizeable_spending
 				days = 180
 			}
-		add_breakthrough_progress = {
-			specialization = specialization_naval
-			value = 0.5
-		}			
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
 		}
 	}
 	
@@ -8134,83 +8152,90 @@ focus_tree = {
             #Southern Scheisswald +50.000 population, +10 steel, +10 crystals, +1 civilian factory
             #Griffking +100.000 population, +20 steel, +20 crystals, +2 civilian factories
             #Angelclaw +50.000 population, +10 steel, +10 tungsten, +1 civilian factory
-			#TODO move to event
+			#TODO change to "in x days" -needs testing
 			add_timed_idea = {
 			    idea = ARA_sizeable_spending
 				days = 120
-			}	
-			411 = { #Griffing
-			    add_building_construction = {
-				    type = industrial_complex
-					level = 2
-					instant_build = yes
+			}
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "120"
+			}
+			set_country_flag = ARA_land_reclamation_crops_flag
+			effect_tooltip = {
+				411 = { #Griffing
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 4
+					add_manpower = 100000
 				}
-			    add_extra_state_shared_building_slots = 4
-				add_manpower = 100000
-			}
-			422 = { #Scheiss
-			    add_building_construction = {
-				    type = industrial_complex
-					level = 1
-					instant_build = yes
+				422 = { #Scheiss
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_manpower = 50000
 				}
-			    add_extra_state_shared_building_slots = 2
-				add_manpower = 50000
-			}
-			547 = { #Angelclaw
-			    add_building_construction = {
-				    type = industrial_complex
-					level = 1
-					instant_build = yes
+				547 = { #Angelclaw
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+					add_manpower = 50000
 				}
-			    add_extra_state_shared_building_slots = 2
-				add_manpower = 50000
+				add_resource = {
+					type = steel
+					amount = 22
+					state = 411
+				}
+				add_resource = {
+					type = crystals
+					amount = 18
+					state = 411
+				}
+				add_resource = {
+					type = coal
+					amount = 9
+					state = 411
+				}			
+				add_resource = {
+					type = steel
+					amount = 11
+					state = 422
+				}
+				add_resource = {
+					type = crystals
+					amount = 13
+					state = 422
+				}
+				add_resource = {
+					type = coal
+					amount = 6
+					state = 422
+				}			
+				add_resource = {
+					type = steel
+					amount = 12
+					state = 547
+				}
+				add_resource = {
+					type = tungsten
+					amount = 9
+					state = 547
+				}
+				add_resource = {
+					type = coal
+					amount = 15
+					state = 547
+				}
 			}
-			add_resource = {
-				type = steel
-				amount = 22
-				state = 411
-			}
-			add_resource = {
-				type = crystals
-				amount = 18
-				state = 411
-			}
-			add_resource = {
-				type = coal
-				amount = 9
-				state = 411
-			}			
-			add_resource = {
-				type = steel
-				amount = 11
-				state = 422
-			}
-			add_resource = {
-				type = crystals
-				amount = 13
-				state = 422
-			}
-			add_resource = {
-				type = coal
-				amount = 6
-				state = 422
-			}			
-			add_resource = {
-				type = steel
-				amount = 12
-				state = 547
-			}
-			add_resource = {
-				type = tungsten
-				amount = 9
-				state = 547
-			}
-			add_resource = {
-				type = coal
-				amount = 15
-				state = 547
-			}			
 		}
 	}
 	
@@ -8238,7 +8263,12 @@ focus_tree = {
 			   days = 360
 			}
             #After ending effects of "Massive spending" gain spirit "Griffking Dams" (+10% monthly population, -3% consumer goods)
-			#TODO move to event
+			#TODO change to "in x days" -needs testing
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "360"
+			}
+			set_country_flag = ARA_eyrs_gift_project_flag
 			add_ideas = ARA_griffing_dams
 			537 = {
 				add_building_construction = {
@@ -8316,43 +8346,50 @@ focus_tree = {
             #+2 civilian factories in Helheim
             #+2 military factories in Crona
             #+2 military factories in Interriver
-			#TODO move to event
+			#TODO change to "in x days" -needs testing
 			add_timed_idea = {
 			   idea = ARA_sizeable_spending
 			   days = 90
 			}
-			382 = { #Imperial City
-			    add_manpower = 200000
-				add_building_construction = {
-				    type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_extra_state_shared_building_slots = 2
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "90"
 			}
-			437 = { #Crona
-			    add_building_construction = {
-				    type = industrial_complex
-					level = 2
-					instant_build = yes
+			set_country_flag = ARA_rebuild_griffenheim_flag
+			effect_tooltip = {
+				382 = { #Imperial City
+					add_manpower = 200000
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
 				}
-				add_extra_state_shared_building_slots = 2
-			}
-			397 = { #Helheim
-			    add_building_construction = {
-				    type = arms_factory
-					level = 2
-					instant_build = yes
+				437 = { #Crona
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
 				}
-				add_extra_state_shared_building_slots = 2
-			}
-			405 = { #Interriver
-			    add_building_construction = {
-				    type = arms_factory
-					level = 2
-					instant_build = yes
+				397 = { #Helheim
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
 				}
-				add_extra_state_shared_building_slots = 2
+				405 = { #Interriver
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 2
+				}
 			}
 		}
 	}
@@ -8413,306 +8450,84 @@ focus_tree = {
 		}
 		completion_reward = {
             #+1 infrastructure in all Herzland provinces
-			#TODO move to event
+			#TODO change to "in x days" -needs testing
 			add_timed_idea = {
 			    idea = ARA_sizeable_spending
 				days = 60
 			}
-			build_railway = {
-                level = 2
-				start_province = 10537
-                target_province = 9195
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 10537
-                target_province = 12691
-                build_only_on_allied = yes
-            }
-			build_railway = {
-                level = 2
-				start_province = 10537
-                target_province = 4573
-                build_only_on_allied = yes
-            }
-			custom_effect_tooltip = ARA_railroad_tooltip
-			hidden_effect = {
-			    #Angriver
-			547 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
+			custom_effect_tooltip = {
+				localization_key = GOY_CETT_after_X_days
+				NUM = "60"
 			}
-			422 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
+			set_country_flag = ARA_emperors_only_achievement_flag
+			effect_tooltip = {
+				build_railway = {
+					level = 2
+					start_province = 10537
+					target_province = 9195
+					build_only_on_allied = yes
 				}
-			}
-			411 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
+				build_railway = {
+					level = 2
+					start_province = 10537
+					target_province = 12691
+					build_only_on_allied = yes
 				}
-			}
-			#Katerin
-			506 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
+				build_railway = {
+					level = 2
+					start_province = 10537
+					target_province = 4573
+					build_only_on_allied = yes
 				}
-			}
-			554 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 547
+							state = 422
+							state = 411
+							state = 506
+							state = 554
+							state = 423
+							state = 665
+							state = 402
+							state = 439
+							state = 398
+							state = 399
+							state = 447
+							state = 378
+							state = 674
+							state = 555
+							state = 437
+							state = 397
+							state = 405
+							state = 382
+							state = 666
+							state = 440
+							state = 441
+							state = 520
+							state = 434
+							state = 498
+							state = 538
+							state = 433
+							state = 497
+							state = 443
+							state = 545
+							state = 546
+							state = 486
+							state = 458
+							state = 424
+							state = 479
+							state = 492
+							state = 568
+							state = 539
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
 				}
-			}
-			423 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Yale
-			665 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			402 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			439 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			398 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Greifemarschen
-			399 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			447 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			378 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Romau
-			674 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Griffonian Empire starting land
-			555 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			437 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			397 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			405 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			382 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Feathisia
-			666 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			440 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			441 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			520 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			434 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			498 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			538 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			433 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			497 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Strawberry
-			443 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			545 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			546 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			486 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			458 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			#Bronzehill
-			424 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			479 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			492 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			568 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			539 = {
-			    add_building_construction = {
-				    type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 			}
 		}
 	}
@@ -8836,7 +8651,7 @@ focus_tree = {
             #Gain cores on Angriver, Katerin, Romau, Yale, Romau, Greifemarschen, Griffonian Empire, Bronzehill, Strawberry, Feathisia.
 			add_political_power = -200
 			custom_effect_tooltip = ARA_herzland_coring_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect = {
 			#Angriver
 			547 = {
@@ -8980,7 +8795,7 @@ focus_tree = {
             #Gain cores of Franmistria, Talouse, Wingbardy and Falcor
 			add_political_power = -200
 			custom_effect_tooltip = ARA_wingbardy_coring_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect = {
 			#Franmistria
 			487 = {
@@ -9091,7 +8906,7 @@ focus_tree = {
 		completion_reward = {
             #Gain cores on Pridea, Rila, Westkeep, Vinovia, Aquileia, Pomovarra, Flowena, Adelart and Greifwald
 			add_political_power = -200
-			#TODO move to event
+			#TODO change to "in x days"
 			custom_effect_tooltip = ARA_aquileia_coring_tooltip
 			hidden_effect = {
 			#Pridea
@@ -9290,7 +9105,7 @@ focus_tree = {
             add_political_power = -150
 			#Get cores of Fezara, Skyfall and Haukland
 			custom_effect_tooltip = ARA_coring_the_west_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect ={
 			#Fezara
 			390 = {
@@ -9549,7 +9364,7 @@ focus_tree = {
             #Get cores on Blackhollow, Brodfeld, Lushi, Gryphia, Gryphus, Hellquil and Longsword. 
 		    add_political_power = -150
 		    custom_effect_tooltip = ARA_coring_the_east_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect ={
 		    #Blackhollow
 		    446 = {
@@ -9784,7 +9599,7 @@ focus_tree = {
             add_political_power = -150
 			#get cores on CYA SIC MIT
 			custom_effect_tooltip = ARA_coring_the_south_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect ={
 			#Cyanolisia
 			507 = {
@@ -10001,7 +9816,7 @@ focus_tree = {
 			#Get cores on Griffonian Republic, Sunstriker Clan, Skynavia and Vedina.
 			country_event = arantiga.056
 			custom_effect_tooltip = ARA_coring_the_north_tooltip
-			#TODO move to event
+			#TODO change to "in x days"
 			hidden_effect ={
 			#Kemerscuck
 			557 = {
@@ -10518,6 +10333,11 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = { #Best wargoal ever
 				limit = {
+					NOT = {
+						original_tag = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
 					any_owned_state = {
 						is_core_of = CTH
 					}
@@ -12092,7 +11912,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_popularity = { ideology = democratic popularity = 0.03 }
-			#TODO get event “Meeting with Moro”
+			country_event = arantiga.257
 		}
 	}
 	shared_focus = {
@@ -12151,7 +11971,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = 0.05 }
-			#TODO get event “Arantigan Crimson”
+			country_event = arantiga.258
 		}
 	}
 	shared_focus = {
@@ -12195,6 +12015,7 @@ focus_tree = {
 		y = 6
 		relative_position_id = ARA_marge_destiny_denied
 		mutually_exclusive = { focus = ARA_marge_socialism_with_monarchist_characteristics }
+		available = { NOT = { has_country_flag = GOY_ARA_commie_conspiracy_flag } } #TODO check if it would look better to make a separate flag or hide them entirely
 
 		cost = 3.00
 		prerequisite = { focus = ARA_marge_guarantee_liberties }
@@ -12204,9 +12025,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Effect: Get event “Overplaying One’s Hand”
-			#Note: Hide effect behind getting event info “Addressing the Nation”
-			#Requirement: Option B was taken in event “Arantigan Crimson”
+			effect_tooltip = {
+				country_event = arantiga.261
+			}
+			hidden_effect = {
+				country_event = arantiga.260
+			}
 		}
 	}
 	shared_focus = {
@@ -12216,6 +12040,7 @@ focus_tree = {
 		y = 6
 		relative_position_id = ARA_marge_destiny_denied
 		mutually_exclusive = { focus = ARA_marge_harmonic_foundations }
+		available = { has_country_flag = GOY_ARA_commie_conspiracy_flag }
 
 		cost = 3.00
 		prerequisite = { focus = ARA_marge_guarantee_liberties }
@@ -12225,9 +12050,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Effect: Get event “Plans within plans”
-			#Note: Hide effect behind fake getting event info “Working with Left”
-			#Requirement: Option A was taken in event “Arantigan Crimson”
+			effect_tooltip = {
+				country_event = arantiga.289
+			}
+			hidden_effect = {
+				country_event = arantiga.259
+			}
 		}
 	}
 	shared_focus = {
@@ -12267,7 +12095,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = ARA_benevolence
+				remove_idea = ARA_benevolence #TODO maybe change ideology as well?
 				add_idea = ARA_marge_parliamentary_monarchy
 			}
 		}
@@ -12391,7 +12219,10 @@ focus_tree = {
 						original_tag = FRN
 					}
 				}
-				#TODO add opinion "loyal allies" +25
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = goy_ARA_loyal_allies_opmod
+				}
 			}
 		}
 	}
@@ -12446,7 +12277,13 @@ focus_tree = {
 					}
 				}
 				leave_faction = yes
-				#TODO Wingbardy gets -25 opinion malus (Traitors) to Arantiga
+				#TODO check if works
+				PREV = {
+					reverse_add_opinion_modifier = {
+						target = ROOT
+						modifier = goy_ARA_traitors_opmod
+					}
+				}
 			}
 			add_war_support = 0.05
 		}
@@ -12508,7 +12345,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = ARA_economic_dependance
 			add_timed_idea = {
-				idea = ARA_cut_ties_with_wingbardy
+				idea = ARA_marge_cut_ties
 				days = 360
 			}
 		}
@@ -12754,16 +12591,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = ARA_marge_reaffirm_pact_ties
 		bypass = {
-			OR = {
-				any_other_country = {
-					original_tag = FAL
-					is_in_faction_with = ROOT
-				} #TODO add direct ownership of karthinian countries to such checks
-				all_country_with_original_tag = {
-					original_tag_to_check = FAL
-					exists = no
-				}
-			}
+			FAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
 		}
 
 		cost = 3.00
@@ -12792,21 +12620,26 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		x = 0
 		y = 4
-		relative_position_id = ARA_marge_reaffirm_pact_ties
-		
+		relative_position_id = ARA_marge_reaffirm_pact_ties		
 		available = {
-			every_other_country = {
-				OR = {
-					original_tag = WNG
-					original_tag = TAL
-					original_tag = FAL
-					original_tag = FRN
-					original_tag = JES
-					original_tag = SIC
-				}
-				OR = {
-					#TODO Own Karthin or have it under your puppet; own or have in faction Wingbardy Francistria Talouse and Falcor
-				}
+			371 = {
+				owns_or_subject_of = yes
+			}
+			OR = {
+				WNG = { is_in_faction_with = ROOT }
+				WNG = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+			OR = {
+				TAL = { is_in_faction_with = ROOT }
+				TAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+			OR = {
+				FAL = { is_in_faction_with = ROOT }
+				FAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+			OR = {
+				FRN = { is_in_faction_with = ROOT }
+				FRN = { all_original_cores_owned_by_ROOT_or_subject = yes }
 			}
 		}
 
@@ -12826,7 +12659,45 @@ focus_tree = {
 			FRN = { add_to_ROOT_potential_cores = yes }
 			JES = { add_to_ROOT_potential_cores = yes }
 			SIC = { add_to_ROOT_potential_cores = yes }
-			#TODO If in faction Francistria, Talouse and Falcor get event “Union with Arantiga?”, if corable nations are puppeted, they are annexed by Arantiga; get event “Bitter Triumph”, load second part of foreign policy focus tree
+			IF = {
+				limit = {
+					any_other_country = {
+						OR = {
+							original_tag = WNG
+							original_tag = TAL
+							original_tag = FAL
+							original_tag = FRN
+							original_tag = JES
+							original_tag = SIC
+						}
+						is_subject_of = ROOT
+					}
+				}
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			}
+			IF = {
+				limit = {
+					any_other_country = {
+						OR = {
+							original_tag = TAL
+							original_tag = FAL
+							original_tag = FRN
+						}
+						AND = {
+							exists = yes
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				PREV = {
+					country_event = arantiga.272
+				}
+			}
+			country_event = arantiga.275
+			#notification about new foci is in the event above
 		}
 	}
 	shared_focus = {
@@ -12835,6 +12706,9 @@ focus_tree = {
 		x = -2
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		allow_branch = {
+			has_completed_focus = ARA_marge_protect_the_south
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_marge_protect_the_south }
@@ -12843,7 +12717,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO FOCI of the second part of the foreign tree
 		}
 	}
 	shared_focus = {
@@ -12852,6 +12726,9 @@ focus_tree = {
 		x = 0
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		allow_branch = {
+			has_completed_focus = ARA_marge_protect_the_south
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_marge_protect_the_south }
@@ -12869,6 +12746,9 @@ focus_tree = {
 		x = 2
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
+		allow_branch = {
+			has_completed_focus = ARA_marge_protect_the_south
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_marge_protect_the_south }
@@ -13106,9 +12986,9 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {	#todo idea
-				remove_idea = ARA_com_wingbardian_ties
-				add_idea = ARA_com_wingbardian_ties2
+			swap_ideas = {
+				remove_idea = ARA_com_ties_cut
+				add_idea = ARA_com_ties_cut_1
 			}
 		}
 	}
@@ -13173,7 +13053,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 			}
 			add_ideas = {
-				ARA_com_min_public_land       #todo idea
+				ARA_com_min_public_land
 			}
 		}
 	}
@@ -13277,8 +13157,8 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			swap_ideas = {	#todo idea
-				remove_idea = ARA_com_wingbardian_ties2
+			swap_ideas = {
+				remove_idea = ARA_com_ties_cut_1
 				add_idea = ARA_com_directed_economy
 			}
 		}
@@ -13466,9 +13346,9 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			swap_ideas = {                               #todo idea
+			swap_ideas = {
 				remove_idea = ARA_com_directed_economy
-				add_idea = ARA_com_directed_economy2
+				add_idea = ARA_com_directed_economy_1
 			}
 		}
 	}
@@ -13479,13 +13359,34 @@ focus_tree = {
 		x = 25
 		y = 0
 
-		cost = 5.00
+		cost = 1.00
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			408 = {
+				add_manpower = -2000
+			}
+			IF = {
+				limit = {
+					has_idea = ARA_com_revolution_2
+				}
+				swap_ideas = {
+					remove_idea = ARA_com_revolution_2
+					add_idea = ARA_com_revolution_3
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = ARA_com_revolution
+					add_idea = ARA_com_revolution_1
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13495,13 +13396,33 @@ focus_tree = {
 		y = 0
 		relative_position_id = ARA_com_continue_democrats_purge
 
-		cost = 5.00
+		cost = 1.00
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_political_power = -50 #TODO consider change
+			add_manpower = -1000
+			IF = {
+				limit = {
+					has_idea = ARA_com_revolution_1
+				}
+				swap_ideas = {
+					remove_idea = ARA_com_revolution_1
+					add_idea = ARA_com_revolution_3
+				}
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = ARA_com_revolution
+					add_idea = ARA_com_revolution_2
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13511,14 +13432,30 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_com_continue_democrats_purge
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_com_continue_democrats_purge }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_stability = 0.03
+			set_province_name = {
+				id = 3756
+				name = GOY_vp_pontelena
+			}
+			set_province_name = {
+				id = 7266
+				name = GOY_vp_sparleos
+			}
+			set_province_name = {
+				id = 1325
+				name = GOY_vp_halbuviros
+			}
 		}
 	}
 	shared_focus = {
@@ -13528,7 +13465,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_com_continue_democrats_purge
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_com_continue_democrats_purge }
 		prerequisite = { focus = ARA_com_get_rid_of_loyalists }
 		search_filters = {}
@@ -13536,7 +13473,11 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_com_revolution_3
+				add_idea = ARA_com_provisionary_dictatorship
+			}
+			country_event = arantiga.200
 		}
 	}
 	shared_focus = {
@@ -13546,14 +13487,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_com_continue_democrats_purge
 
-		cost = 5.00
+		cost = 3.00
 		prerequisite = { focus = ARA_com_get_rid_of_loyalists }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Add generals “Titus Gatius” (Level 3, Skills: 3,3,3,1, Politically Connected) and “Peithon” (Level 2, Skills: 1,1,2,3, Harsh Leader)
 		}
 	}
 	shared_focus = {
@@ -13571,7 +13512,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				set_country_flag = ARA_arantigos_boreas_flag
+			}
+			custom_effect_tooltip = ARA_heraclius_tp
+			add_political_power = 50
+			country_event = arantiga.201
 		}
 	}
 	shared_focus = {
@@ -13589,7 +13535,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			decrease_illiteracy = yes
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_stability = 0.02
 		}
 	}
 	shared_focus = {
@@ -13607,7 +13558,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.203
 		}
 	}
 	shared_focus = {
@@ -13625,7 +13576,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			army_experience = 25
+			add_ideas = ARA_com_militarisation_of_society
+			add_war_support = 0.1
+			#TODO create 3 divisions “Falange Nova” (6 infantry brigades, 1 artillery brigade, seasoned)
 		}
 	}
 	shared_focus = {
@@ -13643,7 +13597,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.202
 		}
 	}
 	shared_focus = {
@@ -13661,7 +13615,17 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			increase_science_base = yes
+			add_tech_bonus = {
+				name = ARA_com_study_our_past
+				bonus = 0.5
+				uses = 3
+				category = race_tech
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 0.5
+			}
 		}
 	}
 	shared_focus = {
@@ -13679,7 +13643,11 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = 30000
+			swap_ideas = {
+				remove_idea = ARA_com_militarisation_of_society
+				add_idea = ARA_com_militarisation_of_society_1
+			}
 		}
 	}
 	shared_focus = {
@@ -13697,7 +13665,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_country_leader_trait = GoY_pater_patriae
 		}
 	}
 	#
@@ -13707,14 +13675,18 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = ARA_com_continue_democrats_purge
+		available = {
+			has_completed_focus = ARA_com_reestablish_leadership
+		}
 
-		cost = 5.00
+		cost = 2.00
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_war_support = 0.1
+			add_manpower = 25000
 		}
 	}
 	shared_focus = {
@@ -13724,14 +13696,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_com_crimson_tide_rises
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_crimson_tide_rises }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.205
 		}
 	}
 	shared_focus = {
@@ -13741,14 +13713,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = ARA_com_crimson_tide_rises
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_crimson_tide_rises }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.204
 		}
 	}
 	shared_focus = {
@@ -13757,8 +13729,18 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = ARA_com_crimson_tide_rises
+		available = {
+			any_neighbor_country = {
+				any_owned_state = {
+					is_core_of = TAL
+				}
+			}
+		}
+		bypass = {
+			TAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_formulate_southern_strategy }
 		prerequisite = { focus = ARA_com_outline_war_plan }
 		search_filters = {}
@@ -13766,7 +13748,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = TAL
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { TAL.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13775,8 +13784,18 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARA_com_crimson_tide_rises
+		available = {
+			any_neighbor_country = {
+				any_owned_state = {
+					is_core_of = FRN
+				}
+			}
+		}
+		bypass = {
+			FRN = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_formulate_southern_strategy }
 		prerequisite = { focus = ARA_com_outline_war_plan }
 		search_filters = {}
@@ -13784,7 +13803,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = FRN
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { FRN.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13793,8 +13839,18 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = ARA_com_crimson_tide_rises
+		available = {
+			any_neighbor_country = {
+				any_owned_state = {
+					is_core_of = WNG
+				}
+			}
+		}
+		bypass = {
+			WNG = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_formulate_southern_strategy }
 		prerequisite = { focus = ARA_com_outline_war_plan }
 		search_filters = {}
@@ -13802,7 +13858,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = WNG
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { WNG.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13811,8 +13894,18 @@ focus_tree = {
 		x = -1
 		y = 3
 		relative_position_id = ARA_com_crimson_tide_rises
+		available = {
+			any_neighbor_country = {
+				any_owned_state = {
+					is_core_of = FAL
+				}
+			}
+		}
+		bypass = {
+			FAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_reconquest_of_talonsia }
 		prerequisite = { focus = ARA_com_liberation_of_piudmont }
 		search_filters = {}
@@ -13820,7 +13913,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = FAL
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { FAL.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13829,8 +13949,18 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = ARA_com_crimson_tide_rises
+		available = {
+			any_neighbor_country = {
+				any_owned_state = {
+					is_core_of = FAL
+				}
+			}
+		}
+		bypass = {
+			SIC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_liberation_of_piudmont }
 		prerequisite = { focus = ARA_com_march_on_karthin }
 		search_filters = {}
@@ -13838,7 +13968,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = SIC
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { SIC.core_states }
+					}
+				}
+			}
 		}
 	}
 	#
@@ -13848,6 +14005,9 @@ focus_tree = {
 		x = -2
 		y = 6
 		relative_position_id = ARA_com_continue_democrats_purge
+		available = {
+			has_completed_focus = ARA_com_karthin_proclamation
+		}
 
 		cost = 5.00
 		search_filters = {}
@@ -13855,7 +14015,8 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_stability = 0.05
+			country_event = arantiga.206 
 		}
 	}
 	shared_focus = {
@@ -13872,7 +14033,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = no_poverty
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty5
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty4
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty3
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty2
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty1
+				add_idea = GOY_ara_austere_society
+			}
+			swap_ideas = {
+				remove_idea = poverty
+				add_idea = GOY_ara_austere_society
+			}
 		}
 	}
 	shared_focus = {
@@ -13881,6 +14069,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ARA_com_arantigan_virtues
+		available = {
+			has_idea = no_lack_of_scientists
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_arantigan_virtues }
@@ -13889,7 +14080,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = no_lack_of_scientists
+				add_idea = GOY_ara_enlightened_minds
+			}
 		}
 	}
 	shared_focus = {
@@ -13898,6 +14092,9 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = ARA_com_arantigan_virtues
+		available = {
+			has_idea = ARA_com_militarisation_of_society_1
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_temperantia }
@@ -13907,7 +14104,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_com_militarisation_of_society_1
+				add_idea = ARA_com_militarisation_of_society_2
+			}
 		}
 	}
 	shared_focus = {
@@ -13925,7 +14125,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_ideas = ARA_com_national_supremacy
 		}
 	}
 	shared_focus = {
@@ -13943,7 +14143,13 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			news_event = arantiga_news.13
 		}
 	}
 	#
@@ -13953,6 +14159,14 @@ focus_tree = {
 		x = 4
 		y = 6
 		relative_position_id = ARA_com_continue_democrats_purge
+		available = {
+			has_completed_focus = ARA_com_karthin_proclamation
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			has_manpower > 100000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		search_filters = {}
@@ -13960,7 +14174,34 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO move effects to "in x days" - like Year of National Effort. Also the whole focus is kind of in vain as the rewards are shit compared to costs
+			add_manpower = -100000
+			add_timed_idea = {
+				idea = ARA_com_burden_of_the_plan
+				days = 90
+			}
+			408 = {
+				add_manpower = 250000
+				set_state_category = city
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 2
+				add_victory_points = {
+					province = 7266
+					value = 10
+				}
+				add_victory_points = {
+					province = 3756
+					value = 12
+				}
+				add_victory_points = {
+					province = 1325
+					value = 8
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13969,6 +14210,27 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARA_com_karthinian_development_plan
+		available = {
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			all_state = {
+				OR = {
+					NOT = {
+						state = 481
+						state = 410
+						state = 526
+						state = 515
+						state = 409
+						state = 529
+						state = 534
+					}
+					owns_or_subject_of = ROOT
+				}
+			}
+			has_manpower > 100000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_karthinian_development_plan }
@@ -13977,7 +14239,42 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -100000
+			add_timed_idea = {
+				idea = ARA_com_burden_of_the_plan
+				days = 120
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 481
+						state = 410
+						state = 526
+						state = 515
+						state = 409
+						state = 529
+						state = 534
+					}
+				}
+				add_building_construction = {
+				    type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 1
+				add_manpower = 100000
+			}
+			515 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3989 #TODO find good province
+					}
+				}
+			}
+			add_ideas = ARA_com_karthinian_breadbasket #TODO reconsider. Make into a dynmodifier that exists in a state but provides country-wide buffs if possible (+25% population growth speed, +5% recruitable population factor, -5% consumer goods factor)
 		}
 	}
 	shared_focus = {
@@ -13986,6 +14283,24 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARA_com_karthinian_development_plan
+		available = {
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			all_state = {
+				OR = {
+					NOT = {
+						state = 366
+						state = 388
+						state = 368
+						state = 367
+					}
+					owns_or_subject_of = ROOT
+				}
+			}
+			has_manpower > 100000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_karthinian_development_plan }
@@ -13994,7 +14309,76 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -100000
+			add_timed_idea = {
+				idea = ARA_com_burden_of_the_plan
+				days = 120
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 366
+						state = 388
+						state = 368
+						state = 367
+					}
+				}
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			    add_extra_state_shared_building_slots = 2
+				add_dynamic_modifier = { modifier = ARA_com_industrial_zone }
+			}
+			367 = {
+				add_resource = {
+					type = aluminium
+					amount = 24
+				}
+				add_resource = {
+					type = coal
+					amount = 20
+				}
+			}
+			366 = {
+				add_manpower = 250000
+				set_state_category = large_city
+				add_resource = {
+					type = aluminium
+					amount = 32
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+				add_resource = {
+					type = coal
+					amount = 18
+				}
+			}
+			368 = {
+				add_resource = {
+					type = chromium
+					amount = 22
+				}
+			}
+			388 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = coal
+					amount = 8
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14003,6 +14387,27 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ARA_com_karthinian_development_plan
+		available = {
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			all_state = {
+				OR = {
+					NOT = {
+						state = 375
+						state = 374
+						state = 370
+						state = 372
+						state = 358
+						state = 357
+						state = 371
+					}
+					owns_or_subject_of = ROOT
+				}
+			}
+			has_manpower > 25000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_transform_folino_valley }
@@ -14012,7 +14417,28 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -25000
+			add_timed_idea = { #TODO reconsider. Shorten, vary oil production and add synthetic refineries
+				idea = ARA_com_burden_of_the_plan
+				days = 180
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 375
+						state = 374
+						state = 370
+						state = 372
+						state = 358
+						state = 357
+						state = 371
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 25
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14021,6 +14447,25 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = ARA_com_karthinian_development_plan
+		available = {
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			all_state = {
+				OR = {
+					NOT = {
+						state = 518
+						state = 570
+						state = 446
+						state = 606
+						state = 489
+					}
+					owns_or_subject_of = ROOT
+				}
+			}
+			has_manpower > 200000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_transform_folino_valley }
@@ -14030,7 +14475,35 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -200000
+			add_timed_idea = { #TODO reconsider. Vary production
+				idea = ARA_com_burden_of_the_plan
+				days = 120
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 518
+						state = 570
+						state = 446
+						state = 606
+						state = 489
+					}
+				}
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+				add_resource = {
+					type = crystals
+					amount = 15
+				}
+				add_dynamic_modifier = { modifier = ARA_com_prison_mines }
+			}
 		}
 	}
 	shared_focus = {
@@ -14039,6 +14512,27 @@ focus_tree = {
 		x = 1
 		y = 3
 		relative_position_id = ARA_com_karthinian_development_plan
+		available = {
+			NOT = {
+				has_idea = ARA_com_burden_of_the_plan
+			}
+			all_state = {
+				OR = {
+					NOT = {
+						state = 369
+						state = 362
+						state = 372
+						state = 528
+						state = 445
+						state = 371
+						state = 530
+					}
+					owns_or_subject_of = ROOT
+				}
+			}
+			has_manpower > 500000
+			num_of_civilian_factories_available_for_projects > 30
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_black_gold_of_the_south }
@@ -14048,7 +14542,76 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -500000
+			add_timed_idea = { #TODO reconsider. Vary production
+				idea = ARA_com_burden_of_the_plan
+				days = 360
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 369
+						state = 362
+						state = 372
+						state = 528
+						state = 445
+						state = 371
+						state = 530
+					}
+				}
+				add_building_construction = {
+				    type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				IF = {
+					limit = {
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 4
+				}
+				ELSE = {
+					add_extra_state_shared_building_slots = 3
+				}
+				add_building_construction = {
+				    type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			371 = {
+				add_dynamic_modifier = { modifier = ARA_com_city_of_the_worlds_desire }
+			}
+			369 = {
+				add_manpower = 200000
+				set_state_category = metropolis
+			}
+			445 = {
+				add_manpower = 200000
+				set_state_category = metropolis
+			}
+			372 = {
+				add_manpower = 100000
+				set_state_category = large_city
+			}
+			530 = {
+				add_manpower = 100000
+				set_state_category = large_city
+			}
+			528 = {
+				add_manpower = 100000
+				set_state_category = large_town
+			}
 		}
 	}
 	#
@@ -14074,19 +14637,26 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			FRN = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			TAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			FAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			SIC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			WNG = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
-		cost = 5.00
+		cost = 2.00
 		prerequisite = { focus = ARA_com_karthin_proclamation }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.207
 		}
 	}
 	shared_focus = {
-		id = ARA_com_imperator_arantigae #Empire of Arantigans - latinize
+		id = ARA_com_imperator_arantigae #TODO Empire of Arantigans - latinize
 		icon = GFX_goal_unknown
 		x = 1
 		y = 1
@@ -14099,7 +14669,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_com_provisionary_dictatorship
+				add_idea = ARA_com_imperium_publicum
+			}
 		}
 	}
 	shared_focus = {
@@ -14116,7 +14689,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_research_slot = 1
 		}
 	}
 	shared_focus = {
@@ -14134,7 +14707,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_ideas = ARA_com_unstoppable_conquest
 		}
 	}
 	shared_focus = {
@@ -14151,7 +14724,9 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = 200000
+			add_stability = -0.05
+			#TODO spawn some penal battalion units and enable training those ALSO ADD MACHINEGUNS TO ALL PENBATS IN THE SUBMOD
 		}
 	}
 	shared_focus = {
@@ -14169,7 +14744,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			declare_war_on = {
+				type = take_state_focus
+				target = EQC
+				generator = EQC.core_states
+			}
+			#TODO enable decision to peace out with Equestria/Lunar Empire if New Mareland has been capitulated (like Lysimachus and Arantigos can)
 		}
 	}
 	shared_focus = {
@@ -14178,6 +14758,9 @@ focus_tree = {
 		x = -3
 		y = 4
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			EQC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_conquer_the_colony }
@@ -14186,7 +14769,42 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_subject_country = {
+				limit = {
+					any_owned_state = {
+						is_core_of = EQC
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					state = 362
+					state = 356
+				}
+				add_manpower = -100000 #TODO add save an restore manpower functions
+			}
+			every_state = {
+				limit = {
+					state = 355
+					state = 359
+					state = 358
+					state = 357
+					state = 354
+					state = 363
+					state = 364
+					state = 365
+					state = 361
+					state = 360
+				}
+				add_manpower = -10000
+			} #TODO Where do these ponies go though? Are they really all killed off?
+			country_event = arantiga.208
 		}
 	}
 	shared_focus = {
@@ -14195,6 +14813,22 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ARA_com_karthin_proclamation
+		bypass = {
+			AND = {
+				BOI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				BAN = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				EYR = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				ERI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				AVI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				LAK = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+		}
+		will_lead_to_war_with = BOI
+		will_lead_to_war_with = BAN
+		will_lead_to_war_with = EYR
+		will_lead_to_war_with = ERI
+		will_lead_to_war_with = AVI
+		will_lead_to_war_with = LAK
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_scientific_supremacy }
@@ -14205,7 +14839,39 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = BOI
+							is_core_of = BAN
+							is_core_of = EYR
+							is_core_of = ERI
+							is_core_of = AVI
+							is_core_of = LAK
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
+						type = take_state_focus
+						target = PREV
+						generator = { BOI.core_states BAN.core_states EYR.core_states ERI.core_states AVI.core_states LAK.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14214,6 +14880,14 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = ARA_com_karthin_proclamation
+		will_lead_to_war_with = MIT
+		will_lead_to_war_with = CYA
+		bypass = {
+			AND = {
+				CYA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				MIT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_redeem_our_enemies }
@@ -14222,7 +14896,67 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			IF = {
+				limit = {
+					OR = {
+						MIT = { is_in_faction_with = ROOT }
+						MIT = { is_subject = no has_government = communism }
+					}
+				}
+				MIT = {
+					country_event = arantiga.209
+				}
+			}
+			ELSE = {
+				create_wargoal = {
+					type = annex_everything
+					target = MIT
+				}
+			}
+			IF = {
+				limit = {
+					CYA = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CYA
+				}
+			}
+			IF = {
+				limit = {
+					CYA = { exists = no }
+					CYA = { exists = no }
+				}
+				every_other_country = { #The universal wargoal generator
+					limit = {
+						NOT = {
+							has_war_with = ROOT
+							is_subject_of = ROOT
+						}
+						any_owned_state = {
+							OR = {
+								is_core_of = MIT
+								is_core_of = CYA
+							}
+						}
+					}
+					hidden_effect = {
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = ROOT
+							value = 50
+						}
+					}
+					display_individual_scopes = yes
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { MIT.core_states CYA.core_states }
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14231,6 +14965,39 @@ focus_tree = {
 		x = 3
 		y = 4
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			OR = {
+				AND = {
+					CYA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+					MIT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				}
+				AND = {
+					MIT = {
+						is_in_faction_with = ROOT
+					}
+					OR = {
+						CYA = {
+							is_subject_of = MIT
+						}
+						CYA = {
+							is_subject_of = ROOT
+						}
+						MIT = {
+							owns_state = 507
+							owns_state = 510
+							owns_state = 511
+							owns_state = 671
+						}
+						ROOT = {
+							owns_state = 507
+							owns_state = 510
+							owns_state = 511
+							owns_state = 671
+						}
+					}
+				}
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_deal_with_bulls }
@@ -14239,7 +15006,77 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			IF = {
+				limit = {
+					AND = {
+						CYA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+						MIT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+					}
+				}
+				IF = {
+					limit = {
+						MIT = { exists = no }
+					}
+					release_puppet = MIT
+				}
+				MIT = {
+					#TODO release Asterion as “Minotaurian Autonomy” under who?
+				}
+				#TODO save and restore manpower for MIT
+				#TODO rename Thymaushafen to “Sparleos Nova” #Sparleos Novum probably
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 671
+						}
+					}
+					add_manpower = -500000
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 510
+							state = 511
+							state = 507
+						}
+					}
+					add_manpower = -100000
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 386
+							state = 463
+						}
+					}
+					add_manpower = 250000
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 671
+							state = 510
+							state = 511
+							state = 507
+						}
+					}
+					add_resistance = 50
+				}
+			}
+			ELSE = { #if MIT is free and in faction
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = CYA
+							is_core_of = MIT
+						}
+					}
+					transfer_state_to = MIT
+				}
+			}
+			MIT = {
+				CYA = { add_to_PREV_potential_original_cores = yes }
+			}
 		}
 	}
 	shared_focus = {
@@ -14248,6 +15085,22 @@ focus_tree = {
 		x = -1
 		y = 5
 		relative_position_id = ARA_com_karthin_proclamation
+		will_lead_to_war_with = JER
+		will_lead_to_war_with = POM
+		will_lead_to_war_with = JES
+		will_lead_to_war_with = FLO
+		will_lead_to_war_with = AET
+		will_lead_to_war_with = HEL
+		bypass = {
+			AND = {
+				JER = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				POM = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				JES = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				FLO = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				AET = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				HEL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_claim_the_cradle }
@@ -14256,7 +15109,39 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = JER
+							is_core_of = POM
+							is_core_of = JES
+							is_core_of = FLO
+							is_core_of = AET
+							is_core_of = HEL
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { JER.core_states POM.core_states JES.core_states FLO.core_states AET.core_states HEL.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14265,6 +15150,28 @@ focus_tree = {
 		x = 1
 		y = 5
 		relative_position_id = ARA_com_karthin_proclamation
+		will_lead_to_war_with = GRI
+		will_lead_to_war_with = ROU
+		will_lead_to_war_with = KAT
+		will_lead_to_war_with = ANG
+		will_lead_to_war_with = YAL
+		will_lead_to_war_with = PYT
+		will_lead_to_war_with = BRZ
+		will_lead_to_war_with = STW
+		will_lead_to_war_with = FEA
+		bypass = {
+			AND = {
+				GRI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				ROU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				KAT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				ANG = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				YAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				PYT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				BRZ = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				STW = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				FEA = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_claim_the_cradle }
@@ -14273,7 +15180,42 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = GRI
+							is_core_of = ROU
+							is_core_of = KAT
+							is_core_of = ANG
+							is_core_of = YAL
+							is_core_of = PYT
+							is_core_of = BRZ
+							is_core_of = STW
+							is_core_of = FEA
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { GRI.core_states ROU.core_states KAT.core_states ANG.core_states YAL.core_states PYT.core_states BRZ.core_states STW.core_states FEA.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14282,6 +15224,14 @@ focus_tree = {
 		x = -4
 		y = 6
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			JER = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			POM = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			JES = { all_original_cores_owned_by_ROOT_or_subject = yes } #TODO check if JRR Westkeep is needed
+			FLO = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			AET = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			HEL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_enlighten_the_west }
@@ -14291,7 +15241,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.211
 		}
 	}
 	shared_focus = {
@@ -14300,6 +15250,12 @@ focus_tree = {
 		x = -2
 		y = 6
 		relative_position_id = ARA_com_karthin_proclamation
+		bypass = {
+			FEZ = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			TRD = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
+		will_lead_to_war_with = FEZ
+		will_lead_to_war_with = TRD
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_enlighten_the_west }
@@ -14309,7 +15265,35 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = FEZ
+							is_core_of = TRD
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { FEZ.core_states TRD.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14318,6 +15302,16 @@ focus_tree = {
 		x = 0
 		y = 6
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			AND = {
+				BOI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				BAN = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				EYR = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				ERI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				AVI = { all_original_cores_owned_by_ROOT_or_subject = yes }
+				LAK = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_enlighten_the_west }
@@ -14327,7 +15321,60 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_subject_country = {
+				limit = {
+					OR = {
+						original_tag = BOI
+						original_tag = BAN
+						original_tag = EYR
+						original_tag = ERI
+						original_tag = AVI
+						original_tag = LAK
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			389 = {
+				add_manpower = 250000
+				add_building_construction = {
+				    type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+				    type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+				    type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			BOI = { add_to_ROOT_potential_cores = yes } #changed from instacoring
+			BAN = { add_to_ROOT_potential_cores = yes }
+			EYR = { add_to_ROOT_potential_cores = yes }
+			ERI = { add_to_ROOT_potential_cores = yes }
+			AVI = { add_to_ROOT_potential_cores = yes }
+			LAK = { add_to_ROOT_potential_cores = yes }
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = EYR
+						is_core_of = ERI
+						is_core_of = AVI
+					}
+				}
+				add_dynamic_modifier = { modifier = ARA_com_verenia_provincia }
+			}
 		}
 	}
 	shared_focus = {
@@ -14336,6 +15383,25 @@ focus_tree = {
 		x = 2
 		y = 6
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			any_neighbor_country = {
+				OR = {
+					owns_state = 537
+					owns_state = 553
+					owns_state = 633
+					owns_state = 634
+					owns_state = 505
+					owns_state = 540
+					owns_state = 552
+				}
+			}
+		}
+		bypass = {
+			505 = { owns_or_subject_of = yes }
+			540 = { owns_or_subject_of = yes }
+			552 = { owns_or_subject_of = yes }
+			HLQ = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_enlighten_the_west }
@@ -14345,7 +15411,37 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = HLQ
+							state = 505
+							state = 540
+							state = 552
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { HLQ.core_states 505 540 552 } #TODO check if mixing works
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14354,6 +15450,15 @@ focus_tree = {
 		x = 4
 		y = 6
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			ANG = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			KAT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			YAL = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			ROU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			owns_or_subject_of = 382
+			owns_or_subject_of = 397
+			owns_or_subject_of = 674
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_enlighten_the_west }
@@ -14363,7 +15468,24 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_state = {
+				limit = {
+					OR = {
+						state = 382
+						state = 397
+					}
+				}
+				add_core_of = ROOT
+				add_dynamic_modifier = { modifier = ARA_com_northern_capitals }
+			}
+			674 = {
+				add_core_of = ROOT
+			}
+			ANG = { add_to_ROOT_potential_cores = yes } #changed from instacoring
+			KAT = { add_to_ROOT_potential_cores = yes }
+			YAL = { add_to_ROOT_potential_cores = yes }
+			ROU = { add_to_ROOT_potential_cores = yes }
+			country_event = arantiga.212
 		}
 	}
 	shared_focus = {
@@ -14381,7 +15503,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Release Bronzehill + provinces 555 and 437 as “Ravensburg Prelature” with Prelate Gunhild as leader, release puppet Feathisia, Strawberry, Greiffenmarschen, Adelart, Greifwald, Fezara and Skyfall + province 405 as “Feathisia Prefecture” with Edgar Pechvogel as leader,
 		}
 	}
 	shared_focus = {
@@ -14390,6 +15512,26 @@ focus_tree = {
 		x = -1
 		y = 7
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			any_neighbor_country = {
+				OR = {
+					owns_state = 659
+					owns_state = 581
+					owns_state = 432
+					owns_state = 429
+					owns_state = 522
+					owns_state = 562
+				}
+			}
+		}
+		bypass = {
+			HAU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			MNC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			FAT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			VED = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			SRS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			NTR = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_finish_lowland_conquest }
@@ -14399,7 +15541,39 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = HAU
+							is_core_of = MNC
+							is_core_of = FAT
+							is_core_of = VED
+							is_core_of = SRS
+							is_core_of = NTR
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { HAU.core_states MNC.core_states FAT.core_states VED.core_states SRS.core_states NTR.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14408,6 +15582,24 @@ focus_tree = {
 		x = 1
 		y = 7
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			any_neighbor_country = {
+				OR = {
+					owns_state = 593
+					owns_state = 590
+					owns_state = 508
+					owns_state = 598
+					owns_state = 512
+				}
+			}
+		}
+		bypass = {
+			LUS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRW = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			BRF = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRY = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_ancestral_homeland }
@@ -14417,7 +15609,38 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = LUS
+							is_core_of = GRW
+							is_core_of = BRF
+							is_core_of = GRY
+							is_core_of = GRU
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { LUS.core_states GRW.core_states BRF.core_states GRY.core_states GRU.core_states }
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14426,6 +15649,10 @@ focus_tree = {
 		x = 3
 		y = 7
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			HLQ = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			LNS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_conquest_of_the_marches }
@@ -14435,7 +15662,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Release Hellquil and Longsword as “Vartai March” with River Breeze as leader;
 		}
 	}
 	shared_focus = {
@@ -14444,6 +15671,14 @@ focus_tree = {
 		x = -2
 		y = 8
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			HAU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			MNC = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			FAT = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			VED = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			SRS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			NTR = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_new_order_in_herzland }
@@ -14453,7 +15688,8 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			#TODO Release Hyperborean Protectorate with Tir Deighe, Skynavian + provinces 430 and 459. Release Himmelia Prefecture from rest of Vedinian, Republican, Sunstriker and Haukland provinces,
+			country_event = arantiga.213
 		}
 	}
 	shared_focus = {
@@ -14462,6 +15698,10 @@ focus_tree = {
 		x = 0
 		y = 8
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			has_manpower > 100000
+			num_of_civilian_factories_available_for_projects > 60
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_conquer_grifonia_ultima }
@@ -14471,7 +15711,12 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			add_manpower = -100000
+			add_timed_idea = {
+				idea = ARA_com_temple_construction
+				days = 360
+			}
+			#after idea is removed, add monument in Sparleto “The Grand Temple of Arantigos” (commie version)
 		}
 	}
 	shared_focus = {
@@ -14480,6 +15725,13 @@ focus_tree = {
 		x = 2
 		y = 8
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			LUS = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRW = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			BRF = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRY = { all_original_cores_owned_by_ROOT_or_subject = yes }
+			GRU = { all_original_cores_owned_by_ROOT_or_subject = yes }
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_in_steps_of_sydios }
@@ -14489,7 +15741,36 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			LUS = { add_to_ROOT_potential_cores = yes }
+			GRW = { add_to_ROOT_potential_cores = yes }
+			BRF = { add_to_ROOT_potential_cores = yes }
+			GRY = { add_to_ROOT_potential_cores = yes }
+			GRU = { add_to_ROOT_potential_cores = yes }
+			508 = { #TODO Kivessin changes name to Karthinia Nova
+				add_manpower = 500000
+				set_state_category = metropolis
+			}
+			every_state = {
+				limit = {
+					owns_or_subject_of = ROOT
+					is_core_of = LUS
+				}
+				add_dynamic_modifier = { modifier = ARA_com_evi_superior_provincia }
+			}
+			every_state = {
+				limit = {
+					owns_or_subject_of = ROOT
+					is_core_of = GRY
+				}
+				add_dynamic_modifier = { modifier = ARA_com_evi_inferior_provincia }
+			}
+			every_state = {
+				limit = {
+					owns_or_subject_of = ROOT
+					is_core_of = GRY
+				}
+				add_dynamic_modifier = { modifier = ARA_com_cosaci_foedus }
+			}
 		}
 	}
 	shared_focus = {
@@ -14508,7 +15789,10 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = ARA_com_stratified_society
+				add_idea = ARA_com_stratified_society_1
+			}
 		}
 	}
 	shared_focus = {
@@ -14517,6 +15801,11 @@ focus_tree = {
 		x = 0
 		y = 9
 		relative_position_id = ARA_com_karthin_proclamation
+		available = {
+			532 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
 
 		cost = 5.00
 		prerequisite = { focus = ARA_com_divide_the_north }
@@ -14527,7 +15816,51 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = {
+				localization_key = nuclear_facility_construction_tt
+				temp_facility_state_loc = "[532.GetName]"
+				temp_facility_province_loc = "[532.GetCapitalVictoryPointName]"
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						532 = {
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
+						}
+					}
+					532 = {
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							instant_build = yes
+							province = 9604 #TODO Select province
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							has_resources_amount = {
+								resource = crystals
+								amount > 10
+								delivered = yes
+							}
+						}
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1.0
+			}
 		}
 	}
 	shared_focus = {
@@ -14545,7 +15878,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			
+			country_event = arantiga.214
 		}
 	}
 

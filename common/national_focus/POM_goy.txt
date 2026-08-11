@@ -1173,10 +1173,12 @@
 	            target = AET
 			}
 			hidden_effect = {
-				every_other_country = { #Best wargoal ever
+				every_other_country = { #The universal wargoal generator
 					limit = {
 						NOT = {
-							has_war_with = POM
+							original_tag = ROOT
+							has_war_with = ROOT
+							is_subject_of = ROOT
 						}
 						any_owned_state = {
 							OR = {
@@ -1185,10 +1187,19 @@
 							}
 						}
 					}
+					hidden_effect = {
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = ROOT
+							value = 50
+						}
+					}
+					display_individual_scopes = yes
 					ROOT = {
 						create_wargoal = {
-							type = annex_everything
+							type = take_state_focus
 							target = PREV
+							generator = { HEL.core_states AET.core_states }
 						}
 					}
 				}
@@ -1255,21 +1266,31 @@
 		        type = annex_everything
 	            target = JER
 			}
-			hidden_effect = {
-				every_other_country = { #Best wargoal ever
-					limit = {
-						NOT = {
-							has_war_with = POM
-						}
-						any_owned_state = {
-							is_core_of = JER
-						}
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					NOT = {
+						original_tag = ROOT
+						has_war_with = ROOT
+						is_subject_of = ROOT
 					}
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
+					any_owned_state = {
+						is_core_of = JER
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { JER.core_states }
+						expire = 0
 					}
 				}
 			}
@@ -2991,48 +3012,36 @@
 		will_lead_to_war_with = FEZ
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			IF = {
-			    limit = {
-				    TRD = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = TRD
-			    }
-				else = {
-					every_other_country = { #Best wargoal ever
-						limit = {
-							any_owned_state = {
-								OR = {
-									is_core_of = TRD
-									is_core_of = FEZ
-								}
-							}
+			every_other_country = { #The universal wargoal generator
+					limit = {
+						NOT = {
+							original_tag = ROOT
+							has_war_with = ROOT
+							is_subject_of = ROOT
 						}
-						ROOT = {
-							declare_war_on = {
-								type = annex_everything
-								target = PREV
+						any_owned_state = {
+							OR = {
+								is_core_of = TRD
+								is_core_of = FEZ
 							}
 						}
 					}
-				}
-			}
-			IF = {
-			    limit = {
-				    FEZ = {
-					    exists = yes
+					hidden_effect = {
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = ROOT
+							value = 50
+						}
+					}
+					display_individual_scopes = yes
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { TRD.core_states FEZ.core_states }
+						}
 					}
 				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = FEZ
-			    }
-				else = {
-				}
-			}
 		}
 	}
 	shared_focus = {
@@ -11132,27 +11141,7 @@
 	}
 	shared_focus = {
 		id = POM_slay_the_great_maar
-		icon = {
-			trigger = {
-				has_global_flag = JER_revolution_ended_2 
-			}
-			value = GFX_goal_JER_use_veranys_reputation
-		}
-		icon = {
-			trigger = {
-				has_global_flag = JER_revolution_ended 
-			}
-			value = GFX_goal_JER_viviene_triumphant
-		}
-		icon = {
-			trigger = {
-				NOT = {
-					has_global_flag = JER_revolution_ended
-					has_global_flag = JER_revolution_ended_2
-				}
-			}
-			value = GFX_goal_gaw_attack_aquileia
-		}
+		icon = GFX_goal_gaw_attack_aquileia
 		x = 2
 		y = 3
 		cost = 2.00

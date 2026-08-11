@@ -1,5 +1,7 @@
 ﻿l_english:
 
+GOY_unlocks_new_focuses_tt:0 "\n§YNew Foci§! become available.\n"
+
 # Paragraph breaks #
 GOY_newline_parabreak_5: "\n     "
 GOY_newline_parabreak_10: "\n          "
@@ -33,6 +35,11 @@ tactic_attacker_GOY_undead_monsters:0 "Unleash Undead Aberrations"
 tactic_defender_GOY_meat_wall:0 "Meat Wall Defence"
 tactic_defender_tw_GOY_meat_wall:0 "Leave the Undead Behind"
 
+#Custom Bindable Tooltips
+GOY_CETT_after_X_days:0 "\n§Y$NUM$ days later§!:"
+GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL: "[ROOT.GetFlag]§Y[ROOT.GetName]§! Gains $WARGOAL|Y$ war goal against this country.\n"
+GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR: "[ROOT.GetFlag]§Y[ROOT.GetName]§! declares war on this country.\n"
+
 #Debug events
 goy_debug.001.t:0 "Choose faction"
 goy_debug.001.d:0 "Factions to form:"
@@ -45,6 +52,18 @@ goy_debug.002.d:0 "Factions to form:"
 goy_debug.002.a:0 "Pomovarran Pact (Bronze Pact)"
 goy_debug.002.b:0 "Pomovarran Dominion"
 goy_debug.002.c:0 "Aetian League"
+goy_debug.003.t:0 "Choose Arantiga's Focus Tree"
+goy_debug.003.d:0 "Available trees related to Dorotheos:"
+goy_debug.003.a:0 "Dorotheos' Coup"
+goy_debug.003.b:0 "The Three Giants"
+goy_debug.003.c:0 "Empire of Arantigos II"
+goy_debug.003.e:0 "Non-Dorothean trees"
+goy_debug.004.t:0 "Choose Arantiga's Focus Tree"
+goy_debug.004.d:0 "Available trees not related to Dorotheos:"
+goy_debug.004.a:0 "Chaos tree (Doro died in the Abyss)"
+goy_debug.004.b:0 "Margareth's tree"
+goy_debug.004.c:0 "Ciriaco's tree"
+goy_debug.004.e:0 "Dorothean trees"
 
 #Faction-related things
 goy_most_civilian_factories_of_majors_var:0 "Highest number of civilian factories out of all major countries"

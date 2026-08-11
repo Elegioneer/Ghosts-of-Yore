@@ -2037,7 +2037,6 @@
 				}
 			}
 		}
-		#todo Flowerino-Erie Railway Pomovarra-Pridea Railway
 		POM_goy_fregneux_junction = {
 			icon = GFX_decision_generic_train
 			cost = 60
@@ -3344,7 +3343,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_VED_states = yes
@@ -3425,7 +3424,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_FRN_states = yes
@@ -3520,7 +3519,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_MIT_states = yes
@@ -3605,7 +3604,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_GRU_states = yes
@@ -3683,7 +3682,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_HLQ_states = yes
@@ -3763,7 +3762,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					OR = {
@@ -3815,7 +3814,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_OLV_states = yes
@@ -3896,7 +3895,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					AND = {
@@ -3991,7 +3990,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					AND = {
@@ -4077,7 +4076,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					OR = {
@@ -4122,7 +4121,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					OR = {
@@ -4172,7 +4171,7 @@
 			ai_will_do = {
 				factor = 1
 			}
-			highlight_states = { #todo fix all highlights, see how they look in-game
+			highlight_states = { 
 				#highlight_color_before_active = 2
 				highlight_states_trigger = {
 					goy_morel_dominion_FRN_EQC_states = yes

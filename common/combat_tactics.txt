@@ -79,6 +79,8 @@ tactic_defender_GOY_meat_wall = {
 		is_attacker = no
 	}
 	
+	active = no
+	
 	base =  { factor = 4 }
 	picture = tactic_defender_GOY_meat_wall
 	
@@ -94,6 +96,8 @@ tactic_defender_tw_GOY_meat_wall = {
 		is_attacker = no
 		phase = tactical_withdrawal
 	}
+	
+	active = no
 	
 	base =  { factor = 4 }
 	picture = tactic_defender_tw_GOY_meat_wall

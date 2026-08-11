@@ -555,7 +555,7 @@ leader_traits = {
 		research_speed_factor = 0.05		
 		conscription_factor = -0.1		
 	}
-	GoY_commissar_arnament = {
+	GoY_commissar_arnament = { #commissar_armament Whoops!
 		random = no
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
@@ -575,5 +575,12 @@ leader_traits = {
 		resistance_target = -0.05
 		agency_upgrade_time = -0.05
 		stability_factor = -0.1
-	}	
+	}
+	GoY_pater_patriae = {
+		random = no
+		political_power_factor = 0.25
+		army_attack_factor = 0.05
+		army_morale_factor 0.1
+		war_support_factor = 0.1
+	}
 }

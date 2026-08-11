@@ -255,6 +255,159 @@
 		resistance_target = -0.5
 		resistance_damage_to_garrison = -0.5
 		}
+		
+	ARA_com_industrial_zone = {
+		enable = {
+			owns_or_subject_of = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_building_slots_factor = 0.25
+	}
+	ARA_com_prison_mines = {
+		enable = {
+			owns_or_subject_of = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_resources = 0.25
+	}
+	ARA_com_city_of_the_worlds_desire = {
+		enable = {
+			owns_or_subject_of = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_building_slots_factor = 0.25
+		state_production_speed_buildings_factor = 0.25
+		local_resources = 0.25
+	}
+	ARA_com_verenia_provincia = {
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_borealis_provincia = { #TODO check correct latin declension
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_evi_superior_provincia = { #declension checked
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_evi_inferior_provincia = { #declension checked
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.5
+		local_factories = -0.25
+	}
+	ARA_com_terra_equinus_provincia = { #declension checked
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_aquileia_provincia = {
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_aquileia_citerior_provincia = {
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.5
+		local_factories = -0.25
+	}
+	ARA_com_aquileia_ulterior_provincia = { #TODO check correct latin declension
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.75
+		local_factories = -0.5
+	}
+	ARA_com_pomovarra_foedus = { #TODO check correct latin declension
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.25
+		local_factories = -0.75
+		local_resources_factor = -0.25
+	}
+	ARA_com_harvic_foedus = { #TODO check correct latin declension
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.25
+		local_factories = -0.75
+		local_resources_factor = -0.25
+	}
+	ARA_com_cosaci_foedus = { #TODO check correct latin declension
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.25
+		local_factories = -0.75
+		local_resources_factor = -0.25
+	}
+	ARA_com_northern_capitals = {
+		enable = {
+			owns_or_subject_of = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_building_slots_factor = 0.25
+		local_resources_factor = 0.25
+	}
 	
 	#ARA_national_effort = {
 	#	enable = { always = yes }

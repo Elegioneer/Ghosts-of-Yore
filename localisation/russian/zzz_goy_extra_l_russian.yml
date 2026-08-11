@@ -1,5 +1,7 @@
 ﻿l_russian:
 
+GOY_unlocks_new_focuses_tt:0 "\n§YНовые фокусы§! становятся доступны.\n"
+
 # Paragraph breaks #
 GOY_newline_parabreak_5: "\n     "
 GOY_newline_parabreak_10: "\n          "
@@ -12,7 +14,7 @@ GOY_spirits_religion:0 "Почитание Северных Духов"
 GOY_spirits_religion_desc:0 ""
 
 # MISC
-GOY_mass_mobilisation_idea:0 "Массовая Мобилизация"
+GOY_mass_mobilisation_idea:0 "Массовая мобилизация"
 GOY_magical_melee_equipment:0 "Магическое примитивное оружие"
 GOY_magical_melee_equipment_short:0 "Магические посохи"
 GOY_magical_melee_equipment_tech:0 "Магические посохи"
@@ -33,6 +35,11 @@ tactic_attacker_GOY_undead_monsters:0 "Натиск Восставших Мон�
 tactic_defender_GOY_meat_wall:0 "Стена Мяса"
 tactic_defender_tw_GOY_meat_wall:0 "Бросить Мертвецов Позади"
 
+#Custom Bindable Tooltips
+GOY_CETT_after_X_days:0 "\n§YЧерез $NUM$ дней§!:"
+GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL: "[ROOT.GetFlag]§Y[ROOT.GetName]§! получит цель войны $WARGOAL|Y$ против этого государства.\n"
+GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR: "[ROOT.GetFlag]§Y[ROOT.GetName]§! объявляет войну на эту страну.\n"
+
 #Debug events
 goy_debug.001.t:0 "Choose faction"
 goy_debug.001.d:0 "Factions to form:"
@@ -45,6 +52,18 @@ goy_debug.002.d:0 "Factions to form:"
 goy_debug.002.a:0 "Pomovarran Pact (Bronze Pact)"
 goy_debug.002.b:0 "Pomovarran Dominion"
 goy_debug.002.c:0 "Aetian League"
+goy_debug.003.t:0 "Choose Arantiga's Focus Tree"
+goy_debug.003.d:0 "Available trees related to Dorotheos:"
+goy_debug.003.a:0 "Dorotheos' Coup"
+goy_debug.003.b:0 "The Three Giants"
+goy_debug.003.c:0 "Empire of Arantigos II"
+goy_debug.003.e:0 "Non-Dorothean trees"
+goy_debug.004.t:0 "Choose Arantiga's Focus Tree"
+goy_debug.004.d:0 "Available trees not related to Dorotheos:"
+goy_debug.004.a:0 "Chaos tree (Doro died in the Abyss)"
+goy_debug.004.b:0 "Margareth's tree"
+goy_debug.004.c:0 "Ciriaco's tree"
+goy_debug.004.e:0 "Dorothean trees"
 
 #Faction-related variables
 goy_most_civilian_factories_of_majors_var:0 "Наибольшее количество фабрик в крупной державе"

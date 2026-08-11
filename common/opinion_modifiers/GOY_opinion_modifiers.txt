@@ -47,4 +47,13 @@ opinion_modifiers = {
 	BOI_idol_custodians = {
 		value = 25
 	}
+	goy_ARA_traitors_opmod = {
+		value = -25
+	}
+	goy_ARA_loyal_allies_opmod = {
+		value = 25
+	}
+	goy_ARA_acds_membership = {
+		value = 10
+	}
 }

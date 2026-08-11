@@ -8252,3 +8252,2115 @@ country_event = { #Hedonism
 			}
 		}
 	}
+	#200->249 = Arantiga Expansion - Communism
+	#250->300 = Arantiga Expansion - Starting events and Baroness
+	country_event = { #Crimson Dawn
+	    id = arantiga.200
+		title = arantiga.200.t
+		desc = arantiga.200.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.200.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Socialism and Spirituality
+	    id = arantiga.201
+		title = arantiga.201.t
+		desc = arantiga.201.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.201.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Divine Inheritance
+	    id = arantiga.202
+		title = arantiga.202.t
+		desc = arantiga.202.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.202.a
+			ai_chance = {
+			    base = 1
+			}
+			add_ideas = ARA_com_indomitable_will_of_arantiga
+		}
+	}
+	country_event = { #The Pyramid
+	    id = arantiga.203
+		title = arantiga.203.t
+		desc = arantiga.203.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.203.a
+			ai_chance = {
+			    base = 1
+			}
+			add_ideas = ARA_com_stratified_society
+			add_popularity = { ideology = communism popularity = 0.03 }
+		}
+	}
+	country_event = { #Choosing War Plan
+	    id = arantiga.204
+		title = arantiga.204.t
+		desc = arantiga.204.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.204.a
+			ai_chance = {
+			    base = 1
+			}
+			add_timed_idea = { idea = ARA_com_plan_lightning_war days = 480 }
+		}
+		option = {
+		    name = arantiga.204.b
+			ai_chance = {
+			    base = 1
+			}
+			add_timed_idea = { idea = ARA_com_plan_tip_of_the_spear days = 480 }
+		}
+		option = {
+		    name = arantiga.204.c
+			ai_chance = {
+			    base = 1
+			}
+			add_timed_idea = { idea = ARA_com_plan_survey_the_land days = 480 }
+		}
+	}
+	country_event = { #Feeding Flames of War
+	    id = arantiga.205
+		title = arantiga.205.t
+		desc = arantiga.205.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.205.a
+			ai_chance = {
+			    base = 1
+			}
+			#TODO Enable decision set “Arm Collaborators”
+		}
+		option = {
+		    name = arantiga.205.b
+			ai_chance = {
+			    base = 1
+			}
+			#TODO Enable decision set “Dismantle Karthinian Industry”
+		}
+	}
+	country_event = { #The Greatest Illusion
+	    id = arantiga.206
+		title = arantiga.206.t
+		desc = arantiga.206.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.206.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	news_event = { #Crimson Book
+	    id = arantiga_news.13
+		title = arantiga_news.13.t
+		desc = arantiga_news.13.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+	    option = {
+		    name = arantiga_news.13.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				OR = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.13.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+				has_government = democratic
+			}
+		}
+		option = {
+		    name = arantiga_news.13.c
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+				has_government = neutrality
+			}
+		}
+		option = {
+		    name = arantiga_news.13.e
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+				has_government = communism
+			}
+		}
+		option = {
+		    name = arantiga_news.13.f
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+				has_government = fascism
+			}
+		}
+	}
+	country_event = { #Rise of Crimson Empire
+	    id = arantiga.207
+		title = arantiga.207.t
+		desc = arantiga.207.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.207.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = communism popularity = 0.1 }
+			add_popularity = { ideology = fascism popularity = 0.2 }
+			add_stability = 0.1
+			add_war_support = 0.2
+			news_event = arantiga_news.14
+			#TODO change country name to “Imperium Arantiganum”, create faction “Crimson Pact”
+		}
+	}
+	news_event = { #Crimson Empire
+	    id = arantiga_news.14
+		title = arantiga_news.14.t
+		desc = arantiga_news.14.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+	    option = {
+		    name = arantiga_news.14.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				OR = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.14.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+				has_idea = griffon_race
+			}
+		}
+		option = {
+		    name = arantiga_news.14.c
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+					has_idea = griffon_race
+				}
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.14.e
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+					has_idea = griffon_race
+				}
+				has_government = communism
+			}
+		}
+		option = {
+		    name = arantiga_news.14.f
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+					has_idea = griffon_race
+				}
+				has_government = fascism
+			}
+		}
+	}
+	country_event = { #Governance of Mareland
+	    id = arantiga.208
+		title = arantiga.208.t
+		desc = arantiga.208.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.208.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = democratic popularity = 0.05 } #TODO reconsider, make more punishing
+			add_stability = -0.05
+			EQC = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = {
+				limit = {
+					is_core_of = EQC
+				}
+				add_dynamic_modifier = { modifier = ARA_com_terra_equinus_provincia }
+			}
+		}
+		option = {
+		    name = arantiga.208.b
+			ai_chance = {
+			    base = 1
+			}
+			add_war_support = -0.05
+			EQC = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = {
+				limit = {
+					is_core_of = EQC
+				}
+				add_dynamic_modifier = { modifier = ARA_com_harvic_foedus }
+			}
+		}
+	}
+	country_event = { #Imperator Demands
+	    id = arantiga.209
+		title = arantiga.209.t
+		desc = arantiga.209.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.209.a
+			ai_chance = {
+			    base = 1 #TODO AI weights for Minotaurs
+			}
+			FROM = {
+				add_to_faction = PREV #TODO check if works correctly
+			}
+		}
+		option = {
+		    name = arantiga.209.b
+			ai_chance = {
+			    base = 1
+			}
+			country_event = {
+				id = arantiga.210
+				days = 2
+			}
+			hidden_effect = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = FROM
+					value = 50
+				}
+			}
+		}
+	}
+	country_event = { #Asterion Chooses War
+	    id = arantiga.210
+		title = arantiga.210.t
+		desc = arantiga.210.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.210.a
+			ai_chance = {
+			    base = 1
+			}
+			declare_war_on = {
+				declare_war_on = {
+					target = FROM
+					type = annex_everything
+				}
+			}
+		}
+	}
+	country_event = { #Division of Aquileia
+	    id = arantiga.211
+		title = arantiga.211.t
+		desc = arantiga.211.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.211.a
+			ai_chance = {
+			    base = 1
+			}
+			every_subject_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = JER
+							is_core_of = POM
+							is_core_of = JES
+							is_core_of = FLO
+							is_core_of = AET
+							is_core_of = HEL
+						}
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			add_stability = -0.1
+			JER = { add_to_ROOT_potential_cores = yes }
+			POM = { add_to_ROOT_potential_cores = yes }
+			JES = { add_to_ROOT_potential_cores = yes }
+			FLO = { add_to_ROOT_potential_cores = yes }
+			AET = { add_to_ROOT_potential_cores = yes }
+			HEL = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = {
+				limit = {
+					is_core_of = JER
+					is_core_of = POM
+					is_core_of = JES
+					is_core_of = FLO
+					is_core_of = AET
+					is_core_of = HEL
+				}
+				add_dynamic_modifier = { modifier = ARA_com_aquileia_provincia }
+			}
+		}
+		option = {
+		    name = arantiga.211.b
+			ai_chance = {
+			    base = 1
+			}
+			every_subject_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = JER
+							is_core_of = POM
+							is_core_of = JES
+							is_core_of = FLO
+							is_core_of = AET
+							is_core_of = HEL
+						}
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			#TODO Release Aquileia, Pomovarra and Flowena as puppet “Aquileian Prefecture” under who?
+			every_owned_state = {
+				limit = {
+					is_core_of = JER
+					is_core_of = POM
+					is_core_of = JES
+					is_core_of = FLO
+					is_core_of = AET
+					is_core_of = HEL
+				}
+				add_dynamic_modifier = { modifier = ARA_com_terra_equinus_provincia }
+			}
+		}
+		option = {
+		    name = arantiga.211.c
+			ai_chance = {
+			    base = 1
+			}
+			every_subject_country = {
+				limit = {
+					any_owned_state = {
+						OR = {
+							is_core_of = JER
+							is_core_of = POM
+							is_core_of = JES
+							is_core_of = FLO
+							is_core_of = AET
+							is_core_of = HEL
+						}
+					}
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			add_stability = -0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			JER = { add_to_ROOT_potential_cores = yes }
+			POM = { add_to_ROOT_potential_cores = yes }
+			JES = { add_to_ROOT_potential_cores = yes }
+			FLO = { add_to_ROOT_potential_cores = yes }
+			AET = { add_to_ROOT_potential_cores = yes }
+			HEL = { add_to_ROOT_potential_cores = yes }
+			every_owned_state = { #TODO TEST EXTENSIVELY
+				limit = {
+					is_core_of = POM
+					is_core_of = FLO
+					is_core_of = JRR
+					is_core_of = AET #TODO check if needed
+					is_core_of = HEL
+				}
+				add_dynamic_modifier = { modifier = ARA_com_pomovarra_foedus }
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = VIN
+					is_core_of = JFT
+					is_core_of = JES
+				}
+				add_dynamic_modifier = { modifier = ARA_com_aquileia_citerior_provincia }
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = JER
+					is_core_of = JEB
+					NOT = {
+						is_core_of = VIN
+						is_core_of = JFT
+						is_core_of = JES
+						is_core_of = POM
+						is_core_of = FLO
+						is_core_of = JRR
+						is_core_of = AET #TODO check if needed
+						is_core_of = HEL
+					}
+				}
+				add_dynamic_modifier = { modifier = ARA_com_aquileia_ulterior_provincia }
+			}
+		}
+	}
+	country_event = { #Sword and Book
+	    id = arantiga.212
+		title = arantiga.212.t
+		desc = arantiga.212.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.212.a
+			ai_chance = {
+			    base = 1
+			}
+			add_ideas = ARA_com_new_romau_legion #TODO consider making these dynamic modifiers if possible
+		}
+		option = {
+		    name = arantiga.212.b
+			ai_chance = {
+			    base = 1
+			}
+			custom_effect_tooltip = {
+				localization_key = magical_facility_construction_tt
+				temp_facility_state_loc = "[674.GetName]"
+				temp_facility_province_loc = "[674.GetCapitalVictoryPointName]"
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						674 = {
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
+						}
+					}
+					674 = {
+						add_building_construction = {
+							type = magical_facility
+							level = 1
+							instant_build = yes
+							province = 1124 #TODO find good province
+						}
+					}
+				}
+			}
+			add_ideas = ARA_com_university_of_romau #TODO consider making these dynamic modifiers if possible
+			add_breakthrough_progress = {
+				specialization = specialization_magical
+				value = 1
+			}
+		}
+	}
+	country_event = { #Republican Taint
+	    id = arantiga.213
+		title = arantiga.213.t
+		desc = arantiga.213.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.213.a
+			ai_chance = {
+			    base = 1
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						owns_state = 522
+					}
+					#TODO add save and return manpower
+				}
+			}
+			522 = {
+				add_manpower = -300000
+				set_state_category = rural
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						owns_state = 522
+					}
+					#TODO add save and return manpower
+				}
+			}
+			set_province_name = { id = 6502 name = GOY_vp_sky_ruins }
+			news_event = arantiga_news.15
+		}
+	}
+	news_event = { #Slaughter of Skynavia
+	    id = arantiga_news.15
+		title = arantiga_news.15.t
+		desc = arantiga_news.15.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+	    option = {
+		    name = arantiga_news.15.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				OR = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.15.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+					is_in_faction_with = ARA
+					is_subject_of = ARA
+				}
+			}
+		}
+	}
+	country_event = { #Zenith
+	    id = arantiga.214
+		title = arantiga.214.t
+		desc = arantiga.214.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.214.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #The Weak Link
+	    id = arantiga.250
+		title = arantiga.250.t
+		desc = arantiga.250.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.250.a
+			ai_chance = {
+			    base = 1 #TODO AI weights depending on game rules AI behaviour
+			}
+		}
+		option = {
+		    name = arantiga.250.b
+			ai_chance = {
+			    base = 1
+			}
+			hidden_effect = { set_country_flag = GOY_ARA_coup_will_fail_flag }
+		}
+	}
+	country_event = { #Betraying the Traitor
+	    id = arantiga.251
+		title = arantiga.251.t
+		desc = arantiga.251.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.251.a
+			ai_chance = {
+			    base = 1
+			}
+			add_manpower = -1000
+			add_stability = -0.03
+			add_war_support = -0.05
+			add_popularity = { ideology = fascism popularity = -0.1 }
+			#TODO make Cassander (maybe someone else?) leader of supremacy party, remove Dorotheos and Lysimachus as army leaders
+			country_event = arantiga.251
+		}
+	}
+	country_event = { #No Answers Given
+	    id = arantiga.251
+		title = arantiga.251.t
+		desc = arantiga.251.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.251.a
+			ai_chance = {
+			    base = 1
+			}
+			add_ideas = ARA_marge_doubts_and_shock
+		}
+	}
+	country_event = { #No Traces Left
+	    id = arantiga.252
+		title = arantiga.252.t
+		desc = arantiga.252.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.252.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = fascism popularity = -0.02 }
+		}
+	}
+	country_event = { #Empty Seats
+	    id = arantiga.253
+		title = arantiga.253.t
+		desc = arantiga.253.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.253.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Brewing Troubles
+	    id = arantiga.254
+		title = arantiga.254.t
+		desc = arantiga.254.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.254.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = democratic popularity = 0.01 }
+			add_popularity = { ideology = communism popularity = 0.01 }
+			hidden_effect = {
+				country_event = {
+					id = arantiga.255
+					days = 30
+				}
+			}
+		}
+	}
+	country_event = { #Rally in Sparleto
+	    id = arantiga.255
+		title = arantiga.255.t
+		desc = arantiga.255.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.255.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_ideas = ARA_marge_demand_for_reforms
+		}
+	}
+	country_event = { #Restaffing the Staff
+	    id = arantiga.256
+		title = arantiga.256.t
+		desc = arantiga.256.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.256.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = communism popularity = 0.01 }
+			add_ideas = ARA_marge_demand_for_reforms
+			#TODO add Ciriaco Mediate as general (Level 2, Skills: 2,2,2,1, Traits: Politically Connected, Trickster)
+			custom_effect_tooltip = ARA_sons_of_arantigos_tt
+			hidden_effect = {
+				add_corps_commander_role = {
+					character = GOY_ARA_craterus
+					traits = { griffon_race_trait trait_reckless armor_officer }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+					legacy_id = 1337 #ayyyy
+				}
+				add_advisor_role = {
+					character = GOY_ARA_craterus
+					advisor = {
+						slot = high_command
+						ledger = army
+						cost = 100
+						idea_token = craterus_advisor
+						traits = { army_armored_2 }
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "By Blood Alone"
+					}
+					division_template = {
+						name = "DUMMY DIVISION"
+
+						division_names_group = ARA_INF_02
+
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 2 y = 0 }
+							knights = { x = 3 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 2 y = 1 }
+							knights = { x = 3 y = 1 }
+						}
+
+						support = {
+							artillery = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+							goy_necromancer_company = { x = 0 y = 2 }
+						}
+						priority = 2
+					}
+					division_template = {
+						name = "Sons of Arantigos"
+
+						division_names_group = ARA_INF_02
+
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 2 y = 0 }
+							knights = { x = 3 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 2 y = 1 }
+							knights = { x = 3 y = 1 }
+						}
+
+						support = {
+							artillery = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+						priority = 2
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Sons of Arantigos\" division_template = \"DUMMY DIVISION\" start_experience_factor = 0.8 start_equipment_factor = 0.75"
+							officer = {
+								name = ARA_hespaeros_name
+								portraits = {
+									army = {
+										large = GFX_GOY_arantiga_knight
+										small = GFX_idea_GOY_ARA_arantiga_knight
+									}
+								}
+							}
+							owner = ROOT
+						}
+					}
+					random_country_division = {
+						limit = {
+							division_has_battalion_in_template = goy_necromancer_company
+						}
+						add_divisional_commander_xp = 1800
+						add_history_entry = {
+							key = ARA_sons_of_arantigos_key
+							subject = ARA_sons_of_arantigos_subj
+							allow = no #(allow medal award)
+						}
+						change_division_template = { division_template = "Sons of Arantigos" }
+					}
+					delete_unit_template_and_units = {
+						division_template = "DUMMY DIVISION"
+						disband = no
+					}
+				}
+				else = {
+					division_template = {
+						name = "Sons of Arantigos"
+
+						division_names_group = ARA_INF_02
+
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 2 y = 0 }
+							knights = { x = 3 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 2 y = 1 }
+							knights = { x = 3 y = 1 }
+						}
+
+						support = {
+							artillery = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+						priority = 2
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Sons of Arantigos\" division_template = \"Sons of Arantigos\" start_experience_factor = 0.8 start_equipment_factor = 0.75"
+							officer = {
+								name = ARA_hespaeros_name
+								portraits = {
+									army = {
+										large = GFX_GOY_arantiga_knight
+										small = GFX_idea_GOY_ARA_arantiga_knight
+									}
+								}
+							}
+							owner = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Meeting with Moro
+	    id = arantiga.257
+		title = arantiga.257.t
+		desc = arantiga.257.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.257.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Arantigan Crimson
+	    id = arantiga.258
+		title = arantiga.258.t
+		desc = arantiga.258.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.258.a
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				unlock_national_focus = ARA_marge_socialism_with_monarchist_characteristics #TODO Check if looks OK Enables focus “Socialism with Monarchic Characteristics”
+			}
+			set_country_flag = GOY_ARA_commie_conspiracy_flag
+		}
+		option = {
+		    name = arantiga.258.b
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				unlock_national_focus = ARA_marge_harmonic_foundations #TODO Check if looks OK Enables focus “Harmonist Foundations”
+			}
+		}
+	}
+	country_event = { #Plans Within Plans
+	    id = arantiga.259
+		title = arantiga.259.t
+		desc = arantiga.259.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.259.a
+			ai_chance = {
+			    base = 1
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_popularity = { ideology = communism popularity = 0.3 }
+			#TODO remove Nicator and Soter, make communist a ruling party, make Ciriaco Mediate a field marshal, get world event “Arantigan Revolution”
+			remove_ideas = {
+				ARA_benevolence
+				ARA_economic_dependance
+				ARA_marge_demand_for_reforms
+			}
+			add_ideas = {
+				ARA_com_revolution
+				ARA_com_ties_cut
+			}
+			leave_faction = yes
+			news_event = arantiga_news.16
+		}
+	}
+	news_event = { #Arantigan Revolution
+	    id = arantiga_news.16
+		title = arantiga_news.16.t
+		desc = arantiga_news.16.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+	    option = {
+		    name = arantiga_news.16.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				OR = {
+					original_tag = ARA
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.16.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+				}
+				has_idea = griffon_race
+			}
+		}
+		option = {
+		    name = arantiga_news.16.c
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					has_idea = griffon_race
+				}
+			}
+		}
+	}
+	country_event = { #Overplaying One’s Claw
+	    id = arantiga.260
+		title = arantiga.260.t
+		desc = arantiga.260.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.260.a
+			ai_chance = {
+			    base = 1
+			}
+			add_stability = -0.03
+			add_war_support = -0.03
+			add_popularity = { ideology = communism popularity = -0.03 }
+			add_manpower -100
+			#TODO Soter stops being general
+			country_event = {
+				id = arantiga.261
+				days = 7
+			}
+		}
+	}
+	country_event = { #Addressing the Nation
+	    id = arantiga.261
+		title = arantiga.261.t
+		desc = arantiga.261.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.261.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			remove_idea = ARA_marge_demand_for_reforms
+			#TODO switch to harmonic
+			#TODO Margareth Featherin becomes leader of harmonic party and gets trait “Popular Monarch” (+10% stability)
+		}
+	}
+	country_event = { #ACDS Investment 
+	    id = arantiga.262
+		title = arantiga.262.t
+		desc = arantiga.262.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.262.a
+			ai_chance = {
+			    base = 1
+			}
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_stability = 0.01
+			remove_idea = ARA_marge_demand_for_reforms
+			#TODO target country gets acds profits idea
+			add_ideas = ARA_marge_acds_profits
+		}
+	}
+	country_event = { #Joining ACDS [Griffonstone]
+	    id = arantiga.263
+		title = arantiga.263.t
+		desc = arantiga.263.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.263.a
+			ai_chance = {
+			    base = 1 #TODO consider setting AI weights to something other than 100% success
+			}
+			471 = {
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+				add_resource = {
+					type = crystals
+					amount = 6
+				}
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+					instant_build = yes
+                }
+			}
+			give_resource_rights = { receiver = FROM state = 471 }
+			add_ideas = ARA_marge_BOI_effective_resource_processing
+			FROM = {
+				country_event = {
+					id = arantiga.267
+					days = 1
+				}
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = goy_ARA_acds_membership
+				#trade = yes
+			}
+		}
+		option = {
+		    name = arantiga.263.b
+			ai_chance = {
+			    base = 0
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.268
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Joining ACDS [Avian]
+	    id = arantiga.264
+		title = arantiga.264.t
+		desc = arantiga.264.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.264.a
+			ai_chance = {
+			    base = 1 #TODO consider setting AI weights to something other than 100% success
+			}
+			470 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			408 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+					instant_build = yes
+                }
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.267
+					days = 1
+				}
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = goy_ARA_acds_membership
+				#trade = yes
+			}
+		}
+		option = {
+		    name = arantiga.264.b
+			ai_chance = {
+			    base = 0
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.268
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Joining ACDS [Rumare]
+	    id = arantiga.265
+		title = arantiga.265.t
+		desc = arantiga.265.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.265.a
+			ai_chance = {
+			    base = 1 #TODO consider setting AI weights to something other than 100% success
+			}
+			383 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			408 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.267
+					days = 1
+				}
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = goy_ARA_acds_membership
+				#trade = yes
+			}
+		}
+		option = {
+		    name = arantiga.265.b
+			ai_chance = {
+			    base = 0
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.268
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Joining ACDS [Sicameon]
+	    id = arantiga.266
+		title = arantiga.266.t
+		desc = arantiga.266.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.266.a
+			ai_chance = {
+			    base = 1 #TODO consider setting AI weights to something other than 100% success
+			}
+			528 = {
+				add_resource = {
+					type = rubber
+					amount = 12
+				}
+			}
+			444 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			give_resource_rights = { receiver = FROM state = 528 }
+			FROM = {
+				country_event = {
+					id = arantiga.267
+					days = 1
+				}
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = goy_ARA_acds_membership
+				#trade = yes
+			}
+		}
+		option = {
+		    name = arantiga.266.b
+			ai_chance = {
+			    base = 0
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.268
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #X joins ACDS
+	    id = arantiga.267
+		title = arantiga.267.t
+		desc = arantiga.267.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.267.a
+			ai_chance = {
+			    base = 1
+			}
+			IF = {
+				limit = {
+					FROM = {
+						original_tag = BOI
+					}
+				}
+				effect_tooltip = {
+					give_resource_rights = { receiver = ROOT state = 471 }
+				}
+			}
+			IF = {
+				limit = {
+					FROM = {
+						original_tag = AVI
+					}
+				}
+				effect_tooltip = {
+					408 = {
+						add_resource = {
+							type = aluminium
+							amount = 8
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					FROM = {
+						original_tag = LAK
+					}
+				}
+				effect_tooltip = {
+					408 = {
+						add_resource = {
+							type = oil
+							amount = 8
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					FROM = {
+						original_tag = SIC
+					}
+				}
+				effect_tooltip = {
+					give_resource_rights = { receiver = ROOT state = 528 }
+				}
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = goy_ARA_acds_membership
+				#trade = yes
+			}
+		}
+	}
+	country_event = { #X refuses to join ACDS
+	    id = arantiga.268
+		title = arantiga.268.t
+		desc = arantiga.268.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.268.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Karthinian League
+	    id = arantiga.269
+		title = arantiga.269.t
+		desc = arantiga.269.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.269.a
+			ai_chance = {
+			    base = 1 #TODO set up AI weights
+			}
+			FROM = {
+				add_to_faction = PREV
+				country_event = {
+					id = arantiga.270
+					days = 1
+				}
+			}			
+		}
+		option = {
+		    name = arantiga.269.b
+			ai_chance = {
+			    base = 0
+			}
+			#FROM = { #TODO check if needed
+			#	country_event = { event = arantiga.271 days = 1 }
+			#}	
+		}
+	}
+	country_event = { #X Joins the League
+	    id = arantiga.270
+		title = arantiga.270.t
+		desc = arantiga.270.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.270.a
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				add_to_faction = FROM
+			}
+		}
+	}
+	country_event = { #X does not join the League
+	    id = arantiga.271
+		title = arantiga.271.t
+		desc = arantiga.271.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.271.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Union with Arantiga?
+	    id = arantiga.272
+		title = arantiga.272.t
+		desc = arantiga.272.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.272.a
+			ai_chance = {
+			    base = 1 #TODO consider options other than 100% annexation
+			}
+			FROM = {
+				change_tag_from = PREV #TODO localise if needed
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+			#	country_event = { event = arantiga.273 days = 1 } #TODO check if needed
+			}
+		}
+		option = {
+		    name = arantiga.272.b
+			ai_chance = {
+			    base = 0
+			}
+			#FROM = { #TODO check if needed
+			#	country_event = { event = arantiga.274 days = 1 }
+			#}
+		}
+	}
+	country_event = { #X unifies with Arantiga
+	    id = arantiga.273
+		title = arantiga.273.t
+		desc = arantiga.273.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.273.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #X does not unify with Arantiga
+	    id = arantiga.274
+		title = arantiga.274.t
+		desc = arantiga.274.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.274.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Bitter Triumph
+	    id = arantiga.275
+		title = arantiga.275.t
+		desc = arantiga.275.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+	    option = {
+		    name = arantiga.275.a
+			ai_chance = {
+			    base = 1
+			}
+			#TODO Change country name to “United Realm of Karthinia”
+			add_stability = 0.1
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			news_event = arantiga_news.17
+			custom_effect_tooltip = GOY_unlocks_new_focuses_tt
+		}
+	}
+	news_event = { #Arantigan Revolution
+	    id = arantiga_news.17
+		title = arantiga_news.17.t
+		desc = arantiga_news.17.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		show_major = {
+		    NOT = {
+			    has_idea = detached_country
+			}
+		}
+	    option = {
+		    name = arantiga_news.17.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				OR = {
+					original_tag = ARA
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.17.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					original_tag = ARA
+				}
+				capital_scope = {
+					is_on_continent = asia
+				}
+			}
+		}
+		option = {
+		    name = arantiga_news.17.c
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+				}
+			}
+		}
+	}
+	country_event = { #Karthinian Elections
+	    id = arantiga.276
+		title = arantiga.276.t
+		desc = arantiga.276.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = yes
+		#Fascist party changes name to “Partito Nazionale Fascista”,
+		#communist party changes name to “Fronte Laborista Karthiniano”,
+		#non-alligned party changes name to “Sostenitori Della Regina”,
+		#Gherita Zarfatti becomes leader of supremacy party,
+		#Antonino Proletarino becomes leader of communist party,
+		#enable political advisors:
+		#Don Luigi Guturzo (Scholar-Politician: +8% research speed, +10% party popularity stability modifier),
+		#Giovanni de Gaspwingi (Harmonic Diplomat: +50% improve relations opinion, +5% stability, -50% improve relations maintain cost)
+		#Giacomo Gatteotti (Social Compromiser - +10% production efficiency growth, +0,1 daily political power)
+		#TODO either put all of the above into immediate = {} or put in immediate = {hidden_effect = {}} and add custom_effect_tooltip "happened:", effect_tooltip = {} and generic skip one line to the options
+		immediate = {
+			set_party_name = {
+				ideology = neutrality
+				name = ARA_marge_karthinia_neu
+				long_name = ARA_marge_karthinia_neu_long
+			}
+			set_party_name = {
+				ideology = fascism
+				name = ARA_marge_karthinia_fas
+				long_name = ARA_marge_karthinia_fas_long
+			}
+			set_party_name = {
+				ideology = communism
+				name = ARA_marge_karthinia_com
+				long_name = ARA_marge_karthinia_com_long
+			}
+		}
+	    option = {
+		    name = arantiga.276.a
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					AND = {
+						OR = {
+							fascism > 0.4
+							communism > 0.4
+						}
+						democratic < 0.4
+					}
+				}
+			}
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			set_party_name = {
+				ideology = democratic
+				name = ARA_marge_karthinia_drif
+				long_name = ARA_marge_karthinia_drif_long
+			}
+			add_ideas = ARA_marge_riformatore_mandate
+		}
+		option = {
+		    name = arantiga.276.b
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					OR = {
+						fascism > 0.4
+						communism > 0.4
+					}
+				}
+			}
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = { ideology = communism popularity = 0.1 }
+			set_party_name = {
+				ideology = democratic
+				name = ARA_marge_karthinia_dsoc
+				long_name = ARA_marge_karthinia_dsoc_long
+			}
+			add_ideas = ARA_marge_socialista_mandate
+		}
+		option = {
+		    name = arantiga.276.c
+			ai_chance = {
+			    base = 1
+			}
+			trigger = {
+				NOT = {
+					OR = {
+						fascism > 0.4
+						communism > 0.4
+					}
+				}
+			}
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = { ideology = neutrality popularity = 0.1 }
+			set_party_name = {
+				ideology = democratic
+				name = ARA_marge_karthinia_dtri
+				long_name = ARA_marge_karthinia_dtri_long
+			}
+			add_ideas = ARA_marge_triteista_mandate
+		}
+		option = {
+		    name = arantiga.276.e
+			ai_chance = {
+			    base = 10
+			}
+			trigger = {
+				AND = {
+					fascism > 0.4
+					democratic < 0.4
+				}
+			}
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			#set_party_name = {
+			#	ideology = democratic
+			#	name = ARA_marge_karthinia_dtri
+			#	long_name = ARA_marge_karthinia_dtri_long
+			#}
+			add_ideas = ARA_marge_fascista_mandate
+			#TODO add some fascist minister
+		}
+		option = {
+		    name = arantiga.276.f
+			ai_chance = {
+			    base = 10
+			}
+			trigger = {
+				AND = {
+					communism > 0.4
+					democratic < 0.4
+				}
+			}
+			add_popularity = { ideology = communism popularity = 0.05 }
+			#set_party_name = {
+			#	ideology = democratic
+			#	name = ARA_marge_karthinia_dtri
+			#	long_name = ARA_marge_karthinia_dtri_long
+			#}
+			add_ideas = ARA_marge_laborista_mandate
+			#TODO add some communist minister
+		}
+	}
+	country_event = { #Capital for Karthinia
+	    id = arantiga.277
+		title = arantiga.277.t
+		desc = arantiga.277.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.277.a
+			ai_chance = {
+			    base = 1
+			}
+			408 = {
+				add_manpower = 250000
+				set_state_category = city
+			}
+		}
+		option = {
+		    name = arantiga.277.b
+			ai_chance = {
+			    base = 1
+			}
+			set_capital = {state = 371} #TODO check if capital changes to Sparleto forever if Karthin is lost and later regained remember_old_capital = no if that's the case
+			371 = {
+				add_manpower = 250000
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+		option = {
+		    name = arantiga.277.c
+			ai_chance = {
+			    base = 1
+			}
+			set_capital = {state = 530}
+			530 = {
+				add_manpower = 250000
+				set_state_category = large_city
+			}
+		}
+		option = {
+		    name = arantiga.277.e
+			ai_chance = {
+			    base = 1
+			}
+			set_capital = {state = 515}
+			515 = {
+				add_manpower = 250000
+				set_state_category = large_city
+			}
+		}
+	}
+	country_event = { #Joining the Karthinian Realm
+	    id = arantiga.278
+		title = arantiga.278.t
+		desc = arantiga.278.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.278.a
+			ai_chance = {
+			    base = 1 #TODO set AI weights
+			}
+			FROM = {
+				annex_country = {
+					target = PREV
+					transfer_troops = yes
+				}
+				country_event = {
+					id = arantiga.279
+					days = 1
+				}
+			}
+		}
+		option = {
+		    name = arantiga.278.b
+			ai_chance = {
+			    base = 1
+			}
+			FROM = {
+				add_to_faction = PREV
+				country_event = {
+					id = arantiga.280
+					days = 1
+				}
+			}
+		}
+		option = {
+		    name = arantiga.278.c
+			ai_chance = {
+			    base = 1
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.281
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Sicameon Joins Karthinia
+	    id = arantiga.279
+		title = arantiga.279.t
+		desc = arantiga.279.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.279.a
+			ai_chance = {
+			    base = 1 
+			}
+			add_stability = 0.05
+			add_political_power = 50
+			effect_tooltip = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	country_event = { #Sicameon Allies with Us
+	    id = arantiga.280
+		title = arantiga.280.t
+		desc = arantiga.280.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.280.a
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				add_to_faction = FROM
+			}
+		}
+	}
+	country_event = { #Sicameon Rejects Our Proposal
+	    id = arantiga.281
+		title = arantiga.281.t
+		desc = arantiga.281.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.281.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Alliance with KArthinia
+	    id = arantiga.282
+		title = arantiga.282.t
+		desc = arantiga.282.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.282.a
+			ai_chance = {
+			    base = 1
+			}
+			FROM = {
+				add_to_faction = PREV
+				country_event = {
+					id = arantiga.283
+					days = 1
+				}
+			}
+		}
+		option = {
+		    name = arantiga.282.a
+			ai_chance = {
+			    base = 1
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.284
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Alliance with X
+	    id = arantiga.283
+		title = arantiga.283.t
+		desc = arantiga.283.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.283.a
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				add_to_faction = FROM
+			}
+		}
+	}
+	country_event = { #X Rejects Alliance Offer
+	    id = arantiga.284
+		title = arantiga.284.t
+		desc = arantiga.284.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.284.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Concordat and League
+	    id = arantiga.285
+		title = arantiga.285.t
+		desc = arantiga.285.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.285.a
+			ai_chance = {
+			    base = 1 #TODO set AI weights
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = PREV
+						is_ally_with = PREV
+					}
+				}
+			}
+			FROM = {
+				add_to_faction = PREV
+				country_event = {
+					id = arantiga.286
+					days = 1
+				} #TODO since we can't change faction icon arantiga will probably have to join the concordat instead and take over
+			}
+		}
+		option = {
+		    name = arantiga.285.a
+			ai_chance = {
+			    base = 1
+			}
+			FROM = {
+				country_event = {
+					id = arantiga.287
+					days = 1
+				}
+			}
+		}
+	}
+	country_event = { #Alliance with Minotaurs
+	    id = arantiga.286
+		title = arantiga.286.t
+		desc = arantiga.286.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.286.a
+			ai_chance = {
+			    base = 1
+			}
+			effect_tooltip = {
+				#TODO
+			}
+		}
+	}
+	country_event = { #Asterion Refuses
+	    id = arantiga.287
+		title = arantiga.287.t
+		desc = arantiga.287.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.287.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Irony of Fate
+	    id = arantiga.288
+		title = arantiga.288.t
+		desc = arantiga.288.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.288.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}
+	country_event = { #Working with the left - DUMMY EVENT
+	    id = arantiga.289
+		title = arantiga.289.t
+		desc = arantiga.289.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+	    option = {
+		    name = arantiga.289.a
+			ai_chance = {
+			    base = 1
+			}
+		}
+	}

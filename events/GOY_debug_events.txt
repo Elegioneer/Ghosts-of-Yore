@@ -47,3 +47,95 @@
 			create_faction_from_template = faction_template_goy_aetian_league_faction
 		}
 	}
+	country_event = { #ARANTIGA FOCUS TREES DEBUG 1
+		id = goy_debug.003
+		title = goy_debug.003.t
+		desc = goy_debug.003.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.003.a
+			load_focus_tree = Arantiga_coup
+		}
+		option = {
+			name = goy_debug.003.b
+			load_focus_tree = Arantiga_arantigos
+		}
+		option = {
+			name = goy_debug.003.c
+			load_focus_tree = Arantiga_empire
+		}
+		option = {
+			name = goy_debug.003.e
+			country_event = goy_debug.004
+		}
+	}
+	country_event = { #ARANTIGA FOCUS TREES DEBUG 2
+		id = goy_debug.004
+		title = goy_debug.004.t
+		desc = goy_debug.004.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.004.a
+			load_focus_tree = Arantiga_chaos
+		}
+		option = {
+			name = goy_debug.004.b
+			load_focus_tree = Arantiga_baroness
+		}
+		option = {
+			name = goy_debug.004.c
+			load_focus_tree = Arantiga_nazbol
+		}
+		option = {
+			name = goy_debug.004.e
+			country_event = goy_debug.003
+		}
+	}
+	country_event = { #Universal wargoal generator testing
+		id = goy_debug.010
+		title = goy_debug.010.t
+		desc = goy_debug.010.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.010.a
+		}
+		option = { # I AM IN AWE AT THIS GARBAGE ACTUALLY WORKING - Ele
+			name = goy_debug.010.b
+			every_other_country = { #The universal wargoal generator
+				limit = {
+					any_controlled_state = {
+						OR = { #Add your TAGs
+							is_core_of = BRF 
+						}
+					}
+				}
+				hidden_effect = {
+					every_owned_state = {
+						limit = {
+							OR = { #Add your TAGs (same ones)
+								is_core_of = BRF
+							}
+						}
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV.OWNER
+								generator = { PREV }
+								expire = 0
+							}
+						}
+					}
+				}
+				display_individual_scopes = yes
+				custom_effect_tooltip = {
+					localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL #GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR or GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL
+					WARGOAL = {
+						localization_key = take_state_focus #goals in localization/goals_l_english
+					}
+				}
+			}
+		}
+	}

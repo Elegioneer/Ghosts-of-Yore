@@ -32,6 +32,18 @@ ARA_salvation_party:0 "National Salvation"
  #
  #ARA_nazism:0 "Arantigan Resurrectionism"
  #ARA_nazism_desc:0 ""
+ ARA_marge_karthinia_neu:0 "SDR"
+ ARA_marge_karthinia_neu_long:0 "Sostenitori Della Regina"
+ ARA_marge_karthinia_fas:0 "PNF"
+ ARA_marge_karthinia_fas_long:0 "Partito Nazionale Fascista"
+ ARA_marge_karthinia_com:0 "FLK"
+ ARA_marge_karthinia_com_long:0 "Fronte Laborista Karthiniano"
+ ARA_marge_karthinia_drif:0 "PR"
+ ARA_marge_karthinia_drif_long:0 "Partito Riformatore"
+ ARA_marge_karthinia_dsoc:0 "PSdK"
+ ARA_marge_karthinia_dsoc_long:0 "Partito Socialdemocratico di Karthinia"
+ ARA_marge_karthinia_dtri:0 "PT"
+ ARA_marge_karthinia_dtri_long:0 "Partito Triteista"
  
 ## BOI ##
 BOI_neu_init:0 "Regency Council"

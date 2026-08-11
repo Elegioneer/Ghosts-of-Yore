@@ -40,7 +40,7 @@ goy_10_buildings_states = { #TODO change to actually count 10 instances of any b
 		limit = {
 			free_building_slots = {
 				building = industrial_complex
-				size < 16
+				size < 21
 				include_locked = yes
 			}
 		}
