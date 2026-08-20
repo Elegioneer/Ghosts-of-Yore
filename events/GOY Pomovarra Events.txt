@@ -1402,19 +1402,23 @@
 		}
 		option = {
 			name = goy_pomovarra.9.a
-			load_focus_tree = Pomovarra_goy_natives
-			set_country_flag = POM_FLAG_revolt_won
-			unlock_national_focus = POM_ar_chas
-			GOY_POM_reiher = {
-				clr_character_flag = GOY_char_available_flag
+			custom_effect_tooltip = POM_TT_natives_focus_reiher_dies
+			hidden_effect = {
+				load_focus_tree = Pomovarra_goy_natives
+				set_country_flag = POM_FLAG_revolt_won
+				unlock_national_focus = POM_ar_chas
+				GOY_POM_reiher = {
+					clr_character_flag = GOY_char_available_flag
+				}
+				remove_country_leader_role = {
+					character = GOY_POM_reiher
+					ideology = stratocracy
+				}
+				GOY_POM_schattenzahn = {
+					clr_character_flag = GOY_char_available_flag
+				}
 			}
-			remove_country_leader_role = {
-				character = GOY_POM_reiher
-				ideology = stratocracy
-			}
-			GOY_POM_schattenzahn = {
-				clr_character_flag = GOY_char_available_flag
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			GOY_POM_feuerstein = {
 				clr_character_flag = GOY_char_available_flag
 			}
@@ -1444,25 +1448,19 @@
 				POM_warlord_government
 				POM_military_legacy
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = {
 				partial_economic_mobilisation
 				POM_internal_divisions
 				POM_freedom_or_death
 				POM_disorganised_military
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
 			}
-			GOY_POM_reiher = {
-				retire = yes
-			}
-			GOY_POM_schattenzahn = {
-				retire = yes
-			}
-			delete_unit_template_and_units = { division_template = "Hired Knights" } #disband = yes, will refund equipment/manpower. default is no
-			delete_unit_template_and_units = { division_template = "Mercenary Division" }
-			load_oob = POM_goy_rebel_start
+			set_party_name = { ideology = fascism name = POM_goy_boar_party long_name = POM_goy_boar_party_long }
 			add_country_leader_role = {
 				character = GOY_POM_morel
 				country_leader = {
@@ -1475,8 +1473,23 @@
 			GOY_POM_morel = {
 				promote_character = ultranationalism
 			}
-			set_party_name = { ideology = fascism name = POM_goy_boar_party long_name = POM_goy_boar_party_long }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				GOY_POM_reiher = {
+					retire = yes
+				}
+				GOY_POM_schattenzahn = {
+					retire = yes
+				}
+			}
+			delete_unit_template_and_units = { division_template = "Hired Knights" } #disband = yes, will refund equipment/manpower. default is no
+			delete_unit_template_and_units = { division_template = "Mercenary Division" }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				load_oob = POM_goy_rebel_start
+			}
 			activate_advisor = POM_camriz_advisor
+			custom_effect_tooltip = generic_skip_one_line_tt
 			activate_advisor = POM_morel_advisor
 			hidden_effect = {
 				news_event = goy_pomovarra_news.4

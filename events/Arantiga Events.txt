@@ -10364,3 +10364,15 @@ country_event = { #Hedonism
 			}
 		}
 	}
+	country_event = { #HIDDEN, Tied to Light of Griffonia focus
+	    id = arantiga.290
+		title = arantiga.290.t
+		desc = arantiga.290.d
+		picture = GFX_goal_unknown
+	    is_triggered_only = yes
+	    fire_only_once = no
+		hidden = yes
+	    immediate = {
+		    add_research_slot = -1
+		}
+	}

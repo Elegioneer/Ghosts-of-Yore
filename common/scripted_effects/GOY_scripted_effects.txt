@@ -340,16 +340,45 @@
 			}
 		}
 	}
-	GOY_generate_wargoal = { #idk how to set this up with a temp array -Ele
-		every_other_country = { #The truly universal wargoal generator
+	#Preface with set_temp_variable = { core_holders_of = XXX }
+	GOY_generate_annex_wargoal_on_core_holders = {
+		every_other_country = {
+			display_individual_scopes = yes
 			limit = {
+				exists_outside_sphere_of_influence = yes
 				any_controlled_state = {
-					OR = { #Add your TAGs
-						is_core_of = BRF 
+					OR = {
+						is_core_of = var:core_holders_of
 					}
 				}
 			}
 			hidden_effect = {
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = annex_everything
+						expire = 0
+					}
+				}
+			}
+			custom_effect_tooltip = {
+				localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL 
+				WARGOAL = {
+					localization_key = annex_everything
+				}
+			}
+		}
+	}
+	GOY_generate_hidden_wargoal = {
+		hidden_effect = {
+			every_other_country = { #The truly universal wargoal generator auxiliary version
+				limit = {
+					any_controlled_state = {
+						OR = { #Add your TAGs
+							is_core_of = BRF 
+						}
+					}
+				}
 				every_owned_state = {
 					limit = {
 						OR = { #Add your TAGs (same ones)
@@ -360,17 +389,10 @@
 						create_wargoal = {
 							type = take_state_focus
 							target = PREV.OWNER
-							generator = { PREV }
+							generator = PREV
 							expire = 0
 						}
 					}
-				}
-			}
-			display_individual_scopes = yes
-			custom_effect_tooltip = {
-				localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL #GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR or GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL
-				WARGOAL = {
-					localization_key = take_state_focus #goals in localisation/goals_l_english
 				}
 			}
 		}

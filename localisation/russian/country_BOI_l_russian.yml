@@ -1028,7 +1028,7 @@ CETT_BOI_ELF_support:0 "Станут доступны §YРешения§! дл�
 BOI_CTTT_not_president_greta:0 "§YГрета§! не является §YПрезидентом§! страны."
 BOI_CTTT_not_president_gabby:0 "§YГабби§! не является §YПрезидентом§! страны."
 BOI_CTTT_not_president_garner:0 "§YГарнер§! не является §YПрезидентом§! страны."
-BOI_CTTT_completed_legacy:0 "Выполнен фокус §YНаследие Гуто§!"
+BOI_CTTT_completed_legacy:0 "Выполнен фокус §Y$BOI_legacy_of_guto$§!"
 BOI_CETT_seek_allies:0 "Станут доступны §YРешения§! для вступления в различные фракции Грифонии."
 BOI_CETT_rumareans:0 "Национальный дух §YРумейрские беспорядки§! будет удалён."
 BOI_CETT_archons:0 "Архонты теперь доступны в качестве советников"

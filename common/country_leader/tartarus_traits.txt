@@ -42,6 +42,16 @@ leader_traits = {
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
 	}
+	GOY_arantigos_reborn = {
+		random = no
+		war_stability_factor = 0.1
+		war_support_factor = 0.10
+		command_power_gain_mul = 0.25
+		ai_focus_aggressive_factor = 0.4
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	GOY_arantigan_advisors_trait = {
 		random = no
 		stability_factor = -0.1
@@ -142,8 +152,7 @@ leader_traits = {
 	    random = no
 		stability_factor = 0.05
 		mobilization_speed = 0.1
-		offensive_war_stability_factor = 0.25
-		defensive_war_stability_factor = 0.25
+		war_stability_factor = 0.25
 	}
 	GOY_inexperienced_ruler = {
 	    random = no
@@ -513,6 +522,9 @@ leader_traits = {
 		land_doctrine_cost_factor = -0.1
 		air_doctrine_cost_factor = -0.1
 		naval_doctrine_cost_factor = -0.1
+		land_mastery_gain_factor = 0.1
+		air_mastery_gain_factor = 0.05
+		naval_mastery_gain_factor = 0.05
 	}
 	GOY_drunken_genius_trait = {
 	    random = no
@@ -582,5 +594,10 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_morale_factor 0.1
 		war_support_factor = 0.1
+	}
+	GoY_harmonic_businessgriff = {
+		random = no
+		political_power_factor = 0.1
+		consumer_goods_factor = -0.08
 	}
 }

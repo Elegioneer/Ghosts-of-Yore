@@ -1,4 +1,16 @@
 ﻿division_template = {
+	name = "Garrison Brigade"
+	
+	division_names_group = POM_goy_GAR_01
+	
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
 	name = "Mercenary Division"
 	
 	division_names_group = POM_goy_INF_01
@@ -32,18 +44,6 @@ division_template = {
 
 	support = {
 		artillery = { x = 0 y = 0 }
-	}
-}
-division_template = {
-	name = "Garrison Brigade"
-	
-	division_names_group = POM_goy_GAR_01
-	
-	priority = 0
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
 	}
 }
 units = {

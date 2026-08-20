@@ -408,6 +408,17 @@
 		local_building_slots_factor = 0.25
 		local_resources_factor = 0.25
 	}
+	ARA_com_pony_autonomy = {
+		enable = {
+			is_owned_by = ARA
+		}
+		
+		icon = GFX_goal_unknown
+
+		local_manpower = -0.5
+		local_factories = -0.5
+		local_resources_factor = -0.25
+	}
 	
 	#ARA_national_effort = {
 	#	enable = { always = yes }

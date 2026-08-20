@@ -1164,45 +1164,35 @@
 		will_lead_to_war_with = HEL
 		will_lead_to_war_with = AET
 		completion_reward = {
-			declare_war_on = { 
-		        type = annex_everything
-	            target = HEL
-			}
-			declare_war_on = { 
-		        type = annex_everything
-	            target = AET
-			}
-			hidden_effect = {
-				every_other_country = { #The universal wargoal generator
-					limit = {
-						NOT = {
-							original_tag = ROOT
-							has_war_with = ROOT
-							is_subject_of = ROOT
-						}
-						any_owned_state = {
-							OR = {
-								is_core_of = HEL
-								is_core_of = AET
-							}
-						}
-					}
-					hidden_effect = {
-						add_ai_strategy = {
-							type = prepare_for_war
-							id = ROOT
-							value = 50
-						}
-					}
-					display_individual_scopes = yes
-					ROOT = {
-						create_wargoal = {
-							type = take_state_focus
-							target = PREV
-							generator = { HEL.core_states AET.core_states }
+			IF = {
+				limit = {
+					HEL = {
+						all_core_state = {
+							is_controlled_by = HEL
 						}
 					}
 				}
+				set_temp_variable = { wargoal_target = HEL }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = HEL }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					AET = {
+						all_core_state = {
+							is_controlled_by = AET
+						}
+					}
+				}
+				set_temp_variable = { wargoal_target = AET }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = AET }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -1262,37 +1252,20 @@
 			has_war_with = JER
 		}
 		completion_reward = {
-			declare_war_on = { 
-		        type = annex_everything
-	            target = JER
-			}
-			every_other_country = { #The universal wargoal generator
+			IF = {
 				limit = {
-					NOT = {
-						original_tag = ROOT
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-					any_owned_state = {
-						is_core_of = JER
+					JER = {
+						all_core_state = {
+							is_controlled_by = JER
+						}
 					}
 				}
-				hidden_effect = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 50
-					}
-				}
-				display_individual_scopes = yes
-				ROOT = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = { JER.core_states }
-						expire = 0
-					}
-				}
+				set_temp_variable = { wargoal_target = JER }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = JER }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -3012,18 +2985,30 @@
 		will_lead_to_war_with = FEZ
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			every_other_country = { #The universal wargoal generator
+			set_temp_variable = { wargoal_target = TRD }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = FEZ }
+			immediate_war_declare_on_wargoal_target = yes
+			if = {
+				limit = {
+					TRD = {
+						all_core_state = {
+							NOT = {
+								is_fully_controlled_by = TRD
+							}
+						}
+					}
+				}
+				every_other_country = { #The early version of the universal wargoal generator
 					limit = {
 						NOT = {
-							original_tag = ROOT
+							tag = ROOT
 							has_war_with = ROOT
 							is_subject_of = ROOT
+							is_in_faction_with = ROOT
 						}
-						any_owned_state = {
-							OR = {
-								is_core_of = TRD
-								is_core_of = FEZ
-							}
+						any_controlled_state = {
+							is_core_of = TRD
 						}
 					}
 					hidden_effect = {
@@ -3038,10 +3023,52 @@
 						create_wargoal = {
 							type = take_state_focus
 							target = PREV
-							generator = { TRD.core_states FEZ.core_states }
+							generator = { TRD.core_states }
+							expire = no
 						}
 					}
 				}
+			}
+			if = {
+				limit = {
+					FEZ = {
+						all_core_state = {
+							NOT = {
+								is_fully_controlled_by = FEZ
+							}
+						}
+					}
+				}
+				every_other_country = { #The early version of the universal wargoal generator
+					limit = {
+						NOT = {
+							original_tag = ROOT
+							has_war_with = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+						any_controlled_state = {
+							is_core_of = FEZ
+						}
+					}
+					hidden_effect = {
+						add_ai_strategy = {
+							type = prepare_for_war
+							id = ROOT
+							value = 50
+						}
+					}
+					display_individual_scopes = yes
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { FEZ.core_states }
+							expire = no
+						}
+					}
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -3084,6 +3111,12 @@
 				else = {
 					every_other_country = { #Best wargoal ever
 						limit = {
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 							any_owned_state = {
 								is_core_of = ERI
 							}
@@ -3110,6 +3143,12 @@
 				else = {
 					every_other_country = { #Best wargoal ever
 						limit = {
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 							any_owned_state = {
 								is_core_of = EYR
 							}
@@ -3139,6 +3178,12 @@
 							any_owned_state = {
 								is_core_of = AVI
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3164,6 +3209,12 @@
 						limit = {
 							any_owned_state = {
 								is_core_of = BAN
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -3191,6 +3242,12 @@
 							any_owned_state = {
 								is_core_of = BOI
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3216,8 +3273,14 @@
 						limit = {
 							any_owned_state = {
 								OR = {
-									is_core_of = ERI
+									is_core_of = LAK
 								}
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -3325,6 +3388,12 @@
 									is_core_of = WNG
 								}
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3352,6 +3421,12 @@
 								OR = {
 									is_core_of = TAL
 								}
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -3381,6 +3456,12 @@
 									is_core_of = FRN
 								}
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3408,6 +3489,12 @@
 								OR = {
 									is_core_of = ARA
 								}
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -3437,6 +3524,12 @@
 									is_core_of = SIC
 								}
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3464,6 +3557,12 @@
 								OR = {
 									is_core_of = CYA
 								}
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -3493,6 +3592,12 @@
 									is_core_of = MIT
 								}
 							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
+							}
 						}
 						ROOT = {
 							declare_war_on = {
@@ -3520,6 +3625,12 @@
 								OR = {
 									is_core_of = FAL
 								}
+							}
+							NOT = {
+								tag = ROOT
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_war_with = ROOT
 							}
 						}
 						ROOT = {
@@ -4128,23 +4239,23 @@
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = POM_TT_no_other_griffonian_griffon_country
-			NOT = {
-				any_other_country = {
-					capital_scope = {
-						is_on_continent = asia
-					}
-					has_idea = griffon_race
-					NOT = {
-						OR = {
-							tag = DED
-							tag = EWI
-							tag = HLR
-							tag = NCH
-							tag = EQC
+				NOT = {
+					any_other_country = {
+						capital_scope = {
+							is_on_continent = asia
+						}
+						has_idea = griffon_race
+						NOT = {
+							OR = {
+								tag = DED
+								tag = EWI
+								tag = HLR
+								tag = NCH
+								tag = EQC
+							}
 						}
 					}
 				}
-			}
 			}
 		}
 		will_lead_to_war_with = DEP
@@ -4165,160 +4276,34 @@
 		prerequisite = { focus = POM_northern_liberation }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			IF = {
-			    limit = {
-				    DEP = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = DEP
-			    }
-			}
-			IF = {
-			    limit = {
-				    LCT = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = LCT
-			    }
-			}
-			IF = {
-			    limit = {
-				    RCT = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = RCT
-			    }
-			}
-			IF = {
-			    limit = {
-				    BAK = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = BAK
-			    }
-			}
-			IF = {
-			    limit = {
-				    DMT = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = DMT
-			    }
-			}
-			IF = {
-			    limit = {
-				    NIM = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = NIM
-			    }
-			}
-			IF = {
-			    limit = {
-				    WIT = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = WIT
-			    }
-			}
-			IF = {
-			    limit = {
-				    FRE = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = FRE
-			    }
-			}
-			IF = {
-			    limit = {
-				    BAR = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = BAR
-			    }
-			}
-			IF = {
-			    limit = {
-				    ZES = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = ZES
-			    }
-			}
-			IF = {
-			    limit = {
-				    OLV = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = OLV
-			    }
-			}
-			IF = {
-			    limit = {
-				    WAT = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = WAT
-			    }
-			}
-			IF = {
-			    limit = {
-				    FBK = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = FBK
-			    }
-			}
-			IF = {
-			    limit = {
-				    FIR = {
-					    exists = yes
-					}
-				}
-				declare_war_on = { 
-		            type = annex_everything
-	                target = FIR
-			    }
-			}
+			set_temp_variable = { wargoal_target = DEP }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = LCT }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = RCT }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = BAK }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = DMT }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = NIM }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = WIT }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = FRE }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = BAR }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = ZES }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = OLV }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = WAT }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = FBK }
+			immediate_war_declare_on_wargoal_target = yes
+			set_temp_variable = { wargoal_target = FIR }
+			immediate_war_declare_on_wargoal_target = yes
 		}
 	}
 	shared_focus = {
@@ -5851,10 +5836,49 @@
 		prerequisite = { focus = POM_rubber_substitutes }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			modify_building_resources = {
-				building = synthetic_crystal_refinery
-				resource = crystals
-				amount = 1
+			IF = {
+				limit = {
+					is_special_project_completed = sp:sp_magical_synthetic_mineral_growth
+				}
+				modify_building_resources = {
+					building = synthetic_crystal_refinery
+					resource = crystals
+					amount = 1
+				}
+				random_owned_controlled_state = {
+					limit = {
+						synthetic_crystal_refinery < 3
+					}
+					add_building_construction = {
+						type = synthetic_crystal_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						synthetic_crystal_refinery < 3
+					}
+					add_building_construction = {
+						type = synthetic_crystal_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			ELSE = {
+				add_breakthrough_points = {
+					specialization = specialization_magical
+					value = 1
+				}
+				501 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_crystal_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
 			}
 		}
 	}
@@ -7978,21 +8002,33 @@
 		completion_reward = {
 			IF = {
 				limit = {
-					HEL = { exists = yes }
+					HEL = {
+						all_core_state = {
+							is_controlled_by = HEL
+						}
+					}
 				}
-				create_wargoal = { 
-					type = annex_everything
-					target = HEL
-				}
+				set_temp_variable = { wargoal_target = HEL }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = HEL }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 			IF = {
 				limit = {
-					AET = { exists = yes }
+					AET = {
+						all_core_state = {
+							is_controlled_by = AET
+						}
+					}
 				}
-				create_wargoal = { 
-					type = annex_everything
-					target = AET
-				}
+				set_temp_variable = { wargoal_target = AET }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = AET }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -8282,13 +8318,35 @@
 		prerequisite = { focus = POM_integrate_adelart }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			create_wargoal = { 
-		        type = annex_everything
-	            target = ERI
+			IF = {
+				limit = {
+					ERI = {
+						all_core_state = {
+							is_controlled_by = ERI
+						}
+					}
+				}
+				set_temp_variable = { wargoal_target = ERI }
+				expand_sphere_of_influence_to_wargoal_target = yes		
 			}
-			create_wargoal = { 
-		        type = annex_everything
-	            target = AVI
+			ELSE = {
+				set_temp_variable = { core_holders_of = ERI }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					AVI = {
+						all_core_state = {
+							is_controlled_by = AVI
+						}
+					}
+				}
+				set_temp_variable = { wargoal_target = AVI }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = AVI }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -10878,9 +10936,20 @@
 		prerequisite = { focus = POM_the_poisonous_flower }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			create_wargoal = { 
-		        type = annex_everything
-	            target = HEL
+			IF = {
+				limit = {
+					HEL = {
+						all_core_state = {
+							is_controlled_by = HEL
+						}
+					}
+				}
+				set_temp_variable = { wargoal_target = HEL }
+				immediate_war_declare_on_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = HEL }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -11025,51 +11094,33 @@
 		completion_reward = {
 			IF = {
 				limit = {
-					ERI = { exists = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = ERI
-				}
-				else = {
-					hidden_effect = {
-					every_other_country = {
-						limit = {
-							OR = {
-								owns_state = 401
-								owns_state = 500
-								owns_state = 673
-							}
+					ERI = {
+						all_core_state = {
+							is_controlled_by = ERI
 						}
 					}
-					}
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
 				}
+				set_temp_variable = { wargoal_target = ERI }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = ERI }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 			IF = {
 				limit = {
-					AVI = { exists = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = AVI
-				}
-				else = {
-					hidden_effect = {
-					every_other_country = {
-						limit = {
-							owns_state = 470
+					AVI = {
+						all_core_state = {
+							is_controlled_by = AVI
 						}
 					}
-					}
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
 				}
+				set_temp_variable = { wargoal_target = AVI }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = AVI }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -11092,30 +11143,18 @@
 		completion_reward = {
 			IF = {
 				limit = {
-					AET = { exists = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = AET
-				}
-				else = {
-					hidden_effect = {
-					every_other_country = {
-						limit = {
-							OR = {
-								owns_state = 436
-								owns_state = 457
-								owns_state = 495
-								owns_state = 496
-							}
+					AET = {
+						all_core_state = {
+							is_controlled_by = AET
 						}
 					}
-					}
-					create_wargoal = {
-						type = annex_everything
-						target = PREV
-					}
 				}
+				set_temp_variable = { wargoal_target = AET }
+				expand_sphere_of_influence_to_wargoal_target = yes		
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = AET }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}

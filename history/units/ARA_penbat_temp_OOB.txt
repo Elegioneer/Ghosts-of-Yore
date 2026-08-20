@@ -15,6 +15,12 @@ division_template = {
 		penal_battalion = { x = 0 y = 4 }
 		penal_battalion = { x = 1 y = 4 }
 	}
+	
+	regimental_support = {
+		fire_support = { x = 0 y = 0 }
+		fire_support = { x = 1 y = 0 }
+	}
+	
 	is_locked = yes
 	force_allow_recruiting = yes
 	priority = 0

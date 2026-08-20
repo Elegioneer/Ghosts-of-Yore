@@ -1342,6 +1342,7 @@
 			    exists = no
 			}
 		}
+		will_lead_to_war_with = MNC
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -1361,6 +1362,8 @@
 		search_filters = {}
 		relative_position_id = NTR_world_awaits
 		prerequisite = { focus = NTR_claim_destiny }
+		will_lead_to_war_with = FAT
+		will_lead_to_war_with = FAW
 		available = {
 		    OR = {
 			    FAT = {
@@ -2297,10 +2300,15 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_earth
-			add_popularity = {
+		    add_popularity = {
 				ideology = democratic
 				popularity = 0.03
+			}
+			#custom_effect_tooltip = NTR_blessing_earth
+			unlock_decision_tooltip = {
+				decision = NTR_earth_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
 			}
 			#Enables blessing of earth
 		}
@@ -2466,10 +2474,15 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_water
+		    #custom_effect_tooltip = NTR_blessing_water
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
+			}
+			unlock_decision_tooltip = {
+				decision = NTR_water_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
 			}
 			#Enables blessing of water
 		}
@@ -2817,10 +2830,15 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_fire
-			add_popularity = {
+		    add_popularity = {
 				ideology = democratic
 				popularity = 0.03
+			}
+			#custom_effect_tooltip = NTR_blessing_fire
+			unlock_decision_tooltip = {
+				decision = NTR_fire_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
 			}
 			#Enables blessing of fire
 		}
@@ -2951,8 +2969,13 @@
 		relative_position_id = NTR_follow_old
 		prerequisite = { focus = NTR_follow_old }
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_ice
-			add_stability = 0.03
+		    add_stability = 0.03
+			#custom_effect_tooltip = NTR_blessing_ice
+			unlock_decision_tooltip = {
+				decision = NTR_ice_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
 		}
 	}
 	shared_focus = {
@@ -3017,7 +3040,61 @@
 			add_stability = 0.03
 			custom_effect_tooltip = NTR_lodges_tt
 			hidden_effect = {
-				load_oob = NTR_lodges_OOB
+				division_template = {
+					name = "Warrior Lodge"
+
+					division_names_group = NTR_INF_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 567 }
+					create_unit = {
+						division = "name = \"Blood Axes\" division_template = \"Warrior Lodge\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						prioritize_location = 123
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 567 }
+					create_unit = {
+						division = "name = \"Snow Hunters\" division_template = \"Warrior Lodge\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						prioritize_location = 13241
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 563 }
+					create_unit = {
+						division = "name = \"Shark Tooths\" division_template = \"Warrior Lodge\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						prioritize_location = 7214
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 567 }
+					create_unit = {
+						division = "name = \"Arctic Foxes\" division_template = \"Warrior Lodge\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						prioritize_location = 2031
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -3268,7 +3345,42 @@
 		completion_reward = {
 			custom_effect_tooltip = NTR_event14_divisions
 			hidden_effect = {
-			load_oob = NTR_warriors_OOB
+				division_template = {
+					name = "Stranded Warriors"
+
+					division_names_group = NTR_INF_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+
+				}
+					
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Western Fighters\" division_template = \"Stranded Warriors\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						prioritize_location = 6288
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Vengeful Sons\" division_template = \"Stranded Warriors\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						prioritize_location = 6162
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -3634,7 +3746,7 @@
 	}
 	shared_focus = {
 		id = NTR_never_again
-		icon = GFX_goal_liberty
+		icon = GFX_goal_generic_liberty_statue
 		x = 2
 		y = 6
 		cost = 5.00
@@ -4496,10 +4608,15 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_metal
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
+			}
+		    #custom_effect_tooltip = NTR_blessing_metal
+			unlock_decision_tooltip = {
+				decision = NTR_metal_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
 			}
 			#Enables blessing of metal
 		}
@@ -4735,10 +4852,15 @@
 		}
 		search_filters = {}
 		completion_reward = {
-		    custom_effect_tooltip = NTR_blessing_wood
-			add_popularity = {
+		    add_popularity = {
 				ideology = democratic
 				popularity = 0.03
+			}
+			#custom_effect_tooltip = NTR_blessing_wood
+			unlock_decision_tooltip = {
+				decision = NTR_wood_bless
+				show_effect_tooltip = yes
+				show_modifiers = yes
 			}
 		}
 	}
@@ -6380,6 +6502,7 @@
 		prerequisite = { focus = NTR_total_reparations }
 		prerequisite = { focus = NTR_slave_economy }
 		prerequisite = { focus = NTR_take_magic }
+		will_lead_to_war_with = MNC
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything

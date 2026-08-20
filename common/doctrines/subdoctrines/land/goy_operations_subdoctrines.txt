@@ -44,7 +44,7 @@ goy_undead_hordes = {
         goy_doc_unnatural_vitality = {
         #2
             category_army = {
-				experience_loss_factor = -0.05
+				experience_loss_factor = -0.01
 			}
 			category_all_infantry = {
 				max_strength = 0.1

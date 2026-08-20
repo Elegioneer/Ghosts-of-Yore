@@ -2,26 +2,37 @@
 	
 	add_namespace = goy_debug
 	
-	country_event = { #FACTION DEBUG
-		id = goy_debug.001
-		title = goy_debug.001.t
-		desc = goy_debug.001.d
+	country_event = { #DEBUG EXPLAINER
+		id = goy_debug.1
+		title = goy_debug.1.t
+		desc = goy_debug.1.d
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
-			name = goy_debug.001.a
+			name = goy_debug.1.a
+		}
+	}
+	
+	country_event = { #FACTION DEBUG
+		id = goy_debug.101
+		title = goy_debug.101.t
+		desc = goy_debug.101.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.101.a
 			create_faction_from_template = faction_template_goy_arantigan_hegemony_faction
 		}
 		option = {
-			name = goy_debug.001.b
+			name = goy_debug.101.b
 			create_faction_from_template = faction_template_goy_griffonian_union_faction
 		}
 		option = {
-			name = goy_debug.001.c
+			name = goy_debug.101.c
 			create_faction_from_template = faction_template_goy_northern_league_faction
 		}
 		option = {
-			name = goy_debug.001.e
+			name = goy_debug.101.e
 			create_faction_from_template = {
 				template = faction_template_reichspakt
 				name = goy_kaiserliche_vorhut_faction
@@ -29,21 +40,21 @@
 		}
 	}
 	country_event = { #FACTION DEBUG 2
-		id = goy_debug.002
-		title = goy_debug.002.t
-		desc = goy_debug.002.d
+		id = goy_debug.102
+		title = goy_debug.102.t
+		desc = goy_debug.102.d
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
-			name = goy_debug.002.a
+			name = goy_debug.102.a
 			create_faction_from_template = faction_template_goy_pomovarran_pact_faction
 		}
 		option = {
-			name = goy_debug.002.b
+			name = goy_debug.102.b
 			create_faction_from_template = faction_template_goy_pomovarran_dominion_faction
 		}
 		option = {
-			name = goy_debug.002.c
+			name = goy_debug.102.c
 			create_faction_from_template = faction_template_goy_aetian_league_faction
 		}
 	}
@@ -93,17 +104,175 @@
 			country_event = goy_debug.003
 		}
 	}
-	country_event = { #Universal wargoal generator testing
-		id = goy_debug.010
-		title = goy_debug.010.t
-		desc = goy_debug.010.d
+	country_event = { #POMOVARRA FOCUS TREES DEBUG 1
+		id = goy_debug.005
+		title = goy_debug.005.t
+		desc = goy_debug.005.d
 		is_triggered_only = yes
 		fire_only_once = no
 		option = {
-			name = goy_debug.010.a
+			name = goy_debug.005.a
+			load_focus_tree = Pomovarra_goy_init
+		}
+		option = {
+			name = goy_debug.005.b
+			load_focus_tree = Pomovarra_goy_reiher
+		}
+		option = {
+			name = goy_debug.005.c
+			load_focus_tree = Pomovarra_goy_communists
+			set_country_flag = POM_death_of_allard_FLAG
+		}
+		option = {
+			name = goy_debug.005.e
+			IF = {
+				limit = {
+					NOT = {
+						has_focus_tree = Pomovarra_goy_natives
+					}
+				}
+				load_focus_tree = Pomovarra_goy_natives
+				set_country_flag = POM_FLAG_revolt_won
+			}
+			country_event = goy_debug.006
+		}
+		option = {
+			name = goy_debug.005.f
+			load_focus_tree = Pomovarra_goy_LM_Reiher
+		}
+	}
+	country_event = { #POMOVARRA FOCUS TREES DEBUG 2
+		id = goy_debug.006
+		title = goy_debug.006.t
+		desc = goy_debug.006.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.006.a
+			set_country_flag = POM_FLAG_revolt_won
+			clr_country_flag = POM_FLAG_camriz_won
+			clr_country_flag = POM_FLAG_camriz_won_DEM
+			clr_country_flag = POM_FLAG_camriz_won_DEM_2
+			clr_country_flag = POM_FLAG_camriz_won_NA
+			clr_country_flag = POM_FLAG_morel_won
+			clr_country_flag = POM_FLAG_morel_won_2
+			mark_focus_tree_layout_dirty = yes
+		}
+		option = {
+			name = goy_debug.006.b
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_camriz_won
+			set_country_flag = POM_FLAG_camriz_won_DEM
+			set_country_flag = POM_FLAG_camriz_won_DEM_2
+			mark_focus_tree_layout_dirty = yes
+		}
+		option = {
+			name = goy_debug.006.c
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_camriz_won
+			set_country_flag = POM_FLAG_camriz_won_NA
+			mark_focus_tree_layout_dirty = yes
+		}
+		option = {
+			name = goy_debug.006.e
+			clr_country_flag = POM_FLAG_revolt_won
+			set_country_flag = POM_FLAG_morel_won
+			set_country_flag = POM_FLAG_morel_won_2
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	country_event = { #NORTHERN TRIBES FOCUS TREES DEBUG
+		id = goy_debug.007
+		title = goy_debug.007.t
+		desc = goy_debug.007.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.007.a
+			load_focus_tree = Northern_tribes_init
+		}
+		option = {
+			name = goy_debug.007.b
+			load_focus_tree = Northern_tribes_reform
+		}
+		option = {
+			name = goy_debug.007.c
+			load_focus_tree = Northern_tribes_trad
+			set_country_flag = NTR_flag_fiana_claims_destiny
+		}
+		option = {
+			name = goy_debug.007.e
+			load_focus_tree = Northern_tribes_ice
+			set_country_flag = NTR_flag_ice2
+			set_country_flag = NTR_flag_ice3
+			set_country_flag = NTR_flag_ice4
+		}
+	}
+	country_event = { #GRIFFONSTONE FOCUS TREES DEBUG
+		id = goy_debug.008
+		title = goy_debug.008.t
+		desc = goy_debug.008.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = {
+			name = goy_debug.008.a
+			load_focus_tree = Griffonstone_gallus_1
+		}
+		option = {
+			name = goy_debug.008.b
+			load_focus_tree = Griffonstone_gallus_2
+		}
+		option = {
+			name = goy_debug.008.c
+			load_focus_tree = Griffonstone_goldstone
+		}
+		option = {
+			name = goy_debug.008.e
+			load_focus_tree = Griffonstone_gilda
+		}
+		option = {
+			name = goy_debug.008.f
+			load_focus_tree = Griffonstone_gestal
+		}
+	}
+	country_event = { #Universal wargoal generator testing
+		id = goy_debug.110
+		title = goy_debug.110.t
+		desc = goy_debug.110.d
+		is_triggered_only = yes
+		fire_only_once = no
+		option = { #Official commented-out DENmark implementation
+			name = goy_debug.110.a
+			every_other_country = {
+				limit = {
+					any_controlled_state = {
+						OR = {
+							is_core_of = EQS
+						}
+					}
+					NOT = {
+						tag = EQS
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = {
+							is_core_of = EQS
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_state
+							target = PREV.OWNER
+							generator = { PREV }
+							expire = 0
+						}
+					}	
+				}
+			}
 		}
 		option = { # I AM IN AWE AT THIS GARBAGE ACTUALLY WORKING - Ele
-			name = goy_debug.010.b
+			name = goy_debug.110.b
 			every_other_country = { #The universal wargoal generator
 				limit = {
 					any_controlled_state = {
@@ -112,20 +281,19 @@
 						}
 					}
 				}
-				hidden_effect = {
-					every_owned_state = {
-						limit = {
-							OR = { #Add your TAGs (same ones)
-								is_core_of = BRF
-							}
+				every_owned_state = {
+					limit = {
+						OR = { #Add your TAGs (same ones)
+							is_core_of = BRF
 						}
-						ROOT = {
-							create_wargoal = {
-								type = take_state_focus
-								target = PREV.OWNER
-								generator = { PREV }
-								expire = 0
-							}
+					}
+					add_to_temp_array = { goy_temp_states_to_take = THIS }
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV.OWNER
+							generator = goy_temp_states_to_take
+							expire = 0
 						}
 					}
 				}
@@ -134,6 +302,115 @@
 					localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL #GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR or GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL
 					WARGOAL = {
 						localization_key = take_state_focus #goals in localization/goals_l_english
+					}
+				}
+			}
+		}
+		option = { # I spent way too long on making this garbage work, and it's still total garbage, but it works - Ele
+			name = goy_debug.110.c
+			every_other_country = { #The universal wargoal generator with states
+				display_individual_scopes = yes
+				limit = {
+					exists_outside_sphere_of_influence = yes
+					any_controlled_state = {
+						OR = { #Add your TAGs
+							is_core_of = BRF
+							is_core_of = JRR
+							is_core_of = EQC
+							is_core_of = EQS
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						OR = { #Add your TAGs (same ones)
+							is_core_of = BRF
+							is_core_of = JRR
+							is_core_of = EQC
+							is_core_of = EQS
+						}
+					}
+					add_claim_by = ROOT
+					hidden_effect = {
+						ROOT = {
+							create_wargoal = {
+								target = PREV.OWNER
+								type = take_claimed_state
+								generator = owned_states
+								expire = 0
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL #GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR or GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL
+					WARGOAL = {
+						localization_key = take_claimed_state #goals in localization/goals_l_english
+					}
+				}
+			}
+		}
+		option = {
+			name = goy_debug.110.e
+			every_other_country = { #The early version of the universal wargoal generator
+				limit = {
+					NOT = {
+						original_tag = ROOT
+						has_war_with = ROOT
+						is_subject_of = ROOT
+					}
+					any_owned_state = {
+						OR = {
+							is_core_of = TRD
+							is_core_of = FEZ
+						}
+					}
+				}
+				hidden_effect = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = ROOT
+						value = 50
+					}
+				}
+				display_individual_scopes = yes
+				ROOT = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { TRD.core_states FEZ.core_states }
+					}
+				}
+			}
+		}
+		option = { #
+			name = goy_debug.110.f
+			every_other_country = { #The universal wargoal generator without states
+				display_individual_scopes = yes
+				limit = {
+					exists_outside_sphere_of_influence = yes
+					any_controlled_state = {
+						OR = { #Add your TAGs
+							is_core_of = BRF
+							is_core_of = JRR
+							is_core_of = EQC
+							is_core_of = EQS
+						}
+					}
+				}
+				hidden_effect = {
+					ROOT = {
+						create_wargoal = {
+							target = PREV
+							type = annex_everything
+							expire = 0
+						}
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL #GOY_GOAL_GENERATOR_EFFECT_DECLARE_WAR or GOY_GOAL_GENERATOR_EFFECT_CREATE_WARGOAL
+					WARGOAL = {
+						localization_key = annex_everything #goals in localization/goals_l_english
 					}
 				}
 			}
