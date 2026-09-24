@@ -22,6 +22,17 @@ GOY_longer_supply_chains:0 "Extended Supply Chains"
 GOY_adaptive_camouflage:0 "Adaptive Camouflage"
 GOY_resource_smuggling:0 "Resource Smuggling"
 
+# Decision Custom Triggers
+GoY_decision_cost_300_guns:0 "£infequip_text §Y300§!"
+GoY_decision_cost_300_guns_blocked:0 "£infequip_text §R300§!"
+GoY_decision_cost_300_guns_tooltip:0 "Taking this decision would cost us £infequip_text §Y300§!."
+GoY_decision_cost_600_guns:0 "£infequip_text §Y600§!"
+GoY_decision_cost_600_guns_blocked:0 "£infequip_text §R600§!"
+GoY_decision_cost_600_guns_tooltip:0 "Taking this decision would cost us £infequip_text §Y600§!."
+GoY_decision_cost_900_guns:0 "£infequip_text §Y900§!"
+GoY_decision_cost_900_guns_blocked:0 "£infequip_text §R900§!"
+GoY_decision_cost_900_guns_tooltip:0 "Taking this decision would cost us £infequip_text §Y900§!."
+
 # Dynamic ideology
 GOY_EAW_esotericism:0 "Esotericism"
 GOY_NTR_esotericism:0 "Dark Lord"

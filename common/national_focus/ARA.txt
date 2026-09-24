@@ -34,8 +34,9 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_the_new_airforce
 		icon = GFX_goal_generic_air_fighter2
-		x = -12
-		y = 0
+		relative_position_id = ARA_GOY_new_age_new_army
+		x = -3
+		y = 7
 		cost = 5.00
 
 		ai_will_do = {
@@ -398,8 +399,9 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_rumare_exercises
 		icon = GFX_goal_naval_effort
-		x = -20
-		y = 0
+		relative_position_id = ARA_GOY_new_age_new_army
+		x = 3
+		y = 7
 		cost = 5.00
 		bypass = {
 			any_controlled_state_is_coastal = yes
@@ -722,8 +724,50 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_GOY_new_age_new_army
 		icon = GFX_goal_goy_military
-		x = 1
+		x = 32
 		y = 0
+		offset = { 
+			x = 6
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_arantigos
+			}
+		}
+		offset = { 
+			x = 8
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_empire
+			}
+		}
+		offset = { 
+			x = 9
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_chaos
+			}
+		}
+		offset = { 
+			x = -10
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_nothing
+			}
+		}
+		offset = { 
+			x = -3
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_baroness
+			}
+		}
+		offset = { 
+			x = -2
+			y = 0
+			trigger = {
+				has_focus_tree = Arantiga_nazbol
+			}
+		}
 		cost = 5.00
 
 		ai_will_do = {
@@ -1613,7 +1657,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_self_strength
 		icon = GFX_focus_generic_self_management
-		x = 17
+		x = 5
 		y = 0
 
 		cost = 8.00
@@ -2017,19 +2061,47 @@ focus_tree = {
 			base = 50
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_ARMY_BONUS}
-			completion_reward = {
-				add_ideas = { ARA_work_camp }
-				set_country_flag = work_camps_flag
-				custom_effect_tooltip = GOY_CETT_ARA_penbats
-				hidden_effect = {
-					#set_technology = {
-					#	penal_infantry = 1
-					#	popup = no
-					#}
-					load_oob = ARA_penbat_temp_OOB
+		completion_reward = {
+			add_ideas = { ARA_work_camp }
+			set_country_flag = work_camps_flag
+			custom_effect_tooltip = GOY_CETT_ARA_penbats
+			hidden_effect = {
+				#set_technology = {
+				#	penal_infantry = 1
+				#	popup = no
+				#}
+				GOY_ARA_add_penal_brigade_template = yes
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 408 }
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 681
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 725
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 1325
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 1397
+						owner = ROOT
+					}
 				}
 			}
 		}
+	}
 	
 	shared_focus = {
 		id = ARA_modern_solutions
@@ -2276,7 +2348,7 @@ focus_tree = {
 	focus = {
 		id = ARA_dorotheos_coup
 		icon = GFX_goal_GOY_ara_dorocoup
-		x = 29
+		x = 17
 		y = 0
 		cost = 1.00
 		available = { always = no }
@@ -3006,7 +3078,7 @@ focus_tree = {
 	focus = { #between giants
 		id = ARA_die_is_cast
 		icon = GFX_goal_dice
-		x = 32
+		x = 20
 		y = 0
 		cost = 1.00
 		ai_will_do = {
@@ -4115,7 +4187,7 @@ focus_tree = {
 	}
 	
 	default = no
-	continuous_focus_position = { x = 130 y = 1100 }
+	continuous_focus_position = { x = 130 y = 800 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -4128,7 +4200,7 @@ focus_tree = {
 	shared_focus = { #CHAOS
 		id = ARA_chaos
 		icon = GFX_goal_revolution
-		x = 35
+		x = 22
 		y = 0
 		cost = 0
 		bypass = {
@@ -4382,9 +4454,9 @@ focus_tree = {
 		}
 		}		
 		
-	shared_focus = { #Free the prisioners
+	shared_focus = { #An end to work camps
 		id = ARA_free_prisioners
-		icon = GFX_goal_liberty
+		icon = GFX_goal_generic_liberty_statue
 		x = -4
 		y = 1
 		cost = 2.00
@@ -6321,42 +6393,71 @@ focus_tree = {
 				add_idea = ARA_prison_economy_idea
 			}
 			hidden_effect = {
-				if = {
-					limit = {
-						NOT = {
-							has_template = "Penal Brigade"
-						}
+				GOY_ARA_add_penal_brigade_template = yes
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 408 }
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 681
+						owner = ROOT
 					}
-					division_template = {
-						name = "Penal Brigade"
-
-						division_names_group = ARA_INF_03
-
-						regiments = {
-							penal_battalion = { x = 0 y = 0 }
-							penal_battalion = { x = 1 y = 0 }
-							penal_battalion = { x = 0 y = 1 }
-							penal_battalion = { x = 1 y = 1 }
-							penal_battalion = { x = 0 y = 2 }
-							penal_battalion = { x = 1 y = 2 }
-							penal_battalion = { x = 0 y = 3 }
-							penal_battalion = { x = 1 y = 3 }
-							penal_battalion = { x = 0 y = 4 }
-							penal_battalion = { x = 1 y = 4 }
-						}
-						
-						regimental_support = {
-							fire_support = { x = 0 y = 0 }
-							fire_support = { x = 1 y = 0 }
-						}
-						
-						is_locked = yes
-						force_allow_recruiting = yes
-						priority = 0
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 725
+						owner = ROOT
 					}
-
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 1325
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 1397
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 1597
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 3723
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 3756
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 3963
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 4551
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Penal Brigade\" start_experience_factor = 0.2"
+						allow_spawning_on_enemy_provs = no
+						prioritize_location = 7224
+						owner = ROOT
+					}
 				}
-				load_oob = ARA_penbats_OOB
 			}
 			custom_effect_tooltip = GOY_CETT_ARA_new_penbats
 		}
@@ -7191,7 +7292,7 @@ focus_tree = {
 	
 	default=no
 	
-	continuous_focus_position = { x = 130 y = 1100 }
+	continuous_focus_position = { x = 130 y = 900 }
 	
 		shared_focus = ARA_the_new_airforce
 		shared_focus = ARA_self_strength
@@ -7211,7 +7312,7 @@ focus_tree = {
 	focus = {
 		id = ARA_governing_empire
 		icon = GFX_goal_goy_wngconvert_governing
-		x = 29
+		x = 17
 		y = 0
 		cost = 5.00
 		ai_will_do = {
@@ -8020,7 +8121,8 @@ focus_tree = {
 	focus = {
 	    id = ARA_spoils_of_war
 		icon = GFX_goal_red_looting
-		x = 38
+		relative_position_id = ARA_governing_empire
+		x = 9
 		y = 0
 		cost = 5.00
 		ai_will_do = {
@@ -11225,7 +11327,7 @@ focus_tree = {
 	}
 	default = no
 	
-	continuous_focus_position = { x = 130 y = 1100 }
+	continuous_focus_position = { x = 1130 y = 1300 }
 	
 	shared_focus = ARA_the_new_airforce
 	shared_focus = ARA_GOY_new_age_new_army
@@ -11233,6 +11335,7 @@ focus_tree = {
 	shared_focus = ARA_marge_making_much_out_of_little
 	shared_focus = ARA_marge_destiny_denied
 	shared_focus = ARA_marge_reaffirm_pact_ties
+	shared_focus = ARA_marge_arantiga_alone
 }
 
 # Baroness-economy-tree
@@ -11668,6 +11771,19 @@ focus_tree = {
 					amount = 9
 				}
 			}
+			IF = {
+				limit = {
+					has_completed_focus = ARA_marge_acds
+					LAK = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				unlock_decision_tooltip = GOY_ARA_acds_expand_to_rumare
+			}
 		}
 	}
 	shared_focus = {
@@ -11924,7 +12040,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_codify_wingbardo_sparletan_language
 		icon = GFX_goal_unknown
-		x = -1
+		x = -2
 		y = 5
 		relative_position_id = ARA_marge_destiny_denied
 		available = {
@@ -11965,7 +12081,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_agitation_in_the_army
 		icon = GFX_goal_unknown
-		x = 1
+		x = 2
 		y = 5
 		relative_position_id = ARA_marge_destiny_denied
 
@@ -12114,7 +12230,12 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = ARA_benevolence
 				add_idea = ARA_marge_parliamentary_monarchy
-				set_country_leader_ideology = harmonic_constitutionalism #TODO check if Marge is democratic atm
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_country_leader_ideology = harmonic_constitutionalism
 			}
 		}
 	}
@@ -12221,6 +12342,8 @@ focus_tree = {
 				has_idea = ARA_marge_demand_for_reforms
 			}
 		}
+		
+		mutually_exclusive = { focus = ARA_marge_arantiga_alone }
 
 		cost = 5.00
 		search_filters = {}
@@ -12284,6 +12407,8 @@ focus_tree = {
 				is_in_faction = no
 			}
 		}
+		
+		mutually_exclusive = { focus = ARA_marge_reaffirm_pact_ties }
 
 		cost = 2.00
 		search_filters = {}
@@ -12344,13 +12469,13 @@ focus_tree = {
 		relative_position_id = ARA_marge_reaffirm_pact_ties
 
 		cost = 5.00
-		prerequisite = { focus = ARA_marge_reaffirm_pact_ties focus = ARA_marge_acds }
+		prerequisite = { focus = ARA_marge_reaffirm_pact_ties focus = ARA_marge_arantiga_alone }
 		search_filters = {}
 		ai_will_do = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO enable ACDS decisions
+			unlock_decision_category_tooltip = ARA_acds_investments_cat
 		}
 	}
 	shared_focus = {
@@ -12461,12 +12586,31 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Create faction “Karthinian League”; Following nations get event “Karthinian League” under following requirements:
-			#All: Independent, not at war with Arantiga;
-			#Francistria: Harmonic or non-alligned (and taken focus Allies not Subjects)
-			#Talouse: Harmonic or Non-alligned 
-			#Falcor: Harmonic or non-alligned and is not faction member;
-			#Note: Non-alligned Francistria if in faction with Wingbardy will not join League;
+			create_faction_from_template = faction_template_goy_karthinian_league_faction
+			every_other_country = {
+				limit = {
+					is_subject = no
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+					NOT = {
+						has_war_with = ROOT
+					}
+					OR = {
+						AND = {
+							original_tag = FRN
+							has_completed_focus = FRN_allies_not_subjects
+						}
+						original_tag = TAL
+						original_tag = FAL
+					}
+				}
+				country_event = {
+					id = arantiga.269
+					days = 1
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -12550,8 +12694,10 @@ focus_tree = {
 					original_tag = FRN
 				}
 				every_core_state = {
-					NOT = {
-						is_claimed_by = ROOT
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
 					}
 					add_claim_by = ROOT
 				}
@@ -12589,8 +12735,10 @@ focus_tree = {
 					original_tag = FRN
 				}
 				every_core_state = {
-					NOT = {
-						is_claimed_by = ROOT
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
 					}
 					add_claim_by = ROOT
 				}
@@ -12632,6 +12780,11 @@ focus_tree = {
 					original_tag = TAL
 				}
 				every_core_state = {
+					limit = {
+						NOT = {
+							is_claimed_by = ROOT
+						}
+					}
 					add_claim_by = ROOT
 				}
 			}
@@ -12675,7 +12828,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_protect_the_south
 		icon = GFX_goal_unknown
-		x = 0
+		x = 1
 		y = 4
 		relative_position_id = ARA_marge_reaffirm_pact_ties		
 		available = {
@@ -12710,7 +12863,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			WNG = { add_to_ROOT_potential_cores = yes } #TODO maybe make a better tooltip
+			WNG = { add_to_ROOT_potential_cores = yes } #TODO compress the tooltips
 			TAL = { add_to_ROOT_potential_cores = yes }
 			FAL = { add_to_ROOT_potential_cores = yes }
 			FRN = { add_to_ROOT_potential_cores = yes }
@@ -12742,6 +12895,9 @@ focus_tree = {
 							original_tag = TAL
 							original_tag = FAL
 							original_tag = FRN
+							NOT = {
+								original_tag = ROOT
+							}
 						}
 						AND = {
 							exists = yes
@@ -12760,7 +12916,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_new_political_landscape
 		icon = GFX_goal_unknown
-		x = -2
+		x = -1
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
 		allow_branch = {
@@ -12782,7 +12938,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_new_capital_of_a_new_realm
 		icon = GFX_goal_unknown
-		x = 0
+		x = 1
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
 		allow_branch = {
@@ -12802,7 +12958,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_marge_diplomatic_offensive
 		icon = GFX_goal_unknown
-		x = 2
+		x = 3
 		y = 5
 		relative_position_id = ARA_marge_reaffirm_pact_ties
 		allow_branch = {
@@ -12816,7 +12972,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Enable decision set “Foreign Policy”
+			unlock_decision_category_tooltip = ARA_marge_foreign_policy_cat
 		}
 	}
 	shared_focus = {
@@ -13033,7 +13189,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Enable decision set “Karthinian Projects”
+			unlock_decision_category_tooltip = ARA_karthinian_projects_cat
 		}
 	}
 	shared_focus = {
@@ -13120,13 +13276,14 @@ focus_tree = {
 	}
 	default = no
 	
-	continuous_focus_position = { x = 130 y = 1100 }
+	continuous_focus_position = { x = 130 y = 1000 }
 	
 	shared_focus = ARA_the_new_airforce
 	shared_focus = ARA_GOY_new_age_new_army
 	shared_focus = ARA_rumare_exercises
 	shared_focus = ARA_com_nazionalize_capital
 	shared_focus = ARA_com_continue_democrats_purge
+	shared_focus = ARA_com_get_rid_of_loyalists
 }
 
 # Nazbol-economy-tree #
@@ -13134,7 +13291,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_com_nazionalize_capital
 		icon = GFX_goal_unknown
-		x = 17
+		x = 4
 		y = 0
 
 		cost = 5.00
@@ -13490,7 +13647,7 @@ focus_tree = {
 		}
 	}
 	shared_focus = {
-		id = ARA_com_outline_plans
+		id = ARA_com_outline_plans #Outline Economic Plans
 		icon = GFX_goal_unknown
 		x = -1
 		y = 5
@@ -13504,7 +13661,7 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-		    unlock_decision_category_tooltip = ARA_com_econom_plan   #todo decisions
+		    unlock_decision_category_tooltip = ARA_com_economic_planning_cat
 		}
 	}
 	shared_focus = {
@@ -13532,7 +13689,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_com_continue_democrats_purge
 		icon = GFX_goal_unknown
-		x = 25
+		x = 14
 		y = 0
 
 		cost = 1.00
@@ -13659,7 +13816,7 @@ focus_tree = {
 	shared_focus = {
 		id = ARA_com_new_griffons_in_military
 		icon = GFX_goal_unknown
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = ARA_com_continue_democrats_purge
 
@@ -13670,7 +13827,28 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			#TODO Add generals “Titus Gatius” (Level 3, Skills: 3,3,3,1, Politically Connected) and “Peithon” (Level 2, Skills: 1,1,2,3, Harsh Leader)
+			GOY_ARA_titus_gatius = {
+				add_corps_commander_role = {
+					traits = { griffon_race_trait politically_connected }
+					#desc = ""
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 1
+				}
+			}
+			GOY_ARA_peithon = {
+				add_corps_commander_role = {
+					traits = { griffon_race_trait harsh_leader }
+					#desc = ""
+					skill = 2
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 2
+					logistics_skill = 3
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -13755,7 +13933,34 @@ focus_tree = {
 			army_experience = 25
 			add_ideas = ARA_com_militarisation_of_society
 			add_war_support = 0.1
-			#TODO create 3 divisions “Falange Nova” (6 infantry brigades, 1 artillery brigade, seasoned)
+			division_template = {
+				name = "Falange Nova"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 408 }
+				create_unit = {
+					division = "division_template = \"Falange Nova\" start_experience_factor = 0.6 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Falange Nova\" start_experience_factor = 0.6 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Falange Nova\" start_experience_factor = 0.6 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -14000,33 +14205,16 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			every_other_country = { #The universal wargoal generator
+			IF = {
 				limit = {
-					NOT = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-					any_owned_state = {
-						OR = {
-							is_core_of = WNG
-						}
-					}
+					WNG = { exists = yes }
 				}
-				hidden_effect = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 50
-					}
-				}
-				display_individual_scopes = yes
-				ROOT = {
-					create_wargoal = { #TODO check if works, maybe refactor into a temp_variable or array
-						type = take_state_focus
-						target = PREV
-						generator = { WNG.core_states }
-					}
-				}
+				set_temp_variable = { wargoal_target = WNG }
+				expand_sphere_of_influence_to_wargoal_target = yes
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = WNG }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -14985,7 +15173,31 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 200000
 			add_stability = -0.05
-			#TODO spawn some penal battalion units and enable training those ALSO ADD MACHINEGUNS TO ALL PENBATS IN THE SUBMOD
+			GOY_ARA_add_penal_brigade_template = yes
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 408 }
+				create_unit = {
+					division = "division_template = \"Penal Brigade\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Penal Brigade\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Penal Brigade\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Penal Brigade\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
 		}
 	}
 	shared_focus = {
@@ -15008,7 +15220,6 @@ focus_tree = {
 				target = EQC
 				generator = EQC.core_states
 			}
-			#TODO enable decision to peace out with Equestria/Lunar Empire if New Mareland has been capitulated (like Lysimachus and Arantigos can)
 		}
 	}
 	shared_focus = {
@@ -15183,40 +15394,18 @@ focus_tree = {
 					target = CYA
 				}
 			}
-			IF = {
+			ELSE_IF = {
 				limit = {
-					CYA = { exists = no }
-					CYA = { exists = no }
-				}
-				every_other_country = { #The universal wargoal generator
-					limit = {
-						NOT = {
-							has_war_with = ROOT
-							is_subject_of = ROOT
-						}
-						any_owned_state = {
-							OR = {
-								is_core_of = MIT
-								is_core_of = CYA
+					NOT = {
+						CYA = {
+							all_core_state = {
+								is_owned_by = MIT
 							}
 						}
 					}
-					hidden_effect = {
-						add_ai_strategy = {
-							type = prepare_for_war
-							id = ROOT
-							value = 50
-						}
-					}
-					display_individual_scopes = yes
-					ROOT = {
-						create_wargoal = {
-							type = take_state_focus
-							target = PREV
-							generator = { MIT.core_states CYA.core_states }
-						}
-					}
 				}
+				set_temp_variable = { core_holders_of = CYA }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -15280,48 +15469,53 @@ focus_tree = {
 					}
 					release_puppet = MIT
 				}
+				set_province_name = {
+					id = 7342
+					name = GOY_vp_sparleos_novum
+				}
 				MIT = {
-					#TODO release Asterion as “Minotaurian Autonomy” under who?
-				}
-				#TODO save and restore manpower for MIT
-				#TODO rename Thymaushafen to “Sparleos Nova” #Sparleos Novum probably
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 671
+					set_cosmetic_tag = MIT_com_arantiga
+					load_focus_tree = generic_griffon_focus
+					save_current_manpower = yes
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 671
+							}
 						}
+						add_manpower = -500000
 					}
-					add_manpower = -500000
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 510
-							state = 511
-							state = 507
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 510
+								state = 511
+								state = 507
+							}
 						}
+						add_manpower = -100000
 					}
-					add_manpower = -100000
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 386
-							state = 463
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 386
+								state = 463
+							}
 						}
+						add_manpower = 250000
 					}
-					add_manpower = 250000
-				}
-				every_owned_state = {
-					limit = {
-						OR = {
-							state = 671
-							state = 510
-							state = 511
-							state = 507
+					every_owned_state = {
+						limit = {
+							OR = {
+								state = 671
+								state = 510
+								state = 511
+								state = 507
+							}
 						}
+						add_resistance = 50
 					}
-					add_resistance = 50
+					restore_previous_manpower = yes
 				}
 			}
 			ELSE = { #if MIT is free and in faction
@@ -15411,7 +15605,7 @@ focus_tree = {
 		x = 1
 		y = 5
 		relative_position_id = ARA_com_karthin_proclamation
-		will_lead_to_war_with = GRI
+		will_lead_to_war_with = GRD
 		will_lead_to_war_with = ROU
 		will_lead_to_war_with = KAT
 		will_lead_to_war_with = ANG
@@ -15441,41 +15635,122 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			every_other_country = { #The universal wargoal generator
+			IF = {
 				limit = {
-					NOT = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-					any_owned_state = {
-						OR = {
-							is_core_of = GRI
-							is_core_of = ROU
-							is_core_of = KAT
-							is_core_of = ANG
-							is_core_of = YAL
-							is_core_of = PYT
-							is_core_of = BRZ
-							is_core_of = STW
-							is_core_of = FEA
-						}
-					}
+					GRD = { exists = yes }
 				}
-				hidden_effect = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 50
-					}
+				create_wargoal = {
+					type = annex_everything
+					target = GRD
 				}
-				display_individual_scopes = yes
-				ROOT = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = { GRI.core_states ROU.core_states KAT.core_states ANG.core_states YAL.core_states PYT.core_states BRZ.core_states STW.core_states FEA.core_states }
-					}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = GRI }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					ROU = { exists = yes }
 				}
+				create_wargoal = {
+					type = annex_everything
+					target = ROU
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = ROU }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					KAT = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KAT
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = KAT }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					ANG = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ANG
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = ANG }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					YAL = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YAL
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = YAL }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					PYT = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PYT
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = PYT }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					BRZ = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = BRZ
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = BRZ }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					STW = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = STW
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = STW }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					FEA = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FEA
+				}
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = FEA }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -15526,34 +15801,27 @@ focus_tree = {
 			base = 50
 		}
 		completion_reward = {
-			every_other_country = { #The universal wargoal generator
+			IF = {
 				limit = {
-					NOT = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-					any_owned_state = {
-						OR = {
-							is_core_of = FEZ
-							is_core_of = TRD
-						}
-					}
+					TRD = { exists = yes }
 				}
-				hidden_effect = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = ROOT
-						value = 50
-					}
+				set_temp_variable = { wargoal_target = TRD }
+				expand_sphere_of_influence_to_wargoal_target = yes
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = TRD }
+				GOY_generate_annex_wargoal_on_core_holders = yes
+			}
+			IF = {
+				limit = {
+					FEZ = { exists = yes }
 				}
-				display_individual_scopes = yes
-				ROOT = {
-					create_wargoal = {
-						type = take_state_focus
-						target = PREV
-						generator = { FEZ.core_states TRD.core_states }
-					}
-				}
+				set_temp_variable = { wargoal_target = FEZ }
+				expand_sphere_of_influence_to_wargoal_target = yes
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = FEZ }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -15677,10 +15945,10 @@ focus_tree = {
 					NOT = {
 						has_war_with = ROOT
 						is_subject_of = ROOT
+						tag = ROOT
 					}
 					any_owned_state = {
 						OR = {
-							is_core_of = HLQ
 							state = 505
 							state = 540
 							state = 552
@@ -15699,9 +15967,20 @@ focus_tree = {
 					create_wargoal = {
 						type = take_state_focus
 						target = PREV
-						generator = { HLQ.core_states 505 540 552 } #TODO check if mixing works
+						generator = { 505 540 552 }
 					}
 				}
+			}
+			IF = {
+				limit = {
+					HLQ = { exists = yes }
+				}
+				set_temp_variable = { wargoal_target = HLQ }
+				expand_sphere_of_influence_to_wargoal_target = yes
+			}
+			ELSE = {
+				set_temp_variable = { core_holders_of = HLQ }
+				GOY_generate_annex_wargoal_on_core_holders = yes
 			}
 		}
 	}
@@ -15739,7 +16018,10 @@ focus_tree = {
 				add_core_of = ROOT
 				add_dynamic_modifier = { modifier = ARA_com_northern_capitals }
 			}
-			674 = {
+			every_owned_state = {
+				limit = {
+					state = 674
+				}
 				add_core_of = ROOT
 			}
 			ANG = { add_to_ROOT_potential_cores = yes } #changed from instacoring
@@ -16007,7 +16289,11 @@ focus_tree = {
 			BRF = { add_to_ROOT_potential_cores = yes }
 			GRY = { add_to_ROOT_potential_cores = yes }
 			GRU = { add_to_ROOT_potential_cores = yes }
-			508 = { #TODO Kivessin changes name to Karthinia Nova
+			set_province_name = {
+                id = 10377
+                name = GOY_vp_karthinia_nova
+            }
+			508 = {
 				add_manpower = 500000
 				set_state_category = metropolis
 			}
@@ -16097,7 +16383,7 @@ focus_tree = {
 							type = nuclear_facility
 							level = 1
 							instant_build = yes
-							province = 9604 #TODO Select province
+							province = 8248
 						}
 					}
 				}
@@ -16109,6 +16395,10 @@ focus_tree = {
 								amount > 10
 								delivered = yes
 							}
+							nuclear_facility < 1
+							air_facility < 1
+							land_facility < 1
+							magical_facility < 1
 						}
 						add_building_construction = {
 							type = nuclear_facility

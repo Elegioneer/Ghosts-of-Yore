@@ -14,6 +14,7 @@ GOY_ARA_dorotheos_featherin:0 "Dorotheos Featherin"
  GOY_ARA_arantigos:0 "Arantigos II"
  ARA_nicatorking:0 "Nicator I Whitebeak"
  ARA_hespaeros_name:0 "Hespaeros" #DO NOT TRANSLATE. BREAKS BBA CODE
+ GOY_ARA_hespaeros_name_general:0 "Hespaeros"
  # Margareth
  generic_neutral_leader_desc:0 "§YBorn§!: January 21, 973 ALB, Sparleto\n\n§YBiography§!: Baroness Margareth Featherin has been ruling Arantiga for the past decade with a just and fair claw, but even she cannot deny that under her reign, there has been a decisive lack of progress as Wingbardian capitalists seized most of the Arantigan industry. However, she believes that the pen is mightier than the sword, and that Arantiga's current woes can be resolved with a few careful words, something her more notable brother and general in the army, Dorotheos, disagrees with."
  # Dorotheos
@@ -155,7 +156,17 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  POM_levteros_bradakis:0 "Levteros Bradakis" #DO NOT TRANSLATE. BREAKS BBA CODE
  POM_nikke:0 "Nikke" #DO NOT TRANSLATE. BREAKS BBA CODE
  POM_himmel_zwirn:0 "Himmel Zwirn" #DO NOT TRANSLATE. BREAKS BBA CODE
- POM_elias_zucker:0 "Elias Zucker"
+ POM_elias_zucker:0 "Elias Zucker" #DO NOT TRANSLATE. BREAKS BBA CODE
+ GOY_POM_jacques_noir_name_general:0 "Jean-Jacques Noir"
+ GOY_POM_neva_maskh_general:0 "Neva Maskh"
+ GOY_POM_hilda_stern_general:0 "Hildred Hrorikrsdottir"
+ GOY_POM_malevolent_fury_general:0 "Malevolent Fury"
+ GOY_POM_flaming_revenge_general:0 "Flaming Vengeance"
+ GOY_POM_eastern_gust_general:0 "Eastern Torrent"
+ GOY_POM_levteros_bradakis_general:0 "Levteros Bradakis"
+ GOY_POM_nikke_general:0 "Nikke"
+ GOY_POM_himmel_zwirn_general:0 "Himmel Zwirn"
+ GOY_POM_elias_zucker_general:0 "Elias Zucker"
  ARD_char_assemblee:0 "Committee for Public Safety"
  ARD_allard_desc:0 "§YBorn§!: 969 ALB\n\n§YBiography§!: Who was Victor Allard before the Revolution and where he came from matters little. In the old days, before the calamity of Aquileia’s collapse, he intentionally shrouded his origins in mystery. Back then, he suddenly appeared on Aquileia’s political scene, thanks to his intellect and charisma quickly becoming one of key figures within the socialist movement – yet never becoming the most prominent one.\nEven then he was called a radical, his outlook viewed as intolerable by the mainstream republican movement. The failure of the Second Revolution – culminating in the fall of Aquileia – only strengthened his convictions. As Aquileia collapsed, its armies defeated by a rogue warlord, and cities sacked by rampaging mercenaries and bandits, Allard was diligently working behind the scenes, gathering griffons disillusioned with the old republic, searching for a new purpose. And when the time came, he had accrued enough supporters to snatch power. Now, his vision unrestricted by moderates and traitors to the Revolution, Allard emerges as the sole and undisputed leader of the new Aquileian state, Le Patron. There will be no compromises and no surrender. Victor Allard will either see the ultimate success of his new Revolution – or die with it."
  ARD_advisor_lambert:0 "Lambert Kerbow"
@@ -229,4 +240,10 @@ GOY_POM_liberation_commitee:0 "Reconstruction Committee"
  POM_nolwenn_name:0 "Nolwenn Iudicael" #DO NOT TRANSLATE. BREAKS BBA CODE
  POM_stierlitz_name:0 "Maximilian Stierlitz" #DO NOT TRANSLATE. BREAKS BBA CODE
  POM_roisin_name:0 "Róisín Stormshield" #DO NOT TRANSLATE. BREAKS BBA CODE
-
+ GOY_POM_gispen_name_general:0 "Gispen Fluffs"
+ GOY_POM_zebro_name_general:0 "Ziggus Zebrone"
+ GOY_POM_maller_name_general:0 "Maleficar Maller"
+ GOY_POM_philipos_name_general:0 "Philipos Argead"
+ GOY_POM_nolwenn_name_general:0 "Nolwenn Iudicael"
+ GOY_POM_stierlitz_name_general:0 "Maximilian Stierlitz"
+ GOY_POM_roisin_name_general:0 "Róisín Stormshield"

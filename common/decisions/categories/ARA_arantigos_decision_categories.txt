@@ -71,6 +71,7 @@ ARA_peace_nm_cat = {
 		OR = {
 			has_completed_focus = ARA_creatures_most_wicked
 			has_completed_focus = ARA_unexpected_opportunity
+			has_completed_focus = ARA_com_conquer_the_colony
 		}
 		EQC = {
 		    has_war_with = ARA
@@ -180,5 +181,53 @@ ARA_reorg_zebrican_lands_cat = {
 	visible = {
 	    original_tag = ARA
 		has_completed_focus = ARA_reorganise_zebrica
+	}
+}
+
+ARA_acds_investments_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_completed_focus = ARA_marge_acds
+	}
+}
+
+ARA_karthinian_projects_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_completed_focus = ARA_marge_era_of_prosperity
+	}
+}
+
+ARA_marge_foreign_policy_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_completed_focus = ARA_marge_diplomatic_offensive
+	}
+}
+
+ARA_com_economic_planning_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_completed_focus = ARA_com_outline_plans
+	}
+}
+
+GOY_ARA_com_arm_collaborators_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_country_flag = GOY_ARA_com_arm_collaborators_flag
+	}
+}
+
+GOY_ARA_com_dismantle_karthinian_industry_cat = {
+    icon = GFX_goal_unknown
+	visible = {
+	    original_tag = ARA
+		has_country_flag = GOY_ARA_com_dismantle_karthinian_industry_cat
 	}
 }

@@ -5,7 +5,7 @@ goy_ach_arantigos_end = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = ARA
@@ -20,7 +20,7 @@ goy_ach_frost_king_end = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = NTR
@@ -35,7 +35,7 @@ goy_ach_double_royal_trouble = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = BOI
@@ -45,18 +45,17 @@ goy_ach_double_royal_trouble = {
 		has_completed_focus = BOI_new_diarchy
     }    
 }
-goy_ach_victory_for_hrr = {
+goy_ach_victory_for_hrr = { #Strength in Unity
     possible = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
-		#
-		tag = HRR
     }
     
     happened = {
+		tag = HRR
 		has_completed_focus = HRR_heart_darkness
     }    
 }
@@ -65,7 +64,7 @@ goy_ach_let_me_show_you = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = NTR
@@ -80,7 +79,7 @@ goy_ach_king_in_castle = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = NTR
@@ -90,12 +89,12 @@ goy_ach_king_in_castle = {
 		has_country_flag = NTR_built_aurora_tower
     }    
 }
-goy_ach_master_of_puppets = {
+goy_ach_master_of_puppets = { #TODO change icon to a guitar with sickle and sword for the body
     possible = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = ARA
@@ -144,7 +143,7 @@ goy_ach_gigantomachy = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = ARA
@@ -164,7 +163,7 @@ goy_ach_bahwere = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = POM
@@ -179,7 +178,7 @@ goy_ach_dream_of_a_better_griffonia = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = POM
@@ -187,13 +186,12 @@ goy_ach_dream_of_a_better_griffonia = {
     
     happened = {
 		has_completed_focus = POM_all_griffons_can_dream
-		all_state = {
-			OR = {
-				NOT = {
-					is_on_continent = asia
-					is_griffon_core = yes
-				}
-				is_core_of = ROOT
+		all_country = {
+			limit = {
+				is_griffon_continent_griffon_country_tag = yes
+			}
+			all_core_state = {
+				is_owned_by = ROOT
 			}
 		}
     }    
@@ -203,7 +201,7 @@ goy_ach_hyperfocused_warlord = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = POM
@@ -230,7 +228,7 @@ goy_ach_o_captain = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = POM
@@ -245,7 +243,7 @@ goy_ach_beach_episode = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = POM
@@ -260,7 +258,7 @@ goy_ach_false_flag_operation = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = BOI
@@ -299,7 +297,7 @@ goy_ach_trail_of_destruction = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = ARA
@@ -324,7 +322,7 @@ goy_ach_queenmaker = {
         # classic triggers used in all vanilla achievements
         difficulty > 1
         has_start_date < 1007.01.02
-        has_any_custom_difficulty_setting = no
+        #has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
 		#
 		original_tag = BOI
@@ -346,12 +344,12 @@ goy_ach_queenmaker = {
 		}
     }    
 }
-#goy_ach_maars_mind_tricks = { #semi-impossible because Gallus has to defeat Doro to get his (real) idol
+#goy_ach_maars_mind_tricks = { #semi-impossible because Doro has to defeat Gallus to get his (real) idol
 #    possible = {
 #        # classic triggers used in all vanilla achievements
 #        difficulty > 1
 #        has_start_date < 1007.01.02
-#        has_any_custom_difficulty_setting = no
+#        #has_any_custom_difficulty_setting = no
 #        game_rules_allow_achievements = yes
 #		#
 #		original_tag = ARA

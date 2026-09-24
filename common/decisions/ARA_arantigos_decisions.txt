@@ -355,6 +355,45 @@ ARA_peace_nm_cat = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes 
+						character = ARA_ciriaco_mediate
+					}
+					EQC = {
+						is_subject = yes
+					}
+				}
+				every_other_country = {
+					limit = {
+						has_subject = EQC
+					}
+					PREV = {
+						country_event = {
+							id = arantiga.164
+							hours = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes 
+							character = ARA_ciriaco_mediate
+						}
+						EQC = {
+							is_subject = no
+						}
+					}
+					EQC = {
+						country_event = {
+							id = arantiga.164
+							hours = 2
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -2190,6 +2229,1809 @@ ARA_reorg_zebrican_lands_cat = {
 					set_resistance = 0
 					set_compliance = 40
 				}
+			}
+		}
+	}
+}
+
+ARA_acds_investments_cat = {
+	#Base
+	GOY_ARA_acds_invest_in_francistria = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			GOY_ARA_marge_add_1_level_to_acds = yes #from GOY_scripted_effects
+			custom_effect_tooltip = generic_skip_one_line_tt
+			FRN = {
+				country_event = arantiga.262
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					prioritize = { 515 }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_invest_in_talouse = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			GOY_ARA_marge_add_1_level_to_acds = yes #from GOY_scripted_effects
+			custom_effect_tooltip = generic_skip_one_line_tt
+			TAL = {
+				country_event = arantiga.262
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					prioritize = { 366 }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_invest_in_wingbardy = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			GOY_ARA_marge_add_1_level_to_acds = yes #from GOY_scripted_effects
+			custom_effect_tooltip = generic_skip_one_line_tt
+			WNG = {
+				country_event = arantiga.262
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					prioritize = { 371 }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_invest_in_falcor = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			GOY_ARA_marge_add_1_level_to_acds = yes #from GOY_scripted_effects
+			custom_effect_tooltip = generic_skip_one_line_tt
+			FAL = {
+				country_event = arantiga.262
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					prioritize = { 529 }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_invest_in_target = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		target_trigger = {
+			is_in_faction_with = ROOT
+			NOT = {
+				original_tag = FRN
+				original_tag = TAL
+				original_tag = WNG
+				original_tag = FAL
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			GOY_ARA_marge_add_1_level_to_acds = yes #from GOY_scripted_effects
+			custom_effect_tooltip = generic_skip_one_line_tt
+			FROM = {
+				country_event = arantiga.262
+				random_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	#Expansion
+	GOY_ARA_acds_expand_to_griffonstone = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			BOI = {
+				OR = {
+					has_government = democratic
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			BOI = {
+				country_event = arantiga.263
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				BOI = {
+					471 = {
+						add_resource = {
+							type = tungsten
+							amount = 4
+						}
+						add_resource = {
+							type = crystals
+							amount = 6
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					give_resource_rights = { receiver = ROOT state = 471 resources = { tungsten crystals } }
+					add_ideas = ARA_marge_BOI_effective_resource_processing
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				ROOT = {
+					add_political_power = 75
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_expand_to_avian = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			AVI = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			BOI = {
+				country_event = arantiga.264
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				AVI = {
+					470 = {
+						add_resource = {
+							type = aluminium
+							amount = 8
+						}
+					}
+				}
+				ROOT = {
+					408 = {
+						add_resource = {
+							type = aluminium
+							amount = 8
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				ROOT = {
+					add_political_power = 75
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_expand_to_rumare = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			has_completed_focus = ARA_marge_prospect_for_shoal_oil
+			LAK = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			LAK = {
+				country_event = arantiga.265
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				AVI = {
+					383 = {
+						add_resource = {
+							type = oil
+							amount = 8
+						}
+					}
+				}
+				ROOT = {
+					408 = {
+						add_resource = {
+							type = oil
+							amount = 8
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				ROOT = {
+					add_political_power = 75
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+	GOY_ARA_acds_expand_to_sicameon = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			SIC = {
+				OR = {
+					has_government = democratic
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = ARA_marge_another_acds_investment_going
+			}
+		}
+		complete_effect = {
+			set_country_flag = ARA_marge_another_acds_investment_going
+		}
+		remove_effect = {
+			SIC = {
+				country_event = arantiga.266
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				SIC = {
+					528 = {
+						add_resource = {
+							type = rubber
+							amount = 12
+						}
+					}
+					444 = {
+						add_resource = {
+							type = rubber
+							amount = 8
+						}
+					}
+					give_resource_rights = { receiver = ROOT state = 528 resources = { rubber } }
+				}
+			}
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				ROOT = {
+					add_political_power = 75
+				}
+			}
+			clr_country_flag = ARA_marge_another_acds_investment_going
+		}
+	}
+}
+ARA_karthinian_projects_cat = {
+	GOY_ARA_folino_river_regulation = {
+		icon = GFX_goal_unknown
+	    cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = { num_of_civilian_factories_available_for_projects > 15 }
+		modifier = {
+			civilian_factory_use = 15
+		}
+		highlight_states = {
+			state = 410
+			state = 526
+			state = 515
+			state = 368
+			state = 358
+			state = 409
+			state = 529
+			state = 534
+			state = 375
+			state = 369
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 410
+						state = 526
+						state = 515
+						state = 368
+						state = 358
+						state = 409
+						state = 529
+						state = 534
+						state = 375
+						state = 369
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_manpower = 10000
+			}
+			every_owned_state = {
+				limit = {
+					state = 375
+				}
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			}
+		}
+	}
+	GOY_ARA_wrobert_harbour = {
+		icon = GFX_goal_unknown
+	    cost = 50
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = { num_of_civilian_factories_available_for_projects > 12 }
+		modifier = {
+			civilian_factory_use = 12
+		}
+		highlight_states = {
+			state = 369
+		}
+		remove_effect = {
+			every_owned_state = {
+				limit = {
+					state = 369
+				}
+				add_building_construction = {
+				    type = dockyard
+					level = 4
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+			add_ideas = ARA_marge_wrobert_shipbuilding
+		}
+	}
+	GOY_ARA_excavate_hills_of_talouse = {
+		icon = GFX_goal_unknown
+	    cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = { num_of_civilian_factories_available_for_projects > 16 }
+		modifier = {
+			civilian_factory_use = 16
+		}
+		highlight_states = {
+			state = 366
+			state = 367
+			state = 368
+			state = 388
+		}
+		remove_effect = {
+			366 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = coal
+					amount = 8
+				}
+			}
+			367 = {
+				add_resource = {
+					type = coal
+					amount = 12
+				}
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+			368 = {
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+			}
+			388 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = coal
+					amount = 10
+				}
+			}
+		}
+	}
+	GOY_ARA_falcor_magi_industrial_park = {
+		icon = GFX_goal_unknown
+	    cost = 50
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = { num_of_civilian_factories_available_for_projects > 15 }
+		modifier = {
+			civilian_factory_use = 15
+		}
+		highlight_states = {
+			state = 530
+		}
+		remove_effect = {
+			add_ideas = ARA_marge_high_tech_industry
+			530 = {
+				add_resource = {
+					type = crystals
+					amount = 21
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	GOY_ARA_scarlet_reactor = {
+		icon = GFX_goal_unknown
+	    cost = 100
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = {
+			num_of_civilian_factories_available_for_projects > 20
+			has_tech = atomic_research
+		}
+		modifier = {
+			civilian_factory_use = 20
+		}
+		highlight_states = {
+			state = 394
+			state = 395
+		}
+		remove_effect = {
+			394 = {
+				add_resource = {
+					type = crystals
+					amount = 8
+				}
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			395 = {
+				add_resource = {
+					type = crystals
+					amount = 12
+				}
+			}
+		}
+	}
+	GOY_ARA_mediolano_oil_rigs = {
+		icon = GFX_goal_unknown
+	    cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = { }
+		available = {
+			num_of_civilian_factories_available_for_projects > 18
+			372 = { owns_or_subject_of = yes }
+			357 = { owns_or_subject_of = yes }
+			354 = { owns_or_subject_of = yes }
+		}
+		modifier = {
+			civilian_factory_use = 18
+		}
+		highlight_states = {
+			state = 372
+			state = 357
+			state = 354
+		}
+		remove_effect = {
+			372 = {
+				add_resource = {
+					type = oil
+					amount = 24
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				IF = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+					owner = {
+						give_resource_rights = { receiver = ROOT state = PREV resources = { oil } }
+					}
+				}
+			}
+			357 = {
+				add_resource = {
+					type = oil
+					amount = 18
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				IF = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+					owner = {
+						give_resource_rights = { receiver = ROOT state = PREV resources = { oil } }
+					}
+				}
+			}
+			354 = {
+				add_resource = {
+					type = oil
+					amount = 16
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				IF = {
+					limit = {
+						owner = {
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+					owner = {
+						give_resource_rights = { receiver = ROOT state = PREV resources = { oil } }
+					}
+				}
+			}
+		}
+	}
+}
+ARA_marge_foreign_policy_cat = {
+	GOY_ARA_marge_union_with_sicameon = {
+		icon = GFX_goal_unknown
+	    cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			SIC = {
+				exists = yes
+				is_subject = no
+				has_government = democratic
+				#is_in_faction = no
+			}
+		}
+		complete_effect = {
+			SIC = {
+				country_event = arantiga.278
+			}
+		}
+	}
+	GOY_ARA_marge_invite_new_mareland = {
+		icon = GFX_goal_unknown
+	    cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			EQC = {
+				exists = yes
+				is_subject = no
+				is_in_faction = no
+				OR = {
+					has_government = democratic
+					AND = {
+						has_government = neutrality
+						has_country_leader = {
+							character = EQC_kingfisher
+							ruling_only = yes
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			EQC = {
+				country_event = arantiga.282
+			}
+		}
+	}
+	GOY_ARA_marge_invite_griffonstone = {
+		icon = GFX_goal_unknown
+	    cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			BOI = {
+				exists = yes
+				is_subject = no
+				#is_in_faction = no
+				AND = {
+					has_government = democratic
+					NOT = {
+						has_country_leader = {
+							character = GOY_BOI_gallus
+							ruling_only = yes
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			BOI = {
+				country_event = arantiga.282
+			}
+		}
+	}
+	GOY_ARA_marge_merge_with_concordat = {
+		icon = GFX_goal_unknown
+	    cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			MIT = {
+				exists = yes
+				is_faction_leader = yes
+				has_government = democratic
+			}
+		}
+		complete_effect = {
+			MIT = {
+				country_event = arantiga.285
+			}
+		}
+	}
+}
+ARA_com_economic_planning_cat = {
+	#ARMAMENT
+	GOY_ARA_com_armament_production_plan_l1 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_armament_production_plan_l2
+				has_decision = GOY_ARA_com_armament_production_plan_l3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					OR = {
+						has_country_flag = GOY_ARA_com_armament_plan_l2_flag
+						has_country_flag = GOY_ARA_com_armament_plan_l3_flag
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			production_factory_max_efficiency_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			set_country_flag = GOY_ARA_com_armament_plan_l2_flag
+		}
+	}
+	GOY_ARA_com_armament_production_plan_l2 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 270
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_armament_production_plan_l3
+			}
+		}
+		available = {
+			has_country_flag = GOY_ARA_com_armament_plan_l2_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					has_country_flag = GOY_ARA_com_armament_plan_l3_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			hidden_effect = {
+				add_ideas = GOY_ARA_com_armament_production_plan_l2_idea
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+			production_factory_max_efficiency_factor = 0.2
+			custom_modifier_tooltip = GOY_ARA_com_armament_production_plan_l2_idea_tt
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			clr_country_flag = GOY_ARA_com_armament_plan_l2_flag
+			set_country_flag = GOY_ARA_com_armament_plan_l3_flag
+			hidden_effect = {
+				remove_ideas = GOY_ARA_com_armament_production_plan_l2_idea
+			}
+		}
+	}
+	GOY_ARA_com_armament_production_plan_l3 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 180
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			has_country_flag = GOY_ARA_com_armament_plan_l3_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			hidden_effect = {
+				add_ideas = GOY_ARA_com_armament_production_plan_l3_idea
+			}
+		}
+		modifier = {
+			industrial_capacity_factory = 0.1
+			production_factory_max_efficiency_factor = 0.25
+			custom_modifier_tooltip = GOY_ARA_com_armament_production_plan_l3_idea_tt
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+			hidden_effect = {
+				remove_ideas = GOY_ARA_com_armament_production_plan_l3_idea
+			}
+		}
+	}
+	#PRODUCTION
+	GOY_ARA_com_production_plan_l1 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_production_plan_l2
+				has_decision = GOY_ARA_com_production_plan_l3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					OR = {
+						has_country_flag = GOY_ARA_com_production_plan_l2_flag
+						has_country_flag = GOY_ARA_com_production_plan_l3_flag
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+			line_change_production_efficiency_factor = 0.2
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			set_country_flag = GOY_ARA_com_production_plan_l2_flag
+		}
+	}
+	GOY_ARA_com_production_plan_l2 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 270
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_production_plan_l3
+			}
+		}
+		available = {
+			has_country_flag = GOY_ARA_com_production_plan_l2_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					has_country_flag = GOY_ARA_com_production_plan_l3_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.25
+			industrial_capacity_factory = 0.05
+			line_change_production_efficiency_factor = 0.4
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			clr_country_flag = GOY_ARA_com_production_plan_l2_flag
+			set_country_flag = GOY_ARA_com_production_plan_l3_flag
+		}
+	}
+	GOY_ARA_com_production_plan_l3 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 180
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			has_country_flag = GOY_ARA_com_production_plan_l3_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.5
+			industrial_capacity_factory = 0.1
+			line_change_production_efficiency_factor = 0.6
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+	}
+	#HEAVY INDUSTRY
+	GOY_ARA_com_heavy_industry_plan_l1 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_heavy_industry_plan_l2
+				has_decision = GOY_ARA_com_heavy_industry_plan_l3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					OR = {
+						has_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+						has_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+		modifier = {
+			production_speed_industrial_complex_factor = 0.05
+			production_speed_arms_factory_factor = 0.05
+			production_speed_dockyard_factor = 0.05
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			set_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+		}
+	}
+	GOY_ARA_com_heavy_industry_plan_l2 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 270
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_heavy_industry_plan_l3
+			}
+		}
+		available = {
+			has_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					has_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_arms_factory_factor = 0.1
+			production_speed_dockyard_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			clr_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+			set_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+		}
+	}
+	GOY_ARA_com_heavy_industry_plan_l3 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 180
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			has_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_speed_industrial_complex_factor = 0.2
+			production_speed_arms_factory_factor = 0.2
+			production_speed_dockyard_factor = 0.2
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+	}
+	#INFRASTRUCTURE
+	GOY_ARA_com_infrastructure_plan_l1 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_infrastructure_plan_l2
+				has_decision = GOY_ARA_com_infrastructure_plan_l3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					OR = {
+						has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+						has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+		modifier = {
+			production_speed_infrastructure_factor = 0.05
+			production_speed_rail_way_factor = 0.05
+			production_speed_supply_node_factor = 0.1
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			set_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+		}
+	}
+	GOY_ARA_com_infrastructure_plan_l2 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 270
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_infrastructure_plan_l3
+			}
+		}
+		available = {
+			has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_speed_infrastructure_factor = 0.1
+			production_speed_rail_way_factor = 0.1
+			production_speed_supply_node_factor = 0.25
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			clr_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+			set_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+		}
+	}
+	GOY_ARA_com_infrastructure_plan_l3 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 180
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			production_speed_infrastructure_factor = 0.2
+			production_speed_rail_way_factor = 0.2
+			production_speed_supply_node_factor = 0.5
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+	}
+	#RESOURCE REALLOCATION
+	GOY_ARA_com_resource_plan_l1 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 90
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_resource_plan_l2
+				has_decision = GOY_ARA_com_resource_plan_l3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					OR = {
+						has_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+						has_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+		modifier = {
+			global_resources = 0.05
+			min_export = -0.1
+			production_lack_of_resource_penalty_factor = -0.1
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			set_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+		}
+	}
+	GOY_ARA_com_resource_plan_l2 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 270
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			NOT = {
+				has_decision = GOY_ARA_com_resource_plan_l3
+			}
+		}
+		available = {
+			has_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+				custom_trigger_tooltip = {
+					tooltip = GOY_ARA_com_better_armament_plan_tt
+					has_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			global_resources = 0.1
+			production_speed_buildings_factor = 0.05
+			min_export = -0.2
+			production_lack_of_resource_penalty_factor = -0.2
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			clr_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+			set_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+		}
+	}
+	GOY_ARA_com_resource_plan_l3 = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 180
+		fire_only_once = no
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			has_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+			NOT = {
+				has_country_flag = GOY_ARA_com_any_plan_active_flag
+			}
+		}
+		complete_effect = {
+			set_country_flag = GOY_ARA_com_any_plan_active_flag
+		}
+		modifier = {
+			global_resources = 0.2
+			production_speed_buildings_factor = 0.1
+			min_export = -0.25
+			production_lack_of_resource_penalty_factor = -0.5
+		}
+		remove_effect = {
+			clr_country_flag = GOY_ARA_com_any_plan_active_flag
+			GOY_ARA_com_clear_economic_plans = yes
+		}
+	}
+}
+GOY_ARA_com_arm_collaborators_cat = {
+	GOY_ARA_com_goldenfeather_arantigan_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 299
+			}
+		}
+		custom_cost_text = GoY_decision_cost_300_guns
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 481
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 481 }
+				create_unit = {
+					division = "name = \"Goldenfeather Arantigan Brigade\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+	GOY_ARA_com_roameo_arantigan_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 299
+			}
+		}
+		custom_cost_text = GoY_decision_cost_300_guns
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 410
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 410 }
+				create_unit = {
+					division = "name = \"Roameo Arantigan Brigade\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+	GOY_ARA_com_francistrian_communists_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 899
+			}
+		}
+		custom_cost_text = GoY_decision_cost_900_guns
+		days_remove = 28
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 515
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -900
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 515 }
+				create_unit = {
+					division = "name = \"1. Francistrian Communists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Francistrian Communists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Francistrian Communists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+	GOY_ARA_com_talonsian_nationalists_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 899
+			}
+		}
+		custom_cost_text = GoY_decision_cost_900_guns
+		days_remove = 28
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 366
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -900
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 366 }
+				create_unit = {
+					division = "name = \"1. Talonsian Nationalists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Talonsian Nationalists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Talonsian Nationalists\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+	GOY_ARA_com_arm_miners_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 599
+			}
+		}
+		custom_cost_text = GoY_decision_cost_600_guns
+		days_remove = 21
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 368
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -600
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 368 }
+				create_unit = {
+					division = "name = \"1. Armed Miners\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Armed Miners\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+	GOY_ARA_com_wingbardian_free_legion_regiment = {
+		icon = GFX_goal_unknown
+	    custom_cost_trigger = {
+			has_equipment = {
+			    infantry_equipment > 299
+			}
+		}
+		custom_cost_text = GoY_decision_cost_300_guns
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {  }
+		available = {
+			controls_state = 534
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -300
+				}
+			}
+		}
+		remove_effect = {
+			division_template = {
+				name = "Collaborator Brigade"
+				division_names_group = ARA_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 534 }
+				create_unit = {
+					division = "name = \"Wingbardian Free Legion\" division_template = \"Collaborator Brigade\" start_experience_factor = 0.4 start_equipment_factor = 1"
+					allow_spawning_on_enemy_provs = no
+					owner = ROOT
+				}
+			}
+		}
+	}
+}
+GOY_ARA_com_dismantle_karthinian_industry_cat = {
+	GOY_ARA_com_targeted_dismantle_karthinian_industry = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 30
+		state_target = any_controlled_state
+		target_trigger = {
+			owner = {
+				original_tag = WNG
+			}
+			industrial_complex > 1
+			arms_factory > 1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			any_other_country = {
+				original_tag = WNG
+				has_war_with = ROOT
+			}
+		}
+		available = {
+			controls_state = 534
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			FROM = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = WNG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = WNG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = WNG
+			}
+		}
+	}
+	GOY_ARA_com_plunder_squarkona_fuel_depot = {
+		icon = GFX_goal_unknown
+	    cost = 0
+		days_remove = 14
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			any_other_country = {
+				original_tag = WNG
+				has_war_with = ROOT
+			}
+		}
+		available = {
+			any_other_country = {
+				original_tag = WNG
+				owns_state = 375
+			}
+			controls_state = 375
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_fuel = 100000
+			damage_building = {
+				type = fuel_silo
+				state = 375
+				damage = 1
+				repair_speed_modifier = -0.25
 			}
 		}
 	}

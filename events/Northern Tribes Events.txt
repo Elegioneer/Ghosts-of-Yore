@@ -2829,7 +2829,14 @@ add_namespace = ntribes_news
 					}
 				}
 				HRR = {
+					#set_grand_doctrine = 
+					#set_sub_doctrine
+					add_command_power = 90
+					army_experience = 75
+					navy_experience = 25
+					air_experience = 50
 					delete_unit_template_and_units = { division_template = "Necromancer Division" disband = no } #WHYYYY
+					delete_unit_template_and_units = { division_template = "Shock Pegasi Division" disband = no }
 					set_oob = HRR_rebellion_OOB
 					load_oob = HRR_rebellion_OOB
 					every_country_division = { #todo check if works

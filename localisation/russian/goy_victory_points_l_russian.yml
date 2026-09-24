@@ -16,6 +16,8 @@ GOY_vp_port_featherin:0 "Порт-Фезерин"
  GOY_vp_halbuviros:0 "Альбувирос"
  GOY_vp_dorotheopolis:0 "Доротеополис"
  GOY_vp_arantiga:0 "Арантига"
+ GOY_vp_sparleos_novum:0 "Спарлеос Новум"
+ GOY_vp_karthinia_nova:0 "Карфиния Нова"
  
 ### NTR-related ##
 GOY_vp_sky_ruins:0 "Руины Новой Скайнавии"
@@ -30,3 +32,4 @@ GOY_vp_pomazhon:0 "Помазон"
  GOY_vp_ker_gollou:0 "Кер Голлоу"
  GOY_vp_angaz_barak:0 "Ангаз-Барак"
  GOY_vp_allardio:0 "Аллардио"
+ GOY_vp_reddawn:0 "Красный Восход"

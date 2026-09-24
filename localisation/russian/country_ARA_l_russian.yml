@@ -2392,6 +2392,8 @@ ARA_nicator_army:0 "§YНикатор§! служит армии Арантиг�
 ARA_lysimachus_army:0 "§YЛисимах§! служит армии Арантиги."
 ARA_soter_army:0 "§YСотер§! служит армии Арантиги."
 ARA_craterus_army:0 "§YКратерус§! служит армии Арантиги."
+GOY_ARA_com_armament_production_plan_l2_idea_tt:0 "§Y$infantry_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-5%§!\n§Y$support_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-5%§!\n§Y$artillery_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-5%§!"
+GOY_ARA_com_armament_production_plan_l3_idea_tt:0 "§Y$infantry_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-20%§!\n§Y$support_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-10%§!\n§Y$artillery_equipment$§!:\n    $STAT_COMMON_BUILD_COST_IC$§G-10%§!"
 
 ### Flags ###
 ARA_FLAG_rise_of_arantiga:0 "Был завершен фокус §Y$ARA_arantiga_rises$§!"

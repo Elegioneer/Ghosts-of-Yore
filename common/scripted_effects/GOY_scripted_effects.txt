@@ -340,6 +340,157 @@
 			}
 		}
 	}
+	
+	GOY_ARA_add_penal_brigade_template = {
+		if = {
+			limit = {
+				NOT = {
+					has_template = "Penal Brigade"
+				}
+			}
+			division_template = {
+				name = "Penal Brigade"
+
+				division_names_group = ARA_INF_03
+
+				regiments = {
+					penal_battalion = { x = 0 y = 0 }
+					penal_battalion = { x = 0 y = 1 }
+					penal_battalion = { x = 0 y = 2 }
+					penal_battalion = { x = 1 y = 0 }
+					penal_battalion = { x = 1 y = 1 }
+					penal_battalion = { x = 1 y = 2 }
+					penal_battalion = { x = 2 y = 0 }
+					penal_battalion = { x = 2 y = 1 }
+					penal_battalion = { x = 2 y = 2 }
+				}
+				
+				regimental_support = {
+					fire_support = { x = 0 y = 0 }
+					fire_support = { x = 1 y = 0 }
+					fire_support = { x = 2 y = 0 }
+				}
+				
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+				
+				is_locked = yes
+				force_allow_recruiting = yes
+				priority = 0
+			}
+
+		}
+	}
+	
+	GOY_ARA_marge_add_1_level_to_acds = {
+		IF = { # moved here for better code readability
+			limit = {
+				NOT = {
+					has_dynamic_modifier = { modifier = ARA_marge_acds_karthinia_profits }
+				}
+			}
+			add_dynamic_modifier = { modifier = ARA_marge_acds_karthinia_profits }
+		}
+		add_to_variable = {
+			var = ARA_marge_acds_offmap_civs
+			value = 1
+		}
+		add_to_variable = {
+			var = ARA_marge_acds_offmap_mils
+			value = 1
+		}
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					var = ARA_marge_acds_ic_factory
+					value = 0.24
+					compare = less_than
+				}
+			}
+			add_to_variable = {
+				var = ARA_marge_acds_ic_factory
+				value = 0.02
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					var = ARA_marge_acds_ic_factory
+					value = 0.24
+					compare = equals
+				}
+			}
+			add_to_variable = {
+				var = ARA_marge_acds_ic_factory
+				value = 0.01
+			}
+		}
+		custom_effect_tooltip = ARA_marge_acds_profits_grow_1_tt #TODO	
+	}
+	GOY_ARA_com_clear_economic_plans = {
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = GOY_ARA_com_armament_plan_l2_flag
+					has_country_flag = GOY_ARA_com_armament_plan_l3_flag
+				}
+			}
+			clr_country_flag = GOY_ARA_com_armament_plan_l2_flag
+			clr_country_flag = GOY_ARA_com_armament_plan_l3_flag
+			custom_effect_tooltip = GOY_ARA_com_drop_armament_plan_level_tt #TODO
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = GOY_ARA_com_production_plan_l2_flag
+					has_country_flag = GOY_ARA_com_production_plan_l3_flag
+				}
+			}
+			clr_country_flag = GOY_ARA_com_production_plan_l2_flag
+			clr_country_flag = GOY_ARA_com_production_plan_l3_flag
+			custom_effect_tooltip = GOY_ARA_com_drop_production_plan_level_tt
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+					has_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+				}
+			}
+			clr_country_flag = GOY_ARA_com_heavy_industry_plan_l2_flag
+			clr_country_flag = GOY_ARA_com_heavy_industry_plan_l3_flag
+			custom_effect_tooltip = GOY_ARA_com_drop_heavy_industry_plan_level_tt
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+					has_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+				}
+			}
+			clr_country_flag = GOY_ARA_com_infrastructure_integration_plan_l2_flag
+			clr_country_flag = GOY_ARA_com_infrastructure_integration_plan_l3_flag
+			custom_effect_tooltip = GOY_ARA_com_drop_infrastructure_plan_level_tt
+		}
+		IF = {
+			limit = {
+				OR = {
+					has_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+					has_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+				}
+			}
+			clr_country_flag = GOY_ARA_com_resource_reallocation_plan_l2_flag
+			clr_country_flag = GOY_ARA_com_resource_reallocation_plan_l3_flag
+			custom_effect_tooltip = GOY_ARA_com_drop_resource_reallocation_plan_level_tt
+		}
+	}
+	
+	###### UNIVERSAL WARGOALS AND WARDECS #####
 	#Preface with set_temp_variable = { core_holders_of = XXX }
 	GOY_generate_annex_wargoal_on_core_holders = {
 		every_other_country = {

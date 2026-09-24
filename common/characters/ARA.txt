@@ -285,6 +285,24 @@ characters = {
 			traits = { army_chief_planning_3 }
 		}
 	}
+	GOY_ARA_titus_gatius = {
+		name = GOY_ARA_titus_gatius
+		portraits = {
+			army = {
+				#large="" #TODO portrait
+				#small="" 
+			}
+		}
+	}
+	GOY_ARA_peithon = {
+		name = GOY_ARA_peithon
+		portraits = {
+			army = {
+				#large="" #TODO portrait
+				#small="" 
+			}
+		}
+	}
 	GOY_ARA_prelate_heraclius = {
 		name = prelate_heraclius
 		portraits = {

@@ -2,7 +2,7 @@
 	shared_focus = {
 		id = BOI_from_ashes
 		icon = GFX_goal_bankruptcy
-		x = -2
+		x = 9
 		y = 0
 		cost = 5.00
 		available = {
@@ -1410,8 +1410,46 @@
 	shared_focus = {
 		id = BOI_royal_defence_force
 		icon = GFX_goal_conscription 
-		x = -17
+		x = 28
 		y = 0
+		offset = { 
+			x = 8
+			y = 0
+			trigger = {
+				has_focus_tree = Griffonstone_gallus_1
+			}
+		}
+		offset = { 
+			x = 9
+			y = 0
+			trigger = {
+				has_focus_tree = Griffonstone_gallus_2
+			}
+		}
+		offset = { 
+			x = 9
+			y = 0
+			trigger = {
+				OR = {
+					has_focus_tree = Griffonstone_gestal
+					has_focus_tree = Griffonstone_gestal_2
+				}
+			}
+		}
+		offset = { 
+			x = 6
+			y = 0
+			trigger = {
+				has_focus_tree = Griffonstone_goldstone
+			}
+		}
+		offset = {
+			x = 9
+			y = 0
+			trigger = {
+				has_focus_tree = Griffonstone_gilda
+			}
+		}
 		cost = 5.00
 		available = {
 		    has_country_flag = BOI_deadlock_broken
@@ -2166,9 +2204,10 @@
     ##NAVY##
 	shared_focus = {
 		id = BOI_birth_navy
-		icon = GFX_goal_generic_navy_battleship 
-		x = 12
-		y = 0
+		icon = GFX_goal_generic_navy_battleship
+		relative_position_id = BOI_royal_defence_force
+		x = 9
+		y = 5
 		cost = 5.00
 		available = {
 		    has_country_flag = BOI_deadlock_broken
@@ -2440,8 +2479,9 @@
 	##AIRFORCE##
 	shared_focus = {
 		id = BOI_create_airforce
-		icon = GFX_goal_generic_build_airforce 
-		x = 20
+		icon = GFX_goal_generic_build_airforce
+		relative_position_id = BOI_royal_defence_force
+		x = 9
 		y = 0
 		cost = 5.00
 		available = {
@@ -2851,7 +2891,7 @@ focus_tree = {
 	focus = {
 		id = BOI_fallen_kingdom
 		icon = GFX_goal_GOY_grover_statue_gates 
-		x = 27
+		x = 21
 		y = 0
 		cost = 2.00
 
@@ -2996,7 +3036,7 @@ focus_tree = {
 	focus = {
 		id = BOI_legacy_of_guto
 		icon = GFX_goal_gaw_gallus 
-		x = 30
+		x = 25
 		y = 0
 		cost = 1.00
 		bypass = {
@@ -3590,7 +3630,7 @@ focus_tree = {
 	focus = {
 		id = BOI_coronation
 		icon = GFX_goal_griffon_crown 
-		x = 30
+		x = 24
 		y = 0
 		cost = 2.00
 
@@ -4770,7 +4810,7 @@ focus_tree = {
 	focus = {
 		id = BOI_age_of_commongriff
 		icon = GFX_goal_gaw_gilda 
-		x = 30
+		x = 25
 		y = 0
 		cost = 1.00
 		bypass = {
@@ -6162,7 +6202,7 @@ focus_tree = {
 	shared_focus = {
 		id = BOI_loyalty_reward
 		icon = GFX_goal_gaw_gestal 
-		x = 30
+		x = 25
 		y = 0
 		cost = 1.00
 		bypass = {
@@ -6277,7 +6317,7 @@ focus_tree = {
 	}
 	shared_focus = {
 		id = BOI_reaffirm_our_allegiance
-		icon = GFX_goal_BRZ_eternal_empire
+		icon = GFX_goal_Vest_Seat
 		x = 0
 		y = 2
 		cost = 5.00
@@ -7386,8 +7426,9 @@ focus_tree = {
 	################
 	shared_focus = {
 		id = BOI_imperial_reclamation
-		icon = GFX_goal_BRZ_eternal_empire 
-		x = 20
+		icon = GFX_goal_BRZ_eternal_empire
+		relative_position_id = BOI_from_ashes
+		x = 8
 		y = 6
 		cost = 8.00
 		available = {
@@ -8939,7 +8980,7 @@ focus_tree = {
 	focus = {
 		id = BOI_golden_dawn
 		icon = GFX_goal_gaw_goldstone 
-		x = 30
+		x = 23
 		y = 0
 		cost = 1.00
 		bypass = {

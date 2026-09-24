@@ -8266,6 +8266,8 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1
 			}
+			custom_effect_tooltip = GOY_unlocks_new_focuses_tt
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	country_event = { #Socialism and Spirituality
@@ -8354,14 +8356,16 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1
 			}
-			#TODO Enable decision set “Arm Collaborators”
+			unlock_decision_category_tooltip = GOY_ARA_com_arm_collaborators_cat
+			set_country_flag = GOY_ARA_com_arm_collaborators_flag
 		}
 		option = {
 		    name = arantiga.205.b
 			ai_chance = {
 			    base = 1
 			}
-			#TODO Enable decision set “Dismantle Karthinian Industry”
+			unlock_decision_category_tooltip = GOY_ARA_com_dismantle_karthinian_industry_cat
+			set_country_flag = GOY_ARA_com_dismantle_karthinian_industry_cat
 		}
 	}
 	country_event = { #The Greatest Illusion
@@ -9374,7 +9378,7 @@ country_event = { #Hedonism
 			add_stability = -0.03
 			add_war_support = -0.03
 			add_popularity = { ideology = communism popularity = -0.03 }
-			add_manpower -100
+			add_manpower = -100
 			#TODO Soter stops being general
 			country_event = {
 				id = arantiga.261
@@ -9395,7 +9399,9 @@ country_event = { #Hedonism
 			    base = 1
 			}
 			add_popularity = { ideology = democratic popularity = 0.1 }
-			remove_idea = ARA_marge_demand_for_reforms
+			remove_ideas = ARA_marge_demand_for_reforms
+			custom_effect_tooltip = GOY_unlocks_new_focuses_tt
+			mark_focus_tree_layout_dirty = yes
 			#TODO switch to harmonic
 			#TODO Margareth Featherin becomes leader of harmonic party and gets trait “Popular Monarch” (+10% stability)
 		}
@@ -9414,8 +9420,6 @@ country_event = { #Hedonism
 			}
 			add_popularity = { ideology = democratic popularity = 0.03 }
 			add_stability = 0.01
-			remove_idea = ARA_marge_demand_for_reforms
-			#TODO target country gets acds profits idea
 			add_ideas = ARA_marge_acds_profits
 		}
 	}
@@ -9446,7 +9450,7 @@ country_event = { #Hedonism
 					instant_build = yes
                 }
 			}
-			give_resource_rights = { receiver = FROM state = 471 }
+			give_resource_rights = { receiver = FROM state = 471 resources = { tungsten crystals } }
 			add_ideas = ARA_marge_BOI_effective_resource_processing
 			FROM = {
 				country_event = {
@@ -9600,7 +9604,7 @@ country_event = { #Hedonism
 					amount = 8
 				}
 			}
-			give_resource_rights = { receiver = FROM state = 528 }
+			give_resource_rights = { receiver = FROM state = 528 resources = { rubber } }
 			FROM = {
 				country_event = {
 					id = arantiga.267
@@ -9645,7 +9649,7 @@ country_event = { #Hedonism
 					}
 				}
 				effect_tooltip = {
-					give_resource_rights = { receiver = ROOT state = 471 }
+					give_resource_rights = { receiver = ROOT state = 471 resources = { tungsten crystals } }
 				}
 			}
 			IF = {
@@ -9690,7 +9694,7 @@ country_event = { #Hedonism
 					}
 				}
 				effect_tooltip = {
-					give_resource_rights = { receiver = ROOT state = 528 }
+					give_resource_rights = { receiver = ROOT state = 528 resources = { rubber } }
 				}
 			}
 			reverse_add_opinion_modifier = {
@@ -9712,6 +9716,7 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1
 			}
+			add_political_power = 75
 		}
 	}
 	country_event = { #Karthinian League
@@ -9725,6 +9730,20 @@ country_event = { #Hedonism
 		    name = arantiga.269.a
 			ai_chance = {
 			    base = 1 #TODO set up AI weights
+				modifier = {
+				    THIS = {
+						original_tag = FRN
+						is_in_faction_with = WNG
+					}
+					add = -1
+				}
+				modifier = {
+				    THIS = {
+						original_tag = FAL
+						is_in_faction = yes
+					}
+					add = -1
+				}
 			}
 			FROM = {
 				add_to_faction = PREV
@@ -9738,6 +9757,20 @@ country_event = { #Hedonism
 		    name = arantiga.269.b
 			ai_chance = {
 			    base = 0
+				modifier = {
+				    THIS = {
+						original_tag = FRN
+						is_in_faction_with = WNG
+					}
+					add = 1
+				}
+				modifier = {
+				    THIS = {
+						original_tag = FAL
+						is_in_faction = yes
+					}
+					add = 1
+				}
 			}
 			#FROM = { #TODO check if needed
 			#	country_event = { event = arantiga.271 days = 1 }
@@ -9818,6 +9851,12 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1
 			}
+			effect_tooltip = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}
+			}
 		}
 	}
 	country_event = { #X does not unify with Arantiga
@@ -9851,6 +9890,7 @@ country_event = { #Hedonism
 			add_popularity = { ideology = democratic popularity = 0.1 }
 			news_event = arantiga_news.17
 			custom_effect_tooltip = GOY_unlocks_new_focuses_tt
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	news_event = { #Arantigan Revolution
@@ -10276,20 +10316,23 @@ country_event = { #Hedonism
 			ai_chance = {
 			    base = 1 #TODO set AI weights
 			}
-			every_country = {
+			country_event = {
+				id = arantiga.286
+				days = 1
+			}
+			every_other_country = {
 				limit = {
 					OR = {
-						tag = PREV
-						is_ally_with = PREV
+						is_in_faction_with = FROM
+						tag = FROM
 					}
+				}
+				PREV = {
+					add_to_faction = PREV
 				}
 			}
 			FROM = {
-				add_to_faction = PREV
-				country_event = {
-					id = arantiga.286
-					days = 1
-				} #TODO since we can't change faction icon arantiga will probably have to join the concordat instead and take over
+				set_faction_leader = yes
 			}
 		}
 		option = {
@@ -10318,7 +10361,10 @@ country_event = { #Hedonism
 			    base = 1
 			}
 			effect_tooltip = {
-				#TODO
+				FROM = {
+					add_to_faction = ROOT
+				}
+				set_faction_leader = yes
 			}
 		}
 	}

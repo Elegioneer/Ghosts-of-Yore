@@ -16,6 +16,8 @@ GOY_vp_port_featherin:0 "Port-Featherin"
  GOY_vp_halbuviros:0 "Halbuviros"
  GOY_vp_dorotheopolis:0 "Dorotheopolis"
  GOY_vp_arantiga:0 "Arantiga"
+ GOY_vp_sparleos_novum:0 "Sparléos Novum"
+ GOY_vp_karthinia_nova:0 "Karthinia Nova"
  
 ### NTR-related ##
 GOY_vp_sky_ruins:0 "Ruins of New Skynavia"

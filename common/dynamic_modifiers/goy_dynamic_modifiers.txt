@@ -419,6 +419,21 @@
 		local_factories = -0.5
 		local_resources_factor = -0.25
 	}
+	ARA_marge_acds_karthinia_profits = {
+		enable = {
+			tag = ARA
+		}
+		
+		remove_trigger = {
+			has_completed_focus = ARA_marge_protect_the_south
+		}
+		
+		icon = GFX_goal_unknown
+		
+		custom_modifier_tooltip = ARA_marge_acds_offmap_civs_tt #uses var ARA_marge_acds_offmap_civs #TODO make the tooltip and figure out how to remove the factories if dynmod is lost
+		custom_modifier_tooltip = ARA_marge_acds_offmap_mils_tt #uses var ARA_marge_acds_offmap_mils
+		industrial_capacity_factory = ARA_marge_acds_ic_factory #variable
+	}
 	
 	#ARA_national_effort = {
 	#	enable = { always = yes }
