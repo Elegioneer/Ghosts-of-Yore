@@ -5693,15 +5693,12 @@
 					}
 					division_template = {
 						name = "Raised Warriors"
-
 						division_names_group = NTR_INF_02
-
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
 							infantry = { x = 0 y = 2 }
 						}
-
 					}
 				}
 				else = {
@@ -5710,7 +5707,46 @@
 						is_locked = no
 					}
 				}
-				load_oob = NTR_raised_warriors_OOB
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Frozen Cohort\" division_template = \"Raised Warriors\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						prioritize_location = 6288
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Bringers of Death\" division_template = \"Raised Warriors\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						prioritize_location = 6162
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Swords of Blizzard\" division_template = \"Raised Warriors\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						prioritize_location = 6288
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 562 }
+					create_unit = {
+						division = "name = \"Lost Warriors\" division_template = \"Raised Warriors\" start_experience_factor = 0.2 start_equipment_factor = 1"
+						prioritize_location = 6162
+						allow_spawning_on_enemy_provs = no
+						owner = ROOT
+					}
+				}
 			}
 		}
 	}

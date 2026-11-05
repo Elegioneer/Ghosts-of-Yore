@@ -110,6 +110,7 @@ tactic_defender_tw_GOY_meat_wall = {
 	defender_movement_speed = 0.25
 }
 ########################## GHOSTS OF YORE END ##########################
+
 tactic_basic_attack = {
 
 	is_attacker = yes

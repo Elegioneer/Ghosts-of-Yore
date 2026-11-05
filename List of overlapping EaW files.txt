@@ -1,11 +1,8 @@
 ### List of changed EaW files
 # Everything Arantiga-related
-# common/bookmarks/the_gathering_storm.txt -deleted, deprecated
-# common/bookmarks/z_scenariogriffonia.txt - deprecated
 # common/countries/cosmetic.txt
 # common/decisions/categories/eaw_formable_category.txt
 # common/game_rules/EAW_game_rules.txt -Arantiga removed
-# common/scripted_localisation/EAW_state_lore_scripted_localisation.txt -deprecated
 # common/scripted_localisation/EAW_welcomescreen_scripted_localisation.txt
 # common/scripted_triggers/EAW_MIO_triggers.txt
 # common/scripted_triggers/EAW_unit_medals_scripted_triggers.txt
@@ -14,7 +11,6 @@
 # events/EAW_Starting_Warning_Events.txt
 # interface/frontendmainview.gui - deprecated?
 # interface/goy_frontendgamesetupview 
-# localisation/eaw_bookmarks_l_english.yml -removed
 # common/bookmarks/z_scenario_main
 # interface/ingamemenu.gui
 # 

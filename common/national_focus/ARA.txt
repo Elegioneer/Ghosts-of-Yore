@@ -2337,14 +2337,15 @@ focus_tree = {
 			tag = ARA
 		}
 	}
+	
 	default = no
 	continuous_focus_position = { x = 130 y = 1100 }
 	
-		shared_focus = ARA_the_new_airforce
-		shared_focus = ARA_self_strength
-		shared_focus = ARA_GOY_new_age_new_army
-		shared_focus = ARA_rumare_exercises
-			
+	shared_focus = ARA_the_new_airforce
+	shared_focus = ARA_self_strength
+	shared_focus = ARA_GOY_new_age_new_army
+	shared_focus = ARA_rumare_exercises
+	
 	focus = {
 		id = ARA_dorotheos_coup
 		icon = GFX_goal_GOY_ara_dorocoup
@@ -2383,7 +2384,7 @@ focus_tree = {
 			custom_effect_tooltip = ARA_CETT_arantigans_abroad
 			##Gives access to decisions "Arantigans Abroad"##
 		}
-}
+	}
 
 	focus = {
 		id = ARA_army_with_a_state
@@ -2395,11 +2396,11 @@ focus_tree = {
 		prerequisite = { focus = ARA_reorganise_high_command }
 		
 		completion_reward = {
-		add_ideas = ARA_every_griff
-		add_war_support = 0.1
-		add_manpower = 40000
+			add_ideas = ARA_every_griff
+			add_war_support = 0.1
+			add_manpower = 40000
 		}
-		}
+	}
 		
 	focus = {
 		id = ARA_purge_loyalists
@@ -2411,12 +2412,12 @@ focus_tree = {
 		prerequisite = { focus = ARA_dorotheos_coup }
 		
 		completion_reward = {
-		add_popularity = { ideology = democratic popularity = -0.05 }
-		add_popularity = { ideology = neutrality popularity = -0.2 }
-		add_war_support = 0.05
-		add_stability = 0.05
+			add_popularity = { ideology = democratic popularity = -0.05 }
+			add_popularity = { ideology = neutrality popularity = -0.2 }
+			add_war_support = 0.05
+			add_stability = 0.05
 		}
-		}
+	}
 	
 	focus = {
 		id = ARA_reorganise_government
