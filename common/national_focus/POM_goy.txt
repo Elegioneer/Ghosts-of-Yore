@@ -7660,7 +7660,7 @@
 	}
 	shared_focus = {
 		id = POM_sideline_the_left
-		icon = GFX_goal_GOY_pom_sideline_the_left_shine
+		icon = GFX_goal_GOY_pom_sideline_the_left
 		x = -1
 		y = 4
 		cost = 5.00
@@ -7837,7 +7837,7 @@
 	}
 	shared_focus = {
 		id = POM_legacy_of_the_revolution
-		icon = GFX_goal_abandon_the_republican_dream
+		icon = GFX_focus_FAT_abandon_the_republican_dream
 		x = 1
 		y = 2
 		cost = 2.00
@@ -12442,7 +12442,7 @@
 	}
 	shared_focus = {
 		id = POM_brave_northern_storms
-		icon = GFX_goal_abandon_the_republican_dream
+		icon = GFX_focus_FAT_abandon_the_republican_dream
 		x = 3
 		y = 7
 		cost = 5.00

@@ -20,3 +20,18 @@ defined_text = { # Special subideology for the Frost King
 		localization_key = GOY_EAW_esotericism
 	}
 }
+#Russian extended loc
+defined_text = {
+    name = GetStateLore574Part01
+    text = {
+        trigger = { always = yes }
+        localization_key = state_lore_text_container_state_description_574_part_01
+    }
+}
+defined_text = {
+    name = GetStateLore574Part02
+    text = {
+        trigger = { always = yes }
+        localization_key = state_lore_text_container_state_description_574_part_02
+    }
+}

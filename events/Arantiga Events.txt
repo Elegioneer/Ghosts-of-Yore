@@ -8656,10 +8656,8 @@ country_event = { #Hedonism
 			    base = 1
 			}
 			declare_war_on = {
-				declare_war_on = {
-					target = FROM
-					type = annex_everything
-				}
+				target = FROM
+				type = annex_everything
 			}
 		}
 	}

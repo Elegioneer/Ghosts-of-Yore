@@ -187,11 +187,11 @@ goy_ach_dream_of_a_better_griffonia = {
     happened = {
 		has_completed_focus = POM_all_griffons_can_dream
 		all_country = {
-			limit = {
-				is_griffon_continent_griffon_country_tag = yes
-			}
-			all_core_state = {
-				is_owned_by = ROOT
+			OR = {
+				is_griffon_continent_griffon_country_tag = no
+				all_core_state = {
+					is_owned_by = ROOT
+				}
 			}
 		}
     }    

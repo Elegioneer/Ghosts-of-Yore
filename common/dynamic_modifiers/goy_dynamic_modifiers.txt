@@ -258,7 +258,12 @@
 		
 	ARA_com_industrial_zone = {
 		enable = {
-			owns_or_subject_of = ARA
+			owner = {
+				OR = {
+					original_tag = ARA
+					is_subject_of = ARA
+				}
+			}
 		}
 		
 		icon = GFX_goal_unknown
@@ -267,7 +272,12 @@
 	}
 	ARA_com_prison_mines = {
 		enable = {
-			owns_or_subject_of = ARA
+			owner = {
+				OR = {
+					original_tag = ARA
+					is_subject_of = ARA
+				}
+			}
 		}
 		
 		icon = GFX_goal_unknown
@@ -276,7 +286,12 @@
 	}
 	ARA_com_city_of_the_worlds_desire = {
 		enable = {
-			owns_or_subject_of = ARA
+			owner = {
+				OR = {
+					original_tag = ARA
+					is_subject_of = ARA
+				}
+			}
 		}
 		
 		icon = GFX_goal_unknown
@@ -400,7 +415,12 @@
 	}
 	ARA_com_northern_capitals = {
 		enable = {
-			owns_or_subject_of = ARA
+			owner = {
+				OR = {
+					original_tag = ARA
+					is_subject_of = ARA
+				}
+			}
 		}
 		
 		icon = GFX_goal_unknown

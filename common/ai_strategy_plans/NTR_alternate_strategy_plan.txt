@@ -86,7 +86,7 @@ BOI_iceking = {
 	}
 
 	research = {
-		superior_firepower = 10
+		#superior_firepower = 10
 		infantry_weapons = 2
 		infantry_tech = 2
 		cat_production = 2
