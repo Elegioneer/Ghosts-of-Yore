@@ -72,6 +72,12 @@ GOY_steam_carriage_manufacturer:0 "Производитель паровых м�
 GOY_eccentric_trait:0 "Эксцентричный"
 GOY_republican_general_trait:0 "Генерал-республиканец"
 GOY_procurement_bureau:0 "Бюро добычи снабжения"
+GOY_puritycommissar_gb:0 "Комиссар по Идеологической чистоте"
+GOY_commissar_procurement:0 "Комиссар по Распределению ресурсов"
+GOY_commissar_planning:0 "Комиссар по Промышленному планированию"
+GoY_commissar_arnament:0 "Комиссар по Добыче вооружения"
+GoY_commissar_education:0 "Комиссар по Революционному образованию"
+GoY_commissar_internal:0 "Комиссар по Внутренним делам"
 
 ### Opinion Modifiers ###
 POM_apostates:0 "Отступники"
